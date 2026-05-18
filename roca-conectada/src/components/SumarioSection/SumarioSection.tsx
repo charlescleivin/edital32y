@@ -1,0 +1,133 @@
+import SectionHero from '@/components/ui/SectionHero'
+import type { S1Data } from '@/types/proposal'
+
+export const componentMeta = { slug: 'sumario-section', label: 'Sumário Executivo' }
+
+export type SumarioSectionProps = S1Data
+
+const badgeStyle: Record<string, { bg: string; color: string }> = {
+  primary: { bg: 'var(--pale)',  color: 'var(--p)' },
+  blue:    { bg: 'var(--sagep)', color: 'var(--sage)' },
+  amber:   { bg: 'var(--goldp)', color: 'var(--gold)' },
+}
+
+export default function SumarioSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, problemStatement, summary, whyNow, editalResults, institutionalStructure }: SumarioSectionProps) {
+  return (
+    <section id="s1" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
+      {/* watermark */}
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+        style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>1</span>
+      {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
+
+      {/* section header */}
+      <div className="relative mb-14">
+        <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
+          style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
+          📋 {number}
+        </span>
+        {headline && (
+          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
+            {headline}
+          </p>
+        )}
+        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+        <p className="text-[15px] italic leading-relaxed"
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+      </div>
+
+      {/* problem statement — the WHY before the WHAT */}
+      {problemStatement && (
+        <div className="mb-8 rounded-2xl border-l-[3px] px-7 py-6"
+          style={{ borderColor: 'var(--terra)', background: 'var(--bg-card)' }}>
+          <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--terra)' }}>
+            ⚠️ O Problema
+          </div>
+          <p className="text-[15px] leading-[1.85]" style={{ color: 'var(--txt)' }}>
+            {problemStatement}
+          </p>
+        </div>
+      )}
+
+      {/* stats — 38px Playfair numbers */}
+      <div className="mb-8 grid grid-cols-3 gap-4">
+        {stats.map((s, i) => (
+          <div key={i} className="rounded-2xl border p-6"
+            style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+            <span className="mb-3 block text-3xl">{s.icon}</span>
+            <span className="block text-[38px] font-bold leading-tight"
+              style={{ fontFamily: 'var(--font-playfair)', color: 'var(--p)' }}>{s.value}</span>
+            <span className="mt-1.5 block text-[13px] leading-snug"
+              style={{ color: 'var(--txtl)' }}>{s.label}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* summary — the WHAT and HOW */}
+      <div className="mb-8 rounded-2xl border-l-[3px] p-7 text-[14.5px] leading-[1.8]"
+        style={{ borderColor: 'var(--p)', background: 'var(--bg-card)', color: 'var(--txtl)' }}>
+        <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
+          💡 A Solução
+        </div>
+        {summary}
+      </div>
+
+      {/* why now — 3 cards on timing and uniqueness */}
+      {whyNow && whyNow.length > 0 && (
+        <div className="mb-8">
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+            ⏱ Por Que Agora — e Por Que Este Projeto
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {whyNow.map((item, i) => (
+              <div key={i} className="rounded-2xl border p-5"
+                style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+                <div className="mb-2 text-[26px] leading-none">{item.icon}</div>
+                <div className="mb-2 text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{item.title}</div>
+                <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="grid grid-cols-2 gap-5">
+        {/* edital results */}
+        <div className="rounded-2xl border p-6"
+          style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
+            style={{ color: 'var(--p)' }}>Resultados do Edital Atendidos</div>
+          <div className="flex flex-col gap-3">
+            {editalResults.map((r, i) => (
+              <div key={i} className="flex items-start gap-2.5 text-[13.5px] leading-snug"
+                style={{ color: 'var(--txtl)' }}>
+                <span style={{ color: 'var(--terra)' }}>✅</span>
+                <span>{r}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* institutional structure */}
+        <div className="rounded-2xl border p-6"
+          style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
+            style={{ color: 'var(--p)' }}>Estrutura Institucional</div>
+          <div className="flex flex-col gap-3">
+            {institutionalStructure.map((r, i) => {
+              const st = badgeStyle[r.badgeVariant] ?? badgeStyle.primary
+              return (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="rounded-full px-3 py-1 text-[11px] font-bold"
+                    style={{ background: st.bg, color: st.color }}>{r.badge}</span>
+                  <span className="text-[13.5px]" style={{ color: 'var(--txtl)' }}>{r.label}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

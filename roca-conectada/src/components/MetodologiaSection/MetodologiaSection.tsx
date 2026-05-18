@@ -1,0 +1,179 @@
+import SectionHero from '@/components/ui/SectionHero'
+import type { S4Data } from '@/types/proposal'
+
+export const componentMeta = { slug: 'metodologia-section', label: 'Metodologia e Plano de Trabalho' }
+
+export type MetodologiaSectionProps = S4Data
+
+const phaseAccent = [
+  { border: 'var(--p)',     header: 'rgba(74,148,86,0.12)',  dot: 'var(--p)',    text: 'var(--sage)'  },
+  { border: 'var(--gold)',  header: 'rgba(212,150,14,0.12)', dot: 'var(--gold)', text: 'var(--gold)'  },
+  { border: 'var(--terra)', header: 'rgba(200,85,48,0.12)',  dot: 'var(--terra)',text: 'var(--terra)' },
+]
+
+export default function MetodologiaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, phases, scopeDistinction, sovereigntyCallouts, pilotRegions, conflictGovernance }: MetodologiaSectionProps) {
+  const { researcher, company } = scopeDistinction
+  return (
+    <section id="s4" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+        style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>4</span>
+      {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
+
+      <div className="relative mb-14">
+        <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
+          style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
+          🛠️ {number}
+        </span>
+        {headline && (
+          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
+            {headline}
+          </p>
+        )}
+        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+        <p className="text-[15px] italic leading-relaxed"
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+      </div>
+
+      <div className="mb-10 grid grid-cols-3 gap-5">
+        {phases.map((phase, i) => {
+          const acc = phaseAccent[i] ?? phaseAccent[0]
+          return (
+            <div key={phase.id} className="overflow-hidden rounded-2xl border"
+              style={{ borderColor: acc.border, borderWidth: '1.5px', background: 'var(--bg-card)' }}>
+              {/* phase header */}
+              <div className="px-6 py-5" style={{ background: acc.header }}>
+                <div className="text-[26px] leading-none">{phase.icon}</div>
+                <div className="mt-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: acc.text }}>{phase.label}</div>
+                <div className="mt-1 text-[16px] font-bold" style={{ color: 'var(--txt)' }}>{phase.name}</div>
+                <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtl)' }}>{phase.period}</div>
+              </div>
+              {/* activities */}
+              <div className="p-5">
+                {phase.activities.map((act, j) => (
+                  <div key={j} className="mb-2.5 flex items-start gap-2.5 text-[13px] leading-[1.6]"
+                    style={{ color: 'var(--txtl)' }}>
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full" style={{ background: acc.dot }} />
+                    {act}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* scope distinction */}
+      <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+        ⚖️ Distinção de Escopos — Regra Fundamental
+      </div>
+      <div className="grid grid-cols-2 gap-5">
+        <div className="rounded-2xl border p-6"
+          style={{ borderColor: 'rgba(111,168,118,0.2)', background: 'rgba(111,168,118,0.05)' }}>
+          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--sage)' }}>{researcher.title}</div>
+          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}>{researcher.subtitle}</div>
+          <ul className="flex flex-col gap-2 text-[13.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
+            {researcher.responsibilities.map((r, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span style={{ color: 'var(--sage)' }}>•</span>{r}
+              </li>
+            ))}
+          </ul>
+          {researcher.badge && (
+            <div className="mt-4 text-[11px] font-bold" style={{ color: 'var(--sage)' }}>{researcher.badge}</div>
+          )}
+        </div>
+        <div className="rounded-2xl border p-6"
+          style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.05)' }}>
+          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--gold)' }}>{company.title}</div>
+          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}>{company.subtitle}</div>
+          <ul className="flex flex-col gap-2 text-[13.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
+            {company.responsibilities.map((r, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span style={{ color: 'var(--gold)' }}>•</span>{r}
+              </li>
+            ))}
+          </ul>
+          {company.noteItems && (
+            <div className="mt-4 rounded-xl border p-4"
+              style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.08)' }}>
+              <div className="mb-2 text-[10px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--terra)' }}>
+                {company.note}
+              </div>
+              {company.noteItems.map((n, i) => (
+                <div key={i} className="text-[12px]" style={{ color: 'var(--terra)' }}>✕ {n}</div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* pilot regions */}
+      {pilotRegions && pilotRegions.length > 0 && (
+        <div className="mb-8">
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+            📍 Regiões-Piloto — Municípios Selecionados
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {pilotRegions.map((r) => (
+              <div key={r.id} className="rounded-2xl border p-5"
+                style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+                <div className="mb-1 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>📍 {r.municipality}</div>
+                <div className="mb-3 text-[12px]" style={{ color: 'var(--txtl)' }}>{r.profile}</div>
+                <div className="rounded-xl border-l-[2px] pl-3 text-[12px] leading-[1.65]"
+                  style={{ borderColor: 'var(--p)', color: 'var(--txtl)' }}>
+                  {r.rationale}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* sovereignty callouts */}
+      {sovereigntyCallouts && sovereigntyCallouts.length > 0 && (
+        <div className="mt-8">
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+            🇧🇷 Soberania Tecnológica — Escolhas Deliberadas
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {sovereigntyCallouts.map((sc) => (
+              <div key={sc.id} className="rounded-2xl border p-5"
+                style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.04)' }}>
+                <div className="mb-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--gold)' }}>
+                  {sc.badge}
+                </div>
+                <div className="mb-3 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{sc.title}</div>
+                <p className="text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{sc.content}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* conflict governance */}
+      {conflictGovernance && (
+        <div className="mt-5 rounded-2xl border p-6"
+          style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.04)' }}>
+          <div className="mb-2 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
+            ⚖️ {conflictGovernance.title}
+          </div>
+          <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{conflictGovernance.body}</p>
+        </div>
+      )}
+
+      {company.disclosure && (
+        <div className="mt-4 rounded-xl border-l-[3px] px-5 py-4"
+          style={{ borderColor: 'rgba(237,229,211,0.15)', background: 'rgba(237,229,211,0.03)' }}>
+          <span className="mr-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--txtll)' }}>
+            ⚖️ Declaração de Relacionamento
+          </span>
+          <span className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
+            {company.disclosure}
+          </span>
+        </div>
+      )}
+    </section>
+  )
+}

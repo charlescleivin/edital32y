@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roça Conectada — FINEP AgriFam-ICT 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --p: #1a5c38; --pl: #2d7a50; --pll: #4caf7a; --pale: #e8f5ee;
+  --sec: #e8970a; --secp: #fff8e6;
+  --acc: #0891b2; --accp: #e0f7fa;
+  --red: #dc2626; --redp: #fef2f2;
+  --ora: #d97706; --orap: #fffbeb;
+  --grn: #16a34a; --grnp: #f0fdf4;
+  --bg: #f4f9f6; --card: #ffffff;
+  --txt: #0f2318; --txtl: #4a6355; --txtll: #8aa99a;
+  --bdr: #d1e4d8;
+  --sh: 0 4px 16px rgba(26,92,56,.10),0 2px 6px rgba(26,92,56,.06);
+  --shs: 0 1px 3px rgba(26,92,56,.08);
+  --shl: 0 10px 40px rgba(26,92,56,.14),0 4px 12px rgba(26,92,56,.08);
+  --r: 12px; --rl: 20px;
+  --sw: 260px;
+  --tr: all .35s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+
+/* PROGRESS */
+#pbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--p),var(--sec),var(--acc));z-index:1000;width:0;transition:width .1s}
+
+/* SIDEBAR */
+.sidebar{position:fixed;left:0;top:0;height:100vh;width:var(--sw);background:linear-gradient(180deg,#0a1a10 0%,#0f2318 40%,#1a3d28 100%);z-index:100;display:flex;flex-direction:column;overflow-y:auto}
+.sb-logo{padding:24px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sb-icon{font-size:28px;display:block;margin-bottom:6px}
+.sb-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#fff;line-height:1.2}
+.sb-sub{font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.sb-nav{padding:16px 0;flex:1}
+.nav-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.3);padding:12px 24px 6px;display:block}
+.nav-a{display:flex;align-items:center;gap:10px;padding:9px 24px;text-decoration:none;color:rgba(255,255,255,.6);font-size:12px;font-weight:500;border-left:3px solid transparent;transition:var(--tr)}
+.nav-a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.nav-a.active{color:#fff;background:rgba(255,255,255,.09);border-left-color:var(--sec)}
+.nav-num{font-size:10px;font-weight:800;color:var(--sec);background:rgba(232,151,10,.15);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-a.active .nav-num{background:var(--sec);color:#0a1a10}
+.sb-dl{margin:16px 20px 24px;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.25);border-radius:10px;padding:14px;text-align:center}
+.dl-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4)}
+.dl-date{font-size:18px;font-weight:800;color:#ff8080;display:block;margin:4px 0}
+.dl-cd{font-size:11px;color:rgba(255,255,255,.5)}
+.dl-cd span{font-weight:700;color:#ff9999}
+
+/* MAIN */
+.main{margin-left:var(--sw);min-height:100vh}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a1a10 0%,#1a5c38 55%,#2d7a50 100%);padding:90px 64px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(76,175,122,.15) 0%,transparent 60%)}
+.hero-eye{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--sec);margin-bottom:14px;font-weight:600}
+.hero-title{font-family:'Playfair Display',serif;font-size:52px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:14px}
+.hero-title em{color:var(--sec);font-style:normal}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.72);max-width:580px;line-height:1.65;margin-bottom:40px}
+.hero-stats{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.hstat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:18px 26px;backdrop-filter:blur(10px);animation:fiu .7s ease both}
+.hstat:nth-child(2){animation-delay:.1s}.hstat:nth-child(3){animation-delay:.2s}.hstat:nth-child(4){animation-delay:.3s}
+@keyframes fiu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hstat-v{font-size:26px;font-weight:800;color:#fff;display:block}
+.hstat-l{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.8px}
+.hero-layers{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:700px}
+.hlayer{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:18px 22px}
+.hlayer-badge{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:8px}
+.la .hlayer-badge{background:rgba(8,145,178,.25);color:#67e8f9}
+.lc .hlayer-badge{background:rgba(232,151,10,.25);color:#fcd34d}
+.hlayer-t{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px}
+.hlayer-d{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5}
+
+/* SECTIONS */
+.sec{padding:72px 64px;border-bottom:1px solid var(--bdr);opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}
+.sec.vis{opacity:1;transform:translateY(0)}
+.sh{display:flex;align-items:flex-start;gap:18px;margin-bottom:36px}
+.sn{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--p);background:var(--pale);border:1px solid var(--bdr);padding:5px 14px;border-radius:20px;white-space:nowrap;margin-top:5px}
+.st{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--txt);line-height:1.2}
+.ss{font-size:14px;color:var(--txtl);margin-top:5px}
+
+/* CARDS GRID */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:22px;box-shadow:var(--shs);transition:var(--tr)}
+.card:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+
+/* STAT CARD */
+.stc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:26px;text-align:center;position:relative;overflow:hidden}
+.stc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--p),var(--pll))}
+.stc-ico{font-size:30px;margin-bottom:10px;display:block}
+.stc-v{font-size:34px;font-weight:900;color:var(--p);display:block;line-height:1}
+.stc-l{font-size:12.5px;color:var(--txtl);margin-top:5px}
+
+/* BADGES */
+.b{font-size:11px;font-weight:600;padding:3px 11px;border-radius:20px;display:inline-block}
+.bg{background:var(--grnp);color:var(--grn);border:1px solid #bbf7d0}
+.ba{background:var(--orap);color:var(--ora);border:1px solid #fed7aa}
+.br{background:var(--redp);color:var(--red);border:1px solid #fecaca}
+.bb{background:var(--accp);color:var(--acc);border:1px solid #b0e0ea}
+.bp{background:var(--pale);color:var(--p);border:1px solid var(--bdr)}
+
+/* ALERT */
+.alert{display:flex;gap:14px;padding:18px 22px;border-radius:var(--r);margin-bottom:22px;align-items:flex-start}
+.alert-r{background:var(--redp);border:1px solid #fecaca;border-left:4px solid var(--red)}
+.alert-a{background:var(--orap);border:1px solid #fed7aa;border-left:4px solid var(--ora)}
+.alert-g{background:var(--grnp);border:1px solid #bbf7d0;border-left:4px solid var(--grn)}
+.alert-ico{font-size:20px;flex-shrink:0}
+.alert-t{font-weight:700;font-size:13.5px;margin-bottom:3px}
+.alert-r .alert-t{color:var(--red)}.alert-a .alert-t{color:var(--ora)}.alert-g .alert-t{color:var(--grn)}
+.alert-d{font-size:13px;color:var(--txtl);line-height:1.5}
+
+/* OBJECTIVE TABS */
+.tabs{display:flex;gap:6px;margin-bottom:0;border-bottom:2px solid var(--bdr)}
+.tab{padding:10px 18px;border-radius:var(--r) var(--r) 0 0;cursor:pointer;font-size:13px;font-weight:600;color:var(--txtl);border:1px solid transparent;border-bottom:none;transition:var(--tr);position:relative;bottom:-2px}
+.tab.on{background:var(--card);color:var(--p);border-color:var(--bdr);border-bottom-color:var(--card)}
+.tp{display:none;padding-top:20px}.tp.on{display:grid;gap:12px}
+.oi{display:flex;gap:14px;padding:18px;background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);align-items:flex-start;transition:var(--tr)}
+.oi:hover{border-color:var(--pll);box-shadow:var(--shs)}
+.on2{font-size:11px;font-weight:800;color:var(--p);background:var(--pale);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--bdr)}
+.ot{font-size:13.5px;color:var(--txt);line-height:1.55}
+
+/* PHASE TIMELINE */
+.ptl{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;margin-bottom:36px}
+.ptl::before{content:'';position:absolute;top:30px;left:17%;right:17%;height:2px;background:linear-gradient(90deg,var(--p),var(--sec));z-index:0}
+.pc{position:relative;z-index:1;text-align:center;padding:0 10px}
+.pd{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px;border:3px solid var(--card);box-shadow:var(--sh)}
+.ph1 .pd{background:linear-gradient(135deg,#1a5c38,#2d7a50)}
+.ph2 .pd{background:linear-gradient(135deg,#0891b2,#0d9488)}
+.ph3 .pd{background:linear-gradient(135deg,#e8970a,#d97706)}
+.pl2{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.ph1 .pl2{color:var(--p)}.ph2 .pl2{color:var(--acc)}.ph3 .pl2{color:var(--sec)}
+.pn{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:2px}
+.pp{font-size:11px;color:var(--txtll);margin-bottom:12px}
+.pa{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:14px;text-align:left;box-shadow:var(--shs)}
+.pai{font-size:11.5px;color:var(--txtl);padding:5px 0;border-bottom:1px solid var(--bdr);display:flex;gap:7px;line-height:1.4}
+.pai:last-child{border-bottom:none}
+.pai::before{content:'→';color:var(--pll);flex-shrink:0;font-size:10px;margin-top:2px}
+
+/* TEAM */
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.tc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:22px;transition:var(--tr)}
+.tc:hover{box-shadow:var(--sh);transform:translateY(-2px)}
+.tc.hl{border-color:var(--pll);background:linear-gradient(135deg,#f4f9f6,#fff)}
+.tc.pj{border-color:var(--sec);background:linear-gradient(135deg,#fff8e6,#fff)}
+.tav{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:12px}
+.tav-g{background:var(--pale);border:2px solid var(--bdr)}
+.tav-t{background:var(--accp);border:2px solid #b0e0ea}
+.tav-a{background:var(--secp);border:2px solid #fed7aa}
+.tn{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:3px}
+.tr2{font-size:12px;color:var(--txtl);margin-bottom:10px;line-height:1.4}
+.ttags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.ttag{font-size:10px;font-weight:600;padding:2px 9px;border-radius:20px;background:var(--pale);color:var(--p);border:1px solid var(--bdr)}
+.tded{font-size:11.5px;color:var(--txtll)}
+
+/* SCOPE BOX */
+.scbox{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.scc{padding:18px;border-radius:var(--r);border:1px solid}
+.scc-a{background:linear-gradient(135deg,#e0f7fa,#f0fdfd);border-color:#b0e0ea}
+.scc-b{background:linear-gradient(135deg,#fff8e6,#fffdf5);border-color:#fed7aa}
+.scct{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.scc-a .scct{color:var(--acc)}.scc-b .scct{color:var(--ora)}
+.sccn{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:8px}
+.scc ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.scc ul li{font-size:12px;color:var(--txtl);display:flex;align-items:flex-start;gap:7px}
+.scc ul li::before{content:'✓';color:var(--grn);font-weight:700;flex-shrink:0}
+.scc .no li::before{content:'✗';color:var(--red)}
+
+/* BUDGET */
+.bdg-layout{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
+.donut-wrap{display:flex;flex-direction:column;align-items:center}
+.donut{width:200px;height:200px;border-radius:50%;position:relative;box-shadow:var(--sh)}
+.donut-hole{position:absolute;width:120px;height:120px;background:var(--bg);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dh-v{font-size:14px;font-weight:800;color:var(--txt)}
+.dh-l{font-size:9px;color:var(--txtll);text-transform:uppercase;letter-spacing:.5px}
+.dlegend{display:flex;flex-direction:column;gap:7px;margin-top:22px;width:100%}
+.dli{display:flex;align-items:center;gap:8px}
+.dld{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.dln{font-size:12px;color:var(--txtl);flex:1}
+.dlv{font-size:12px;font-weight:700;color:var(--txt)}
+.dlp{font-size:11px;color:var(--txtll);width:34px;text-align:right}
+.bbd{display:flex;flex-direction:column;gap:14px}
+.bbi{display:flex;flex-direction:column;gap:5px}
+.bbih{display:flex;justify-content:space-between;align-items:center}
+.bbin{font-size:13px;font-weight:600;color:var(--txt)}
+.bbiv{font-size:13px;font-weight:700;color:var(--txt)}
+.bbbg{height:8px;background:var(--bdr);border-radius:4px;overflow:hidden}
+.bbf{height:100%;border-radius:4px;width:0;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+.bbp{font-size:11px;color:var(--txtll)}
+
+/* COMPLIANCE TABLE */
+.ctbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:24px}
+.ctbl th{background:var(--p);color:#fff;padding:11px 14px;text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.ctbl td{padding:10px 14px;border-bottom:1px solid var(--bdr)}
+.ctbl tr:hover td{background:var(--pale)}
+.ctbl tr:last-child td{border-bottom:none}
+.ok{color:var(--grn);font-weight:700}.warn{color:var(--ora);font-weight:700}
+
+/* RISK */
+.rmat{display:flex;flex-direction:column;gap:10px}
+.ri{display:grid;grid-template-columns:44px 1fr 80px 90px;gap:14px;align-items:center;padding:14px 18px;background:var(--card);border:1px solid var(--bdr);border-left:4px solid;border-radius:var(--r);transition:var(--tr)}
+.ri:hover{box-shadow:var(--shs)}
+.ri.alto{border-left-color:var(--red)}.ri.medio{border-left-color:var(--ora)}.ri.baixo{border-left-color:var(--grn)}
+.rid{font-size:12px;font-weight:800;color:var(--txtll)}
+.rin{font-size:13.5px;font-weight:600;color:var(--txt)}
+.rid2{font-size:11.5px;color:var(--txtl);margin-top:2px}
+.rpr{font-size:11px;color:var(--txtll);text-align:center}
+.rlv{font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;text-align:center}
+.rlv.alto{background:var(--redp);color:var(--red)}
+.rlv.medio{background:var(--orap);color:var(--ora)}
+.rlv.baixo{background:var(--grnp);color:var(--grn)}
+
+/* KPI */
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.kc{background:var(--card);border:1px solid var(--bdr);border-radius:var(--rl);padding:18px;text-align:center;position:relative;overflow:hidden}
+.kc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--p),var(--pll))}
+.ki{font-size:22px;display:block;margin-bottom:6px}
+.kv{font-size:26px;font-weight:900;color:var(--p);display:block;line-height:1}
+.kl{font-size:10px;color:var(--txtll);margin-top:3px;text-transform:uppercase;letter-spacing:.5px}
+
+/* INDICATORS TABLE */
+.itbl{width:100%;border-collapse:collapse;font-size:13px}
+.itbl th{background:var(--p);color:#fff;padding:11px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.itbl th:first-child{border-radius:var(--r) 0 0 0}.itbl th:last-child{border-radius:0 var(--r) 0 0}
+.itbl td{padding:10px 14px;border-bottom:1px solid var(--bdr);vertical-align:top;line-height:1.45}
+.itbl tr:hover td{background:var(--pale)}
+.itbl tr:last-child td{border-bottom:none}
+.tgt{font-weight:600;color:var(--p)}
+
+/* CHECKLIST */
+.clg{margin-bottom:28px}
+.clgt{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:10px 16px;background:var(--pale);border:1px solid var(--bdr);border-radius:var(--r) var(--r) 0 0;display:flex;align-items:center;gap:10px;color:var(--p)}
+.ci{display:grid;grid-template-columns:26px 1fr auto;gap:12px;align-items:center;padding:13px 16px;background:var(--card);border:1px solid var(--bdr);border-top:none;cursor:pointer;transition:var(--tr)}
+.ci:last-child{border-radius:0 0 var(--r) var(--r)}
+.ci:hover{background:var(--bg)}
+.ci.chk{background:var(--grnp)}
+.ci.chk .cil{text-decoration:line-through;color:var(--txtll)}
+.cib{width:18px;height:18px;border:2px solid var(--bdr);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;transition:var(--tr)}
+.ci.chk .cib{background:var(--grn);border-color:var(--grn);color:#fff}
+.cil{font-size:13px;color:var(--txt);line-height:1.4}
+.cis{font-size:10.5px;color:var(--txtll)}
+
+/* PARTNERS */
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pcard{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r);padding:18px;transition:var(--tr)}
+.pcard:hover{box-shadow:var(--sh);transform:translateY(-1px)}
+.pcard.urg{border-top:3px solid var(--red)}.pcard.alt{border-top:3px solid var(--ora)}.pcard.med{border-top:3px solid var(--acc)}
+.pcat{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--txtll);margin-bottom:5px}
+.pname{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:5px}
+.prole{font-size:12px;color:var(--txtl);margin-bottom:10px;line-height:1.5}
+.pdl{font-size:11px;font-weight:600;display:flex;align-items:center;gap:5px}
+.pdl.urg{color:var(--red)}.pdl.alt{color:var(--ora)}.pdl.med{color:var(--acc)}
+
+/* ACTION TIMELINE */
+.atl{position:relative;padding-left:28px}
+.atl::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--p),var(--sec))}
+.ai{position:relative;padding:14px 0 14px 20px;border-bottom:1px dashed var(--bdr)}
+.ai:last-child{border-bottom:none}
+.ai::before{content:'';position:absolute;left:-22px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--p);border:2px solid var(--card);box-shadow:0 0 0 2px var(--p)}
+.aw{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--p);margin-bottom:3px}
+.at2{font-size:12.5px;color:var(--txtl);line-height:1.6}
+
+/* DATA TABLE */
+.dtbl{width:100%;border-collapse:collapse;font-size:13px}
+.dtbl th{background:var(--p);color:#fff;padding:11px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.dtbl td{padding:10px 14px;border-bottom:1px solid var(--bdr);vertical-align:middle}
+.dtbl tr:hover td{background:var(--pale)}
+.dtbl tr:last-child td{border-bottom:none}
+
+/* HIGHLIGHT */
+.hbox{background:linear-gradient(135deg,var(--pale),#fff);border:1px solid var(--bdr);border-left:4px solid var(--p);border-radius:var(--r);padding:18px 22px;margin:20px 0}
+.hbox p{font-size:13.5px;color:var(--txt);line-height:1.6}
+
+.sep{height:1px;background:linear-gradient(90deg,var(--pll),transparent);margin:28px 0}
+strong{font-weight:700}
+
+/* FOOTER */
+.footer{background:#0a1a10;color:rgba(255,255,255,.4);padding:28px 64px;font-size:12px;text-align:center}
+
+@media(max-width:1024px){
+  .sidebar{display:none}.main{margin-left:0}
+  .sec{padding:52px 28px}.hero{padding:72px 28px}
+  .kgrid{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .bdg-layout{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .scbox{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .hero-title{font-size:34px}.hero-stats{flex-direction:column}
+  .hero-layers{grid-template-columns:1fr}
+  .ptl{grid-template-columns:1fr}.ptl::before{display:none}
+  .g3,.g2,.g4{grid-template-columns:1fr}
+  .kgrid{grid-template-columns:repeat(2,1fr)}
+  .ri{grid-template-columns:1fr;grid-template-rows:auto}
+}
+</style>
+</head>
+<body>
+
+<div id="pbar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <span class="sb-icon">🌱</span>
+    <div class="sb-title">Roça Conectada</div>
+    <div class="sb-sub">FINEP AgriFam-ICT 2026</div>
+  </div>
+  <nav class="sb-nav">
+    <span class="nav-lbl">Visão Geral</span>
+    <a class="nav-a active" href="#s0"><span class="nav-num">★</span>Sumário Executivo</a>
+    <span class="nav-lbl">Proposta</span>
+    <a class="nav-a" href="#s2"><span class="nav-num">2</span>Problema e Justificativa</a>
+    <a class="nav-a" href="#s3"><span class="nav-num">3</span>Objetivos</a>
+    <a class="nav-a" href="#s4"><span class="nav-num">4</span>Metodologia</a>
+    <a class="nav-a" href="#s5"><span class="nav-num">5</span>Equipe</a>
+    <span class="nav-lbl">Recursos</span>
+    <a class="nav-a" href="#s6"><span class="nav-num">6</span>Orçamento</a>
+    <a class="nav-a" href="#s7"><span class="nav-num">7</span>Parcerias</a>
+    <span class="nav-lbl">Avaliação</span>
+    <a class="nav-a" href="#s8"><span class="nav-num">8</span>Indicadores e Metas</a>
+    <a class="nav-a" href="#s9"><span class="nav-num">9</span>Riscos</a>
+    <a class="nav-a" href="#s10"><span class="nav-num">10</span>Checklist Submissão</a>
+  </nav>
+  <div class="sb-dl">
+    <div class="dl-lbl">Prazo de Submissão</div>
+    <span class="dl-date">26/06/2026</span>
+    <div class="dl-cd">Faltam <span id="countdown">--</span> dias</div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- HERO -->
+<section id="s0" class="hero">
+  <div class="hero-eye">MCTI / FINEP / FNDCT — Linha Temática 3</div>
+  <h1 class="hero-title">Roça <em>Conectada</em></h1>
+  <p class="hero-sub">Ecossistema de Inteligência Artificial Conversacional e Gestão Digital Cooperativa para a Digitalização da Agricultura Familiar Brasileira.</p>
+  <div class="hero-stats">
+    <div class="hstat"><span class="hstat-v">R$ 7M</span><span class="hstat-l">Valor Solicitado</span></div>
+    <div class="hstat"><span class="hstat-v">36 meses</span><span class="hstat-l">Prazo de Execução</span></div>
+    <div class="hstat"><span class="hstat-v">Linha 3</span><span class="hstat-l">Soluções Digitais Rural</span></div>
+    <div class="hstat"><span class="hstat-v">Cenário 4</span><span class="hstat-l">ICT + PJ Especializado</span></div>
+  </div>
+  <div class="hero-layers">
+    <div class="hlayer la">
+      <span class="hlayer-badge">Camada A</span>
+      <div class="hlayer-t">AgroAssistente IA</div>
+      <div class="hlayer-d">LLM em português, via WhatsApp, modo offline-first. Extensão rural digital 24h.</div>
+    </div>
+    <div class="hlayer lc">
+      <span class="hlayer-badge">Camada C</span>
+      <div class="hlayer-t">Coopera Digital</div>
+      <div class="hlayer-d">Plataforma de gestão para cooperativas e associações da agricultura familiar.</div>
+    </div>
+  </div>
+</section>
+
+<!-- S1 SUMÁRIO -->
+<section id="s1" class="sec vis">
+  <div class="sh">
+    <span class="sn">Seção 1</span>
+    <div><div class="st">Sumário Executivo</div><div class="ss">Visão geral do projeto, público-alvo e impacto esperado</div></div>
+  </div>
+
+  <div class="g3" style="margin-bottom:28px">
+    <div class="stc"><span class="stc-ico">🌾</span><span class="stc-v">3,9M</span><span class="stc-l">Estabelecimentos familiares no Brasil (IBGE 2017)</span></div>
+    <div class="stc"><span class="stc-ico">📱</span><span class="stc-v">53%</span><span class="stc-l">Domicílios rurais com internet (PNAD 2022)</span></div>
+    <div class="stc"><span class="stc-ico">👨‍🌾</span><span class="stc-v">1:500</span><span class="stc-l">Relação agente ATER / família rural no Brasil</span></div>
+  </div>
+
+  <div class="hbox"><p>O projeto <strong>Roça Conectada</strong> propõe o desenvolvimento, validação e implantação de um ecossistema tecnológico composto por duas camadas integradas: <strong>AgroAssistente IA</strong> — assistente conversacional baseado em LLM fine-tuned em português agrícola, acessível via WhatsApp com modo offline — e <strong>Coopera Digital</strong> — plataforma de gestão cooperativa de baixo custo. A solução é executada pela UFSC via <strong>[NOME DO LAB]</strong>, com engenharia de software entregue pela <strong>THATPIX DESENVOLVIMENTO DE SOFTWARES LTDA</strong> (CNPJ 49.827.360/0001-50) sob contrato de serviços especializados (item 6.5.2.1 do edital).</p></div>
+
+  <div class="g2">
+    <div class="card">
+      <div style="font-size:13px;font-weight:700;color:var(--p);margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px">Resultados do Edital Atendidos</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--txtl)">
+        <div>✅ Digitalização das cadeias socioprodutivas</div>
+        <div>✅ Aumento da independência e qualidade de vida</div>
+        <div>✅ Eficiência em sistemas orgânicos/agroecológicos</div>
+        <div>✅ Fortalecimento de cooperativas e associações</div>
+        <div>✅ Aproveitamento das vocações territoriais</div>
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;font-weight:700;color:var(--p);margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px">Estrutura Institucional</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+        <div><span class="b bp">Proponente</span> <span style="color:var(--txtl);margin-left:6px">FAPEU ou FEESC</span></div>
+        <div><span class="b bp">Executora</span> <span style="color:var(--txtl);margin-left:6px">UFSC / [NOME DO LAB]</span></div>
+        <div><span class="b bb">Co-pesquisador</span> <span style="color:var(--txtl);margin-left:6px">Charles Cleivin (sem bolsa)</span></div>
+        <div><span class="b ba">Empresa PJ</span> <span style="color:var(--txtl);margin-left:6px">THATPIX LTDA — R$ 1,68M</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S2 PROBLEMA -->
+<section id="s2" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 2</span>
+    <div><div class="st">Problema e Justificativa</div><div class="ss">Diagnóstico do cenário atual da digitalização rural brasileira</div></div>
+  </div>
+
+  <div class="g4" style="margin-bottom:28px">
+    <div class="card" style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--p)">77%</div><div style="font-size:12px;color:var(--txtl);margin-top:4px">dos estabelecimentos agropecuários são familiares</div></div>
+    <div class="card" style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--p)">70%</div><div style="font-size:12px;color:var(--txtl);margin-top:4px">dos alimentos consumidos no Brasil vêm da AF</div></div>
+    <div class="card" style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--acc)">53%</div><div style="font-size:12px;color:var(--txtl);margin-top:4px">dos domicílios rurais têm internet (vs. 91% urbano)</div></div>
+    <div class="card" style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--red)">30%</div><div style="font-size:12px;color:var(--txtl);margin-top:4px">ou menos de cobertura de internet em municípios do Semiárido</div></div>
+  </div>
+
+  <div style="font-size:15px;font-weight:700;color:var(--txt);margin-bottom:14px">As 4 Barreiras Estruturais de Digitalização</div>
+  <div class="g2" style="margin-bottom:28px">
+    <div class="card"><div style="font-size:18px;margin-bottom:8px">📶</div><div style="font-weight:700;font-size:14px;margin-bottom:6px">Conectividade Intermitente</div><div style="font-size:12.5px;color:var(--txtl)">Soluções existentes requerem conexão estável. Agricultores em zonas rurais têm acesso intermitente — inviabilizando plataformas convencionais.</div></div>
+    <div class="card"><div style="font-size:18px;margin-bottom:8px">💰</div><div style="font-weight:700;font-size:14px;margin-bottom:6px">Custo Inacessível</div><div style="font-size:12.5px;color:var(--txtl)">Assinaturas de R$ 80–500/mês são inviáveis para famílias com renda bruta de R$ 1.500–3.000/mês (IBGE 2017).</div></div>
+    <div class="card"><div style="font-size:18px;margin-bottom:8px">🗣️</div><div style="font-weight:700;font-size:14px;margin-bottom:6px">Ausência de IA em Português Agrícola</div><div style="font-size:12.5px;color:var(--txtl)">Nenhuma plataforma oferece assistente conversacional treinado no domínio técnico agrícola em português regional coloquial.</div></div>
+    <div class="card"><div style="font-size:18px;margin-bottom:8px">🏛️</div><div style="font-weight:700;font-size:14px;margin-bottom:6px">Colapso da ATER</div><div style="font-size:12.5px;color:var(--txtl)">1 agente para 500–1.000 famílias. Sem ANATER desde 2019. Decisões de manejo tomadas sem orientação técnica qualificada.</div></div>
+  </div>
+
+  <div class="hbox"><p><strong>Contexto Regional (30% dos recursos do edital):</strong> Norte e Nordeste concentram o maior número de agricultores familiares com pior infraestrutura digital. No Semiárido nordestino, menos de 15% dos municípios têm extensão rural regular ativa (EMBRAPA, 2021). A arquitetura offline-first e o canal WhatsApp do Roça Conectada foram concebidos especificamente para esses contextos.</p></div>
+</section>
+
+<!-- S3 OBJETIVOS -->
+<section id="s3" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 3</span>
+    <div><div class="st">Objetivos</div><div class="ss">Geral e específicos, alinhados à Linha Temática 3</div></div>
+  </div>
+
+  <div class="hbox" style="margin-bottom:24px"><p><strong>Objetivo Geral:</strong> Desenvolver, validar e implantar o ecossistema Roça Conectada — assistente IA conversacional em português e plataforma de gestão digital cooperativa — como solução integrada e de baixo custo para a digitalização das cadeias socioprodutivas da agricultura familiar brasileira, com ênfase em contextos de baixa conectividade e déficit crítico de ATER.</p></div>
+
+  <div class="tabs">
+    <div class="tab on" onclick="switchTab(this,'e1')">⚗️ Eixo I — Pesquisa e Desenvolvimento</div>
+    <div class="tab" onclick="switchTab(this,'e2')">🚀 Eixo II — Validação e Implantação</div>
+    <div class="tab" onclick="switchTab(this,'e3')">♻️ Eixo III — Sustentabilidade e Escala</div>
+  </div>
+  <div id="e1" class="tp on">
+    <div class="oi"><span class="on2">1</span><span class="ot"><strong>OE1.</strong> Diagnóstico participativo das necessidades digitais de agricultores e cooperativas nas regiões-piloto, identificando lacunas de ATER, barreiras de adoção e padrões de uso do WhatsApp.</span></div>
+    <div class="oi"><span class="on2">2</span><span class="ot"><strong>OE2.</strong> Construção e validação do corpus AgroLinguaBR — mínimo 10.000 pares de pergunta-resposta técnica em português agrícola para fine-tuning do LLM.</span></div>
+    <div class="oi"><span class="on2">3</span><span class="ot"><strong>OE3.</strong> Fine-tuning de LLM open-source (≥7B parâmetros) com técnicas PEFT/LoRA e quantização 4-bit, viabilizando inferência em infraestrutura de baixo custo.</span></div>
+    <div class="oi"><span class="on2">4</span><span class="ot"><strong>OE4.</strong> Desenvolvimento da arquitetura completa do ecossistema: AgroAssistente IA (WhatsApp + offline-first) e Coopera Digital (web + mobile), com camada de dados federada.</span></div>
+  </div>
+  <div id="e2" class="tp">
+    <div class="oi"><span class="on2">5</span><span class="ot"><strong>OE5.</strong> Implantação e validação do AgroAssistente IA com mínimo [X] agricultores familiares nas regiões-piloto, com protocolo de avaliação pré e pós-implantação.</span></div>
+    <div class="oi"><span class="on2">6</span><span class="ot"><strong>OE6.</strong> Implantação e validação do Coopera Digital com mínimo [Y] cooperativas, medindo redução de tempo administrativo e ampliação de acesso a mercados institucionais (PAA/PNAE).</span></div>
+    <div class="oi"><span class="on2">7</span><span class="ot"><strong>OE7.</strong> Integração com sistemas institucionais de ATER estadual, mercados institucionais e registro de cooperativas, garantindo interoperabilidade e conformidade com a LGPD.</span></div>
+    <div class="oi"><span class="on2">8</span><span class="ot"><strong>OE8.</strong> Capacitação de mínimo [Z] agentes de ATER, gestores de cooperativas e multiplicadores, com material didático em linguagem acessível disponibilizado em formato aberto.</span></div>
+  </div>
+  <div id="e3" class="tp">
+    <div class="oi"><span class="on2">9</span><span class="ot"><strong>OE9.</strong> Desenvolvimento e validação de modelo de sustentabilidade econômica e governança pós-projeto, avaliando integração à política de ATER digital e ao sistema cooperativo nacional.</span></div>
+    <div class="oi"><span class="on2">10</span><span class="ot"><strong>OE10.</strong> Produção de mínimo 3 artigos em periódicos Qualis A/B e apresentação em 2 eventos científicos nacionais nas áreas de Computação Aplicada ou Engenharia Agrícola.</span></div>
+    <div class="oi"><span class="on2">11</span><span class="ot"><strong>OE11.</strong> Disponibilização do código-fonte completo sob licença MIT/Apache 2.0 com DOI registrado via Zenodo, garantindo replicabilidade por outras ICTs e políticas públicas.</span></div>
+  </div>
+</section>
+
+<!-- S4 METODOLOGIA -->
+<section id="s4" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 4</span>
+    <div><div class="st">Metodologia e Plano de Trabalho</div><div class="ss">Três fases de 12 meses — desenvolvimento ágil orientado a evidências</div></div>
+  </div>
+
+  <div class="ptl">
+    <div class="pc ph1">
+      <div class="pd">🔬</div>
+      <div class="pl2">Fase 1</div>
+      <div class="pn">Fundação</div>
+      <div class="pp">Meses 1–12</div>
+      <div class="pa">
+        <div class="pai">Diagnóstico participativo (Ativ. 1.1)</div>
+        <div class="pai">Corpus AgroLinguaBR — 10k pares (Ativ. 1.2)</div>
+        <div class="pai">Fine-tuning LLM AgroAssistente (Ativ. 1.3)</div>
+        <div class="pai">MVP ecossistema completo (Ativ. 1.4)</div>
+        <div class="pai">1 artigo submetido</div>
+      </div>
+    </div>
+    <div class="pc ph2">
+      <div class="pd">🚀</div>
+      <div class="pl2">Fase 2</div>
+      <div class="pn">Validação e Piloto</div>
+      <div class="pp">Meses 13–24</div>
+      <div class="pa">
+        <div class="pai">Piloto AgroAssistente — 800 agricultores (Ativ. 2.1)</div>
+        <div class="pai">Piloto Coopera Digital — 6 cooperativas (Ativ. 2.2)</div>
+        <div class="pai">Integrações institucionais (Ativ. 2.3)</div>
+        <div class="pai">Capacitação de 120 multiplicadores (Ativ. 2.4)</div>
+        <div class="pai">2 artigos submetidos</div>
+      </div>
+    </div>
+    <div class="pc ph3">
+      <div class="pd">🌍</div>
+      <div class="pl2">Fase 3</div>
+      <div class="pn">Escala e Transferência</div>
+      <div class="pp">Meses 25–36</div>
+      <div class="pa">
+        <div class="pai">Expansão — 2.500 agricultores / 18 coops (Ativ. 3.1)</div>
+        <div class="pai">Plano de sustentabilidade (Ativ. 3.2)</div>
+        <div class="pai">Liberação open-source + DOI (Ativ. 3.3)</div>
+        <div class="pai">350 multiplicadores capacitados (Ativ. 3.4)</div>
+        <div class="pai">Artigo de síntese + Rel. Final FINEP</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+  <div style="font-size:15px;font-weight:700;color:var(--txt);margin-bottom:14px">⚖️ Distinção de Escopos — Regra Fundamental</div>
+  <div class="scbox">
+    <div class="scc scc-a">
+      <div class="scct">Charles Cleivin — Co-pesquisador</div>
+      <div class="sccn">Participação Intelectual e Científica</div>
+      <ul>
+        <li>Define arquitetura científica dos sistemas de IA</li>
+        <li>Escolhe e justifica abordagens metodológicas de ML</li>
+        <li>Define protocolos de avaliação e benchmarks</li>
+        <li>Analisa resultados e co-assina publicações</li>
+        <li>Participa de reuniões e relatórios técnicos</li>
+      </ul>
+      <div style="margin-top:12px;font-size:11px;color:var(--acc);font-weight:700">SEM bolsa · SEM remuneração pessoal</div>
+    </div>
+    <div class="scc scc-b">
+      <div class="scct">THATPIX LTDA — Empresa PJ Contratada</div>
+      <div class="sccn">Engenharia e Implementação Tecnológica</div>
+      <ul>
+        <li>Executa o pipeline de fine-tuning e operação do LLM</li>
+        <li>Desenvolve backend, frontend e infraestrutura</li>
+        <li>Implementa integração WhatsApp Business API</li>
+        <li>Entrega sistema offline-first com sync assíncrona</li>
+        <li>Suporte técnico durante os 36 meses</li>
+      </ul>
+      <div class="no" style="margin-top:12px">
+        <ul>
+          <li>NÃO co-autora publicações</li>
+          <li>NÃO toma decisões científicas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S5 EQUIPE -->
+<section id="s5" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 5</span>
+    <div><div class="st">Equipe do Projeto</div><div class="ss">Critério de peso 5 — composição detalhada e complementar</div></div>
+  </div>
+
+  <div class="tgrid">
+    <div class="tc">
+      <div class="tav tav-g">👨‍🔬</div>
+      <div class="tn">[Coordenador UFSC]</div>
+      <div class="tr2">Coordenador Geral do Projeto · Professor [UFSC / Depto.]</div>
+      <div class="ttags"><span class="ttag">Gestão do projeto</span><span class="ttag">Interlocução FINEP</span><span class="ttag">Extensão rural</span></div>
+      <div class="tded">⏱ [X]% dedicação · Servidor público UFSC</div>
+    </div>
+    <div class="tc">
+      <div class="tav tav-g">🌾</div>
+      <div class="tn">[Pesquisador Sênior 1]</div>
+      <div class="tr2">Pesquisador Sênior — Campo · Professor [UFSC]</div>
+      <div class="ttags"><span class="ttag">Pesquisa de campo</span><span class="ttag">Extensão rural</span><span class="ttag">Metodologia participativa</span></div>
+      <div class="tded">⏱ [X]% dedicação · Sem remuneração via projeto</div>
+    </div>
+    <div class="tc">
+      <div class="tav tav-g">💻</div>
+      <div class="tn">[Pesquisador Sênior 2]</div>
+      <div class="tr2">Pesquisador Sênior — Sistemas · Professor [UFSC]</div>
+      <div class="ttags"><span class="ttag">Sistemas de informação</span><span class="ttag">Ciência de dados</span><span class="ttag">Governança digital</span></div>
+      <div class="tded">⏱ [X]% dedicação · Sem remuneração via projeto</div>
+    </div>
+    <div class="tc hl">
+      <div class="tav tav-t">🤖</div>
+      <div class="tn">Charles Cleivin</div>
+      <div class="tr2">Co-pesquisador Externo · Responsável pela linha de soluções digitais e IA</div>
+      <div class="ttags"><span class="ttag">LLM fine-tuning</span><span class="ttag">Visão computacional</span><span class="ttag">WhatsApp API</span><span class="ttag">Sistemas offline</span></div>
+      <div style="margin-bottom:8px"><span class="b bb">Sem bolsa · Sem remuneração pessoal</span></div>
+      <div class="tded">Stack: Python · PyTorch · React Native · Next.js · Docker</div>
+    </div>
+    <div class="tc pj">
+      <div class="tav tav-a">🏢</div>
+      <div class="tn">THATPIX LTDA</div>
+      <div class="tr2">Prestadora de Serviços Especializados (item 6.5.2.1) · CNPJ 49.827.360/0001-50</div>
+      <div class="ttags"><span class="ttag">Engenharia de software</span><span class="ttag">Implementação</span><span class="ttag">Manutenção 36m</span></div>
+      <div style="margin-bottom:8px"><span class="b ba">Contrato PJ · R$ 1.680.000,00</span></div>
+      <div class="tded">R$ 46.666/mês × 36 meses — faixa de mercado documentada</div>
+    </div>
+    <div class="tc">
+      <div class="tav tav-g">🎓</div>
+      <div class="tn">Equipe de Bolsistas</div>
+      <div class="tr2">12 bolsistas UFSC ao longo do projeto</div>
+      <div class="ttags"><span class="ttag">1 Pós-Doutor</span><span class="ttag">3 DTI-A (Dout.)</span><span class="ttag">2 DTI-B (Mest.)</span><span class="ttag">3 IC</span><span class="ttag">3 Apoio Campo</span></div>
+      <div class="tded">Total bolsas: R$ 1.174.000 (16,8% — dentro do limite de 30%)</div>
+    </div>
+  </div>
+</section>
+
+<!-- S6 ORÇAMENTO -->
+<section id="s6" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 6</span>
+    <div><div class="st">Orçamento Detalhado</div><div class="ss">R$ 7.000.000,00 · 36 meses · Todos os limites do edital respeitados</div></div>
+  </div>
+
+  <div class="bdg-layout">
+    <div class="donut-wrap">
+      <div class="donut" id="donut">
+        <div class="donut-hole">
+          <span class="dh-v">R$ 7M</span>
+          <span class="dh-l">Total</span>
+        </div>
+      </div>
+      <div class="dlegend">
+        <div class="dli"><div class="dld" style="background:#1a5c38"></div><span class="dln">Capital / Equipamentos</span><span class="dlv">R$ 2,45M</span><span class="dlp">35%</span></div>
+        <div class="dli"><div class="dld" style="background:#0891b2"></div><span class="dln">Serviços PJ (THATPIX + outros)</span><span class="dlv">R$ 2,00M</span><span class="dlp">28,6%</span></div>
+        <div class="dli"><div class="dld" style="background:#e8970a"></div><span class="dln">Bolsas</span><span class="dlv">R$ 1,17M</span><span class="dlp">16,8%</span></div>
+        <div class="dli"><div class="dld" style="background:#4caf7a"></div><span class="dln">Diárias + Passagens</span><span class="dlv">R$ 0,65M</span><span class="dlp">9,2%</span></div>
+        <div class="dli"><div class="dld" style="background:#9333ea"></div><span class="dln">Material + Desp. Operacionais</span><span class="dlv">R$ 0,73M</span><span class="dlp">10,4%</span></div>
+      </div>
+    </div>
+    <div class="bbd">
+      <div style="font-size:14px;font-weight:700;color:var(--txt);margin-bottom:16px">Detalhamento por Rubrica</div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🖥️ Capital — Equipamentos</span><span class="bbiv">R$ 2.450.000</span></div><div class="bbbg"><div class="bbf" style="background:#1a5c38;--target-width:35%"></div></div><span class="bbp">35,0% · limite 70% ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🏢 THATPIX — Serviços PJ</span><span class="bbiv">R$ 1.680.000</span></div><div class="bbbg"><div class="bbf" style="background:#0891b2;--target-width:24%"></div></div><span class="bbp">24,0% · sem limite ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🔧 Outros Serviços PJ</span><span class="bbiv">R$ 320.000</span></div><div class="bbbg"><div class="bbf" style="background:#0d9488;--target-width:4.6%"></div></div><span class="bbp">4,6% · sem limite ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🎓 Bolsas (12 bolsistas)</span><span class="bbiv">R$ 1.174.000</span></div><div class="bbbg"><div class="bbf" style="background:#e8970a;--target-width:16.8%"></div></div><span class="bbp">16,8% · limite 30% ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">📦 Material de Consumo</span><span class="bbiv">R$ 381.000</span></div><div class="bbbg"><div class="bbf" style="background:#4caf7a;--target-width:5.4%"></div></div><span class="bbp">5,4% · sem limite ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">✈️ Diárias</span><span class="bbiv">R$ 345.000</span></div><div class="bbbg"><div class="bbf" style="background:#64748b;--target-width:4.9%"></div></div><span class="bbp">4,9% · limite 5% ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🚌 Passagens</span><span class="bbiv">R$ 300.000</span></div><div class="bbbg"><div class="bbf" style="background:#7c3aed;--target-width:4.3%"></div></div><span class="bbp">4,3% · limite 5% ✅</span></div>
+      <div class="bbi"><div class="bbih"><span class="bbin">🏛️ Desp. Operacionais Proponente</span><span class="bbiv">R$ 350.000</span></div><div class="bbbg"><div class="bbf" style="background:#9333ea;--target-width:5%"></div></div><span class="bbp">5,0% · fixo 5% ✅</span></div>
+    </div>
+  </div>
+
+  <div class="sep"></div>
+  <div style="font-size:14px;font-weight:700;color:var(--txt);margin-bottom:12px">Conformidade com Limites do Edital</div>
+  <table class="ctbl">
+    <tr><th>Rubrica</th><th>Limite Edital</th><th>Valor Proposto</th><th>%</th><th>Status</th></tr>
+    <tr><td>Despesas de Capital (equipamentos)</td><td>máx. 70%</td><td>R$ 2.450.000</td><td>35,0%</td><td><span class="ok">✓ Dentro do limite</span></td></tr>
+    <tr><td>Obras e Instalações</td><td>máx. 10%</td><td>R$ 0</td><td>0%</td><td><span class="ok">✓ Não aplicável</span></td></tr>
+    <tr><td>Pagamento de Pessoal</td><td>máx. 30%</td><td>R$ 0</td><td>0%</td><td><span class="ok">✓ ICT federal</span></td></tr>
+    <tr><td>Bolsas</td><td>máx. 30%</td><td>R$ 1.174.000</td><td>16,8%</td><td><span class="ok">✓ Dentro do limite</span></td></tr>
+    <tr><td>Diárias</td><td>máx. 5%</td><td>R$ 345.000</td><td>4,9%</td><td><span class="ok">✓ Dentro do limite</span></td></tr>
+    <tr><td>Passagens</td><td>máx. 5%</td><td>R$ 300.000</td><td>4,3%</td><td><span class="ok">✓ Dentro do limite</span></td></tr>
+    <tr><td>Desp. Operacionais Proponente</td><td>5% fixo</td><td>R$ 350.000</td><td>5,0%</td><td><span class="ok">✓ Exato</span></td></tr>
+    <tr><td>Serviços PJ (item 6.5.2.1)</td><td>Sem limite</td><td>R$ 2.000.000</td><td>28,6%</td><td><span class="ok">✓ Sem restrição</span></td></tr>
+  </table>
+</section>
+
+<!-- S7 PARCERIAS -->
+<section id="s7" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 7</span>
+    <div><div class="st">Parcerias Previstas</div><div class="ss">Critério peso 2 — sem cartas de anuência, pontuação zero neste critério</div></div>
+  </div>
+
+  <div class="alert alert-r"><span class="alert-ico">🚨</span><div><div class="alert-t">Ação Urgente — 44 dias para a submissão</div><div class="alert-d">O contato com cooperativas âncora, EMATER estadual e movimentos sociais deve começar <strong>imediatamente</strong>. Cartas em órgãos públicos levam 10–20 dias úteis para assinatura institucional. Prepare modelos de carta para que os parceiros apenas assinem.</div></div></div>
+
+  <div class="pgrid" style="margin-bottom:28px">
+    <div class="pcard urg">
+      <div class="pcat">🔴 Prioridade Crítica</div>
+      <div class="pname">3 Cooperativas Âncora (Pilotos)</div>
+      <div class="prole">Parceiros âncora dos pilotos Fase 2 — fornecem acesso ao campo, base de usuários reais e dados de validação. Mínimo 50 associados ativos, participação no PAA ou PNAE.</div>
+      <div class="pdl urg">⚡ Contatar esta semana · Carta até 30/05</div>
+    </div>
+    <div class="pcard urg">
+      <div class="pcat">🔴 Prioridade Crítica</div>
+      <div class="pname">EMATER Estadual</div>
+      <div class="prole">Canal de distribuição e amplificação — agentes de ATER usam e disseminam o AgroAssistente. EMATER-GO, EMATER-MG, EMATER-RN ou equivalente conforme região-piloto.</div>
+      <div class="pdl urg">⚡ Contatar esta semana · Carta até 05/06</div>
+    </div>
+    <div class="pcard alt">
+      <div class="pcat">🟠 Alta Prioridade</div>
+      <div class="pname">FETRAF-Brasil ou CONTAG</div>
+      <div class="prole">Carta de apoio institucional nacional. Alto peso político na avaliação — sinaliza endosso dos próprios agricultores familiares. Legitimidade social máxima.</div>
+      <div class="pdl alt">⚠ Contatar até 20/05 · Carta até 10/06</div>
+    </div>
+    <div class="pcard alt">
+      <div class="pcat">🟠 Alta Prioridade</div>
+      <div class="pname">UNICAFES (regional ou nacional)</div>
+      <div class="prole">Endosso institucional do sistema cooperativo da agricultura familiar. Carta de apoio com menção ao interesse em adotar a plataforma para sua rede.</div>
+      <div class="pdl alt">⚠ Contatar até 25/05 · Carta até 15/06</div>
+    </div>
+    <div class="pcard alt">
+      <div class="pcat">🟠 Alta Prioridade</div>
+      <div class="pname">Comunidade Quilombola / CONAQ</div>
+      <div class="prole">O edital menciona explicitamente comunidades quilombolas como público prioritário. Diferencial significativo no critério 5 e alinhamento ao perfil de inclusão do MCTI.</div>
+      <div class="pdl alt">⚠ Contatar até 25/05 · Carta até 15/06</div>
+    </div>
+    <div class="pcard med">
+      <div class="pcat">🔵 Média Prioridade</div>
+      <div class="pname">2 Prefeituras Municipais Rurais</div>
+      <div class="prole">Apoio logístico para eventos de capacitação. IDH abaixo de 0,65. Secretaria de Agricultura ativa. Preferencialmente Norte, Nordeste ou Centro-Oeste.</div>
+      <div class="pdl med">ℹ Contatar até 01/06 · Carta até 20/06</div>
+    </div>
+    <div class="pcard med">
+      <div class="pcat">🔵 Desejável</div>
+      <div class="pname">EMBRAPA (unidade regional)</div>
+      <div class="prole">EMBRAPA Informática Agropecuária (Campinas) ou EMBRAPA Agricultura Familiar (Petrolina). Validação científica do conteúdo do AgroAssistente, acesso ao acervo técnico.</div>
+      <div class="pdl med">ℹ Contatar até 01/06 · Acordo até 20/06</div>
+    </div>
+    <div class="pcard med">
+      <div class="pcat">🔵 Desejável</div>
+      <div class="pname">MST Regional / MPA</div>
+      <div class="prole">Acesso a assentamentos de reforma agrária. Alta aderência ao perfil de público prioritário do edital. Complementa a parceria com FETRAF/CONTAG.</div>
+      <div class="pdl med">ℹ Conforme disponibilidade regional</div>
+    </div>
+  </div>
+
+  <div style="font-size:14px;font-weight:700;color:var(--txt);margin-bottom:14px">📅 Sequência Crítica de Ações</div>
+  <div class="atl">
+    <div class="ai"><div class="aw">Semana 1 — 13 a 17/05</div><div class="at2">Contato inicial com cooperativas âncora, EMATER estadual e FETRAF/CONTAG. Envio de modelo de carta de anuência para agilizar o processo.</div></div>
+    <div class="ai"><div class="aw">Semana 2 — 20 a 24/05</div><div class="at2">Definição da região-piloto, nome do coordenador UFSC e laboratório. Contato com UNICAFES e identificar comunidade quilombola da região.</div></div>
+    <div class="ai"><div class="aw">Semana 3 — 27 a 31/05</div><div class="at2">Receber cartas âncora (cooperativas + EMATER). Iniciar cadastro na plataforma financiamento.finep.gov.br.</div></div>
+    <div class="ai"><div class="aw">Semana 4 — 03 a 07/06</div><div class="at2">Preencher formulário na plataforma Finep. Compilar pesquisa de mercado para justificar valor THATPIX (item 11.2).</div></div>
+    <div class="ai"><div class="aw">Semanas 5 e 6 — 10 a 21/06</div><div class="at2">Receber cartas complementares. Revisão jurídica e validação interna UFSC/FAPEU. Ajustes finais do plano de trabalho.</div></div>
+    <div class="ai"><div class="aw">Semana 7 — 24 a 26/06 🚨</div><div class="at2"><strong>Submissão final na plataforma · Prazo: 26/06/2026 às 17h (Brasília).</strong> Ter todos os documentos digitalizados e prontos até 24/06 para margem de segurança.</div></div>
+  </div>
+</section>
+
+<!-- S8 INDICADORES -->
+<section id="s8" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 8</span>
+    <div><div class="st">Indicadores e Metas</div><div class="ss">KPIs mensuráveis por fase e dimensão avaliativa</div></div>
+  </div>
+
+  <div class="kgrid">
+    <div class="kc"><span class="ki">👨‍🌾</span><span class="kv" data-count="2500">0</span><span class="kl">Agricultores ativos (Fase 3)</span></div>
+    <div class="kc"><span class="ki">🏛️</span><span class="kv" data-count="18">0</span><span class="kl">Cooperativas implantadas</span></div>
+    <div class="kc"><span class="ki">🎓</span><span class="kv" data-count="350">0</span><span class="kl">Multiplicadores capacitados</span></div>
+    <div class="kc"><span class="ki">📝</span><span class="kv" data-count="5">0</span><span class="kl">Artigos científicos</span></div>
+  </div>
+
+  <table class="itbl">
+    <tr><th>Indicador-chave</th><th>Fase 1 (mês 12)</th><th>Fase 2 (mês 24)</th><th>Fase 3 (mês 36)</th></tr>
+    <tr><td>Agricultores com AgroAssistente ativo (MAU)</td><td>—</td><td class="tgt">800</td><td class="tgt">2.500</td></tr>
+    <tr><td>Cooperativas com Coopera Digital ativo</td><td>—</td><td class="tgt">6</td><td class="tgt">18</td></tr>
+    <tr><td>Municípios alcançados</td><td>—</td><td class="tgt">8</td><td class="tgt">25</td></tr>
+    <tr><td>Multiplicadores capacitados (acumulado)</td><td class="tgt">20</td><td class="tgt">120</td><td class="tgt">350</td></tr>
+    <tr><td>Redução de tempo administrativo (cooperativas)</td><td>—</td><td class="tgt">≥ 30%</td><td class="tgt">≥ 40%</td></tr>
+    <tr><td>Taxa de resolução do AgroAssistente</td><td>—</td><td class="tgt">≥ 70%</td><td class="tgt">≥ 80%</td></tr>
+    <tr><td>Satisfação agricultores (escala 1–5)</td><td>—</td><td class="tgt">≥ 4,0</td><td class="tgt">≥ 4,2</td></tr>
+    <tr><td>Tamanho corpus AgroLinguaBR (pares)</td><td class="tgt">10.000</td><td class="tgt">18.000</td><td class="tgt">25.000</td></tr>
+    <tr><td>F1-score benchmark agro-QA em português</td><td>Baseline</td><td class="tgt">≥ 0,72</td><td class="tgt">≥ 0,80</td></tr>
+    <tr><td>Uptime do sistema em produção</td><td>—</td><td class="tgt">≥ 99,0%</td><td class="tgt">≥ 99,5%</td></tr>
+    <tr><td>Artigos científicos submetidos (acumulado)</td><td class="tgt">1</td><td class="tgt">3</td><td class="tgt">5</td></tr>
+    <tr><td>Repositório open-source publicado</td><td>—</td><td class="tgt">Beta</td><td class="tgt">Estável + DOI</td></tr>
+  </table>
+</section>
+
+<!-- S9 RISCOS -->
+<section id="s9" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 9</span>
+    <div><div class="st">Riscos e Mitigações</div><div class="ss">Matriz de riscos técnicos, institucionais e de campo</div></div>
+  </div>
+
+  <div class="rmat">
+    <div style="display:grid;grid-template-columns:44px 1fr 80px 90px;gap:14px;padding:10px 18px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--txtll)">
+      <div>ID</div><div>Risco</div><div style="text-align:center">Prob.</div><div style="text-align:center">Nível</div>
+    </div>
+    <div class="ri alto"><div class="rid">R01</div><div><div class="rin">Desempenho insuficiente do LLM agrícola</div><div class="rid2">F1 abaixo da meta no benchmark especializado → fallback RAG disponível; 2 ciclos de re-treinamento previstos no orçamento</div></div><div class="rpr">Média</div><div class="rlv alto">🔴 Alto</div></div>
+    <div class="ri alto"><div class="rid">R02</div><div><div class="rin">Baixa adoção do AgroAssistente</div><div class="rid2">MAU abaixo da meta → design co-criado com agricultores no diagnóstico; onboarding via multiplicadores presenciais</div></div><div class="rpr">Média</div><div class="rlv alto">🔴 Alto</div></div>
+    <div class="ri alto"><div class="rid">R03</div><div><div class="rin">Conectividade insuficiente nas regiões-piloto</div><div class="rid2">Internet ainda mais precária do que o diagnóstico indica → 15 kits Starlink no orçamento; modelo roda localmente no servidor da cooperativa</div></div><div class="rpr">Alta</div><div class="rlv alto">🔴 Alto</div></div>
+    <div class="ri alto"><div class="rid">R04</div><div><div class="rin">Desengajamento de cooperativas parceiras</div><div class="rid2">Redução de participação durante o projeto → acordo de cooperação técnica (não apenas carta); 2 cooperativas reserva identificadas</div></div><div class="rpr">Média</div><div class="rlv alto">🔴 Alto</div></div>
+    <div class="ri medio"><div class="rid">R05</div><div><div class="rin">Dependência de pessoas-chave (Charles / THATPIX)</div><div class="rid2">Código documentado progressivamente; bolsistas DTI-A acompanham todas as decisões de IA desde a Fase 1</div></div><div class="rpr">Baixa</div><div class="rlv medio">🟠 Médio</div></div>
+    <div class="ri alto"><div class="rid">R06</div><div><div class="rin">Atrasos burocráticos na UFSC / fundação</div><div class="rid2">Iniciar contratação THATPIX no mês 1; primeiros 60 dias com atividades independentes de infraestrutura (diagnóstico, revisão bib.)</div></div><div class="rpr">Alta</div><div class="rlv alto">🔴 Alto</div></div>
+    <div class="ri medio"><div class="rid">R07</div><div><div class="rin">Não conformidade com LGPD</div><div class="rid2">Consultoria jurídica LGPD (R$ 80k no orçamento) desde a Fase 1; arquitetura federada com soberania de dados por cooperativa</div></div><div class="rpr">Baixa</div><div class="rlv medio">🟠 Médio</div></div>
+    <div class="ri medio"><div class="rid">R08</div><div><div class="rin">Mudanças nas APIs do WhatsApp (Meta)</div><div class="rid2">Camada de abstração de canal na arquitetura; Telegram Bot API e app mobile próprio mapeados como canais fallback</div></div><div class="rpr">Média</div><div class="rlv medio">🟠 Médio</div></div>
+    <div class="ri medio"><div class="rid">R09</div><div><div class="rin">Inflação/câmbio impactando equipamentos</div><div class="rid2">Aquisição de servidores GPU prioritária no T1; reserva de contingência no material de consumo; 3 cotações por item</div></div><div class="rpr">Média</div><div class="rlv medio">🟠 Médio</div></div>
+    <div class="ri baixo"><div class="rid">R10</div><div><div class="rin">Descontinuidade de políticas públicas (PAA/PNAE)</div><div class="rid2">Módulo de comercialização também atende mercados privados (feiras, restaurantes, e-commerce local) — não depende exclusivamente de inst.</div></div><div class="rpr">Baixa</div><div class="rlv baixo">🟢 Baixo</div></div>
+  </div>
+</section>
+
+<!-- S10 CHECKLIST -->
+<section id="s10" class="sec">
+  <div class="sh">
+    <span class="sn">Seção 10</span>
+    <div><div class="st">Checklist de Submissão</div><div class="ss">Lista completa de documentos · Clique para marcar como concluído</div></div>
+  </div>
+
+  <div class="alert alert-a"><span class="alert-ico">⏰</span><div><div class="alert-t">Prazo: 26/06/2026 às 17h (Brasília) — <span id="countdown2">--</span> dias restantes</div><div class="alert-d">Recomenda-se ter todos os documentos digitalizados e prontos até <strong>24/06</strong> para margem de segurança técnica na plataforma.</div></div></div>
+
+  <!-- Proposta -->
+  <div class="clg">
+    <div class="clgt">📄 Documentos da Proposta</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Formulário de proposta preenchido na plataforma financiamento.finep.gov.br</div><div class="cis">Coordenador UFSC + FAPEU/FEESC</div></div><span class="b ba">A fazer</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Plano de Trabalho detalhado no formato FINEP</div><div class="cis">Este documento formatado conforme template da chamada</div></div><span class="b ba">Em elaboração</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Planilha de orçamento no formato FINEP</div><div class="cis">Importar valores da Seção 6 deste documento</div></div><span class="b ba">A fazer</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Cronograma de desembolso por rubrica e por fase</div><div class="cis">FAPEU/FEESC</div></div><span class="b ba">A fazer</span></div>
+  </div>
+
+  <!-- ICT UFSC -->
+  <div class="clg">
+    <div class="clgt">🏫 Documentos Institucionais da UFSC</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Política de Inovação da UFSC — OBRIGATÓRIO para ICT pública federal (item 5.7 do edital)</div><div class="cis">SINOVA/UFSC — verificar disponibilidade imediatamente</div></div><span class="b br">Crítico</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Cartão CNPJ atualizado da UFSC</div><div class="cis">Disponível na Receita Federal</div></div><span class="b bg">Disponível</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Certidão Negativa de Débitos Federais da UFSC (CND/PGFN)</div><div class="cis">Emitir próximo à data de submissão — validade limitada</div></div><span class="b ba">Emitir em junho</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Certidão Negativa do FGTS da UFSC</div><div class="cis">Emitir próximo à data de submissão</div></div><span class="b ba">Emitir em junho</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de não inadimplência da UFSC com a FINEP</div><div class="cis">Coordenador / Pró-Reitoria</div></div><span class="b ba">A fazer</span></div>
+  </div>
+
+  <!-- Fundação -->
+  <div class="clg">
+    <div class="clgt">🏛️ Documentos da Fundação de Apoio (FAPEU ou FEESC)</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Credenciamento vigente MEC/MCTI da fundação de apoio — OBRIGATÓRIO (item 3.3 do edital)</div><div class="cis">Verificar validade e renovar se necessário</div></div><span class="b br">Crítico</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Cartão CNPJ + Estatuto Social + Ata de eleição da diretoria</div><div class="cis">Verificar atualidade da ata</div></div><span class="b ba">Verificar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Certidões negativas (débitos federais + FGTS) da fundação</div><div class="cis">Emitir próximo à submissão</div></div><span class="b ba">Emitir em junho</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Contrato ou termo de parceria vigente UFSC ↔ Fundação de Apoio</div><div class="cis">Verificar vigência</div></div><span class="b ba">Verificar</span></div>
+  </div>
+
+  <!-- Pesquisadores -->
+  <div class="clg">
+    <div class="clgt">👥 Documentos dos Pesquisadores</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Currículo Lattes atualizado do Coordenador</div><div class="cis">Atualizar com projetos e publicações recentes</div></div><span class="b ba">Atualizar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Currículo Lattes atualizado de cada pesquisador sênior</div><div class="cis">Pesquisadores Sênior 1 e 2</div></div><span class="b ba">Atualizar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Currículo de Charles Cleivin (LinkedIn + portfólio técnico com projetos relevantes)</div><div class="cis">Incluir: LLM fine-tuning, visão computacional bovinos, WhatsApp automação, MatriculadorIA</div></div><span class="b br">Crítico — preparar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Termo de participação de Charles Cleivin como co-pesquisador externo sem bolsa</div><div class="cis">Declarar: ausência de vínculo empregatício com UFSC + distinção explícita do contrato PJ da THATPIX</div></div><span class="b br">Crítico — redigir</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de disponibilidade e dedicação de cada pesquisador</div><div class="cis">Todos os membros da equipe UFSC</div></div><span class="b ba">A fazer</span></div>
+  </div>
+
+  <!-- THATPIX -->
+  <div class="clg">
+    <div class="clgt">🏢 Documentos da THATPIX (Empresa PJ Contratada)</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Cartão CNPJ — THATPIX DESENVOLVIMENTO DE SOFTWARES LTDA · 49.827.360/0001-50</div><div class="cis">Receita Federal — verificar situação cadastral ativa</div></div><span class="b bg">Disponível</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Contrato Social ou Requerimento de Empresário da THATPIX</div><div class="cis">Junta Comercial</div></div><span class="b bg">Disponível</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Certidão Negativa de Débitos Federais da THATPIX</div><div class="cis">Emitir próximo à data de submissão</div></div><span class="b ba">Emitir em junho</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Pesquisa de mercado documentando faixa salarial de engenheiro sênior IA/ML no Brasil — OBRIGATÓRIO (item 11.2)</div><div class="cis">Glassdoor, Revelo, Programathor — printscreens datados de 2025/2026. Justificar R$ 46.666/mês</div></div><span class="b br">Crítico — compilar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de capacidade técnica da THATPIX com portfólio de projetos anteriores</div><div class="cis">Incluir projetos: LLM PT-BR, visão computacional rural, WhatsApp automação</div></div><span class="b ba">Redigir</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Minuta do contrato de serviços FAPEU/FEESC ↔ THATPIX</div><div class="cis">Pode ser condicional (assinado após aprovação) — mas ter a minuta pronta</div></div><span class="b ba">Redigir</span></div>
+  </div>
+
+  <!-- Cartas -->
+  <div class="clg">
+    <div class="clgt">🤝 Cartas de Anuência e Parcerias</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Cooperativa âncora Piloto 1</div><div class="cis">Papel timbrado + assinatura do representante legal + menção explícita ao projeto Roça Conectada</div></div><span class="b br">🔴 Urgente — até 30/05</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Cooperativa âncora Piloto 2</div><div class="cis">Idem</div></div><span class="b br">🔴 Urgente — até 30/05</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Cooperativa âncora Piloto 3</div><div class="cis">Idem</div></div><span class="b br">🔴 Urgente — até 10/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — EMATER estadual</div><div class="cis">Processo de assinatura institucional pode levar 10–20 dias úteis</div></div><span class="b br">🔴 Urgente — até 05/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de apoio — FETRAF-Brasil ou CONTAG</div><div class="cis">Carta de apoio institucional nacional — alto peso político na avaliação</div></div><span class="b ba">Alta — até 10/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de apoio — UNICAFES (regional ou nacional)</div><div class="cis">Sistema cooperativo da agricultura familiar</div></div><span class="b ba">Alta — até 15/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Comunidade quilombola ou CONAQ</div><div class="cis">Público explicitamente mencionado no edital — diferencial importante</div></div><span class="b ba">Alta — até 15/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Prefeitura municipal 1</div><div class="cis">IDH < 0,65 · Secretaria de Agricultura ativa</div></div><span class="b bb">Média — até 20/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Carta de anuência — Prefeitura municipal 2</div><div class="cis">Idem</div></div><span class="b bb">Média — até 20/06</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Acordo de cooperação técnica — EMBRAPA (unidade regional)</div><div class="cis">EMBRAPA Informática Agropecuária ou Agricultura Familiar</div></div><span class="b bb">Desejável — até 20/06</span></div>
+  </div>
+
+  <!-- Complementares -->
+  <div class="clg">
+    <div class="clgt">📋 Documentos Complementares Obrigatórios</div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de ineditismo e não duplicidade de financiamento</div><div class="cis">O projeto não recebe financiamento simultâneo de outra fonte pública para o mesmo objeto</div></div><span class="b ba">A fazer</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de ciência e concordância com as normas do edital</div><div class="cis">Coordenador + representante legal da FAPEU/FEESC</div></div><span class="b ba">A fazer</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Declaração de Política de Inovação aprovada da UFSC (item 5.7)</div><div class="cis">SINOVA/UFSC — CRÍTICO para ICT pública federal</div></div><span class="b br">Crítico</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">Comprovante de cadastro da fundação de apoio no SICONV / plataforma equivalente FINEP</div><div class="cis">FAPEU/FEESC — verificar cadastro ativo</div></div><span class="b ba">Verificar</span></div>
+    <div class="ci" onclick="toggle(this)"><div class="cib">✓</div><div><div class="cil">PDF consolidado do Plano de Trabalho completo (Seções 1–10)</div><div class="cis">Formatado e paginado conforme exigência FINEP</div></div><span class="b ba">Finalizar</span></div>
+  </div>
+</section>
+
+<div class="footer">
+  Roça Conectada · Proposta MCTI/FINEP/FNDCT — AgriFam-ICT 2026 · Linha Temática 3 · Gerado em 13/05/2026
+  <br>THATPIX DESENVOLVIMENTO DE SOFTWARES LTDA · CNPJ 49.827.360/0001-50
+</div>
+
+</main>
+
+<script>
+// COUNTDOWN
+function updateCountdown(){
+  const deadline=new Date('2026-06-26T17:00:00-03:00');
+  const now=new Date();
+  const diff=Math.ceil((deadline-now)/(1000*60*60*24));
+  document.getElementById('countdown').textContent=diff;
+  const el2=document.getElementById('countdown2');
+  if(el2)el2.textContent=diff;
+}
+updateCountdown();
+
+// PROGRESS BAR
+const pbar=document.getElementById('pbar');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  pbar.style.width=(window.scrollY/h*100)+'%';
+});
+
+// INTERSECTION OBSERVER FOR SECTIONS
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      // animate budget bars when section visible
+      if(e.target.id==='s6'){
+        setTimeout(()=>{
+          document.querySelectorAll('.bbf').forEach(b=>{
+            b.style.width=b.style.getPropertyValue('--target-width');
+          });
+        },300);
+      }
+      // animate KPI counters when section visible
+      if(e.target.id==='s8') animateCounters();
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.sec').forEach(s=>obs.observe(s));
+
+// ACTIVE NAV
+const navAs=document.querySelectorAll('.nav-a');
+const sections=document.querySelectorAll('[id^="s"]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{
+    if(window.scrollY>=s.offsetTop-200) cur=s.id;
+  });
+  navAs.forEach(a=>{
+    a.classList.remove('active');
+    if(a.getAttribute('href')==='#'+cur) a.classList.add('active');
+  });
+});
+
+// TABS
+function switchTab(el,id){
+  el.closest('.sec').querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  el.closest('.sec').querySelectorAll('.tp').forEach(t=>t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+}
+
+// CHECKLIST TOGGLE
+function toggle(el){
+  el.classList.toggle('chk');
+  const box=el.querySelector('.cib');
+  box.textContent=el.classList.contains('chk')?'✓':'✓';
+}
+
+// DONUT CHART
+function buildDonut(){
+  const el=document.getElementById('donut');
+  if(!el)return;
+  el.style.background='conic-gradient('+
+    '#1a5c38 0deg 126deg,'+      // 35% capital
+    '#0891b2 126deg 229deg,'+    // 28.6% PJ
+    '#e8970a 229deg 290deg,'+    // 16.8% bolsas
+    '#4caf7a 290deg 323deg,'+    // 9.2% diárias+passagens
+    '#9333ea 323deg 360deg'      // 10.4% material+admin
+    +')';
+}
+buildDonut();
+
+// KPI COUNTER ANIMATION
+function animateCounters(){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target=parseInt(el.dataset.count);
+    const duration=1500;
+    const start=Date.now();
+    const tick=()=>{
+      const elapsed=Date.now()-start;
+      const progress=Math.min(elapsed/duration,1);
+      const ease=1-Math.pow(1-progress,3);
+      el.textContent=Math.round(ease*target).toLocaleString('pt-BR');
+      if(progress<1)requestAnimationFrame(tick);
+    };
+    tick();
+  });
+}
+
+// SMOOTH scroll for nav links
+navAs.forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const target=document.querySelector(a.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</body>
+</html>

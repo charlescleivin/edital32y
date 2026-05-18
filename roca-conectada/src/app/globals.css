@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  /* surfaces */
+  --bg:         #0c0b09;
+  --bg-alt:     #111009;
+  --bg-card:    #171411;
+  --bg-raised:  #1e1a14;
+
+  /* typography — three-level warm cream hierarchy */
+  --txt:        #ede5d3;
+  --txtl:       #9c8a70;
+  --txtll:      #5c4e3e;
+
+  /* borders */
+  --bdr:        rgba(237,229,211,0.08);
+  --bdr-strong: rgba(237,229,211,0.13);
+
+  /* accents */
+  --terra:      #c85530;
+  --terrap:     rgba(200,85,48,0.12);
+  --gold:       #d4960e;
+  --goldp:      rgba(212,150,14,0.12);
+  --sage:       #6fa876;
+  --sagep:      rgba(111,168,118,0.12);
+  --p:          #4a9456;
+  --pale:       rgba(74,148,86,0.14);
+
+  /* layout */
+  --sw:         270px;
+}
+
+@theme inline {
+  --font-sans:    var(--font-inter);
+  --font-mono:    var(--font-geist-mono);
+  --font-display: var(--font-playfair);
+
+  --color-bg:     var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-card:   var(--bg-card);
+  --color-txt:    var(--txt);
+  --color-txtl:   var(--txtl);
+  --color-txtll:  var(--txtll);
+  --color-terra:  var(--terra);
+  --color-gold:   var(--gold);
+  --color-sage:   var(--sage);
+  --color-p:      var(--p);
+}
+
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes seam-flash {
+  0%   { opacity: 0 }
+  35%  { opacity: 1 }
+  100% { opacity: 0 }
+}
