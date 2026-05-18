@@ -55,6 +55,7 @@ export interface Barrier {
   icon: string
   title: string
   description: string
+  keyFact?: { value: string; label: string }
 }
 
 export interface BibliographyRef {
