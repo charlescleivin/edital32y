@@ -12,11 +12,11 @@ const statAccent: Record<string, string> = {
 }
 
 const barrierAccent = [
-  { color: 'var(--terra)', border: 'rgba(200,85,48,0.3)',   bg: 'rgba(200,85,48,0.1)'   },
-  { color: 'var(--gold)',  border: 'rgba(212,150,14,0.3)',  bg: 'rgba(212,150,14,0.1)'  },
-  { color: 'var(--sage)',  border: 'rgba(111,168,118,0.3)', bg: 'rgba(111,168,118,0.1)' },
-  { color: 'var(--sage)',  border: 'rgba(111,168,118,0.3)', bg: 'rgba(111,168,118,0.1)' },
-  { color: 'var(--gold)',  border: 'rgba(212,150,14,0.3)',  bg: 'rgba(212,150,14,0.1)'  },
+  { color: 'var(--terra)', border: 'rgba(200,85,48,0.3)',   bg: 'rgba(200,85,48,0.13)'   },
+  { color: 'var(--gold)',  border: 'rgba(212,150,14,0.3)',  bg: 'rgba(212,150,14,0.13)'  },
+  { color: 'var(--sage)',  border: 'rgba(111,168,118,0.3)', bg: 'rgba(111,168,118,0.13)' },
+  { color: 'var(--sage)',  border: 'rgba(111,168,118,0.3)', bg: 'rgba(111,168,118,0.13)' },
+  { color: 'var(--gold)',  border: 'rgba(212,150,14,0.3)',  bg: 'rgba(212,150,14,0.13)'  },
 ]
 
 function renderBlocks(text: string, headingColor = 'var(--txt)') {
@@ -66,7 +66,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
       </div>
 
-      {/* opening scenario — persona vignette */}
+      {/* opening scenario */}
       {openingScenario && (
         <div className="mb-10 rounded-2xl border-l-[3px] px-7 py-6"
           style={{ borderColor: 'var(--terra)', background: 'var(--bg-card)' }}>
@@ -79,7 +79,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         </div>
       )}
 
-      {/* stats — large Playfair numbers */}
+      {/* stats */}
       <div className="mb-10 grid grid-cols-4 gap-4">
         {stats.map((s, i) => (
           <div key={i} className="rounded-2xl border p-5 text-center"
@@ -93,50 +93,71 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         ))}
       </div>
 
-      {/* barriers */}
+      {/* barriers — magazine alternating layout */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
         As {barriers.length} Barreiras Estruturais
       </div>
-      <div className="mb-8 grid grid-cols-2 gap-4">
+      <div className="mb-8 flex flex-col gap-4">
         {barriers.map((b, i) => {
           const acc = barrierAccent[i] ?? barrierAccent[0]
-          const isLastOdd = i === barriers.length - 1 && barriers.length % 2 !== 0
-          return (
-            <div key={i}
-              className={`rounded-2xl ${isLastOdd ? 'col-span-2' : ''}`}
+          const textOnLeft = i % 2 === 0
+
+          const textBlock = (
+            <div className="flex flex-[3] flex-col justify-center px-10 py-10"
+              style={{ order: textOnLeft ? 1 : 3 }}>
+              <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: acc.color }}>
+                Barreira {i + 1} de {barriers.length}
+              </div>
+              <div className="mb-5 mt-1 text-[17px] font-bold leading-[1.3]" style={{ color: 'var(--txt)' }}>
+                {b.title}
+              </div>
+              <div className="text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
+                {b.description}
+              </div>
+            </div>
+          )
+
+          const visualPanel = b.image ? (
+            <div className="relative flex-[2] overflow-hidden" style={{ order: textOnLeft ? 3 : 1 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={b.image} alt="" className="h-full w-full object-cover" />
+            </div>
+          ) : (
+            <div className="flex flex-[2] flex-col items-center justify-center gap-5 px-10 py-12"
               style={{
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: acc.border,
-                borderLeftWidth: '3px',
-                borderLeftColor: acc.color,
-                background: 'var(--bg-card)',
+                order: textOnLeft ? 3 : 1,
+                backgroundColor: acc.bg,
+                backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)',
+                backgroundSize: '24px 24px',
               }}>
-              <div className="p-6">
-                <div className="mb-3 text-[28px] leading-none">{b.icon}</div>
-                <div className="mb-3 text-[15px] font-bold leading-[1.3]" style={{ color: 'var(--txt)' }}>{b.title}</div>
-                {b.keyFact && (
-                  <div className="mb-4 flex items-center gap-4 rounded-xl px-4 py-3"
-                    style={{ background: acc.bg }}>
-                    <span className="shrink-0 text-[32px] font-bold leading-none"
+              <span className="text-[90px] leading-none" style={{ opacity: 0.85 }}>{b.icon}</span>
+              {b.keyFact && (
+                <>
+                  <div className="text-center">
+                    <div className="text-[52px] font-bold leading-none"
                       style={{ fontFamily: 'var(--font-playfair)', color: acc.color }}>
                       {b.keyFact.value}
-                    </span>
-                    <span className="text-[12px] leading-snug" style={{ color: 'var(--txtl)' }}>
+                    </div>
+                    <div className="mt-3 text-[12px] leading-snug" style={{ color: 'var(--txtl)', maxWidth: 200 }}>
                       {b.keyFact.label}
-                    </span>
+                    </div>
                   </div>
-                )}
-                <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-                  {b.description}
-                </div>
-              </div>
+                </>
+              )}
+            </div>
+          )
+
+          return (
+            <div key={i} className="flex overflow-hidden rounded-2xl border" style={{ borderColor: acc.border }}>
+              {textBlock}
+              <div className="w-px shrink-0" style={{ order: 2, background: acc.border }} />
+              {visualPanel}
             </div>
           )
         })}
       </div>
 
-      {/* context note — structured blocks */}
+      {/* context note */}
       <div className="rounded-2xl border-l-[3px] p-7"
         style={{ borderColor: 'var(--terra)', background: 'var(--bg-card)' }}>
         <div className="mb-5 text-[10px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--terra)' }}>
@@ -156,7 +177,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         </div>
       )}
 
-      {/* competitive context — intro + structured sections */}
+      {/* competitive context */}
       {competitiveContext && (
         <div className="mt-5 rounded-2xl border p-7"
           style={{ borderColor: 'rgba(111,168,118,0.25)', background: 'rgba(111,168,118,0.05)' }}>
