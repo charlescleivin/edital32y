@@ -1,0 +1,37 @@
+[
+  {
+    "id": "v1",
+    "commit": "eb28397",
+    "date": "2026-05-17",
+    "label": "Versão Inicial",
+    "description": "Estrutura base da proposta com todas as seções"
+  },
+  {
+    "id": "v2",
+    "commit": "491aad9",
+    "date": "2026-05-18",
+    "label": "Justificativa Reescrita",
+    "description": "S2 reescrita com mapeamento ao edital e estatísticas limpas"
+  },
+  {
+    "id": "v3",
+    "commit": "fdafc95",
+    "date": "2026-05-18",
+    "label": "Deep Research Incorporado",
+    "description": "Dados de pesquisa de campo adicionados à justificativa"
+  },
+  {
+    "id": "v4",
+    "commit": "fc85a91",
+    "date": "2026-05-18",
+    "label": "Redesign Visual S2",
+    "description": "Redesign com keyFacts e blocos estruturados nas barreiras"
+  },
+  {
+    "id": "v5",
+    "commit": "651858c",
+    "date": "2026-05-18",
+    "label": "Barreiras com Imagens",
+    "description": "Placeholders SVG com layout editorial nas barreiras"
+  }
+]

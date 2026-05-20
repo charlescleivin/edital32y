@@ -8,9 +8,12 @@
     "start": "next start",
     "test": "jest",
     "test:watch": "jest --watch",
-    "new:component": "node scripts/new-component.mjs"
+    "new:component": "node scripts/new-component.mjs",
+    "postinstall": "node scripts/setup-hooks.mjs"
   },
   "dependencies": {
+    "@types/diff": "^7.0.2",
+    "diff": "^9.0.0",
     "next": "16.2.6",
     "react": "19.2.4",
     "react-dom": "19.2.4"

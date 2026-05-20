@@ -1,0 +1,5 @@
+#!/bin/sh
+# Auto-extracts a version snapshot when data/proposal.json changes.
+# Installed via: git config core.hooksPath roca-conectada/scripts/hooks
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+node "$SCRIPT_DIR/../extract-version.mjs"
