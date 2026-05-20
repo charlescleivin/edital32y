@@ -139,12 +139,12 @@ export default function DiffDrawer() {
           className="flex shrink-0 items-center gap-3 px-6 py-4"
           style={{ borderBottom: '1px solid rgba(237,229,211,0.06)', background: 'rgba(255,255,255,0.02)' }}
         >
-          <div className="flex flex-1 flex-col gap-1">
+          <div className="flex min-w-0 flex-1 flex-col gap-1">
             <label className="text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--txtll)' }}>De</label>
             <select
               value={fromId}
               onChange={(e) => setFromId(e.target.value)}
-              className="rounded-lg px-3 py-2 text-[12px] font-medium outline-none"
+              className="w-full rounded-lg px-3 py-2 text-[12px] font-medium outline-none"
               style={{
                 background: 'rgba(237,229,211,0.05)',
                 border: '1px solid rgba(237,229,211,0.1)',
@@ -159,12 +159,12 @@ export default function DiffDrawer() {
             </select>
           </div>
           <div className="mt-5 text-[18px]" style={{ color: 'var(--txtll)' }}>→</div>
-          <div className="flex flex-1 flex-col gap-1">
+          <div className="flex min-w-0 flex-1 flex-col gap-1">
             <label className="text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--txtll)' }}>Para</label>
             <select
               value={toId}
               onChange={(e) => setToId(e.target.value)}
-              className="rounded-lg px-3 py-2 text-[12px] font-medium outline-none"
+              className="w-full rounded-lg px-3 py-2 text-[12px] font-medium outline-none"
               style={{
                 background: 'rgba(237,229,211,0.05)',
                 border: '1px solid rgba(237,229,211,0.1)',
