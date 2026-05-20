@@ -33,5 +33,12 @@
     "date": "2026-05-18",
     "label": "Barreiras com Imagens",
     "description": "Placeholders SVG com layout editorial nas barreiras"
+  },
+  {
+    "id": "v6",
+    "commit": "d99662c",
+    "date": "2026-05-19",
+    "label": "feat: version diff panel + auto-extraction git hoo",
+    "description": "feat: version diff panel + auto-extraction git hook"
   }
 ]
