@@ -82,5 +82,12 @@
     "date": "2026-05-21",
     "label": "fix: correct 2 fabricated bibliography entries, 12",
     "description": "fix: correct 2 fabricated bibliography entries, 12 approximate claims, add b30-b42"
+  },
+  {
+    "id": "v13",
+    "commit": "9304c89",
+    "date": "2026-05-21",
+    "label": "feat: add 3 data visualizations — AI race table (S",
+    "description": "feat: add 3 data visualizations — AI race table (S2), phase Gantt (S4), impact funnel (S8)"
   }
 ]
