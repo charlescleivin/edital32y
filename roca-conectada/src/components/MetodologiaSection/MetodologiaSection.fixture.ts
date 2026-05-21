@@ -14,7 +14,7 @@ export const fixture: MetodologiaSectionProps = {
       activities: [
         'Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica.',
         'Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença MIT — ativo público permanente antes do projeto terminar.',
-        'Fine-tuning do LLM base (Qwen2.5-7B) com LoRA/PEFT: cluster GPU LABELO/UFSC (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000.',
+        'Fine-tuning do LLM base (Qwen2.5-7B) com LoRA/PEFT: cluster GPU laboratório da [ICT EXECUTORA] (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000.',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
       ],
@@ -42,8 +42,8 @@ export const fixture: MetodologiaSectionProps = {
       period: 'Meses 25–36',
       activities: [
         'Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores EMATER treinados. Não via equipe do projeto.',
-        'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à UFSC (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
-        'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da UFSC ou da THATPIX.',
+        'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
+        'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX.',
         'MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
         'Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou.',
       ],
@@ -77,8 +77,8 @@ export const fixture: MetodologiaSectionProps = {
     {
       id: 'sc-gpu',
       badge: 'Infraestrutura Computacional',
-      title: 'GPU UFSC + Cloud — Fine-tuning Soberano',
-      content: 'O fine-tuning do LLM base (Qwen2.5-7B) será executado em cluster GPU do LABELO/UFSC (A100 80GB × 4, disponível via convênio de pesquisa) com capacidade de burst em cloud (AWS ou GCP via créditos de pesquisa). A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos de iteração dentro do orçamento. O modelo resultante roda em inferência em hardware de R$ 8.000 (RTX 4090), removendo dependência de APIs proprietárias na operação.',
+      title: 'GPU [ICT EXECUTORA] + Cloud — Fine-tuning Soberano',
+      content: 'O fine-tuning do LLM base (Qwen2.5-7B) será executado em cluster GPU do laboratório da [ICT EXECUTORA] (A100 80GB × 4, disponível via convênio de pesquisa) com capacidade de burst em cloud (AWS ou GCP via créditos de pesquisa). A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos de iteração dentro do orçamento. O modelo resultante roda em inferência em hardware de R$ 8.000 (RTX 4090), removendo dependência de APIs proprietárias na operação.',
     },
     {
       id: 'sc-agroeval',

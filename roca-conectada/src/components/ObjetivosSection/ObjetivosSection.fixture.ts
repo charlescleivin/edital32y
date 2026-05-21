@@ -30,7 +30,7 @@ export const fixture: ObjetivosSectionProps = {
       objectives: [
         { id: 'oe7', code: 'OE7.', text: 'Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs.' },
         { id: 'oe8', code: 'OE8.', text: 'Capacitar 350 multiplicadores (técnicos ATER e gestores de cooperativas) como agentes de expansão e sustentabilidade do ecossistema.' },
-        { id: 'oe9', code: 'OE9.', text: 'Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora (UFSC), assegurando soberania e permanência nacional da infraestrutura.' },
+        { id: 'oe9', code: 'OE9.', text: 'Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora ([ICT EXECUTORA]), assegurando soberania e permanência nacional da infraestrutura.' },
       ],
     },
   ],
@@ -40,7 +40,7 @@ export const fixture: ObjetivosSectionProps = {
       fullName: 'Nova Indústria Brasil',
       decree: 'Decreto 11.738/2023',
       axes: 'Missão 1 — Cadeias Agroindustriais Sustentáveis · Missão 4 — Transformação Digital',
-      body: 'O Roça Conectada contribui para a Missão 1 da NIB ao digitalizar os processos produtivos de 2.500 agricultores familiares, rastreando práticas e conectando a cadeia a montante e a jusante. Para a Missão 4, constrói infraestrutura digital nacional soberana: o AgroLinguaBR e a AgroAPI são ativos estratégicos de dados e serviços em português, permanentes e de propriedade pública (UFSC), que habilitam todo o ecossistema nacional de IA agroalimentar.',
+      body: 'O Roça Conectada contribui para a Missão 1 da NIB ao digitalizar os processos produtivos de 2.500 agricultores familiares, rastreando práticas e conectando a cadeia a montante e a jusante. Para a Missão 4, constrói infraestrutura digital nacional soberana: o AgroLinguaBR e a AgroAPI são ativos estratégicos de dados e serviços em português, permanentes e de propriedade pública ([ICT EXECUTORA]), que habilitam todo o ecossistema nacional de IA agroalimentar.',
     },
     {
       sigla: 'PLANAPO',
@@ -61,7 +61,7 @@ export const fixture: ObjetivosSectionProps = {
       fullName: 'Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028',
       decree: 'ENCTI / MCTI 2024 · PBIA / MCTI 2024',
       axes: 'Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português',
-      body: 'A ENCTI 2024-2034 prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações concretas — incluindo o desenvolvimento de modelos nacionais de linguagem em português. O Roça Conectada entrega aderência ao PBIA de forma concreta: o AgroLinguaBR e o LLM fine-tuned são os ativos específicos que o PBIA identifica como necessários (corpus nacional, modelo soberano em português) mas não construiu para a agricultura familiar. Ao mês 36, com transferência de titularidade à UFSC, esses ativos tornam-se patrimônio público irremovível do sistema nacional de CT&I — disponíveis para a próxima iteração do PBIA ou qualquer política pública nacional sem dependência de plataformas estrangeiras. O SoberanIA (R$ 40M, lançado maio 2026) confirmou que o governo está financiando exatamente este tipo de ativo para o setor público. O Roça Conectada é o instrumento equivalente para a agricultura familiar.',
+      body: 'A ENCTI 2024-2034 prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações concretas — incluindo o desenvolvimento de modelos nacionais de linguagem em português. O Roça Conectada entrega aderência ao PBIA de forma concreta: o AgroLinguaBR e o LLM fine-tuned são os ativos específicos que o PBIA identifica como necessários (corpus nacional, modelo soberano em português) mas não construiu para a agricultura familiar. Ao mês 36, com transferência de titularidade à [ICT EXECUTORA], esses ativos tornam-se patrimônio público irremovível do sistema nacional de CT&I — disponíveis para a próxima iteração do PBIA ou qualquer política pública nacional sem dependência de plataformas estrangeiras. O SoberanIA (R$ 40M, lançado maio 2026) confirmou que o governo está financiando exatamente este tipo de ativo para o setor público. O Roça Conectada é o instrumento equivalente para a agricultura familiar.',
     },
     {
       sigla: 'Bioinsumos',
@@ -72,10 +72,10 @@ export const fixture: ObjetivosSectionProps = {
     },
   ],
   innovationPolicy: {
-    document: 'Política de Inovação da Universidade Federal de Santa Catarina (UFSC)',
+    document: 'Política de Inovação da [ICT EXECUTORA]',
     resolution: 'Resolução Normativa nº 26/CUn/2016 (atualizada pela RN nº 43/CUn/2018)',
     article: 'Art. 3º, incisos I, III e V — Diretrizes institucionais de inovação',
-    alignmentText: 'A Política de Inovação da UFSC (Resolução Normativa nº 26/CUn/2016, atualizada pela RN nº 43/CUn/2018) estabelece, em seu Art. 3º, como diretrizes institucionais: (I) o estímulo à criação e ao desenvolvimento de ambientes promotores da inovação; (III) o incentivo à pesquisa aplicada e ao desenvolvimento tecnológico orientado à solução de problemas sociais e econômicos; e (V) o fortalecimento de parcerias entre a UFSC e setores produtivos, com especial atenção a demandas de populações vulneráveis. O Roça Conectada materializa as três diretrizes de forma concreta: (I) constrói infraestrutura científica permanente — corpus AgroLinguaBR, benchmark AgroEval e AgroAPI — como ativos institucionais da UFSC, gerando ambiente habilitante para pesquisa futura em IA agroalimentar; (III) orienta o projeto integralmente à resolução de um problema social documentado — o colapso da ATER e a exclusão digital de 3,9 milhões de famílias agricultoras; (V) estabelece parcerias formais com cooperativas da agricultura familiar e com o ecossistema EMATER/EMBRAPA como parceiros de execução e beneficiários primários da inovação, com transferência de titularidade prevista no mês 36 (OE9).',
-    annexNote: 'O documento completo da Política de Inovação da UFSC está incluído nos Anexos Gerais da proposta, conforme Item EL-09 do Edital FINEP AgriFam-ICT 2026.',
+    alignmentText: 'A Política de Inovação da [ICT EXECUTORA] (Resolução Normativa nº 26/CUn/2016, atualizada pela RN nº 43/CUn/2018) estabelece, em seu Art. 3º, como diretrizes institucionais: (I) o estímulo à criação e ao desenvolvimento de ambientes promotores da inovação; (III) o incentivo à pesquisa aplicada e ao desenvolvimento tecnológico orientado à solução de problemas sociais e econômicos; e (V) o fortalecimento de parcerias entre a [ICT EXECUTORA] e setores produtivos, com especial atenção a demandas de populações vulneráveis. O Roça Conectada materializa as três diretrizes de forma concreta: (I) constrói infraestrutura científica permanente — corpus AgroLinguaBR, benchmark AgroEval e AgroAPI — como ativos institucionais da [ICT EXECUTORA], gerando ambiente habilitante para pesquisa futura em IA agroalimentar; (III) orienta o projeto integralmente à resolução de um problema social documentado — o colapso da ATER e a exclusão digital de 3,9 milhões de famílias agricultoras; (V) estabelece parcerias formais com cooperativas da agricultura familiar e com o ecossistema EMATER/EMBRAPA como parceiros de execução e beneficiários primários da inovação, com transferência de titularidade prevista no mês 36 (OE9).',
+    annexNote: 'O documento completo da Política de Inovação da [ICT EXECUTORA] está incluído nos Anexos Gerais da proposta, conforme Item EL-09 do Edital FINEP AgriFam-ICT 2026.',
   },
 }

@@ -19,7 +19,7 @@ export const fixture: SumarioSectionProps = {
     'Fortalecimento de cooperativas via Coopera Digital (RE-02)',
   ],
   institutionalStructure: [
-    { badge: 'Proponente', badgeVariant: 'primary', label: 'FAPEU ou FEESC' },
+    { badge: 'Proponente', badgeVariant: 'primary', label: '[FUNDAÇÃO DE APOIO]' },
     { badge: 'Co-pesquisador', badgeVariant: 'blue', label: 'Charles Cleivin (sem bolsa)' },
     { badge: 'Empresa PJ', badgeVariant: 'amber', label: 'THATPIX LTDA — R$ 1,68M' },
   ],

@@ -11,7 +11,7 @@ export const fixture: ChecklistSectionProps = {
       id: 'proposta',
       title: 'Documentos da Proposta',
       items: [
-        { id: 'p1', label: 'Formulário de proposta preenchido na plataforma', detail: 'Coordenador UFSC + FAPEU/FEESC', status: 'A fazer', statusVariant: 'todo' },
+        { id: 'p1', label: 'Formulário de proposta preenchido na plataforma', detail: 'Coordenador [ICT EXECUTORA] + [FUNDAÇÃO DE APOIO]', status: 'A fazer', statusVariant: 'todo' },
         { id: 'p2', label: 'Plano de Trabalho detalhado no formato FINEP', detail: 'Em elaboração', status: 'Em elaboração', statusVariant: 'inprogress' },
       ],
     },

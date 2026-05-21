@@ -57,7 +57,7 @@ export const fixture: ParceriasSectionProps = {
     },
     {
       audience: 'Comunidade científica nacional e internacional',
-      mechanism: 'AgroLinguaBR publicado com DOI Zenodo (licença MIT/Apache 2.0); AgroEval publicado com código-fonte (GitHub UFSC); 5 artigos em periódicos indexados',
+      mechanism: 'AgroLinguaBR publicado com DOI Zenodo (licença MIT/Apache 2.0); AgroEval publicado com código-fonte (GitHub da [ICT EXECUTORA]); 5 artigos em periódicos indexados',
       when: 'Fase 2 (mês 24) e Fase 3 (mês 36)',
     },
     {
