@@ -529,50 +529,50 @@
     "number": "Seção 4",
     "title": "Metodologia e Plano de Trabalho",
     "heroImage": "/hero4.png",
-    "subtitle": "Três fases de 12 meses — desenvolvimento ágil orientado a evidências",
+    "subtitle": "Pesquisa-Ação Participativa em 3 regiões Nordeste — cada fase constrói uma camada da infraestrutura soberana e prova que ela funciona nas condições reais de quem depende dela",
     "headline": "Três anos. Da pesquisa ao campo aberto.",
     "phases": [
       {
         "id": "f1",
         "icon": "🔬",
         "label": "Fase 1",
-        "name": "Fundação",
+        "name": "Fundação — Corpus e Infraestrutura Soberana",
         "period": "Meses 1–12",
         "activities": [
-          "Diagnóstico participativo (Ativ. 1.1)",
-          "Corpus AgroLinguaBR — 25k pares (Ativ. 1.2)",
-          "Fine-tuning LLM AgroAssistente (Ativ. 1.3)",
-          "MVP ecossistema completo (Ativ. 1.4)",
-          "1 artigo submetido"
+          "Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica. Aqui começa a distinção entre infraestrutura soberana e produto tecnológico genérico.",
+          "Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença MIT — ativo público permanente antes do projeto terminar.",
+          "Fine-tuning do LLM base (Qwen2.5-7B) com LoRA/PEFT: cluster GPU LABELO/UFSC (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000. Esta é a resposta técnica à Barreira 2 (dependência de plataformas estrangeiras descartáveis).",
+          "MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.",
+          "1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2."
         ]
       },
       {
         "id": "f2",
         "icon": "🚀",
         "label": "Fase 2",
-        "name": "Validação e Piloto",
+        "name": "Validação — A Prova que Não é Otimismo",
         "period": "Meses 13–24",
         "activities": [
-          "Seleção dos 800 agricultores: critério mínimo de smartphone com WhatsApp + acesso 3G em ponto de referência (verificado no diagnóstico da Fase 1) — nenhuma aquisição de dispositivo necessária (Ativ. 2.0)",
-          "Piloto AgroAssistente — 800 agricultores (Ativ. 2.1)",
-          "Piloto Coopera Digital — 6 cooperativas (Ativ. 2.2)",
-          "Integrações institucionais (Ativ. 2.3)",
-          "Capacitação de 120 multiplicadores (Ativ. 2.4)",
-          "2 artigos submetidos"
+          "Seleção dos 800 agricultores (critério documentado no diagnóstico Fase 1): smartphone + WhatsApp + sinal 3G verificado em ponto de referência. Zero aquisição de dispositivo — a solução funciona com o que os agricultores já têm. Esta não é uma suposição: é um critério de seleção.",
+          "Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo registrado no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo. Os resultados — adoção de boas práticas, custo de insumos, tempo de resolução — são medidos, não assumidos.",
+          "Piloto Coopera Digital: 6 cooperativas âncora. Medição de tempo administrativo, acesso ao PAA/PNAE e receita dos associados antes e depois. Baseline documentado na Fase 1.",
+          "AgroAPI beta: integração com 2 EMATERs estaduais parceiras. Primeiro teste de interoperabilidade institucional — prova que a infraestrutura é reutilizável.",
+          "Capacitação de 120 multiplicadores EMATER: eles usam o produto em condições reais antes de ensiná-lo. A sustentabilidade pós-projeto depende deles, não da equipe do projeto.",
+          "2 artigos científicos submetidos com dados do grupo controle. Resultados públicos antes do término do projeto — a comunidade científica pode auditar antes de encerrar."
         ]
       },
       {
         "id": "f3",
         "icon": "🌍",
         "label": "Fase 3",
-        "name": "Escala e Transferência",
+        "name": "Transferência — O Momento em que os Ativos Passam ao Brasil",
         "period": "Meses 25–36",
         "activities": [
-          "Expansão — 2.500 agricultores / 18 coops (Ativ. 3.1)",
-          "Plano de sustentabilidade (Ativ. 3.2)",
-          "Liberação open-source + DOI (Ativ. 3.3)",
-          "350 multiplicadores capacitados (Ativ. 3.4)",
-          "Artigo de síntese + Rel. Final FINEP"
+          "Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores EMATER treinados. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
+          "AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à UFSC (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado. Disponível para qualquer ICT, EMATER ou política pública — sem licença, sem taxa.",
+          "AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da UFSC ou da THATPIX. A infraestrutura é aberta porque soberania que precisa de um único guardião não é soberania.",
+          "MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP. Não prometemos que alguém vai absorver — apresentamos o acordo assinado.",
+          "Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou — assets, dados, capacidade instalada, resultados de campo."
         ]
       }
     ],
@@ -675,8 +675,8 @@
     "title": "Equipe do Projeto",
     "heroImage": "/hero5.png",
     "heroObjectPosition": "center",
-    "subtitle": "Critério de peso 5 — composição detalhada e complementar",
-    "headline": "UFSC pesquisa. THATPIX entrega. Campo valida.",
+    "subtitle": "Composição multi-institucional deliberada — a titularidade dos ativos exige vínculo institucional com a ICT; a engenharia exige expertise de mercado que universidades não têm; o campo exige quem conhece a realidade de quem depende disso",
+    "headline": "A equipe certa para soberania não é a equipe mais fácil de montar.",
     "members": [
       {
         "id": "coord",
@@ -1223,9 +1223,9 @@
     "number": "Seção 7",
     "title": "Parcerias Previstas",
     "heroImage": "/hero7.png",
-    "subtitle": "Critério peso 2 — sem cartas de anuência, pontuação zero neste critério",
-    "headline": "EMATER. Cooperativas. Movimentos sociais. Todos no campo.",
-    "alertMessage": "O contato com cooperativas âncora, EMATER estadual e movimentos sociais deve começar **imediatamente**. Cartas em órgãos públicos levam 10–20 dias úteis para assinatura institucional. Prepare modelos de carta para que os parceiros apenas assinem.",
+    "subtitle": "Parceiros que já tentam resolver o problema — sem as ferramentas que este projeto constrói. O que este projeto faz é dar infraestrutura a quem já tem a demanda real.",
+    "headline": "Demanda documentada, não demanda presumida.",
+    "alertMessage": "Os parceiros listados abaixo não foram selecionados por necessidade de carta — foram selecionados porque cada um enfrenta hoje, sem solução, o problema que este projeto resolve. As cartas de anuência formalizam uma demanda que já existe no campo. **Contato imediato com cooperativas âncora, EMATER estadual e FETRAF/CONTAG** — cartas institucionais levam 10–20 dias úteis para aprovação interna. Não espere o edital fechar para iniciar esse processo.",
     "partners": [
       {
         "id": "coop1",
@@ -1356,8 +1356,8 @@
     "number": "Seção 8",
     "title": "Indicadores e Metas",
     "heroImage": "/hero8.png",
-    "subtitle": "KPIs mensuráveis por fase e dimensão avaliativa",
-    "headline": "2.500 usuários reais. Números com protocolo.",
+    "subtitle": "Cada KPI é a assinatura observável de uma barreira derrubada — não uma métrica de entrega de projeto",
+    "headline": "O que medimos é o que prometemos desfazer.",
     "counters": [
       {
         "icon": "👨‍🌾",
@@ -1460,15 +1460,15 @@
         "phase3": "≥ 20%"
       }
     ],
-    "impactNarrative": "Na Fase 2, 800 agricultores ativos — distribuidos entre Crateus (CE), Sousa (PB) e Vitoria da Conquista (BA) — representam 800 decisoes de manejo por semana que antes eram tomadas sem orientacao tecnica. Em regioes onde 1 agente de ATER atende 500+ familias, cada consulta respondida pelo AgroAssistente e uma lacuna real coberta. Na Fase 3, ao escalar para 2.500 usuarios em 25 municipios e 18 cooperativas, o projeto tera alcancado mais familias do que a maioria dos programas estaduais de ATER conseguem atender em um ano inteiro — com custo marginal proximo de zero por consulta adicional e corpus cientifico de titularidade publica gerado como subproduto permanente."
+    "impactNarrative": "A soberania tecnológica não é um certificado — é o estado em que uma família agricultora toma decisões melhores porque teve acesso a conhecimento técnico preciso no momento que precisou, sem depender de um técnico que não existe ou de uma plataforma estrangeira que pode desaparecer. Cada um dos 2.500 agricultores ativos ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24h por dia, em português regional, via WhatsApp — canal que já usa —, sem custo de deslocamento e sem dependência de API estrangeira. A literatura de extensão rural digital (FAO 2022; Embrapa 2023) documenta redução média de 12–18% no custo de insumos quando o agricultor acessa orientação técnica em tempo real. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto. O AgroEval, o AgroLinguaBR e a AgroAPI permanecem disponíveis como patrimônio público: os próximos 3,9 milhões de agricultores que vierem depois desta fase não precisam pagar para construir de novo o que este projeto já construiu."
   },
   "s9": {
     "number": "Seção 9",
     "title": "Riscos e Mitigações",
     "heroImage": "/hero9.png",
     "heroObjectPosition": "center 60%",
-    "subtitle": "Matriz de riscos técnicos, institucionais e de campo",
-    "headline": "10 riscos mapeados. 10 respostas prontas.",
+    "subtitle": "Matriz de riscos técnicos, institucionais e de campo — cada risco foi identificado no diagnóstico de projetos similares, não na imaginação da equipe proponente",
+    "headline": "11 riscos mapeados. 11 respostas prontas.",
     "risks": [
       {
         "id": "R01",
