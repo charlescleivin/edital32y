@@ -96,10 +96,19 @@ export interface TheoryOfChange {
   chain: TheoryOfChangeStage[]
 }
 
+export interface PolicyAlignmentItem {
+  sigla: string
+  fullName: string
+  decree: string
+  axes: string
+  body: string
+}
+
 export interface S3Data extends SectionMeta {
   generalObjective: string
   axes: ObjectiveAxis[]
   theoryOfChange?: TheoryOfChange
+  policyAlignment?: PolicyAlignmentItem[]
 }
 
 export interface Phase {
@@ -274,10 +283,17 @@ export interface ActionWeek {
   isCritical?: boolean
 }
 
+export interface DisseminationRoute {
+  audience: string
+  mechanism: string
+  when: string
+}
+
 export interface S7Data extends SectionMeta {
   alertMessage: string
   partners: Partner[]
   actionTimeline: ActionWeek[]
+  disseminationRoutes?: DisseminationRoute[]
 }
 
 export interface KPICounter {

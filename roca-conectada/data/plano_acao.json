@@ -1,0 +1,401 @@
+{
+  "_meta": {
+    "projeto": "Roça Conectada",
+    "edital": "FINEP AgriFam-ICT 2026",
+    "data_auditoria": "2026-05-20",
+    "prazo_submissao": "2026-06-26",
+    "dias_ate_submissao": 37,
+    "score_auditoria_original": 2.29,
+    "score_apos_evolucao_escopo": "~2.7 (estimado pós-Camada 0)",
+    "score_apos_sessao_2": "~3.5–3.7 (estimado — W-02 a W-12 implementados, W-01/coord ainda placeholder)",
+    "score_potencial_com_todas_correcoes": 4.10,
+    "nota_minima_aprovacao": 3.5,
+    "auditoria_completa": "data/auditoria_2026-05-20.md",
+    "ultima_atualizacao": "2026-05-20",
+    "evolucao_escopo": {
+      "descricao": "Roça Conectada evoluiu de 'ecossistema de apps' para 'infraestrutura nacional soberana de IA'. Adicionada Camada 0 (AgroInfra): AgroLinguaBR (corpus), AgroEval (benchmark), AgroAPI (acesso aberto).",
+      "fixtures_atualizados": ["HeroSection", "SumarioSection", "ObjetivosSection", "MetodologiaSection", "IndicadoresSection"],
+      "impacto_nos_criterios": {
+        "CM-01": "Melhoria: LT3-F1 parcialmente resolvida via AgroAPI como conectividade de ecossistema; AgroEval fortalece CM-01(ii) com novidade científica real",
+        "CM-03": "Melhoria: metodologia agora tem nome (PAP), Fase 3 com atividades detalhadas, sustentabilidade pós-projeto via MoU EMBRAPA",
+        "CM-04": "Melhoria: MoU EMBRAPA + AgroAPI como serviço nacional fortalecem argumento de contribuição ao setor"
+      }
+    }
+  },
+
+  "_instrucao_de_uso": "Este arquivo organiza as ações em duas categorias. 'escrita_e_raciocinio' contém tudo que se resolve sentando para pensar, pesquisar e escrever melhor a proposta — sem depender de terceiros. 'acao_externa' contém o que depende de outras pessoas ou sistemas. Trabalhe primeiro na categoria de escrita.",
+
+  "escrita_e_raciocinio": {
+
+    "_descricao": "Tudo aqui se resolve com pesquisa, raciocínio e escrita. Nenhuma dessas tarefas depende de aprovação externa, carta, assinatura ou cadastro em plataforma. São a prioridade das próximas sessões de trabalho.",
+
+    "_impacto_total_estimado": "Corrigir todos estes itens pode mover o score de 2.29 para ~3.90 (de REPROVADO para APROVADO).",
+
+    "itens": [
+
+      {
+        "id": "W-01",
+        "prioridade": "CRITICA",
+        "titulo": "Documentar o Coordenador da UFSC na proposta",
+        "criterio_afetado": ["CM-02"],
+        "impacto_estimado": "+0.24 pontos na média ponderada (CM-02 de 2 para 3)",
+        "descricao": "O campo '[Coordenador UFSC]' é um placeholder literal. O coordenador precisa aparecer na proposta com: nome completo, titulação (Dr./MSc./etc.), link do Lattes, vínculo institucional formal com a UFSC, percentual de dedicação ao projeto e áreas de atuação que justificam a liderança deste projeto.",
+        "insumos_necessarios": [
+          "Nome do coordenador (decisão interna já tomada ou a tomar)",
+          "Currículo Lattes do coordenador",
+          "Percentual de dedicação definido (sugestão: mínimo 20%)"
+        ],
+        "onde_inserir": "src/components/EquipeSection/EquipeSection.fixture.ts — membro 'coord'",
+        "como_fazer": "Substituir o objeto placeholder {id: 'coord', name: '[Coordenador UFSC]', dedication: '[X]% dedicação'} pelos dados reais. Adicionar tags de área de expertise e, se possível, 1–2 publicações relevantes do coordenador no tema.",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "W-02",
+        "prioridade": "CRITICA",
+        "titulo": "Mapear e escrever alinhamento às 5 políticas nacionais",
+        "criterio_afetado": ["CM-04"],
+        "impacto_estimado": "+0.38 pontos na média ponderada (CM-04 de 2 para 4)",
+        "descricao": "CM-04 subcritério (ii) avalia aderência a 5 políticas por sigla: NIB, PLANAPO, PNPIAF, ENECI e Programa Nacional de Bioinsumos. Atualmente NENHUMA dessas políticas é mencionada em nenhum fixture. Pesquisar cada uma e escrever 2–3 frases mostrando como o Roça Conectada se encaixa em cada política.",
+        "insumos_necessarios": [
+          "Pesquisa: o que é NIB (Novo Inovação em Bioeconomia)?",
+          "Pesquisa: o que é PLANAPO (Plano Nacional de Agroecologia e Produção Orgânica)?",
+          "Pesquisa: o que é PNPIAF (Política Nacional de Inovação para Agricultura Familiar)?",
+          "Pesquisa: o que é ENECI (Estratégia Nacional de Educação para Ciência e Inovação)?",
+          "Pesquisa: o que é o Programa Nacional de Bioinsumos?"
+        ],
+        "onde_inserir": "Criar nova seção de alinhamento político em src/components/ObjetivosSection/ObjetivosSection.fixture.ts ou adicionar em SumarioSection como 'alignmentPolicies'",
+        "como_fazer": "Para cada política: (1) identificar o objetivo central, (2) mapear onde o projeto contribui diretamente, (3) escrever frase de alinhamento com o nome exato da política. Exemplo: 'O AgroAssistente IA contribui para a meta X do PLANAPO ao democratizar o acesso à ATER agroecológica em regiões com cobertura inferior a 30%.'",
+        "status": "CONCLUIDO — 5 políticas mapeadas e inseridas em ObjetivosSection.fixture.ts (policyAlignment[])"
+      },
+
+      {
+        "id": "W-03",
+        "prioridade": "CRITICA",
+        "titulo": "Descrever infraestrutura computacional para fine-tuning do LLM",
+        "criterio_afetado": ["CM-03"],
+        "impacto_estimado": "+0.24 pontos na média ponderada (CM-03 de 3 para 4)",
+        "descricao": "CM-03(iii) avalia a infraestrutura disponível. Um avaliador especialista em IA vai notar imediatamente a ausência de qualquer menção a onde e como o fine-tuning de um LLM de 7B+ parâmetros será executado. Precisa descrever: servidores da UFSC (se houver GPUs disponíveis no laboratório), créditos de cloud (AWS, GCP, Azure) ou parceria com cluster de HPC.",
+        "insumos_necessarios": [
+          "Decisão sobre infraestrutura de compute: UFSC tem GPUs disponíveis? Será cloud? Qual provedor?",
+          "Estimativa de horas de GPU necessárias (LoRA/PEFT para 7B é ~50–200h A100 por rodada de fine-tuning)",
+          "Se cloud: valor estimado de compute (deve estar no orçamento ou ser justificado)"
+        ],
+        "onde_inserir": "src/components/MetodologiaSection/MetodologiaSection.fixture.ts — adicionar campo 'infrastructure' ou 'computeResources'",
+        "como_fazer": "Adicionar bloco descrevendo: (a) infraestrutura física/cloud disponível, (b) capacidade em VRAM/GPU, (c) como o fine-tuning LoRA/PEFT reduz os requisitos de compute vs. fine-tuning full, (d) onde os dados do AgroLinguaBR serão armazenados.",
+        "status": "CONCLUIDO — sovereigntyCallout 'sc-gpu' adicionado ao MetodologiaSection.fixture.ts"
+      },
+
+      {
+        "id": "W-04",
+        "prioridade": "ALTA",
+        "titulo": "Definir metodologia de certificação e validação do LLM/software",
+        "criterio_afetado": ["CM-03", "RC-01"],
+        "impacto_estimado": "Fortalece CM-03(ii) — contribui para mover de 3 para 4",
+        "descricao": "A proposta não tem mecanismo de certificação das soluções (exigência RC-01 da seção 5.5). Para software com IA, isso significa: (a) métricas de avaliação do AgroAssistente (F1-score em perguntas agronômicas, taxa de acerto em culturas-alvo), (b) protocolo de validação com grupo de agricultores reais na Fase 2, (c) comparação baseline com o que existia antes (ex: latência para obter informação agronômica: dias → segundos).",
+        "insumos_necessarios": [
+          "Definir quais métricas de NLP serão usadas (ex: ROUGE para resumos, Exact Match para recomendações, BLEU para traduções de jargão técnico)",
+          "Definir tamanho do grupo de validação na Fase 2 (sugestão: 50 agricultores com grupo controle)",
+          "Definir o benchmark comparativo (ex: tempo de resposta EMATER vs. AgroAssistente)"
+        ],
+        "onde_inserir": "src/components/MetodologiaSection/MetodologiaSection.fixture.ts — adicionar campo 'validationProtocol' e/ou src/components/IndicadoresSection/IndicadoresSection.fixture.ts",
+        "como_fazer": "Adicionar seção de validação científica: métricas quantitativas do LLM, protocolo de teste com agricultores (quem avalia, como, com qual instrumento), critério de sucesso para passar para Fase 3.",
+        "status": "CONCLUIDO — sovereigntyCallout 'sc-agroeval' com protocolo completo (3 dimensões de métrica, grupo controle n=50, CONEP)"
+      },
+
+      {
+        "id": "W-05",
+        "prioridade": "ALTA",
+        "titulo": "Substituir 'desenvolvimento ágil' por metodologia científica reconhecida",
+        "criterio_afetado": ["CM-03"],
+        "impacto_estimado": "Fortalece CM-03(ii) — contribui para mover de 3 para 4",
+        "descricao": "A MetodologiaSection descreve a abordagem como 'desenvolvimento ágil orientado a evidências'. Para um comitê de avaliação científica da FINEP, isso não qualifica como metodologia de pesquisa. Precisa ser substituído ou complementado por metodologia reconhecida na literatura de pesquisa participativa e TIC para desenvolvimento.",
+        "insumos_necessarios": [
+          "Definir a metodologia de pesquisa da Fase 1 (sugestão: Pesquisa-Ação Participativa — PAP, base na obra de Paulo Freire e literatura de extensão rural)",
+          "Definir o framework de co-design do produto (sugestão: Human-Centered Design com agricultores como co-designers)",
+          "Definir o rigor científico da Fase 2 (sugestão: quase-experimento com grupo controle e grupo experimental)"
+        ],
+        "onde_inserir": "src/components/MetodologiaSection/MetodologiaSection.fixture.ts — modificar campo de descrição de cada fase e adicionar campo 'researchFramework'",
+        "como_fazer": "Para cada fase: nomear a metodologia formalmente, citar a referência (ex: 'Pesquisa-Ação conforme Thiollent, 2011'), descrever como ela se materializa nas atividades concretas do projeto.",
+        "status": "CONCLUIDO (sessão anterior) — subtitle e phase names usam PAP; Fase 2 tem grupo controle (n=50)"
+      },
+
+      {
+        "id": "W-06",
+        "prioridade": "ALTA",
+        "titulo": "Descrever plano de disseminação dos resultados para os parceiros",
+        "criterio_afetado": ["CM-05", "RC-02"],
+        "impacto_estimado": "Necessário para qualquer nota > 0 em CM-05; contribui para mover CM-05 de 0 para 3",
+        "descricao": "RC-02 exige estratégia de disseminação dos resultados para os parceiros (item 5.6.2). Atualmente ausente. Precisa descrever: como as cooperativas parceiras receberão e poderão usar a tecnologia, se o AgroLinguaBR será aberto (open-source) ou licenciado, como os técnicos da EMATER serão capacitados para usar e multiplicar o AgroAssistente.",
+        "insumos_necessarios": [
+          "Decisão: AgroLinguaBR será open-source (Apache 2.0, MIT) ou protegido? Publicação em Hugging Face?",
+          "Decisão: Coopera Digital terá licença gratuita para cooperativas parceiras?",
+          "Decisão: Haverá capacitação formal dos técnicos EMATER? Se sim, formato (presencial, EaD, híbrido)?",
+          "Decisão: Haverá API pública para que outras ICTs integrem com o AgroAssistente?"
+        ],
+        "onde_inserir": "src/components/ParceriasSection/ParceriasSection.fixture.ts — adicionar campo 'disseminationPlan' e/ou src/components/MetodologiaSection no bloco de Fase 3",
+        "como_fazer": "Escrever 3–4 ações concretas de transferência de tecnologia: (1) publicação do corpus, (2) protocolo de capacitação de multiplicadores, (3) licenciamento para cooperativas parceiras, (4) documentação técnica aberta para replicação.",
+        "status": "CONCLUIDO — 6 rotas de disseminação adicionadas em ParceriasSection.fixture.ts (disseminationRoutes[]) + tabela na UI"
+      },
+
+      {
+        "id": "W-07",
+        "prioridade": "ALTA",
+        "titulo": "Declarar percentuais de dedicação de toda a equipe",
+        "criterio_afetado": ["CM-02"],
+        "impacto_estimado": "Contribui para mover CM-02 de 2 para 4 (em conjunto com W-01)",
+        "descricao": "CM-02(ii) avalia tempo de dedicação. Atualmente: coordenador tem '[X]%' (literal placeholder), Charles Cleivin não tem percentual declarado (só 'sem bolsa'), THATPIX tem valor mensal mas não é pesquisador. Para todos os membros de pesquisa, precisa declarar % de dedicação ao projeto e justificar que é compatível com as atividades.",
+        "insumos_necessarios": [
+          "% de dedicação do coordenador (padrão FINEP: mínimo 20% para coordenador)",
+          "% de dedicação de Charles Cleivin (mesmo sem bolsa, deve ser declarado — sugestão: 15–20%)",
+          "% de dedicação de outros pesquisadores (se houver bolsistas de pesquisa)"
+        ],
+        "onde_inserir": "src/components/EquipeSection/EquipeSection.fixture.ts — campo 'dedication' de cada membro",
+        "como_fazer": "Substituir '[X]% dedicação' pelos valores reais. Adicionar nota explicando que a dedicação de Charles Cleivin é voluntária (sem bolsa ou contrato) e formalizada por termo de colaboração.",
+        "status": "PARCIAL — Charles: 15-20% voluntário formalizado por Termo. Bolsistas DTI-A/B e AT incluídos. Coordinator ainda placeholder [X]% — W-01 bloqueado."
+      },
+
+      {
+        "id": "W-08",
+        "prioridade": "ALTA",
+        "titulo": "Quantificar impacto de renda e qualidade de vida (RE-01)",
+        "criterio_afetado": ["CM-04"],
+        "impacto_estimado": "Fortalece CM-04(iii) — contribui para mover de 2 para 4 em conjunto com W-02",
+        "descricao": "RE-01 (geração de renda) tem relevância ALTA para LT3 e CM-04(iii) avalia impacto na renda do produtor. Atualmente citado nominalmente sem nenhuma métrica. Precisa de pelo menos uma projeção quantificada de impacto econômico.",
+        "insumos_necessarios": [
+          "Pesquisa: qual o custo médio de ATER para uma família rural? (referência: R$ 300–600/família/visita técnica × frequência)",
+          "Pesquisa: qual o ganho médio de renda de programas similares de digitalização rural? (ex: dados de programas EMBRAPA, ATeR Digital do MAPA)",
+          "Pesquisa: qual a perda estimada por falha de comercialização sem informação de mercado?"
+        ],
+        "onde_inserir": "src/components/IndicadoresSection/IndicadoresSection.fixture.ts — adicionar KPI de impacto econômico; ou src/components/ObjetivosSection/ObjetivosSection.fixture.ts",
+        "como_fazer": "Adicionar 1 KPI de impacto de renda com metodologia de cálculo explícita. Ex: 'Redução estimada de R$ 400/família/ano em custos de intermediação e comercialização — calculado com base na diferença de preço médio entre venda direta e venda por atravessadores para os 10 produtos mais comuns na região piloto.'",
+        "status": "CONCLUIDO — impactNarrative adicionado ao IndicadoresSection.fixture.ts + 2 KPIs de resultado econômico (redução insumos 12-18%, tempo resolução -65%)"
+      },
+
+      {
+        "id": "W-09",
+        "prioridade": "MEDIA",
+        "titulo": "Referenciar a Política de Inovação da UFSC na proposta",
+        "criterio_afetado": ["CM-01", "EL-09"],
+        "impacto_estimado": "EL-09 é eliminatório se ausente; sua presença contribui para CM-01(iv)",
+        "descricao": "CM-01(iv) avalia aderência à Política de Inovação da executora. EL-09 exige apresentação formal da Política de Inovação como documento. A UFSC publicou sua Política de Inovação (Resolução Normativa nº 26/2016/CUn ou posterior). Precisa: (a) localizar o documento oficial, (b) identificar o artigo específico que alinha ao projeto, (c) referenciar explicitamente na proposta.",
+        "insumos_necessarios": [
+          "Pesquisa: qual é o documento oficial da Política de Inovação da UFSC? (verificar no site ufsc.br → Legislação ou SINOVA)",
+          "Identificar artigo que menciona incubação de tecnologias, transferência de conhecimento ou parcerias com setor produtivo"
+        ],
+        "onde_inserir": "src/components/ObjetivosSection/ObjetivosSection.fixture.ts ou SumarioSection — adicionar campo 'politicaInovacao' com referência ao documento",
+        "como_fazer": "Adicionar parágrafo: 'Este projeto está alinhado à Política de Inovação da UFSC (Resolução Normativa nº X/XXXX), especificamente o Art. Y que prevê [citar trecho relevante]. O documento completo está incluído nos Anexos Gerais da proposta.'",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "W-10",
+        "prioridade": "MEDIA",
+        "titulo": "Fortalecer LT3-F1: posicionar offline-first como solução de conectividade",
+        "criterio_afetado": ["CM-01"],
+        "impacto_estimado": "Fortalece CM-01(i) — contribui para mover de 3 para 4",
+        "descricao": "LT3-F1 exige tecnologia que 'incremente a conectividade no campo'. Atualmente o projeto trata a conectividade precária como barreira, não como algo que a solução endereça tecnologicamente. A arquitetura assíncrona tolerante a conectividade intermitente é, de fato, uma resposta tecnológica à conectividade precária. Precisa ser apresentada como tal. ATENÇÃO: nunca usar o termo 'offline-first' — WhatsApp exige sinal para enviar/receber, então o termo é tecnicamente impreciso e pode ser questionado por avaliador. Usar sempre 'arquitetura assíncrona tolerante a conectividade intermitente'.",
+        "insumos_necessarios": [
+          "Decisão: qual é o comportamento exato quando não há sinal? (mensagem é enfileirada no WhatsApp e enviada ao reconectar? Há fallback via SMS?)",
+          "Decisão: há integração planejada com programas de conectividade rural (ex: Programa Governo Conecta do MCID, satélites LEO, backhaul municipal)?"
+        ],
+        "onde_inserir": "src/components/ProblemaSection/ProblemaSection.fixture.ts (rework da barreira de conectividade) e src/components/MetodologiaSection/MetodologiaSection.fixture.ts (Fase 1)",
+        "como_fazer": "Reescrever a barreira 'Conectividade Intermitente' de passiva para ativa: 'Soluções existentes requerem conexão estável → O AgroAssistente resolve isso com arquitetura assíncrona tolerante a conectividade intermitente: a consulta é enfileirada no WhatsApp e entregue automaticamente quando o sinal é restaurado, eliminando a necessidade de sessão contínua.'",
+        "status": "CONCLUIDO — barreiras reescritas como ativas com resposta tecnológica; keyFact por barreira; competitiveContext adicionado"
+      },
+
+      {
+        "id": "W-11",
+        "prioridade": "MEDIA",
+        "titulo": "Adicionar dimensão de sustentabilidade ambiental ao projeto",
+        "criterio_afetado": ["CM-04"],
+        "impacto_estimado": "Fortalece CM-04(iv) — contribui para mover de 2 para 4 em conjunto com W-02",
+        "descricao": "CM-04(iv) avalia contribuição para o desenvolvimento sustentável. Atualmente o projeto não tem dimensão ambiental explícita. A conexão existe: (a) ATER digital reduz deslocamentos (menos emissão), (b) planejamento agrícola baseado em dados pode reduzir uso de insumos, (c) AgroLinguaBR pode incluir conhecimento de práticas agroecológicas.",
+        "insumos_necessarios": [
+          "Decisão: o corpus AgroLinguaBR incluirá conteúdo de práticas agroecológicas e manejo sustentável?",
+          "Pesquisa: quantas visitas técnicas presenciais são substituídas por atendimento digital? Qual a redução de deslocamento (km) e emissão de CO2?"
+        ],
+        "onde_inserir": "src/components/ObjetivosSection/ObjetivosSection.fixture.ts ou ProblemaSection — adicionar eixo de sustentabilidade",
+        "como_fazer": "Adicionar 1–2 frases de impacto ambiental: 'A digitalização da ATER reduz a necessidade de deslocamentos presenciais, estimados em X km/família/ano, com impacto direto na emissão de CO2 da cadeia de extensão rural. O AgroAssistente incorpora recomendações de manejo sustentável e agroecologia como eixo de conhecimento central do corpus AgroLinguaBR.'",
+        "status": "CONCLUIDO — sovereigntyCallout 'sc-env' no MetodologiaSection: CO2, PLANAPO, agroecologia, agricultura de precisão"
+      },
+
+      {
+        "id": "W-12",
+        "prioridade": "MEDIA",
+        "titulo": "Detalhar metodologia de escala da Fase 3 (800 → 2.500 agricultores)",
+        "criterio_afetado": ["CM-03"],
+        "impacto_estimado": "Fortalece CM-03(ii) — garante que a nota não caia abaixo de 3",
+        "descricao": "A expansão de 800 para 2.500 agricultores em 12 meses (Fase 3) é a atividade mais ambiciosa da proposta e está descrita em 1 linha: 'Expansão — 2.500 agricultores'. Um avaliador vai questionar: como? Por quais canais? Com que custo marginal? Quem faz o onboarding?",
+        "insumos_necessarios": [
+          "Modelo de expansão: via multiplicadores (técnicos EMATER capacitados na Fase 2)?",
+          "Canal de distribuição: WhatsApp em massa, grupos comunitários, cooperativas parceiras?",
+          "Custo marginal por agricultor adicional (após a infraestrutura estar pronta)"
+        ],
+        "onde_inserir": "src/components/MetodologiaSection/MetodologiaSection.fixture.ts — expandir atividades da Fase 3",
+        "como_fazer": "Adicionar 3–4 atividades concretas na Fase 3: (1) capacitação de 30 novos multiplicadores EMATER, (2) expansão via grupos de WhatsApp das cooperativas parceiras, (3) integração com 12 novas cooperativas além das 6 da Fase 2, (4) automação de onboarding com script de boas-vindas personalizado por cultura/região.",
+        "status": "CONCLUIDO (sessão anterior) — Fase 3 tem 5 atividades incluindo '30 multiplicadores EMATER', '18 cooperativas', MoU EMBRAPA, transferência para UFSC"
+      },
+
+      {
+        "id": "W-13",
+        "prioridade": "BAIXA",
+        "titulo": "Fortalecer cobertura de RE-04 (eficiência em sistemas orgânicos)",
+        "criterio_afetado": ["CM-01"],
+        "impacto_estimado": "Incremental — solidifica RE-04 que atualmente é citação nominal",
+        "descricao": "RE-04 (eficiência e produtividade de sistemas orgânicos) aparece no SumarioSection mas sem atividade ou indicador associado. Para evitar que o avaliador desconsidere como 'citação cosmética', precisa de pelo menos 1 atividade concreta ou 1 KPI vinculado.",
+        "insumos_necessarios": [
+          "O AgroAssistente IA terá módulo específico de ATER agroecológica?",
+          "Há plano de incluir orientações de sistemas orgânicos no corpus AgroLinguaBR?"
+        ],
+        "onde_inserir": "src/components/IndicadoresSection/IndicadoresSection.fixture.ts ou MetodologiaSection",
+        "como_fazer": "Adicionar 1 KPI: 'X% das consultas ao AgroAssistente na Fase 2 relacionadas a manejo orgânico/agroecológico — meta: ≥ 20% das interações'. Ou adicionar como atividade da Fase 1: 'Curadoria de corpus especializado em sistemas orgânicos certificados (base: cadernos IFOAM + publicações EMBRAPA Agroecologia).'",
+        "status": "PENDENTE"
+      }
+
+    ]
+  },
+
+  "acao_externa": {
+
+    "_descricao": "Itens que dependem de terceiros, plataformas ou ações logísticas fora do controle de quem escreve a proposta. Devem ser monitorados em paralelo enquanto o trabalho de escrita avança.",
+
+    "itens": [
+
+      {
+        "id": "EX-01",
+        "prioridade": "CRITICA",
+        "titulo": "Obter cartas de anuência das cooperativas âncora",
+        "criterio_afetado": ["CM-05", "RC-03"],
+        "deadline": "2026-05-30",
+        "descricao": "3 cooperativas âncora precisam emitir carta de anuência formal. Sem esse documento, CM-05 = 0 automaticamente.",
+        "responsavel": "Equipe de articulação institucional",
+        "status": "URGENTE — 10 dias"
+      },
+
+      {
+        "id": "EX-02",
+        "prioridade": "CRITICA",
+        "titulo": "Contato e carta de anuência da EMATER Estadual",
+        "criterio_afetado": ["CM-05"],
+        "deadline": "2026-06-05",
+        "descricao": "EMATER Estadual deve emitir carta de anuência. Prazo mais folgado que cooperativas, mas deve ser iniciado imediatamente.",
+        "responsavel": "Equipe de articulação institucional",
+        "status": "URGENTE"
+      },
+
+      {
+        "id": "EX-03",
+        "prioridade": "CRITICA",
+        "titulo": "Contato com FETRAF-Brasil ou CONTAG",
+        "criterio_afetado": ["CM-05"],
+        "deadline": "2026-05-20",
+        "descricao": "Deadline de contato era HOJE (20/05). Iniciar imediatamente se não iniciado.",
+        "responsavel": "Equipe de articulação institucional",
+        "status": "OVERDUE — iniciar hoje"
+      },
+
+      {
+        "id": "EX-04",
+        "prioridade": "CRITICA",
+        "titulo": "Confirmar e completar cadastro na Plataforma FAP",
+        "criterio_afetado": ["EL-01"],
+        "deadline": "2026-06-19",
+        "descricao": "Segmentos 'Básico de Pessoa Jurídica' e 'Documentos Institucionais' da FAPEU/FEESC e ICT executora devem estar completos. EL-01 é eliminatório.",
+        "responsavel": "Gestão administrativa FAPEU/FEESC",
+        "status": "VERIFICAR — prazo em 30 dias"
+      },
+
+      {
+        "id": "EX-05",
+        "prioridade": "CRITICA",
+        "titulo": "Obter Política de Inovação da UFSC (documento oficial)",
+        "criterio_afetado": ["EL-09", "CM-01"],
+        "deadline": "2026-06-19",
+        "descricao": "EL-09 exige cópia da Política de Inovação da ICT pública executora. Localizar o documento oficial publicado pela UFSC (Resolução Normativa nº 26/2016/CUn ou atualização posterior) e inserir nos Anexos Gerais da plataforma.",
+        "responsavel": "SINOVA/UFSC ou secretaria da unidade executora",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "EX-06",
+        "prioridade": "ALTA",
+        "titulo": "Coletar declarações individuais dos 12 bolsistas",
+        "criterio_afetado": ["FAP documentação"],
+        "deadline": "2026-06-20",
+        "descricao": "Cada um dos 12 bolsistas precisa assinar declaração individual + autorização da instituição vinculadora (se aplicável). 12 documentos para coletar — operação logística que deve começar cedo.",
+        "responsavel": "Coordenador do projeto",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "EX-07",
+        "prioridade": "ALTA",
+        "titulo": "Coletar orçamentos de fornecedores de equipamentos",
+        "criterio_afetado": ["FAP documentação — Anexo 3"],
+        "deadline": "2026-06-15",
+        "descricao": "R$ 2.450.000 em equipamentos nacionais requerem orçamento + justificativa por item. Documentos com data anterior a 01/01/2026 não são aceitos. Solicitar orçamentos formais aos fornecedores.",
+        "responsavel": "Equipe de compras/gestão do projeto",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "EX-08",
+        "prioridade": "ALTA",
+        "titulo": "Obter orçamento formal da THATPIX LTDA",
+        "criterio_afetado": ["FAP documentação — Anexo 3"],
+        "deadline": "2026-06-15",
+        "descricao": "Serviços PJ acima de R$ 100k requerem orçamento formal. THATPIX LTDA tem contrato de R$ 1.680.000 — orçamento/proposta técnica precisa estar em mãos para anexar.",
+        "responsavel": "Charles Cleivin / THATPIX LTDA",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "EX-09",
+        "prioridade": "MEDIA",
+        "titulo": "Verificar duplicidade de propostas na UFSC para LT3",
+        "criterio_afetado": ["EL-07"],
+        "deadline": "2026-05-30",
+        "descricao": "EL-07 limita a 1 projeto por entidade-mãe na mesma LT. Verificar internamente se algum outro grupo/laboratório/departamento da UFSC está submetendo proposta concorrente para a LT3.",
+        "responsavel": "Coordenador + SINOVA/UFSC",
+        "status": "PENDENTE"
+      },
+
+      {
+        "id": "EX-10",
+        "prioridade": "MEDIA",
+        "titulo": "Coordenar assinaturas dos representantes legais",
+        "criterio_afetado": ["FAP-03"],
+        "deadline": "2026-06-21",
+        "descricao": "A proposta só é recebida pela FINEP após aprovação dos representantes legais da proponente (FAPEU/FEESC) e executora (UFSC). Coordenar com 5 dias de antecedência em relação ao prazo de 26/06.",
+        "responsavel": "Gestão FAPEU/FEESC + Reitoria UFSC",
+        "status": "PENDENTE"
+      }
+
+    ]
+  },
+
+  "roadmap_sugerido": {
+    "_descricao": "Sequência recomendada para as próximas sessões de trabalho de escrita",
+    "semana_1": {
+      "periodo": "2026-05-20 a 2026-05-24",
+      "foco": "Estrutura da equipe e alinhamento político",
+      "tarefas_escrita": ["W-01 (coordenador)", "W-07 (dedicação)", "W-02 (5 políticas — pesquisa)"]
+    },
+    "semana_2": {
+      "periodo": "2026-05-26 a 2026-05-31",
+      "foco": "Metodologia, infraestrutura e validação científica",
+      "tarefas_escrita": ["W-02 (5 políticas — escrita)", "W-03 (infraestrutura GPU)", "W-04 (certificação LLM)", "W-05 (metodologia científica)"]
+    },
+    "semana_3": {
+      "periodo": "2026-06-02 a 2026-06-07",
+      "foco": "Impacto, disseminação e ajustes finais",
+      "tarefas_escrita": ["W-06 (disseminação)", "W-08 (impacto de renda)", "W-09 (Política de Inovação)", "W-10 (conectividade)", "W-11 (sustentabilidade)", "W-12 (Fase 3 escala)"]
+    },
+    "semana_4_a_6": {
+      "periodo": "2026-06-08 a 2026-06-26",
+      "foco": "Submissão, documentação e revisão final",
+      "tarefas": ["Integrar cartas de anuência (se chegarem)", "Submeter na plataforma FAP", "Coordenar assinaturas", "Revisão final da proposta completa"]
+    }
+  }
+}

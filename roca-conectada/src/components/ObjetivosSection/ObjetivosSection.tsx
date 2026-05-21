@@ -8,7 +8,7 @@ export const componentMeta = { slug: 'objetivos-section', label: 'Objetivos' }
 
 export type ObjetivosSectionProps = S3Data
 
-export default function ObjetivosSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, generalObjective, axes, theoryOfChange }: ObjetivosSectionProps) {
+export default function ObjetivosSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, generalObjective, axes, theoryOfChange, policyAlignment }: ObjetivosSectionProps) {
   const [activeAxis, setActiveAxis] = useState(axes[0]?.id ?? '')
 
   return (
@@ -110,6 +110,35 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
           </div>
         </div>
       ))}
+
+      {/* policy alignment — CM-04(ii) */}
+      {policyAlignment && policyAlignment.length > 0 && (
+        <div className="mt-12">
+          <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--txtll)' }}>
+            🏛️ Aderência às Políticas Nacionais — CM-04 (ii)
+          </div>
+          <p className="mb-5 text-[12.5px] italic" style={{ color: 'var(--txtll)' }}>
+            Alinhamento explícito às cinco políticas exigidas pelo edital AgriFam-ICT 2026
+          </p>
+          <div className="grid grid-cols-1 gap-4">
+            {policyAlignment.map((pol) => (
+              <div key={pol.sigla} className="rounded-2xl border p-5"
+                style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+                <div className="mb-3 flex flex-wrap items-baseline gap-3">
+                  <span className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px]"
+                    style={{ background: 'var(--pale)', color: 'var(--p)' }}>{pol.sigla}</span>
+                  <span className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>{pol.fullName}</span>
+                  <span className="text-[11px]" style={{ color: 'var(--txtll)' }}>{pol.decree}</span>
+                </div>
+                <div className="mb-2 text-[10px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--gold)' }}>
+                  {pol.axes}
+                </div>
+                <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{pol.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

@@ -11,7 +11,7 @@ const priorityStyles: Record<string, { border: string; bg: string; badge: string
   medium:   { border: 'rgba(111,168,118,0.2)', bg: 'rgba(111,168,118,0.05)', badge: 'var(--sagep)', badgeText: 'var(--sage)', deadline: 'var(--sage)' },
 }
 
-export default function ParceriasSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, alertMessage, partners, actionTimeline }: ParceriasSectionProps) {
+export default function ParceriasSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, alertMessage, partners, actionTimeline, disseminationRoutes }: ParceriasSectionProps) {
   return (
     <section id="s7" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -63,6 +63,36 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
           )
         })}
       </div>
+
+      {/* dissemination plan */}
+      {disseminationRoutes && disseminationRoutes.length > 0 && (
+        <div className="mb-8">
+          <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+            📡 Estratégia de Disseminação dos Resultados
+          </div>
+          <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
+            <table className="w-full text-[13px]">
+              <thead style={{ background: 'var(--bg-raised)' }}>
+                <tr>
+                  {['Público / Parceiro', 'Canal de Transferência', 'Prazo'].map((h) => (
+                    <th key={h} className="px-5 py-3.5 text-left text-[9px] font-bold uppercase tracking-[2px]"
+                      style={{ color: 'var(--txtll)' }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {disseminationRoutes.map((r, i) => (
+                  <tr key={i} style={{ borderTop: '1px solid var(--bdr)' }}>
+                    <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}>{r.audience}</td>
+                    <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}>{r.mechanism}</td>
+                    <td className="px-5 py-3.5 font-semibold" style={{ color: 'var(--p)' }}>{r.when}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* timeline */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>

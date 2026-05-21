@@ -1,0 +1,554 @@
+{
+  "_auditoria": "Auditado linha a linha contra o edital principal (27 págs) + Anexo 2 obtido via UFPI (arquivo: 25_03_2026_AgriFam-ICT_2026_Anexo2_e_demais.pdf). Lacuna do Anexo 2 resolvida.",
+  "edital": "CHAMADA PÚBLICA MCTI/FINEP/FNDCT — Cadeias Socioprodutivas da Agricultura Familiar e Sistemas Agroalimentares Sustentáveis para ICTs 2026",
+  "linha_tematica_alvo": "Linha Temática 3 — Soluções digitais para a pequena propriedade rural",
+  "dotacao_lt3": "R$ 25.000.000,00",
+  "valor_projeto_min": "R$ 3.000.000,00",
+  "valor_projeto_max": "R$ 7.000.000,00",
+  "prazo_execucao_meses": 36,
+  "prazo_submissao": "26/06/2026 até 17h (Brasília)",
+  "prazo_cadastro_plataforma": "19/06/2026 até 17h (Brasília) — mínimo 5 dias úteis antes do envio da proposta",
+
+  "lacunas_documentais": {
+    "politicas_CM04_siglas_nao_explicadas": {
+      "descricao": "O CM-04 referencia 5 políticas pelas siglas: NIB, Programa Nacional de Bioinsumos, PLANAPO, PNPIAF, ENECI. O edital não as expande. Precisam ser pesquisadas para demonstrar aderência explícita na proposta.",
+      "acao_requerida": "Pesquisar cada sigla e mapear onde o projeto Roça Conectada se encaixa em cada política.",
+      "siglas": ["NIB", "Programa Nacional de Bioinsumos", "PLANAPO", "PNPIAF", "ENECI"]
+    }
+  },
+
+  "anexo2_lt3_focos_obrigatorios": {
+    "descricao": "Conteúdo oficial do Anexo 2 — Detalhamento das Linhas Temáticas, seção LT3. Fonte: FINEP via edital interno UFPI (25_03_2026_AgriFam-ICT_2026_Anexo2_e_demais.pdf). Este é o texto que o Comitê de Avaliação usa como referência para o CM-01 subcritério (i).",
+    "enunciado_geral": "Os projetos desta Linha Temática deverão focar em:",
+    "focos": [
+      {
+        "id": "LT3-F1",
+        "foco": "Conectividade e acesso a mercados em tempo real",
+        "texto_original": "Buscar tecnologias que incrementem a conectividade no campo, facilitando a inclusão dos produtores rurais no mercado de produção e na geração e transmissão de informações em tempo real.",
+        "palavras_chave": ["conectividade rural", "inclusão digital", "mercado", "informação em tempo real"],
+        "aderencia_roca_conectada": ""
+      },
+      {
+        "id": "LT3-F2",
+        "foco": "Acesso digital à assistência técnica e suporte à produção/comercialização",
+        "texto_original": "Melhorar o acesso à assistência técnica de modo a facilitar o uso de tecnologias e equipamentos na produção vegetal ou animal, no armazenamento e na comercialização da produção.",
+        "palavras_chave": ["assistência técnica", "ATER digital", "produção vegetal", "produção animal", "armazenamento", "comercialização"],
+        "aderencia_roca_conectada": ""
+      },
+      {
+        "id": "LT3-F3",
+        "foco": "Equipamentos/tecnologias digitais com energia renovável para produção, comercialização e rastreabilidade",
+        "texto_original": "Desenvolver equipamentos ou tecnologias digitais, que utilizem energias renováveis, permitindo o uso de equipamentos na produção, na comercialização e na rastreabilidade do produto.",
+        "palavras_chave": ["energia renovável", "hardware rural", "IoT", "rastreabilidade", "comercialização digital"],
+        "aderencia_roca_conectada": ""
+      },
+      {
+        "id": "LT3-F4",
+        "foco": "Software de gestão e produção no campo",
+        "texto_original": "Desenvolver software de gestão e de produção no campo.",
+        "palavras_chave": ["software agrícola", "gestão rural", "app campo", "SaaS agro"],
+        "aderencia_roca_conectada": ""
+      }
+    ],
+    "nota_estrategica": "O projeto precisa demonstrar aderência a pelo menos 1 destes 4 focos no CM-01. Cobrir múltiplos focos fortalece a pontuação. LT3-F4 (software de gestão) é o mais direto para o Roça Conectada."
+  },
+
+  "objetivo_geral_edital": {
+    "enunciado": "Selecionar projetos que desenvolvam soluções científicas e tecnológicas para fortalecer cadeias socioprodutivas baseadas na biodiversidade brasileira, com foco em agricultura familiar.",
+    "foco_lt3": "Desenvolvimento de soluções digitais para diferentes usos na economia da pequena propriedade rural.",
+    "intent_critica_secao1_2": "As soluções devem 'agregar e RETER valor nos elos INICIAIS das cadeias produtivas' — o benefício precisa chegar diretamente ao agricultor/pescador, não apenas a processadores ou varejistas downstream. Isso condiciona como o projeto deve ser posicionado.",
+    "inclusao_socioprodutiva": "Inclusão socioprodutiva é mencionada explicitamente como objetivo estrutural — o projeto deve demonstrar como amplia o acesso econômico de populações vulneráveis, não apenas eficiência técnica."
+  },
+
+  "criterios_aderencia_projeto": {
+    "descricao": "10 resultados esperados pelo edital (seção 1.4). O projeto precisa demonstrar impacto em AO MENOS UM destes itens — não em todos. Para LT3, os mais diretamente aplicáveis estão marcados.",
+    "regra_minimo": "Ao menos 1 resultado deve ser demonstrado. Quanto mais, maior a pontuação em CM-01(iii) e CM-04.",
+    "resultados_esperados_pelo_edital": [
+      {
+        "id": "RE-01",
+        "relevancia_lt3": "ALTA",
+        "criterio": "Geração de renda e autonomia das comunidades locais",
+        "texto_original": "Aumento da independência e da qualidade de vida das comunidades locais atendidas, com geração de renda.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-02",
+        "relevancia_lt3": "ALTA",
+        "criterio": "Fortalecimento de associações, cooperativas e da agricultura familiar",
+        "texto_original": "Fortalecimento das associações de produtores, cooperativas de produção, centrais de vendas, federações, e da agricultura familiar.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-03",
+        "relevancia_lt3": "MÉDIA",
+        "criterio": "Aproveitamento das vocações naturais dos territórios e biomas brasileiros",
+        "texto_original": "Aproveitamento das vocações naturais dos territórios atendidos nos biomas brasileiros.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-04",
+        "relevancia_lt3": "MÉDIA",
+        "criterio": "Aumento da eficiência e produtividade de sistemas orgânicos",
+        "texto_original": "Aumento da eficiência e da produtividade de sistemas orgânicos.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-05",
+        "relevancia_lt3": "MÉDIA",
+        "criterio": "Criação de novos conhecimentos em bioeconomia e biodiversidade",
+        "texto_original": "Criação de novos conhecimentos em bioeconomia e no uso racional e sustentável da biodiversidade brasileira.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-06",
+        "relevancia_lt3": "MÉDIA",
+        "criterio": "Desenvolvimento de novos produtos, serviços e insumos para sistemas agroalimentares",
+        "texto_original": "Desenvolvimento de novos bioprodutos, bioinsumos, biomateriais e serviços, ampliando a eficiência produtiva dos sistemas agroalimentares.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-07",
+        "relevancia_lt3": "BAIXA",
+        "criterio": "Manejo sustentável de solos, águas e recursos naturais",
+        "texto_original": "Concepção de técnicas de manejo sustentável de solos, águas, recursos pesqueiros e florestais.",
+        "nota": "Periférico para LT3 — mais aplicável a LT1/LT2. Mencionar apenas se o projeto tiver componente de monitoramento ambiental digital.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-08",
+        "relevancia_lt3": "PRIMÁRIO",
+        "criterio": "Digitalização das cadeias socioprodutivas da agricultura familiar",
+        "texto_original": "Fomento à digitalização das cadeias socioprodutivas da agricultura familiar.",
+        "nota": "Este é o resultado mais diretamente alinhado à LT3. Deve ser o eixo principal de argumentação do projeto.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-09",
+        "relevancia_lt3": "ALTA",
+        "criterio": "Parcerias público-privado-academia-sociedade civil em bioeconomia",
+        "texto_original": "Aumento de parcerias entre setores público, privado, academia e sociedade civil em bioeconomia, entidades de assistência técnica e extensão rural.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RE-10",
+        "relevancia_lt3": "BAIXA",
+        "criterio": "Promoção e conservação das sementes crioulas",
+        "texto_original": "Promoção do uso e conservação das sementes crioulas.",
+        "nota": "Periférico para LT3 — mais aplicável a LT1/LT2. Não forçar aderência a este item.",
+        "resposta_do_projeto": ""
+      }
+    ]
+  },
+
+  "criterios_elegibilidade_formal": {
+    "descricao": "Requisitos eliminatórios de habilitação (seções 3, 5, 7, 8 e tabela 11.1). Qualquer não-conformidade elimina a proposta antes mesmo da avaliação de mérito.",
+    "requisitos": [
+      {
+        "id": "EL-01",
+        "secao": "10.4 e 15",
+        "criterio": "Cadastro na Plataforma Finep dentro do prazo",
+        "detalhe": "Segmentos 'Básico de Pessoa Jurídica' e 'Documentos Institucionais' enviados até 19/06/2026. Mínimo 5 dias úteis antes do prazo de proposta.",
+        "status": ""
+      },
+      {
+        "id": "EL-02",
+        "secao": "3.1 e 2.1.1",
+        "criterio": "Elegibilidade institucional da Executora e Proponente",
+        "detalhe": "ICT pública ou privada sem fins lucrativos, com missão de pesquisa básica ou aplicada conforme art. 2º, inciso V, da Lei nº 10.973/2004. Deve estar cadastrada na Plataforma Finep.",
+        "status": ""
+      },
+      {
+        "id": "EL-03",
+        "secao": "3.2",
+        "criterio": "Dirigentes com poderes legais de representação comprovados",
+        "detalhe": "Todos os dirigentes das instituições partícipes devem comprovar poderes legais de representação. Exigido no item 10.4 do edital.",
+        "status": ""
+      },
+      {
+        "id": "EL-04",
+        "secao": "3.3",
+        "criterio": "ICT federal executora: obrigatoriamente proposta por instituição de apoio",
+        "detalhe": "Executoras públicas federais devem submeter via instituição de apoio (proponente), figurando apenas como executoras. Não se aplica se a executora for ICT privada.",
+        "status": ""
+      },
+      {
+        "id": "EL-05",
+        "secao": "3.6",
+        "criterio": "ICT privada sem fins lucrativos: funcionamento regular nos últimos 3 anos",
+        "detalhe": "Exigência do art. 94, inciso VIII, da Lei nº 15.321/2025 (LDO 2026).",
+        "status": ""
+      },
+      {
+        "id": "EL-06",
+        "secao": "5.2",
+        "criterio": "Máximo de 1 proposta como Executora Principal por ICT",
+        "detalhe": "Submeter mais de 1 proposta como Executora Principal elimina TODAS as propostas daquela ICT.",
+        "status": ""
+      },
+      {
+        "id": "EL-07",
+        "secao": "5.3 e 5.3.1",
+        "criterio": "Máximo de 1 projeto apoiado por entidade-mãe por linha temática",
+        "detalhe": "Apenas 1 projeto por entidade em cada linha. Aplica-se a todas as ICTs (órgãos, departamentos, filiais, etc.) vinculadas à mesma entidade, mesmo com CNPJ próprio derivado do CNPJ da entidade-mãe.",
+        "status": ""
+      },
+      {
+        "id": "EL-08",
+        "secao": "5.4",
+        "criterio": "Máximo de 3 coexecutores por proposta, todos cadastrados na Plataforma",
+        "detalhe": "Coexecutores devem estar com dados e documentos completos na Plataforma de Apoio e Financiamento no momento da submissão.",
+        "status": ""
+      },
+      {
+        "id": "EL-09",
+        "secao": "5.7 e tabela 11.1 item 4",
+        "criterio": "ICTs públicas: apresentar cópia da Política de Inovação",
+        "detalhe": "Exigido pelo art. 15-A da Lei nº 10.973/2004 c/c art. §2º do art. 14 do Decreto nº 9.283/2018. Requisito formal eliminatório da habilitação.",
+        "status": ""
+      },
+      {
+        "id": "EL-10",
+        "secao": "7.1 e 7.2",
+        "criterio": "Valor da proposta entre R$ 3M e R$ 7M",
+        "detalhe": "Propostas fora deste intervalo são eliminadas automaticamente.",
+        "status": ""
+      },
+      {
+        "id": "EL-11",
+        "secao": "7.3 e 8",
+        "criterio": "Contrapartida financeira para convenentes estaduais/municipais/DF",
+        "detalhe": "ICT federal ou privada sem fins lucrativos: ISENTA (seção 8.5). Para entes estaduais/municipais: percentuais variáveis conforme localização (0,1% a 20%). Se exigida e não apresentada: eliminação.",
+        "status": ""
+      },
+      {
+        "id": "EL-12",
+        "secao": "9.1",
+        "criterio": "Prazo de execução máximo de 36 meses",
+        "detalhe": "Prorrogável justificadamente a critério da Finep.",
+        "status": ""
+      },
+      {
+        "id": "EL-13",
+        "secao": "11.2 e 11.2.2",
+        "criterio": "Itens de orçamento habilitados ≥ 70% do valor solicitado",
+        "detalhe": "Se os itens inabilitados superarem 30% do valor solicitado, a proposta inteira é eliminada.",
+        "status": ""
+      },
+      {
+        "id": "EL-14",
+        "secao": "11.2.3",
+        "criterio": "Proibição de importação quando existe similar nacional de qualidade e preço equivalentes",
+        "detalhe": "Conforme art. 138, §1º, inciso III da LDO 2026. Exceção somente se comprovada a impossibilidade de fornecimento nacional.",
+        "status": ""
+      }
+    ]
+  },
+
+  "requisitos_conteudo_proposta": {
+    "descricao": "O que a proposta DEVE conter independentemente dos critérios de mérito. Não atender elimina ou zera pontuação específica. Seções 5.5 e 5.6.2.",
+    "itens": [
+      {
+        "id": "RC-01",
+        "secao": "5.5",
+        "item": "Referências metodológicas, indicadores e mecanismos de certificação",
+        "detalhe": "A proposta deve conter objetivamente: (1) referências metodológicas das soluções inovadoras, (2) indicadores de resultado mensuráveis e (3) mecanismos de certificação das soluções — quando aplicável. Avaliado em CM-03.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RC-02",
+        "secao": "5.6.2",
+        "item": "Estratégia de disseminação dos resultados aos parceiros",
+        "detalhe": "Para propostas com parcerias (item 5.6): obrigatório apresentar como os resultados do projeto serão disponibilizados pela ICT executora para seus parceiros. Ausência zera CM-05.",
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "RC-03",
+        "secao": "5.6.1",
+        "item": "Comprovação formal das parcerias",
+        "detalhe": "Parcerias devem ser comprovadas por: carta de anuência, contratos, acordos de cooperação, protocolos de intenções ou qualquer instrumento jurídico vigente — anexados ao formulário. Ausência zera CM-05.",
+        "resposta_do_projeto": ""
+      }
+    ]
+  },
+
+  "limites_orcamentarios": {
+    "descricao": "Tetos percentuais obrigatórios sobre o valor total solicitado à Finep. Ultrapassar qualquer limite inabilita os itens excedentes (seção 6). Relevante para CM-03.",
+    "limites": [
+      { "rubrica": "Despesas de Capital (total)", "secao": "6.6.4", "limite_maximo_pct": 70 },
+      { "rubrica": "Obras e Instalações", "secao": "6.6.3.4", "limite_maximo_pct": 10, "nota": "Somente pequenas adaptações de espaços físicos existentes em imóvel de propriedade da proponente/executora." },
+      { "rubrica": "Pagamento de Pessoal", "secao": "6.5.5.2", "limite_maximo_pct": 30 },
+      { "rubrica": "Bolsas de Pesquisa", "secao": "6.5.7.6", "limite_maximo_pct": 30, "nota": "Admitido apenas se proponente for fundação de apoio ou ICT pública." },
+      { "rubrica": "Diárias", "secao": "6.5.6.1", "limite_maximo_pct": 5 },
+      { "rubrica": "Passagens", "secao": "6.5.6.1", "limite_maximo_pct": 5 },
+      { "rubrica": "Despesas Operacionais e Administrativas (overhead da proponente)", "secao": "6.5.3", "valor_fixo_pct": 5, "nota": "Fixo sobre o total solicitado à Finep, coberto para a proponente." },
+      { "rubrica": "Despesas Acessórias de Importação (frete, seguro, alfândega)", "secao": "6.5.4", "limite_maximo_pct": 20, "base": "sobre o valor dos itens importados" }
+    ]
+  },
+
+  "criterios_avaliacao_merito": {
+    "descricao": "Os 5 critérios pontuados pelo Comitê de Avaliação. Nota mínima ponderada exigida: 3,5. Seção 11.3.",
+    "nota_minima_ponderada": 3.5,
+    "soma_pesos": 21,
+    "criterios": [
+      {
+        "id": "CM-01",
+        "criterio": "Aderência ao Edital, Desenvolvimento C&T e Resultados Esperados",
+        "peso": 5,
+        "peso_efetivo_pct": "23,8%",
+        "escala": "1–5",
+        "subciterios": [
+          "(i) Alinhamento do projeto ao objeto da Chamada e à Linha Temática 3 — DEPENDE DO ANEXO 2",
+          "(ii) Contribuição para o desenvolvimento científico e tecnológico nacional, regional e local",
+          "(iii) Resultados e impactos esperados decorrentes das atividades de pesquisa (ver RE-01 a RE-10 — mínimo 1 resultado)",
+          "(iv) Aderência do projeto à Política de Inovação da Executora"
+        ],
+        "nota_desempate_ordem": 1,
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "CM-02",
+        "criterio": "Equipe",
+        "peso": 5,
+        "peso_efetivo_pct": "23,8%",
+        "escala": "1–5",
+        "subciterios": [
+          "(i) Composição e vínculo dos membros com a ICT",
+          "(ii) Tempo de dedicação dos membros ao projeto",
+          "(iii) Aderência dos membros ao tema do projeto",
+          "(iv) Qualificação e produtividade da equipe"
+        ],
+        "nota_desempate_ordem": 2,
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "CM-03",
+        "criterio": "Consistência e adequação do Projeto",
+        "peso": 5,
+        "peso_efetivo_pct": "23,8%",
+        "escala": "1–5",
+        "observacao_critica": "Nota 1 neste critério elimina a proposta INDEPENDENTE DA MÉDIA. É atribuída quando os cortes de orçamento inviabilizem a execução ou quando a proposta evidencie inviabilidade de execução.",
+        "subciterios": [
+          "(i) Adequação do cronograma físico, prazo de execução e orçamento às atividades — observar todos os limites em 'limites_orcamentarios'",
+          "(ii) Compatibilidade da metodologia proposta com os objetivos do projeto",
+          "(iii) Compatibilidade da infraestrutura disponível para o desenvolvimento das pesquisas"
+        ],
+        "nota_desempate_ordem": 3,
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "CM-04",
+        "criterio": "Contribuição do projeto aos objetivos do Setor",
+        "peso": 4,
+        "peso_efetivo_pct": "19,0%",
+        "escala": "1–5",
+        "subciterios": [
+          "(i) Abrangência e público-alvo: quantos agricultores/propriedades rurais serão impactados",
+          "(ii) Aderência e relevância à estratégia nacional de C,T&I e às políticas: NIB, Programa Nacional de Bioinsumos, PLANAPO, PNPIAF, ENECI — VER lacunas_documentais",
+          "(iii) Contribuição na qualidade de vida e na renda do produtor familiar",
+          "(iv) Contribuição para o desenvolvimento sustentável"
+        ],
+        "nota_desempate_ordem": 4,
+        "resposta_do_projeto": ""
+      },
+      {
+        "id": "CM-05",
+        "criterio": "Parcerias previstas",
+        "peso": 2,
+        "peso_efetivo_pct": "9,5%",
+        "escala": "0–5",
+        "observacao": "Nota zero se a proposta não apresentar as informações e documentos do item 5.6.1. Zero em CM-05 é determinante em situações de empate.",
+        "entidades_validas_para_parceria": [
+          "Entidades de assistência técnica e extensão rural (ATER)",
+          "Cooperativas",
+          "Organizações da sociedade civil",
+          "Organizações comunitárias",
+          "Movimentos sociais",
+          "Entidades representativas de Agricultores(as) Familiares",
+          "Entidades representativas de Pescadores(as) Artesanais",
+          "Entidades representativas de Aquicultores(as)",
+          "Povos Indígenas",
+          "Comunidades Quilombolas",
+          "Povos e Comunidades Tradicionais"
+        ],
+        "nota_desempate_ordem": 5,
+        "resposta_do_projeto": ""
+      }
+    ],
+    "formula_pontuacao": "Média ponderada = (CM-01×5 + CM-02×5 + CM-03×5 + CM-04×4 + CM-05×2) / 21",
+    "criterios_desempate": [
+      "1º: Maior nota no CM-01",
+      "2º: Maior nota no CM-02 (e assim por diante até CM-05)",
+      "3º: Menor valor de proposta após avaliação de mérito",
+      "4º: Proposta recebida com maior antecedência pela Finep"
+    ]
+  },
+
+  "condicoes_eliminatorias_merito": [
+    "Média ponderada final inferior a 3,5 (considerando todos os 5 critérios)",
+    "Nota 1 (um) no critério CM-03 — Consistência e adequação do Projeto",
+    "Não atendimento às disposições gerais da Seleção Pública ou legislação vigente (11.3.5)"
+  ],
+
+  "notas_estrategicas": {
+    "prioridade_regional": "Mínimo 30% dos recursos da LT3 devem ir para ICTs sediadas nas regiões Norte, Nordeste e Centro-Oeste — vantagem competitiva para projetos nessas regiões se houver demanda qualificada suficiente.",
+    "peso_efetivo_cm01_cm02_cm03": "CM-01, CM-02 e CM-03 valem ~24% cada. Os três primeiros critérios respondem por 71,4% da nota — são onde o projeto ganha ou perde.",
+    "cm05_nao_e_menor_mas_e_desempate": "CM-05 vale só 9,5% da nota, mas nota zero nele elimina em qualquer desempate. O mínimo é documentar 1 parceria formal.",
+    "cm04_exige_pesquisa_de_politicas": "O subcritério (ii) de CM-04 menciona 5 políticas por sigla. Sem saber o que cada uma diz, não é possível demonstrar aderência. Ver lacunas_documentais.",
+    "retencao_nos_elos_iniciais": "A linguagem da seção 1.2 é: 'agregar e RETER valor nos elos INICIAIS das cadeias'. A solução digital deve mostrar que o benefício econômico permanece com o agricultor — não é só eficiência operacional.",
+    "inclusao_socioprodutiva_como_argumento": "O edital menciona 'inclusão socioprodutiva' como um dos fins centrais. Não basta ser uma solução tecnológica eficiente — precisa demonstrar como reduz barreiras de acesso para populações vulneráveis."
+  },
+
+  "tabelas_remuneracao": {
+    "descricao": "Valores máximos extraídos dos Anexos 5 e 6. Usar para validar o orçamento antes da submissão.",
+
+    "pagamento_pessoal_clt_anexo5": {
+      "nota": "Valor limite inclui vencimentos, obrigações patronais e benefícios. Toda contratação requer Autorização (Anexo 6-A) e Declaração do beneficiário (Anexo 6-B).",
+      "categorias": [
+        { "sigla": "AT1", "descricao": "Apoio técnico 1", "formacao_minima": "Ensino fundamental completo (ou 5 anos de experiência)", "valor_hora_max_brl": 39.40 },
+        { "sigla": "AT2", "descricao": "Apoio técnico 2", "formacao_minima": "Ensino médio completo / Superior incompleto (ou 8 anos de experiência)", "valor_hora_max_brl": 79.90 },
+        { "sigla": "AP1", "descricao": "Auxiliar de Pesquisas Pleno 1", "formacao_minima": "Superior completo", "valor_hora_max_brl": 99.60 },
+        { "sigla": "AP2", "descricao": "Auxiliar de Pesquisas Pleno 2", "formacao_minima": "Especialização completa ou Mestrado em andamento (ou Superior + 3 anos)", "valor_hora_max_brl": 119.30 },
+        { "sigla": "DT1", "descricao": "Pesquisador Desenvolvimento Tecnológico 1", "formacao_minima": "Mestrado completo ou Doutorado em andamento (ou Superior + 5 anos)", "valor_hora_max_brl": 140.10 },
+        { "sigla": "DT2", "descricao": "Pesquisador Desenvolvimento Tecnológico 2", "formacao_minima": "Doutorado (ou Mestrado + 5 anos P&D, ou Superior + 11 anos P&D)", "valor_hora_max_brl": 179.50 },
+        { "sigla": "DT3", "descricao": "Pesquisador Desenvolvimento Tecnológico 3", "formacao_minima": "Doutorado + 5 anos P,D&I (ou Mestrado + 10 anos, ou Superior + 14 anos)", "valor_hora_max_brl": 218.90 }
+      ]
+    },
+
+    "bolsas_cnpq_anexo6": {
+      "nota": "Admitido apenas se proponente for fundação de apoio ou ICT pública. Regras por CNPq Portaria 2262/2025. Bolsistas não podem acumular bolsas públicas de longa duração.",
+      "modalidades": [
+        {
+          "sigla": "DTI", "descricao": "Desenvolvimento Tecnológico e Industrial",
+          "finalidade": "Fortalecer equipe com profissional qualificado para atividade específica",
+          "niveis": [
+            { "nivel": "A", "valor_mensal_brl": 5200 },
+            { "nivel": "B", "valor_mensal_brl": 3900 },
+            { "nivel": "C", "valor_mensal_brl": 1430 }
+          ]
+        },
+        {
+          "sigla": "EV", "descricao": "Especialista Visitante",
+          "finalidade": "Complementar competência da equipe com profissional externo temporário (não vinculado às instituições)",
+          "niveis": [
+            { "nivel": "1", "valor_mensal_brl": 6500 },
+            { "nivel": "2", "valor_mensal_brl": 4550 },
+            { "nivel": "3", "valor_mensal_brl": 3250 }
+          ]
+        },
+        {
+          "sigla": "EXP", "descricao": "Extensão no País",
+          "finalidade": "Apoiar extensão inovadora e transferência de tecnologia com impacto social",
+          "niveis": [
+            { "nivel": "A", "valor_mensal_brl": 5200 },
+            { "nivel": "B", "valor_mensal_brl": 3900 },
+            { "nivel": "C", "valor_mensal_brl": 1430 }
+          ]
+        },
+        {
+          "sigla": "SET", "descricao": "Fixação e Capacitação de Recursos Humanos — Fundos Setoriais",
+          "finalidade": "Estimular fixação de recursos humanos em áreas estratégicas dos Fundos Setoriais",
+          "niveis": [
+            { "nivel": "A", "valor_mensal_brl": 7800 },
+            { "nivel": "B", "valor_mensal_brl": 6500 },
+            { "nivel": "C", "valor_mensal_brl": 5850 },
+            { "nivel": "D", "valor_mensal_brl": 5200 },
+            { "nivel": "E", "valor_mensal_brl": 4550 },
+            { "nivel": "F", "valor_mensal_brl": 3900 },
+            { "nivel": "G", "valor_mensal_brl": 3250 },
+            { "nivel": "H", "valor_mensal_brl": 1950 },
+            { "nivel": "I", "valor_mensal_brl": 1040 }
+          ]
+        }
+      ]
+    }
+  },
+
+  "documentacao_itens_orcamento_anexo3": {
+    "descricao": "Documentação exigida por rubrica para habilitação dos itens de orçamento (Anexo 3). Ausência ou inadequação elimina o item. Se itens eliminados > 30% do total: proposta eliminada.",
+    "data_minima_documentos": "01/01/2026 — todos os orçamentos e proformas devem ter data posterior a esta.",
+    "validade_orcamento_obras": "Máximo 6 meses de defasagem em relação à data de submissão da proposta.",
+    "valor_maximo_por_item_obra_brl": 376353.48,
+    "regras_por_rubrica": [
+      {
+        "rubrica": "Obras e Instalações",
+        "documentos_obrigatorios": [
+          "Declaração de obras de pequeno porte e sem complexidade técnica (Anexo A do Anexo 4), assinada pelo responsável técnico + dirigentes da convenente e executora",
+          "Planta baixa com o local de intervenção destacado (pode ser dispensada para serviços, com justificativa)",
+          "Orçamento sintético em planilha de custos com data de elaboração",
+          "Cronograma de execução do item de obra"
+        ],
+        "observacao": "Cada item de obra deve ter um projeto resumido separado. Valor por item limitado a R$ 376.353,48."
+      },
+      {
+        "rubrica": "Equipamentos e Materiais Permanentes — tipo 'outros' (nacional)",
+        "documentos_obrigatorios": ["Orçamento nacional", "Justificativa de uso e adequação"]
+      },
+      {
+        "rubrica": "Equipamentos e Materiais Permanentes — importados",
+        "documentos_obrigatorios": ["Proforma invoice", "Justificativa de uso e adequação"],
+        "observacao": "Câmbio da data de lançamento da Chamada como referência na plataforma."
+      },
+      {
+        "rubrica": "Material de Consumo — tipo 'outros' nacional (valor total ≥ R$ 100.000)",
+        "documentos_obrigatorios": ["Orçamento", "Justificativa de uso e adequação"]
+      },
+      {
+        "rubrica": "Material de Consumo — importado (valor total ≥ R$ 100.000)",
+        "documentos_obrigatorios": ["Proforma invoice", "Justificativa de uso e adequação"]
+      },
+      {
+        "rubrica": "Material de Consumo — fabricado no exterior, adquirido no mercado nacional",
+        "documentos_obrigatorios": ["Orçamento", "Justificativa de uso e adequação"]
+      },
+      {
+        "rubrica": "Serviços de Terceiros PJ — tipo 'manutenção'",
+        "documentos_obrigatorios": ["Proposta técnica e orçamentária"]
+      },
+      {
+        "rubrica": "Serviços de Terceiros PJ — tipo 'outros' (valor total ≥ R$ 100.000)",
+        "documentos_obrigatorios": ["Orçamento"]
+      },
+      {
+        "rubrica": "Pagamento de Pessoal (CLT)",
+        "documentos_obrigatorios": ["Seguir orientações do Anexo 5", "Autorização da ICT (Anexo 6-A)", "Declaração do beneficiário (Anexo 6-B)"]
+      },
+      {
+        "rubrica": "Bolsas",
+        "documentos_obrigatorios": ["Seguir orientações do Anexo 6", "Declaração individual do bolsista", "Autorização da instituição vinculadora (se celetista ou servidor público)"]
+      }
+    ]
+  },
+
+  "plataforma_fap_alertas": {
+    "descricao": "Alertas críticos da plataforma FAP (Plataforma de Apoio e Financiamento da FINEP) extraídos do documento de telas (09_04_2026_Telas_FAP_e_Numero_de_Caracteres.pdf).",
+    "alertas": [
+      {
+        "id": "FAP-01",
+        "alerta": "Limite de 3 coexecutores",
+        "detalhe": "A plataforma alerta para o limite de até 3 coexecutores conforme item 5.4 do edital. Ultrapassar este limite na plataforma torna a proposta inelegível."
+      },
+      {
+        "id": "FAP-02",
+        "alerta": "Linha Temática é IMUTÁVEL após recebimento",
+        "detalhe": "A seleção da Linha Temática não pode ser alterada após o recebimento da proposta pela FINEP. Confirmar LT3 antes do envio final."
+      },
+      {
+        "id": "FAP-03",
+        "alerta": "Proposta só é recebida após aprovação de todos os representantes legais",
+        "detalhe": "A proposta somente será recebida pela FINEP após a aprovação dos representantes legais da proponente, da executora principal e, quando houver, das coexecutoras. Coordenar assinaturas com antecedência."
+      },
+      {
+        "id": "FAP-04",
+        "alerta": "Documentação de rubricas vai em aba separada 'Anexos de Itens de Rubricas'",
+        "detalhe": "Os documentos específicos de cada item de orçamento (orçamentos, proformas, justificativas) devem ser inseridos na aba 'Anexos de Itens de Rubricas', não em 'Anexos Gerais'."
+      },
+      {
+        "id": "FAP-05",
+        "alerta": "Documentação geral vai em 'Anexos Gerais' e pode ser condicionante pós-aprovação",
+        "detalhe": "Documentação marcada em 'Exigências Documentais' (ex: Política de Inovação, cartas de anuência) vai em 'Anexos Gerais'. Se não apresentada na submissão, será exigida como condicionante para contratação ou liberação de recursos."
+      }
+    ]
+  },
+
+  "secoes_a_responder": []
+}
