@@ -211,6 +211,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                     href={`#${s.id}`}
                     className="flex flex-1 items-center gap-3 py-2.5 pl-6 text-[12.5px] font-medium transition-all duration-150"
                     style={{ color: isActive ? 'var(--txt)' : 'var(--txtl)' }}
+                    onClick={() => hasChildren && setOpenDrawers((prev) => ({ ...prev, [s.id]: true }))}
                   >
                     <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-md text-[9px] font-bold"
                       style={{
