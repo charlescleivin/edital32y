@@ -5,6 +5,40 @@ const path = require('path')
 const filePath = path.join(__dirname, '..', 'data', 'proposal.json')
 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'))
 
+// ── s3: generalObjective + axes (fixture rewrite) ────────────────────
+data.s3.generalObjective =
+  'Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus aberto, modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema Roça Conectada, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.'
+
+data.s3.axes = [
+  {
+    id: 'e1',
+    label: 'Eixo I — Pesquisa e Infraestrutura de IA',
+    objectives: [
+      { id: 'oe1', code: 'OE1.', text: 'Realizar diagnóstico participativo das necessidades digitais em 3 regiões-piloto (Pesquisa-Ação Participativa).' },
+      { id: 'oe2', code: 'OE2.', text: 'Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença MIT/Apache 2.0, DOI público via Zenodo.' },
+      { id: 'oe3', code: 'OE3.', text: 'Desenvolver o AgroEval: benchmark nacional para avaliação de alucinação e precisão de IAs agrícolas em português — contribuição científica original replicável por qualquer grupo de pesquisa.' },
+    ],
+  },
+  {
+    id: 'e2',
+    label: 'Eixo II — Validação e Implantação',
+    objectives: [
+      { id: 'oe4', code: 'OE4.', text: 'Realizar fine-tuning e validação científica do AgroAssistente IA com protocolo de grupo controle (n=50, Fase 2).' },
+      { id: 'oe5', code: 'OE5.', text: 'Implantar o AgroAssistente IA com 800 agricultores (Fase 2) e expandir para 2.500 (Fase 3) via rede de multiplicadores EMATER.' },
+      { id: 'oe6', code: 'OE6.', text: 'Implantar o Coopera Digital em 6 cooperativas âncora (Fase 2) e 18 cooperativas (Fase 3).' },
+    ],
+  },
+  {
+    id: 'e3',
+    label: 'Eixo III — Ecossistema Nacional e Soberania',
+    objectives: [
+      { id: 'oe7', code: 'OE7.', text: 'Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs.' },
+      { id: 'oe8', code: 'OE8.', text: 'Capacitar 350 multiplicadores (técnicos ATER e gestores de cooperativas) como agentes de expansão e sustentabilidade do ecossistema.' },
+      { id: 'oe9', code: 'OE9.', text: 'Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora (UFSC), assegurando soberania e permanência nacional da infraestrutura.' },
+    ],
+  },
+]
+
 // ── s3: policyAlignment (W-02) ────────────────────────────────────────
 data.s3.policyAlignment = [
   {
@@ -144,6 +178,8 @@ if (!re04Already) {
 fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8')
 
 console.log('proposal.json updated:')
+console.log('  s3.generalObjective: updated')
+console.log('  s3.axes:', data.s3.axes.length, 'axes,', data.s3.axes.reduce((n, a) => n + a.objectives.length, 0), 'objectives')
 console.log('  s3.policyAlignment:', data.s3.policyAlignment.length, 'policies')
 console.log('  s3.innovationPolicy:', !!data.s3.innovationPolicy)
 console.log('  s4.sovereigntyCallouts:', data.s4.sovereigntyCallouts.length, 'callouts')

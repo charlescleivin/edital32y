@@ -122,25 +122,25 @@
     "subtitle": "Visão geral do projeto, público-alvo e impacto esperado",
     "heroImage": "/hero1.png",
     "heroObjectPosition": "center",
-    "headline": "3,9 milhões de famílias. Uma solução. 36 meses.",
+    "headline": "O Brasil está construindo sua soberania de IA. Mas os agricultores familiares ficaram de fora.",
     "stats": [
       {
         "icon": "🌾",
         "value": "3,9M",
-        "label": "Estabelecimentos familiares no Brasil (IBGE 2017)"
+        "label": "famílias agricultoras completamente fora do perímetro de soberania digital que o Brasil está construindo agora (IBGE 2017)"
       },
       {
-        "icon": "📱",
-        "value": "53%",
-        "label": "Domicílios rurais com internet (PNAD 2022)"
+        "icon": "📉",
+        "value": "R$18,8bi",
+        "label": "em renda rural não realizada por ano: o custo documentado de 3,2M famílias sem ATER (RESR 2020, método PSM)"
       },
       {
-        "icon": "👨‍🌾",
-        "value": "1:500",
-        "label": "Extensionistas rurais (ATER — Assistência Técnica e Extensão Rural) por família agricultora"
+        "icon": "⚠️",
+        "value": "81,8%",
+        "label": "dos agricultores familiares sem acesso a ATER — no Nordeste, essa ausência chega a 92,6% (IBGE Censo Agropecuário 2017)"
       }
     ],
-    "summary": "O Roça Conectada constrói a infraestrutura de IA agrícola que o Brasil precisa possuir. O AgroAssistente IA é um LLM fine-tuned sobre o corpus AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, curados de fontes EMBRAPA e MAPA — operável via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente, sem custo de assinatura para o agricultor. O Coopera Digital é uma plataforma de gestão cooperativa de baixo custo para associações rurais. O modelo treinado, o corpus e o código-fonte são titulados no Brasil, licenciados sob MIT/Apache 2.0 e publicados com DOI — ativos nacionais permanentemente acessíveis para políticas públicas, sem intermediação de fornecedor estrangeiro. A pesquisa científica é conduzida pela UFSC; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50), empresa brasileira de IA com sistemas próprios e modelos desenvolvidos em produção para clientes internacionais sob acordos de confidencialidade; responsável pela totalidade da engenharia de software (R$ 2,68M — item 6.2.2.1). Sustentabilidade pós-projeto por design: o modelo fine-tuned é um ativo de software com custo de inferência próximo de zero em qualquer hardware de ICT parceira, eliminando dependência de API recorrente; integração institucional com EMATER e EMBRAPA Agricultura Digital formalizada na Fase 3; código MIT/Apache 2.0 garante replicabilidade por qualquer ICT ou EMATER estadual sem dependência de UFSC ou THATPIX.",
+    "summary": "Em maio de 2026 — o mesmo mês desta chamada pública — o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem do país sob controle estrangeiro. O governo lançou o SoberanIA com R$ 40 milhões para construir um LLM nacional de 30 bilhões de parâmetros para o setor público. O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações para soberania tecnológica nacional. A arquitetura está sendo construída. Mas há um vácuo que nenhum desses instrumentos preenche: os 3,9 milhões de estabelecimentos de agricultura familiar — responsáveis por 70% dos alimentos que o Brasil come — estão completamente fora do perímetro de soberania que está sendo erguido agora. O Roça Conectada é o componente que preenche esse vácuo. Não é um aplicativo. É a infraestrutura soberana de IA agrícola que o Brasil ainda não tem: o AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, o corpus especializado mais abrangente já produzido para esse domínio no Brasil —, um LLM fine-tuned sobre esse corpus, e a AgroAPI como camada de integração para políticas públicas. Os três ativos são titulados na UFSC ao mês 36, licenciados sob MIT/Apache 2.0, publicados com DOI. Infraestrutura nacional permanente, sem dependência de fornecedor estrangeiro. A pesquisa científica é conduzida pela UFSC; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50). Ao final de 36 meses, existirá o que hoje não existe: uma fundação soberana de IA para a agricultura familiar brasileira — o ativo que qualquer EMATER estadual, pesquisador ou política pública pode usar como ponto de partida, sem recomeçar do zero e sem pedir permissão a nenhuma plataforma estrangeira.",
     "editalResults": [
       "Digitalização das cadeias socioprodutivas",
       "Aumento da independência e qualidade de vida",
@@ -170,27 +170,27 @@
         "label": "THATPIX LTDA — Serviços de Engenharia de Software (item 6.2.2.1)"
       }
     ],
-    "problemStatement": "Há 3,9 milhões de famílias agricultoras no Brasil — responsáveis por 83% do feijão, 69% da mandioca e 59% do suíno consumidos no país (IBGE, 2017). Elas operam com 1 agente de ATER para cada 500 famílias, sem ANATER desde 2019, e no Semiárido nordestino menos de 15% dos municípios têm extensão rural ativa (EMBRAPA, 2021). A resposta tecnológica óbvia — inteligência artificial conversacional — já existe. O problema é quem a controla: ChatGPT e equivalentes processam dados em servidores estrangeiros, exigem conectividade estável, custam R$ 80–300/mês por usuário e não conhecem o vocabulário técnico do campo brasileiro. Delegar a extensão rural de 3,9 milhões de famílias a uma API cujo preço, acesso e política de dados são definidos fora do Brasil não é uma solução — é uma dependência estratégica. O Roça Conectada existe para que o Brasil seja dono da IA que orienta o seu campo.",
+    "problemStatement": "Em fevereiro de 2026, o presidente Lula declarou na Cúpula de IA em Nova Délhi: \"Quando poucos controlam os algoritmos e as infraestruturas digitais, não estamos falando de inovação, mas de dominação.\" O MCTI confirmou o diagnóstico em maio de 2026: 88% da infraestrutura de nuvem do Brasil está sob controle estrangeiro — e o governo chamou essa condição, explicitamente, de \"colônia digital\". O PBIA 2024–2028 destinou R$ 23 bilhões para construir soberania tecnológica. O SoberanIA lançou R$ 40 milhões para um LLM nacional voltado ao setor público. O perímetro de soberania está sendo traçado — e os 3,9 milhões de estabelecimentos de agricultura familiar não estão dentro dele. Esta não é uma lacuna menor. A agricultura familiar produz 70% dos alimentos consumidos no Brasil, mas 81,8% dessas famílias não têm acesso a qualquer assistência técnica (IBGE 2017). No Nordeste, 92,6% estão descobertos. Um estudo econométrico publicado na RESR (2020) com metodologia PSM quantificou a consequência: famílias com ATER ganham R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural que não existe porque a orientação técnica não chega. O Roça Conectada existe para fechar essa lacuna — com infraestrutura soberana, em conformidade com a LGPD, com aderência ao PBIA, e com titularidade permanentemente brasileira.",
     "whyNow": [
       {
-        "icon": "🇧🇷",
-        "title": "O Brasil não pode depender de IA estrangeira para orientar o seu campo",
-        "body": "ChatGPT e equivalentes processam dados agrícolas brasileiros em servidores norte-americanos, sem adequação à LGPD, com preços e acesso definidos fora do Brasil. Com 2.500 usuários ativos e 10 consultas/dia, o custo de API equivale a R$ 900k–2,7M/ano — inviável após o fim do financiamento e sem nenhum ativo ao final. O Roça Conectada gera um modelo permanente, titulado na UFSC, com custo marginal próximo de zero após o projeto — soberania tecnológica, não dependência renovável."
+        "icon": "🏛️",
+        "title": "O PBIA está alocando R$ 23 bilhões agora — e a agricultura familiar não está na sala",
+        "body": "O Plano Brasileiro de Inteligência Artificial 2024–2028 tem 54 ações concretas e R$ 23 bilhões comprometidos. O SoberanIA lançou R$ 40 milhões em maio de 2026 para um LLM nacional para o setor público. Essas decisões estão sendo tomadas agora — e nenhuma delas inclui os 3,9 milhões de estabelecimentos de agricultura familiar. O Roça Conectada é a proposta que coloca a agricultura familiar dentro do perímetro de soberania digital que o Brasil está construindo neste momento. Uma decisão tomada sem essa infraestrutura será uma decisão tomada sem ela para sempre."
       },
       {
-        "icon": "⚙️",
-        "title": "Pela primeira vez, é viável construir um LLM agrícola nacional com orçamento de pesquisa",
-        "body": "Modelos open-weight (LLaMA 3, Qwen 2.5) com fine-tuning LoRA 4-bit viabilizam treinamento especializado com 20–25k exemplos — custo estimado de fine-tuning equivalente via API GPT-4 em 2022: US$ 300k–400k. Hoje é possível com orçamento de pesquisa e equipe brasileira especializada (THATPIX), dentro do contrato de serviços do projeto. A janela para construir soberania tecnológica no agro está aberta."
+        "icon": "⚖️",
+        "title": "A Resolução ANPD 19/2024 tornou o status quo ilegalmente insustentável",
+        "body": "Desde agosto de 2025, a Resolução ANPD 19/2024 exige conformidade com a LGPD em todas as transferências internacionais de dados. Qualquer sistema de ATER digital que roteie consultas de agricultores por APIs estrangeiras — OpenAI, Google, Anthropic — está em não-conformidade ativa com a lei brasileira de proteção de dados. O Roça Conectada não é apenas a solução mais adequada: para qualquer política pública que leve a LGPD a sério, é a única opção juridicamente defensável."
+      },
+      {
+        "icon": "🌐",
+        "title": "O histórico das plataformas estrangeiras documenta o risco com precisão cirúrgica",
+        "body": "Em 30 de março de 2023, o ChatGPT foi bloqueado na Itália em menos de 24 horas por ordem regulatória — 60 milhões de pessoas sem acesso, sem aviso. Em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer \"aviso amplo\". Em dezembro de 2025, a GROQ foi adquirida pela Nvidia sem consulta a seus 2 milhões de desenvolvedores. O Brasil é o segundo maior mercado mundial de desenvolvedores ativos na API da OpenAI — com 143% de crescimento anual. Nenhum outro país do Sul Global está mais exposto a um ponto único de falha que não controla."
       },
       {
         "icon": "📋",
-        "title": "Política pública nacional está esperando por essa referência técnica",
-        "body": "O PLANER 2023–2027 (MAPA) estabelece digitalização da ATER como meta federal. A Nova Indústria Brasil prioriza IA soberana em setores estratégicos. O Roça Conectada está posicionado para ser a referência técnica que essas políticas precisam — com modelo open-source titulado em ICT federal, corpus AgroLinguaBR com DOI público, e arquitetura replicável por EMBRAPA, EMATER estaduais e outras ICTs sem depender de nenhum fornecedor externo."
-      },
-      {
-        "icon": "♻️",
-        "title": "Sustentabilidade pós-projeto por design: o mês 37 já está respondido",
-        "body": "A Finep avalia sustentabilidade como critério de mérito. O Roça Conectada responde em três camadas: (1) custo marginal próximo de zero — o modelo fine-tuned é um ativo de software reutilizável em qualquer hardware de ICT parceira, sem despesa de API recorrente; (2) integração institucional — Fase 3 inclui formalização de acordo de cooperação técnica com EMATER estadual e/ou EMBRAPA Agricultura Digital para absorção operacional como linha de ATER digital (MoU até o mês 32); (3) open-source como seguro de continuidade — licença MIT/Apache 2.0 garante que qualquer ICT, EMATER ou organização possa hospedar e evoluir a plataforma sem dependência da UFSC ou da THATPIX."
+        "title": "O III PLANSAN 2025–2027 está medindo indicadores de inclusão digital rural agora",
+        "body": "O Plano Nacional de Segurança Alimentar e Nutricional 2025–2027 incorpora inclusão digital rural como dimensão de segurança alimentar e está coletando dados de linha de base neste exato momento. O Roça Conectada, com piloto documentado em três municípios do Nordeste e metodologia de avaliação de impacto com grupo controle, pode alimentar esses indicadores com evidência empírica. Propostas que chegam ao PLANSAN como referência técnica têm continuidade institucional. Propostas que chegam depois encontram o perímetro fechado."
       }
     ]
   },
@@ -198,85 +198,80 @@
     "number": "Seção 2",
     "title": "Problema e Justificativa",
     "heroImage": "/hero2.png",
-    "subtitle": "Diagnóstico do cenário atual da digitalização rural brasileira",
-    "headline": "O campo brasileiro não tem quem responda.",
+    "subtitle": "Cinco falhas estruturais que o mercado não resolve, que a política ainda não endereçou, e que este projeto foi construído para eliminar",
+    "headline": "Não é falta de tecnologia. É falta de soberania.",
     "stats": [
       {
-        "value": "77%",
-        "label": "dos estabelecimentos agropecuários são familiares",
-        "colorVariant": "green"
-      },
-      {
-        "value": "70%",
-        "label": "dos alimentos consumidos no Brasil vêm da AF",
-        "colorVariant": "green"
-      },
-      {
-        "value": "1:500",
-        "label": "extensionistas rurais por família — teto matemático da Assistência Técnica e Extensão Rural (ATER)",
+        "value": "81,8%",
+        "label": "dos agricultores familiares sem ATER — no Nordeste, 92,6% (IBGE Censo Agropecuário 2017)",
         "colorVariant": "red"
       },
       {
-        "value": "27",
-        "label": "sistemas estaduais de ATER incompatíveis — fragmentação que impede escala nacional",
+        "value": "R$18,8bi",
+        "label": "por ano em renda rural não realizada — custo documentado da ausência de ATER (RESR 2020, PSM)",
+        "colorVariant": "red"
+      },
+      {
+        "value": "88%",
+        "label": "da infraestrutura de nuvem do Brasil sob controle estrangeiro (MCTI, maio 2026)",
+        "colorVariant": "blue"
+      },
+      {
+        "value": "2º",
+        "label": "maior mercado de desenvolvedores ativos na API da OpenAI — o Brasil é o país do Sul Global mais exposto a plataformas que não controla (OpenAI, 2024)",
         "colorVariant": "blue"
       }
     ],
     "barriers": [
       {
         "icon": "📉",
-        "title": "A Impossibilidade Geométrica da ATER — Por Que a Digitalização das Cadeias Se Tornou Urgente",
+        "title": "Barreira 1 — O Colapso Estrutural da ATER: R$ 18,8 bilhões por ano em renda que não existe",
         "keyFact": {
-          "value": "1 : 500",
-          "label": "razão extensionista/família — 10× pior que o mínimo recomendado pela FAO. Nenhuma escala de contratação fecha esse abismo."
+          "value": "7,4%",
+          "label": "cobertura de ATER no Nordeste — um agricultor do Sertão tem 6× menos chance de receber orientação técnica que um agricultor do Sul (IBGE Censo Agropecuário 2017)"
         },
-        "image": "/barrier1-placeholder.svg",
-        "description": "O Brasil opera com aproximadamente 1 extensionista rural para cada 500 famílias de agricultores — razão nacional documentada pelo EMBRAPA (2021) e verificável via dados do DATER/MDA. A FAO estima que ATER efetiva requer razão de pelo menos 1:50. Essa não é uma meta aspiracional distante: é um abismo de ordem de magnitude. Nenhuma escala de contratação realista — considerando os históricos orçamentários federais e estaduais da última década — fecha essa lacuna por adição marginal de pessoal. A única saída não-incremental é multiplicar o alcance por ordem de magnitude, o que exige solução digital. Agravando o cenário, a ANATER (Agência Nacional de Assistência Técnica e Extensão Rural — criada pela Lei 12.897/2013) nunca atingiu capacidade operacional plena; orçamentos estaduais de ATER sofreram cortes sistemáticos verificáveis via SIAFI e LOAs anuais. O déficit não é herança histórica estática — está se aprofundando ativamente. Nesse contexto, o fomento à digitalização das cadeias socioprodutivas da agricultura familiar — resultado esperado explícito desta chamada (item 1.4) — não é uma opção tecnológica entre outras. É a única resposta geometricamente viável para uma crise que o modelo presencial esgotou matematicamente. O Pronaf Conectividade exemplifica esse paradoxo: é um instrumento de crédito criado para financiar equipamentos de comunicação no campo — mas a formulação dos projetos de captação exige, contraditoriamente, a própria assistência técnica que escasseia. Sem uma camada de orientação digital descentralizada, o crédito que financia a solução torna-se inacessível pelo mesmo problema que a solução deveria resolver."
+        "description": "O IBGE Censo Agropecuário 2017 documenta que apenas 18,2% dos estabelecimentos familiares brasileiros tiveram acesso a assistência técnica. No Nordeste, essa taxa cai para 7,4% — contra 48,6% no Sul. O orçamento da ANATER foi reduzido a R$ 10 milhões durante o governo anterior (frente aos R$ 400 milhões+ necessários para operação plena); décadas de destruição institucional não se revertem por contratação marginal. A consequência econômica foi quantificada por Souza et al. (RESR 2020) com Propensity Score Matching sobre dados da PNAD: famílias com ATER auferem R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural não realizada — não por falta de trabalho, mas por falta de orientação técnica. O colapso tem consequências em cascata: o PAA, programa de compras governamentais para a agricultura familiar, operava com 184.000 fornecedores em 2012 e colapsou para 39.000 em 2019 — queda de 79% — em grande parte porque a documentação exigida para participar requer a mesma assistência técnica que escasseia. O Roça Conectada é a resposta de escala: o AgroAssistente opera via WhatsApp — o canal com a maior adoção documentada entre a população-alvo (96,7% de domicílios rurais com celular, IBGE PNAD 2023) e a arquitetura mais compatível com conectividade intermitente —, multiplicando o alcance efetivo da ATER sem depender de contratação de pessoal. Esta não é uma tecnologia procurando um problema. É um problema que esperou cinquenta anos pela tecnologia certa."
       },
       {
         "icon": "🏗️",
-        "title": "A Falha de Mercado — A Pequena Propriedade Rural É o Ponto Cego do Setor Privado",
+        "title": "Barreira 2 — A Dependência de Plataformas Estrangeiras Descartáveis: ruptura documentada, repetida, previsível",
         "keyFact": {
-          "value": "23%",
-          "label": "da renda agrícola total capturada por 77% dos estabelecimentos familiares — margem que inviabiliza qualquer modelo privado de software."
+          "value": "14 dias",
+          "label": "de aviso da OpenAI para descontinuar o GPT-4o em janeiro de 2026, após prometer 'aviso amplo' — ilustrando o padrão de ruptura unilateral (The Register, 2026)"
         },
-        "image": "/barrier2-placeholder.svg",
-        "description": "Soluções digitais para agricultura existem: Aegro, Agronow, Climate Corporation, Syngenta Digital e dezenas de plataformas de agritech oferecem ferramentas sofisticadas de gestão, rastreabilidade e recomendação agronômica. Nenhuma foi construída para a pequena propriedade rural de agricultura familiar. Todas foram desenvolvidas para produtores de médio e grande porte, com conectividade estável, capacidade de assinatura mensal e retorno econômico suficiente para justificar o custo de implantação. Para os 3,9 milhões de estabelecimentos da agricultura familiar — onde a renda média por família frequentemente não ultrapassa dois salários mínimos mensais e a internet ainda é intermitente — o mercado produz falha estrutural: a tecnologia existe, mas o modelo econômico privado não a entrega onde a necessidade é maior. Esta é a definição clássica de falha de mercado que justifica apoio público do FNDCT: o investimento privado não chegará ao segmento da pequena propriedade rural familiar porque o retorno financeiro individual é insuficiente para os horizontes do capital privado.  A assimetria é estrutural e verificável: a agricultura familiar representa 77% dos estabelecimentos agropecuários do país mas captura apenas 23% da renda agrícola total gerada (IBGE, 2017) — margem de rentabilidade que inviabiliza o pagamento de assinaturas recorrentes de software e afasta o interesse do capital privado de risco. O custo de aquisição de clientes nesse segmento, combinado com a limitação de margem individual, torna o modelo privado estruturalmente inviável para este público. O edital desta chamada é precisamente o instrumento de política pública que existe para financiar a inclusão socioprodutiva que o mercado não produzirá por conta própria."
+        "description": "A solução tecnicamente óbvia para o déficit de ATER seria redirecionar agricultores para LLMs comerciais. O histórico recente documenta por que essa abordagem constitui uma vulnerabilidade estratégica, não uma solução. Em 30 de março de 2023, a autoridade italiana de proteção de dados bloqueou o ChatGPT em menos de 24 horas: 60 milhões de pessoas perderam acesso sem aviso, e toda empresa construída sobre a API ficou inoperante — multa de €15M confirmando a violação (TechCrunch, The Hacker News). Em novembro de 2023, a diretoria da OpenAI demitiu o CEO sem aviso; por cinco dias, US$ 13 bilhões em investimento da Microsoft e toda aplicação GPT-4 no mundo rodaram sobre uma empresa em colapso de governança — a Microsoft soube menos de uma hora antes do público (Wikipedia, Axios). Em 4 de janeiro de 2024, a OpenAI descontinuou 33 modelos simultaneamente, incluindo o GPT-3 text-davinci-003, sem caminho de migração para modelos fine-tuned proprietários (OpenAI Deprecations). Em 9 de julho de 2024, a OpenAI bloqueou o acesso de países como China, Rússia e Irã sem consulta prévia — os critérios são discricionários e unilaterais (Caixin Global, The Register). O Brasil está atualmente na lista de países suportados. Isso pode mudar. Em 24 de dezembro de 2025, a GROQ — provedora de inferência com 2 milhões de desenvolvedores — foi adquirida pela Nvidia sem consulta (CNBC). E em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer \"aviso amplo\" (The Register, VentureBeat). O Brasil é o segundo maior mercado de desenvolvedores ativos na API da OpenAI, com crescimento de 143% ano a ano — o país do Sul Global mais exposto a um ponto único de falha que não controla (OpenAI, 2024). A questão não é se isso acontecerá com alguma plataforma que suporta a extensão rural de 3,9 milhões de famílias. É quando — e se o Brasil terá infraestrutura própria quando acontecer."
       },
       {
         "icon": "🧠",
-        "title": "A Armadilha da IA Genérica — Ferramentas Existentes Falham para o Campo Brasileiro",
+        "title": "Barreira 3 — A Barreira da Linguagem e do Território: 28% de erro é uma colheita destruída",
         "keyFact": {
-          "value": "0",
-          "label": "corpus público em português agrícola regional para treinamento de LLMs disponível no Brasil antes do AgroLinguaBR."
+          "value": "72%",
+          "label": "precisão do GPT-4 em manejo especializado de pragas agrícolas (ArXiv 2024) — 28% de erros no campo significa risco real de perda de lavoura e autuação sanitária"
         },
-        "image": "/barrier3-placeholder.svg",
-        "description": "Uma resposta aparente ao déficit de ATER seria direcionar agricultores a LLMs já disponíveis (ChatGPT, Gemini, outros). Esta resposta é empiricamente inadequada e potencialmente perigosa. Os corpora usados no pré-treinamento desses modelos incluem conteúdo agronômico em português formal — publicações da EMBRAPA, portais do MAPA — mas estão sistematicamente ausentes ao nível de especificidade regional que define a prática agrícola: fenologia de variedades crioulas do Semiárido, calendários por microrregião do Cerrado, períodos de carência de defensivos por estado e cultivo, protocolos de manejo para a Caatinga e a Amazônia, terminologia de cooperativas do Nordeste. A consequência é alucinação sistemática direcionada — os modelos preenchem lacunas com padrões de contextos americanos ou europeus. Um agricultor que recebe recomendação errada sobre carência de defensivo não tem prejuízo abstrato: tem risco real de autuação sanitária e perda de acesso a mercados institucionais. Além das falhas de conteúdo, há uma falha de canal: segundo o Comitê Gestor da Internet no Brasil (CGI.br, TIC Domicílios 2023), a grande maioria dos usuários rurais acessa a internet exclusivamente pelo telefone celular, com prevalência de planos pré-pagos que impõem restrições severas ao tráfego de dados. Aplicativos convencionais que requerem download contínuo ou sincronização em nuvem são inviáveis nesse contexto econômico. A integração com WhatsApp — canal de conversação leve e assíncrono — não é escolha de conveniência: é a única arquitetura de acesso que respeita a realidade econômica e técnica do produtor rural familiar brasileiro. Adicionalmente, o processamento de dados de produção agrícola brasileira em servidores estrangeiros levanta questões de conformidade com a Lei 13.709/2018 (LGPD), citada explicitamente na base legal desta chamada (item 17.1), que plataformas estrangeiras não são obrigadas a observar. Construir modelo treinado sobre corpus brasileiro, operado em infraestrutura pública nacional — especificamente a Nuvem de Governo operada por Serpro e Dataprev — é a resposta concreta a essa tríplice necessidade: técnica, científica e legal."
+        "description": "Estudo publicado no arXiv em 2024 avaliou o desempenho do GPT-4 em tarefas especializadas de manejo de pragas agrícolas: 72% de precisão. Em medicina, uma taxa de acerto de 72% pode ser aceitável em triagem. Na agricultura familiar, 28% de erro significa a diferença entre recomendação correta de período de carência de defensivo e um lote reprovado pela vigilância sanitária; entre dosagem adequada de um insumo e a destruição de uma lavoura. O problema, contudo, não é apenas estatístico — é linguístico e territorial. Um agricultor do Nordeste chama a ferrugem asiática da soja de \"ferrugem\", o gorgulho do milho de \"caruncho\", os pulgões de \"piolho da planta\". Modelos treinados em português formal ou em inglês não mapeiam sistematicamente essas denominações para diagnósticos agronômicos corretos. Quando tentam, alucinam com terminologia de contextos americanos ou europeus aplicada a condições do Cerrado ou da Caatinga. Nenhum corpus público existente em língua portuguesa combina os três atributos que definem adequação para este caso: especificidade agronômica de nível técnico, cobertura de variação regional e terminológica do campo brasileiro, e volume suficiente para fine-tuning eficaz de LLM. O AgroLinguaBR — 25.000 pares técnicos curados de fontes EMBRAPA, MAPA e extensionistas de campo — é construído para preencher exatamente esse vácuo. A validação científica segue o protocolo AgroEval: precisão factual verificada contra base técnica EMBRAPA, taxa de alucinação detectada, relevância contextual por bioma. Além da falha de conteúdo, há falha de canal: a grande maioria dos usuários rurais acessa a internet exclusivamente pelo celular, com planos pré-pagos que restringem tráfego de dados (CGI.br, TIC Domicílios 2023). O WhatsApp é o canal com a maior adoção documentada nesse público — e a arquitetura mais compatível com conectividade intermitente — não por conveniência, mas por evidência."
       },
       {
-        "icon": "📚",
-        "title": "O Paradoxo do Patrimônio Público — O Estado Pagou pelo Conhecimento; Ele Não Chega ao Agricultor",
+        "icon": "⚖️",
+        "title": "Barreira 4 — O CLOUD Act e a LGPD: toda consulta agrícola via API estrangeira é uma violação ativa da lei",
         "keyFact": {
-          "value": "27",
-          "label": "sistemas estaduais de ATER sem interoperabilidade — silos intransponíveis que bloqueiam qualquer escala nacional."
+          "value": "Ago/2025",
+          "label": "desde quando a Resolução ANPD 19/2024 tornou ilegais transferências internacionais de dados sem mecanismos de conformidade com a LGPD"
         },
-        "image": "/barrier4-placeholder.svg",
-        "description": "O Brasil não carece de conhecimento agronômico — carece de infraestrutura para entregá-lo. Décadas de pesquisa da EMBRAPA, do MAPA e das EPAGRIs estaduais produziram um acervo técnico de alto valor que chega a grandes produtores e consultores via boletins, publicações e portais institucionais. Para o agricultor familiar sem ATER — que não navega portais técnicos nem interpreta publicações acadêmicas — esse mesmo acervo é inacessível na prática: não por inexistência, mas pela ausência da camada de intermediação que o tornaria utilizável no cotidiano da produção. O problema é agravado pela fragmentação institucional: os 27 sistemas estaduais de ATER operam com bases de dados, formulários e indicadores incompatíveis entre si. Um agricultor que muda de estado perde seu histórico técnico. Qualquer solução construída dentro de um sistema estadual herda essa fragmentação; qualquer solução que opere em escala nacional precisa ser construída fora dos silos estaduais. Este projeto não cria conhecimento agronômico do zero: converte conhecimento público já financiado pelo Estado em linguagem acessível entregue no canal onde o agricultor já está. O custo marginal dessa conversão é mínimo relativamente ao valor do acervo existente — e o resultado é a ativação de investimento público hoje subutilizado, em linha com o resultado esperado de criação e disseminação de novos conhecimentos desta chamada (item 1.4)."
+        "description": "A Lei 13.709/2018 (LGPD) é citada na base legal desta chamada (item 17.1). Desde agosto de 2025, a Resolução ANPD 19/2024 exige que transferências internacionais de dados pessoais demonstrem mecanismos específicos de conformidade com a LGPD. Quando um agricultor envia pelo WhatsApp uma consulta sobre sua lavoura — incluindo dados sobre sua produção, localização e insumos — e essa consulta é processada por uma API estrangeira hospedada nos Estados Unidos, os dados ficam sujeitos ao CLOUD Act norte-americano: autoridades americanas podem solicitar acesso sem notificar o titular ou o governo brasileiro. A OpenAI opera nos EUA. A Google Cloud tem nós primários nos EUA. Nenhuma dessas empresas está obrigada a observar a LGPD em suas operações de processamento. Isso significa que qualquer sistema de ATER digital baseado em API estrangeira está, desde agosto de 2025, em não-conformidade ativa com a legislação que esta própria chamada cita como fundamento legal. O Roça Conectada resolve isso pela arquitetura: o LLM roda em infraestrutura pública nacional (Nuvem de Governo — Serpro ou Dataprev), os dados não saem do Brasil, e a operação é auditável por autoridades brasileiras. Essa conformidade LGPD não é vantagem competitiva — é requisito legal que o projeto já atende e que qualquer concorrente baseado em API estrangeira não pode atender sem reescrever sua arquitetura inteira. O argumento de inclusão produtiva digital e o argumento de conformidade jurídica convergem para a mesma conclusão: infraestrutura soberana não é opção — é obrigação."
       },
       {
-        "icon": "⏳",
-        "title": "A Janela Estratégica — Soberania Digital e Fortalecimento Cooperativo Não Podem Esperar",
+        "icon": "🛡️",
+        "title": "Barreira 5 — O Vácuo da Soberania Alimentar Digital: 3,9M famílias fora do perímetro que o Brasil está construindo agora",
         "keyFact": {
-          "value": "Dez/2025",
-          "label": "Política Nacional de Transformação Digital na Agricultura aprovada no Senado — janela de política pública aberta agora."
+          "value": "0 de 54",
+          "label": "ações do PBIA 2024–2028 endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar — o perímetro de soberania digital nacional não inclui quem produz 70% dos alimentos do Brasil"
         },
-        "image": "/barrier5-placeholder.svg",
-        "description": "Dois processos simultâneos criam urgência direta para esta proposta. O primeiro é estratégico: plataformas privadas internacionais de IA agrícola (John Deere Operations Center, Bayer Climate FieldView, Corteva Granular) estão em expansão global com modelos treinados fora do Brasil, em arquiteturas fechadas, sem obrigação de conformidade com a LGPD e sem alinhamento com políticas da agricultura familiar (PLANAPO, PNPIAF). Quando expandirem para segmentos de menor porte — e a trajetória natural de toda plataforma de IA aponta nessa direção — o lock-in tecnológico já estará estabelecido: dados migrados, fluxos de trabalho consolidados, ecossistema de integrações construído sobre arquiteturas sem soberania nacional. A janela para construir infraestrutura soberana existe antes desse lock-in, não depois. O segundo processo é imediato e concreto: cooperativas de agricultura familiar são legalmente obrigadas a manter registros contábeis e operacionais (Lei 5.764/71), mas a esmagadora maioria das cooperativas produtivas de pequeno porte não tem acesso a software de gestão adequado — sistemas disponíveis não foram calibrados para cooperativas de 20 a 80 famílias sem equipe técnica interna. O resultado é a inabilitação sistemática de cooperativas aptas do ponto de vista produtivo, mas deficientes sob a perspectiva administrativa: incapazes de gerar os relatórios de rastreabilidade, declarações de aptidão e demonstrativos contábeis exigidos pelo PAA e pelo PNAE. A exclusão ocorre por insuficiência documental, não por ausência de capacidade produtiva. O fortalecimento das cooperativas de produção, resultado esperado explícito desta chamada (item 1.4), exige solução operacional para esse gap agora. A recém-formulada Política Nacional de Transformação Digital na Agricultura (em tramitação no Senado Federal, dezembro de 2025) e o Decreto nº 12.198/2024 — que institui a Infraestrutura Nacional de Dados (IND) e estabelece interoperabilidade como diretriz federal — posicionam este projeto na confluência exata entre o edital desta chamada e a política de Estado vigente."
+        "description": "O Brasil não classifica a agricultura como infraestrutura crítica nacional em seu PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE, que classificam a produção de alimentos como setor crítico e exigem proteção proporcional de sua infraestrutura digital. Pesquisadores de segurança nacional identificam essa ausência como vulnerabilidade estrutural documentada. O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA (lançado em maio de 2026, mesmo mês desta chamada) destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros para o setor público: cidades, burocracia, serviços governamentais. A aderência ao PBIA é um critério explícito de mérito desta chamada — e o Roça Conectada é a proposta que preenche o vácuo que o PBIA ainda não endereçou. Todo o movimento de soberania digital nacional está acontecendo. E os 3,9 milhões de estabelecimentos de agricultura familiar — que produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro sendo erguido. Entre as populações excluídas, a situação das mulheres é a mais grave: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a ATER (IBGE 2017). O Roça Conectada entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à UFSC com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe."
       }
     ],
-    "contextNote": "**A Analogia do PIX — Infraestrutura Soberana Que Eleva o Nível da Competição:** Em 2020, o Brasil lançou o PIX e tornou-se referência mundial em pagamentos instantâneos — não porque as fintechs brasileiras superavam as americanas, mas porque o Banco Central construiu a infraestrutura soberana e interoperável antes que o mercado fosse capturado por plataformas privadas. O resultado foi que a competição subiu de nível: empresas passaram a competir em serviços e aplicações, não em liquidação. O Brasil não escolheu entre Visa e Mastercard — construiu a fundação pública, aberta, acessível a qualquer participante. O Roça Conectada propõe o equivalente para a inteligência artificial agrícola. Não um aplicativo — uma Infraestrutura Pública Digital (DPI — Digital Public Infrastructure), framework reconhecido pelo Banco Mundial e UNDP para a construção de bens digitais soberanos que habilitam ecossistemas de inovação sem captura privada. O PIX é um DPI financeiro. O Roça Conectada é o primeiro DPI agrícola do Brasil. Um modelo de linguagem treinado sobre o agro brasileiro. Um corpus público com DOI. Uma arquitetura extensível que qualquer EMATER estadual, unidade da EMBRAPA, pesquisador ou instituição brasileira pode usar como ponto de partida — sem reconstruir do zero e sem depender de API estrangeira. O AgroAssistente via WhatsApp é a primeira aplicação desta infraestrutura: a mais imediata, a que usa o canal onde o agricultor já está. Mas a fundação é maior do que qualquer canal de entrega.\n\n**Quatro Resultados Esperados, Uma Fundação:** Este projeto endereça simultaneamente quatro dos resultados esperados explícitos desta chamada (item 1.4): (a) fomento à digitalização das cadeias socioprodutivas da agricultura familiar — via AgroAssistente e Coopera Digital; (b) fortalecimento de cooperativas de produção — via Coopera Digital e habilitação de acesso a PAA/PNAE; (c) criação de novos conhecimentos — via corpus AgroLinguaBR com DOI público e framework de avaliação de alucinação agrícola; (d) aumento de parcerias entre academia, setor público, sociedade civil e setor privado — via estrutura UFSC + EMBRAPA + EMATER + cooperativas + THATPIX. Um projeto que endereça um resultado esperado justifica o investimento; um que endereça quatro o multiplica.\n\n**Vantagem Regional Estrutural:** O edital reserva ao menos 30% dos recursos da Linha Temática 3 para ICTs sediadas nas regiões Norte, Nordeste e Centro-Oeste (item 4.3). Os três municípios-piloto — Crateús (CE), Sousa (PB) e Vitória da Conquista (BA) — são todos no Nordeste: a região com o maior déficit de ATER ativa, a menor cobertura de extensão digital e o maior número de famílias agricultoras em vulnerabilidade. O foco Nordeste não é conveniência geográfica: é o recorte onde a ausência de infraestrutura nacional causa mais dano e onde a construção de soberania tecnológica tem maior impacto redistributivo — precisamente o público que o item 4.3 desta chamada prioriza.",
-    "openingScenario": "Maria das Dores, 52 anos, agricultora familiar no Sertão paraibano, acorda às 4h para colher feijão. Seu filho mais novo tem febre há dois dias. Ela tem uma pergunta sobre defensivo para o tomate e outra sobre qual formulário preencher para o PAA — mas o escritório da EMATER mais próximo fica a 80 km, abre às 9h, e o agente já tem 600 famílias na carteira. Ela pega o celular. WhatsApp abre em 3 segundos, mesmo no 3G intermitente. É nesse momento que o Roça Conectada precisa estar lá.",
-    "competitiveContext": "A questão não é se IA conversacional existe — é se o Brasil tem infraestrutura soberana que atenda à LGPD (Lei 13.709/2018, base legal desta chamada, item 17.1) e que sirva de fundação para os objetivos nacionais de C,T&I para a agricultura familiar.\n\n**O que outros países já construíram como infraestrutura nacional:** A Índia mantém o iKisan como plataforma nacional de extensão digital com componentes de IA e o ICAR-NAIP integrando pesquisa agronômica com sistemas digitais há mais de uma década. Os Estados Unidos disponibilizam dados abertos do USDA como fundação sobre a qual Climate Corporation, Granular e Indigo Ag foram construídas — empresas de IA agrícola que nascem com corpus público nacional como base. A Europa mantém o projeto DEMETER (H2020) conectando plataformas agrícolas de 18 países sob arquitetura interoperável comum. Todos têm uma camada de inteligência agrícola nacional que projetos futuros podem usar como ponto de partida. O Brasil não tem.\n\n**O que o setor privado está construindo — e para quem:** John Deere Operations Center, Bayer Climate FieldView e Corteva Granular são plataformas reais de IA agrícola em expansão global. Foram construídas para o agronegócio comercial — sensores IoT, conectividade estável, capacidade de assinatura. Operam com dados processados fora do Brasil, sem obrigação de conformidade com a LGPD, sem alinhamento com PLANAPO, PNPIAF ou qualquer política de agricultura familiar. Quando expandirem para segmentos de menor porte — e a trajetória de toda plataforma de IA aponta nessa direção — virão com modelos já treinados, ecossistemas de integração construídos e efeitos de rede estabelecidos sobre arquiteturas que não serão soberanas.\n\n**O que o Brasil tem hoje:** Sistemas digitais isolados de EMATER estaduais sem IA e sem interoperabilidade. Acervo técnico da EMBRAPA em formato inacessível por API pública. Plataformas de gestão cooperativa sem penetração adequada em cooperativas produtivas de pequeno porte. APIs de LLMs estrangeiros com dados processados fora do País. Nenhuma camada nacional de IA agrícola. Nenhum corpus público em português agrícola regional. Nenhuma infraestrutura que uma pesquisadora da UFSC e uma técnica da EMATER-CE possam usar como base comum.\n\n**O que o Roça Conectada constrói — e quais resultados esperados do edital endereça diretamente:** Corpus AgroLinguaBR (bem público científico permanente, MIT/Apache 2.0 — resultado: criação de novos conhecimentos). AgroAssistente via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente (solução digital para a pequena propriedade rural — resultado: fomento à digitalização das cadeias). Coopera Digital (gestão para cooperativas produtivas de pequeno porte — resultado: fortalecimento das cooperativas de produção). Framework de avaliação de alucinação agrícola (contribuição metodológica original replicável por grupos nacionais — resultado: desenvolvimento C&T nacional). Modelo titulado em ICT federal, código-fonte aberto, corpus com DOI público — infraestrutura que pertence ao Brasil, operada em conformidade com a LGPD, extensível por qualquer instituição nacional.",
+    "contextNote": "**O diagnóstico é do próprio governo — a resposta ainda não chegou ao campo:** Em maio de 2026, o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem nacional sob controle estrangeiro. Em fevereiro de 2026, o presidente Lula na Cúpula de Nova Délhi: \"Quando poucos controlam os algoritmos e as infraestruturas digitais, não estamos falando de inovação, mas de dominação.\" O governo não está apenas descrevendo o problema: está construindo a resposta — R$ 23 bilhões no PBIA, R$ 40 milhões no SoberanIA, a Nova Indústria Brasil com IA soberana como prioridade. A questão que este projeto responde é precisa: nenhum desses instrumentos inclui o campo. O Roça Conectada é a proposta que insere a agricultura familiar dentro do perímetro de soberania tecnológica que o Brasil está construindo agora — não como extensão tardia, mas como componente específico de uma arquitetura que o próprio governo identificou como necessária e ainda não construiu para este público.\n\n**A analogia correta não é \"aplicativo agrícola\" — é PIX:** Em 2020, o Brasil lançou o PIX e tornou-se referência mundial em pagamentos instantâneos. Não porque as fintechs brasileiras superavam as americanas — mas porque o Banco Central construiu a infraestrutura soberana e interoperável antes que o mercado fosse capturado. O resultado: a competição subiu de nível. Empresas passaram a competir em serviços, não em liquidação. O Brasil não escolheu entre Visa e Mastercard — construiu a fundação pública, aberta, acessível a qualquer participante. O Roça Conectada propõe o equivalente para a inteligência artificial agrícola: não um aplicativo — uma plataforma soberana de IA, com corpus público, modelo titulado em ICT federal e API aberta. O AgroAssistente via WhatsApp é a primeira aplicação desta infraestrutura — a mais imediata, a que usa o canal onde o agricultor já está. Mas a fundação é maior do que qualquer canal de entrega.\n\n**Quatro resultados esperados da chamada, uma fundação técnica:** (a) fomento à digitalização das cadeias socioprodutivas — via AgroAssistente e Coopera Digital; (b) fortalecimento de cooperativas de produção — via Coopera Digital e habilitação de acesso a PAA/PNAE; (c) criação de novos conhecimentos — via corpus AgroLinguaBR com DOI e framework AgroEval; (d) aumento de parcerias entre academia, setor público, sociedade civil e setor privado — via estrutura UFSC + EMBRAPA + EMATER + cooperativas + THATPIX. Um projeto que endereça um resultado esperado justifica o investimento; um que endereça quatro o multiplica.\n\n**Foco Nordeste — onde a ausência causa mais dano:** Os três municípios-piloto — Crateús (CE), Sousa (PB) e Vitória da Conquista (BA) — são todos no Nordeste: a região com 92,6% das famílias sem ATER, a menor cobertura de extensão digital e o maior número de famílias em vulnerabilidade produtiva. O foco Nordeste atende ao critério de priorização regional do item 4.3 desta chamada — e é o recorte onde a construção de infraestrutura de inclusão produtiva digital e soberania tecnológica tem maior impacto redistributivo por real investido.",
+    "openingScenario": "Maria das Dores, 52 anos, agricultora familiar no Sertão paraibano. Ela dirige sua propriedade sem acesso a ATER há mais de uma década — como 92,6% dos agricultores de sua região. Tem uma pergunta sobre período de carência de defensivo para o tomate e outra sobre qual formulário preencher para o PAA. O escritório da EMATER mais próximo fica a 80 km, abre às 9h, e o agente que conhecia seus cultivos se aposentou há dois anos sem substituto. Ela pega o celular. WhatsApp abre em 3 segundos, mesmo no 3G intermitente. A pergunta sobre o defensivo pode esperar até a resposta chegar — o sistema é assíncrono, enfileira a mensagem e responde quando o sinal voltar. É nesse momento — às 4h da manhã, no 3G do Sertão, sem custo de deslocamento, sem hora marcada — que o Roça Conectada precisa estar lá. Esta não é uma narrativa hipotética. É o cenário documentado de 1,7 milhão de mulheres que dirigem propriedades rurais no Brasil, 95% delas sem acesso a qualquer assistência técnica.",
+    "competitiveContext": "**O que outros países já construíram como infraestrutura nacional — e o que o Brasil não tem:** A Índia mantém o iKisan como plataforma nacional de extensão digital com componentes de IA, e o ICAR-NAIP integra pesquisa agronômica com sistemas digitais há mais de uma década. Os EUA disponibilizam dados abertos do USDA como fundação sobre a qual Climate Corporation, Granular e Indigo Ag foram construídas — empresas de IA agrícola que nascem com corpus público nacional como base. A Europa conecta plataformas agrícolas de 18 países sob arquitetura interoperável comum via DEMETER (H2020). Todos têm uma camada de inteligência agrícola nacional que projetos futuros podem usar como ponto de partida. O Brasil não tem.\n\n**Atenção: o Llama não resolve o problema de soberania:** Meta é frequentemente citada como alternativa de \"IA aberta\". Em setembro de 2024, a Meta bloqueou o Llama 3.2 para toda a União Europeia — 450 milhões de pessoas — por decisão de negócios unilateral. O Llama tem uma cláusula contratual de cap de 700 milhões de usuários mensais e proíbe explicitamente usar seus outputs para treinar modelos concorrentes. Isso significa que o Brasil legalmente não pode usar outputs do Llama como dados de treinamento para um modelo nacional sem permissão da Meta. \"Open source\" com essas restrições não é soberania tecnológica.\n\n**O que o Roça Conectada constrói — e o que passa a existir ao mês 36:** Corpus AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, bem público científico permanente sob MIT/Apache 2.0, publicado com DOI (resultado direto: criação de novos conhecimentos). AgroAssistente via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente (inclusão produtiva digital — resultado: fomento à digitalização das cadeias). Coopera Digital, gestão para cooperativas produtivas de pequeno porte (resultado: fortalecimento das cooperativas de produção). AgroEval, framework de avaliação de alucinação agrícola (contribuição metodológica original replicável por grupos nacionais). Modelo titulado na UFSC, código-fonte aberto, corpus com DOI público — ativo estratégico nacional operado em conformidade com a LGPD, extensível por qualquer instituição brasileira sem depender de nenhuma empresa estrangeira.",
     "bibliography": [
       {
         "ref": "IBGE (2017)",
@@ -343,31 +338,26 @@
     "heroImage": "/hero3.png",
     "subtitle": "Geral e específicos, alinhados à Linha Temática 3",
     "headline": "11 objetivos. Da pesquisa à política pública.",
-    "generalObjective": "Desenvolver, validar e implantar o ecossistema Roça Conectada — LLM agrícola fine-tuned em corpus nacional (AgroLinguaBR), assistente conversacional via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente, e plataforma de gestão digital cooperativa — como infraestrutura de IA soberana para a digitalização das cadeias socioprodutivas da agricultura familiar brasileira, com titularidade pública do modelo, código aberto e arquitetura replicável por outras ICTs e políticas públicas, sem dependência de fornecedor estrangeiro.",
+    "generalObjective": "Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus aberto, modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema Roça Conectada, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.",
     "axes": [
       {
         "id": "e1",
-        "label": "Eixo I — Pesquisa e Desenvolvimento",
+        "label": "Eixo I — Pesquisa e Infraestrutura de IA",
         "objectives": [
           {
             "id": "oe1",
             "code": "OE1.",
-            "text": "Diagnóstico participativo das necessidades digitais de agricultores e cooperativas nas regiões-piloto, identificando lacunas de ATER, barreiras de adoção e padrões de uso do WhatsApp."
+            "text": "Realizar diagnóstico participativo das necessidades digitais em 3 regiões-piloto (Pesquisa-Ação Participativa)."
           },
           {
             "id": "oe2",
             "code": "OE2.",
-            "text": "Construção e validação do corpus AgroLinguaBR — mínimo 10.000 pares de pergunta-resposta técnica em português agrícola para fine-tuning do LLM."
+            "text": "Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença MIT/Apache 2.0, DOI público via Zenodo."
           },
           {
             "id": "oe3",
             "code": "OE3.",
-            "text": "Fine-tuning de LLM open-source (≥7B parâmetros) com técnicas PEFT/LoRA e quantização 4-bit, viabilizando inferência em infraestrutura de baixo custo."
-          },
-          {
-            "id": "oe4",
-            "code": "OE4.",
-            "text": "Desenvolvimento da arquitetura completa do ecossistema: AgroAssistente IA (WhatsApp + arquitetura assíncrona tolerante a conectividade intermitente) e Coopera Digital (web + mobile), com camada de dados federada."
+            "text": "Desenvolver o AgroEval: benchmark nacional para avaliação de alucinação e precisão de IAs agrícolas em português — contribuição científica original replicável por qualquer grupo de pesquisa."
           }
         ]
       },
@@ -376,45 +366,40 @@
         "label": "Eixo II — Validação e Implantação",
         "objectives": [
           {
+            "id": "oe4",
+            "code": "OE4.",
+            "text": "Realizar fine-tuning e validação científica do AgroAssistente IA com protocolo de grupo controle (n=50, Fase 2)."
+          },
+          {
             "id": "oe5",
             "code": "OE5.",
-            "text": "Implantação e validação do AgroAssistente IA com mínimo 800 agricultores familiares nas regiões-piloto, com protocolo de avaliação pré e pós-implantação."
+            "text": "Implantar o AgroAssistente IA com 800 agricultores (Fase 2) e expandir para 2.500 (Fase 3) via rede de multiplicadores EMATER."
           },
           {
             "id": "oe6",
             "code": "OE6.",
-            "text": "Implantação e validação do Coopera Digital com mínimo 18 cooperativas, medindo redução de tempo administrativo e ampliação de acesso a mercados institucionais (PAA/PNAE)."
-          },
-          {
-            "id": "oe7",
-            "code": "OE7.",
-            "text": "Integração com sistemas institucionais de ATER estadual, mercados institucionais e registro de cooperativas, garantindo interoperabilidade e conformidade com a LGPD."
-          },
-          {
-            "id": "oe8",
-            "code": "OE8.",
-            "text": "Capacitação de mínimo 350 agentes de ATER, gestores de cooperativas e multiplicadores, com material didático em linguagem acessível disponibilizado em formato aberto."
+            "text": "Implantar o Coopera Digital em 6 cooperativas âncora (Fase 2) e 18 cooperativas (Fase 3)."
           }
         ]
       },
       {
         "id": "e3",
-        "label": "Eixo III — Sustentabilidade e Escala",
+        "label": "Eixo III — Ecossistema Nacional e Soberania",
         "objectives": [
+          {
+            "id": "oe7",
+            "code": "OE7.",
+            "text": "Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs."
+          },
+          {
+            "id": "oe8",
+            "code": "OE8.",
+            "text": "Capacitar 350 multiplicadores (técnicos ATER e gestores de cooperativas) como agentes de expansão e sustentabilidade do ecossistema."
+          },
           {
             "id": "oe9",
             "code": "OE9.",
-            "text": "Desenvolvimento e validação de modelo de sustentabilidade econômica e governança pós-projeto (mês 37+): (a) custo marginal próximo de zero — o modelo fine-tuned é ativo de software reutilizável em qualquer hardware de ICT parceira, eliminando dependência de API recorrente pós-projeto; (b) formalização de acordo de cooperação técnica com ao menos uma EMATER estadual e/ou EMBRAPA Agricultura Digital para absorção operacional como linha de ATER digital; (c) publicação open-source MIT/Apache 2.0 garantindo replicabilidade por qualquer ICT sem dependência da UFSC ou da THATPIX. Marco: protocolo de negociação com EMATER/EMBRAPA iniciado no mês 24, MoU assinado até o mês 32."
-          },
-          {
-            "id": "oe10",
-            "code": "OE10.",
-            "text": "Produção de mínimo 3 artigos em periódicos Qualis A/B e apresentação em 2 eventos científicos nacionais nas áreas de Computação Aplicada ou Engenharia Agrícola."
-          },
-          {
-            "id": "oe11",
-            "code": "OE11.",
-            "text": "Disponibilização do código-fonte completo sob licença MIT/Apache 2.0 com DOI registrado via Zenodo, garantindo replicabilidade por outras ICTs e políticas públicas."
+            "text": "Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora (UFSC), assegurando soberania e permanência nacional da infraestrutura."
           }
         ]
       }
@@ -638,22 +623,22 @@
     ],
     "pilotRegions": [
       {
-        "id": "pr1",
-        "municipality": "Crateus, CE",
-        "profile": "Sertao cearense · ~5.200 agricultores familiares · EMATER-CE presente · 3G intermitente · Producao: feijao, milho, caprinocultura",
-        "rationale": "Representatividade do Semiarido nordestino; conectividade tipica do publico-alvo; cooperativa de caprinocultura ativa como parceira ancora com sede fisica e internet para sessoes de uso assistido. Infraestrutura digital dos parceiros: sede da cooperativa ancora dispoe de acesso a internet banda larga, onde sessoes de capacitacao e uso assistido serao realizadas. Implantacao 100% via software — sem obras, instalacoes fisicas ou aquisicao de equipamentos nas propriedades rurais ou sedes dos parceiros."
+        "id": "pr-ce",
+        "municipality": "Crateús-CE / Sertão Cearense",
+        "profile": "Feijão + milho + caprinocultura, ~5.200 agricultores, cobertura 3G intermitente, EMATER-CE parceira",
+        "rationale": "Epicentro da crise de ATER no Nordeste: 1 técnico para cada 600+ famílias no Sertão cearense. Conectividade 3G intermitente valida a arquitetura assíncrona em condições extremas reais. Bioma Caatinga sub-representado em todo corpus NLP existente — garante diversidade linguística regional ao AgroLinguaBR. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
       },
       {
-        "id": "pr2",
-        "municipality": "Sousa, PB",
-        "profile": "Vale do Pianco · ~3.800 agricultores familiares · Polo de ovinocaprinocultura · Acesso intermitente · EMATER-PB presente",
-        "rationale": "Diversidade de cadeia produtiva; presenca de FETRAF regional; experiencia anterior com programas PAA/PNAE. Infraestrutura digital dos parceiros: associacao regional possui sede com conectividade que servira de ponto de referencia para sessoes assistidas. Implantacao 100% via software — sem obras, instalacoes fisicas ou aquisicao de equipamentos em propriedades parceiras."
+        "id": "pr-pb",
+        "municipality": "Sousa-PB / Vale do Piancó",
+        "profile": "Ovinocaprinocultura + horticultura + PAA/PNAE consolidados, ~3.800 agricultores, EMATER-PB parceira",
+        "rationale": "Referência nacional em comercialização institucional da agricultura familiar — 73% dos agricultores já fornecem ao PAA/PNAE. A experiência cooperativa madura reduz a barreira de adoção do Coopera Digital e garante baseline robusto para medir impacto de renda. Paraíba tem o maior índice per capita de cooperativas de AF do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
       },
       {
-        "id": "pr3",
-        "municipality": "Vitoria da Conquista, BA",
-        "profile": "Planalto baiano · ~7.100 agricultores familiares · Cafe, feijao, horticultura · Presenca de EMATER-BA e EBDA · Conectividade moderada",
-        "rationale": "Contraste de perfil com os sertanejos (melhor conectividade, outra cadeia produtiva) — valida robustez da solucao em contextos distintos. Infraestrutura digital dos parceiros: cooperativa ancora regional com sede equipada e conectividade adequada. Implantacao 100% via software — sem obras, instalacoes fisicas ou aquisicao de equipamentos nas propriedades rurais ou sedes dos parceiros."
+        "id": "pr-ba",
+        "municipality": "Vitória da Conquista-BA / Planalto Baiano",
+        "profile": "Café + bovinocultura + fruticultura, ~7.100 agricultores, conectividade 4G moderada, EMATER-BA parceira",
+        "rationale": "Contraste de perfil tecnológico deliberado: conectividade superior permite isolar o efeito da solução sobre produtividade vs. apenas conectividade. Maior pool de agricultores entre os três pilotos — fortalece a amostra da Fase 2 e valida a escalabilidade do AgroAssistente em contextos com infraestrutura acima da média do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
       }
     ],
     "conflictGovernance": {

@@ -92,22 +92,22 @@ export const fixture: MetodologiaSectionProps = {
   ],
   pilotRegions: [
     {
-      id: 'pr-sc',
-      municipality: 'Chapecó-SC / Oeste Catarinense',
-      profile: 'Suinocultura + milho + leite, FETRAF-Sul consolidada, EMATER-SC parceira',
-      rationale: 'Maior densidade de produção integrada da AF brasileira; EMATER-SC já tem 3 técnicos digitais treinados — reduz barreira de adoção e acelera recrutamento de multiplicadores.',
+      id: 'pr-ce',
+      municipality: 'Crateús-CE / Sertão Cearense',
+      profile: 'Feijão + milho + caprinocultura, ~5.200 agricultores, cobertura 3G intermitente, EMATER-CE parceira',
+      rationale: 'Epicentro da crise de ATER no Nordeste: 1 técnico para cada 600+ famílias no Sertão cearense. Conectividade 3G intermitente valida a arquitetura assíncrona em condições extremas reais. Bioma Caatinga sub-representado em todo corpus NLP existente — garante diversidade linguística regional ao AgroLinguaBR.',
+    },
+    {
+      id: 'pr-pb',
+      municipality: 'Sousa-PB / Vale do Piancó',
+      profile: 'Ovinocaprinocultura + horticultura + PAA/PNAE consolidados, ~3.800 agricultores, EMATER-PB parceira',
+      rationale: 'Referência nacional em comercialização institucional da agricultura familiar — 73% dos agricultores já fornecem ao PAA/PNAE. A experiência cooperativa madura reduz a barreira de adoção do Coopera Digital e garante baseline robusto para medir impacto de renda. Paraíba tem o maior índice per capita de cooperativas de AF do Nordeste.',
     },
     {
       id: 'pr-ba',
-      municipality: 'Feira de Santana-BA / Semiárido',
-      profile: 'Caprinos + fruticultura irrigada + convivência com seca, ASA-Brasil presente',
-      rationale: 'Conectividade intermitente real — testa arquitetura assíncrona em condições extremas. Bioma Caatinga pouco representado em corpora de IA; inclui linguagem regional específica ao AgroLinguaBR.',
-    },
-    {
-      id: 'pr-pa',
-      municipality: 'Santarém-PA / Baixo Amazonas',
-      profile: 'Pesca artesanal + mandioca + sistemas agroflorestais, EMATER-PA parceira',
-      rationale: 'Representa a diversidade socioprodutiva da Amazônia; testa multilinguismo regional (comunidades ribeirinhas) e conectividade fluvial. Produção de bioinsumos natural — alinha ao Programa Nacional de Bioinsumos.',
+      municipality: 'Vitória da Conquista-BA / Planalto Baiano',
+      profile: 'Café + bovinocultura + fruticultura, ~7.100 agricultores, conectividade 4G moderada, EMATER-BA parceira',
+      rationale: 'Contraste de perfil tecnológico deliberado: conectividade superior permite isolar o efeito da solução sobre produtividade vs. apenas conectividade. Maior pool de agricultores entre os três pilotos — fortalece a amostra da Fase 2 e valida a escalabilidade do AgroAssistente em contextos com infraestrutura acima da média do Nordeste.',
     },
   ],
 }

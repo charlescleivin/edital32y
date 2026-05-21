@@ -9,10 +9,11 @@
     "score_apos_evolucao_escopo": "~2.7 (estimado pós-Camada 0)",
     "score_apos_sessao_2": "~3.5–3.7 (estimado — W-02 a W-12 implementados, W-01/coord ainda placeholder)",
     "score_apos_sessao_3": "~3.7–3.9 (estimado — W-09/EL-09 e W-13/RE-04 concluídos; proposal.json sincronizado com fixtures)",
+    "score_apos_sessao_4": "~3.7–3.9 (sync-fixtures.js agora cobre s3.generalObjective + s3.axes; OE2 corrigido para 25.000 pares; reescrita narrativa soberania em andamento via agente)",
     "score_potencial_com_todas_correcoes": 4.10,
     "nota_minima_aprovacao": 3.5,
     "auditoria_completa": "data/auditoria_2026-05-20.md",
-    "ultima_atualizacao": "2026-05-21",
+    "ultima_atualizacao": "2026-05-21 (sessão 4)",
     "evolucao_escopo": {
       "descricao": "Roça Conectada evoluiu de 'ecossistema de apps' para 'infraestrutura nacional soberana de IA'. Adicionada Camada 0 (AgroInfra): AgroLinguaBR (corpus), AgroEval (benchmark), AgroAPI (acesso aberto).",
       "fixtures_atualizados": ["HeroSection", "SumarioSection", "ObjetivosSection", "MetodologiaSection", "IndicadoresSection"],
