@@ -75,5 +75,12 @@
     "date": "2026-05-21",
     "label": "feat: W-14 — AI-in-agriculture proof section with ",
     "description": "feat: W-14 — AI-in-agriculture proof section with 9 international sources"
+  },
+  {
+    "id": "v12",
+    "commit": "9b8616f",
+    "date": "2026-05-21",
+    "label": "fix: correct 2 fabricated bibliography entries, 12",
+    "description": "fix: correct 2 fabricated bibliography entries, 12 approximate claims, add b30-b42"
   }
 ]
