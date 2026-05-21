@@ -25,7 +25,7 @@ export default function Reveal({ children, delay = 0, distance = 32 }: RevealPro
           observer.disconnect()
         }
       },
-      { threshold: 0.06, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0, rootMargin: '100px 0px 0px 0px' }
     )
     observer.observe(el)
     return () => observer.disconnect()
