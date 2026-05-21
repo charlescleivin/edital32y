@@ -69,10 +69,27 @@ export interface AiEvidenceSection {
   body: string
 }
 
+export interface AiRaceEntry {
+  flag: string
+  country: string
+  product: string
+  launched: string
+  scale: string
+  status: 'deployed' | 'proposed' | 'planned'
+}
+
+export interface AiRaceChart {
+  title: string
+  subtitle: string
+  entries: AiRaceEntry[]
+  brazilNote: string
+}
+
 export interface S2Data extends SectionMeta {
   stats: Array<{ value: string; label: string; colorVariant: 'green' | 'blue' | 'red' }>
   barriers: Barrier[]
   aiEvidenceSection?: AiEvidenceSection
+  aiRaceChart?: AiRaceChart
   contextNote: string
   openingScenario?: string
   competitiveContext?: string

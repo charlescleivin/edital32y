@@ -57,6 +57,55 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
         </div>
       )}
 
+      {/* impact funnel — corpus → model → users → income */}
+      <div className="mb-8 rounded-2xl border p-6" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+        <div className="mb-5 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+          🔗 Cadeia de Impacto — Como o Investimento Vira Renda Rural
+        </div>
+        <div className="flex items-center gap-2 overflow-x-auto">
+          {[
+            { icon: '📚', value: '25.000',  unit: 'pares Q&A',       label: 'Corpus AgroLinguaBR',          color: 'var(--sage)',  bg: 'rgba(111,168,118,0.1)' },
+            { icon: '🤖', value: '1',        unit: 'modelo soberano', label: 'AgroAssistente fine-tuned',    color: 'var(--gold)',  bg: 'rgba(212,150,14,0.1)'  },
+            { icon: '📱', value: '25.000',  unit: 'famílias rurais', label: 'Acesso via WhatsApp',           color: 'var(--p)',     bg: 'rgba(74,148,86,0.1)'   },
+            { icon: '👨‍👩‍👧', value: '62.500', unit: 'pessoas',         label: 'Impacto indireto (x2,5)',      color: 'var(--terra)', bg: 'rgba(200,85,48,0.1)'   },
+            { icon: '💰', value: '+R$108M', unit: 'renda/ano',       label: 'Impacto econômico estimado',   color: 'var(--terra)', bg: 'rgba(200,85,48,0.07)'  },
+          ].map((stage, i, arr) => (
+            <div key={i} className="flex items-center gap-2 shrink-0">
+              <div className="flex flex-col items-center rounded-2xl border px-5 py-5 text-center"
+                style={{ borderColor: stage.color, background: stage.bg, minWidth: 140 }}>
+                <span className="mb-1 text-[28px] leading-none">{stage.icon}</span>
+                <span className="text-[24px] font-bold leading-tight"
+                  style={{ fontFamily: 'var(--font-playfair)', color: stage.color }}>
+                  {stage.value}
+                </span>
+                <span className="text-[11px] font-semibold" style={{ color: stage.color }}>{stage.unit}</span>
+                <span className="mt-1 text-[10.5px] leading-snug text-center" style={{ color: 'var(--txtl)' }}>
+                  {stage.label}
+                </span>
+              </div>
+              {i < arr.length - 1 && (
+                <span className="shrink-0 text-[20px]" style={{ color: 'var(--txtll)' }}>→</span>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 flex gap-5 border-t pt-4" style={{ borderColor: 'var(--bdr)' }}>
+          <div className="flex-1 rounded-xl border px-4 py-3 text-center"
+            style={{ borderColor: 'rgba(200,85,48,0.3)', background: 'rgba(200,85,48,0.05)' }}>
+            <div className="text-[11px] uppercase tracking-wider font-bold mb-1" style={{ color: 'var(--terra)' }}>Antes</div>
+            <div className="text-[28px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>1:500</div>
+            <div className="text-[11px]" style={{ color: 'var(--txtl)' }}>agente ATER por família rural</div>
+          </div>
+          <div className="flex items-center text-[20px]" style={{ color: 'var(--txtll)' }}>→</div>
+          <div className="flex-1 rounded-xl border px-4 py-3 text-center"
+            style={{ borderColor: 'rgba(111,168,118,0.3)', background: 'rgba(111,168,118,0.05)' }}>
+            <div className="text-[11px] uppercase tracking-wider font-bold mb-1" style={{ color: 'var(--p)' }}>Depois</div>
+            <div className="text-[28px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--p)' }}>1:6</div>
+            <div className="text-[11px]" style={{ color: 'var(--txtl)' }}>ratio efetivo via plataforma</div>
+          </div>
+        </div>
+      </div>
+
       {/* indicators table */}
       <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
         <table className="w-full text-[13px]">

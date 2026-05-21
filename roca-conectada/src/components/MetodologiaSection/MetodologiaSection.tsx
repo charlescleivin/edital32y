@@ -64,6 +64,53 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         })}
       </div>
 
+      {/* phase timeline / gantt */}
+      <div className="mb-10 rounded-2xl border p-6" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+        <div className="mb-4 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+          📅 Cronograma — 36 Meses de Execução
+        </div>
+        {/* month ruler */}
+        <div className="mb-2 flex text-[9px]" style={{ color: 'var(--txtll)' }}>
+          {['M1','','','M4','','','M7','','','M10','','M12','M13','','','M16','','','M19','','','M22','','M24','M25','','','M28','','','M31','','','M34','','M36'].map((m, i) => (
+            <div key={i} className="flex-1 text-center">{m}</div>
+          ))}
+        </div>
+        {/* phase bars */}
+        {phases.map((phase, i) => {
+          const acc = phaseAccent[i] ?? phaseAccent[0]
+          return (
+            <div key={phase.id} className="mb-2 flex items-center gap-3">
+              <div className="w-28 shrink-0 text-right text-[11px] font-semibold" style={{ color: acc.text }}>
+                {phase.label}
+              </div>
+              <div className="flex flex-1 overflow-hidden rounded-full" style={{ height: 22 }}>
+                <div
+                  className="flex items-center justify-end pr-3 text-[10px] font-bold text-white rounded-full"
+                  style={{ width: `${(i + 1) * 33.33}%`, minWidth: '33%', maxWidth: `${(i + 1) * 33.33}%`, background: acc.text, opacity: 0.85, marginLeft: `${i * 33.33}%` }}>
+                  {phase.period}
+                </div>
+              </div>
+            </div>
+          )
+        })}
+        {/* milestones */}
+        <div className="mt-4 grid grid-cols-3 gap-3 border-t pt-4" style={{ borderColor: 'var(--bdr)' }}>
+          {[
+            { month: 'Mês 6',  color: 'var(--p)',    label: 'Corpus v0.1 — 10k pares validados' },
+            { month: 'Mês 12', color: 'var(--p)',    label: 'AgroAssistente v1.0 + AgroEval publicado' },
+            { month: 'Mês 15', color: 'var(--gold)', label: 'Protocolo CONEP aprovado' },
+            { month: 'Mês 18', color: 'var(--gold)', label: 'Piloto lançado + AgroLinguaBR DOI' },
+            { month: 'Mês 30', color: 'var(--terra)', label: 'MoU EMATER/EMBRAPA assinado' },
+            { month: 'Mês 36', color: 'var(--terra)', label: 'Transferência pública — open-source MIT' },
+          ].map((ms, i) => (
+            <div key={i} className="flex items-start gap-2 text-[12px]">
+              <span className="mt-0.5 shrink-0 font-bold text-[10px]" style={{ color: ms.color }}>◆ {ms.month}</span>
+              <span style={{ color: 'var(--txtl)' }}>{ms.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* scope distinction */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
         ⚖️ Distinção de Escopos — Regra Fundamental

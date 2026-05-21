@@ -42,7 +42,13 @@ function renderBlocks(text: string, headingColor = 'var(--txt)') {
   })
 }
 
-export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
+const statusStyle: Record<string, { border: string; bg: string; color: string; label: string }> = {
+  deployed: { border: 'rgba(111,168,118,0.4)', bg: 'rgba(111,168,118,0.1)', color: 'var(--p)', label: 'Implantado' },
+  proposed: { border: 'rgba(212,150,14,0.4)', bg: 'rgba(212,150,14,0.1)', color: 'var(--gold)', label: 'Proposto — este projeto' },
+  planned:  { border: 'rgba(111,168,118,0.25)', bg: 'rgba(111,168,118,0.05)', color: 'var(--sage)', label: 'Planejado' },
+}
+
+export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, aiRaceChart, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
   return (
     <section id="s2" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -193,8 +199,57 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         </div>
       )}
 
+      {/* AI race chart */}
+      {aiRaceChart && (
+        <div className="mt-10 rounded-2xl border p-8"
+          style={{ borderColor: 'rgba(111,168,118,0.25)', background: 'var(--bg-card)' }}>
+          <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--sage)' }}>
+            🌐 Mapa da Corrida Global
+          </div>
+          <h3 className="mb-1 text-[18px] font-bold leading-[1.2]"
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+            {aiRaceChart.title}
+          </h3>
+          <p className="mb-6 text-[13px] italic" style={{ color: 'var(--txtll)' }}>
+            {aiRaceChart.subtitle}
+          </p>
+          <div className="flex flex-col gap-3">
+            {aiRaceChart.entries.map((entry, i) => {
+              const st = statusStyle[entry.status] ?? statusStyle.deployed
+              const isProposed = entry.status === 'proposed'
+              return (
+                <div key={i} className="flex items-center gap-4 rounded-xl border px-5 py-4"
+                  style={{ borderColor: st.border, background: isProposed ? 'rgba(212,150,14,0.07)' : st.bg }}>
+                  <span className="shrink-0 text-[32px] leading-none">{entry.flag}</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{entry.country}</span>
+                      <span className="text-[13px] font-semibold" style={{ color: st.color }}>{entry.product}</span>
+                    </div>
+                    <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtll)' }}>{entry.scale}</div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <div className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider"
+                      style={{ background: st.bg, color: st.color, border: `1px solid ${st.border}` }}>
+                      {st.label}
+                    </div>
+                    <div className="mt-1 text-[11px]" style={{ color: 'var(--txtll)' }}>{entry.launched}</div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+          <div className="mt-5 rounded-xl border-l-[2px] pl-4 py-2"
+            style={{ borderColor: 'rgba(212,150,14,0.5)' }}>
+            <p className="text-[12.5px] italic leading-[1.7]" style={{ color: 'var(--txtl)' }}>
+              💡 {aiRaceChart.brazilNote}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* context note */}
-      <div className="rounded-2xl border-l-[3px] p-7"
+      <div className="mt-5 rounded-2xl border-l-[3px] p-7"
         style={{ borderColor: 'var(--terra)', background: 'var(--bg-card)' }}>
         <div className="mb-5 text-[10px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--terra)' }}>
           🧱 Contexto e Posicionamento Estratégico

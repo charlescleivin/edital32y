@@ -468,7 +468,54 @@
         "text": "Busca sistemática em repositórios públicos (ArXiv, Zenodo, HuggingFace, SciELO) realizada em maio de 2026 não identificou nenhum corpus de treinamento NLP que combine: (a) português regional brasileiro, (b) terminologia de pequeno produtor rural (Caatinga, Cerrado, Semiárido), e (c) volume adequado para fine-tuning eficaz. Corpora gerais em português (BrWaC, Portuguese-PD) não possuem especialização agrícola. A Embrapa está desenvolvendo iniciativa de IA generativa baseada em seu acervo técnico (desde outubro 2024), mas nenhum dataset público foi publicado até maio de 2026. O corpus AgroLinguaBR representa a primeira iniciativa pública verificável neste espaço."
       }
     ],
-    "genderEquity": "O dado mais agudo desta proposta em termos de equidade de gênero é este: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a qualquer assistência técnica (IBGE Censo Agropecuário 2017). O Roça Conectada não trata esse dado como pano de fundo — trata como dimensão central do problema que justifica o projeto. Em termos operacionais: (a) meta mínima de 40% de mulheres entre os multiplicadores capacitados (OE8); (b) prioridade a cooperativas lideradas por mulheres nos três municípios-piloto; (c) equipe de anotação do corpus AgroLinguaBR com participação mínima de 40% de mulheres agricultoras — garantindo que a variação linguística feminina do campo esteja representada no modelo; (d) indicador específico de alcance por gênero em todos os relatórios de avaliação de impacto, reportado à FINEP semestralmente."
+    "genderEquity": "O dado mais agudo desta proposta em termos de equidade de gênero é este: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a qualquer assistência técnica (IBGE Censo Agropecuário 2017). O Roça Conectada não trata esse dado como pano de fundo — trata como dimensão central do problema que justifica o projeto. Em termos operacionais: (a) meta mínima de 40% de mulheres entre os multiplicadores capacitados (OE8); (b) prioridade a cooperativas lideradas por mulheres nos três municípios-piloto; (c) equipe de anotação do corpus AgroLinguaBR com participação mínima de 40% de mulheres agricultoras — garantindo que a variação linguística feminina do campo esteja representada no modelo; (d) indicador específico de alcance por gênero em todos os relatórios de avaliação de impacto, reportado à FINEP semestralmente.",
+    "aiRaceChart": {
+      "title": "A Corrida Global por LLMs Agrícolas Soberanos",
+      "subtitle": "Países que já têm modelo de linguagem agrícola soberano — ou lançaram em 2024–2026",
+      "entries": [
+        {
+          "flag": "🇨🇳",
+          "country": "China",
+          "product": "Sinong (Jan 2026)",
+          "launched": "jan/2026",
+          "scale": "4B+ tokens • 8B e 32B parâmetros • open-source",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇮🇳",
+          "country": "Índia",
+          "product": "Kisan e-Mitra (2024)",
+          "launched": "2024",
+          "scale": "9,5M+ consultas • 11 línguas regionais • voz",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇦🇪",
+          "country": "EAU",
+          "product": "AgriLLM — CGIAR + Gates (Dez 2025)",
+          "launched": "dez/2025",
+          "scale": "120.000 pares Q&A • US$ 200M • 39 países",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇬🇭",
+          "country": "Gana / África Oc.",
+          "product": "Darli AI — Farmerline (Mar 2024)",
+          "launched": "mar/2024",
+          "scale": "110.000 agricultores • 27 línguas • WhatsApp",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇧🇷",
+          "product": "AgroAssistente — Roça Conectada",
+          "country": "Brasil",
+          "launched": "mês 18 (proposto)",
+          "scale": "25.000 pares pt-BR • 3 regiões-piloto • open-source MIT",
+          "status": "proposed"
+        }
+      ],
+      "brazilNote": "O corpus AgroLinguaBR construído neste projeto será o primeiro dataset público de IA agroalimentar em português regional brasileiro com DOI verificável."
+    }
   },
   "s3": {
     "number": "Seção 3",
