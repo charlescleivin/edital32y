@@ -104,11 +104,20 @@ export interface PolicyAlignmentItem {
   body: string
 }
 
+export interface InnovationPolicyRef {
+  document: string
+  resolution: string
+  article: string
+  alignmentText: string
+  annexNote?: string
+}
+
 export interface S3Data extends SectionMeta {
   generalObjective: string
   axes: ObjectiveAxis[]
   theoryOfChange?: TheoryOfChange
   policyAlignment?: PolicyAlignmentItem[]
+  innovationPolicy?: InnovationPolicyRef
 }
 
 export interface Phase {

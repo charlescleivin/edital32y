@@ -8,7 +8,7 @@ export const componentMeta = { slug: 'objetivos-section', label: 'Objetivos' }
 
 export type ObjetivosSectionProps = S3Data
 
-export default function ObjetivosSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, generalObjective, axes, theoryOfChange, policyAlignment }: ObjetivosSectionProps) {
+export default function ObjetivosSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, generalObjective, axes, theoryOfChange, policyAlignment, innovationPolicy }: ObjetivosSectionProps) {
   const [activeAxis, setActiveAxis] = useState(axes[0]?.id ?? '')
 
   return (
@@ -136,6 +136,40 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
                 <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{pol.body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* innovation policy — EL-09 (eliminatório) + CM-01(iv) */}
+      {innovationPolicy && (
+        <div className="mt-10">
+          <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--txtll)' }}>
+            📜 Política de Inovação da ICT Executora — EL-09 (requisito eliminatório)
+          </div>
+          <div className="rounded-2xl border-l-[3px] p-6"
+            style={{ borderColor: 'var(--gold)', background: 'rgba(200,160,80,0.06)' }}>
+            <div className="mb-3 flex flex-wrap items-baseline gap-3">
+              <span className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[1.5px]"
+                style={{ background: 'rgba(200,160,80,0.15)', color: 'var(--gold)' }}>EL-09</span>
+              <span className="text-[13px] font-semibold" style={{ color: 'var(--txt)' }}>
+                {innovationPolicy.document}
+              </span>
+              <span className="text-[11px]" style={{ color: 'var(--txtll)' }}>
+                {innovationPolicy.resolution}
+              </span>
+            </div>
+            <div className="mb-2 text-[10px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--gold)' }}>
+              {innovationPolicy.article}
+            </div>
+            <p className="mb-3 text-[13px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
+              {innovationPolicy.alignmentText}
+            </p>
+            {innovationPolicy.annexNote && (
+              <p className="rounded-xl border px-4 py-2.5 text-[11.5px] italic"
+                style={{ borderColor: 'rgba(200,160,80,0.3)', color: 'var(--txtll)' }}>
+                📎 {innovationPolicy.annexNote}
+              </p>
+            )}
           </div>
         </div>
       )}

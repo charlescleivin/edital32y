@@ -21,6 +21,7 @@ export const fixture: IndicadoresSectionProps = {
     { indicator: 'Downloads / citações do AgroEval (acumulado)', phase1: '—', phase2: '50', phase3: '200' },
     { indicator: 'Redução de custo de insumos por família (grupo AgroAssistente vs. controle)', phase1: '—', phase2: 'baseline', phase3: '−12–18%' },
     { indicator: 'Tempo médio de resolução de dúvida técnica (horas)', phase1: '—', phase2: 'baseline', phase3: '−65%' },
+    { indicator: 'Consultas sobre manejo orgânico/agroecológico (% das interações — RE-04)', phase1: '—', phase2: 'baseline', phase3: '≥ 20%' },
   ],
   impactNarrative: 'Cada um dos 2.500 agricultores familiares ativos no AgroAssistente ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24 horas por dia, sem custo de deslocamento. A literatura de extensão rural digital (FAO, 2022; Embrapa, 2023) indica redução média de 12–18% no custo de insumos quando o agricultor tem acesso a orientação técnica em tempo real sobre dosagem e manejo. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia — financiando o próprio acesso à tecnologia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto.',
 }

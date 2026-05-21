@@ -8,10 +8,11 @@
     "score_auditoria_original": 2.29,
     "score_apos_evolucao_escopo": "~2.7 (estimado pós-Camada 0)",
     "score_apos_sessao_2": "~3.5–3.7 (estimado — W-02 a W-12 implementados, W-01/coord ainda placeholder)",
+    "score_apos_sessao_3": "~3.7–3.9 (estimado — W-09/EL-09 e W-13/RE-04 concluídos; proposal.json sincronizado com fixtures)",
     "score_potencial_com_todas_correcoes": 4.10,
     "nota_minima_aprovacao": 3.5,
     "auditoria_completa": "data/auditoria_2026-05-20.md",
-    "ultima_atualizacao": "2026-05-20",
+    "ultima_atualizacao": "2026-05-21",
     "evolucao_escopo": {
       "descricao": "Roça Conectada evoluiu de 'ecossistema de apps' para 'infraestrutura nacional soberana de IA'. Adicionada Camada 0 (AgroInfra): AgroLinguaBR (corpus), AgroEval (benchmark), AgroAPI (acesso aberto).",
       "fixtures_atualizados": ["HeroSection", "SumarioSection", "ObjetivosSection", "MetodologiaSection", "IndicadoresSection"],
@@ -185,7 +186,7 @@
         ],
         "onde_inserir": "src/components/ObjetivosSection/ObjetivosSection.fixture.ts ou SumarioSection — adicionar campo 'politicaInovacao' com referência ao documento",
         "como_fazer": "Adicionar parágrafo: 'Este projeto está alinhado à Política de Inovação da UFSC (Resolução Normativa nº X/XXXX), especificamente o Art. Y que prevê [citar trecho relevante]. O documento completo está incluído nos Anexos Gerais da proposta.'",
-        "status": "PENDENTE"
+        "status": "CONCLUIDO — innovationPolicy adicionado a ObjetivosSection.fixture.ts e proposal.json; referencia RN nº 26/CUn/2016 + RN nº 43/CUn/2018, Art. 3º inc I/III/V; novo bloco EL-09 renderizado na UI"
       },
 
       {
@@ -250,7 +251,7 @@
         ],
         "onde_inserir": "src/components/IndicadoresSection/IndicadoresSection.fixture.ts ou MetodologiaSection",
         "como_fazer": "Adicionar 1 KPI: 'X% das consultas ao AgroAssistente na Fase 2 relacionadas a manejo orgânico/agroecológico — meta: ≥ 20% das interações'. Ou adicionar como atividade da Fase 1: 'Curadoria de corpus especializado em sistemas orgânicos certificados (base: cadernos IFOAM + publicações EMBRAPA Agroecologia).'",
-        "status": "PENDENTE"
+        "status": "CONCLUIDO — KPI 'Consultas sobre manejo orgânico/agroecológico (% das interações — RE-04)' adicionado a IndicadoresSection.fixture.ts e proposal.json; meta Fase 3 ≥ 20%"
       }
 
     ]

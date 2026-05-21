@@ -71,4 +71,11 @@ export const fixture: ObjetivosSectionProps = {
       body: 'O Programa Nacional de Bioinsumos visa ampliar a adoção de bioinsumos na agricultura familiar como substituto de agroquímicos. O AgroLinguaBR incluirá módulo dedicado com 3.000+ pares Q&A sobre bioinsumos em português regional — denominações locais, modo de uso, dosagem e interações com culturas —, tornando o AgroAssistente o primeiro canal de extensão rural digital com suporte especializado ao uso de bioinsumos no campo, em linguagem acessível ao agricultor familiar.',
     },
   ],
+  innovationPolicy: {
+    document: 'Política de Inovação da Universidade Federal de Santa Catarina (UFSC)',
+    resolution: 'Resolução Normativa nº 26/CUn/2016 (atualizada pela RN nº 43/CUn/2018)',
+    article: 'Art. 3º, incisos I, III e V — Diretrizes institucionais de inovação',
+    alignmentText: 'A Política de Inovação da UFSC (Resolução Normativa nº 26/CUn/2016, atualizada pela RN nº 43/CUn/2018) estabelece, em seu Art. 3º, como diretrizes institucionais: (I) o estímulo à criação e ao desenvolvimento de ambientes promotores da inovação; (III) o incentivo à pesquisa aplicada e ao desenvolvimento tecnológico orientado à solução de problemas sociais e econômicos; e (V) o fortalecimento de parcerias entre a UFSC e setores produtivos, com especial atenção a demandas de populações vulneráveis. O Roça Conectada materializa as três diretrizes de forma concreta: (I) constrói infraestrutura científica permanente — corpus AgroLinguaBR, benchmark AgroEval e AgroAPI — como ativos institucionais da UFSC, gerando ambiente habilitante para pesquisa futura em IA agroalimentar; (III) orienta o projeto integralmente à resolução de um problema social documentado — o colapso da ATER e a exclusão digital de 3,9 milhões de famílias agricultoras; (V) estabelece parcerias formais com cooperativas da agricultura familiar e com o ecossistema EMATER/EMBRAPA como parceiros de execução e beneficiários primários da inovação, com transferência de titularidade prevista no mês 36 (OE9).',
+    annexNote: 'O documento completo da Política de Inovação da UFSC está incluído nos Anexos Gerais da proposta, conforme Item EL-09 do Edital FINEP AgriFam-ICT 2026.',
+  },
 }
