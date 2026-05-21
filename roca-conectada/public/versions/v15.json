@@ -1,0 +1,2389 @@
+{
+  "meta": {
+    "projectName": "Roça Conectada",
+    "call": "CHAMADA PÚBLICA MCTI/FINEP/FNDCT — AgriFam-ICT 2026",
+    "lineTheme": "Linha Temática 3 — Soluções digitais para a pequena propriedade rural",
+    "deadline": "2026-06-26T17:00:00-03:00",
+    "totalValue": "R$ 7.000.000,00",
+    "duration": "36 meses",
+    "generatedAt": "2026-05-20T01:33:55.310Z",
+    "company": "THATPIX DESENVOLVIMENTO DE SOFTWARES LTDA",
+    "cnpj": "49.827.360/0001-50"
+  },
+  "sidebar": {
+    "sections": [
+      {
+        "id": "s0",
+        "label": "Visão Geral",
+        "num": "0"
+      },
+      {
+        "id": "s1",
+        "label": "Sumário Executivo",
+        "num": "1"
+      },
+      {
+        "id": "s2",
+        "label": "Problema e Justificativa",
+        "num": "2"
+      },
+      {
+        "id": "s3",
+        "label": "Objetivos",
+        "num": "3"
+      },
+      {
+        "id": "s4",
+        "label": "Metodologia",
+        "num": "4"
+      },
+      {
+        "id": "s5",
+        "label": "Equipe",
+        "num": "5",
+        "children": [
+          { "id": "s5-charles", "label": "Charles Cleivin", "avatar": "🤖" },
+          { "id": "s5-marco", "label": "Marco Rogério", "avatar": "👨‍🔬" },
+          { "id": "s5-fernanda", "label": "Fernanda", "avatar": "👩‍🌾" }
+        ]
+      },
+      {
+        "id": "s6",
+        "label": "Orçamento",
+        "num": "6"
+      },
+      {
+        "id": "s7",
+        "label": "Parcerias",
+        "num": "7"
+      },
+      {
+        "id": "s8",
+        "label": "Indicadores",
+        "num": "8"
+      },
+      {
+        "id": "s9",
+        "label": "Riscos",
+        "num": "9"
+      },
+      {
+        "id": "s10",
+        "label": "Checklist",
+        "num": "10"
+      },
+      {
+        "id": "s11",
+        "label": "Referências",
+        "num": "11"
+      }
+    ]
+  },
+  "hero": {
+    "eyebrow": "MCTI / FINEP / FNDCT — Linha Temática 3",
+    "title": "Roça Conectada",
+    "subtitle": "Ecossistema de Inteligência Artificial Conversacional e Gestão Digital Cooperativa para a Digitalização da Agricultura Familiar Brasileira.",
+    "stats": [
+      {
+        "value": "R$ 7M",
+        "label": "Valor Solicitado"
+      },
+      {
+        "value": "36 meses",
+        "label": "Prazo de Execução"
+      },
+      {
+        "value": "Linha 3",
+        "label": "Soluções Digitais Rural"
+      },
+      {
+        "value": "Cenário 4",
+        "label": "ICT + PJ Especializado"
+      }
+    ],
+    "layers": [
+      {
+        "id": "a",
+        "badge": "Camada A",
+        "title": "AgroAssistente IA",
+        "description": "LLM em português, via WhatsApp, arquitetura assíncrona tolerante a conectividade intermitente. Extensão rural digital 24h."
+      },
+      {
+        "id": "c",
+        "badge": "Camada C",
+        "title": "Coopera Digital",
+        "description": "Plataforma de gestão para cooperativas e associações da agricultura familiar."
+      }
+    ]
+  },
+  "s1": {
+    "number": "Seção 1",
+    "title": "Sumário Executivo",
+    "subtitle": "Visão geral do projeto, público-alvo e impacto esperado",
+    "heroImage": "/hero1.png",
+    "heroObjectPosition": "center",
+    "headline": "O Brasil está construindo sua soberania de IA. Mas os agricultores familiares ficaram de fora.",
+    "stats": [
+      {
+        "icon": "🌾",
+        "value": "3,9M",
+        "label": "famílias agricultoras completamente fora do perímetro de soberania digital que o Brasil está construindo agora (IBGE 2017)"
+      },
+      {
+        "icon": "📉",
+        "value": "R$18,8bi",
+        "label": "em renda rural não realizada por ano: o custo documentado de 3,2M famílias sem ATER (RESR 2020, método PSM)"
+      },
+      {
+        "icon": "⚠️",
+        "value": "81,8%",
+        "label": "dos agricultores familiares sem acesso a ATER — no Nordeste, essa ausência chega a 92,6% (IBGE Censo Agropecuário 2017)"
+      }
+    ],
+    "summary": "Em maio de 2026 — o mesmo mês desta chamada pública — o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem do país sob controle estrangeiro. O governo lançou o SoberanIA com R$ 40 milhões para construir um LLM nacional de 30 bilhões de parâmetros para o setor público. O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações para soberania tecnológica nacional. A arquitetura está sendo construída. Mas há um vácuo que nenhum desses instrumentos preenche: os 3,9 milhões de estabelecimentos de agricultura familiar — responsáveis por 70% dos alimentos que o Brasil come — estão completamente fora do perímetro de soberania que está sendo erguido agora. O Roça Conectada é o componente que preenche esse vácuo. Não é um aplicativo. É a infraestrutura soberana de IA agrícola que o Brasil ainda não tem: o AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, o corpus especializado mais abrangente já produzido para esse domínio no Brasil —, um LLM fine-tuned sobre esse corpus, e a AgroAPI como camada de integração para políticas públicas. Os três ativos são titulados na UFSC ao mês 36, licenciados sob MIT/Apache 2.0, publicados com DOI. Infraestrutura nacional permanente, sem dependência de fornecedor estrangeiro. A pesquisa científica é conduzida pela UFSC; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50). Ao final de 36 meses, existirá o que hoje não existe: uma fundação soberana de IA para a agricultura familiar brasileira — o ativo que qualquer EMATER estadual, pesquisador ou política pública pode usar como ponto de partida, sem recomeçar do zero e sem pedir permissão a nenhuma plataforma estrangeira.",
+    "editalResults": [
+      "Digitalização das cadeias socioprodutivas",
+      "Aumento da independência e qualidade de vida",
+      "Eficiência em sistemas orgânicos/agroecológicos",
+      "Fortalecimento de cooperativas e associações",
+      "Aproveitamento das vocações territoriais"
+    ],
+    "institutionalStructure": [
+      {
+        "badge": "Proponente",
+        "badgeVariant": "primary",
+        "label": "FAPEU ou FEESC"
+      },
+      {
+        "badge": "Executora",
+        "badgeVariant": "primary",
+        "label": "UFSC / [NOME DO LAB]"
+      },
+      {
+        "badge": "Co-pesquisador",
+        "badgeVariant": "blue",
+        "label": "Charles Cleivin (sem bolsa)"
+      },
+      {
+        "badge": "Empresa PJ",
+        "badgeVariant": "amber",
+        "label": "THATPIX LTDA — Serviços de Engenharia de Software (item 6.2.2.1)"
+      }
+    ],
+    "problemStatement": "Em fevereiro de 2026, o presidente Lula declarou na Cúpula de IA em Nova Délhi: \"Quando poucos controlam os algoritmos e as infraestruturas digitais, não estamos falando de inovação, mas de dominação.\" O MCTI confirmou o diagnóstico em maio de 2026: 88% da infraestrutura de nuvem do Brasil está sob controle estrangeiro — e o governo chamou essa condição, explicitamente, de \"colônia digital\". O PBIA 2024–2028 destinou R$ 23 bilhões para construir soberania tecnológica. O SoberanIA lançou R$ 40 milhões para um LLM nacional voltado ao setor público. O perímetro de soberania está sendo traçado — e os 3,9 milhões de estabelecimentos de agricultura familiar não estão dentro dele. Esta não é uma lacuna menor. A agricultura familiar produz 70% dos alimentos consumidos no Brasil, mas 81,8% dessas famílias não têm acesso a qualquer assistência técnica (IBGE 2017). No Nordeste, 92,6% estão descobertos. Um estudo econométrico publicado na RESR (2020) com metodologia PSM quantificou a consequência: famílias com ATER ganham R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural que não existe porque a orientação técnica não chega. O Roça Conectada existe para fechar essa lacuna — com infraestrutura soberana, em conformidade com a LGPD, com aderência ao PBIA, e com titularidade permanentemente brasileira.",
+    "whyNow": [
+      {
+        "icon": "🏛️",
+        "title": "O PBIA está alocando R$ 23 bilhões agora — e a agricultura familiar não está na sala",
+        "body": "O Plano Brasileiro de Inteligência Artificial 2024–2028 tem 54 ações concretas e R$ 23 bilhões comprometidos. O SoberanIA lançou R$ 40 milhões em maio de 2026 para um LLM nacional para o setor público. Essas decisões estão sendo tomadas agora — e nenhuma delas inclui os 3,9 milhões de estabelecimentos de agricultura familiar. O Roça Conectada é a proposta que coloca a agricultura familiar dentro do perímetro de soberania digital que o Brasil está construindo neste momento. Uma decisão tomada sem essa infraestrutura será uma decisão tomada sem ela para sempre."
+      },
+      {
+        "icon": "⚖️",
+        "title": "A Resolução ANPD 19/2024 tornou o status quo ilegalmente insustentável",
+        "body": "Desde agosto de 2025, a Resolução ANPD 19/2024 exige conformidade com a LGPD em todas as transferências internacionais de dados. Qualquer sistema de ATER digital que roteie consultas de agricultores por APIs estrangeiras — OpenAI, Google, Anthropic — está em não-conformidade ativa com a lei brasileira de proteção de dados. O Roça Conectada não é apenas a solução mais adequada: para qualquer política pública que leve a LGPD a sério, é a única opção juridicamente defensável."
+      },
+      {
+        "icon": "🌐",
+        "title": "O histórico das plataformas estrangeiras documenta o risco com precisão cirúrgica",
+        "body": "Em 30 de março de 2023, o ChatGPT foi bloqueado na Itália em menos de 24 horas por ordem regulatória — 60 milhões de pessoas sem acesso, sem aviso. Em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer \"aviso amplo\". Em dezembro de 2025, a GROQ foi adquirida pela Nvidia sem consulta a seus 2 milhões de desenvolvedores. O Brasil é o segundo maior mercado mundial de desenvolvedores ativos na API da OpenAI — com 143% de crescimento anual. Nenhum outro país do Sul Global está mais exposto a um ponto único de falha que não controla."
+      },
+      {
+        "icon": "📋",
+        "title": "O III PLANSAN 2025–2027 está medindo indicadores de inclusão digital rural agora",
+        "body": "O Plano Nacional de Segurança Alimentar e Nutricional 2025–2027 incorpora inclusão digital rural como dimensão de segurança alimentar e está coletando dados de linha de base neste exato momento. O Roça Conectada, com piloto documentado em três municípios do Nordeste e metodologia de avaliação de impacto com grupo controle, pode alimentar esses indicadores com evidência empírica. Propostas que chegam ao PLANSAN como referência técnica têm continuidade institucional. Propostas que chegam depois encontram o perímetro fechado."
+      }
+    ]
+  },
+  "s2": {
+    "number": "Seção 2",
+    "title": "Problema e Justificativa",
+    "heroImage": "/hero2.png",
+    "subtitle": "Cinco falhas estruturais que o mercado não resolve, que a política ainda não endereçou, e que este projeto foi construído para eliminar",
+    "headline": "Não é falta de tecnologia. É falta de soberania.",
+    "stats": [
+      {
+        "value": "81,8%",
+        "label": "dos agricultores familiares sem ATER — no Nordeste, 92,6% (IBGE Censo Agropecuário 2017)",
+        "colorVariant": "red"
+      },
+      {
+        "value": "R$18,8bi",
+        "label": "por ano em renda rural não realizada — custo documentado da ausência de ATER (RESR 2020, PSM)",
+        "colorVariant": "red"
+      },
+      {
+        "value": "88%",
+        "label": "da infraestrutura de nuvem do Brasil sob controle estrangeiro (MCTI, maio 2026)",
+        "colorVariant": "blue"
+      },
+      {
+        "value": "2º",
+        "label": "maior mercado de desenvolvedores ativos na API da OpenAI — o Brasil é o país do Sul Global mais exposto a plataformas que não controla (OpenAI, 2024)",
+        "colorVariant": "blue"
+      }
+    ],
+    "barriers": [
+      {
+        "icon": "📉",
+        "title": "Barreira 1 — O Colapso Estrutural da ATER: R$ 18,8 bilhões por ano em renda que não existe",
+        "keyFact": {
+          "value": "7,4%",
+          "label": "cobertura de ATER no Nordeste — um agricultor do Sertão tem 6× menos chance de receber orientação técnica que um agricultor do Sul (IBGE Censo Agropecuário 2017)"
+        },
+        "description": "O IBGE Censo Agropecuário 2017 documenta que apenas 18,2% dos estabelecimentos familiares brasileiros tiveram acesso a assistência técnica. No Nordeste, essa taxa cai para 7,4% — contra 48,6% no Sul. O orçamento da ANATER foi reduzido a R$ 10 milhões durante o governo anterior (frente aos R$ 400 milhões+ necessários para operação plena); décadas de destruição institucional não se revertem por contratação marginal. A consequência econômica foi quantificada por Souza et al. (RESR 2020) com Propensity Score Matching sobre dados da PNAD: famílias com ATER auferem R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural não realizada — não por falta de trabalho, mas por falta de orientação técnica. O colapso tem consequências em cascata: o PAA, programa de compras governamentais para a agricultura familiar, operava com 184.000 fornecedores em 2012 e colapsou para 39.000 em 2019 — queda de 79% — em grande parte porque a documentação exigida para participar requer a mesma assistência técnica que escasseia. O Roça Conectada é a resposta de escala: o AgroAssistente opera via WhatsApp — o canal com a maior adoção documentada entre a população-alvo (96,7% de domicílios rurais com celular, IBGE PNAD 2023) e a arquitetura mais compatível com conectividade intermitente —, multiplicando o alcance efetivo da ATER sem depender de contratação de pessoal. Esta não é uma tecnologia procurando um problema. É um problema que esperou cinquenta anos pela tecnologia certa."
+      },
+      {
+        "icon": "🏗️",
+        "title": "Barreira 2 — A Dependência de Plataformas Estrangeiras Descartáveis: ruptura documentada, repetida, previsível",
+        "keyFact": {
+          "value": "14 dias",
+          "label": "de aviso da OpenAI para descontinuar o GPT-4o em janeiro de 2026, após prometer 'aviso amplo' — ilustrando o padrão de ruptura unilateral (The Register, 2026)"
+        },
+        "description": "A solução tecnicamente óbvia para o déficit de ATER seria redirecionar agricultores para LLMs comerciais. O histórico recente documenta por que essa abordagem constitui uma vulnerabilidade estratégica, não uma solução. Em 30 de março de 2023, a autoridade italiana de proteção de dados bloqueou o ChatGPT em menos de 24 horas: 60 milhões de pessoas perderam acesso sem aviso, e toda empresa construída sobre a API ficou inoperante — multa de €15M confirmando a violação (TechCrunch, The Hacker News). Em novembro de 2023, a diretoria da OpenAI demitiu o CEO sem aviso; por cinco dias, US$ 13 bilhões em investimento da Microsoft e toda aplicação GPT-4 no mundo rodaram sobre uma empresa em colapso de governança — a Microsoft soube menos de uma hora antes do público (Wikipedia, Axios). Em 4 de janeiro de 2024, a OpenAI descontinuou 33 modelos simultaneamente, incluindo o GPT-3 text-davinci-003, sem caminho de migração para modelos fine-tuned proprietários (OpenAI Deprecations). Em 9 de julho de 2024, a OpenAI bloqueou o acesso de países como China, Rússia e Irã sem consulta prévia — os critérios são discricionários e unilaterais (Caixin Global, The Register). O Brasil está atualmente na lista de países suportados. Isso pode mudar. Em 24 de dezembro de 2025, a GROQ — provedora de inferência com 2 milhões de desenvolvedores — foi adquirida pela Nvidia sem consulta (CNBC). E em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer \"aviso amplo\" (The Register, VentureBeat). O Brasil é o segundo maior mercado de desenvolvedores ativos na API da OpenAI, com crescimento de 143% ano a ano — o país do Sul Global mais exposto a um ponto único de falha que não controla (OpenAI, 2024). A questão não é se isso acontecerá com alguma plataforma que suporta a extensão rural de 3,9 milhões de famílias. É quando — e se o Brasil terá infraestrutura própria quando acontecer."
+      },
+      {
+        "icon": "🧠",
+        "title": "Barreira 3 — A Barreira da Linguagem e do Território: 28% de erro é uma colheita destruída",
+        "keyFact": {
+          "value": "<60%",
+          "label": "acurácia de LLMs genéricos em benchmarks agrícolas especializados (AgriEval 2025) — com degradação adicional em idiomas de baixo recurso como o português regional"
+        },
+        "description": "Estudo publicado no arXiv em 2024 avaliou o desempenho do GPT-4 em tarefas especializadas de manejo de pragas agrícolas: 72% de precisão. Em medicina, uma taxa de acerto de 72% pode ser aceitável em triagem. Na agricultura familiar, 28% de erro significa a diferença entre recomendação correta de período de carência de defensivo e um lote reprovado pela vigilância sanitária; entre dosagem adequada de um insumo e a destruição de uma lavoura. O problema, contudo, não é apenas estatístico — é linguístico e territorial. Um agricultor do Nordeste chama a ferrugem asiática da soja de \"ferrugem\", o gorgulho do milho de \"caruncho\", os pulgões de \"piolho da planta\". Modelos treinados em português formal ou em inglês não mapeiam sistematicamente essas denominações para diagnósticos agronômicos corretos. Quando tentam, alucinam com terminologia de contextos americanos ou europeus aplicada a condições do Cerrado ou da Caatinga. Nenhum corpus público existente em língua portuguesa combina os três atributos que definem adequação para este caso: especificidade agronômica de nível técnico, cobertura de variação regional e terminológica do campo brasileiro, e volume suficiente para fine-tuning eficaz de LLM. O AgroLinguaBR — 25.000 pares técnicos curados de fontes EMBRAPA, MAPA e extensionistas de campo — é construído para preencher exatamente esse vácuo. A validação científica segue o protocolo AgroEval: precisão factual verificada contra base técnica EMBRAPA, taxa de alucinação detectada, relevância contextual por bioma. Além da falha de conteúdo, há falha de canal: a grande maioria dos usuários rurais acessa a internet exclusivamente pelo celular, com planos pré-pagos que restringem tráfego de dados (CGI.br, TIC Domicílios 2023). O WhatsApp é o canal com a maior adoção documentada nesse público — e a arquitetura mais compatível com conectividade intermitente — não por conveniência, mas por evidência."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Barreira 4 — O CLOUD Act e a LGPD: toda consulta agrícola via API estrangeira é uma violação ativa da lei",
+        "keyFact": {
+          "value": "Ago/2025",
+          "label": "desde quando a Resolução ANPD 19/2024 tornou ilegais transferências internacionais de dados sem mecanismos de conformidade com a LGPD"
+        },
+        "description": "A Lei 13.709/2018 (LGPD) é citada na base legal desta chamada (item 17.1). Desde agosto de 2025, a Resolução ANPD 19/2024 exige que transferências internacionais de dados pessoais demonstrem mecanismos específicos de conformidade com a LGPD. Quando um agricultor envia pelo WhatsApp uma consulta sobre sua lavoura — incluindo dados sobre sua produção, localização e insumos — e essa consulta é processada por uma API estrangeira hospedada nos Estados Unidos, os dados ficam sujeitos ao CLOUD Act norte-americano: autoridades americanas podem solicitar acesso sem notificar o titular ou o governo brasileiro. A OpenAI opera nos EUA. A Google Cloud tem nós primários nos EUA. Nenhuma dessas empresas está obrigada a observar a LGPD em suas operações de processamento. Isso significa que qualquer sistema de ATER digital baseado em API estrangeira está, desde agosto de 2025, em não-conformidade ativa com a legislação que esta própria chamada cita como fundamento legal. O Roça Conectada resolve isso pela arquitetura: o LLM roda em infraestrutura pública nacional (Nuvem de Governo — Serpro ou Dataprev), os dados não saem do Brasil, e a operação é auditável por autoridades brasileiras. Essa conformidade LGPD não é vantagem competitiva — é requisito legal que o projeto já atende e que qualquer concorrente baseado em API estrangeira não pode atender sem reescrever sua arquitetura inteira. O argumento de inclusão produtiva digital e o argumento de conformidade jurídica convergem para a mesma conclusão: infraestrutura soberana não é opção — é obrigação."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Barreira 5 — O Vácuo da Soberania Alimentar Digital: 3,9M famílias fora do perímetro que o Brasil está construindo agora",
+        "keyFact": {
+          "value": "0 de 54",
+          "label": "ações do PBIA 2024–2028 endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar — o perímetro de soberania digital nacional não inclui quem produz 70% dos alimentos do Brasil"
+        },
+        "description": "O Brasil não classifica a agricultura como infraestrutura crítica nacional em seu PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE, que classificam a produção de alimentos como setor crítico e exigem proteção proporcional de sua infraestrutura digital. Pesquisadores de segurança nacional identificam essa ausência como vulnerabilidade estrutural documentada. O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA (lançado em maio de 2026, mesmo mês desta chamada) destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros para o setor público: cidades, burocracia, serviços governamentais. A aderência ao PBIA é um critério explícito de mérito desta chamada — e o Roça Conectada é a proposta que preenche o vácuo que o PBIA ainda não endereçou. Todo o movimento de soberania digital nacional está acontecendo. E os 3,9 milhões de estabelecimentos de agricultura familiar — que produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro sendo erguido. Entre as populações excluídas, a situação das mulheres é a mais grave: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a ATER (IBGE 2017). O Roça Conectada entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à UFSC com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe."
+      }
+    ],
+    "aiEvidenceSection": {
+      "title": "A IA Já Provou no Campo — a Corrida Global Começou Sem o Brasil",
+      "body": "A pergunta que qualquer avaliador rigoroso deve fazer antes de aprovar este projeto não é se o problema de ATER existe — os dados do IBGE, RESR e ANATER já responderam isso com precisão. A pergunta correta é: **a IA resolve?** Não como apostа — mas como hipótese verificada com dados publicados.\n\nA resposta é sim. Com condicionantes que este projeto antecipou.\n\n**O que o campo internacional já documentou**\n\nEm Khammam, estado de Telangana (Índia), o piloto Saagu Baagu — implementado pela Digital Green com suporte da Fundação Gates e do Fórum Econômico Mundial — acompanhou 7.000 agricultores familiares de pimenta ao longo de 18 meses e três ciclos de safra. Os resultados publicados em 2024: aumento de 21% na produtividade, redução de 9% no uso de defensivos, queda de 5% no consumo de fertilizantes e incremento líquido de US$ 800 por hectare por ciclo. O canal de acesso foi chatbot via celular; o modelo operou com dados agronômicos locais, histórico de solo e preços de mercado [b21].\n\nNo Gana e em países vizinhos, a Farmerline lançou em março de 2024 a Darli AI — assistente agrícola por WhatsApp em 27 línguas africanas e asiáticas. Em menos de oito meses, 110.000 agricultores usaram o sistema. Um cooperativa no Quênia salvou mais de 50% de uma safra de milho ao enviar uma foto para diagnóstico de doença; um agricultor ganês reduziu custos de defensivos em 30% com orientação sobre rotação de culturas. A TIME incluiu a Darli na lista das 200 melhores invenções de 2024 [b22].\n\nNa Índia rural, um estudo publicado no PLOS ONE (2021) com 1.100 domicílios documentou que adotantes de extensão digital personalizada tiveram 18% maior produtividade de cultivos e 18–29% maior renda agrícola que grupos equivalentes sem acesso — usando metodologia observacional com controle de variáveis de seleção [b23].\n\nEm 2025, o AIM for Scale entregou previsões de início de monção baseadas em IA para 38 milhões de agricultores em 13 estados indianos via SMS governamental. O sistema previu corretamente a anomalia da monção de 2025 — início antecipado seguido de estagnação de três semanas — com até quatro semanas de antecedência. Entre os agricultores que receberam a previsão, 31–52% ajustaram o plantio ou o preparo do solo com base nela [b24].\n\nO AIEP Initiative (Gates Foundation / GIZ / CLEAR Global), publicado no ArXiv em janeiro de 2026, testou cinco MVPs de assistência técnica por IA em Quênia e Bihar (Índia), com amostra de 800 agricultores. O Net Promoter Score médio foi 60 — superior aos benchmarks globais (46), quenianos (26) e de Bihar (40) para serviços digitais agrícolas. Mulheres relataram NPS mais alto que homens. A arquitetura usada — interface de WhatsApp/IVR com RAG sobre corpus agrícola curado — é a mesma que o Roça Conectada adota [b25].\n\nLimitações documentadas pelos próprios autores: a maioria destes estudos mede satisfação e adoção, não ganhos de rendimento com RCT (ensaio controlado randomizado) em larga escala. O piloto Saagu Baagu é o mais rigoroso em métricas econômicas, mas concentra-se em uma cultura e um distrito. A consistência dos resultados em contextos distintos — Índia, Gana, Quênia, com culturas, idiomas e infraestruturas diferentes — é precisamente o que permite extrapolar a hipótese para o Nordeste brasileiro, onde as condições de baixa cobertura ATER, acesso celular dominante e demanda por orientação agronômica específica são estruturalmente análogas. O Roça Conectada mitigará o risco de alucinação — o principal modo de falha documentado — com o AgroEval: benchmark de verificação factual contra base técnica EMBRAPA, protocolado para detectar erros de dosagem, período de carência e recomendação de insumos antes que cheguem ao campo.\n\n**A corrida das nações: quem treina hoje vence amanhã**\n\nOs dados acima descrevem resultados de campo. O que move as nações agora é o ativo subjacente: o corpus de treinamento.\n\nEm outubro de 2024, a China publicou seu Plano Nacional de Ação para Agricultura Inteligente 2024–2028, com meta de 32% de integração digital na produção agrícola até 2028. Em janeiro de 2026, a Universidade Agrícola de Nanjing lançou o Sinong — primeiro LLM agrícola de código aberto da China, treinado em mais de 4 bilhões de tokens de dados agrícolas especializados: 9.000 livros, 240.000 artigos acadêmicos, 20.000 documentos de política. Disponível em versões 8B e 32B parâmetros. Língua: exclusivamente mandarim [b26].\n\nEm dezembro de 2025, em Abu Dhabi, os Emirados Árabes Unidos lançaram o AgriLLM — parceria CGIAR, AI71 e Fundação Gates, baseado em 150.000 documentos agrícolas, 50.000 artigos científicos e 120.000 pares reais de perguntas e respostas de agricultores. A EMBRAPA é parceira científica. Design multilíngue. Porém: nenhum corpus publicado confirma cobertura de português regional brasileiro, terminologia de pequeno produtor do semiárido, ou especificidade dos biomas Caatinga e Cerrado [b27].\n\nA Índia tem o Kisan e-Mitra — 11 línguas regionais, 20.000 consultas diárias, mais de 9,5 milhões de perguntas respondidas até dezembro de 2025 — construído sobre o Digital Agriculture Mission com orçamento de ₹2.817 crore (aproximadamente R$ 1,7 bilhão) [b28].\n\nA Fundação Gates anunciou em novembro de 2025, na COP30 em Belém, investimento de US$ 1,4 bilhão para o período 2026–2029 em inovação agrícola para o Sul Global — com foco explícito em serviços digitais de extensão e previsão por IA para agricultores familiares na África subsaariana e sul da Ásia. Meta declarada: 100 milhões de agricultores via AIM for Scale até 2030 [b29].\n\nA pergunta que resulta desta paisagem não é se o mundo está construindo IA agrícola soberana. Está. A pergunta é: em que língua, sobre que dados, para que realidade agroecológica?\n\n**O vácuo que não será preenchido por acidente**\n\nNão existe, hoje, nenhum corpus de treinamento público que combine: (a) português regional brasileiro, (b) terminologia do pequeno produtor — \"caruncho\" por gorgulho, \"piolho da planta\" por pulgão, \"ferrugem\" sem a especificação botânica que o extensionista reconhece de imediato —, (c) especificidade dos biomas Caatinga, Cerrado e Semiárido, e (d) volume e curadoria suficientes para fine-tuning eficaz. A lacuna foi confirmada por busca sistemática em repositórios públicos (ArXiv, Zenodo, Hugging Face, SciELO) em maio de 2026.\n\nEsta ausência não é acidente. É o resultado previsível de um campo que, globalmente, prioriza os contextos com maior capacidade de publicação, financiamento e infraestrutura de dados. A agricultura familiar do Nordeste brasileiro não tem nenhum desses atributos em quantidade suficiente para que o mercado resolva o problema espontaneamente.\n\nO corpus AgroLinguaBR — 25.000 pares técnicos curados, com DOI público, licença MIT/Apache 2.0 — não é apenas um insumo para o AgroAssistente. É o ativo estratégico que passa a existir no domínio público ao mês 18 do projeto. Todo modelo treinado sobre ele — pelo Roça Conectada, por qualquer ICT brasileira, pela EMBRAPA, por grupos de pesquisa do CGIAR — parte de uma base que hoje não existe.\n\nO modelo treinado em 2026 sobre dados reais do campo brasileiro — condições climáticas, surtos de pragas, preços de mercado, variações regionais de manejo — carrega uma vantagem que o modelo treinado em 2028 não pode recuperar: os dados de 2025–2026 não existirão mais como dado novo. Toda instituição que treinar depois usa dados defasados sobre um contexto que mudou. A corrida pelo corpus não tem segunda chance.\n\nA aderência ao PBIA e o imperativo de soberania tecnológica convergem aqui para uma conclusão concreta: construir agora não é urgência retórica. É a diferença entre entrar na corrida e observar do lado de fora enquanto outros países treinam modelos sobre dados que deveriam ser brasileiros. A segurança alimentar de 215 milhões de pessoas, a inclusão produtiva digital de 3,9 milhões de famílias e a conformidade LGPD de toda infraestrutura de ATER digital dependem de uma decisão tomada antes que a janela se feche."
+    },
+    "contextNote": "**O diagnóstico é do próprio governo — a resposta ainda não chegou ao campo:** Em maio de 2026, o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem nacional sob controle estrangeiro. Em fevereiro de 2026, o presidente Lula na Cúpula de Nova Délhi: \"Quando poucos controlam os algoritmos e as infraestruturas digitais, não estamos falando de inovação, mas de dominação.\" O governo não está apenas descrevendo o problema: está construindo a resposta — R$ 23 bilhões no PBIA, R$ 40 milhões no SoberanIA, a Nova Indústria Brasil com IA soberana como prioridade. A questão que este projeto responde é precisa: nenhum desses instrumentos inclui o campo. O Roça Conectada é a proposta que insere a agricultura familiar dentro do perímetro de soberania tecnológica que o Brasil está construindo agora — não como extensão tardia, mas como componente específico de uma arquitetura que o próprio governo identificou como necessária e ainda não construiu para este público.\n\n**A analogia correta não é \"aplicativo agrícola\" — é PIX:** Em 2020, o Brasil lançou o PIX e tornou-se referência mundial em pagamentos instantâneos. Não porque as fintechs brasileiras superavam as americanas — mas porque o Banco Central construiu a infraestrutura soberana e interoperável antes que o mercado fosse capturado. O resultado: a competição subiu de nível. Empresas passaram a competir em serviços, não em liquidação. O Brasil não escolheu entre Visa e Mastercard — construiu a fundação pública, aberta, acessível a qualquer participante. O Roça Conectada propõe o equivalente para a inteligência artificial agrícola: não um aplicativo — uma plataforma soberana de IA, com corpus público, modelo titulado em ICT federal e API aberta. O AgroAssistente via WhatsApp é a primeira aplicação desta infraestrutura — a mais imediata, a que usa o canal onde o agricultor já está. Mas a fundação é maior do que qualquer canal de entrega.\n\n**Quatro resultados esperados da chamada, uma fundação técnica:** (a) fomento à digitalização das cadeias socioprodutivas — via AgroAssistente e Coopera Digital; (b) fortalecimento de cooperativas de produção — via Coopera Digital e habilitação de acesso a PAA/PNAE; (c) criação de novos conhecimentos — via corpus AgroLinguaBR com DOI e framework AgroEval; (d) aumento de parcerias entre academia, setor público, sociedade civil e setor privado — via estrutura UFSC + EMBRAPA + EMATER + cooperativas + THATPIX. Um projeto que endereça um resultado esperado justifica o investimento; um que endereça quatro o multiplica.\n\n**Foco Nordeste — onde a ausência causa mais dano:** Os três municípios-piloto — Crateús (CE), Sousa (PB) e Vitória da Conquista (BA) — são todos no Nordeste: a região com 92,6% das famílias sem ATER, a menor cobertura de extensão digital e o maior número de famílias em vulnerabilidade produtiva. O foco Nordeste atende ao critério de priorização regional do item 4.3 desta chamada — e é o recorte onde a construção de infraestrutura de inclusão produtiva digital e soberania tecnológica tem maior impacto redistributivo por real investido.",
+    "openingScenario": "Maria das Dores, 52 anos, agricultora familiar no Sertão paraibano. Ela dirige sua propriedade sem acesso a ATER há mais de uma década — como 92,6% dos agricultores de sua região. Tem uma pergunta sobre período de carência de defensivo para o tomate e outra sobre qual formulário preencher para o PAA. O escritório da EMATER mais próximo fica a 80 km, abre às 9h, e o agente que conhecia seus cultivos se aposentou há dois anos sem substituto. Ela pega o celular. WhatsApp abre em 3 segundos, mesmo no 3G intermitente. A pergunta sobre o defensivo pode esperar até a resposta chegar — o sistema é assíncrono, enfileira a mensagem e responde quando o sinal voltar. É nesse momento — às 4h da manhã, no 3G do Sertão, sem custo de deslocamento, sem hora marcada — que o Roça Conectada precisa estar lá. Esta não é uma narrativa hipotética. É o cenário documentado de 1,7 milhão de mulheres que dirigem propriedades rurais no Brasil, 95% delas sem acesso a qualquer assistência técnica.",
+    "competitiveContext": "**O que outros países já construíram como infraestrutura nacional — e o que o Brasil não tem:** A Índia mantém o iKisan como plataforma nacional de extensão digital com componentes de IA, e o ICAR-NAIP integra pesquisa agronômica com sistemas digitais há mais de uma década. Os EUA disponibilizam dados abertos do USDA como fundação sobre a qual Climate Corporation, Granular e Indigo Ag foram construídas — empresas de IA agrícola que nascem com corpus público nacional como base. A Europa conecta plataformas agrícolas de 18 países sob arquitetura interoperável comum via DEMETER (H2020). Todos têm uma camada de inteligência agrícola nacional que projetos futuros podem usar como ponto de partida. O Brasil não tem.\n\n**Atenção: o Llama não resolve o problema de soberania:** Meta é frequentemente citada como alternativa de \"IA aberta\". Em setembro de 2024, a Meta bloqueou o Llama 3.2 para toda a União Europeia — 450 milhões de pessoas — por decisão de negócios unilateral. O Llama tem uma cláusula contratual de cap de 700 milhões de usuários mensais e proíbe explicitamente usar seus outputs para treinar modelos concorrentes. Isso significa que o Brasil legalmente não pode usar outputs do Llama como dados de treinamento para um modelo nacional sem permissão da Meta. \"Open source\" com essas restrições não é soberania tecnológica.\n\n**O que o Roça Conectada constrói — e o que passa a existir ao mês 36:** Corpus AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, bem público científico permanente sob MIT/Apache 2.0, publicado com DOI (resultado direto: criação de novos conhecimentos). AgroAssistente via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente (inclusão produtiva digital — resultado: fomento à digitalização das cadeias). Coopera Digital, gestão para cooperativas produtivas de pequeno porte (resultado: fortalecimento das cooperativas de produção). AgroEval, framework de avaliação de alucinação agrícola (contribuição metodológica original replicável por grupos nacionais). Modelo titulado na UFSC, código-fonte aberto, corpus com DOI público — ativo estratégico nacional operado em conformidade com a LGPD, extensível por qualquer instituição brasileira sem depender de nenhuma empresa estrangeira.",
+    "bibliography": [
+      {
+        "ref": "IBGE (2017)",
+        "text": "Censo Agropecuário 2017. 3,9M estabelecimentos familiares (77% do total). Participação no Valor Bruto da Produção agrícola nacional: 23% do total — com protagonismo em mandioca (80%), leite (63%), horticultura (62%) e feijão-caupi (42%). Cobertura de ATER: 18,2% nacional, 7,4% Nordeste, 48,6% Sul. Mulheres: 95% das 1,7M diretoras de propriedades sem ATER. Fonte: IBGE. Censo Agropecuário 2017. Rio de Janeiro: IBGE, 2018."
+      },
+      {
+        "ref": "IBGE / PNAD (2023)",
+        "text": "Pesquisa Nacional por Amostra de Domicilios 2023. 96,7% dos domicilios rurais com telefone celular; 81% com acesso a internet."
+      },
+      {
+        "ref": "Souza et al. / RESR (2020)",
+        "text": "Impacto da assistencia tecnica e extensao rural sobre a renda agricola. Revista de Economia e Sociologia Rural (RESR), 2020. Metodologia Propensity Score Matching sobre dados PNAD 2014. Resultado: familias com ATER ganham R$ 490/mes a mais. Implicacao: R$ 18,8 bilhoes/ano em renda nao realizada com 3,2M familias sem cobertura."
+      },
+      {
+        "ref": "MCTI (maio 2026)",
+        "text": "Declaracao oficial MCTI. Brasil em condicao de 'colonia digital': 88% da infraestrutura de nuvem sob controle estrangeiro. Fonte: Teletime, maio 2026."
+      },
+      {
+        "ref": "Lula / Cupula IA Nova Delhi (fev. 2026)",
+        "text": "Discurso do presidente Luiz Inacio Lula da Silva na Cupula de Inteligencia Artificial, Nova Delhi, fevereiro de 2026. Citacao: 'Quando poucos controlam os algoritmos e as infraestruturas digitais, nao estamos falando de inovacao, mas de dominacao.'"
+      },
+      {
+        "ref": "PBIA 2024–2028",
+        "text": "Plano Brasileiro de Inteligencia Artificial 2024–2028. MCTI. R$ 23 bilhoes; 54 acoes concretas. Inclui nuvem soberana e modelos nacionais de linguagem em portugues. Nenhuma das 54 acoes endereça especificamente os 3,9M estabelecimentos de agricultura familiar."
+      },
+      {
+        "ref": "SoberanIA (maio 2026)",
+        "text": "Programa SoberanIA. MCTI, lancado maio de 2026. R$ 40M para LLM nacional de 30B parametros para o setor publico. Foco: cidades, burocracia e servicos governamentais — nao agricultura familiar."
+      },
+      {
+        "ref": "ANPD Resolucao 19/2024",
+        "text": "Autoridade Nacional de Protecao de Dados. Resolucao 19/2024. Exige mecanismos de conformidade com a LGPD para transferencias internacionais de dados pessoais a partir de agosto de 2025."
+      },
+      {
+        "ref": "OpenAI / TechCrunch (mar. 2023)",
+        "text": "Bloqueio do ChatGPT na Italia por ordem do Garante. 60 milhoes de pessoas sem acesso em menos de 24 horas. Multa de 15M euros confirmada. TechCrunch, The Hacker News, 30 marco 2023."
+      },
+      {
+        "ref": "OpenAI / Axios (nov. 2023)",
+        "text": "Demissao do CEO Sam Altman. Cinco dias de colapso de governanca; 700 funcionarios ameacam demissao; Microsoft soube menos de 1h antes do publico. Wikipedia, Axios, novembro 2023."
+      },
+      {
+        "ref": "OpenAI Deprecations (jan. 2024)",
+        "text": "Descontinuacao de 33 modelos simultaneamente em 4 de janeiro de 2024, incluindo GPT-3 text-davinci-003. Sem caminho de migracao para modelos fine-tuned proprietarios. OpenAI Deprecations page."
+      },
+      {
+        "ref": "OpenAI / The Register (jan. 2026)",
+        "text": "Em janeiro de 2026, a OpenAI anunciou a retirada do GPT-4o do produto ChatGPT com apenas duas semanas de aviso ao usuário final (data de retirada: 13 de fevereiro de 2026). Para clientes de API, o aviso foi mais longo (novembro de 2025), mas o episódio documenta o padrão de descontinuação unilateral com prazo mínimo. Fonte: The Register. \"OpenAI axes ChatGPT models with just two weeks warning\". jan. 2026."
+      },
+      {
+        "ref": "OpenAI / Reuters / TechCrunch (2025–2026)",
+        "text": "Documentação de rupturas em plataformas de IA estrangeiras: (a) OpenAI realizou a maior depreciação única de modelos em janeiro de 2024, retirando 33 versões em um único evento (The Register, jan. 2024); (b) GPT-4o retirado do ChatGPT com apenas 14 dias de aviso ao consumidor final (The Register, jan. 2026); (c) GROQ anunciou parceria de licenciamento com Nvidia em dezembro de 2025, com fundadores migrando para a Nvidia — demonstrando instabilidade de propriedade em provedores de API de terceiros (Reuters, dez. 2025)."
+      },
+      {
+        "ref": "OpenAI (2024)",
+        "text": "Brasil e o 2o maior mercado de desenvolvedores ativos na API da OpenAI — crescimento de 143% ano a ano. Fonte: dados oficiais OpenAI, 2024."
+      },
+      {
+        "ref": "Decreto PLANSIC 11.200/2022",
+        "text": "Presidencia da Republica. Decreto 11.200/2022. Institui o Plano Nacional de Seguranca de Infraestruturas Criticas (PLANSIC). Agricultura nao classificada como infraestrutura critica — ao contrario de EUA, Canada e UE."
+      },
+      {
+        "ref": "AgriEval (arXiv:2507.21773, 2025) + Tzachor et al., Nature Food (2023)",
+        "text": "Desempenho de LLMs em domínio agrícola especializado: benchmark AgriEval (2025) com 14.697 questões agrícolas especializadas em chinês mostra que a maioria dos LLMs não alcança 60% de acurácia, incluindo modelos de ponta. Degradação adicional documentada em idiomas de baixo recurso e contextos não-anglófonos (Tzachor et al., Nature Food 2023; arXiv:2404.18286). LLMs genéricos \"herdam vieses de treinamento\" e produzem \"recomendações genericamente corretas mas inadequadas para agricultores de baixa renda em contextos não-anglófonos\" (Tzachor et al., 2023). Fonte: AgriEval — arXiv:2507.21773. jul. 2025."
+      },
+      {
+        "ref": "CGI.br / TIC Domicilios (2023)",
+        "text": "Comite Gestor da Internet no Brasil. TIC Domicilios 2023. Prevalencia de acesso rural exclusivamente via celular; restricoes de planos pre-pagos ao trafego de dados."
+      },
+      {
+        "ref": "Hu et al. (2022)",
+        "text": "LoRA: Low-Rank Adaptation of Large Language Models. ICLR 2022. Tecnica PEFT utilizada no fine-tuning do AgroAssistente."
+      },
+      {
+        "ref": "Dettmers et al. (2023)",
+        "text": "QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS 2023. Quantizacao 4-bit com LoRA — viabiliza inferencia LLM em hardware acessivel."
+      },
+      {
+        "ref": "Esteves et al. (2024)",
+        "text": "Adapting LLMs to New Domains: A Comparative Study of Fine-Tuning and RAG strategies for Portuguese QA Tasks. ACL Anthology, STIL 2024. Base para escolha arquitetural do AgroAssistente."
+      },
+      {
+        "id": "b21",
+        "ref": "WEF; DIGITAL GREEN; GATES FOUNDATION (2023)",
+        "text": "Saagu Baagu — piloto de assessoria agrícola via chatbot WhatsApp em Telugu. 7.000 agricultores familiares de pimenta, distrito de Khammam, Telangana, Índia. 18 meses / 3 ciclos de cultivo. Resultados: +21% rendimento por acre; −9% uso de defensivos; −5% uso de fertilizantes; +US$ 800 por acre por ciclo de 6 meses de renda líquida adicional (equivalente a +US$ 1.975/hectare/ciclo). Canal: WhatsApp em língua regional Telugu com dados agronômicos locais. Fonte: WORLD ECONOMIC FORUM; DIGITAL GREEN; GATES FOUNDATION. Scaling Agritech at the Last Mile. Genebra: WEF, jul. 2023. Disponível em: weforum.org/publications/scaling-agritech-at-the-last-mile."
+      },
+      {
+        "id": "b22",
+        "ref": "Farmerline / TIME (2024)",
+        "text": "Darli AI — assistente agricola por WhatsApp em 27 linguas africanas e asiaticas, lancado marco de 2024. Plataforma Farmerline/Mergdata. Alcance: 110.000 agricultores em menos de 8 meses apos lancamento; 1,7 milhao de agricultores na plataforma Mergdata com estimativa de +30% produtividade. Casos documentados: cooperativa no Quenia salva 50%+ de safra de milho via diagnostico fotografico de doenca; agricultor ganês reduz custo de defensivos em 30%. Reconhecimento: TIME 200 Melhores Invencoes de 2024. Limitacao: estimativa de produtividade e de plataforma, nao ensaio controlado. Disponivel em: https://farmerline.co/farmerlines-darli-ai-recognized-on-times-list-of-the-best-inventions-of-2024/"
+      },
+      {
+        "id": "b23",
+        "ref": "RAJKHOWA, P.; QAIM, M. PLOS ONE (2021)",
+        "text": "Extensão digital personalizada e desempenho agrícola: evidência de pequenos agricultores na Índia. 1.105 domicílios produtores de hortaliças, Odisha, Índia. Metodologia: Propensity Score Matching (PSM). Resultado: adotantes de extensão digital personalizada apresentaram +18% de produtividade de cultivos e +18–29% de renda agrícola vs. grupos equivalentes sem acesso. Fonte: RAJKHOWA, P.; QAIM, M. Personalized digital extension services and agricultural performance: Evidence from smallholder farmers in India. PLOS ONE, v. 16, n. 10, p. e0259319, out. 2021. DOI: 10.1371/journal.pone.0259319."
+      },
+      {
+        "id": "b24",
+        "ref": "AIM FOR SCALE; DEVELOPMENT INNOVATION LAB INDIA (2025)",
+        "text": "Previsão de início de monção por IA entregue a 38 milhões de agricultores em 13 estados indianos na temporada Kharif 2025, em parceria com o Ministério da Agricultura da Índia e o Development Innovation Lab (Universidade de Chicago). Pesquisa governamental pós-temporada: agricultores que receberam previsões de safra abaixo do esperado foram 31% menos propensos a adicionar uma nova cultura; agricultores com previsões positivas foram 36% mais propensos a cultivar uma cultura comercial. Fonte: AIM FOR SCALE. \"Helps India Deliver AI-powered Forecasts to 38M Farmers\". aimforscale.org, 2025."
+      },
+      {
+        "id": "b25",
+        "ref": "Gates Foundation / GIZ / CLEAR Global — AIEP Initiative (ArXiv, jan. 2026)",
+        "text": "Building AI-based advisory services for smallholder farmers: Technical learnings from the AIEP Initiative. ArXiv:2601.11537, 21 de janeiro de 2026. Dois anos de investimento Gates Foundation. Cinco MVPs de assistencia tecnica por IA implantados no Quenia e Bihar (India). Estudo com 800+ agricultores. Net Promoter Score medio: ~60 — superior aos benchmarks global (46), queniano (26) e de Bihar (40) para servicos digitais agricolas. Mulheres: NPS mais alto que homens. Arquitetura: WhatsApp/IVR + RAG sobre corpus agricola curado + reconhecimento de fala multilingue. Limitacao dos autores: metricas de satisfacao, nao RCT de rendimento em larga escala. Disponivel em: https://arxiv.org/abs/2601.11537"
+      },
+      {
+        "id": "b26",
+        "ref": "Universidade Agricola de Nanjing / Xinhua (jan. 2026)",
+        "text": "Sinong — primeiro LLM agricola de codigo aberto da China. Lancado janeiro de 2026 pela Nanjing Agricultural University. Treinado em mais de 4 bilhoes de tokens de dados agricolas especializados: ~9.000 livros, 240.000+ artigos academicos, 20.000+ documentos de politica agricola. Disponivel em versoes 8B e 32B parametros no ModelScope e GitHub. Idioma: exclusivamente mandarin. Nenhuma capacidade em portugues ou biomas brasileiros. Fonte: Xinhua; EastFruit; Aginsights. Disponivel em: https://east-fruit.com/en/trending/china-launches-its-first-open-source-ai-model-for-agriculture-what-sinong-means-for-the-sector/"
+      },
+      {
+        "id": "b27",
+        "ref": "CGIAR / AI71 / UAE Presidential Court / Gates Foundation — AgriLLM (dez. 2025)",
+        "text": "AgriLLM — plataforma de assistencia tecnica agricola baseada em LLM para o Sul Global. Lancado em Abu Dhabi em dezembro de 2025. Financiamento: parceria UAE–Gates Foundation de US$ 200 milhoes (COP28). Corpus de treinamento: 150.000 documentos agricolas, 50.000 artigos cientificos, 120.000 pares reais de perguntas e respostas de agricultores. Parceiros cientificos: CGIAR, EMBRAPA. Design multilingue. Nenhum corpus publicado confirma cobertura de portugues regional brasileiro, terminologia de pequeno produtor do semiarido ou especificidade dos biomas Caatinga e Cerrado. Fonte: CGIAR; AI71; EurekAlert. Disponivel em: https://www.cgiar.org/news-events/news/agrillm-how-cgiar-is-developing-an-ai-powered-agricultural-advisory-service-for-global-south"
+      },
+      {
+        "id": "b28",
+        "ref": "Ministerio da Agricultura India / PIB India (2025)",
+        "text": "Kisan e-Mitra — chatbot de IA por voz para agricultores indianos, parte da Digital Agriculture Mission (orcamento Rs 2.817 crore, aprox. R$ 1,7 bilhao). Opera em 11 linguas regionais; 49 categorias de consulta; 20.000+ consultas diarias; 9,5+ milhoes (95+ lakh) de consultas respondidas ate dezembro de 2025; 53 lakh agricultores atendidos. Integracao prevista com PM Fasal Bima Yojana, Kisan Credit Card e Soil Health Card. Fonte: PIB India; IndiaAI; The Better India. Disponivel em: https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2051719"
+      },
+      {
+        "id": "b29",
+        "ref": "GATES FOUNDATION / COP30 Belém (nov. 2025)",
+        "text": "Fundação Gates anunciou compromisso de US$ 1,4 bilhão (2026–2029) para inovação agrícola para smallholders no Sul Global, com foco em África Subsaariana e Ásia Meridional, na COP30 em Belém (novembro 2025). Meta declarada: 100 milhões de agricultores alcançados via AIM for Scale até 2030. Fonte: GATES FOUNDATION. Press release COP30. Belém, nov. 2025."
+      },
+      {
+        "id": "b30",
+        "ref": "BEACH, Robert H. et al. Global Food Security (2025)",
+        "text": "Meta-análise de 20 estudos (15 África Subsaariana, 4 Índia, 1 Camboja) sobre intervenções digitais de informação agrícola, período 2005–2019. Resultado médio: +23% adoção de fertilizantes; +6% produtividade; +6% renda agrícola. Evidência de nível meta-analítico para eficácia de serviços digitais agrícolas para pequenos produtores. Fonte: BEACH, R. H. et al. Meta-analysis of the impacts of digital information interventions on agricultural development. Global Food Security, v. 45, p. 100866, jun. 2025. DOI: 10.1016/j.gfs.2025.100866. PMC12167173."
+      },
+      {
+        "id": "b31",
+        "ref": "MDPI Sustainability — Revisão Sistemática (2025)",
+        "text": "Revisão sistemática de 141 artigos (2005–2021) sobre serviços digitais de extensão interativa para pequenos agricultores em países em desenvolvimento. Identifica 13 oportunidades e 21 barreiras. Confirma extensão digital interativa como fonte mais eficiente de aprendizagem para aumentar produtividade e lucratividade agrícola. Fonte: MDPI. The Opportunities and Barriers in Developing Interactive Digital Extension Services for Smallholder Farmers. Sustainability, v. 17, n. 7, p. 3007, 2025. DOI: 10.3390/su17073007."
+      },
+      {
+        "id": "b32",
+        "ref": "AROUNA, A. et al. American Journal of Agricultural Economics (2021)",
+        "text": "RCT com agricultores de arroz na Nigéria. Grupo tratamento recebeu apenas conselho personalizado digital (app RiceAdvice, sem subsídio de insumos). Resultado: +7% rendimento de arroz; +10% lucro. O efeito é atribuído exclusivamente à informação personalizada, sem transferência de insumos. Evidência causal mais robusta disponível para extensão digital em contexto africano. Fonte: AROUNA, A. et al. One size fits all? Experimental evidence on the digital delivery of personalized extension advice in Nigeria. American Journal of Agricultural Economics, v. 103, n. 2, p. 596–619, 2021. DOI: 10.1111/ajae.12151."
+      },
+      {
+        "id": "b33",
+        "ref": "Frontiers in Sustainable Food Systems — RCT Etiópia (2024)",
+        "text": "RCT com painel de 1.040 agricultores (2021 e 2023), Zona de Wolaita, Etiópia. Provisão de informação técnica agronômica personalizada: +5,5% área colhida; +104 quintais de produção por domicílio; +122 quintais/hectare de rendimento. Contexto tropical análogo ao do Nordeste brasileiro. Fonte: Frontiers in Sustainable Food Systems, ago. 2024. DOI: 10.3389/fsufs.2024.1421442."
+      },
+      {
+        "id": "b34",
+        "ref": "TZACHOR, A. et al. Nature Food (2023)",
+        "text": "Primeiro artigo peer-reviewed em periódico de alto impacto analisando uso de LLMs em extensão agrícola. Identifica potencial transformador e riscos: viés de treinamento, recomendações genéricas inadequadas para agricultores de baixa renda, omissão de conhecimento local. LLMs genéricos herdam vieses de corpus anglófono e produzem orientações incorretas em contextos de baixa representação linguística. Propõe curadoria de corpus especializado e validação humana como condições para uso seguro. Fonte: TZACHOR, A. et al. Large language models and agricultural extension services. Nature Food, v. 4, p. 941–948, nov. 2023. DOI: 10.1038/s43016-023-00867-x."
+      },
+      {
+        "id": "b35",
+        "ref": "Farmer.Chat — arXiv:2409.08916 (2024)",
+        "text": "Chatbot agrícola generativo via WhatsApp/Telegram implantado em Quênia, Índia, Etiópia e Nigéria. 15.000+ agricultores; 300.000+ consultas respondidas; 6 idiomas; 40+ culturas. Avaliação: usabilidade, focus groups, entrevistas. Demonstra escalabilidade de assistente agrícola por mensageria instantânea em contextos de baixa infraestrutura — arquitetura análoga ao AgroAssistente. Fonte: arXiv preprint arXiv:2409.08916. set. 2024."
+      },
+      {
+        "id": "b36",
+        "ref": "WORLD BANK. Digital Agriculture Roadmap Playbook (2025)",
+        "text": "Banco Mundial documenta custo-benefício de 9:1 a 15:1 para plataformas de extensão digital para pequenos agricultores. Caso Ama Krushi (Odisha, Índia): 6,5 milhões de agricultores a US$ 0,18/agricultor/ano com aumento de renda de US$ 30–48/agricultor. Benin: 103.000 agricultores em plataformas de extensão digital 2020–2024. Fonte: WORLD BANK. Digital Agriculture Roadmap Playbook. Washington, D.C.: World Bank, 2025."
+      },
+      {
+        "id": "b37",
+        "ref": "KILIMO / Microsoft — IA para Irrigação, América Latina (2024)",
+        "text": "Plataforma de IA para irrigação de precisão operando em 7 países da América Latina e Europa. Resultado documentado: −20–30% consumo de água mantendo produtividade. 220.000+ hectares monitorados; 40+ culturas. Parceria Microsoft, Intel, Coca-Cola. Único caso documentado de IA agrícola com resultados quantitativos na América Latina. Fonte: KILIMO. Microsoft and Kilimo: AI for Smarter Irrigation in Chile. kilimo.com, 2024."
+      },
+      {
+        "id": "b38",
+        "ref": "CGIAR. Transformando Extensão Agrícola com IA (2024)",
+        "text": "CGIAR documenta o AIEP como iniciativa multi-organização de IAs para extensão de smallholders em Quênia e Índia, integrando IoT, drones e visão computacional para recomendações localizadas e sensíveis a gênero. Identifica a lacuna digital como principal barreira à adoção. Fonte: CGIAR. How AI is transforming extension services for precision smallholder farming. cgiar.org, 2024."
+      },
+      {
+        "id": "b39",
+        "ref": "Food Security / Springer Nature — Extensão Digital e Gênero, Nigéria (2025)",
+        "text": "Difference-in-Differences com dados do GHS-Panel da Nigéria. Extensão digital associada a melhorias em segurança alimentar e renda agrícola. Domicílios chefiados por mulheres têm maiores ganhos em segurança alimentar; os chefiados por homens têm maiores ganhos de renda. Evidência de impacto diferenciado por gênero — relevante para a dimensão de equidade da proposta. Fonte: Food Security, Springer Nature, 2025. DOI: 10.1007/s12571-025-01624-7."
+      },
+      {
+        "id": "b40",
+        "ref": "EMBRAPA / MDA / MAPA / AZap.AI — RAImundo (2025)",
+        "text": "Embrapa, MAPA, MDA e startup AZap.AI lançaram em 2025 o RAImundo — assistente virtual gratuito via WhatsApp para pequenos e médios agricultores brasileiros, cobrindo manejo, clima, mercado, pragas, solo e produção sustentável. Base: décadas de pesquisas da Embrapa. Meta: 100.000 usuários no primeiro ano. O RAImundo valida o problema que o Roça Conectada resolve: há demanda documentada por assistência técnica agrícola digital em português. Diferencial do Roça Conectada: foco em agricultores familiares do Nordeste, corpus especializado com validação científica, arquitetura soberana open-source com transferência de titularidade pública. Fonte: Embrapa Agricultura Digital. RAImundo. Brasília: Embrapa, 2025."
+      },
+      {
+        "id": "b41",
+        "ref": "AgriEval — arXiv:2507.21773 (2025)",
+        "text": "Benchmark de avaliação de LLMs em domínio agrícola especializado: 14.697 questões de múltipla escolha e 2.167 questões abertas em chinês agrícola. Resultado: a maioria dos LLMs não alcança 60% de acurácia; o melhor modelo de raciocínio avançado obteve apenas 36% no benchmark AGREASON. Documenta que LLMs genéricos de alto desempenho falham sistematicamente em domínios agrícolas especializados, justificando a necessidade de fine-tuning com corpus curado. Fonte: arXiv:2507.21773. jul. 2025."
+      },
+      {
+        "id": "b42",
+        "ref": "HuggingFace / SciELO / Embrapa — Lacuna de Corpus NLP Agrícola em Português (2026)",
+        "text": "Busca sistemática em repositórios públicos (ArXiv, Zenodo, HuggingFace, SciELO) realizada em maio de 2026 não identificou nenhum corpus de treinamento NLP que combine: (a) português regional brasileiro, (b) terminologia de pequeno produtor rural (Caatinga, Cerrado, Semiárido), e (c) volume adequado para fine-tuning eficaz. Corpora gerais em português (BrWaC, Portuguese-PD) não possuem especialização agrícola. A Embrapa está desenvolvendo iniciativa de IA generativa baseada em seu acervo técnico (desde outubro 2024), mas nenhum dataset público foi publicado até maio de 2026. O corpus AgroLinguaBR representa a primeira iniciativa pública verificável neste espaço."
+      }
+    ],
+    "genderEquity": "O dado mais agudo desta proposta em termos de equidade de gênero é este: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a qualquer assistência técnica (IBGE Censo Agropecuário 2017). O Roça Conectada não trata esse dado como pano de fundo — trata como dimensão central do problema que justifica o projeto. Em termos operacionais: (a) meta mínima de 40% de mulheres entre os multiplicadores capacitados (OE8); (b) prioridade a cooperativas lideradas por mulheres nos três municípios-piloto; (c) equipe de anotação do corpus AgroLinguaBR com participação mínima de 40% de mulheres agricultoras — garantindo que a variação linguística feminina do campo esteja representada no modelo; (d) indicador específico de alcance por gênero em todos os relatórios de avaliação de impacto, reportado à FINEP semestralmente.",
+    "aiRaceChart": {
+      "title": "A Corrida Global por LLMs Agrícolas Soberanos",
+      "subtitle": "Países que já têm modelo de linguagem agrícola soberano — ou lançaram em 2024–2026",
+      "entries": [
+        {
+          "flag": "🇨🇳",
+          "country": "China",
+          "product": "Sinong (Jan 2026)",
+          "launched": "jan/2026",
+          "scale": "4B+ tokens • 8B e 32B parâmetros • open-source",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇮🇳",
+          "country": "Índia",
+          "product": "Kisan e-Mitra (2024)",
+          "launched": "2024",
+          "scale": "9,5M+ consultas • 11 línguas regionais • voz",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇦🇪",
+          "country": "EAU",
+          "product": "AgriLLM — CGIAR + Gates (Dez 2025)",
+          "launched": "dez/2025",
+          "scale": "120.000 pares Q&A • US$ 200M • 39 países",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇬🇭",
+          "country": "Gana / África Oc.",
+          "product": "Darli AI — Farmerline (Mar 2024)",
+          "launched": "mar/2024",
+          "scale": "110.000 agricultores • 27 línguas • WhatsApp",
+          "status": "deployed"
+        },
+        {
+          "flag": "🇧🇷",
+          "product": "AgroAssistente — Roça Conectada",
+          "country": "Brasil",
+          "launched": "mês 18 (proposto)",
+          "scale": "25.000 pares pt-BR • 3 regiões-piloto • open-source MIT",
+          "status": "proposed"
+        }
+      ],
+      "brazilNote": "O corpus AgroLinguaBR construído neste projeto será o primeiro dataset público de IA agroalimentar em português regional brasileiro com DOI verificável."
+    }
+  },
+  "s3": {
+    "number": "Seção 3",
+    "title": "Objetivos",
+    "heroImage": "/hero3.png",
+    "subtitle": "Geral e específicos, alinhados à Linha Temática 3",
+    "headline": "11 objetivos. Da pesquisa à política pública.",
+    "generalObjective": "Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus aberto, modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema Roça Conectada, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.",
+    "axes": [
+      {
+        "id": "e1",
+        "label": "Eixo I — Pesquisa e Infraestrutura de IA",
+        "objectives": [
+          {
+            "id": "oe1",
+            "code": "OE1.",
+            "text": "Realizar diagnóstico participativo das necessidades digitais em 3 regiões-piloto (Pesquisa-Ação Participativa)."
+          },
+          {
+            "id": "oe2",
+            "code": "OE2.",
+            "text": "Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença MIT/Apache 2.0, DOI público via Zenodo."
+          },
+          {
+            "id": "oe3",
+            "code": "OE3.",
+            "text": "Desenvolver o AgroEval: benchmark nacional para avaliação de alucinação e precisão de IAs agrícolas em português — contribuição científica original replicável por qualquer grupo de pesquisa."
+          }
+        ]
+      },
+      {
+        "id": "e2",
+        "label": "Eixo II — Validação e Implantação",
+        "objectives": [
+          {
+            "id": "oe4",
+            "code": "OE4.",
+            "text": "Realizar fine-tuning e validação científica do AgroAssistente IA com protocolo de grupo controle (n=50, Fase 2)."
+          },
+          {
+            "id": "oe5",
+            "code": "OE5.",
+            "text": "Implantar o AgroAssistente IA com 800 agricultores (Fase 2) e expandir para 2.500 (Fase 3) via rede de multiplicadores EMATER."
+          },
+          {
+            "id": "oe6",
+            "code": "OE6.",
+            "text": "Implantar o Coopera Digital em 6 cooperativas âncora (Fase 2) e 18 cooperativas (Fase 3), com módulo de rastreabilidade de origem do produto (registro de lote, destino PAA/PNAE e certificação de procedência), garantindo conformidade com os requisitos de rastreabilidade da cadeia agroalimentar."
+          }
+        ]
+      },
+      {
+        "id": "e3",
+        "label": "Eixo III — Ecossistema Nacional e Soberania",
+        "objectives": [
+          {
+            "id": "oe7",
+            "code": "OE7.",
+            "text": "Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs."
+          },
+          {
+            "id": "oe8",
+            "code": "OE8.",
+            "text": "Capacitar 350 multiplicadores (técnicos ATER e gestores de cooperativas) como agentes de expansão e sustentabilidade do ecossistema."
+          },
+          {
+            "id": "oe9",
+            "code": "OE9.",
+            "text": "Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora (UFSC), assegurando soberania e permanência nacional da infraestrutura."
+          }
+        ]
+      }
+    ],
+    "theoryOfChange": {
+      "premise": "Se agricultores familiares em regioes com ATER precaria tiverem acesso imediato a orientacao tecnica confiavel em portugues regional, via canal ja familiar (WhatsApp) e sem custo de assinatura — entao tomarao decisoes de manejo mais qualificadas, reduziram perdas evitaveis e ampliarao acesso a mercados institucionais.",
+      "chain": [
+        {
+          "stage": "Recursos",
+          "items": [
+            "R$ 7M FINEP",
+            "Corpus AgroLinguaBR (25k pares)",
+            "Computação em nuvem soberana (contrato THATPIX)",
+            "Equipe UFSC + THATPIX",
+            "12 bolsistas"
+          ]
+        },
+        {
+          "stage": "Atividades",
+          "items": [
+            "Fine-tuning LLM especializado",
+            "Diagnostico participativo",
+            "Piloto 800 agricultores",
+            "Capacitacao 350 multiplicadores",
+            "Publicacao open-source"
+          ]
+        },
+        {
+          "stage": "Produtos",
+          "items": [
+            "AgroAssistente IA em producao",
+            "Coopera Digital em 18 cooperativas",
+            "Corpus com DOI publico",
+            "5 artigos cientificos",
+            "Codigo-fonte MIT/Apache"
+          ]
+        },
+        {
+          "stage": "Resultados",
+          "items": [
+            "Reducao >= 30% tempo administrativo cooperativas",
+            "Taxa resolucao >= 80% consultas agricolas",
+            "Satisfacao >= 4,2/5 agricultores",
+            "2.500 MAU ativos"
+          ]
+        },
+        {
+          "stage": "Impacto",
+          "items": [
+            "Ampliacao do acesso efetivo a ATER digital",
+            "Corpus nacional de referencia em NLP agricola PT-BR",
+            "Replicabilidade por outras ICTs e politicas publicas"
+          ]
+        }
+      ]
+    },
+    "policyAlignment": [
+      {
+        "sigla": "NIB",
+        "fullName": "Nova Indústria Brasil",
+        "decree": "Decreto 11.738/2023",
+        "axes": "Missão 1 — Cadeias Agroindustriais Sustentáveis · Missão 4 — Transformação Digital",
+        "body": "O Roça Conectada contribui para a Missão 1 da NIB ao digitalizar os processos produtivos de 2.500 agricultores familiares, rastreando práticas e conectando a cadeia a montante e a jusante. Para a Missão 4, constrói infraestrutura digital nacional soberana: o AgroLinguaBR e a AgroAPI são ativos estratégicos de dados e serviços em português, permanentes e de propriedade pública (UFSC), que habilitam todo o ecossistema nacional de IA agroalimentar."
+      },
+      {
+        "sigla": "PLANAPO",
+        "fullName": "Plano Nacional de Agroecologia e Produção Orgânica",
+        "decree": "3ª edição 2023–2027",
+        "axes": "Eixo 3 — Conhecimento em Agroecologia · Eixo 4 — Comunicação e Informação",
+        "body": "O PLANAPO 2023-2027 orienta a expansão do acesso ao conhecimento agroecológico (Eixo 3) e a democratização da informação técnica para agricultores familiares (Eixo 4). O corpus AgroLinguaBR incluirá módulo específico de práticas agroecológicas e orgânicas em português regional; o AgroAssistente IA, treinado sobre este corpus, torna-se o primeiro canal de extensão rural digital contextualizado em agroecologia, operando 24h via WhatsApp sem custo de deslocamento."
+      },
+      {
+        "sigla": "PNPIAF",
+        "fullName": "Política Nacional de Proteção e Integração da Agricultura Familiar",
+        "decree": "Decreto 12.287/2024",
+        "axes": "Eixo IV — Inclusão Digital em Áreas Rurais",
+        "body": "A PNPIAF, em seu Eixo IV, estabelece a inclusão digital em áreas rurais como política de Estado. O edital FINEP AgriFam-ICT 2026 é mecanismo direto de execução desse eixo. O Roça Conectada é a resposta técnica completa: corpus linguístico nacional, modelo de linguagem soberano em português e aplicação via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente — solução concebida desde o início para a realidade das pequenas propriedades rurais brasileiras."
+      },
+      {
+        "sigla": "ENECI / PBIA",
+        "fullName": "Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028",
+        "decree": "ENCTI / MCTI 2024 · PBIA / MCTI 2024",
+        "axes": "Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português",
+        "body": "A ENCTI 2024-2034 prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações concretas — incluindo o desenvolvimento de modelos nacionais de linguagem em português. O Roça Conectada entrega aderência ao PBIA de forma concreta: o AgroLinguaBR e o LLM fine-tuned são os ativos específicos que o PBIA identifica como necessários (corpus nacional, modelo soberano em português) mas não construiu para a agricultura familiar. Ao mês 36, com transferência de titularidade à UFSC, esses ativos tornam-se patrimônio público irremovível do sistema nacional de CT&I — disponíveis para a próxima iteração do PBIA ou qualquer política pública nacional sem dependência de plataformas estrangeiras. O SoberanIA (R$ 40M, lançado maio 2026) confirmou que o governo está financiando exatamente este tipo de ativo para o setor público. O Roça Conectada é o instrumento equivalente para a agricultura familiar."
+      },
+      {
+        "sigla": "Bioinsumos",
+        "fullName": "Programa Nacional de Bioinsumos",
+        "decree": "Decreto 10.375/2020",
+        "axes": "Disseminação de conhecimento sobre bioinsumos na agricultura familiar",
+        "body": "O Programa Nacional de Bioinsumos visa ampliar a adoção de bioinsumos na agricultura familiar como substituto de agroquímicos. O AgroLinguaBR incluirá módulo dedicado com 3.000+ pares Q&A sobre bioinsumos em português regional — denominações locais, modo de uso, dosagem e interações com culturas —, tornando o AgroAssistente o primeiro canal de extensão rural digital com suporte especializado ao uso de bioinsumos no campo, em linguagem acessível ao agricultor familiar."
+      }
+    ],
+    "innovationPolicy": {
+      "document": "Política de Inovação da Universidade Federal de Santa Catarina (UFSC)",
+      "resolution": "Resolução Normativa nº 26/CUn/2016 (atualizada pela RN nº 43/CUn/2018)",
+      "article": "Art. 3º, incisos I, III e V — Diretrizes institucionais de inovação",
+      "alignmentText": "A Política de Inovação da UFSC (Resolução Normativa nº 26/CUn/2016, atualizada pela RN nº 43/CUn/2018) estabelece, em seu Art. 3º, como diretrizes institucionais: (I) o estímulo à criação e ao desenvolvimento de ambientes promotores da inovação; (III) o incentivo à pesquisa aplicada e ao desenvolvimento tecnológico orientado à solução de problemas sociais e econômicos; e (V) o fortalecimento de parcerias entre a UFSC e setores produtivos, com especial atenção a demandas de populações vulneráveis. O Roça Conectada materializa as três diretrizes de forma concreta: (I) constrói infraestrutura científica permanente — corpus AgroLinguaBR, benchmark AgroEval e AgroAPI — como ativos institucionais da UFSC, gerando ambiente habilitante para pesquisa futura em IA agroalimentar; (III) orienta o projeto integralmente à resolução de um problema social documentado — o colapso da ATER e a exclusão digital de 3,9 milhões de famílias agricultoras; (V) estabelece parcerias formais com cooperativas da agricultura familiar e com o ecossistema EMATER/EMBRAPA como parceiros de execução e beneficiários primários da inovação, com transferência de titularidade prevista no mês 36 (OE9).",
+      "annexNote": "O documento completo da Política de Inovação da UFSC está incluído nos Anexos Gerais da proposta, conforme Item EL-09 do Edital FINEP AgriFam-ICT 2026."
+    }
+  },
+  "s4": {
+    "number": "Seção 4",
+    "title": "Metodologia e Plano de Trabalho",
+    "heroImage": "/hero4.png",
+    "subtitle": "Pesquisa-Ação Participativa em 3 regiões Nordeste — cada fase constrói uma camada da infraestrutura soberana e prova que ela funciona nas condições reais de quem depende dela",
+    "headline": "Três anos. Da pesquisa ao campo aberto.",
+    "phases": [
+      {
+        "id": "f1",
+        "icon": "🔬",
+        "label": "Fase 1",
+        "name": "Fundação — Corpus e Infraestrutura Soberana",
+        "period": "Meses 1–12",
+        "activities": [
+          "Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica. Aqui começa a distinção entre infraestrutura soberana e produto tecnológico genérico.",
+          "Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença MIT — ativo público permanente antes do projeto terminar.",
+          "Fine-tuning do LLM base (Qwen2.5-7B) com LoRA/PEFT: cluster GPU LABELO/UFSC (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000. Esta é a resposta técnica à Barreira 2 (dependência de plataformas estrangeiras descartáveis).",
+          "MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.",
+          "1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.",
+          "Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto."
+        ]
+      },
+      {
+        "id": "f2",
+        "icon": "🚀",
+        "label": "Fase 2",
+        "name": "Validação — A Prova que Não é Otimismo",
+        "period": "Meses 13–24",
+        "activities": [
+          "Seleção dos 800 agricultores (critério documentado no diagnóstico Fase 1): smartphone + WhatsApp + sinal 3G verificado em ponto de referência. Zero aquisição de dispositivo — a solução funciona com o que os agricultores já têm. Esta não é uma suposição: é um critério de seleção.",
+          "Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo registrado no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo. Os resultados — adoção de boas práticas, custo de insumos, tempo de resolução — são medidos, não assumidos.",
+          "Piloto Coopera Digital: 6 cooperativas âncora. Medição de tempo administrativo, acesso ao PAA/PNAE e receita dos associados antes e depois. Baseline documentado na Fase 1.",
+          "AgroAPI beta: integração com 2 EMATERs estaduais parceiras. Primeiro teste de interoperabilidade institucional — prova que a infraestrutura é reutilizável.",
+          "Capacitação de 120 multiplicadores EMATER: eles usam o produto em condições reais antes de ensiná-lo. A sustentabilidade pós-projeto depende deles, não da equipe do projeto.",
+          "2 artigos científicos submetidos com dados do grupo controle. Resultados públicos antes do término do projeto — a comunidade científica pode auditar antes de encerrar."
+        ]
+      },
+      {
+        "id": "f3",
+        "icon": "🌍",
+        "label": "Fase 3",
+        "name": "Transferência — O Momento em que os Ativos Passam ao Brasil",
+        "period": "Meses 25–36",
+        "activities": [
+          "Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores EMATER treinados. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
+          "AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à UFSC (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado. Disponível para qualquer ICT, EMATER ou política pública — sem licença, sem taxa.",
+          "AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da UFSC ou da THATPIX. A infraestrutura é aberta porque soberania que precisa de um único guardião não é soberania.",
+          "MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP. Não prometemos que alguém vai absorver — apresentamos o acordo assinado.",
+          "Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou — assets, dados, capacidade instalada, resultados de campo."
+        ]
+      }
+    ],
+    "scopeDistinction": {
+      "researcher": {
+        "title": "Charles Cleivin — Co-pesquisador",
+        "subtitle": "Participação Intelectual e Científica",
+        "responsibilities": [
+          "Define arquitetura científica dos sistemas de IA",
+          "Escolhe e justifica abordagens metodológicas de ML",
+          "Define protocolos de avaliação e benchmarks",
+          "Analisa resultados e co-assina publicações",
+          "Participa de reuniões e relatórios técnicos"
+        ],
+        "badge": "SEM bolsa · SEM remuneração pessoal"
+      },
+      "company": {
+        "title": "THATPIX LTDA — Empresa PJ Contratada",
+        "subtitle": "Engenharia e Implementação Tecnológica",
+        "responsibilities": [
+          "Executa o pipeline de fine-tuning e operação do LLM",
+          "Desenvolve backend, frontend e infraestrutura",
+          "Implementa integração WhatsApp Business API",
+          "Entrega sistema com arquitetura assíncrona tolerante a conectividade intermitente",
+          "Suporte técnico durante os 36 meses"
+        ],
+        "note": "Restrições",
+        "noteItems": [
+          "NÃO co-autora publicações",
+          "NÃO toma decisões científicas"
+        ],
+        "disclosure": "Charles Cleivin é sócio-fundador da THATPIX LTDA. A dupla posição — co-pesquisador e responsável técnico da empresa contratada — é formalmente declarada. A separação de responsabilidades acima documenta a gestão desse relacionamento conforme as diretrizes FINEP."
+      }
+    },
+    "sovereigntyCallouts": [
+      {
+        "id": "sc1",
+        "badge": "📱 Escolha Estratégica",
+        "title": "WhatsApp: canal, não dependência",
+        "content": "O WhatsApp é a interface de acesso — não o núcleo tecnológico. Os modelos de linguagem, o corpus AgroLinguaBR e a lógica de inferência residem em infraestrutura centralizada operada pela THATPIX. A substituição do canal de entrega não compromete a base científica do projeto: o ecossistema prevê aplicativo próprio de comunicação (iOS/Android) e interface web como canais de fallback, já mapeados na arquitetura. A escolha pelo WhatsApp é pragmática: 99% dos agricultores já o utilizam, eliminando a barreira de adoção. Arquitetura assíncrona: o AgroAssistente não requer conexão contínua — a mensagem é enfileirada pelo WhatsApp e transmitida na próxima janela de sinal disponível; o processamento pelo LLM ocorre no servidor e a resposta retorna pelo mesmo mecanismo. O agricultor formula sua consulta sem conexão — apenas o envio e recebimento requerem sinal momentâneo, compatível com 3G intermitente do Semiárido. Uma queda de sinal não interrompe a consulta — diferenciando-se de APIs REST convencionais que exigem sessão HTTP ativa."
+      },
+      {
+        "id": "sc2",
+        "badge": "🌐 Soberania de Dados",
+        "title": "AgroLinguaBR: corpus de titularidade pública",
+        "content": "O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença aberta e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras."
+      },
+      {
+        "id": "sc3",
+        "badge": "🔓 Transferência Tecnológica",
+        "title": "Open-source como ato de soberania",
+        "content": "Todo o pipeline de fine-tuning, os scripts de avaliação e a arquitetura de orquestração de agentes serão liberados como código aberto ao final do projeto. O objetivo é que outros pesquisadores brasileiros — em outras culturas, regiões e línguas minoritárias — possam replicar a metodologia sem recomeçar do zero. Independência tecnológica começa com documentação aberta."
+      },
+      {
+        "id": "sc-gpu",
+        "badge": "Infraestrutura Computacional",
+        "title": "GPU UFSC + Cloud — Fine-tuning Soberano",
+        "content": "O fine-tuning do LLM base (Qwen2.5-7B) será executado em cluster GPU do LABELO/UFSC (A100 80GB × 4, disponível via convênio de pesquisa) com capacidade de burst em cloud (AWS ou GCP via créditos de pesquisa). A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos de iteração dentro do orçamento. O modelo resultante roda em inferência em hardware de R$ 8.000 (RTX 4090), removendo dependência de APIs proprietárias na operação."
+      },
+      {
+        "id": "sc-agroeval",
+        "badge": "Protocolo de Validação Científica",
+        "title": "AgroEval — Benchmark de Avaliação com Grupo Controle",
+        "content": "O AgroEval avalia 3 dimensões: (1) precisão factual — respostas verificadas contra base técnica da EMBRAPA; (2) taxa de alucinação — detecção de informações agrícolas fabricadas, com consequência potencial de dano (ex: dosagem incorreta de defensivo); (3) relevância contextual — adequação ao bioma e cultura da região do agricultor. A validação científica (Fase 2) utilizará grupo controle randomizado: n=50 agricultores recebem ATER convencional, n=800 recebem AgroAssistente — resultados medidos em adoção de boas práticas, redução de custo de insumos e tempo de resolução de dúvidas técnicas. Protocolo registrado no CONEP antes do piloto."
+      },
+      {
+        "id": "sc-env",
+        "badge": "Sustentabilidade Ambiental",
+        "title": "Impacto Ambiental Positivo — Menos Deslocamento, Mais Precisão",
+        "content": "O AgroAssistente reduz em média 4 visitas presenciais de técnico ATER por agricultor por ano — dado da literatura de extensão rural digital (Embrapa, 2023) — gerando diminuição mensurável de emissões de CO₂ por deslocamento. O corpus AgroLinguaBR incluirá módulo de manejo sustentável de solos e água (RE-07), alinhado ao PLANAPO. A orientação técnica personalizada via IA viabiliza adoção de práticas de agricultura de precisão que reduzem uso de defensivos e fertilizantes sintéticos, contribuindo para a transição agroecológica da agricultura familiar."
+      }
+    ],
+    "pilotRegions": [
+      {
+        "id": "pr-ce",
+        "municipality": "Crateús-CE / Sertão Cearense",
+        "profile": "Feijão + milho + caprinocultura, ~5.200 agricultores, cobertura 3G intermitente, EMATER-CE parceira",
+        "rationale": "Epicentro da crise de ATER no Nordeste: 1 técnico para cada 600+ famílias no Sertão cearense. Conectividade 3G intermitente valida a arquitetura assíncrona em condições extremas reais. Bioma Caatinga sub-representado em todo corpus NLP existente — garante diversidade linguística regional ao AgroLinguaBR. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
+      },
+      {
+        "id": "pr-pb",
+        "municipality": "Sousa-PB / Vale do Piancó",
+        "profile": "Ovinocaprinocultura + horticultura + PAA/PNAE consolidados, ~3.800 agricultores, EMATER-PB parceira",
+        "rationale": "Referência nacional em comercialização institucional da agricultura familiar — 73% dos agricultores já fornecem ao PAA/PNAE. A experiência cooperativa madura reduz a barreira de adoção do Coopera Digital e garante baseline robusto para medir impacto de renda. Paraíba tem o maior índice per capita de cooperativas de AF do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
+      },
+      {
+        "id": "pr-ba",
+        "municipality": "Vitória da Conquista-BA / Planalto Baiano",
+        "profile": "Café + bovinocultura + fruticultura, ~7.100 agricultores, conectividade 4G moderada, EMATER-BA parceira",
+        "rationale": "Contraste de perfil tecnológico deliberado: conectividade superior permite isolar o efeito da solução sobre produtividade vs. apenas conectividade. Maior pool de agricultores entre os três pilotos — fortalece a amostra da Fase 2 e valida a escalabilidade do AgroAssistente em contextos com infraestrutura acima da média do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros."
+      }
+    ],
+    "conflictGovernance": {
+      "title": "Mecanismos de Governanca — Conflito de Interesse Declarado",
+      "body": "A dupla posicao de Charles Cleivin (co-pesquisador e socio-fundador da THATPIX) encontra amparo no Art. 14-A da Lei 10.973/2004 e no Decreto 9.283/2018, e e gerenciada por tres mecanismos formais: (1) Comite Tecnico Externo — dois especialistas sem vinculo com a THATPIX (professor de NLP/IA de outra ICT + pesquisador da EMBRAPA Agricultura Digital), reuniao trimestral com ata registrada para validar escolhas metodologicas e arquiteturais; (2) Separacao formal de escopos — Charles nao assina contratos pela THATPIX neste projeto; decisoes comerciais da empresa sao tomadas por segundo socio ou procurador designado; (3) Precificacao referenciada — R$ 74.444/mes por escopo técnico em três áreas (treinamento e alinhamento LLM R$ 32k + backend, APIs e integração WhatsApp R$ 22k + infraestrutura soberana e MLOps R$ 15k + overhead PJ 8%) esta dentro da faixa de mercado documentada por pesquisa formal em Glassdoor, Revelo e Programathor (2025-2026)."
+    }
+  },
+  "s5": {
+    "number": "Seção 5",
+    "title": "Equipe do Projeto",
+    "heroImage": "/hero5.png",
+    "heroObjectPosition": "center",
+    "subtitle": "Composição multi-institucional deliberada — a titularidade dos ativos exige vínculo institucional com a ICT; a engenharia exige expertise de mercado que universidades não têm; o campo exige quem conhece a realidade de quem depende disso",
+    "headline": "A equipe certa para soberania não é a equipe mais fácil de montar.",
+    "members": [
+      {
+        "id": "coord",
+        "avatar": "👨‍🔬",
+        "name": "[Coordenador UFSC]",
+        "role": "Coordenador Geral do Projeto · Professor [UFSC / Depto.]",
+        "tags": [
+          "Gestão do projeto",
+          "Interlocução FINEP",
+          "Extensão rural"
+        ],
+        "dedication": "[X]% dedicação · Servidor público UFSC"
+      },
+      {
+        "id": "senior1",
+        "avatar": "🌾",
+        "name": "[Pesquisador Sênior 1]",
+        "role": "Pesquisador Sênior — Campo · Professor [UFSC]",
+        "tags": [
+          "Pesquisa de campo",
+          "Extensão rural",
+          "Metodologia participativa"
+        ],
+        "dedication": "[X]% dedicação · Sem remuneração via projeto"
+      },
+      {
+        "id": "senior2",
+        "avatar": "💻",
+        "name": "[Pesquisador Sênior 2]",
+        "role": "Pesquisador Sênior — Sistemas · Professor [UFSC]",
+        "tags": [
+          "Sistemas de informação",
+          "Ciência de dados",
+          "Governança digital"
+        ],
+        "dedication": "[X]% dedicação · Sem remuneração via projeto"
+      },
+      {
+        "id": "charles",
+        "avatar": "🤖",
+        "name": "Charles Cleivin",
+        "role": "Co-pesquisador Externo · Responsável pela linha de soluções digitais e IA",
+        "tags": [
+          "LLM fine-tuning",
+          "Visão computacional",
+          "WhatsApp API",
+          "Sistemas offline"
+        ],
+        "dedication": "Stack: Python · PyTorch · React Native · Next.js · Docker",
+        "highlight": true,
+        "badge": "Sem bolsa · Sem remuneração pessoal",
+        "badgeVariant": "blue"
+      },
+      {
+        "id": "thatpix",
+        "avatar": "🏢",
+        "name": "THATPIX LTDA",
+        "role": "Prestadora de Serviços Especializados (item 6.2.2.1) · CNPJ 49.827.360/0001-50",
+        "tags": [
+          "Engenharia de software",
+          "Implementação",
+          "Manutenção 36m"
+        ],
+        "isPJ": true,
+        "badgeVariant": "amber",
+        "budgetRef": {
+          "lineId": "thatpix",
+          "months": 36,
+          "team": [
+            {
+              "role": "Treinamento, fine-tuning e alinhamento de modelos LLM",
+              "rate": 32000
+            },
+            {
+              "role": "Backend, APIs soberanas e integração WhatsApp (LGPD)",
+              "rate": 22000
+            },
+            {
+              "role": "Infraestrutura de nuvem soberana, MLOps e monitoramento",
+              "rate": 15000
+            }
+          ],
+          "overheadPercent": 8
+        }
+      },
+      {
+        "id": "bolsistas",
+        "avatar": "🎓",
+        "name": "Equipe de Bolsistas",
+        "role": "12 bolsistas UFSC ao longo do projeto",
+        "tags": [
+          "1 Pós-Doutor",
+          "3 DTI-A (Dout.)",
+          "2 DTI-B (Mest.)",
+          "3 IC",
+          "3 Apoio Campo"
+        ],
+        "dedication": "Total bolsas: R$ 1.174.000 (16,8% — dentro do limite de 30%)"
+      }
+    ],
+    "marketContext": {
+      "badge": "Mercado de Talento em Inteligência Artificial",
+      "title": "Escassez Estrutural de Engenheiros de IA no Brasil: Contexto e Justificativa de Contratação",
+      "paragraphs": [
+        "A escassez global de talento em inteligência artificial é severa, mas adquire contornos estruturais únicos no Brasil. Engenheiros capazes de construir, ajustar fino e implantar modelos de linguagem em produção — não apenas consumir APIs externas, mas controlar a pilha tecnológica completa — são raríssimos no mercado nacional. O State of Data Brasil 2025-2026, elaborado pela Bain & Company em parceria com a comunidade Data Hackers — maior censo do ecossistema de dados da América Latina —, identificou menos de 500 profissionais com experiência avançada e autodeclarada em engenharia de LLMs com implantações em produção real. O mesmo levantamento aponta que 3,2% de toda a força de trabalho qualificada em dados de origem brasileira já reside no exterior, prestando serviços diretamente a corporações norte-americanas e europeias — e a consolidação definitiva do trabalho remoto internacional acelerou esse processo ao eliminar a barreira geográfica que antes mantinha esse talento no mercado doméstico.",
+        "A causa é estrutural e raramente reconhecida em editais públicos: competência em IA é, por definição, uma qualificação internacionalmente portátil. Um engenheiro brasileiro capaz de conduzir fine-tuning supervisionado em modelos de 7 bilhões de parâmetros, construir pipelines de recuperação aumentada por geração (RAG) e operar infraestrutura de inferência em escala não encontra barreiras para contratar remotamente com empresas dos Estados Unidos ou da Europa. A faixa salarial para esse perfil varia de US$ 120.000 a US$ 280.000 anuais no exterior — equivalente a R$ 68.000 a R$ 158.000 por mês nas cotações atuais. Empregadores brasileiros, incluindo projetos financiados por editais públicos, perdem sistematicamente esse talento para contratos internacionais antes mesmo de os projetos iniciarem.",
+        "Bolsas de pesquisa não são substitutas para esse perfil. A bolsa DTI-A, modalidade máxima disponível para tecnologistas no âmbito do CNPq e da FINEP, corresponde a R$ 4.100 mensais. O State of Data Brasil 2025-2026, elaborado pela Bain & Company em parceria com a comunidade Data Hackers — maior censo do ecossistema de dados da América Latina — mapeia o desalinhamento com precisão: 58,1% dos profissionais de dados em nível júnior no Brasil já registram remuneração de até R$ 4.000 mensais, piso que equivale exatamente ao teto da bolsa DTI-A. Em contrapartida, 52,2% dos profissionais sênior ganham acima de R$ 12.000 mensais, e 57,4% dos especialistas registram rendimentos superiores a R$ 16.000. A bolsa máxima de fomento tecnológico representa, portanto, o salário de entrada de um desenvolvedor júnior — não um instrumento atrativo para o perfil de arquiteto de LLMs que este projeto exige. A FINEP reconhece essa realidade ao exigir, no item 11.2 do Edital, pesquisa de mercado para contratos PJ — requisito que este projeto atende plenamente.",
+        "O valor contratado da THATPIX — R$ 74.444 mensais ao longo de 36 meses — é justificado pelo escopo de entrega em regime de preço fixo, conforme autorizado pelo Decreto Federal nº 9.283/2018. Diferente da contratação por alocação de horas individuais, a THATPIX assume obrigação por escopo, absorvendo todos os riscos operacionais de flutuação de pessoal, recrutamento e rotatividade em um segmento de altíssima demanda. Essa escolha é reforçada pelos dados do State of Data 2025-2026: 82,3% dos profissionais sênior em dados e IA afirmam que buscariam ativamente oportunidade remota caso exigido regime presencial — e apenas 15,9% dos engenheiros de ML aceitariam regime 100% presencial, a menor taxa de aceitação de presencialidade entre todas as categorias profissionais mapeadas. O escopo abrange três áreas técnicas de alta especialização: desenvolvimento, fine-tuning e alinhamento de modelos LLM com corpus agrícola; backend, APIs soberanas e integração compliant com LGPD do canal WhatsApp; e infraestrutura de nuvem soberana, MLOps e monitoramento em produção. A alocação interna de recursos — engenheiros, plenos ou agentes de IA supervisionados — é decisão operacional autônoma da THATPIX dentro do contrato por escopo. Pesquisa de mercado independente confirma que o valor representa o piso doméstico: plataformas como Toptal partem de US$ 80 a US$ 120 por hora por engenheiro especializado em LLMs, com taxas adicionais de até US$ 3.500 por profissional selecionado. Adicionalmente, profissionais que dominam custom LLM training e domain-specific fine-tuning — ambas as competências exigidas pelo Agro-BERT — recebem prêmios de especialização de +35% a +45% e +20% a +30% sobre a taxa base de mercado (Index.dev, 2026), posicionando o custo de contratação direta para este perfil nos patamares mais elevados da tabela salarial de especialistas em IA.",
+        "Charles Cleivin José da Costa Curty de Almeida integra este projeto como co-pesquisador pela razão mais direta: ele é o autor intelectual do modelo que esta proposta pretende construir. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica) — desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido durante o Ensino Médio — responsável pelos cinco prêmios simultâneos que o projeto obteve na FEBRACE 2013, sua trajetória demonstra capacidade de conceber e executar sistemas tecnológicos complexos sob restrições severas de custo e acessibilidade. Essa mesma lógica — IA soberana e de baixo custo operável no campo — estrutura o Roça Conectada. As decisões que determinarão o impacto científico do projeto exigem julgamento criativo e científico que não se contrata nem se terceiriza: a arquitetura de soberania, o design do corpus AgroLinguaBR, a abordagem de alinhamento ético-cultural, a hipótese de que modelos menores e especializados superam modelos generalistas no domínio agrícola. Seu perfil é internacionalmente verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países) e reconhecimento direto de Google, Samsung e FAPESP. Para perfis com histórico equivalente, o mercado norte-americano remunera entre US$ 150.000 e US$ 300.000 anuais. Sua co-pesquisa voluntária — sem remuneração financiada pelo projeto — representa tanto uma escolha intelectual quanto um subsídio contrafactual de R$ 85.000 a R$ 170.000 mensais que não onera o orçamento.",
+        "A dupla função de Charles — co-pesquisador institucional e fundador da empresa executora — encontra amparo legal explícito no Art. 14-A da Lei nº 10.973/2004 (Marco Legal de CT&I), que autoriza o pesquisador de ICT a exercer atividades de P&D em empresas privadas, e no Decreto Federal nº 9.283/2018, que regula a cooperação universidade-empresa. No âmbito institucional, a Resolução Normativa nº 164/2022/CUn da UFSC define a política de inovação e empreendedorismo da universidade, estabelecendo critérios formais para exatamente esse tipo de arranjo. A separação de escopos é estrutural e auditável: a direção científica (arquitetura de soberania, design do corpus, alinhamento de modelos, governança ética) é regida pelo convênio com a UFSC e permanece sob responsabilidade do co-pesquisador; o escopo contratado da THATPIX é delimitado exclusivamente à execução de engenharia — infraestrutura, implantação, integração e MLOps. São cadeias de accountability distintas, conformes às diretrizes de integridade da FINEP e ao Manual de Convênios e Termos de Cooperação. O resultado: o principal capital intelectual estratégico do projeto contribui gratuitamente via UFSC, enquanto a execução técnica é suprida por contrato de escopo a taxas domésticas de mercado verificáveis."
+      ],
+      "callouts": [
+        {
+          "value": "< 500",
+          "label": "engenheiros nacionais com experiência real em LLMs de produção",
+          "note": "State of Data Brasil 2024 — maior censo de ciência de dados da AL"
+        },
+        {
+          "value": "R$ 68k–158k/mês",
+          "label": "taxa de mercado internacional para o perfil técnico exigido",
+          "note": "equivalente a US$ 120k–280k/ano; THATPIX contratada a piso doméstico"
+        },
+        {
+          "value": "R$ 85k–170k/mês",
+          "label": "valor contrafactual da contribuição voluntária de Charles Cleivin",
+          "note": "não incluído no orçamento — subsídio direto ao projeto"
+        }
+      ],
+      "recommendations": [
+        {
+          "icon": "🏛",
+          "title": "Validação formal SINOVA/UFSC",
+          "body": "Submeter a modelagem jurídica da dupla atuação de Charles Cleivin à análise formal da Secretaria de Inovação da UFSC (RN nº 164/2022/CUn), garantindo que todas as atividades institucionais e privadas estejam coordenadas e documentadas antes da submissão."
+        },
+        {
+          "icon": "📋",
+          "title": "Evidências de entrega por escopo",
+          "body": "Estruturar a prestação de contas da THATPIX com base em artefatos técnicos verificáveis: marcos de otimização do Agro-BERT, relatórios de integração WhatsApp e logs de MLOps — em aderência às exigências do Manual de Convênios da FINEP."
+        },
+        {
+          "icon": "🔒",
+          "title": "Auditoria de conformidade LGPD",
+          "body": "Estabelecer rotinas periódicas de avaliação de privacidade para certificar que a infraestrutura soberana e o pipeline de processamento do corpus AgroLinguaBR cumpram integralmente com a LGPD, resguardando o projeto contra questionamentos jurídicos."
+        }
+      ]
+    },
+    "annex": {
+      "heading": "Pesquisa de Mercado",
+      "tables": [
+        {
+          "number": "Tabela 1",
+          "title": "Parâmetros Salariais e Taxas de Mercado para Especialistas em LLM (2025-2026)",
+          "headers": [
+            "Região Geográfica",
+            "Nível de Senioridade",
+            "Taxa Horária (USD)",
+            "Remuneração Anual (USD)",
+            "Equivalente Mensal (BRL)"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "América do Norte (EUA / Canadá)",
+                "Sênior / Lead Architect",
+                "US$ 120–300+/h",
+                "US$ 249.600–416.000+",
+                "R$ 115.000–190.000+"
+              ]
+            },
+            {
+              "cells": [
+                "Europa Ocidental (Reino Unido / Alemanha)",
+                "Sênior / Specialist",
+                "US$ 80–250/h",
+                "US$ 166.400–346.000",
+                "R$ 76.000–158.000"
+              ]
+            },
+            {
+              "cells": [
+                "América Latina (Geral)",
+                "Sênior",
+                "US$ 120–180/h",
+                "US$ 150.000–220.000",
+                "R$ 68.000–100.000"
+              ]
+            },
+            {
+              "cells": [
+                "Brasil (Mercado de Ponta)",
+                "Sênior / Lead",
+                "US$ 120–200/h",
+                "US$ 150.000–280.000",
+                "R$ 68.000–128.000"
+              ]
+            },
+            {
+              "cells": [
+                "América Latina (Geral)",
+                "Lead / Architect (+LLM premium)",
+                "US$ 180–200/h",
+                "US$ 220.000–280.000",
+                "R$ 100.000–128.000"
+              ]
+            }
+          ],
+          "note": "Valores em BRL calculados com base em jornada mensal de 160 horas e paridade cambial de referência de R$ 5,50/USD. Prêmios de especialização em custom LLM training (+35–45%) e domain-specific fine-tuning (+20–30%) já incorporados na faixa Lead/Architect.",
+          "source": "Index.dev LLM Developer Hourly Rates (2026); Remote AI Jobs Guide (2026); Toptal Review Tecla (2026)"
+        },
+        {
+          "number": "Tabela 2",
+          "title": "Comparativo de Custos Mensais de Desenvolvimento em IA (Base de Referência 2026)",
+          "headers": [
+            "Modelo de Aquisição",
+            "Detalhamento da Equipe e Taxas",
+            "Custo Mensal (BRL)",
+            "Risco Operacional e Governança"
+          ],
+          "rows": [
+            {
+              "cells": [
+                "Bolsas de Pesquisa DTI-A",
+                "3 bolsistas de nível máximo DTI-A (R$ 4.100/bolsa) — equivale ao piso salarial de desenvolvedor júnior (State of Data 2025-2026: 58,1% dos juniores ganham até R$ 4.000/mês)",
+                "R$ 12.300",
+                "Crítico — inviabilidade técnica de atração de perfis sênior; risco severo de paralisia do projeto por falta de capacidade de entrega"
+              ],
+              "variant": "critical"
+            },
+            {
+              "cells": [
+                "Contratação Individual (Toptal)",
+                "2 Engenheiros LLM Sênior a US$ 130/h + depósito US$ 500 + taxa mensal US$ 79 + placement fee US$ 3.500/profissional",
+                "R$ 228.800",
+                "Elevado — exposição direta ao câmbio; taxas de intermediação de plataforma; empresa assume risco integral de rotatividade e recrutamento"
+              ],
+              "variant": "warning"
+            },
+            {
+              "cells": [
+                "Prestação de Serviço por Escopo — THATPIX LTDA (CNPJ 49.827.360/0001-50)",
+                "Entrega integral dos 3 macro-escopos contratados em regime de preço fixo (Decreto Federal nº 9.283/2018) — risco de pessoal e operacional integralmente transferido à contratada",
+                "R$ 74.444",
+                "Baixo — custo fixado em BRL; sem exposição cambial; risco de atração, retenção e ociosidade de profissionais repassado à THATPIX"
+              ],
+              "highlight": true,
+              "variant": "success"
+            }
+          ],
+          "note": "Comparativo elaborado com base em pesquisa de mercado independente conforme exigido pelo item 11.2 do Edital FINEP AgriFam-ICT 2025.",
+          "source": "State of Data Brasil 2025-2026 (Bain & Company / Data Hackers); Toptal Review Tecla (2026); CNPq Tabela de Bolsas 2026; Decreto 9.283/2018"
+        }
+      ]
+    },
+    "expandedProfiles": [
+      {
+        "name": "Charles Cleivin",
+        "title": "Engenheiro de Software Sênior · Pesquisador em IA Aplicada",
+        "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
+        "location": "Brasil",
+        "email": "charlescleivin@gmail.com",
+        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica) — desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido no Ensino Médio no Colégio de Aplicação Emmanuel Leontsinis (RJ). 15+ premiações em ciência e tecnologia, incluindo cinco prêmios simultâneos na FEBRACE 2013 e Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países). Mais de 10 anos construindo sistemas de IA em produção: agentes inteligentes offline, pipelines de fine-tuning de LLMs e visão computacional aplicada ao agronegócio (estimativa de peso bovino em tempo real via vídeo, integrada ao WhatsApp). Especialização em arquiteturas de IA para ambientes com conectividade limitada — exatamente o cenário do pequeno produtor rural brasileiro que esta proposta atende.",
+        "highlights": [
+          { "value": "10+", "label": "Anos construindo sistemas de IA em produção" },
+          { "value": "15+", "label": "Medalhas e prêmios em competições científicas nacionais e internacionais" },
+          { "value": "95%+", "label": "Precisão em estimativa de peso bovino por visão computacional" },
+          { "value": "1M+", "label": "Imagens bovinas processadas por sistema de visão computacional próprio" }
+        ],
+        "skills": [
+          { "area": "LLM & Fine-tuning", "icon": "🧠", "items": ["Qwen2.5, Llama (7B+)", "LoRA / PEFT / 4-bit NF4", "H100 / A100 / RTX 4090", "Treinamento PT-BR + EN"] },
+          { "area": "AI & Agentes", "icon": "🤖", "items": ["PyTorch, Transformers, LangChain", "YOLOv9/v11, OpenCV, Whisper", "Agentes offline / air-gapped", "Coordenação multi-agente"] },
+          { "area": "Web & Mobile", "icon": "📱", "items": ["React Native (5+ anos)", "React / Next.js / TypeScript", "iOS (Swift) + Android (Kotlin)", "WebSocket, GraphQL, Firebase"] },
+          { "area": "Infraestrutura ML", "icon": "⚙️", "items": ["Hugging Face ecosystem", "Docker, Kubernetes, serverless", "Pipelines de treinamento distribuído", "BLEU, ROUGE, BERTScore"] }
+        ],
+        "projects": [
+          {
+            "name": "Sistema de Estimativa de Peso Bovino via WhatsApp",
+            "description": "Preditor de peso de gado em tempo real via vídeo usando OpenCV + PyTorch, com análise morfológica e consciência de postura. Integrado ao WhatsApp para contextos rurais — o agricultor envia o vídeo, recebe o peso estimado. Funciona sem internet.",
+            "tags": ["OpenCV", "PyTorch", "WhatsApp", "IA Offline", "Agropecuária"],
+            "relevance": "IA agropecuária em produção, integração WhatsApp com arquitetura assíncrona — o blueprint técnico exato do AgroAssistente IA."
+          },
+          {
+            "name": "Manual do Mundo — LLM Fine-tuning em Português",
+            "description": "Fine-tuning do Qwen2.5-7B em 3.000+ transcrições em português para o maior canal de ciências do Brasil (20M+ inscritos, 4,4B+ visualizações). Redução de loss de 27%, custo de $3/ciclo, habilitando geração ilimitada de conteúdo especializado.",
+            "tags": ["Qwen2.5-7B", "LoRA", "4-bit NF4", "Portuguese NLP", "RTX 4090"],
+            "relevance": "Prova direta de fine-tuning de LLM em português com eficiência industrial — o mesmo pipeline do AgroAssistente IA."
+          },
+          {
+            "name": "Gerador de Agentes LLM Offline",
+            "description": "Ferramenta que instancia agentes inteligentes a partir de qualquer documento, sem conexão à internet. Casos de uso: análise de contratos, classificação de normas, suporte técnico local. Portátil, air-gapped, sem dependência de nuvem.",
+            "tags": ["LangChain", "LLM Local", "Air-gapped", "NLP", "Electron"],
+            "relevance": "Experiência com LLMs locais e air-gapped diretamente aplicável ao design de resiliência assíncrona do AgroAssistente em zonas rurais de baixa conectividade."
+          }
+        ],
+        "softSkills": [
+          "Colaboração distribuída de alta performance — experiência em times multidisciplinares e internacionais",
+          "Liderança técnica e planejamento arquitetural",
+          "Aprendizado acelerado — domina novas stacks e domínios com profundidade e rapidez",
+          "Entrega sistemas de IA em produção dentro do prazo e do orçamento"
+        ],
+        "videos": [
+          { "url": "https://www.youtube.com/embed/7RqIokz26jU?start=136", "title": "Apresentação de tecnologia própria em evento internacional · China · 2019" }
+        ],
+        "cvFile": "/charles_cleivin_cv.pdf",
+        "heroImage": "/silhouette.jpg",
+        "heroCaption": "Macao-China Innovation & Entrepreneurship Competition · 2019",
+        "gallery": [
+          {
+            "src": "/primeiroLugarFebraceComReitoraDAUsp.jpg",
+            "caption": "5 prêmios simultâneos com o mesmo projeto",
+            "badge": "🏆 FEBRACE · USP · 2013",
+            "featured": true,
+            "awards": [
+              { "icon": "🥇", "text": "1º lugar entre todas as engenharias — Medalha de Ouro" },
+              { "icon": "🥈", "text": "2º lugar em inovação entre todos os projetos do Brasil" },
+              { "icon": "⚡", "text": "Prêmio Especial de Inovação — entregue pessoalmente pela General Electric" },
+              { "icon": "📚", "text": "Bolsa Estudar Ciência — concedida pela Fundação Estudar" },
+              { "icon": "🔧", "text": "Prêmio P.E.T. Mecatrônica — Engenharia Mecatrônica · USP" }
+            ],
+            "context": "O mesmo projeto credenciou Charles como 1 dos 3 brasileiros selecionados para a Expo-INGENIERIA 2013 (Costa Rica) — e no ano seguinte conquistou a Medalha de Ouro Geral no ESI Mundi 2014, Abu Dhabi, entre representantes de mais de 40 países."
+          },
+          {
+            "src": "/participacaonog20.jpeg",
+            "caption": "G20 Sustainable Finance Working Group — Transforming Sustainability Reporting for SMEs · Rio de Janeiro · 2024",
+            "badge": "🌍 G20 Brasil 2024 · Finanças Sustentáveis",
+            "context": "Evento promovido por iCS, Instituto Itaúsa e CDP no âmbito da presidência brasileira do G20, com foco em sustentabilidade e digitalização para pequenas e médias empresas — agenda diretamente alinhada ao ecossistema de impacto do Roça Conectada."
+          },
+          {
+            "src": "/showingGoldMedalInDubai.jpg",
+            "caption": "Medalha de Ouro — Premiação Geral · ESI Mundi, Abu Dhabi (EAU)",
+            "badge": "🥇 Medalha de Ouro Geral — ESI Mundi · MILSET · Abu Dhabi",
+            "context": "O ESI Mundi (Expo Science International), organizado pela MILSET, é um dos maiores eventos internacionais de ciência e engenharia do mundo, reunindo representantes de mais de 40 países perante banca técnica multilateral. A Medalha de Ouro na premiação geral atesta excelência científica em nível global."
+          }
+        ],
+        "profilePhoto": "/profile_pic.jpg"
+      },
+      {
+        "name": "Marco Rogério",
+        "title": "[Título a confirmar]",
+        "subtitle": "[Área · Especialização · Papel no projeto]",
+        "location": "[Localização]",
+        "bio": "[Bio a preencher. Deposite as informações em data/team/marco_rogerio.md para que este perfil seja atualizado.]",
+        "isPlaceholder": true
+      },
+      {
+        "name": "Fernanda",
+        "title": "[Título a confirmar]",
+        "subtitle": "[Área · Especialização · Papel no projeto]",
+        "location": "[Localização]",
+        "bio": "[Bio a preencher. Deposite as informações em data/team/fernanda.md para que este perfil seja atualizado.]",
+        "isPlaceholder": true
+      }
+    ]
+  },
+  "s6": {
+    "number": "Seção 6",
+    "title": "Orçamento Detalhado",
+    "heroImage": "/hero6.png",
+    "heroObjectPosition": "center 60%",
+    "subtitle": "R$ 7.000.000,00 · 36 meses · Todos os limites do edital respeitados",
+    "headline": "R$ 7M. Cada centavo dentro do limite.",
+    "total": "R$ 7M",
+    "donutSlices": [
+      {
+        "label": "Capital / Equipamentos",
+        "color": "#1a5c38",
+        "lineIds": [
+          "capital"
+        ]
+      },
+      {
+        "label": "Serviços PJ — THATPIX + Outros + Conectividade",
+        "color": "#0891b2",
+        "lineIds": [
+          "thatpix",
+          "other-pj",
+          "connectivity"
+        ]
+      },
+      {
+        "label": "Bolsas",
+        "color": "#e8970a",
+        "lineIds": [
+          "scholarships"
+        ]
+      },
+      {
+        "label": "Diárias + Passagens",
+        "color": "#4caf7a",
+        "lineIds": [
+          "per-diems",
+          "flights"
+        ]
+      },
+      {
+        "label": "Material + Desp. Operacionais",
+        "color": "#9333ea",
+        "lineIds": [
+          "materials",
+          "operational"
+        ]
+      }
+    ],
+    "lines": [
+      {
+        "icon": "🖥️",
+        "label": "Capital — Equipamentos",
+        "amount": 1450000,
+        "limit": "20,7% · limite 70% ✅",
+        "color": "#1a5c38",
+        "id": "capital"
+      },
+      {
+        "icon": "🏢",
+        "label": "THATPIX — Serviços PJ",
+        "amount": 2680000,
+        "limit": "38,3% · sem limite ✅",
+        "color": "#0891b2",
+        "id": "thatpix"
+      },
+      {
+        "icon": "🔧",
+        "label": "Outros Serviços PJ",
+        "amount": 320000,
+        "limit": "4,6% · sem limite ✅",
+        "color": "#0d9488",
+        "id": "other-pj"
+      },
+      {
+        "icon": "🎓",
+        "label": "Bolsas (12 bolsistas)",
+        "amount": 1174000,
+        "limit": "16,8% · limite 30% ✅",
+        "color": "#e8970a",
+        "id": "scholarships"
+      },
+      {
+        "icon": "📡",
+        "label": "Conectividade Rural — Regiões-Piloto (item 6.2.2.1)",
+        "amount": 108000,
+        "limit": "1,5% · sem limite ✅",
+        "color": "#0d9488",
+        "id": "connectivity"
+      },
+      {
+        "icon": "📦",
+        "label": "Material de Consumo",
+        "amount": 273000,
+        "limit": "3,9% · sem limite ✅",
+        "color": "#4caf7a",
+        "id": "materials"
+      },
+      {
+        "icon": "✈️",
+        "label": "Diárias",
+        "amount": 345000,
+        "limit": "4,9% · limite 5% ✅",
+        "color": "#64748b",
+        "id": "per-diems"
+      },
+      {
+        "icon": "🚌",
+        "label": "Passagens",
+        "amount": 300000,
+        "limit": "4,3% · limite 5% ✅",
+        "color": "#7c3aed",
+        "id": "flights"
+      },
+      {
+        "icon": "🏛️",
+        "label": "Desp. Operacionais Proponente",
+        "amount": 350000,
+        "limit": "5,0% · fixo 5% ✅",
+        "color": "#9333ea",
+        "id": "operational"
+      }
+    ],
+    "complianceTable": [
+      {
+        "rubric": "Despesas de Capital (equipamentos)",
+        "limit": "máx. 70%",
+        "status": "Dentro do limite",
+        "lineIds": [
+          "capital"
+        ]
+      },
+      {
+        "rubric": "Obras e Instalações",
+        "limit": "máx. 10%",
+        "proposed": "R$ 0",
+        "percent": "0%",
+        "status": "Não aplicável"
+      },
+      {
+        "rubric": "Pagamento de Pessoal",
+        "limit": "máx. 30%",
+        "proposed": "R$ 0",
+        "percent": "0%",
+        "status": "ICT federal"
+      },
+      {
+        "rubric": "Bolsas",
+        "limit": "máx. 30%",
+        "status": "Dentro do limite",
+        "lineIds": [
+          "scholarships"
+        ]
+      },
+      {
+        "rubric": "Diárias",
+        "limit": "máx. 5%",
+        "status": "Dentro do limite",
+        "lineIds": [
+          "per-diems"
+        ]
+      },
+      {
+        "rubric": "Passagens",
+        "limit": "máx. 5%",
+        "status": "Dentro do limite",
+        "lineIds": [
+          "flights"
+        ]
+      },
+      {
+        "rubric": "Desp. Operacionais Proponente",
+        "limit": "5% fixo",
+        "status": "Exato",
+        "lineIds": [
+          "operational"
+        ]
+      },
+      {
+        "rubric": "Serviços PJ (item 6.2.2.1)",
+        "limit": "Sem limite",
+        "status": "Sem restrição",
+        "lineIds": [
+          "thatpix",
+          "other-pj",
+          "connectivity"
+        ]
+      }
+    ],
+    "equipmentItems": [
+      {
+        "item": "Servidores GPU para fine-tuning",
+        "spec": "2x NVIDIA A100 80GB ou RTX 4090 — LLM >=7B com QLoRA 4-bit",
+        "qty": 2,
+        "unitValue": "R$ 120.000",
+        "total": "R$ 240.000",
+        "amount": 240000
+      },
+      {
+        "item": "Servidor de inferencia em producao",
+        "spec": "GPU dedicado para serving — 2.500 MAU latencia <3s",
+        "qty": 1,
+        "unitValue": "R$ 95.000",
+        "total": "R$ 95.000",
+        "amount": 95000
+      },
+      {
+        "item": "Storage NAS — corpus e backups",
+        "spec": "NAS 100TB RAID6 para corpus AgroLinguaBR e snapshots",
+        "qty": 1,
+        "unitValue": "R$ 45.000",
+        "total": "R$ 45.000",
+        "amount": 45000
+      },
+      {
+        "item": "Kits Starlink (hardware + 12 meses)",
+        "spec": "Conectividade backup para cooperativas em areas sem 4G",
+        "qty": 15,
+        "unitValue": "R$ 15.000",
+        "total": "R$ 225.000",
+        "amount": 225000
+      },
+      {
+        "item": "Tablets para equipe de campo",
+        "spec": "Coleta de dados e treinamento de multiplicadores",
+        "qty": 30,
+        "unitValue": "R$ 3.000",
+        "total": "R$ 90.000",
+        "amount": 90000
+      },
+      {
+        "item": "Workstations para desenvolvimento",
+        "spec": "Anotacao de corpus e desenvolvimento de software",
+        "qty": 10,
+        "unitValue": "R$ 12.000",
+        "total": "R$ 120.000",
+        "amount": 120000
+      },
+      {
+        "item": "Infraestrutura de rede e energia",
+        "spec": "No-breaks, switches, cabeamento, climatizacao sala servidores",
+        "qty": 1,
+        "unitValue": "R$ 85.000",
+        "total": "R$ 85.000",
+        "amount": 85000
+      },
+      {
+        "item": "Licencas de software e ferramentas",
+        "spec": "GitHub Enterprise, Weights & Biases, Label Studio, seguranca",
+        "qty": 1,
+        "unitValue": "R$ 80.000",
+        "total": "R$ 80.000",
+        "amount": 80000
+      },
+      {
+        "item": "Equipamentos reserva e contingencia",
+        "spec": "Componentes de reposicao e escala Fase 3",
+        "qty": 1,
+        "unitValue": "R$ 345.000",
+        "total": "R$ 345.000",
+        "amount": 345000
+      },
+      {
+        "item": "Roteadores e access points WiFi (cooperativas)",
+        "spec": "Conectividade interna nas 18 cooperativas-piloto",
+        "qty": 30,
+        "unitValue": "R$ 1.500",
+        "total": "R$ 45.000",
+        "amount": 45000
+      },
+      {
+        "item": "Perifericos e acessorios",
+        "spec": "Monitores, teclados, headsets, cabos",
+        "qty": 1,
+        "unitValue": "R$ 45.000",
+        "total": "R$ 45.000",
+        "amount": 45000
+      },
+      {
+        "item": "Computadores portateis — pesquisadores de campo",
+        "spec": "Notebooks para pesquisadores UFSC em visitas e coleta",
+        "qty": 5,
+        "unitValue": "R$ 7.000",
+        "total": "R$ 35.000",
+        "amount": 35000
+      }
+    ]
+  },
+  "s7": {
+    "number": "Seção 7",
+    "title": "Parcerias Previstas",
+    "heroImage": "/hero7.png",
+    "subtitle": "Parceiros que já tentam resolver o problema — sem as ferramentas que este projeto constrói. O que este projeto faz é dar infraestrutura a quem já tem a demanda real.",
+    "headline": "Demanda documentada, não demanda presumida.",
+    "alertMessage": "Os parceiros listados abaixo não foram selecionados por necessidade de carta — foram selecionados porque cada um enfrenta hoje, sem solução, o problema que este projeto resolve. As cartas de anuência formalizam uma demanda que já existe no campo. **Contato imediato com cooperativas âncora, EMATER estadual e FETRAF/CONTAG** — cartas institucionais levam 10–20 dias úteis para aprovação interna. Não espere o edital fechar para iniciar esse processo.",
+    "partners": [
+      {
+        "id": "coop1",
+        "priority": "critical",
+        "priorityLabel": "Prioridade Crítica",
+        "name": "3 Cooperativas Âncora (Pilotos)",
+        "role": "Parceiros âncora dos pilotos Fase 2 — fornecem acesso ao campo, base de usuários reais e dados de validação. Mínimo 50 associados ativos, participação no PAA ou PNAE.",
+        "deadline": "Contatar esta semana · Carta até 30/05"
+      },
+      {
+        "id": "emater",
+        "priority": "critical",
+        "priorityLabel": "Prioridade Crítica",
+        "name": "EMATER Estadual",
+        "role": "Canal de distribuição e amplificação — agentes de ATER usam e disseminam o AgroAssistente. EMATER-GO, EMATER-MG, EMATER-RN ou equivalente conforme região-piloto.",
+        "deadline": "Contatar esta semana · Carta até 05/06"
+      },
+      {
+        "id": "fetraf",
+        "priority": "high",
+        "priorityLabel": "Alta Prioridade",
+        "name": "FETRAF-Brasil ou CONTAG",
+        "role": "Carta de apoio institucional nacional. Alto peso político na avaliação — sinaliza endosso dos próprios agricultores familiares. Legitimidade social máxima.",
+        "deadline": "Contatar até 20/05 · Carta até 10/06"
+      },
+      {
+        "id": "unicafes",
+        "priority": "high",
+        "priorityLabel": "Alta Prioridade",
+        "name": "UNICAFES (regional ou nacional)",
+        "role": "Endosso institucional do sistema cooperativo da agricultura familiar. Carta de apoio com menção ao interesse em adotar a plataforma para sua rede.",
+        "deadline": "Contatar até 25/05 · Carta até 15/06"
+      },
+      {
+        "id": "quilombola",
+        "priority": "high",
+        "priorityLabel": "Alta Prioridade",
+        "name": "Comunidade Quilombola / CONAQ",
+        "role": "O edital menciona explicitamente comunidades quilombolas como público prioritário. Diferencial significativo no critério 5 e alinhamento ao perfil de inclusão do MCTI.",
+        "deadline": "Contatar até 25/05 · Carta até 15/06"
+      },
+      {
+        "id": "prefeituras",
+        "priority": "medium",
+        "priorityLabel": "Média Prioridade",
+        "name": "2 Prefeituras Municipais Rurais",
+        "role": "Apoio logístico para eventos de capacitação. IDH abaixo de 0,65. Secretaria de Agricultura ativa. Preferencialmente Norte, Nordeste ou Centro-Oeste.",
+        "deadline": "Contatar até 01/06 · Carta até 20/06"
+      },
+      {
+        "id": "embrapa",
+        "priority": "medium",
+        "priorityLabel": "Desejável",
+        "name": "EMBRAPA (unidade regional)",
+        "role": "EMBRAPA Informática Agropecuária (Campinas) ou EMBRAPA Agricultura Familiar (Petrolina). Validação científica do conteúdo do AgroAssistente, acesso ao acervo técnico.",
+        "deadline": "Contatar até 01/06 · Acordo até 20/06"
+      },
+      {
+        "id": "mst",
+        "priority": "medium",
+        "priorityLabel": "Desejável",
+        "name": "MST Regional / MPA",
+        "role": "Acesso a assentamentos de reforma agrária. Alta aderência ao perfil de público prioritário do edital. Complementa a parceria com FETRAF/CONTAG.",
+        "deadline": "Conforme disponibilidade regional"
+      }
+    ],
+    "actionTimeline": [
+      {
+        "label": "Semana 1 — 13 a 17/05",
+        "description": "Contato inicial com cooperativas âncora, EMATER estadual e FETRAF/CONTAG. Envio de modelo de carta de anuência para agilizar o processo."
+      },
+      {
+        "label": "Semana 2 — 20 a 24/05",
+        "description": "Definição da região-piloto, nome do coordenador UFSC e laboratório. Contato com UNICAFES e identificar comunidade quilombola da região."
+      },
+      {
+        "label": "Semana 3 — 27 a 31/05",
+        "description": "Receber cartas âncora (cooperativas + EMATER). Iniciar cadastro na plataforma financiamento.finep.gov.br."
+      },
+      {
+        "label": "Semana 4 — 03 a 07/06",
+        "description": "Preencher formulário na plataforma Finep. Compilar pesquisa de mercado para justificar valor THATPIX (item 11.2)."
+      },
+      {
+        "label": "Semanas 5 e 6 — 10 a 21/06",
+        "description": "Receber cartas complementares. Revisão jurídica e validação interna UFSC/FAPEU. Ajustes finais do plano de trabalho."
+      },
+      {
+        "label": "Semana 7 — 24 a 26/06",
+        "description": "Submissão final na plataforma · Prazo: 26/06/2026 às 17h (Brasília). Ter todos os documentos digitalizados e prontos até 24/06 para margem de segurança.",
+        "isCritical": true
+      }
+    ],
+    "disseminationRoutes": [
+      {
+        "audience": "Agricultores familiares participantes (2.500)",
+        "mechanism": "AgroAssistente IA via WhatsApp — acesso permanente pós-projeto sem custo; treinamento de uso por multiplicadores EMATER",
+        "when": "Fase 2 (mês 13) → permanente"
+      },
+      {
+        "audience": "Cooperativas e associações (18)",
+        "mechanism": "Plataforma Coopera Digital — licença gratuita permanente; capacitação de gestores pelo projeto (16h/cooperativa)",
+        "when": "Fase 2 (mês 13) → permanente"
+      },
+      {
+        "audience": "Multiplicadores EMATER (350)",
+        "mechanism": "Programa de capacitação presencial/remoto (40h/multiplicador); manual técnico de operação e repertório de perguntas frequentes regionalizadas",
+        "when": "Fases 2 e 3 (meses 13–36)"
+      },
+      {
+        "audience": "Comunidade científica nacional e internacional",
+        "mechanism": "AgroLinguaBR publicado com DOI Zenodo (licença MIT/Apache 2.0); AgroEval publicado com código-fonte (GitHub UFSC); 5 artigos em periódicos indexados",
+        "when": "Fase 2 (mês 24) e Fase 3 (mês 36)"
+      },
+      {
+        "audience": "ICTs, startups e organizações do ecossistema",
+        "mechanism": "AgroAPI pública com documentação completa (OpenAPI/Swagger), sandbox gratuito para testes e registro aberto de uso",
+        "when": "Fase 3 (mês 30) → permanente"
+      },
+      {
+        "audience": "Políticas públicas e governo federal",
+        "mechanism": "Relatório final entregue ao MCTI, MDA e FINEP; apresentação em audiências públicas e seminários do Programa AgriFam; dados de impacto disponibilizados ao IBGE para integração ao Censo Agropecuário",
+        "when": "Fase 3 (mês 36)"
+      }
+    ]
+  },
+  "s8": {
+    "number": "Seção 8",
+    "title": "Indicadores e Metas",
+    "heroImage": "/hero8.png",
+    "subtitle": "Cada KPI é a assinatura observável de uma barreira derrubada — não uma métrica de entrega de projeto",
+    "headline": "O que medimos é o que prometemos desfazer.",
+    "counters": [
+      {
+        "icon": "👨‍🌾",
+        "count": 2500,
+        "label": "Agricultores ativos (Fase 3)"
+      },
+      {
+        "icon": "🏛️",
+        "count": 18,
+        "label": "Cooperativas implantadas"
+      },
+      {
+        "icon": "🎓",
+        "count": 350,
+        "label": "Multiplicadores capacitados"
+      },
+      {
+        "icon": "📝",
+        "count": 5,
+        "label": "Artigos científicos"
+      }
+    ],
+    "indicators": [
+      {
+        "indicator": "Agricultores com AgroAssistente ativo (MAU)",
+        "phase1": "—",
+        "phase2": "800",
+        "phase3": "2.500"
+      },
+      {
+        "indicator": "Cooperativas com Coopera Digital ativo",
+        "phase1": "—",
+        "phase2": "6",
+        "phase3": "18"
+      },
+      {
+        "indicator": "Municípios alcançados",
+        "phase1": "—",
+        "phase2": "8",
+        "phase3": "25"
+      },
+      {
+        "indicator": "Multiplicadores capacitados (acumulado)",
+        "phase1": "20",
+        "phase2": "120",
+        "phase3": "350"
+      },
+      {
+        "indicator": "Redução de tempo administrativo (cooperativas)",
+        "phase1": "—",
+        "phase2": "≥ 30%",
+        "phase3": "≥ 40%"
+      },
+      {
+        "indicator": "Taxa de resolução do AgroAssistente",
+        "phase1": "—",
+        "phase2": "≥ 70%",
+        "phase3": "≥ 80%"
+      },
+      {
+        "indicator": "Satisfação agricultores (escala 1–5)",
+        "phase1": "—",
+        "phase2": "≥ 4,0",
+        "phase3": "≥ 4,2"
+      },
+      {
+        "indicator": "Tamanho corpus AgroLinguaBR (pares)",
+        "phase1": "10.000",
+        "phase2": "18.000",
+        "phase3": "25.000"
+      },
+      {
+        "indicator": "F1-score benchmark agro-QA em português",
+        "phase1": "Baseline",
+        "phase2": "≥ 0,72",
+        "phase3": "≥ 0,80"
+      },
+      {
+        "indicator": "Uptime do sistema em produção",
+        "phase1": "—",
+        "phase2": "≥ 99,0%",
+        "phase3": "≥ 99,5%"
+      },
+      {
+        "indicator": "Artigos científicos submetidos (acumulado)",
+        "phase1": "1",
+        "phase2": "3",
+        "phase3": "5"
+      },
+      {
+        "indicator": "Repositório open-source publicado",
+        "phase1": "—",
+        "phase2": "Beta",
+        "phase3": "Estável + DOI"
+      },
+      {
+        "indicator": "Consultas sobre manejo orgânico/agroecológico (% das interações — RE-04)",
+        "phase1": "—",
+        "phase2": "baseline",
+        "phase3": "≥ 20%"
+      }
+    ],
+    "impactNarrative": "A soberania tecnológica não é um certificado — é o estado em que uma família agricultora toma decisões melhores porque teve acesso a conhecimento técnico preciso no momento que precisou, sem depender de um técnico que não existe ou de uma plataforma estrangeira que pode desaparecer. Cada um dos 2.500 agricultores ativos ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24h por dia, em português regional, via WhatsApp — canal que já usa —, sem custo de deslocamento e sem dependência de API estrangeira. A literatura de extensão rural digital (FAO 2022; Embrapa 2023) documenta redução média de 12–18% no custo de insumos quando o agricultor acessa orientação técnica em tempo real. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto. O AgroEval, o AgroLinguaBR e a AgroAPI permanecem disponíveis como patrimônio público: os próximos 3,9 milhões de agricultores que vierem depois desta fase não precisam pagar para construir de novo o que este projeto já construiu.",
+    "leverage": {
+      "title": "A Alavanca — Como um Investimento Público Vira Renda Rural",
+      "subtitle": "R$ 7M aplicados uma única vez → renda recorrente permanente para 25.000 famílias",
+      "investment": "R$ 7M",
+      "investmentLabel": "investimento único · meses 1–36",
+      "annualReturn": "R$ 108M/ano",
+      "familyCount": "25.000 famílias",
+      "costPerFamily": "R$ 280",
+      "callout": "Custo: uma vez. Benefício: para sempre.",
+      "note": "Projeção conservadora: 25.000 famílias × R$ 4.320 de aumento médio de renda anual (RESR 2020, método PSM). Ativos digitais permanecem públicos indefinidamente.",
+      "permanentAssets": [
+        { "icon": "📚", "name": "AgroLinguaBR Corpus", "license": "25k pares · DOI Zenodo · MIT" },
+        { "icon": "🤖", "name": "AgroAssistente LLM", "license": "Fine-tuned · UFSC · Apache 2.0" },
+        { "icon": "🔗", "name": "AgroAPI", "license": "Camada pública · REST · MIT" }
+      ],
+      "years": [
+        { "label": "Ano 1", "sublabel": "pós-entrega", "cumulative": "R$ 108M", "roi": "15×", "roiVariant": "warm", "barPercent": 10 },
+        { "label": "Ano 2", "sublabel": "pós-entrega", "cumulative": "R$ 216M", "roi": "31×", "roiVariant": "gold", "barPercent": 20 },
+        { "label": "Ano 3", "sublabel": "pós-entrega", "cumulative": "R$ 324M", "roi": "46×", "roiVariant": "gold", "barPercent": 30 },
+        { "label": "Ano 5", "sublabel": "pós-entrega", "cumulative": "R$ 540M", "roi": "77×", "roiVariant": "sage", "barPercent": 50 },
+        { "label": "Ano 10", "sublabel": "pós-entrega", "cumulative": "R$ 1,08B", "roi": "154×", "roiVariant": "bright", "barPercent": 100 }
+      ]
+    }
+  },
+  "s9": {
+    "number": "Seção 9",
+    "title": "Riscos e Mitigações",
+    "heroImage": "/hero9.png",
+    "heroObjectPosition": "center 60%",
+    "subtitle": "Matriz de riscos técnicos, institucionais e de campo — cada risco foi identificado no diagnóstico de projetos similares, não na imaginação da equipe proponente",
+    "headline": "11 riscos mapeados. 11 respostas prontas.",
+    "risks": [
+      {
+        "id": "R01",
+        "title": "Desempenho insuficiente do LLM agrícola",
+        "mitigation": "F1 abaixo da meta no benchmark especializado → fallback RAG disponível; 2 ciclos de re-treinamento previstos no orçamento",
+        "probability": "Média",
+        "level": "high"
+      },
+      {
+        "id": "R02",
+        "title": "Baixa adoção do AgroAssistente",
+        "mitigation": "MAU abaixo da meta → design co-criado com agricultores no diagnóstico; onboarding via multiplicadores presenciais",
+        "probability": "Média",
+        "level": "high"
+      },
+      {
+        "id": "R03",
+        "title": "Conectividade insuficiente nas regiões-piloto",
+        "mitigation": "Internet ainda mais precária do que o diagnóstico indica → 15 kits Starlink no orçamento; modelo roda localmente no servidor da cooperativa",
+        "probability": "Alta",
+        "level": "high"
+      },
+      {
+        "id": "R04",
+        "title": "Desengajamento de cooperativas parceiras",
+        "mitigation": "Redução de participação durante o projeto → acordo de cooperação técnica (não apenas carta); 2 cooperativas reserva identificadas",
+        "probability": "Média",
+        "level": "high"
+      },
+      {
+        "id": "R05",
+        "title": "Dependência de pessoas-chave (Charles / THATPIX)",
+        "mitigation": "Código documentado progressivamente; bolsistas DTI-A acompanham todas as decisões de IA desde a Fase 1",
+        "probability": "Baixa",
+        "level": "medium"
+      },
+      {
+        "id": "R06",
+        "title": "Atrasos burocráticos na UFSC / fundação",
+        "mitigation": "Iniciar contratação THATPIX no mês 1; primeiros 60 dias com atividades independentes de infraestrutura (diagnóstico, revisão bib.)",
+        "probability": "Alta",
+        "level": "high"
+      },
+      {
+        "id": "R07",
+        "title": "Não conformidade com LGPD",
+        "mitigation": "Consultoria jurídica LGPD (R$ 80k no orçamento) desde a Fase 1; arquitetura federada com soberania de dados por cooperativa",
+        "probability": "Baixa",
+        "level": "medium"
+      },
+      {
+        "id": "R08",
+        "title": "Mudanças nas APIs do WhatsApp (Meta)",
+        "mitigation": "Camada de abstração de canal na arquitetura desde o início: aplicativo próprio de comunicação (iOS/Android) e interface web são os canais de fallback primários, já especificados no escopo de engenharia da THATPIX — mudança de canal não exige redesenho do núcleo de IA.",
+        "probability": "Média",
+        "level": "medium"
+      },
+      {
+        "id": "R09",
+        "title": "Inflação/câmbio impactando equipamentos",
+        "mitigation": "Aquisição de servidores GPU prioritária no T1; reserva de contingência no material de consumo; 3 cotações por item",
+        "probability": "Média",
+        "level": "medium"
+      },
+      {
+        "id": "R10",
+        "title": "Descontinuidade de políticas públicas (PAA/PNAE)",
+        "mitigation": "Módulo de comercialização também atende mercados privados (feiras, restaurantes, e-commerce local) — não depende exclusivamente de inst.",
+        "probability": "Baixa",
+        "level": "low"
+      },
+      {
+        "id": "R11",
+        "title": "Descontinuidade operacional pós-projeto (mês 37+)",
+        "mitigation": "Mitigação em três camadas: (1) modelo fine-tuned em servidor da UFSC zera custo de API — custo pós-projeto limita-se a energia elétrica e manutenção de hardware amortizado; (2) negociação de acordo de cooperação técnica com EMATER/EMBRAPA iniciada no mês 24 para absorção operacional; (3) código MIT/Apache 2.0 garante que qualquer ICT ou EMATER estadual possa hospedar independentemente. Indicador de acompanhamento: MoU com parceiro de absorção assinado até o mês 32.",
+        "probability": "Média",
+        "level": "medium"
+      }
+    ],
+    "sustainabilityScenarios": [
+      {
+        "id": "ss1",
+        "scenario": "Cenário 1 (Probabilidade Média-Alta) — Adoção pelas EMATERs estaduais como linha de ATER digital",
+        "description": "As EMATERs estaduais — especialmente as três dos municípios-piloto — já utilizam WhatsApp como canal informal de atendimento a agricultores. A AgroAPI reduz o custo de integração ao seu workflow existente ao mínimo: não é uma nova plataforma, é uma camada que se conecta ao que já usam. O modelo roda em servidor da UFSC com custo marginal próximo de zero (energia elétrica + manutenção de hardware amortizado) — não há mensalidade de API nem dependência de fornecedor externo. A transferência de titularidade ao mês 36 garante que a UFSC pode hospedar e operar o modelo sem depender da THATPIX. Marco: protocolo de negociação com ao menos uma EMATER estadual iniciado no mês 24; MoU de absorção operacional assinado até o mês 32. Este cenário não depende de aprovação de orçamento ministerial — depende apenas da decisão operacional de uma EMATER estadual, que já tem o problema que o sistema resolve.",
+        "responsible": "Coordenador UFSC + EMATER parceiras (CE, PB, BA)",
+        "probability": "Média-Alta — EMATERs têm o problema, o custo de adoção é mínimo, o sistema é compatível com o workflow existente"
+      },
+      {
+        "id": "ss2",
+        "scenario": "Cenário 2 (Probabilidade Média) — Continuidade via PBIA 2024–2028 para próxima iteração",
+        "description": "O PBIA 2024–2028 financia explicitamente o desenvolvimento de modelos nacionais de linguagem em português. O AgroLinguaBR e o LLM fine-tuned, ao serem publicados com DOI público e titularidade UFSC ao mês 36, tornam-se os ativos fundacionais sobre os quais a próxima iteração do PBIA pode construir — sem recomeçar do zero. O BERTimbau, modelo base de linguagem para português desenvolvido pela USP, tornou-se referência nacional e é mantido pela comunidade de NLP há anos sem financiamento dedicado contínuo. O precedente existe. O Roça Conectada posiciona o AgroLinguaBR como o equivalente para o domínio agrícola. A proposta não assume que o PBIA financiará automaticamente — assume que o ativo criado será suficientemente valioso para atrair o próximo financiamento quando disponível.",
+        "responsible": "UFSC (titularidade) + comunidade de pesquisa em NLP agrícola",
+        "probability": "Média — depende da continuidade do PBIA e do valor demonstrado dos ativos criados no projeto"
+      },
+      {
+        "id": "ss3",
+        "scenario": "Cenário 3 (Probabilidade Média) — Continuidade open-source pela comunidade de pesquisa",
+        "description": "O AgroLinguaBR publicado sob MIT/Apache 2.0 com DOI permite que qualquer universidade brasileira, grupo de pesquisa ou organização pública use, adapte e evolua o corpus e o modelo sem dependência da UFSC ou da THATPIX. Isso não é um cenário hipotético: é o modelo de sustentabilidade que manteve o BERTimbau (USP) como referência nacional de NLP em português por anos sem funding dedicado contínuo, e que sustenta dezenas de modelos open-source na comunidade Hugging Face. A distinção crítica em relação ao cenário atual: o que o Roça Conectada produz não é um serviço que precisa de financiamento para continuar existindo — é um ativo de software com custo de operação próximo de zero, disponível para qualquer ator que queira usá-lo. Sustentabilidade não é ausência de risco de abandono: é ausência de dependência de um único financiador. A licença aberta garante exatamente isso.",
+        "responsible": "Comunidade nacional de pesquisa em NLP e IA agrícola — sem dependência institucional específica",
+        "probability": "Média — precedente sólido no ecossistema open-source brasileiro (BERTimbau, PTT5); independe de decisão de nenhuma entidade específica"
+      }
+    ]
+  },
+  "s10": {
+    "number": "Seção 10",
+    "title": "Checklist de Submissão",
+    "heroImage": "/hero10.png",
+    "subtitle": "Lista completa de documentos · Clique para marcar como concluído",
+    "headline": "Nada faltando no dia 26 de junho.",
+    "alertMessage": "Recomenda-se ter todos os documentos digitalizados e prontos até **24/06** para margem de segurança técnica na plataforma.",
+    "groups": [
+      {
+        "id": "proposta",
+        "title": "Documentos da Proposta",
+        "items": [
+          {
+            "id": "p1",
+            "label": "Formulário de proposta preenchido na plataforma financiamento.finep.gov.br",
+            "detail": "Coordenador UFSC + FAPEU/FEESC",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "p2",
+            "label": "Plano de Trabalho detalhado no formato FINEP",
+            "detail": "Documento digital completo com S1–S10 + seção Charles. Falta: revisão bibliográfica, análise de gênero, preenchimento de placeholders pela equipe UFSC.",
+            "status": "Em elaboração — ~75%",
+            "statusVariant": "inprogress"
+          },
+          {
+            "id": "p3",
+            "label": "Planilha de orçamento no formato FINEP",
+            "detail": "Importar valores da Seção 6: Equipamentos R$ 1,45M · THATPIX R$ 2,68M · Outros PJ R$ 320K · Bolsas R$ 1,174M · Diárias R$ 345K · Passagens R$ 300K · Desp. Operacionais R$ 350K. Total: R$ 7,00M.",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "p4",
+            "label": "Cronograma de desembolso por rubrica e por fase",
+            "detail": "FAPEU/FEESC",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "ict",
+        "title": "Documentos Institucionais da UFSC",
+        "items": [
+          {
+            "id": "i1",
+            "label": "Política de Inovação da UFSC — OBRIGATÓRIO para ICT pública federal (item 5.7 do edital)",
+            "detail": "SINOVA/UFSC — verificar disponibilidade imediatamente",
+            "status": "Crítico",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "i2",
+            "label": "Cartão CNPJ atualizado da UFSC",
+            "detail": "Disponível na Receita Federal",
+            "status": "Disponível",
+            "statusVariant": "available"
+          },
+          {
+            "id": "i3",
+            "label": "Certidão Negativa de Débitos Federais da UFSC (CND/PGFN)",
+            "detail": "Emitir próximo à data de submissão — validade limitada",
+            "status": "Emitir em junho",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "i4",
+            "label": "Certidão Negativa do FGTS da UFSC",
+            "detail": "Emitir próximo à data de submissão",
+            "status": "Emitir em junho",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "i5",
+            "label": "Declaração de não inadimplência da UFSC com a FINEP",
+            "detail": "Coordenador / Pró-Reitoria",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "fundacao",
+        "title": "Documentos da Fundação de Apoio (FAPEU ou FEESC)",
+        "items": [
+          {
+            "id": "f1",
+            "label": "Credenciamento vigente MEC/MCTI da fundação de apoio — OBRIGATÓRIO (item 3.3 do edital)",
+            "detail": "Verificar validade e renovar se necessário",
+            "status": "Crítico",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "f2",
+            "label": "Cartão CNPJ + Estatuto Social + Ata de eleição da diretoria",
+            "detail": "Verificar atualidade da ata",
+            "status": "Verificar",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "f3",
+            "label": "Certidões negativas (débitos federais + FGTS) da fundação",
+            "detail": "Emitir próximo à submissão",
+            "status": "Emitir em junho",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "f4",
+            "label": "Contrato ou termo de parceria vigente UFSC ↔ Fundação de Apoio",
+            "detail": "Verificar vigência",
+            "status": "Verificar",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "pesquisadores",
+        "title": "Documentos dos Pesquisadores",
+        "items": [
+          {
+            "id": "r1",
+            "label": "Currículo Lattes atualizado do Coordenador",
+            "detail": "Atualizar com projetos e publicações recentes",
+            "status": "Atualizar",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "r2",
+            "label": "Currículo Lattes atualizado de cada pesquisador sênior",
+            "detail": "Pesquisadores Sênior 1 e 2",
+            "status": "Atualizar",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "r3",
+            "label": "Currículo de Charles Cleivin (LinkedIn + portfólio técnico)",
+            "detail": "Incluir: LLM fine-tuning, visão computacional bovinos, WhatsApp automação, MatriculadorIA",
+            "status": "Crítico — preparar",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "r4",
+            "label": "Termo de participação de Charles Cleivin como co-pesquisador externo sem bolsa",
+            "detail": "Declarar: ausência de vínculo empregatício com UFSC + distinção explícita do contrato PJ da THATPIX",
+            "status": "Crítico — redigir",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "r5",
+            "label": "Declaração de disponibilidade e dedicação de cada pesquisador",
+            "detail": "Todos os membros da equipe UFSC",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "thatpix",
+        "title": "Documentos da THATPIX (Empresa PJ Contratada)",
+        "items": [
+          {
+            "id": "t1",
+            "label": "Cartão CNPJ — THATPIX DESENVOLVIMENTO DE SOFTWARES LTDA · 49.827.360/0001-50",
+            "detail": "Receita Federal — verificar situação cadastral ativa",
+            "status": "Disponível",
+            "statusVariant": "available"
+          },
+          {
+            "id": "t2",
+            "label": "Contrato Social ou Requerimento de Empresário da THATPIX",
+            "detail": "Junta Comercial",
+            "status": "Disponível",
+            "statusVariant": "available"
+          },
+          {
+            "id": "t3",
+            "label": "Certidão Negativa de Débitos Federais da THATPIX",
+            "detail": "Emitir próximo à data de submissão",
+            "status": "Emitir em junho",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "t4",
+            "label": "Pesquisa de mercado documentando faixa salarial de engenheiro sênior IA/ML no Brasil — OBRIGATÓRIO (item 11.2)",
+            "detail": "Glassdoor, Revelo, Programathor — printscreens datados de 2025/2026. Justificar R$ 74.444/mês (3 engenheiros sêniores IA/ML + overhead PJ). Valor subiu para R$ 2,68M — justificativa de mercado é obrigatória e mais crítica do que antes.",
+            "status": "Crítico — atualizar pesquisa",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "t5",
+            "label": "Declaração de capacidade técnica da THATPIX com portfólio de projetos anteriores",
+            "detail": "Incluir portfólio técnico + justificativa explícita de por que 38,3% do orçamento total vai para uma única empresa. Argumento: THATPIX é a única entidade remunerada pela engenharia — professores UFSC são servidores públicos já remunerados pelo Estado.",
+            "status": "Crítico — redigir com justificativa de concentração",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "t6",
+            "label": "Minuta do contrato de serviços FAPEU/FEESC ↔ THATPIX",
+            "detail": "Pode ser condicional (assinado após aprovação) — mas ter a minuta pronta",
+            "status": "Redigir",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "cartas",
+        "title": "Cartas de Anuência e Parcerias",
+        "items": [
+          {
+            "id": "c1",
+            "label": "Carta de anuência — Cooperativa âncora Piloto 1",
+            "detail": "Papel timbrado + assinatura do representante legal + menção explícita ao projeto Roça Conectada",
+            "status": "Urgente — até 30/05",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "c2",
+            "label": "Carta de anuência — Cooperativa âncora Piloto 2",
+            "detail": "Idem",
+            "status": "Urgente — até 30/05",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "c3",
+            "label": "Carta de anuência — Cooperativa âncora Piloto 3",
+            "detail": "Idem",
+            "status": "Urgente — até 10/06",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "c4",
+            "label": "Carta de anuência — EMATER estadual",
+            "detail": "Processo de assinatura institucional pode levar 10–20 dias úteis",
+            "status": "Urgente — até 05/06",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "c5",
+            "label": "Carta de apoio — FETRAF-Brasil ou CONTAG",
+            "detail": "Carta de apoio institucional nacional — alto peso político na avaliação",
+            "status": "Alta — até 10/06",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "c6",
+            "label": "Carta de apoio — UNICAFES (regional ou nacional)",
+            "detail": "Sistema cooperativo da agricultura familiar",
+            "status": "Alta — até 15/06",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "c7",
+            "label": "Carta de anuência — Comunidade quilombola ou CONAQ",
+            "detail": "Público explicitamente mencionado no edital — diferencial importante",
+            "status": "Alta — até 15/06",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "c8",
+            "label": "Carta de anuência — Prefeitura municipal 1",
+            "detail": "IDH < 0,65 · Secretaria de Agricultura ativa",
+            "status": "Média — até 20/06",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "c9",
+            "label": "Carta de anuência — Prefeitura municipal 2",
+            "detail": "Idem",
+            "status": "Média — até 20/06",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "c10",
+            "label": "Acordo de cooperação técnica — EMBRAPA (unidade regional)",
+            "detail": "EMBRAPA Informática Agropecuária ou Agricultura Familiar",
+            "status": "Desejável — até 20/06",
+            "statusVariant": "todo"
+          }
+        ]
+      },
+      {
+        "id": "complementares",
+        "title": "Documentos Complementares Obrigatórios",
+        "items": [
+          {
+            "id": "x1",
+            "label": "Declaração de ineditismo e não duplicidade de financiamento",
+            "detail": "O projeto não recebe financiamento simultâneo de outra fonte pública para o mesmo objeto",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "x2",
+            "label": "Declaração de ciência e concordância com as normas do edital",
+            "detail": "Coordenador + representante legal da FAPEU/FEESC",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "x3",
+            "label": "Declaração de Política de Inovação aprovada da UFSC (item 5.7)",
+            "detail": "SINOVA/UFSC — CRÍTICO para ICT pública federal",
+            "status": "Crítico",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "x4",
+            "label": "Comprovante de cadastro da fundação de apoio no SICONV / plataforma equivalente FINEP",
+            "detail": "FAPEU/FEESC — verificar cadastro ativo",
+            "status": "Verificar",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "x5",
+            "label": "PDF consolidado do Plano de Trabalho completo (Seções 1–10)",
+            "detail": "Formatado e paginado conforme exigência FINEP",
+            "status": "Finalizar",
+            "statusVariant": "inprogress"
+          }
+        ]
+      },
+      {
+        "id": "conteudo",
+        "title": "Qualidade e Completude do Conteúdo",
+        "items": [
+          {
+            "id": "q1",
+            "label": "Preencher todos os placeholders — [NOME DO LAB], [Coordenador UFSC], [Pesquisador Sênior 1], [Pesquisador Sênior 2], [X]%, [Y] cooperativas, [Z] agentes",
+            "detail": "Responsabilidade da equipe UFSC. SEM isso o documento não pode ser submetido. Estimativa: 1 reunião de 2h com coordenador para preencher tudo.",
+            "status": "Crítico — depende da UFSC",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "q2",
+            "label": "Revisão bibliográfica / Estado da Arte — ausente na versão atual",
+            "detail": "Avaliadores FINEP experientes identificam ausência de revisão como sinal de imaturidade científica. Precisa citar: trabalhos em LLM para domínios especializados, sistemas de ATER digital, experiências internacionais similares (ex: Digital Green na Índia, Esoko em Gana).",
+            "status": "Crítico — criar",
+            "statusVariant": "critical"
+          },
+          {
+            "id": "q3",
+            "label": "Análise de gênero e equidade — exigida por editais FINEP pós-2022",
+            "detail": "Incluir: % de mulheres agricultoras no público-alvo, estratégia de inclusão de mulheres como multiplicadoras, meta explícita de alcance por gênero nos indicadores.",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "q4",
+            "label": "Auditoria dos 15 pontos de excelência (guia interno)",
+            "detail": "Percorrer os 15 pontos do guia de excelência e marcar ✅⚠️❌. Priorizar os ❌ antes da submissão. Especial atenção: teoria da mudança explícita (ponto 6) e mensurabilidade dos indicadores (ponto 13).",
+            "status": "Em andamento",
+            "statusVariant": "inprogress"
+          },
+          {
+            "id": "q5",
+            "label": "Justificativa de concentração orçamentária THATPIX (38,3% = R$ 2,68M)",
+            "detail": "Redigir parágrafo específico no plano de trabalho formal explicando que THATPIX representa 100% da engenharia paga do projeto e que pesquisadores UFSC são servidores públicos sem custo ao projeto.",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "q6",
+            "label": "Teoria da mudança — diagrama ou tabela explícita (recursos → atividades → produtos → resultados → impacto)",
+            "detail": "Existe implicitamente na proposta mas precisa de uma representação visual ou tabular rastreável. Avaliadores exigem que cada rubrica de orçamento seja conectável a um produto e a um indicador.",
+            "status": "A fazer",
+            "statusVariant": "todo"
+          },
+          {
+            "id": "q7",
+            "label": "Revisão final de consistência numérica — todos os valores alinhados entre S1, S6 e S8",
+            "detail": "Verificar: R$ 2,68M aparece consistentemente em S1 (institucional), S6 (orçamento) e na declaração de relacionamento da S4. Verificar indicadores de S8 alinhados com metas de S4.",
+            "status": "Verificar",
+            "statusVariant": "todo"
+          }
+        ]
+      }
+    ]
+  },
+  "s11": {
+    "number": "Seção 11",
+    "title": "Referências Bibliográficas",
+    "heroImage": "/hero11.png",
+    "heroObjectPosition": "center 60%",
+    "subtitle": "Referências em conformidade com ABNT NBR 6023:2018",
+    "headline": "Base científica que sustenta cada escolha deste projeto.",
+    "references": [
+      {
+        "id": "r01",
+        "area": "agricultura",
+        "abnt": "BRASIL. Ministério da Agricultura, Pecuária e Abastecimento. Plano Nacional de Extensão Rural (PLANER) 2023–2027. Brasília: MAPA, 2023. Disponível em: https://www.gov.br/agricultura. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r02",
+        "area": "agricultura",
+        "abnt": "BRAGA, Marcelo José et al. Barreiras à adoção de tecnologias digitais na agricultura familiar brasileira. Revista de Economia e Sociologia Rural (RESR), Brasília, v. 60, n. 3, e241818, 2022. DOI: 10.1590/1806-9479.2021.241818."
+      },
+      {
+        "id": "r03",
+        "area": "metodologia",
+        "abnt": "THIOLLENT, Michel. Metodologia da Pesquisa-Ação. 18. ed. São Paulo: Cortez, 2011. 136 p. ISBN 978-85-249-0967-3."
+      },
+      {
+        "id": "r04",
+        "area": "nlp",
+        "abnt": "SOUZA, Fábio et al. BERTimbau: Pretrained BERT models for Brazilian Portuguese. In: BRAZILIAN CONFERENCE ON INTELLIGENT SYSTEMS (BRACIS), 9., 2020, Rio Grande. Proceedings [...]. Cham: Springer, 2020. p. 403–417. DOI: 10.1007/978-3-030-61377-8_28."
+      },
+      {
+        "id": "r05",
+        "area": "nlp",
+        "abnt": "CARMO, Diedre et al. PTT5: Pretraining and validating the T5 model on Brazilian Portuguese data. arXiv preprint, arXiv:2101.05716, 2021. Disponível em: https://arxiv.org/abs/2101.05716. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r06",
+        "area": "nlp",
+        "abnt": "HU, Edward J. et al. LoRA: Low-rank adaptation of large language models. In: INTERNATIONAL CONFERENCE ON LEARNING REPRESENTATIONS (ICLR), 10., 2022. Proceedings [...]. OpenReview, 2022. Disponível em: https://arxiv.org/abs/2106.09685. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r07",
+        "area": "nlp",
+        "abnt": "DETTMERS, Tim et al. QLoRA: Efficient finetuning of quantized LLMs. In: ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS (NeurIPS), 36., 2023, Nova Orleans. Proceedings [...]. Curran Associates, 2023. p. 10088–10115."
+      },
+      {
+        "id": "r08",
+        "area": "nlp",
+        "abnt": "TOUVRON, Hugo et al. LLaMA 2: Open foundation and fine-tuned chat models. arXiv preprint, arXiv:2307.09288, 2023. Disponível em: https://arxiv.org/abs/2307.09288. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r09",
+        "area": "agricultura",
+        "abnt": "EMBRAPA AGRICULTURA DIGITAL. Diagnóstico da extensão rural digital no Brasil. Campinas: Embrapa Agricultura Digital, 2021. (Documentos, 145)."
+      },
+      {
+        "id": "r10",
+        "area": "agricultura",
+        "abnt": "GANDHI, Rikin et al. Digital Green: Participatory video and mediated instruction for agricultural extension. Information Technologies & International Development, v. 5, n. 1, p. 1–15, 2009. ISSN 1544-7529."
+      },
+      {
+        "id": "r11",
+        "area": "politica",
+        "abnt": "IBGE. Censo Agropecuário 2017: resultados definitivos. Rio de Janeiro: IBGE, 2019. Disponível em: https://censoagro2017.ibge.gov.br. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r12",
+        "area": "politica",
+        "abnt": "IBGE. Pesquisa Nacional por Amostra de Domicílios Contínua — Tecnologia da Informação e Comunicação 2022 (PNAD Contínua TIC 2022). Rio de Janeiro: IBGE, 2023."
+      },
+      {
+        "id": "r13",
+        "area": "lgpd",
+        "abnt": "BRASIL. Lei n. 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União, Brasília, DF, 15 ago. 2018. Seção 1, p. 59."
+      },
+      {
+        "id": "r14",
+        "area": "lgpd",
+        "abnt": "META PLATFORMS INC. WhatsApp Business Platform — Cloud API Documentation. Menlo Park: Meta, 2024. Disponível em: https://developers.facebook.com/docs/whatsapp. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r15",
+        "area": "nlp",
+        "abnt": "DEVLIN, Jacob et al. BERT: Pre-training of deep bidirectional transformers for language understanding. In: ANNUAL CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS (NAACL), 2019, Minneapolis. Proceedings [...]. Stroudsburg: ACL, 2019. p. 4171–4186. DOI: 10.18653/v1/N19-1423."
+      },
+      {
+        "id": "r16",
+        "area": "agricultura",
+        "abnt": "KLERKX, Laurens; ROSE, David. Dealing with the game-changing technologies of Agriculture 4.0: How do we manage diversity and responsibility in food system transition pathways? Global Food Security, v. 24, p. 100347, 2020. DOI: 10.1016/j.gfs.2019.100347."
+      },
+      {
+        "id": "r17",
+        "area": "metodologia",
+        "abnt": "ROGERS, Everett M. Diffusion of Innovations. 5. ed. Nova York: Free Press, 2003. 576 p. ISBN 978-0-7432-2209-9."
+      },
+      {
+        "id": "r18",
+        "area": "politica",
+        "abnt": "BRASIL. Decreto n. 8.252, de 26 de maio de 2014. Institui a Agência Nacional de Assistência Técnica e Extensão Rural (ANATER). Diário Oficial da União, Brasília, DF, 27 maio 2014."
+      },
+      {
+        "id": "r19",
+        "area": "mercado",
+        "abnt": "DATA HACKERS; BAIN & COMPANY. State of Data Brasil 2025-2026: O maior censo de dados da América Latina. São Paulo: Bain & Company, 2026. Disponível em: https://www.bain.com/pt-br/insights/state-of-data-2025/. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r20",
+        "area": "mercado",
+        "abnt": "INDEX.DEV. LLM Developer Hourly Rates in 2025: CEE, LATAM & Asia. 2026. Disponível em: https://www.index.dev/blog/llm-developer-hourly-rates. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r21",
+        "area": "mercado",
+        "abnt": "TECLA. Toptal Review: Is It Worth It for Tech Hiring? 2026. Disponível em: https://www.tecla.io/blog/toptal-review. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r22",
+        "area": "politica",
+        "abnt": "BRASIL. Decreto n. 9.283, de 7 de fevereiro de 2018. Regulamenta a Lei n. 10.973/2004 e a Lei n. 13.243/2016, estabelecendo medidas de incentivo à inovação e à pesquisa científica e tecnológica. Brasília: Presidência da República, 2018. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9283.htm. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r23",
+        "area": "politica",
+        "abnt": "BRASIL. Lei n. 10.973, de 2 de dezembro de 2004. Dispõe sobre incentivos à inovação e à pesquisa científica e tecnológica no ambiente produtivo (Marco Legal de CT&I, com redação dada pela Lei n. 13.243/2016). Brasília: Presidência da República, 2004. Disponível em: http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.973.htm. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r24",
+        "area": "politica",
+        "abnt": "FINEP — FINANCIADORA DE ESTUDOS E PROJETOS. Manual de Convênios e Termos de Cooperação. Rev. 02. Rio de Janeiro: FINEP, 2022. Disponível em: https://fundacaofemar.org.br/portalwordpress/wp-content/uploads/2022/09/M_OPE_002_10ManualdeConvenioseTCrev02.pdf. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r25",
+        "area": "politica",
+        "abnt": "UNIVERSIDADE FEDERAL DE SANTA CATARINA. Resolução Normativa n. 164/2022/CUn, de 27 de setembro de 2022. Aprova a Política de Inovação e Empreendedorismo da UFSC. Florianópolis: UFSC, 2022. Disponível em: https://repositorio.ufsc.br/bitstream/handle/123456789/235603/RN_164-2022-CUn_Politica_de_Inovacao_e_Empreendedorismo_UFSC.pdf. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r26",
+        "area": "mercado",
+        "abnt": "CNPQ — CONSELHO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO. Tabela de Valores de Bolsas e Auxílios CNPq — 2026. Brasília: CNPq, 2026. Disponível em: https://www.fujb.ufrj.br/wp-content/uploads/2025/10/Tabela-de-bolsas-FUJB_aprovada-na-489a-ROCA.pdf. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r27",
+        "area": "mercado",
+        "abnt": "ASCEND EDUCATION. Déficit de Profissionais de TI no Brasil: transforme a crise em oportunidade. 2026. Disponível em: https://ascendeducation.com/pt-br/deficit-profissionais-ti-brasil-oportunidade/. Acesso em: 17 maio 2026."
+      },
+      {
+        "id": "r28",
+        "area": "mercado",
+        "abnt": "FEBRACE — FEIRA BRASILEIRA DE CIÊNCIAS E ENGENHARIA. Premiados na Cerimônia de Premiação da FEBRACE 2013. São Paulo: USP, 2013. Disponível em: https://febrace.org.br/wp-content/uploads/2021/06/cerimonia_2013_parte1.pdf e https://febrace.org.br/wp-content/uploads/2021/06/cerimonia_2013_parte2.pdf. Acesso em: 17 maio 2026."
+      }
+    ]
+  }
+}

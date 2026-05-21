@@ -96,5 +96,12 @@
     "date": "2026-05-21",
     "label": "feat: move Charles to EquipeSection, add Marco/Fer",
     "description": "feat: move Charles to EquipeSection, add Marco/Fernanda placeholders, sidebar team drawer"
+  },
+  {
+    "id": "v15",
+    "commit": "32dacca",
+    "date": "2026-05-21",
+    "label": "feat(s8): add 'A Alavanca do Investimento' ROI tim",
+    "description": "feat(s8): add 'A Alavanca do Investimento' ROI timeline visual"
   }
 ]
