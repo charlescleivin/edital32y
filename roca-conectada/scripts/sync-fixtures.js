@@ -63,11 +63,11 @@ data.s3.policyAlignment = [
     body: 'A PNPIAF, em seu Eixo IV, estabelece a inclusão digital em áreas rurais como política de Estado. O edital FINEP AgriFam-ICT 2026 é mecanismo direto de execução desse eixo. O Roça Conectada é a resposta técnica completa: corpus linguístico nacional, modelo de linguagem soberano em português e aplicação via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente — solução concebida desde o início para a realidade das pequenas propriedades rurais brasileiras.',
   },
   {
-    sigla: 'ENECI',
-    fullName: 'Estratégia Nacional de CT&I 2024-2034',
-    decree: 'ENCTI / MCTI 2024',
-    axes: 'Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva',
-    body: 'A ENCTI 2024-2034 (referenciada no edital como ENECI) prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O Roça Conectada entrega os dois: o AgroEval e o AgroLinguaBR serão ativos científicos com titularidade UFSC — patrimônio público irremovível do sistema nacional de CT&I —, enquanto a AgroAPI constitui infraestrutura digital aberta, reutilizável por qualquer ICT, EMATER ou startup do ecossistema, sem dependência de plataformas estrangeiras.',
+    sigla: 'ENECI / PBIA',
+    fullName: 'Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028',
+    decree: 'ENCTI / MCTI 2024 · PBIA / MCTI 2024',
+    axes: 'Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português',
+    body: 'A ENCTI 2024-2034 prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações concretas — incluindo o desenvolvimento de modelos nacionais de linguagem em português. O Roça Conectada entrega aderência ao PBIA de forma concreta: o AgroLinguaBR e o LLM fine-tuned são os ativos específicos que o PBIA identifica como necessários (corpus nacional, modelo soberano em português) mas não construiu para a agricultura familiar. Ao mês 36, com transferência de titularidade à UFSC, esses ativos tornam-se patrimônio público irremovível do sistema nacional de CT&I — disponíveis para a próxima iteração do PBIA ou qualquer política pública nacional sem dependência de plataformas estrangeiras. O SoberanIA (R$ 40M, lançado maio 2026) confirmou que o governo está financiando exatamente este tipo de ativo para o setor público. O Roça Conectada é o instrumento equivalente para a agricultura familiar.',
   },
   {
     sigla: 'Bioinsumos',

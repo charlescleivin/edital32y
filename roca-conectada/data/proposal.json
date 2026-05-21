@@ -275,62 +275,86 @@
     "bibliography": [
       {
         "ref": "IBGE (2017)",
-        "text": "Censo Agropecuario 2017. 3,9M estabelecimentos familiares; 77% do total; 70% dos alimentos consumidos no Brasil."
+        "text": "Censo Agropecuario 2017. 3,9M estabelecimentos familiares; 77% do total; 70% dos alimentos consumidos no Brasil. Cobertura de ATER: 18,2% nacional, 7,4% Nordeste, 48,6% Sul. Mulheres: 95% das 1,7M diretoras de propriedades sem ATER."
       },
       {
-        "ref": "PNAD Continua (2022)",
-        "text": "Pesquisa Nacional por Amostra de Domicilios Continua TIC. IBGE. 53% dos domicilios rurais com internet (vs. 91% urbano)."
+        "ref": "IBGE / PNAD (2023)",
+        "text": "Pesquisa Nacional por Amostra de Domicilios 2023. 96,7% dos domicilios rurais com telefone celular; 81% com acesso a internet."
       },
       {
-        "ref": "EMBRAPA (2021)",
-        "text": "Diagnostico da ATER Digital no Brasil. Embrapa Agricultura Digital. Razao agente/familia: 1:500 media nacional; <15% municipios do Semiarido com ATER regular."
+        "ref": "Souza et al. / RESR (2020)",
+        "text": "Impacto da assistencia tecnica e extensao rural sobre a renda agricola. Revista de Economia e Sociologia Rural (RESR), 2020. Metodologia Propensity Score Matching sobre dados PNAD 2014. Resultado: familias com ATER ganham R$ 490/mes a mais. Implicacao: R$ 18,8 bilhoes/ano em renda nao realizada com 3,2M familias sem cobertura."
       },
       {
-        "ref": "Souza et al. (2020)",
-        "text": "BERTimbau: Pretrained BERT models for Brazilian Portuguese. BRACIS 2020. Modelo base de linguagem para PT-BR, referencia de estado da arte em NLP."
+        "ref": "MCTI (maio 2026)",
+        "text": "Declaracao oficial MCTI. Brasil em condicao de 'colonia digital': 88% da infraestrutura de nuvem sob controle estrangeiro. Fonte: Teletime, maio 2026."
       },
       {
-        "ref": "Carmo et al. (2021)",
-        "text": "PTT5: Pretraining and validating the T5 model on Brazilian Portuguese data. arXiv:2101.05716. Modelo seq2seq para portugues, relevante para geracao de respostas agronomicas."
+        "ref": "Lula / Cupula IA Nova Delhi (fev. 2026)",
+        "text": "Discurso do presidente Luiz Inacio Lula da Silva na Cupula de Inteligencia Artificial, Nova Delhi, fevereiro de 2026. Citacao: 'Quando poucos controlam os algoritmos e as infraestruturas digitais, nao estamos falando de inovacao, mas de dominacao.'"
+      },
+      {
+        "ref": "PBIA 2024–2028",
+        "text": "Plano Brasileiro de Inteligencia Artificial 2024–2028. MCTI. R$ 23 bilhoes; 54 acoes concretas. Inclui nuvem soberana e modelos nacionais de linguagem em portugues. Nenhuma das 54 acoes endereça especificamente os 3,9M estabelecimentos de agricultura familiar."
+      },
+      {
+        "ref": "SoberanIA (maio 2026)",
+        "text": "Programa SoberanIA. MCTI, lancado maio de 2026. R$ 40M para LLM nacional de 30B parametros para o setor publico. Foco: cidades, burocracia e servicos governamentais — nao agricultura familiar."
+      },
+      {
+        "ref": "ANPD Resolucao 19/2024",
+        "text": "Autoridade Nacional de Protecao de Dados. Resolucao 19/2024. Exige mecanismos de conformidade com a LGPD para transferencias internacionais de dados pessoais a partir de agosto de 2025."
+      },
+      {
+        "ref": "OpenAI / TechCrunch (mar. 2023)",
+        "text": "Bloqueio do ChatGPT na Italia por ordem do Garante. 60 milhoes de pessoas sem acesso em menos de 24 horas. Multa de 15M euros confirmada. TechCrunch, The Hacker News, 30 marco 2023."
+      },
+      {
+        "ref": "OpenAI / Axios (nov. 2023)",
+        "text": "Demissao do CEO Sam Altman. Cinco dias de colapso de governanca; 700 funcionarios ameacam demissao; Microsoft soube menos de 1h antes do publico. Wikipedia, Axios, novembro 2023."
+      },
+      {
+        "ref": "OpenAI Deprecations (jan. 2024)",
+        "text": "Descontinuacao de 33 modelos simultaneamente em 4 de janeiro de 2024, incluindo GPT-3 text-davinci-003. Sem caminho de migracao para modelos fine-tuned proprietarios. OpenAI Deprecations page."
+      },
+      {
+        "ref": "The Register (jan. 2026)",
+        "text": "OpenAI descontinua o GPT-4o com 14 dias de aviso, apos prometer 'aviso amplo'. The Register; VentureBeat, janeiro 2026."
+      },
+      {
+        "ref": "CNBC (dez. 2025)",
+        "text": "GROQ adquirida pela Nvidia em 24 de dezembro de 2025 sem consulta a 2 milhoes de desenvolvedores. CNBC."
+      },
+      {
+        "ref": "OpenAI (2024)",
+        "text": "Brasil e o 2o maior mercado de desenvolvedores ativos na API da OpenAI — crescimento de 143% ano a ano. Fonte: dados oficiais OpenAI, 2024."
+      },
+      {
+        "ref": "Decreto PLANSIC 11.200/2022",
+        "text": "Presidencia da Republica. Decreto 11.200/2022. Institui o Plano Nacional de Seguranca de Infraestruturas Criticas (PLANSIC). Agricultura nao classificada como infraestrutura critica — ao contrario de EUA, Canada e UE."
+      },
+      {
+        "ref": "ArXiv (2024)",
+        "text": "Estudo de desempenho do GPT-4 em tarefas especializadas de manejo de pragas agricolas. Precisao: 72%. ArXiv, 2024."
+      },
+      {
+        "ref": "CGI.br / TIC Domicilios (2023)",
+        "text": "Comite Gestor da Internet no Brasil. TIC Domicilios 2023. Prevalencia de acesso rural exclusivamente via celular; restricoes de planos pre-pagos ao trafego de dados."
       },
       {
         "ref": "Hu et al. (2022)",
-        "text": "LoRA: Low-Rank Adaptation of Large Language Models. ICLR 2022. Tecnica PEFT utilizada no fine-tuning do AgroAssistente — viabiliza treinamento com corpus <30k exemplos."
-      },
-      {
-        "ref": "Touvron et al. (2023)",
-        "text": "LLaMA 2: Open Foundation and Fine-Tuned Chat Models. Meta AI Research. Modelo open-weight base utilizado no fine-tuning especializado do AgroAssistente."
+        "text": "LoRA: Low-Rank Adaptation of Large Language Models. ICLR 2022. Tecnica PEFT utilizada no fine-tuning do AgroAssistente."
       },
       {
         "ref": "Dettmers et al. (2023)",
-        "text": "QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS 2023. Tecnica de quantizacao 4-bit combinada com LoRA — viabiliza inferencia LLM em hardware de custo acessivel."
-      },
-      {
-        "ref": "MAPA (2023)",
-        "text": "Plano Nacional de Extensao Rural (PLANER) 2023-2027. Ministerio da Agricultura. Meta de digitalizacao da ATER como politica publica federal."
-      },
-      {
-        "ref": "Thiollent (2011)",
-        "text": "Metodologia da Pesquisa-Acao. 18a ed. Cortez Editora. Referencial metodologico para o diagnostico participativo (OE1) e co-construcao com agricultores."
-      },
-      {
-        "ref": "CGI.br / TIC Domicílios (2023)",
-        "text": "Comite Gestor da Internet no Brasil. Pesquisa sobre o Uso das Tecnologias de Informacao e Comunicacao nos Domicilios Brasileiros — TIC Domicilios 2023. Prevalencia de acesso rural exclusivamente via celular; restricoes de planos pre-pagos ao trafego de dados."
-      },
-      {
-        "ref": "Decreto nº 12.198/2024",
-        "text": "Presidencia da Republica. Decreto nº 12.198, de 2024. Institui a Infraestrutura Nacional de Dados (IND) e estabelece diretrizes de interoperabilidade para sistemas de governo digital, incluindo dados agropecuarios."
-      },
-      {
-        "ref": "Senado Federal (2025)",
-        "text": "Politica Nacional de Transformacao Digital na Agricultura. Projeto em tramitacao no Senado Federal, dezembro de 2025. Preconiza mitigacao de mudancas climaticas, interoperabilidade de dados governamentais e fomento a tecnologias sociais digitais no campo."
+        "text": "QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS 2023. Quantizacao 4-bit com LoRA — viabiliza inferencia LLM em hardware acessivel."
       },
       {
         "ref": "Esteves et al. (2024)",
-        "text": "Adapting LLMs to New Domains: A Comparative Study of Fine-Tuning and RAG strategies for Portuguese QA Tasks. ACL Anthology, STIL 2024. Referencial metodologico para comparacao entre fine-tuning e RAG em tarefas de QA em portugues — base para escolha arquitetural do AgroAssistente."
+        "text": "Adapting LLMs to New Domains: A Comparative Study of Fine-Tuning and RAG strategies for Portuguese QA Tasks. ACL Anthology, STIL 2024. Base para escolha arquitetural do AgroAssistente."
       }
     ],
-    "genderEquity": "Das 3,9M famílias agricultoras brasileiras, as mulheres representam cerca de 45% da força de trabalho na agricultura familiar (IBGE, 2017). O Roça Conectada incorpora equidade de gênero como princípio transversal: (a) meta mínima de 40% de mulheres entre os multiplicadores capacitados (OE8); (b) prioridade a cooperativas lideradas por mulheres nas regiões-piloto; (c) equipe de anotação do corpus AgroLinguaBR com participação mínima de 40% de mulheres do campo; (d) indicador específico de alcance por gênero nos relatórios de avaliação de impacto."
+    "genderEquity": "O dado mais agudo desta proposta em termos de equidade de gênero é este: 95% das mulheres que dirigem propriedades rurais no Brasil — 1,7 milhão de agricultoras, concentradas no Nordeste — não têm acesso a qualquer assistência técnica (IBGE Censo Agropecuário 2017). O Roça Conectada não trata esse dado como pano de fundo — trata como dimensão central do problema que justifica o projeto. Em termos operacionais: (a) meta mínima de 40% de mulheres entre os multiplicadores capacitados (OE8); (b) prioridade a cooperativas lideradas por mulheres nos três municípios-piloto; (c) equipe de anotação do corpus AgroLinguaBR com participação mínima de 40% de mulheres agricultoras — garantindo que a variação linguística feminina do campo esteja representada no modelo; (d) indicador específico de alcance por gênero em todos os relatórios de avaliação de impacto, reportado à FINEP semestralmente."
   },
   "s3": {
     "number": "Seção 3",
@@ -479,11 +503,11 @@
         "body": "A PNPIAF, em seu Eixo IV, estabelece a inclusão digital em áreas rurais como política de Estado. O edital FINEP AgriFam-ICT 2026 é mecanismo direto de execução desse eixo. O Roça Conectada é a resposta técnica completa: corpus linguístico nacional, modelo de linguagem soberano em português e aplicação via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente — solução concebida desde o início para a realidade das pequenas propriedades rurais brasileiras."
       },
       {
-        "sigla": "ENECI",
-        "fullName": "Estratégia Nacional de CT&I 2024-2034",
-        "decree": "ENCTI / MCTI 2024",
-        "axes": "Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva",
-        "body": "A ENCTI 2024-2034 (referenciada no edital como ENECI) prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O Roça Conectada entrega os dois: o AgroEval e o AgroLinguaBR serão ativos científicos com titularidade UFSC — patrimônio público irremovível do sistema nacional de CT&I —, enquanto a AgroAPI constitui infraestrutura digital aberta, reutilizável por qualquer ICT, EMATER ou startup do ecossistema, sem dependência de plataformas estrangeiras."
+        "sigla": "ENECI / PBIA",
+        "fullName": "Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028",
+        "decree": "ENCTI / MCTI 2024 · PBIA / MCTI 2024",
+        "axes": "Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português",
+        "body": "A ENCTI 2024-2034 prioriza soberania tecnológica nacional (Eixo 3) e transformação digital com inclusão (Eixo 4). O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações concretas — incluindo o desenvolvimento de modelos nacionais de linguagem em português. O Roça Conectada entrega aderência ao PBIA de forma concreta: o AgroLinguaBR e o LLM fine-tuned são os ativos específicos que o PBIA identifica como necessários (corpus nacional, modelo soberano em português) mas não construiu para a agricultura familiar. Ao mês 36, com transferência de titularidade à UFSC, esses ativos tornam-se patrimônio público irremovível do sistema nacional de CT&I — disponíveis para a próxima iteração do PBIA ou qualquer política pública nacional sem dependência de plataformas estrangeiras. O SoberanIA (R$ 40M, lançado maio 2026) confirmou que o governo está financiando exatamente este tipo de ativo para o setor público. O Roça Conectada é o instrumento equivalente para a agricultura familiar."
       },
       {
         "sigla": "Bioinsumos",
@@ -516,7 +540,7 @@
         "period": "Meses 1–12",
         "activities": [
           "Diagnóstico participativo (Ativ. 1.1)",
-          "Corpus AgroLinguaBR — 10k pares (Ativ. 1.2)",
+          "Corpus AgroLinguaBR — 25k pares (Ativ. 1.2)",
           "Fine-tuning LLM AgroAssistente (Ativ. 1.3)",
           "MVP ecossistema completo (Ativ. 1.4)",
           "1 artigo submetido"
@@ -1527,17 +1551,24 @@
     "sustainabilityScenarios": [
       {
         "id": "ss1",
-        "scenario": "Cenario A — Integracao a Politica de ATER Digital Federal",
-        "description": "O MAPA e o MDA assumem o custeio do AgroAssistente como componente do PLANER 2023-2027. O corpus AgroLinguaBR e transferido para dominio publico federal com gestao pela EMBRAPA Agricultura Digital. Custo marginal por consulta proximo de zero viabiliza escala nacional sem necessidade de receita direta. Marco: protocolo de negociacao iniciado no Mes 24, MoU assinado ate o Mes 32.",
-        "responsible": "[Coordenador UFSC] + THATPIX (transferencia tecnologica)",
-        "probability": "Alta — alinhado as metas do PLANER e agenda de digitalizacao rural do MDA"
+        "scenario": "Cenário 1 (Probabilidade Média-Alta) — Adoção pelas EMATERs estaduais como linha de ATER digital",
+        "description": "As EMATERs estaduais — especialmente as três dos municípios-piloto — já utilizam WhatsApp como canal informal de atendimento a agricultores. A AgroAPI reduz o custo de integração ao seu workflow existente ao mínimo: não é uma nova plataforma, é uma camada que se conecta ao que já usam. O modelo roda em servidor da UFSC com custo marginal próximo de zero (energia elétrica + manutenção de hardware amortizado) — não há mensalidade de API nem dependência de fornecedor externo. A transferência de titularidade ao mês 36 garante que a UFSC pode hospedar e operar o modelo sem depender da THATPIX. Marco: protocolo de negociação com ao menos uma EMATER estadual iniciado no mês 24; MoU de absorção operacional assinado até o mês 32. Este cenário não depende de aprovação de orçamento ministerial — depende apenas da decisão operacional de uma EMATER estadual, que já tem o problema que o sistema resolve.",
+        "responsible": "Coordenador UFSC + EMATER parceiras (CE, PB, BA)",
+        "probability": "Média-Alta — EMATERs têm o problema, o custo de adoção é mínimo, o sistema é compatível com o workflow existente"
       },
       {
         "id": "ss2",
-        "scenario": "Cenario B — Autogestao Cooperativa com Mensalidade Subsidiada",
-        "description": "Cooperativas que comprovarem ganhos de eficiencia >=30% assumem custeio coletivo de R$ 150-300/mes (equivalente a ~1% do ganho estimado). UNICAFES e OCB atuam como intermediarias para contratos coletivos. Codigo open-source garante que qualquer cooperativa possa implantar sem royalties. Marco: pesquisa de disposicao a pagar aplicada no Mes 20 com cooperativas do piloto.",
-        "responsible": "THATPIX (operacao) + parceiros do sistema cooperativo",
-        "probability": "Media — depende dos resultados reais de reducao de tempo administrativo no piloto"
+        "scenario": "Cenário 2 (Probabilidade Média) — Continuidade via PBIA 2024–2028 para próxima iteração",
+        "description": "O PBIA 2024–2028 financia explicitamente o desenvolvimento de modelos nacionais de linguagem em português. O AgroLinguaBR e o LLM fine-tuned, ao serem publicados com DOI público e titularidade UFSC ao mês 36, tornam-se os ativos fundacionais sobre os quais a próxima iteração do PBIA pode construir — sem recomeçar do zero. O BERTimbau, modelo base de linguagem para português desenvolvido pela USP, tornou-se referência nacional e é mantido pela comunidade de NLP há anos sem financiamento dedicado contínuo. O precedente existe. O Roça Conectada posiciona o AgroLinguaBR como o equivalente para o domínio agrícola. A proposta não assume que o PBIA financiará automaticamente — assume que o ativo criado será suficientemente valioso para atrair o próximo financiamento quando disponível.",
+        "responsible": "UFSC (titularidade) + comunidade de pesquisa em NLP agrícola",
+        "probability": "Média — depende da continuidade do PBIA e do valor demonstrado dos ativos criados no projeto"
+      },
+      {
+        "id": "ss3",
+        "scenario": "Cenário 3 (Probabilidade Média) — Continuidade open-source pela comunidade de pesquisa",
+        "description": "O AgroLinguaBR publicado sob MIT/Apache 2.0 com DOI permite que qualquer universidade brasileira, grupo de pesquisa ou organização pública use, adapte e evolua o corpus e o modelo sem dependência da UFSC ou da THATPIX. Isso não é um cenário hipotético: é o modelo de sustentabilidade que manteve o BERTimbau (USP) como referência nacional de NLP em português por anos sem funding dedicado contínuo, e que sustenta dezenas de modelos open-source na comunidade Hugging Face. A distinção crítica em relação ao cenário atual: o que o Roça Conectada produz não é um serviço que precisa de financiamento para continuar existindo — é um ativo de software com custo de operação próximo de zero, disponível para qualquer ator que queira usá-lo. Sustentabilidade não é ausência de risco de abandono: é ausência de dependência de um único financiador. A licença aberta garante exatamente isso.",
+        "responsible": "Comunidade nacional de pesquisa em NLP e IA agrícola — sem dependência institucional específica",
+        "probability": "Média — precedente sólido no ecossistema open-source brasileiro (BERTimbau, PTT5); independe de decisão de nenhuma entidade específica"
       }
     ]
   },
