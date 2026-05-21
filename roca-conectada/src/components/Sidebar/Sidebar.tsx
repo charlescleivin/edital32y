@@ -159,11 +159,15 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
 
   useEffect(() => { setMounted(true) }, [])
 
-  // auto-open drawer when any of its children become active
+  // auto-open when scrolling into a child; auto-close when scrolling away
   useEffect(() => {
     for (const s of sections) {
-      if (s.children?.some((c) => c.id === active)) {
+      if (!s.children?.length) continue
+      const withinSection = active === s.id || s.children.some((c) => c.id === active)
+      if (withinSection) {
         setOpenDrawers((prev) => prev[s.id] ? prev : { ...prev, [s.id]: true })
+      } else {
+        setOpenDrawers((prev) => prev[s.id] ? { ...prev, [s.id]: false } : prev)
       }
     }
   }, [active, sections])
