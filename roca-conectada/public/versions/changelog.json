@@ -68,5 +68,12 @@
     "date": "2026-05-21",
     "label": "feat: sovereignty narrative rewrite — S4 through S",
     "description": "feat: sovereignty narrative rewrite — S4 through S9"
+  },
+  {
+    "id": "v11",
+    "commit": "fa870a0",
+    "date": "2026-05-21",
+    "label": "feat: W-14 — AI-in-agriculture proof section with ",
+    "description": "feat: W-14 — AI-in-agriculture proof section with 9 international sources"
   }
 ]
