@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import CharlesSection from '@/components/CharlesSection/CharlesSection'
 import type { S5Data, MarketContext, MarketContextRecommendation, AnnexTable, S5AnnexSection } from '@/types/proposal'
 
 export const componentMeta = { slug: 'equipe-section', label: 'Equipe do Projeto' }
@@ -152,7 +153,7 @@ function AnnexSection({ annex }: { annex: S5AnnexSection }) {
   )
 }
 
-export default function EquipeSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, members, marketContext, annex }: EquipeSectionProps) {
+export default function EquipeSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, members, marketContext, annex, expandedProfiles }: EquipeSectionProps) {
   return (
     <section id="s5" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -247,6 +248,30 @@ export default function EquipeSection({ number, title, subtitle, headline, heroI
       </div>
 
       {annex && <AnnexSection annex={annex} />}
+
+      {/* ── Perfis detalhados ── */}
+      {expandedProfiles && expandedProfiles.length > 0 && (
+        <div className="mt-16">
+          <div className="mb-10 flex items-center gap-5">
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(to right, var(--bdr-strong), transparent)' }} />
+            <span className="text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--txtll)' }}>
+              Perfis Detalhados — Equipe Principal
+            </span>
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(to left, var(--bdr-strong), transparent)' }} />
+          </div>
+          <div className="flex flex-col gap-0">
+            {expandedProfiles.map((profile, i) => {
+              const slug = profile.name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/\s+/)[0]
+              return (
+                <div key={i} id={`s5-${slug}`} className={`scroll-mt-4${i > 0 ? ' border-t' : ''}`}
+                  style={{ borderColor: 'var(--bdr)' }}>
+                  <CharlesSection {...profile} />
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

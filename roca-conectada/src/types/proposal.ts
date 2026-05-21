@@ -257,6 +257,7 @@ export interface S5Data extends SectionMeta {
   members: TeamMember[]
   marketContext?: MarketContext
   annex?: S5AnnexSection
+  expandedProfiles?: CharlesData[]
 }
 
 export interface BudgetLine {
@@ -439,18 +440,19 @@ export interface CharlesData {
   title: string
   subtitle: string
   location: string
-  email: string
+  email?: string
   bio: string
-  highlights: CharlesHighlight[]
-  skills: CharlesSkillArea[]
-  projects: CharlesProject[]
-  softSkills: string[]
-  videos: CharlesVideo[]
-  cvFile: string
+  highlights?: CharlesHighlight[]
+  skills?: CharlesSkillArea[]
+  projects?: CharlesProject[]
+  softSkills?: string[]
+  videos?: CharlesVideo[]
+  cvFile?: string
   heroImage?: string
   heroCaption?: string
   gallery?: CharlesPhoto[]
   profilePhoto?: string
+  isPlaceholder?: boolean
 }
 
 export interface ProposalData {
@@ -466,7 +468,12 @@ export interface ProposalData {
     cnpj: string
   }
   sidebar: {
-    sections: Array<{ id: string; label: string; num: string }>
+    sections: Array<{
+      id: string
+      label: string
+      num: string
+      children?: Array<{ id: string; label: string; avatar?: string }>
+    }>
   }
   hero: HeroData
   s1: S1Data
@@ -480,5 +487,5 @@ export interface ProposalData {
   s9: S9Data
   s10: S10Data
   s11: S11Data
-  charles: CharlesData
+  charles?: CharlesData
 }

@@ -18,11 +18,6 @@
         "num": "0"
       },
       {
-        "id": "s-charles",
-        "label": "Charles Cleivin",
-        "num": "★"
-      },
-      {
         "id": "s1",
         "label": "Sumário Executivo",
         "num": "1"
@@ -45,7 +40,12 @@
       {
         "id": "s5",
         "label": "Equipe",
-        "num": "5"
+        "num": "5",
+        "children": [
+          { "id": "s5-charles", "label": "Charles Cleivin", "avatar": "🤖" },
+          { "id": "s5-marco", "label": "Marco Rogério", "avatar": "👨‍🔬" },
+          { "id": "s5-fernanda", "label": "Fernanda", "avatar": "👩‍🌾" }
+        ]
       },
       {
         "id": "s6",
@@ -1091,7 +1091,106 @@
           "source": "State of Data Brasil 2025-2026 (Bain & Company / Data Hackers); Toptal Review Tecla (2026); CNPq Tabela de Bolsas 2026; Decreto 9.283/2018"
         }
       ]
-    }
+    },
+    "expandedProfiles": [
+      {
+        "name": "Charles Cleivin",
+        "title": "Engenheiro de Software Sênior · Pesquisador em IA Aplicada",
+        "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
+        "location": "Brasil",
+        "email": "charlescleivin@gmail.com",
+        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica) — desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido no Ensino Médio no Colégio de Aplicação Emmanuel Leontsinis (RJ). 15+ premiações em ciência e tecnologia, incluindo cinco prêmios simultâneos na FEBRACE 2013 e Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países). Mais de 10 anos construindo sistemas de IA em produção: agentes inteligentes offline, pipelines de fine-tuning de LLMs e visão computacional aplicada ao agronegócio (estimativa de peso bovino em tempo real via vídeo, integrada ao WhatsApp). Especialização em arquiteturas de IA para ambientes com conectividade limitada — exatamente o cenário do pequeno produtor rural brasileiro que esta proposta atende.",
+        "highlights": [
+          { "value": "10+", "label": "Anos construindo sistemas de IA em produção" },
+          { "value": "15+", "label": "Medalhas e prêmios em competições científicas nacionais e internacionais" },
+          { "value": "95%+", "label": "Precisão em estimativa de peso bovino por visão computacional" },
+          { "value": "1M+", "label": "Imagens bovinas processadas por sistema de visão computacional próprio" }
+        ],
+        "skills": [
+          { "area": "LLM & Fine-tuning", "icon": "🧠", "items": ["Qwen2.5, Llama (7B+)", "LoRA / PEFT / 4-bit NF4", "H100 / A100 / RTX 4090", "Treinamento PT-BR + EN"] },
+          { "area": "AI & Agentes", "icon": "🤖", "items": ["PyTorch, Transformers, LangChain", "YOLOv9/v11, OpenCV, Whisper", "Agentes offline / air-gapped", "Coordenação multi-agente"] },
+          { "area": "Web & Mobile", "icon": "📱", "items": ["React Native (5+ anos)", "React / Next.js / TypeScript", "iOS (Swift) + Android (Kotlin)", "WebSocket, GraphQL, Firebase"] },
+          { "area": "Infraestrutura ML", "icon": "⚙️", "items": ["Hugging Face ecosystem", "Docker, Kubernetes, serverless", "Pipelines de treinamento distribuído", "BLEU, ROUGE, BERTScore"] }
+        ],
+        "projects": [
+          {
+            "name": "Sistema de Estimativa de Peso Bovino via WhatsApp",
+            "description": "Preditor de peso de gado em tempo real via vídeo usando OpenCV + PyTorch, com análise morfológica e consciência de postura. Integrado ao WhatsApp para contextos rurais — o agricultor envia o vídeo, recebe o peso estimado. Funciona sem internet.",
+            "tags": ["OpenCV", "PyTorch", "WhatsApp", "IA Offline", "Agropecuária"],
+            "relevance": "IA agropecuária em produção, integração WhatsApp com arquitetura assíncrona — o blueprint técnico exato do AgroAssistente IA."
+          },
+          {
+            "name": "Manual do Mundo — LLM Fine-tuning em Português",
+            "description": "Fine-tuning do Qwen2.5-7B em 3.000+ transcrições em português para o maior canal de ciências do Brasil (20M+ inscritos, 4,4B+ visualizações). Redução de loss de 27%, custo de $3/ciclo, habilitando geração ilimitada de conteúdo especializado.",
+            "tags": ["Qwen2.5-7B", "LoRA", "4-bit NF4", "Portuguese NLP", "RTX 4090"],
+            "relevance": "Prova direta de fine-tuning de LLM em português com eficiência industrial — o mesmo pipeline do AgroAssistente IA."
+          },
+          {
+            "name": "Gerador de Agentes LLM Offline",
+            "description": "Ferramenta que instancia agentes inteligentes a partir de qualquer documento, sem conexão à internet. Casos de uso: análise de contratos, classificação de normas, suporte técnico local. Portátil, air-gapped, sem dependência de nuvem.",
+            "tags": ["LangChain", "LLM Local", "Air-gapped", "NLP", "Electron"],
+            "relevance": "Experiência com LLMs locais e air-gapped diretamente aplicável ao design de resiliência assíncrona do AgroAssistente em zonas rurais de baixa conectividade."
+          }
+        ],
+        "softSkills": [
+          "Colaboração distribuída de alta performance — experiência em times multidisciplinares e internacionais",
+          "Liderança técnica e planejamento arquitetural",
+          "Aprendizado acelerado — domina novas stacks e domínios com profundidade e rapidez",
+          "Entrega sistemas de IA em produção dentro do prazo e do orçamento"
+        ],
+        "videos": [
+          { "url": "https://www.youtube.com/embed/7RqIokz26jU?start=136", "title": "Apresentação de tecnologia própria em evento internacional · China · 2019" }
+        ],
+        "cvFile": "/charles_cleivin_cv.pdf",
+        "heroImage": "/silhouette.jpg",
+        "heroCaption": "Macao-China Innovation & Entrepreneurship Competition · 2019",
+        "gallery": [
+          {
+            "src": "/primeiroLugarFebraceComReitoraDAUsp.jpg",
+            "caption": "5 prêmios simultâneos com o mesmo projeto",
+            "badge": "🏆 FEBRACE · USP · 2013",
+            "featured": true,
+            "awards": [
+              { "icon": "🥇", "text": "1º lugar entre todas as engenharias — Medalha de Ouro" },
+              { "icon": "🥈", "text": "2º lugar em inovação entre todos os projetos do Brasil" },
+              { "icon": "⚡", "text": "Prêmio Especial de Inovação — entregue pessoalmente pela General Electric" },
+              { "icon": "📚", "text": "Bolsa Estudar Ciência — concedida pela Fundação Estudar" },
+              { "icon": "🔧", "text": "Prêmio P.E.T. Mecatrônica — Engenharia Mecatrônica · USP" }
+            ],
+            "context": "O mesmo projeto credenciou Charles como 1 dos 3 brasileiros selecionados para a Expo-INGENIERIA 2013 (Costa Rica) — e no ano seguinte conquistou a Medalha de Ouro Geral no ESI Mundi 2014, Abu Dhabi, entre representantes de mais de 40 países."
+          },
+          {
+            "src": "/participacaonog20.jpeg",
+            "caption": "G20 Sustainable Finance Working Group — Transforming Sustainability Reporting for SMEs · Rio de Janeiro · 2024",
+            "badge": "🌍 G20 Brasil 2024 · Finanças Sustentáveis",
+            "context": "Evento promovido por iCS, Instituto Itaúsa e CDP no âmbito da presidência brasileira do G20, com foco em sustentabilidade e digitalização para pequenas e médias empresas — agenda diretamente alinhada ao ecossistema de impacto do Roça Conectada."
+          },
+          {
+            "src": "/showingGoldMedalInDubai.jpg",
+            "caption": "Medalha de Ouro — Premiação Geral · ESI Mundi, Abu Dhabi (EAU)",
+            "badge": "🥇 Medalha de Ouro Geral — ESI Mundi · MILSET · Abu Dhabi",
+            "context": "O ESI Mundi (Expo Science International), organizado pela MILSET, é um dos maiores eventos internacionais de ciência e engenharia do mundo, reunindo representantes de mais de 40 países perante banca técnica multilateral. A Medalha de Ouro na premiação geral atesta excelência científica em nível global."
+          }
+        ],
+        "profilePhoto": "/profile_pic.jpg"
+      },
+      {
+        "name": "Marco Rogério",
+        "title": "[Título a confirmar]",
+        "subtitle": "[Área · Especialização · Papel no projeto]",
+        "location": "[Localização]",
+        "bio": "[Bio a preencher. Deposite as informações em data/team/marco_rogerio.md para que este perfil seja atualizado.]",
+        "isPlaceholder": true
+      },
+      {
+        "name": "Fernanda",
+        "title": "[Título a confirmar]",
+        "subtitle": "[Área · Especialização · Papel no projeto]",
+        "location": "[Localização]",
+        "bio": "[Bio a preencher. Deposite as informações em data/team/fernanda.md para que este perfil seja atualizado.]",
+        "isPlaceholder": true
+      }
+    ]
   },
   "s6": {
     "number": "Seção 6",
@@ -2113,171 +2212,6 @@
         ]
       }
     ]
-  },
-  "charles": {
-    "name": "Charles Cleivin",
-    "title": "Engenheiro de Software Sênior · Pesquisador em IA Aplicada",
-    "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
-    "location": "Brasil",
-    "email": "charlescleivin@gmail.com",
-    "bio": "Fundador da THATPIX e co-pesquisador deste projeto. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica) — desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido no Ensino Médio no Colégio de Aplicação Emmanuel Leontsinis (RJ). 15+ premiações em ciência e tecnologia, incluindo cinco prêmios simultâneos na FEBRACE 2013 e Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países). Mais de 10 anos construindo sistemas de IA em produção: agentes inteligentes offline, pipelines de fine-tuning de LLMs e visão computacional aplicada ao agronegócio (estimativa de peso bovino em tempo real via vídeo, integrada ao WhatsApp). Especialização em arquiteturas de IA para ambientes com conectividade limitada — exatamente o cenário do pequeno produtor rural brasileiro que esta proposta atende.",
-    "highlights": [
-      {
-        "value": "10+",
-        "label": "Anos construindo sistemas de IA em produção"
-      },
-      {
-        "value": "15+",
-        "label": "Medalhas e prêmios em competições científicas nacionais e internacionais"
-      },
-      {
-        "value": "95%+",
-        "label": "Precisão em estimativa de peso bovino por visão computacional"
-      },
-      {
-        "value": "1M+",
-        "label": "Imagens bovinas processadas por sistema de visão computacional próprio"
-      }
-    ],
-    "skills": [
-      {
-        "area": "LLM & Fine-tuning",
-        "icon": "🧠",
-        "items": [
-          "Qwen2.5, Llama (7B+)",
-          "LoRA / PEFT / 4-bit NF4",
-          "H100 / A100 / RTX 4090",
-          "Treinamento PT-BR + EN"
-        ]
-      },
-      {
-        "area": "AI & Agentes",
-        "icon": "🤖",
-        "items": [
-          "PyTorch, Transformers, LangChain",
-          "YOLOv9/v11, OpenCV, Whisper",
-          "Agentes offline / air-gapped",
-          "Coordenação multi-agente"
-        ]
-      },
-      {
-        "area": "Web & Mobile",
-        "icon": "📱",
-        "items": [
-          "React Native (5+ anos)",
-          "React / Next.js / TypeScript",
-          "iOS (Swift) + Android (Kotlin)",
-          "WebSocket, GraphQL, Firebase"
-        ]
-      },
-      {
-        "area": "Infraestrutura ML",
-        "icon": "⚙️",
-        "items": [
-          "Hugging Face ecosystem",
-          "Docker, Kubernetes, serverless",
-          "Pipelines de treinamento distribuído",
-          "BLEU, ROUGE, BERTScore"
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "name": "Sistema de Estimativa de Peso Bovino via WhatsApp",
-        "description": "Preditor de peso de gado em tempo real via vídeo usando OpenCV + PyTorch, com análise morfológica e consciência de postura. Integrado ao WhatsApp para contextos rurais — o agricultor envia o vídeo, recebe o peso estimado. Funciona sem internet.",
-        "tags": [
-          "OpenCV",
-          "PyTorch",
-          "WhatsApp",
-          "IA Offline",
-          "Agropecuária"
-        ],
-        "relevance": "IA agropecuária em produção, integração WhatsApp com arquitetura assíncrona — o blueprint técnico exato do AgroAssistente IA."
-      },
-      {
-        "name": "Manual do Mundo — LLM Fine-tuning em Português",
-        "description": "Fine-tuning do Qwen2.5-7B em 3.000+ transcrições em português para o maior canal de ciências do Brasil (20M+ inscritos, 4,4B+ visualizações). Redução de loss de 27%, custo de $3/ciclo, habilitando geração ilimitada de conteúdo especializado.",
-        "tags": [
-          "Qwen2.5-7B",
-          "LoRA",
-          "4-bit NF4",
-          "Portuguese NLP",
-          "RTX 4090"
-        ],
-        "relevance": "Prova direta de fine-tuning de LLM em português com eficiência industrial — o mesmo pipeline do AgroAssistente IA."
-      },
-      {
-        "name": "Gerador de Agentes LLM Offline",
-        "description": "Ferramenta que instancia agentes inteligentes a partir de qualquer documento, sem conexão à internet. Casos de uso: análise de contratos, classificação de normas, suporte técnico local. Portátil, air-gapped, sem dependência de nuvem.",
-        "tags": [
-          "LangChain",
-          "LLM Local",
-          "Air-gapped",
-          "NLP",
-          "Electron"
-        ],
-        "relevance": "Experiência com LLMs locais e air-gapped diretamente aplicável ao design de resiliência assíncrona do AgroAssistente em zonas rurais de baixa conectividade."
-      }
-    ],
-    "softSkills": [
-      "Colaboração distribuída de alta performance — experiência em times multidisciplinares e internacionais",
-      "Liderança técnica e planejamento arquitetural",
-      "Aprendizado acelerado — domina novas stacks e domínios com profundidade e rapidez",
-      "Entrega sistemas de IA em produção dentro do prazo e do orçamento"
-    ],
-    "videos": [
-      {
-        "url": "https://www.youtube.com/embed/7RqIokz26jU?start=136",
-        "title": "Apresentação de tecnologia própria em evento internacional · China · 2019"
-      }
-    ],
-    "cvFile": "/charles_cleivin_cv.pdf",
-    "heroImage": "/silhouette.jpg",
-    "heroCaption": "Macao-China Innovation & Entrepreneurship Competition · 2019",
-    "gallery": [
-      {
-        "src": "/primeiroLugarFebraceComReitoraDAUsp.jpg",
-        "caption": "5 prêmios simultâneos com o mesmo projeto",
-        "badge": "🏆 FEBRACE · USP · 2013",
-        "featured": true,
-        "awards": [
-          {
-            "icon": "🥇",
-            "text": "1º lugar entre todas as engenharias — Medalha de Ouro"
-          },
-          {
-            "icon": "🥈",
-            "text": "2º lugar em inovação entre todos os projetos do Brasil"
-          },
-          {
-            "icon": "⚡",
-            "text": "Prêmio Especial de Inovação — entregue pessoalmente pela General Electric"
-          },
-          {
-            "icon": "📚",
-            "text": "Bolsa Estudar Ciência — concedida pela Fundação Estudar"
-          },
-          {
-            "icon": "🔧",
-            "text": "Prêmio P.E.T. Mecatrônica — Engenharia Mecatrônica · USP"
-          }
-        ],
-        "context": "O mesmo projeto credenciou Charles como 1 dos 3 brasileiros selecionados para a Expo-INGENIERIA 2013 (Costa Rica) — e no ano seguinte conquistou a Medalha de Ouro Geral no ESI Mundi 2014, Abu Dhabi, entre representantes de mais de 40 países."
-      },
-      {
-        "src": "/participacaonog20.jpeg",
-        "caption": "G20 Sustainable Finance Working Group — Transforming Sustainability Reporting for SMEs · Rio de Janeiro · 2024",
-        "badge": "🌍 G20 Brasil 2024 · Finanças Sustentáveis",
-        "context": "Evento promovido por iCS, Instituto Itaúsa e CDP no âmbito da presidência brasileira do G20, com foco em sustentabilidade e digitalização para pequenas e médias empresas — agenda diretamente alinhada ao ecossistema de impacto do Roça Conectada."
-      },
-      {
-        "src": "/showingGoldMedalInDubai.jpg",
-        "caption": "Medalha de Ouro — Premiação Geral · ESI Mundi, Abu Dhabi (EAU)",
-        "badge": "🥇 Medalha de Ouro Geral — ESI Mundi · MILSET · Abu Dhabi",
-        "context": "O ESI Mundi (Expo Science International), organizado pela MILSET, é um dos maiores eventos internacionais de ciência e engenharia do mundo, reunindo representantes de mais de 40 países perante banca técnica multilateral. A Medalha de Ouro na premiação geral atesta excelência científica em nível global."
-      }
-    ],
-    "profilePhoto": "/profile_pic.jpg"
   },
   "s11": {
     "number": "Seção 11",

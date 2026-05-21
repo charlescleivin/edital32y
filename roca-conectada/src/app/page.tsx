@@ -1,7 +1,6 @@
 import proposalJson from '../../data/proposal.json'
 import type { ProposalData } from '@/types/proposal'
 import Sidebar from '@/components/Sidebar/Sidebar'
-import CharlesSection from '@/components/CharlesSection/CharlesSection'
 import HeroSection from '@/components/HeroSection/HeroSection'
 import SumarioSection from '@/components/SumarioSection/SumarioSection'
 import ProblemaSection from '@/components/ProblemaSection/ProblemaSection'
@@ -24,7 +23,7 @@ import VersionToggle from '@/components/VersionToggle/VersionToggle'
 const proposal = proposalJson as unknown as ProposalData
 
 export default function Home() {
-  const { meta, sidebar, hero, charles, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11 } = proposal
+  const { meta, sidebar, hero, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11 } = proposal
 
   return (
     <VersionProvider>
@@ -42,13 +41,6 @@ export default function Home() {
               <HeroSection {...hero} />
             </section>
           </DiffSection>
-          <Reveal>
-            <DiffSection sectionKey="charles">
-              <section id="s-charles" className="scroll-mt-4">
-                <CharlesSection {...charles} />
-              </section>
-            </DiffSection>
-          </Reveal>
           <Reveal>
             <DiffSection sectionKey="s1">
               <section id="s1" className="scroll-mt-4">

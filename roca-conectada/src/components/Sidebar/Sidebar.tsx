@@ -6,10 +6,17 @@ import Link from 'next/link'
 
 export const componentMeta = { slug: 'sidebar', label: 'Sidebar Navigation' }
 
+export interface SidebarChild {
+  id: string
+  label: string
+  avatar?: string
+}
+
 export interface SidebarSection {
   id: string
   label: string
   num: string
+  children?: SidebarChild[]
 }
 
 export interface SidebarProps {
@@ -67,6 +74,7 @@ function useActiveSection(ids: string[]) {
   }, [key])
   return active
 }
+
 
 function PdfViewer({ label, url, onClose }: { label: string; url: string; onClose: () => void }) {
   useEffect(() => {
@@ -136,14 +144,29 @@ function PdfViewer({ label, url, onClose }: { label: string; url: string; onClos
 
 export default function Sidebar({ projectName, call, deadline, sections }: SidebarProps) {
   const days = useCountdown(deadline)
-  const active = useActiveSection(sections.map((s) => s.id))
+
+  // collect all IDs (parents + children) for scroll tracking
+  const allIds = sections.flatMap((s) => [s.id, ...(s.children?.map((c) => c.id) ?? [])])
+  const active = useActiveSection(allIds)
+
   const [docsOpen, setDocsOpen] = useState(false)
   const [activePdf, setActivePdf] = useState<{ label: string; url: string } | null>(null)
   const [mounted, setMounted] = useState(false)
+  // manually-toggled section drawers
+  const [openDrawers, setOpenDrawers] = useState<Record<string, boolean>>({})
   const closeRef = useRef<() => void>(() => setActivePdf(null))
   closeRef.current = () => setActivePdf(null)
 
   useEffect(() => { setMounted(true) }, [])
+
+  // auto-open drawer when any of its children become active
+  useEffect(() => {
+    for (const s of sections) {
+      if (s.children?.some((c) => c.id === active)) {
+        setOpenDrawers((prev) => prev[s.id] ? prev : { ...prev, [s.id]: true })
+      }
+    }
+  }, [active, sections])
 
   function openPdf(doc: PdfEntry) {
     setActivePdf({ label: doc.label, url: `/api/edital/${encodeURIComponent(doc.file)}` })
@@ -174,28 +197,75 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
           <span className="block px-7 pb-2.5 text-[8px] font-bold uppercase tracking-[3px]"
             style={{ color: 'var(--txtll)' }}>Seções</span>
 
-          {sections.map((s) => (
-            <Link
-              key={s.id}
-              href={`#${s.id}`}
-              className={`flex items-center gap-3 border-l-2 px-6 py-2.5 text-[12.5px] font-medium transition-all duration-150 ${
-                active === s.id ? 'border-[#c85530]' : 'border-transparent'
-              }`}
-              style={{
-                background: active === s.id ? 'rgba(200,85,48,0.08)' : 'transparent',
-                color: active === s.id ? 'var(--txt)' : 'var(--txtl)',
-              }}
-            >
-              <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-md text-[9px] font-bold"
-                style={{
-                  background: active === s.id ? 'var(--terra)' : 'rgba(237,229,211,0.06)',
-                  color: active === s.id ? 'var(--txt)' : 'var(--txtll)',
-                }}>
-                {s.num}
-              </span>
-              <span className="truncate">{s.label}</span>
-            </Link>
-          ))}
+          {sections.map((s) => {
+            const isActive = active === s.id || s.children?.some((c) => c.id === active)
+            const hasChildren = s.children && s.children.length > 0
+            const drawerOpen = hasChildren && (openDrawers[s.id] ?? false)
+
+            return (
+              <div key={s.id}>
+                {/* parent row */}
+                <div className={`flex items-center border-l-2 ${isActive ? 'border-[#c85530]' : 'border-transparent'}`}
+                  style={{ background: isActive ? 'rgba(200,85,48,0.08)' : 'transparent' }}>
+                  <Link
+                    href={`#${s.id}`}
+                    className="flex flex-1 items-center gap-3 py-2.5 pl-6 text-[12.5px] font-medium transition-all duration-150"
+                    style={{ color: isActive ? 'var(--txt)' : 'var(--txtl)' }}
+                  >
+                    <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-md text-[9px] font-bold"
+                      style={{
+                        background: isActive ? 'var(--terra)' : 'rgba(237,229,211,0.06)',
+                        color: isActive ? 'var(--txt)' : 'var(--txtll)',
+                      }}>
+                      {s.num}
+                    </span>
+                    <span className="truncate">{s.label}</span>
+                  </Link>
+
+                  {/* drawer toggle */}
+                  {hasChildren && (
+                    <button
+                      onClick={() => setOpenDrawers((prev) => ({ ...prev, [s.id]: !prev[s.id] }))}
+                      className="flex h-full items-center px-3 transition-opacity hover:opacity-80"
+                      style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+                      aria-label={drawerOpen ? 'Fechar membros' : 'Ver membros'}
+                    >
+                      <span className="text-[8px]" style={{ color: isActive ? 'var(--terra)' : 'var(--txtll)', transition: 'transform 0.2s', display: 'block', transform: drawerOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>▶</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* children drawer */}
+                {hasChildren && drawerOpen && (
+                  <div className="pb-1">
+                    {s.children!.map((child) => {
+                      const childActive = active === child.id
+                      return (
+                        <Link
+                          key={child.id}
+                          href={`#${child.id}`}
+                          className="flex items-center gap-2.5 border-l-2 py-2 pl-10 pr-4 text-[11.5px] transition-all duration-150"
+                          style={{
+                            borderColor: childActive ? 'var(--terra)' : 'rgba(237,229,211,0.06)',
+                            background: childActive ? 'rgba(200,85,48,0.06)' : 'transparent',
+                            color: childActive ? 'var(--txt)' : 'var(--txtll)',
+                          }}
+                        >
+                          {child.avatar && (
+                            <span className="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-md text-[11px]"
+                              style={{ background: childActive ? 'rgba(200,85,48,0.15)' : 'rgba(237,229,211,0.04)' }}>
+                              {child.avatar}
+                            </span>
+                          )}
+                          <span className="truncate font-medium">{child.label}</span>
+                        </Link>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </nav>
 
         {/* edital documents */}

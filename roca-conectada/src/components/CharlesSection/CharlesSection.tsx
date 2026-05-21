@@ -10,12 +10,12 @@ export type CharlesSectionProps = CharlesData
 export default function CharlesSection({
   name, title, subtitle, location, bio,
   highlights, skills, projects, softSkills, videos, cvFile,
-  heroImage, heroCaption, gallery, profilePhoto,
+  heroImage, heroCaption, gallery, profilePhoto, isPlaceholder,
 }: CharlesSectionProps) {
   const [cvOpen, setCvOpen] = useState(false)
 
-  const featuredVideo = videos[0] ?? null
-  const extraVideos = videos.slice(1)
+  const featuredVideo = videos?.[0] ?? null
+  const extraVideos = videos?.slice(1) ?? []
 
   return (
     <section id="s-charles" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
@@ -136,8 +136,25 @@ export default function CharlesSection({
         </div>
       )}
 
+      {/* ── placeholder notice ── */}
+      {isPlaceholder && (
+        <div className="mb-10 rounded-2xl border-l-[3px] px-7 py-6"
+          style={{ borderColor: 'var(--gold)', background: 'rgba(212,150,14,0.06)' }}>
+          <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
+            ⏳ Perfil em Construção
+          </div>
+          <p className="text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
+            Informações detalhadas serão adicionadas em breve. Deposite os dados em{' '}
+            <code className="rounded px-1.5 py-0.5 text-[12px]"
+              style={{ background: 'rgba(212,150,14,0.15)', color: 'var(--gold)' }}>
+              data/team/
+            </code>.
+          </p>
+        </div>
+      )}
+
       {/* ── bio + highlights LEFT | CV viewer RIGHT ── */}
-      <div className="mb-10 grid grid-cols-[1fr_400px] gap-8">
+      <div className={`mb-10 grid gap-8 ${cvFile ? 'grid-cols-[1fr_400px]' : 'grid-cols-1'}`}>
 
         <div className="flex flex-col gap-6">
           {/* profile photo + bio */}
@@ -164,64 +181,70 @@ export default function CharlesSection({
           </div>
 
           {/* highlights — 36px Playfair numbers */}
-          <div className="grid grid-cols-2 gap-3">
-            {highlights.map((h, i) => (
-              <div key={i} className="rounded-2xl border p-5"
-                style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-                <span className="block text-[36px] font-bold leading-tight"
-                  style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>{h.value}</span>
-                <span className="mt-1 block text-[12px]" style={{ color: 'var(--txtl)' }}>{h.label}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* soft skills */}
-          <div className="rounded-2xl border p-6"
-            style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-            <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
-              style={{ color: 'var(--txtll)' }}>Perfil Profissional</div>
-            <div className="flex flex-col gap-2.5">
-              {softSkills.map((s, i) => (
-                <div key={i} className="flex items-start gap-2.5 text-[13.5px]"
-                  style={{ color: 'var(--txtl)' }}>
-                  <span style={{ color: 'var(--sage)' }}>◆</span>
-                  <span>{s}</span>
+          {highlights && highlights.length > 0 && (
+            <div className="grid grid-cols-2 gap-3">
+              {highlights.map((h, i) => (
+                <div key={i} className="rounded-2xl border p-5"
+                  style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+                  <span className="block text-[36px] font-bold leading-tight"
+                    style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>{h.value}</span>
+                  <span className="mt-1 block text-[12px]" style={{ color: 'var(--txtl)' }}>{h.label}</span>
                 </div>
               ))}
             </div>
-          </div>
+          )}
+
+          {/* soft skills */}
+          {softSkills && softSkills.length > 0 && (
+            <div className="rounded-2xl border p-6"
+              style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+              <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
+                style={{ color: 'var(--txtll)' }}>Perfil Profissional</div>
+              <div className="flex flex-col gap-2.5">
+                {softSkills.map((s, i) => (
+                  <div key={i} className="flex items-start gap-2.5 text-[13.5px]"
+                    style={{ color: 'var(--txtl)' }}>
+                    <span style={{ color: 'var(--sage)' }}>◆</span>
+                    <span>{s}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* CV viewer */}
-        <div className="overflow-hidden rounded-2xl border"
-          style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-          <div className="flex items-center justify-between px-5 py-3.5"
-            style={{ background: 'var(--bg-raised)', borderBottom: '1px solid var(--bdr)' }}>
-            <span className="text-[10px] font-bold uppercase tracking-[2px]"
-              style={{ color: 'var(--txtll)' }}>Curriculum Vitae</span>
-            <div className="flex gap-2">
-              <a href={cvFile} target="_blank" rel="noopener noreferrer"
-                className="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-opacity hover:opacity-80"
-                style={{ background: 'var(--bg-elevated)', color: 'var(--txt)', border: '1px solid var(--bdr-strong)' }}>
-                ↗ Abrir
-              </a>
-              <a href={cvFile} download="Charles_Cleivin_CV.pdf"
-                className="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-opacity hover:opacity-80"
-                style={{ background: 'var(--terra)', color: 'var(--txt)' }}>
-                ↓ Baixar
-              </a>
+        {cvFile && (
+          <div className="overflow-hidden rounded-2xl border"
+            style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+            <div className="flex items-center justify-between px-5 py-3.5"
+              style={{ background: 'var(--bg-raised)', borderBottom: '1px solid var(--bdr)' }}>
+              <span className="text-[10px] font-bold uppercase tracking-[2px]"
+                style={{ color: 'var(--txtll)' }}>Curriculum Vitae</span>
+              <div className="flex gap-2">
+                <a href={cvFile} target="_blank" rel="noopener noreferrer"
+                  className="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-opacity hover:opacity-80"
+                  style={{ background: 'var(--bg-elevated)', color: 'var(--txt)', border: '1px solid var(--bdr-strong)' }}>
+                  ↗ Abrir
+                </a>
+                <a href={cvFile} download
+                  className="rounded-lg px-3 py-1.5 text-[11px] font-bold transition-opacity hover:opacity-80"
+                  style={{ background: 'var(--terra)', color: 'var(--txt)' }}>
+                  ↓ Baixar
+                </a>
+              </div>
             </div>
+            <div style={{ height: cvOpen ? '680px' : '440px', transition: 'height 0.3s ease' }}>
+              <iframe src={cvFile} className="w-full h-full"
+                style={{ border: 'none', background: '#fff' }} title={`${name} CV`} />
+            </div>
+            <button onClick={() => setCvOpen(v => !v)}
+              className="w-full py-2.5 text-[11px] font-semibold transition-opacity hover:opacity-70"
+              style={{ background: 'var(--bg-raised)', borderTop: '1px solid var(--bdr)', color: 'var(--txtl)' }}>
+              {cvOpen ? '▲ Mostrar menos' : '▼ Ver CV completo'}
+            </button>
           </div>
-          <div style={{ height: cvOpen ? '680px' : '440px', transition: 'height 0.3s ease' }}>
-            <iframe src={cvFile} className="w-full h-full"
-              style={{ border: 'none', background: '#fff' }} title="Charles Cleivin CV" />
-          </div>
-          <button onClick={() => setCvOpen(v => !v)}
-            className="w-full py-2.5 text-[11px] font-semibold transition-opacity hover:opacity-70"
-            style={{ background: 'var(--bg-raised)', borderTop: '1px solid var(--bdr)', color: 'var(--txtl)' }}>
-            {cvOpen ? '▲ Mostrar menos' : '▼ Ver CV completo'}
-          </button>
-        </div>
+        )}
       </div>
 
       {/* ── photo gallery ── */}
@@ -344,31 +367,35 @@ export default function CharlesSection({
       )}
 
       {/* ── skills ── */}
-      <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
-        style={{ color: 'var(--txtll)' }}>Competências Técnicas</div>
-      <div className="mb-10 grid grid-cols-4 gap-4">
-        {skills.map((sk, i) => (
-          <div key={i} className="rounded-2xl border p-5"
-            style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-            <div className="mb-3 text-[26px] leading-none">{sk.icon}</div>
-            <div className="mb-3 text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{sk.area}</div>
-            <div className="flex flex-col gap-1.5">
-              {sk.items.map((item, j) => (
-                <div key={j} className="flex items-start gap-2 text-[12px]"
-                  style={{ color: 'var(--txtl)' }}>
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full" style={{ background: 'var(--sage)' }} />
-                  {item}
+      {skills && skills.length > 0 && (
+        <>
+          <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
+            style={{ color: 'var(--txtll)' }}>Competências Técnicas</div>
+          <div className="mb-10 grid grid-cols-4 gap-4">
+            {skills.map((sk, i) => (
+              <div key={i} className="rounded-2xl border p-5"
+                style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+                <div className="mb-3 text-[26px] leading-none">{sk.icon}</div>
+                <div className="mb-3 text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{sk.area}</div>
+                <div className="flex flex-col gap-1.5">
+                  {sk.items.map((item, j) => (
+                    <div key={j} className="flex items-start gap-2 text-[12px]"
+                      style={{ color: 'var(--txtl)' }}>
+                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full" style={{ background: 'var(--sage)' }} />
+                      {item}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </>
+      )}
 
       {/* ── projects ── */}
-      <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
-        style={{ color: 'var(--txtll)' }}>Projetos Notáveis — Relevância Direta para Roça Conectada</div>
-      <div className="grid grid-cols-3 gap-5">
+      {projects && projects.length > 0 && <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
+        style={{ color: 'var(--txtll)' }}>Projetos Notáveis — Relevância Direta para Roça Conectada</div>}
+      {projects && projects.length > 0 && <div className="grid grid-cols-3 gap-5">
         {projects.map((p, i) => (
           <div key={i} className="flex flex-col overflow-hidden rounded-2xl border"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -392,7 +419,7 @@ export default function CharlesSection({
             </div>
           </div>
         ))}
-      </div>
+      </div>}
 
       {/* ── extra videos (2+) ── */}
       {extraVideos.length > 0 && (
