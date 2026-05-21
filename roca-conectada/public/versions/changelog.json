@@ -61,5 +61,12 @@
     "date": "2026-05-21",
     "label": "feat: soberania narrative rewrite — S1/S2/S3/S9 re",
     "description": "feat: soberania narrative rewrite — S1/S2/S3/S9 rebuilt with evidence"
+  },
+  {
+    "id": "v10",
+    "commit": "434731a",
+    "date": "2026-05-21",
+    "label": "feat: sovereignty narrative rewrite — S4 through S",
+    "description": "feat: sovereignty narrative rewrite — S4 through S9"
   }
 ]
