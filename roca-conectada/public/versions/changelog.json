@@ -89,5 +89,12 @@
     "date": "2026-05-21",
     "label": "feat: add 3 data visualizations — AI race table (S",
     "description": "feat: add 3 data visualizations — AI race table (S2), phase Gantt (S4), impact funnel (S8)"
+  },
+  {
+    "id": "v14",
+    "commit": "a5c72dd",
+    "date": "2026-05-21",
+    "label": "feat: move Charles to EquipeSection, add Marco/Fer",
+    "description": "feat: move Charles to EquipeSection, add Marco/Fernanda placeholders, sidebar team drawer"
   }
 ]
