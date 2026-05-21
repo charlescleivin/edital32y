@@ -152,24 +152,26 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
   const [docsOpen, setDocsOpen] = useState(false)
   const [activePdf, setActivePdf] = useState<{ label: string; url: string } | null>(null)
   const [mounted, setMounted] = useState(false)
-  // manually-toggled section drawers
   const [openDrawers, setOpenDrawers] = useState<Record<string, boolean>>({})
+  // tracks drawers the user explicitly opened — scroll won't auto-close these
+  const [pinnedDrawers, setPinnedDrawers] = useState<Record<string, boolean>>({})
   const closeRef = useRef<() => void>(() => setActivePdf(null))
   closeRef.current = () => setActivePdf(null)
 
   useEffect(() => { setMounted(true) }, [])
 
-  // auto-open when scrolling into a child; auto-close when scrolling away
+  // auto-open when scrolling into a section; auto-close when scrolling away (unless pinned)
   useEffect(() => {
     for (const s of sections) {
       if (!s.children?.length) continue
       const withinSection = active === s.id || s.children.some((c) => c.id === active)
       if (withinSection) {
         setOpenDrawers((prev) => prev[s.id] ? prev : { ...prev, [s.id]: true })
-      } else {
+      } else if (!pinnedDrawers[s.id]) {
         setOpenDrawers((prev) => prev[s.id] ? { ...prev, [s.id]: false } : prev)
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active, sections])
 
   function openPdf(doc: PdfEntry) {
@@ -215,12 +217,21 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                     href={`#${s.id}`}
                     className="flex flex-1 items-center gap-3 py-2.5 pl-6 text-[12.5px] font-medium transition-all duration-150"
                     style={{ color: isActive ? 'var(--txt)' : 'var(--txtl)' }}
-                    onClick={() => setOpenDrawers((prev) => {
-                      const next: Record<string, boolean> = {}
-                      for (const sec of sections) next[sec.id] = false
-                      if (hasChildren) next[s.id] = !prev[s.id]
-                      return next
-                    })}
+                    onClick={() => {
+                      // close + unpin all others, toggle + pin current
+                      setOpenDrawers((prev) => {
+                        const next: Record<string, boolean> = {}
+                        for (const sec of sections) next[sec.id] = false
+                        if (hasChildren) next[s.id] = !prev[s.id]
+                        return next
+                      })
+                      setPinnedDrawers((prev) => {
+                        const next: Record<string, boolean> = {}
+                        for (const sec of sections) next[sec.id] = false
+                        if (hasChildren) next[s.id] = !prev[s.id]
+                        return next
+                      })
+                    }}
                   >
                     <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-md text-[9px] font-bold"
                       style={{
@@ -235,7 +246,10 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                   {/* drawer toggle */}
                   {hasChildren && (
                     <button
-                      onClick={() => setOpenDrawers((prev) => ({ ...prev, [s.id]: !prev[s.id] }))}
+                      onClick={() => {
+                        setOpenDrawers((prev) => ({ ...prev, [s.id]: !prev[s.id] }))
+                        setPinnedDrawers((prev) => ({ ...prev, [s.id]: !prev[s.id] }))
+                      }}
                       className="flex h-full items-center px-3 transition-opacity hover:opacity-80"
                       style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
                       aria-label={drawerOpen ? 'Fechar membros' : 'Ver membros'}
