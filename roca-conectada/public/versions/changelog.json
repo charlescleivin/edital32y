@@ -40,5 +40,12 @@
     "date": "2026-05-19",
     "label": "feat: version diff panel + auto-extraction git hoo",
     "description": "feat: version diff panel + auto-extraction git hook"
+  },
+  {
+    "id": "v7",
+    "commit": "a6f6638",
+    "date": "2026-05-21",
+    "label": "feat: W-09 + W-13 — Política de Inovação UFSC (EL-",
+    "description": "feat: W-09 + W-13 — Política de Inovação UFSC (EL-09) e KPI RE-04 orgânico"
   }
 ]
