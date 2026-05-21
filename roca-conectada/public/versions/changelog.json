@@ -103,5 +103,12 @@
     "date": "2026-05-21",
     "label": "feat(s8): add 'A Alavanca do Investimento' ROI tim",
     "description": "feat(s8): add 'A Alavanca do Investimento' ROI timeline visual"
+  },
+  {
+    "id": "v16",
+    "commit": "fd5362b",
+    "date": "2026-05-21",
+    "label": "chore: replace UFSC/FAPEU/FEESC with [ICT EXECUTOR",
+    "description": "chore: replace UFSC/FAPEU/FEESC with [ICT EXECUTORA]/[FUNDAÇÃO DE APOIO] placeholders"
   }
 ]
