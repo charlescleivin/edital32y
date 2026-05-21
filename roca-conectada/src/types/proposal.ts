@@ -64,9 +64,15 @@ export interface BibliographyRef {
   text: string
 }
 
+export interface AiEvidenceSection {
+  title: string
+  body: string
+}
+
 export interface S2Data extends SectionMeta {
   stats: Array<{ value: string; label: string; colorVariant: 'green' | 'blue' | 'red' }>
   barriers: Barrier[]
+  aiEvidenceSection?: AiEvidenceSection
   contextNote: string
   openingScenario?: string
   competitiveContext?: string

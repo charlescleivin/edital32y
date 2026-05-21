@@ -42,7 +42,7 @@ function renderBlocks(text: string, headingColor = 'var(--txt)') {
   })
 }
 
-export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
+export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
   return (
     <section id="s2" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -156,6 +156,42 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           )
         })}
       </div>
+
+      {/* AI evidence section — global proof block */}
+      {aiEvidenceSection && (
+        <div className="mt-10 rounded-2xl border-l-[3px] p-8"
+          style={{ borderColor: 'var(--p)', background: 'rgba(111,168,118,0.04)' }}>
+          <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--p)' }}>
+            🌍 Evidência Internacional — A IA Já Foi Testada no Campo
+          </div>
+          <h3 className="mb-6 text-[20px] font-bold leading-[1.2]"
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+            {aiEvidenceSection.title}
+          </h3>
+          <div className="flex flex-col gap-4">
+            {aiEvidenceSection.body.split(/\n\n+/).map((block, idx) => {
+              const boldHeader = block.match(/^\*\*([^*]+)\*\*\s*([\s\S]*)$/)
+              if (boldHeader) {
+                return (
+                  <div key={idx} className="border-l-[2px] pl-4" style={{ borderColor: 'rgba(111,168,118,0.4)' }}>
+                    <div className="mb-1.5 text-[12.5px] font-bold" style={{ color: 'var(--sage)' }}>
+                      {boldHeader[1].trim()}
+                    </div>
+                    <p className="text-[13.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
+                      {boldHeader[2].trim()}
+                    </p>
+                  </div>
+                )
+              }
+              return (
+                <p key={idx} className="text-[13.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
+                  {block}
+                </p>
+              )
+            })}
+          </div>
+        </div>
+      )}
 
       {/* context note */}
       <div className="rounded-2xl border-l-[3px] p-7"
