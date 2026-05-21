@@ -54,5 +54,12 @@
     "date": "2026-05-21",
     "label": "feat: sync s3 axes/objectives fixture→proposal.jso",
     "description": "feat: sync s3 axes/objectives fixture→proposal.json; fix OE2 corpus count"
+  },
+  {
+    "id": "v9",
+    "commit": "7cbff6e",
+    "date": "2026-05-21",
+    "label": "feat: soberania narrative rewrite — S1/S2/S3/S9 re",
+    "description": "feat: soberania narrative rewrite — S1/S2/S3/S9 rebuilt with evidence"
   }
 ]
