@@ -342,10 +342,40 @@ export interface IndicatorRow {
   phase3: string
 }
 
+export interface LeverageYear {
+  label: string
+  sublabel?: string
+  cumulative: string
+  roi: string
+  roiVariant: 'warm' | 'gold' | 'sage' | 'bright'
+  barPercent: number
+}
+
+export interface PermanentAsset {
+  icon: string
+  name: string
+  license: string
+}
+
+export interface InvestmentLeverage {
+  title: string
+  subtitle: string
+  investment: string
+  investmentLabel: string
+  annualReturn: string
+  familyCount: string
+  costPerFamily: string
+  years: LeverageYear[]
+  callout: string
+  note: string
+  permanentAssets: PermanentAsset[]
+}
+
 export interface S8Data extends SectionMeta {
   counters: KPICounter[]
   indicators: IndicatorRow[]
   impactNarrative?: string
+  leverage?: InvestmentLeverage
 }
 
 export interface SustainabilityScenario {

@@ -1,11 +1,154 @@
 import SectionHero from '@/components/ui/SectionHero'
-import type { S8Data } from '@/types/proposal'
+import type { S8Data, InvestmentLeverage } from '@/types/proposal'
 
 export const componentMeta = { slug: 'indicadores-section', label: 'Indicadores e Metas' }
 
 export type IndicadoresSectionProps = S8Data
 
-export default function IndicadoresSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, counters, indicators, impactNarrative }: IndicadoresSectionProps) {
+const roiColors: Record<string, { bar: string; text: string; bg: string; border: string }> = {
+  warm:   { bar: 'var(--terra)', text: 'var(--terra)', bg: 'rgba(200,85,48,0.08)',   border: 'rgba(200,85,48,0.25)'   },
+  gold:   { bar: 'var(--gold)',  text: 'var(--gold)',  bg: 'rgba(212,150,14,0.08)',  border: 'rgba(212,150,14,0.25)'  },
+  sage:   { bar: 'var(--sage)',  text: 'var(--sage)',  bg: 'rgba(111,168,118,0.08)', border: 'rgba(111,168,118,0.25)' },
+  bright: { bar: 'var(--p)',     text: 'var(--p)',     bg: 'rgba(74,148,86,0.08)',   border: 'rgba(74,148,86,0.3)'    },
+}
+
+function LeverageBlock({ data }: { data: InvestmentLeverage }) {
+  return (
+    <div className="mb-10 overflow-hidden rounded-2xl border" style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'var(--bg-card)' }}>
+      {/* header */}
+      <div className="border-b px-8 py-7" style={{ borderColor: 'rgba(212,150,14,0.15)', background: 'rgba(212,150,14,0.04)' }}>
+        <div className="mb-1 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--gold)' }}>
+          💡 Retorno sobre Investimento Público
+        </div>
+        <h3 className="mb-1 text-[22px] font-bold leading-snug" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+          {data.title}
+        </h3>
+        <p className="text-[13px] italic" style={{ color: 'var(--txtl)' }}>{data.subtitle}</p>
+      </div>
+
+      {/* two-panel body */}
+      <div className="grid grid-cols-[280px_1fr] divide-x" style={{ borderColor: 'rgba(237,229,211,0.07)' }}>
+        {/* left — investment box */}
+        <div className="flex flex-col gap-5 p-7" style={{ borderColor: 'rgba(237,229,211,0.07)' }}>
+          <div>
+            <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+              Investimento total
+            </div>
+            <div className="text-[38px] font-bold leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
+              {data.investment}
+            </div>
+            <div className="mt-1 text-[11px]" style={{ color: 'var(--txtll)' }}>{data.investmentLabel}</div>
+          </div>
+
+          <div className="h-px" style={{ background: 'var(--bdr)' }} />
+
+          <div>
+            <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+              Custo por família beneficiada
+            </div>
+            <div className="text-[28px] font-bold leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}>
+              {data.costPerFamily}
+            </div>
+            <div className="mt-0.5 text-[11px]" style={{ color: 'var(--txtll)' }}>por família · pagos uma única vez</div>
+          </div>
+
+          <div className="h-px" style={{ background: 'var(--bdr)' }} />
+
+          {/* permanent assets */}
+          <div>
+            <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+              Ativos públicos permanentes
+            </div>
+            <div className="space-y-2.5">
+              {data.permanentAssets.map((asset, i) => (
+                <div key={i} className="flex items-start gap-2.5">
+                  <span className="mt-0.5 text-[16px] leading-none shrink-0">{asset.icon}</span>
+                  <div>
+                    <div className="text-[12px] font-semibold leading-snug" style={{ color: 'var(--txt)' }}>{asset.name}</div>
+                    <div className="text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}>{asset.license}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* right — ROI bar chart */}
+        <div className="flex flex-col p-7">
+          <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+            Retorno acumulado estimado · pós-entrega do projeto
+          </div>
+          <div className="mb-6 text-[11px] italic" style={{ color: 'var(--txtll)' }}>
+            (investimento encerrado no mês 36 — barras mostram retorno social acumulado)
+          </div>
+
+          <div className="flex flex-1 flex-col justify-between gap-4">
+            {data.years.map((year, i) => {
+              const c = roiColors[year.roiVariant] ?? roiColors.warm
+              return (
+                <div key={i} className="group">
+                  {/* label row */}
+                  <div className="mb-1.5 flex items-baseline justify-between">
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{year.label}</span>
+                      {year.sublabel && <span className="text-[10px]" style={{ color: 'var(--txtll)' }}>{year.sublabel}</span>}
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-[13px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: c.text }}>
+                        {year.cumulative}
+                      </span>
+                      <span className="rounded-full px-2 py-0.5 text-[10px] font-bold"
+                        style={{ background: c.bg, color: c.text, border: `1px solid ${c.border}` }}>
+                        {year.roi}
+                      </span>
+                    </div>
+                  </div>
+                  {/* bar */}
+                  <div className="h-2.5 overflow-hidden rounded-full" style={{ background: 'rgba(237,229,211,0.06)' }}>
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{ width: `${year.barPercent}%`, background: c.bar, opacity: 0.85 }}
+                    />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* annual return callout */}
+          <div className="mt-6 flex items-center gap-4 rounded-xl border px-5 py-4"
+            style={{ borderColor: 'rgba(111,168,118,0.25)', background: 'rgba(111,168,118,0.06)' }}>
+            <div>
+              <div className="text-[9px] font-bold uppercase tracking-[2px] mb-0.5" style={{ color: 'var(--sage)' }}>
+                Renda recorrente gerada / ano
+              </div>
+              <div className="text-[26px] font-bold leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--p)' }}>
+                {data.annualReturn}
+              </div>
+            </div>
+            <div className="h-10 w-px" style={{ background: 'rgba(111,168,118,0.2)' }} />
+            <div>
+              <div className="text-[9px] font-bold uppercase tracking-[2px] mb-0.5" style={{ color: 'var(--txtll)' }}>
+                Famílias alcançadas
+              </div>
+              <div className="text-[20px] font-bold leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+                {data.familyCount}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* footer callout */}
+      <div className="border-t px-8 py-4 text-center" style={{ borderColor: 'rgba(212,150,14,0.15)', background: 'rgba(212,150,14,0.03)' }}>
+        <span className="text-[13px] font-bold italic" style={{ color: 'var(--gold)' }}>{data.callout}</span>
+        <span className="ml-4 text-[11px]" style={{ color: 'var(--txtll)' }}>{data.note}</span>
+      </div>
+    </div>
+  )
+}
+
+export default function IndicadoresSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, counters, indicators, impactNarrative, leverage }: IndicadoresSectionProps) {
   return (
     <section id="s8" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -56,6 +199,8 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
           </p>
         </div>
       )}
+
+      {leverage && <LeverageBlock data={leverage} />}
 
       {/* impact funnel — corpus → model → users → income */}
       <div className="mb-8 rounded-2xl border p-6" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>

@@ -1721,7 +1721,30 @@
         "phase3": "≥ 20%"
       }
     ],
-    "impactNarrative": "A soberania tecnológica não é um certificado — é o estado em que uma família agricultora toma decisões melhores porque teve acesso a conhecimento técnico preciso no momento que precisou, sem depender de um técnico que não existe ou de uma plataforma estrangeira que pode desaparecer. Cada um dos 2.500 agricultores ativos ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24h por dia, em português regional, via WhatsApp — canal que já usa —, sem custo de deslocamento e sem dependência de API estrangeira. A literatura de extensão rural digital (FAO 2022; Embrapa 2023) documenta redução média de 12–18% no custo de insumos quando o agricultor acessa orientação técnica em tempo real. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto. O AgroEval, o AgroLinguaBR e a AgroAPI permanecem disponíveis como patrimônio público: os próximos 3,9 milhões de agricultores que vierem depois desta fase não precisam pagar para construir de novo o que este projeto já construiu."
+    "impactNarrative": "A soberania tecnológica não é um certificado — é o estado em que uma família agricultora toma decisões melhores porque teve acesso a conhecimento técnico preciso no momento que precisou, sem depender de um técnico que não existe ou de uma plataforma estrangeira que pode desaparecer. Cada um dos 2.500 agricultores ativos ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24h por dia, em português regional, via WhatsApp — canal que já usa —, sem custo de deslocamento e sem dependência de API estrangeira. A literatura de extensão rural digital (FAO 2022; Embrapa 2023) documenta redução média de 12–18% no custo de insumos quando o agricultor acessa orientação técnica em tempo real. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto. O AgroEval, o AgroLinguaBR e a AgroAPI permanecem disponíveis como patrimônio público: os próximos 3,9 milhões de agricultores que vierem depois desta fase não precisam pagar para construir de novo o que este projeto já construiu.",
+    "leverage": {
+      "title": "A Alavanca — Como um Investimento Público Vira Renda Rural",
+      "subtitle": "R$ 7M aplicados uma única vez → renda recorrente permanente para 25.000 famílias",
+      "investment": "R$ 7M",
+      "investmentLabel": "investimento único · meses 1–36",
+      "annualReturn": "R$ 108M/ano",
+      "familyCount": "25.000 famílias",
+      "costPerFamily": "R$ 280",
+      "callout": "Custo: uma vez. Benefício: para sempre.",
+      "note": "Projeção conservadora: 25.000 famílias × R$ 4.320 de aumento médio de renda anual (RESR 2020, método PSM). Ativos digitais permanecem públicos indefinidamente.",
+      "permanentAssets": [
+        { "icon": "📚", "name": "AgroLinguaBR Corpus", "license": "25k pares · DOI Zenodo · MIT" },
+        { "icon": "🤖", "name": "AgroAssistente LLM", "license": "Fine-tuned · UFSC · Apache 2.0" },
+        { "icon": "🔗", "name": "AgroAPI", "license": "Camada pública · REST · MIT" }
+      ],
+      "years": [
+        { "label": "Ano 1", "sublabel": "pós-entrega", "cumulative": "R$ 108M", "roi": "15×", "roiVariant": "warm", "barPercent": 10 },
+        { "label": "Ano 2", "sublabel": "pós-entrega", "cumulative": "R$ 216M", "roi": "31×", "roiVariant": "gold", "barPercent": 20 },
+        { "label": "Ano 3", "sublabel": "pós-entrega", "cumulative": "R$ 324M", "roi": "46×", "roiVariant": "gold", "barPercent": 30 },
+        { "label": "Ano 5", "sublabel": "pós-entrega", "cumulative": "R$ 540M", "roi": "77×", "roiVariant": "sage", "barPercent": 50 },
+        { "label": "Ano 10", "sublabel": "pós-entrega", "cumulative": "R$ 1,08B", "roi": "154×", "roiVariant": "bright", "barPercent": 100 }
+      ]
+    }
   },
   "s9": {
     "number": "Seção 9",
