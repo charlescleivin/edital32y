@@ -278,5 +278,12 @@
     "date": "2026-05-25",
     "label": "feat(s2): replace placeholder images with Unsplash",
     "description": "feat(s2): replace placeholder images with Unsplash photos for hero and all 5 barriers"
+  },
+  {
+    "id": "v41",
+    "commit": "f947dba",
+    "date": "2026-05-25",
+    "label": "copy(s2): soften headline — 'só falta de tecnologi",
+    "description": "copy(s2): soften headline — 'só falta de tecnologia' / 'também falta de soberania'"
   }
 ]
