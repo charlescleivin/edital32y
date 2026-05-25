@@ -12,15 +12,18 @@ const IMAGES_DESKTOP = [
   { src: '/bg6.jpg', pos: '30% 40%'     },  // Feira livre — stalls left-focus
 ]
 
-// 3-strip mobile set: land → people → technology — each panel ~33% wide
+// 3-image mobile crossfade: land → people → technology
 const IMAGES_MOBILE = [
   { src: '/bg1.jpg', pos: 'center 42%'  },  // Caatinga — the land
   { src: '/bg4.jpg', pos: '60% 30%'     },  // Mulheres agricultoras — the people
   { src: '/bg5.jpg', pos: 'center 50%'  },  // Smartphone no roçado — the technology
 ]
 
+// Crossfade cycle: 12s total, 3 images staggered by 4s
+// delay[0]=0s, delay[1]=-8s, delay[2]=-4s → one image always visible
+const MOBILE_FADE_DELAYS = ['0s', '-8s', '-4s']
+
 const STEP_MS_DESKTOP = 620
-const STEP_MS_MOBILE  = 780   // slightly slower — each strip occupies more screen
 
 export default function HeroStripes() {
   const [visible, setVisible] = useState(1)
@@ -40,10 +43,7 @@ export default function HeroStripes() {
   }, [visible])
 
   useEffect(() => {
-    if (!loaderDone) return
-
-    const IMAGES = isMobile ? IMAGES_MOBILE : IMAGES_DESKTOP
-    const STEP_MS = isMobile ? STEP_MS_MOBILE : STEP_MS_DESKTOP
+    if (!loaderDone || isMobile) return
 
     setVisible(1)
 
@@ -56,31 +56,53 @@ export default function HeroStripes() {
     let idx = 1
 
     const addNext = () => {
-      if (idx >= IMAGES.length) return
-
+      if (idx >= IMAGES_DESKTOP.length) return
       add(() => {
         idx++
         setVisible(idx)
         addNext()
-      }, STEP_MS)
+      }, STEP_MS_DESKTOP)
     }
 
     add(addNext, 300)
     return () => timers.forEach(clearTimeout)
   }, [loaderDone, isMobile])
 
-  const IMAGES = isMobile ? IMAGES_MOBILE : IMAGES_DESKTOP
+  // Mobile: pure-CSS crossfade — 3 stacked full-bleed images
+  if (isMobile) {
+    return (
+      <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 0, opacity: 0.55 }}>
+        {IMAGES_MOBILE.map(({ src, pos }, i) => (
+          <div
+            key={i}
+            aria-hidden
+            style={{
+              position: 'absolute', inset: 0,
+              backgroundImage: `url(${src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: pos,
+              userSelect: 'none',
+              pointerEvents: 'none',
+              animationName: 'hero-mobile-fade',
+              animationDuration: '12s',
+              animationTimingFunction: 'ease-in-out',
+              animationIterationCount: 'infinite',
+              animationFillMode: 'both',
+              animationDelay: MOBILE_FADE_DELAYS[i],
+            }}
+          />
+        ))}
+      </div>
+    )
+  }
 
+  // Desktop: sequential stripe reveal
   return (
     <div
       className="absolute inset-0 overflow-hidden"
-      style={{
-        zIndex: 0,
-        opacity: 0.55,
-      }}
+      style={{ zIndex: 0, opacity: 0.55 }}
     >
-      {IMAGES.slice(0, visible).map(({ src, pos }, i) => {
-        // Only play entrance animation on genuine additions (not on reset to 1)
+      {IMAGES_DESKTOP.slice(0, visible).map(({ src, pos }, i) => {
         const isNew = i === visible - 1 && visible > prevVisible.current
 
         return (
@@ -92,18 +114,15 @@ export default function HeroStripes() {
               width: `${100 / visible}%`,
               overflow: 'hidden',
               transition: 'left 0.42s cubic-bezier(0.22,1,0.36,1), width 0.42s cubic-bezier(0.22,1,0.36,1)',
-              // Thin dark line between strips — the "gacha card" separator
               boxShadow: i < visible - 1 ? 'inset -1.5px 0 0 rgba(8,7,6,0.28)' : 'none',
             }}
           >
-            {/* Flip-in wrapper for newly added strip */}
             <div
               style={{
                 width: '100%', height: '100%',
                 animation: isNew ? 'hero-stripe-in 0.42s cubic-bezier(0.22,1,0.36,1) both' : 'none',
               }}
             >
-              {/* Per-strip edge vignette to reinforce the "card" separation */}
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0"
@@ -112,20 +131,15 @@ export default function HeroStripes() {
                   background: 'linear-gradient(90deg, rgba(8,7,6,0.30) 0%, transparent 16%, transparent 84%, rgba(8,7,6,0.30) 100%)',
                 }}
               />
-              {/* Image — background-position pan on mobile, static on desktop */}
               <div
                 aria-hidden
                 style={{
                   position: 'absolute', inset: 0,
                   backgroundImage: `url(${src})`,
                   backgroundSize: 'cover',
-                  backgroundPosition: isMobile ? undefined : pos,
+                  backgroundPosition: pos,
                   userSelect: 'none',
                   pointerEvents: 'none',
-                  ...(isMobile ? {
-                    animation: `hero-pan-${i % 2 === 0 ? 'ltr' : 'rtl'} 12s ease-in-out infinite alternate both`,
-                    '--pan-y': pos.split(' ')[1] ?? '50%',
-                  } as React.CSSProperties : {}),
                 }}
               />
             </div>
