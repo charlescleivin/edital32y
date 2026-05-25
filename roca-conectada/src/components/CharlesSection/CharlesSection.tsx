@@ -19,28 +19,28 @@ export default function CharlesSection({
   const extraVideos = videos?.slice(1) ?? []
 
   return (
-    <section id="s-charles" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
+    <section id="s-charles" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg)' }}>
       {/* watermark */}
-      <span aria-hidden className="pointer-events-none absolute right-6 top-2 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+      <span aria-hidden className="pointer-events-none absolute right-6 top-2 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>CC</span>
 
       {/* ── HERO BANNER ── */}
       {heroImage && (
-        <div className="relative -mx-16 -mt-20 mb-14 h-[460px] overflow-hidden">
+        <div className="relative -mx-4 -mt-10 sm:-mx-8 sm:-mt-14 lg:-mx-16 lg:-mt-20 mb-8 sm:mb-14 h-[260px] sm:h-[360px] lg:h-[460px] overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={heroImage} alt="Charles Cleivin presenting at international event"
             className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0" style={{
             background: 'linear-gradient(to right, rgba(12,11,9,0.97) 0%, rgba(12,11,9,0.75) 40%, rgba(12,11,9,0.2) 75%, transparent 100%)',
           }} />
-          <div className="absolute inset-0 flex flex-col justify-end p-16 pb-14">
+          <div className="absolute inset-0 flex flex-col justify-end p-4 pb-5 sm:p-10 sm:pb-10 lg:p-16 lg:pb-14">
             {heroCaption && (
               <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
                 style={{ borderColor: 'rgba(200,85,48,0.4)', background: 'rgba(200,85,48,0.1)', color: 'var(--terra)' }}>
                 🌏 {heroCaption}
               </span>
             )}
-            <h2 className="mb-4 text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
+            <h2 className="mb-4 text-[26px] sm:text-[38px] lg:text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
               {heroHeadline ? heroHeadline.split('\n').map((line, i, arr) => (
                 <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
@@ -59,7 +59,7 @@ export default function CharlesSection({
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
           {badgeLabel ?? '👨‍💻 Co-Pesquisador'}
         </span>
-        <h2 className="mb-2 text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
+        <h2 className="mb-2 text-[32px] sm:text-[42px] lg:text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{name}</h2>
         <p className="mb-1 text-[16px] font-semibold" style={{ color: 'var(--terra)' }}>{title}</p>
         <p className="text-[14px] italic" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
@@ -73,26 +73,23 @@ export default function CharlesSection({
           style={{ borderColor: 'rgba(200,85,48,0.25)', background: 'var(--bg-card)' }}>
 
           {/* header bar */}
-          <div className="flex items-center justify-between px-7 py-4"
+          <div className="flex flex-wrap items-center gap-2 px-4 py-3 sm:px-7 sm:py-4"
             style={{ background: 'rgba(200,85,48,0.08)', borderBottom: '1px solid rgba(200,85,48,0.15)' }}>
-            <div className="flex items-center gap-3">
-              <span className="text-[9px] font-bold uppercase tracking-[3px]"
-                style={{ color: 'var(--terra)' }}>🎙 Entrevista Internacional</span>
-              <span className="h-3 w-px" style={{ background: 'var(--bdr-strong)' }} />
-              <span className="rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
-                style={{ background: 'rgba(200,85,48,0.15)', color: 'var(--terra)' }}>🇨🇳 China</span>
-              <span className="rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
-                style={{ background: 'rgba(111,168,118,0.12)', color: 'var(--sage)' }}>🌐 Em inglês</span>
-              <span className="rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
-                style={{ background: 'rgba(212,150,14,0.12)', color: 'var(--gold)' }}>📡 Reconhecimento internacional</span>
-            </div>
+            <span className="text-[9px] font-bold uppercase tracking-[3px]"
+              style={{ color: 'var(--terra)' }}>🎙 Entrevista Internacional</span>
+            <span className="rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
+              style={{ background: 'rgba(200,85,48,0.15)', color: 'var(--terra)' }}>🇨🇳 China</span>
+            <span className="rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
+              style={{ background: 'rgba(111,168,118,0.12)', color: 'var(--sage)' }}>🌐 Em inglês</span>
+            <span className="hidden sm:inline-block rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
+              style={{ background: 'rgba(212,150,14,0.12)', color: 'var(--gold)' }}>📡 Reconhecimento internacional</span>
           </div>
 
           {/* two-column: context LEFT · video RIGHT */}
-          <div className="grid grid-cols-[1fr_62%]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_62%]">
 
             {/* left — context */}
-            <div className="flex flex-col justify-between p-8"
+            <div className="flex flex-col justify-between p-5 sm:p-8"
               style={{ borderRight: '1px solid rgba(200,85,48,0.12)' }}>
 
               {/* headline */}
@@ -156,7 +153,7 @@ export default function CharlesSection({
       )}
 
       {/* ── bio + highlights LEFT | CV viewer RIGHT ── */}
-      <div className={`mb-10 grid gap-8 ${cvFile ? 'grid-cols-[1fr_400px]' : 'grid-cols-1'}`}>
+      <div className={`mb-10 grid gap-8 ${cvFile ? 'grid-cols-1 lg:grid-cols-[1fr_400px]' : 'grid-cols-1'}`}>
 
         <div className="flex flex-col gap-6">
           {/* profile photo + bio */}
@@ -260,9 +257,9 @@ export default function CharlesSection({
             /* Two-column awards layout — for cards with structured prize lists */
             <div key={`f${i}`} className="mb-4 overflow-hidden rounded-2xl border"
               style={{ borderColor: 'rgba(200,85,48,0.4)', background: 'var(--bg-card)' }}>
-              <div className="grid grid-cols-[400px_1fr]" style={{ minHeight: '360px' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-[400px_1fr]" style={{ minHeight: '360px' }}>
                 {/* left — image */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden" style={{ minHeight: '220px' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={photo.src} alt={photo.caption}
                     className="w-full h-full object-cover"
@@ -272,7 +269,7 @@ export default function CharlesSection({
                   }} />
                 </div>
                 {/* right — awards content */}
-                <div className="flex flex-col justify-between p-8"
+                <div className="flex flex-col justify-between p-5 sm:p-8"
                   style={{ borderLeft: '1px solid rgba(200,85,48,0.15)' }}>
                   <div>
                     {/* badges row */}
@@ -342,8 +339,7 @@ export default function CharlesSection({
 
           {/* Regular cards grid */}
           {gallery.filter(p => !p.featured).length > 0 && (
-            <div className="grid gap-4"
-              style={{ gridTemplateColumns: `repeat(${gallery.filter(p => !p.featured).length}, 1fr)` }}>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {gallery.filter(p => !p.featured).map((photo, i) => (
                 <div key={i} className="relative overflow-hidden rounded-2xl border"
                   style={{ borderColor: 'var(--bdr)', height: photo.context ? '340px' : '285px' }}>
@@ -373,7 +369,7 @@ export default function CharlesSection({
         <>
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
             style={{ color: 'var(--txtll)' }}>Competências Técnicas</div>
-          <div className="mb-10 grid grid-cols-4 gap-4">
+          <div className="mb-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {skills.map((sk, i) => (
               <div key={i} className="rounded-2xl border p-5"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -397,7 +393,7 @@ export default function CharlesSection({
       {/* ── projects ── */}
       {projects && projects.length > 0 && <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
         style={{ color: 'var(--txtll)' }}>Projetos Notáveis — Relevância Direta para Roça Conectada</div>}
-      {projects && projects.length > 0 && <div className="grid grid-cols-3 gap-5">
+      {projects && projects.length > 0 && <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((p, i) => (
           <div key={i} className="flex flex-col overflow-hidden rounded-2xl border"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -428,7 +424,7 @@ export default function CharlesSection({
         <div className="mt-10">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
             style={{ color: 'var(--txtll)' }}>Mais Vídeos</div>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {extraVideos.map((v, i) => (
               <div key={i} className="overflow-hidden rounded-2xl border"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>

@@ -27,7 +27,7 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
       </div>
 
       {/* two-panel body */}
-      <div className="grid grid-cols-[280px_1fr] divide-x" style={{ borderColor: 'rgba(237,229,211,0.07)' }}>
+      <div className="grid grid-cols-1 sm:grid-cols-[280px_1fr] divide-y sm:divide-y-0 sm:divide-x" style={{ borderColor: 'rgba(237,229,211,0.07)' }}>
         {/* left — investment box */}
         <div className="flex flex-col gap-5 p-7" style={{ borderColor: 'rgba(237,229,211,0.07)' }}>
           <div>
@@ -150,8 +150,8 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
 
 export default function IndicadoresSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, counters, indicators, impactNarrative, leverage }: IndicadoresSectionProps) {
   return (
-    <section id="s8" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+    <section id="s8" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg-alt)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>8</span>
       {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
 
@@ -161,19 +161,19 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
           📊 {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
         <p className="text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
       </div>
 
       {/* KPI counters — 44px Playfair Display */}
-      <div className="mb-8 grid grid-cols-4 gap-4">
+      <div className="mb-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
         {counters.map((c, i) => (
           <div key={i} className="rounded-2xl border p-6 text-center"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -252,7 +252,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
       </div>
 
       {/* indicators table */}
-      <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
+      <div className="overflow-x-auto overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
         <table className="w-full text-[13px]">
           <thead style={{ background: 'var(--bg-raised)' }}>
             <tr>

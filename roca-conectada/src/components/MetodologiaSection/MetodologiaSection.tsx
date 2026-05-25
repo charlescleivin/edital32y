@@ -14,8 +14,8 @@ const phaseAccent = [
 export default function MetodologiaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, phases, scopeDistinction, sovereigntyCallouts, pilotRegions, conflictGovernance }: MetodologiaSectionProps) {
   const { researcher, company } = scopeDistinction
   return (
-    <section id="s4" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+    <section id="s4" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg-alt)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>4</span>
       {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
 
@@ -25,18 +25,18 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           🛠️ {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
         <p className="text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
       </div>
 
-      <div className="mb-10 grid grid-cols-3 gap-5">
+      <div className="mb-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
         {phases.map((phase, i) => {
           const acc = phaseAccent[i] ?? phaseAccent[0]
           return (
@@ -65,10 +65,11 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       </div>
 
       {/* phase timeline / gantt */}
-      <div className="mb-10 rounded-2xl border p-6" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+      <div className="mb-10 rounded-2xl border p-4 sm:p-6 overflow-x-auto" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
         <div className="mb-4 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
           📅 Cronograma — 36 Meses de Execução
         </div>
+        <div style={{ minWidth: '560px' }}>
         {/* month ruler */}
         <div className="mb-2 flex text-[9px]" style={{ color: 'var(--txtll)' }}>
           {['M1','','','M4','','','M7','','','M10','','M12','M13','','','M16','','','M19','','','M22','','M24','M25','','','M28','','','M31','','','M34','','M36'].map((m, i) => (
@@ -94,20 +95,21 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           )
         })}
         {/* milestones */}
-        <div className="mt-4 grid grid-cols-3 gap-3 border-t pt-4" style={{ borderColor: 'var(--bdr)' }}>
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t pt-4" style={{ borderColor: 'var(--bdr)' }}>
           {[
             { month: 'Mês 6',  color: 'var(--p)',    label: 'Corpus v0.1 — 10k pares validados' },
             { month: 'Mês 12', color: 'var(--p)',    label: 'AgroAssistente v1.0 + AgroEval publicado' },
             { month: 'Mês 15', color: 'var(--gold)', label: 'Protocolo CONEP aprovado' },
             { month: 'Mês 18', color: 'var(--gold)', label: 'Piloto lançado + AgroLinguaBR DOI' },
             { month: 'Mês 30', color: 'var(--terra)', label: 'MoU EMATER/EMBRAPA assinado' },
-            { month: 'Mês 36', color: 'var(--terra)', label: 'Transferência pública — open-source MIT' },
+            { month: 'Mês 36', color: 'var(--terra)', label: 'Transferência tecnológica — código Apache 2.0, corpus CC BY-NC-SA' },
           ].map((ms, i) => (
             <div key={i} className="flex items-start gap-2 text-[12px]">
               <span className="mt-0.5 shrink-0 font-bold text-[10px]" style={{ color: ms.color }}>◆ {ms.month}</span>
               <span style={{ color: 'var(--txtl)' }}>{ms.label}</span>
             </div>
           ))}
+        </div>
         </div>
       </div>
 
@@ -122,7 +124,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
               Cada parcela exige prestação de contas com evidência técnica verificável independentemente. Estes são os artefatos que documentam a entrega da THATPIX em cada marco anual.
             </p>
           </div>
-          <div className="grid grid-cols-3 divide-x" style={{ borderColor: 'var(--bdr)' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x" style={{ borderColor: 'var(--bdr)' }}>
             {phases.map((phase, i) => {
               const acc = phaseAccent[i] ?? phaseAccent[0]
               return (
@@ -159,7 +161,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
         ⚖️ Distinção de Escopos — Regra Fundamental
       </div>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="rounded-2xl border p-6"
           style={{ borderColor: 'rgba(111,168,118,0.2)', background: 'rgba(111,168,118,0.05)' }}>
           <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--sage)' }}>{researcher.title}</div>
@@ -206,7 +208,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
             📍 Regiões-Piloto — Municípios Selecionados
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pilotRegions.map((r) => (
               <div key={r.id} className="rounded-2xl border p-5"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -228,7 +230,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
             🇧🇷 Soberania Tecnológica — Escolhas Deliberadas
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sovereigntyCallouts.map((sc) => (
               <div key={sc.id} className="rounded-2xl border p-5"
                 style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.04)' }}>

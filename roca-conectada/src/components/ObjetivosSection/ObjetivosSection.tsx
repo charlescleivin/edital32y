@@ -12,8 +12,8 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
   const [activeAxis, setActiveAxis] = useState(axes[0]?.id ?? '')
 
   return (
-    <section id="s3" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+    <section id="s3" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>3</span>
       {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
 
@@ -23,12 +23,12 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
           🎯 {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
         <p className="text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
@@ -54,7 +54,8 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
               {theoryOfChange.premise}
             </p>
           </div>
-          <div className="grid grid-cols-5 gap-2">
+          <div className="overflow-x-auto">
+          <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(5, minmax(160px, 1fr))' }}>
             {theoryOfChange.chain.map((stage, i) => (
               <div key={i} className="rounded-2xl border p-4"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -70,6 +71,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
                 </ul>
               </div>
             ))}
+          </div>
           </div>
         </div>
       )}

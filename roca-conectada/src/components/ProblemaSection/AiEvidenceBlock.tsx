@@ -56,7 +56,7 @@ export default function AiEvidenceBlock({ data }: { data: AiEvidenceStructured }
   }
 
   return (
-    <div className="mt-10 rounded-2xl border-l-[3px] p-8"
+    <div className="mt-10 rounded-2xl border-l-[3px] p-5 sm:p-8"
       style={{ borderColor: 'var(--p)', background: 'rgba(111,168,118,0.04)' }}>
       <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--p)' }}>
         🌍 Evidência Internacional — A IA Já Foi Testada no Campo
@@ -74,7 +74,7 @@ export default function AiEvidenceBlock({ data }: { data: AiEvidenceStructured }
       )}
 
       {data.metricCallouts && data.metricCallouts.length > 0 && (
-        <div className="mb-8 grid grid-cols-4 gap-4">
+        <div className="mb-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
           {data.metricCallouts.map((m, i) => (
             <MetricCallout key={i} value={m.value} label={m.label} color={m.color} />
           ))}
@@ -86,7 +86,7 @@ export default function AiEvidenceBlock({ data }: { data: AiEvidenceStructured }
           <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
             📋 Estudos de Campo Publicados — Metodologia, Dados, Referência
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {data.caseStudies.map((cs, i) => <CaseStudyCard key={i} {...cs} />)}
           </div>
         </>
@@ -108,7 +108,7 @@ export default function AiEvidenceBlock({ data }: { data: AiEvidenceStructured }
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {data.globalInvestment.map((item, i) => (
               <div key={i} className="flex flex-col rounded-xl border p-4"
                 style={{ borderColor: 'var(--bdr)', background: 'rgba(255,255,255,0.03)' }}>

@@ -51,8 +51,8 @@ const statusStyle: Record<string, { border: string; bg: string; color: string; l
 
 export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, aiEvidenceStructured, aiRaceChart, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
   return (
-    <section id="s2" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+    <section id="s2" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg-alt)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>2</span>
       {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
 
@@ -62,12 +62,12 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           🌵 {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
         <p className="text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
@@ -87,7 +87,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
       )}
 
       {/* stats */}
-      <div className="mb-10 grid grid-cols-4 gap-4">
+      <div className="mb-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
         {stats.map((s, i) => (
           <div key={i} className="rounded-2xl border p-5 text-center"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -110,7 +110,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           const textOnLeft = i % 2 === 0
 
           const textBlock = (
-            <div className="flex flex-[3] flex-col justify-center px-10 py-10"
+            <div className="flex flex-col justify-center px-5 py-7 sm:flex-[3] sm:px-10 sm:py-10"
               style={{ order: textOnLeft ? 1 : 3 }}>
               <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: acc.color }}>
                 Barreira {i + 1} de {barriers.length}
@@ -125,12 +125,12 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           )
 
           const visualPanel = b.image ? (
-            <div className="relative flex-[2] overflow-hidden" style={{ order: textOnLeft ? 3 : 1 }}>
+            <div className="relative sm:flex-[2] overflow-hidden" style={{ order: textOnLeft ? 3 : 1 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={b.image} alt="" className="h-full w-full object-cover" />
+              <img src={b.image} alt="" className="h-[200px] sm:h-full w-full object-cover" />
             </div>
           ) : (
-            <div className="flex flex-[2] flex-col items-center justify-center gap-5 px-10 py-12"
+            <div className="flex sm:flex-[2] flex-col items-center justify-center gap-5 px-6 py-8 sm:px-10 sm:py-12"
               style={{
                 order: textOnLeft ? 3 : 1,
                 backgroundColor: acc.bg,
@@ -155,9 +155,9 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           )
 
           return (
-            <div key={i} className="flex overflow-hidden rounded-2xl border" style={{ borderColor: acc.border }}>
+            <div key={i} className="flex flex-col sm:flex-row overflow-hidden rounded-2xl border" style={{ borderColor: acc.border }}>
               {textBlock}
-              <div className="w-px shrink-0" style={{ order: 2, background: acc.border }} />
+              <div className="hidden sm:block w-px shrink-0" style={{ order: 2, background: acc.border }} />
               {visualPanel}
             </div>
           )
