@@ -11,7 +11,7 @@ export const fixture: ObjetivosSectionProps = {
       label: 'Eixo I — Pesquisa e Infraestrutura de IA',
       objectives: [
         { id: 'oe1', code: 'OE1.', text: 'Realizar diagnóstico participativo das necessidades digitais em 3 regiões-piloto (Pesquisa-Ação Participativa).' },
-        { id: 'oe2', code: 'OE2.', text: 'Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença MIT/Apache 2.0, DOI público via Zenodo.' },
+        { id: 'oe2', code: 'OE2.', text: 'Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença CC BY-NC-SA 4.0 (acesso irrestrito para pesquisa e uso público; uso comercial negociado), DOI público via Zenodo.' },
         { id: 'oe3', code: 'OE3.', text: 'Desenvolver o AgroEval: benchmark nacional para avaliação de alucinação e precisão de IAs agrícolas em português — contribuição científica original replicável por qualquer grupo de pesquisa.' },
       ],
     },

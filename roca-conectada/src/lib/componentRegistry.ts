@@ -1,5 +1,7 @@
 import ModalidadesSection, { componentMeta as modalidadesSectionMeta } from '@/components/ModalidadesSection/ModalidadesSection'
 import { fixture as modalidadesSectionFixture } from '@/components/ModalidadesSection/ModalidadesSection.fixture'
+import SoberaniaSection, { componentMeta as soberaniaSectionMeta } from '@/components/SoberaniaSection/SoberaniaSection'
+import { fixture as soberaniaSectionFixture } from '@/components/SoberaniaSection/SoberaniaSection.fixture'
 import CharlesSection from '@/components/CharlesSection/CharlesSection'
 import { fixture as charlesSectionFixture } from '@/components/CharlesSection/CharlesSection.fixture'
 import ParceriasSection, { componentMeta as parceriasSectionMeta } from '@/components/ParceriasSection/ParceriasSection'
@@ -51,5 +53,6 @@ export const registry: Record<string, {
   'checklist-section': { Component: ChecklistSection, fixture: checklistSectionFixture, label: 'Checklist de Submissão' },
   [parceriasSectionMeta.slug]: { Component: ParceriasSection, fixture: parceriasSectionFixture, label: parceriasSectionMeta.label },
   [modalidadesSectionMeta.slug]: { Component: ModalidadesSection, fixture: modalidadesSectionFixture, label: modalidadesSectionMeta.label },
+  [soberaniaSectionMeta.slug]: { Component: SoberaniaSection, fixture: soberaniaSectionFixture, label: soberaniaSectionMeta.label },
   // entries added here by generator
 }

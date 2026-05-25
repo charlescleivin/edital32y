@@ -612,6 +612,36 @@ export interface S13Data extends SectionMeta {
   architectureBridge: ModalidadesArchBridge
 }
 
+export interface SoberaniaLicenseRow {
+  asset: string
+  license: string
+  who: string
+  restriction: string
+  colorVariant: 'open' | 'nc' | 'closed'
+}
+
+export interface SoberaniaAccessPhase {
+  id: string
+  period: string
+  label: string
+  scope: string
+  count: string
+  criteria: string
+  condition?: string
+}
+
+export interface S14Data extends SectionMeta {
+  sovereigntyStatement: string
+  sovereigntyRationale: string
+  licenseTitle: string
+  licenseItems: SoberaniaLicenseRow[]
+  accessTitle: string
+  accessStatement: string
+  serverNote: string
+  accessPhases: SoberaniaAccessPhase[]
+  expansionVision: string
+}
+
 export interface ProposalData {
   meta: {
     projectName: string
@@ -646,5 +676,6 @@ export interface ProposalData {
   s11: S11Data
   s12: S12Data
   s13: S13Data
+  s14: S14Data
   charles?: CharlesData
 }
