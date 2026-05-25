@@ -222,5 +222,12 @@
     "date": "2026-05-25",
     "label": "feat(s14): expand license explanation — MIT vs CC ",
     "description": "feat(s14): expand license explanation — MIT vs CC BY-NC-SA 4.0 with plain-language terms and concrete scenarios"
+  },
+  {
+    "id": "v33",
+    "commit": "c8f2904",
+    "date": "2026-05-25",
+    "label": "fix(s14): strengthen sovereignty argument with con",
+    "description": "fix(s14): strengthen sovereignty argument with concrete competitors — Sinong, AgriLLM, Gates COP30, MCTI 88%"
   }
 ]
