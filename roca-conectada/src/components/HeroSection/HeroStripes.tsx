@@ -112,17 +112,20 @@ export default function HeroStripes() {
                   background: 'linear-gradient(90deg, rgba(8,7,6,0.30) 0%, transparent 16%, transparent 84%, rgba(8,7,6,0.30) 100%)',
                 }}
               />
-              <img
-                src={src}
-                alt=""
-                draggable={false}
+              {/* Image — background-position pan on mobile, static on desktop */}
+              <div
+                aria-hidden
                 style={{
-                  width: '100%', height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: pos,
-                  display: 'block',
+                  position: 'absolute', inset: 0,
+                  backgroundImage: `url(${src})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: isMobile ? undefined : pos,
                   userSelect: 'none',
                   pointerEvents: 'none',
+                  ...(isMobile ? {
+                    animation: `hero-pan-${i % 2 === 0 ? 'ltr' : 'rtl'} 12s ease-in-out infinite alternate both`,
+                    '--pan-y': pos.split(' ')[1] ?? '50%',
+                  } as React.CSSProperties : {}),
                 }}
               />
             </div>

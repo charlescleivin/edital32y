@@ -37,6 +37,16 @@
     from { opacity: 0; transform: translateX(6%) scaleX(0.96); }
     to   { opacity: 1; transform: translateX(0) scaleX(1); }
   }
+
+  /* Horizontal pan inside each mobile strip — background-position drifts L↔R */
+  @keyframes hero-pan-ltr {
+    from { background-position: 35% var(--pan-y, 50%); }
+    to   { background-position: 65% var(--pan-y, 50%); }
+  }
+  @keyframes hero-pan-rtl {
+    from { background-position: 65% var(--pan-y, 50%); }
+    to   { background-position: 35% var(--pan-y, 50%); }
+  }
 }
 
 @theme inline {
