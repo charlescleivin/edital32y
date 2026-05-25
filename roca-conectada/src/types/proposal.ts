@@ -587,7 +587,7 @@ export interface ModalityCard {
   description: string
   channelNote: string
   proof?: ModalityProof
-  useCases: string[]
+  useCases?: string[]
   horizonLabel: string
   accentColor: 'terra' | 'gold' | 'sage' | 'blue'
 }

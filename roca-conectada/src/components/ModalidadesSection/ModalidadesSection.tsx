@@ -104,21 +104,23 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
         )}
 
         {/* use cases */}
-        <div>
-          <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]"
-            style={{ color: 'var(--txtll)' }}>
-            Casos de Uso Previstos
+        {card.useCases && card.useCases.length > 0 && (
+          <div>
+            <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]"
+              style={{ color: 'var(--txtll)' }}>
+              Casos de Uso Previstos
+            </div>
+            <ul className="flex flex-col gap-2">
+              {card.useCases.map((uc, i) => (
+                <li key={i} className="flex items-start gap-3 text-[12.5px] leading-[1.75]"
+                  style={{ color: 'var(--txtl)' }}>
+                  <span className="mt-[4px] shrink-0 text-[9px]" style={{ color: tok.text }}>◆</span>
+                  {uc}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="flex flex-col gap-2">
-            {card.useCases.map((uc, i) => (
-              <li key={i} className="flex items-start gap-3 text-[12.5px] leading-[1.75]"
-                style={{ color: 'var(--txtl)' }}>
-                <span className="mt-[4px] shrink-0 text-[9px]" style={{ color: tok.text }}>◆</span>
-                {uc}
-              </li>
-            ))}
-          </ul>
-        </div>
+        )}
       </div>
 
       {/* horizon footer */}

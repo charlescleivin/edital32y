@@ -50,13 +50,6 @@ export const fixture: S13Data = {
           { value: 'H100/A100', label: 'Infraestrutura GPU operada para inferência',   color: 'terra' },
         ],
       },
-      useCases: [
-        'Diagnóstico de pragas e doenças por foto da folha — identificação do patógeno com recomendação de manejo e dosagem',
-        'Estimativa de peso bovino sem balança — foto lateral converte em peso estimado para decisão de abate ou pasto',
-        'Avaliação de maturação de colheita — cor, textura e morfologia da fruta como critério de ponto de colheita',
-        'Detecção de deficiências nutricionais — sintomas visuais no solo e na planta mapeados para laudo e análise laboratorial',
-        'Monitoramento de pragas por armadilha fotográfica — contagem automática de insetos capturados por imagem',
-      ],
       horizonLabel: 'Fase 1 pós-projeto (Ano 4)',
     },
     {
