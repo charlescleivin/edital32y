@@ -215,5 +215,12 @@
     "date": "2026-05-25",
     "label": "feat(s14): add SoberaniaSection — digital sovereig",
     "description": "feat(s14): add SoberaniaSection — digital sovereignty licensing and controlled access"
+  },
+  {
+    "id": "v32",
+    "commit": "0c2d1e2",
+    "date": "2026-05-25",
+    "label": "feat(s14): expand license explanation — MIT vs CC ",
+    "description": "feat(s14): expand license explanation — MIT vs CC BY-NC-SA 4.0 with plain-language terms and concrete scenarios"
   }
 ]
