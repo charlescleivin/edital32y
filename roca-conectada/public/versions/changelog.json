@@ -124,5 +124,12 @@
     "date": "2026-05-25",
     "label": "feat(s12): seção de visão de longo prazo — escala ",
     "description": "feat(s12): seção de visão de longo prazo — escala pós-projeto e legado do servidor"
+  },
+  {
+    "id": "v19",
+    "commit": "8d83efa",
+    "date": "2026-05-25",
+    "label": "fix(s12): reordena para antes das referências, adi",
+    "description": "fix(s12): reordena para antes das referências, adiciona papel THATPIX e corrige fact-check"
   }
 ]
