@@ -1,3 +1,5 @@
+import ModalidadesSection, { componentMeta as modalidadesSectionMeta } from '@/components/ModalidadesSection/ModalidadesSection'
+import { fixture as modalidadesSectionFixture } from '@/components/ModalidadesSection/ModalidadesSection.fixture'
 import CharlesSection from '@/components/CharlesSection/CharlesSection'
 import { fixture as charlesSectionFixture } from '@/components/CharlesSection/CharlesSection.fixture'
 import ParceriasSection, { componentMeta as parceriasSectionMeta } from '@/components/ParceriasSection/ParceriasSection'
@@ -48,5 +50,6 @@ export const registry: Record<string, {
   'charles-section': { Component: CharlesSection, fixture: charlesSectionFixture, label: 'Charles Cleivin' },
   'checklist-section': { Component: ChecklistSection, fixture: checklistSectionFixture, label: 'Checklist de Submissão' },
   [parceriasSectionMeta.slug]: { Component: ParceriasSection, fixture: parceriasSectionFixture, label: parceriasSectionMeta.label },
+  [modalidadesSectionMeta.slug]: { Component: ModalidadesSection, fixture: modalidadesSectionFixture, label: modalidadesSectionMeta.label },
   // entries added here by generator
 }

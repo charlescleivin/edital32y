@@ -567,6 +567,51 @@ export interface S12Data extends SectionMeta {
   serverTransition: ServerTransition
 }
 
+export interface ModalityProofStat {
+  value: string
+  label: string
+  color?: 'terra' | 'gold' | 'sage' | 'blue'
+}
+
+export interface ModalityProof {
+  label: string
+  description: string
+  stats: ModalityProofStat[]
+}
+
+export interface ModalityCard {
+  id: string
+  icon: string
+  badge: string
+  title: string
+  description: string
+  channelNote: string
+  proof?: ModalityProof
+  useCases: string[]
+  horizonLabel: string
+  accentColor: 'terra' | 'gold' | 'sage' | 'blue'
+}
+
+export interface ModalityChannelItem {
+  icon: string
+  label: string
+  note: string
+}
+
+export interface ModalidadesArchBridge {
+  title: string
+  body: string
+  points: string[]
+}
+
+export interface S13Data extends SectionMeta {
+  disclaimer: string
+  channelCapabilityNote: string
+  channelCapabilityItems: ModalityChannelItem[]
+  modalities: ModalityCard[]
+  architectureBridge: ModalidadesArchBridge
+}
+
 export interface ProposalData {
   meta: {
     projectName: string
@@ -600,5 +645,6 @@ export interface ProposalData {
   s10: S10Data
   s11: S11Data
   s12: S12Data
+  s13: S13Data
   charles?: CharlesData
 }

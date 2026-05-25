@@ -14,6 +14,7 @@ import RiscosSection from '@/components/RiscosSection/RiscosSection'
 import ChecklistSection from '@/components/ChecklistSection/ChecklistSection'
 import ReferencesSection from '@/components/ReferencesSection/ReferencesSection'
 import LongPrazoSection from '@/components/LongPrazoSection/LongPrazoSection'
+import ModalidadesSection from '@/components/ModalidadesSection/ModalidadesSection'
 import PageLoader from '@/components/ui/PageLoader'
 import Reveal from '@/components/ui/Reveal'
 import { VersionProvider } from '@/context/VersionContext'
@@ -25,7 +26,7 @@ import VersionToggle from '@/components/VersionToggle/VersionToggle'
 const proposal = proposalJson as unknown as ProposalData
 
 export default function Home() {
-  const { meta, sidebar, hero, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12 } = proposal
+  const { meta, sidebar, hero, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13 } = proposal
 
   return (
     <LoaderProvider>
@@ -111,6 +112,13 @@ export default function Home() {
             <DiffSection sectionKey="s12">
               <section id="s12" className="scroll-mt-4">
                 <LongPrazoSection {...s12} />
+              </section>
+            </DiffSection>
+          </Reveal>
+          <Reveal>
+            <DiffSection sectionKey="s13">
+              <section id="s13" className="scroll-mt-4">
+                <ModalidadesSection {...s13} />
               </section>
             </DiffSection>
           </Reveal>
