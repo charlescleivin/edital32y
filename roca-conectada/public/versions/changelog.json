@@ -145,5 +145,12 @@
     "date": "2026-05-25",
     "label": "feat(s5): renderiza parágrafos de marketContext co",
     "description": "feat(s5): renderiza parágrafos de marketContext como cards numerados com título"
+  },
+  {
+    "id": "v22",
+    "commit": "191904d",
+    "date": "2026-05-25",
+    "label": "fix(s5): reescreve perfil Charles com foco no Roça",
+    "description": "fix(s5): reescreve perfil Charles com foco no Roça Conectada, não CV genérico"
   }
 ]
