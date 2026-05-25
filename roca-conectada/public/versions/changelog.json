@@ -208,5 +208,12 @@
     "date": "2026-05-25",
     "label": "fix(s13): remove useCases fabricados do card Visio",
     "description": "fix(s13): remove useCases fabricados do card Vision AI"
+  },
+  {
+    "id": "v31",
+    "commit": "de23ddd",
+    "date": "2026-05-25",
+    "label": "feat(s14): add SoberaniaSection — digital sovereig",
+    "description": "feat(s14): add SoberaniaSection — digital sovereignty licensing and controlled access"
   }
 ]
