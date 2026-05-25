@@ -15,6 +15,8 @@ export interface HeroData {
   eyebrow: string
   title: string
   subtitle: string
+  statement?: string
+  statementContrast?: string
   stats: Stat[]
   layers: Layer[]
 }
@@ -69,6 +71,33 @@ export interface AiEvidenceSection {
   body: string
 }
 
+export interface AiEvidenceCaseStudy {
+  flag: string
+  country: string
+  project: string
+  bigStat: { value: string; label: string }
+  details: string[]
+  year: string
+  source: string
+  accentColor: string
+}
+
+export interface AiEvidenceStructured {
+  title: string
+  hook?: string
+  metricCallouts?: Array<{ value: string; label: string; color?: string }>
+  caseStudies?: AiEvidenceCaseStudy[]
+  globalInvestment?: Array<{ actor: string; label: string; amount: string; year: string; color: string }>
+  globalInvestmentTotal?: string
+  globalInvestmentTotalLabel?: string
+  globalInvestmentBrazilContrast?: string
+  corpusUrgency?: {
+    title: string
+    body: string
+    timeline: Array<{ year: string; event: string; type: 'now' | 'closing' | 'lost' }>
+  }
+}
+
 export interface AiRaceEntry {
   flag: string
   country: string
@@ -89,6 +118,7 @@ export interface S2Data extends SectionMeta {
   stats: Array<{ value: string; label: string; colorVariant: 'green' | 'blue' | 'red' }>
   barriers: Barrier[]
   aiEvidenceSection?: AiEvidenceSection
+  aiEvidenceStructured?: AiEvidenceStructured
   aiRaceChart?: AiRaceChart
   contextNote: string
   openingScenario?: string
@@ -480,6 +510,9 @@ export interface CharlesData {
   cvFile?: string
   heroImage?: string
   heroCaption?: string
+  heroHeadline?: string
+  heroSubtext?: string
+  badgeLabel?: string
   gallery?: CharlesPhoto[]
   profilePhoto?: string
   isPlaceholder?: boolean

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useMarkLoaderDone } from '@/context/LoaderContext'
 
 type Phase = 'in' | 'hold' | 'out' | 'done'
 
@@ -28,11 +29,12 @@ function BrazilFlag({ muted }: { muted?: boolean }) {
 
 export default function PageLoader() {
   const [phase, setPhase] = useState<Phase>('in')
+  const markDone = useMarkLoaderDone()
 
   useEffect(() => {
     const t0 = setTimeout(() => setPhase('hold'), 80)
     const t1 = setTimeout(() => setPhase('out'),  3400)
-    const t2 = setTimeout(() => setPhase('done'), 4600)
+    const t2 = setTimeout(() => { setPhase('done'); markDone() }, 4600)
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2) }
   }, [])
 

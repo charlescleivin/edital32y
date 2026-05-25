@@ -10,7 +10,8 @@ export type CharlesSectionProps = CharlesData
 export default function CharlesSection({
   name, title, subtitle, location, bio,
   highlights, skills, projects, softSkills, videos, cvFile,
-  heroImage, heroCaption, gallery, profilePhoto, isPlaceholder,
+  heroImage, heroCaption, heroHeadline, heroSubtext, badgeLabel,
+  gallery, profilePhoto, isPlaceholder,
 }: CharlesSectionProps) {
   const [cvOpen, setCvOpen] = useState(false)
 
@@ -41,11 +42,12 @@ export default function CharlesSection({
             )}
             <h2 className="mb-4 text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-              Inventor.<br />Cientista.<br />Comunicador Global.
+              {heroHeadline ? heroHeadline.split('\n').map((line, i, arr) => (
+                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+              )) : <><span>Inventor.</span><br /><span>Cientista.</span><br /><span>Comunicador Global.</span></>}
             </h2>
             <p className="max-w-[500px] text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-              Premiado internacionalmente, com presença comprovada em competições na China,
-              Emirados Árabes Unidos e Brasil. Tecnologias próprias apresentadas em palcos globais.
+              {heroSubtext ?? 'Premiado internacionalmente, com presença comprovada em competições na China, Emirados Árabes Unidos e Brasil. Tecnologias próprias apresentadas em palcos globais.'}
             </p>
           </div>
         </div>
@@ -55,7 +57,7 @@ export default function CharlesSection({
       <div className="relative mb-12">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          👨‍💻 Co-Pesquisador
+          {badgeLabel ?? '👨‍💻 Co-Pesquisador'}
         </span>
         <h2 className="mb-2 text-[52px] font-bold leading-[1.02] tracking-[-0.5px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{name}</h2>
@@ -215,7 +217,7 @@ export default function CharlesSection({
 
         {/* CV viewer */}
         {cvFile && (
-          <div className="overflow-hidden rounded-2xl border"
+          <div className="self-start overflow-hidden rounded-2xl border"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
             <div className="flex items-center justify-between px-5 py-3.5"
               style={{ background: 'var(--bg-raised)', borderBottom: '1px solid var(--bdr)' }}>

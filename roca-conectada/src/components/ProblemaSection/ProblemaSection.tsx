@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import AiEvidenceBlock from './AiEvidenceBlock'
 import type { S2Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'problema-section', label: 'Problema e Justificativa' }
@@ -48,7 +49,7 @@ const statusStyle: Record<string, { border: string; bg: string; color: string; l
   planned:  { border: 'rgba(111,168,118,0.25)', bg: 'rgba(111,168,118,0.05)', color: 'var(--sage)', label: 'Planejado' },
 }
 
-export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, aiRaceChart, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
+export default function ProblemaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, stats, barriers, aiEvidenceSection, aiEvidenceStructured, aiRaceChart, contextNote, openingScenario, competitiveContext, bibliography, genderEquity }: ProblemaSectionProps) {
   return (
     <section id="s2" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg-alt)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
@@ -163,8 +164,10 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         })}
       </div>
 
-      {/* AI evidence section — global proof block */}
-      {aiEvidenceSection && (
+      {/* AI evidence section — visual block if structured data present, prose fallback */}
+      {aiEvidenceStructured
+        ? <AiEvidenceBlock data={aiEvidenceStructured} />
+        : aiEvidenceSection && (
         <div className="mt-10 rounded-2xl border-l-[3px] p-8"
           style={{ borderColor: 'var(--p)', background: 'rgba(111,168,118,0.04)' }}>
           <div className="mb-2 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--p)' }}>
@@ -200,6 +203,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
       )}
 
       {/* AI race chart */}
+
       {aiRaceChart && (
         <div className="mt-10 rounded-2xl border p-8"
           style={{ borderColor: 'rgba(111,168,118,0.25)', background: 'var(--bg-card)' }}>

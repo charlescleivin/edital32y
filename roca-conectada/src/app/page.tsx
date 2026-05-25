@@ -16,6 +16,7 @@ import ReferencesSection from '@/components/ReferencesSection/ReferencesSection'
 import PageLoader from '@/components/ui/PageLoader'
 import Reveal from '@/components/ui/Reveal'
 import { VersionProvider } from '@/context/VersionContext'
+import { LoaderProvider } from '@/context/LoaderContext'
 import DiffSection from '@/components/DiffSection/DiffSection'
 import DiffDrawer from '@/components/DiffDrawer/DiffDrawer'
 import VersionToggle from '@/components/VersionToggle/VersionToggle'
@@ -26,6 +27,7 @@ export default function Home() {
   const { meta, sidebar, hero, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11 } = proposal
 
   return (
+    <LoaderProvider>
     <VersionProvider>
       <div className="flex min-h-screen" style={{ background: 'var(--bg)' }}>
         <PageLoader />
@@ -123,5 +125,6 @@ export default function Home() {
         <DiffDrawer />
       </div>
     </VersionProvider>
+    </LoaderProvider>
   )
 }
