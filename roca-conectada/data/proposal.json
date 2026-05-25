@@ -1445,19 +1445,19 @@
         "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
         "location": "Brasil",
         "email": "charlescleivin@gmail.com",
-        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. O Roça Conectada é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo — e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica — alta tecnologia funcional sob severas restrições de custo e acessibilidade — é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R00 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. Os componentes centrais do projeto já existem em produção: fine-tuning do Qwen2.5-7B em corpus em português (27% de redução de loss, /ciclo), sistema de estimativa de peso bovino via WhatsApp com 95%+ de precisão, e agentes LLM air-gapped sem dependência de nuvem. As decisões que determinarão o impacto científico do projeto — arquitetura de soberania, design do AgroLinguaBR, alinhamento ético-cultural, escolha de modelos — exigem o julgamento de quem concebeu o problema. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
+        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. O Roça Conectada é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo — e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica — alta tecnologia funcional sob severas restrições de custo e acessibilidade — é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R00 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. As decisões que determinarão o impacto científico do projeto — arquitetura de soberania, design do AgroLinguaBR, alinhamento ético-cultural, escolha de modelos — exigem o julgamento de quem concebeu o problema. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
         "highlights": [
           {
             "value": "27%",
-            "label": "Redução de loss em fine-tuning PT-BR — Qwen2.5-7B · Manual do Mundo (20M+ inscritos)"
+            "label": "Redução de loss em fine-tuning PT-BR — Qwen2.5-7B em corpus especializado em português"
           },
           {
             "value": "/ciclo",
-            "label": "Custo de fine-tuning industrial em produção — viabilidade do AgroLinguaBR demonstrada"
+            "label": "Custo de fine-tuning em corpus especializado — viabilidade do AgroLinguaBR demonstrada"
           },
           {
             "value": "95%+",
-            "label": "Precisão em estimativa de peso bovino por visão computacional — sistema próprio em uso real"
+            "label": "Precisão em estimativa de peso bovino por visão computacional"
           },
           {
             "value": "1M+",
@@ -1520,18 +1520,6 @@
             "relevance": "IA agropecuária em produção, integração WhatsApp com arquitetura assíncrona — o blueprint técnico exato do AgroAssistente IA."
           },
           {
-            "name": "Manual do Mundo — LLM Fine-tuning em Português",
-            "description": "Fine-tuning do Qwen2.5-7B em 3.000+ transcrições em português para o maior canal de ciências do Brasil (20M+ inscritos, 4,4B+ visualizações). Redução de loss de 27%, custo de $3/ciclo, habilitando geração ilimitada de conteúdo especializado.",
-            "tags": [
-              "Qwen2.5-7B",
-              "LoRA",
-              "4-bit NF4",
-              "Portuguese NLP",
-              "RTX 4090"
-            ],
-            "relevance": "Prova direta de fine-tuning de LLM em português com eficiência industrial — o mesmo pipeline do AgroAssistente IA."
-          },
-          {
             "name": "Gerador de Agentes LLM Offline",
             "description": "Ferramenta que instancia agentes inteligentes a partir de qualquer documento, sem conexão à internet. Casos de uso: análise de contratos, classificação de normas, suporte técnico local. Portátil, air-gapped, sem dependência de nuvem.",
             "tags": [
@@ -1547,8 +1535,7 @@
         "softSkills": [
           "Autoria intelectual de sistemas de IA soberanos: concepção da arquitetura, do corpus e da abordagem de alinhamento do Roça Conectada",
           "Padrão recorrente de alta tecnologia funcional sob restrições severas de custo — do DDPED (~R00) ao AgroAssistente (inference offline)",
-          "Comunicação técnica multilíngue: apresentações científicas em inglês para audiências internacionais (China, Abu Dhabi)",
-          "Entrega em produção: bovine weight via WhatsApp, Manual do Mundo LLM, agentes offline — sistemas reais, não protótipos"
+          "Comunicação técnica multilíngue: apresentações científicas em inglês para audiências internacionais (China, Abu Dhabi)"
         ],
         "videos": [
           {
@@ -1603,8 +1590,8 @@
           }
         ],
         "profilePhoto": "/profile_pic.jpg",
-        "heroHeadline": "Co-Pesquisador.\nAutor Intelectual\ndo Roça Conectada.",
-        "heroSubtext": "O projeto existe porque Charles identificou a lacuna — nenhum LLM soberano treinado em português agrícola existia para o campo — e já havia construído, em produção, os componentes que esta proposta pretende escalar: fine-tuning de LLMs em português, inferência agropecuária via WhatsApp, agentes offline para zonas de baixa conectividade."
+        "heroHeadline": "Inventor.\nCientista.\nO arquiteto\ndo Roça Conectada.",
+        "heroSubtext": "A hipótese central do projeto é de Charles: modelos menores, treinados em corpus agrícola brasileiro, superam generalistas no campo. A mesma lógica que produziu o DDPED — alta tecnologia funcional sob restrições severas de custo — define a arquitetura de soberania, o design do AgroLinguaBR e a escolha de modelos que estruturam esta proposta. Medalha de Ouro Geral, ESI Mundi 2014 (40+ países). Reconhecimento direto de Google, Samsung e FAPESP."
       },
       {
         "name": "Marco Rogério",
