@@ -66,7 +66,7 @@ export const fixture: S14Data = {
       colorVariant: 'nc',
     },
     {
-      asset: 'Modelo LLM Fine-tuned (Qwen2.5-7B adaptado)',
+      asset: 'Modelo LLM Fine-tuned (modelo base + fine-tuning agrícola)',
       license: 'CC BY-NC-SA 4.0',
       who: 'ICTs públicas, pesquisadores, instituições sem fins lucrativos — pesos liberados para pesquisa',
       restriction: 'Incorporação em produto comercial requer negociação — protege o ativo estratégico nacional contra apropriação por incumbentes estrangeiros.',
