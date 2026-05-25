@@ -171,7 +171,7 @@
         "label": "dos agricultores familiares sem acesso a ATER — no Nordeste, essa ausência chega a 92,6% (IBGE Censo Agropecuário 2017)"
       }
     ],
-    "summary": "Em maio de 2026 — o mesmo mês desta chamada pública — o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem do país sob controle estrangeiro. O governo lançou o SoberanIA com R$ 40 milhões para construir um LLM nacional de 30 bilhões de parâmetros para o setor público. O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações para soberania tecnológica nacional. A arquitetura está sendo construída. Mas há um vácuo que nenhum desses instrumentos preenche: os 3,9 milhões de estabelecimentos de agricultura familiar — responsáveis por 70% dos alimentos que o Brasil come — estão completamente fora do perímetro de soberania que está sendo erguido agora. O Roça Conectada é o componente que preenche esse vácuo. Não é um aplicativo. É a infraestrutura soberana de IA agrícola que o Brasil ainda não tem: o AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, o corpus especializado mais abrangente já produzido para esse domínio no Brasil —, um LLM fine-tuned sobre esse corpus, e a AgroAPI como camada de integração para políticas públicas. Os três ativos são titulados na [ICT EXECUTORA] ao mês 36: corpus CC BY-NC-SA 4.0, código e benchmark Apache 2.0, publicados com DOI. Infraestrutura nacional permanente, sem dependência de fornecedor estrangeiro. A pesquisa científica é conduzida pela [ICT EXECUTORA]; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50). Ao final de 36 meses, existirá o que hoje não existe: uma fundação soberana de IA para a agricultura familiar brasileira — o ativo que qualquer EMATER estadual, pesquisador ou política pública pode usar como ponto de partida, sem recomeçar do zero e sem pedir permissão a nenhuma plataforma estrangeira.",
+    "summary": "Em maio de 2026 — o mesmo mês desta chamada pública — o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem do país sob controle estrangeiro. O governo lançou o SoberanIA com R$ 40 milhões para construir um LLM nacional de 30 bilhões de parâmetros para o setor público. O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações para soberania tecnológica nacional. A arquitetura está sendo construída. Mas há um vácuo que nenhum desses instrumentos preenche: os 3,9 milhões de estabelecimentos de agricultura familiar — responsáveis por 70% dos alimentos que o Brasil come — estão completamente fora do perímetro de soberania que está sendo erguido agora. O Roça Conectada é o componente que preenche esse vácuo. Não é um aplicativo. É a infraestrutura soberana de IA agrícola que o Brasil ainda não tem: o AgroLinguaBR — 25.000 pares técnicos em português agrícola regional, o corpus especializado mais abrangente já produzido para esse domínio no Brasil —, um LLM fine-tuned sobre esse corpus, e a AgroAPI como camada de integração para políticas públicas. Os três ativos são titulados na [ICT EXECUTORA] ao mês 36: corpus e modelo CC BY-NC-SA 4.0, código e benchmark Apache 2.0, publicados com DOI. Infraestrutura nacional permanente, sem dependência de fornecedor estrangeiro. A pesquisa científica é conduzida pela [ICT EXECUTORA]; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50). Ao final de 36 meses, existirá o que hoje não existe: uma fundação soberana de IA para a agricultura familiar brasileira — o ativo que qualquer EMATER estadual, pesquisador ou política pública pode usar como ponto de partida, sem recomeçar do zero e sem pedir permissão a nenhuma plataforma estrangeira.",
     "editalResults": [
       "Digitalização das cadeias socioprodutivas",
       "Aumento da independência e qualidade de vida",
@@ -752,7 +752,7 @@
           {
             "id": "oe7",
             "code": "OE7.",
-            "text": "Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs."
+            "text": "Publicar e operar a AgroAPI como serviço público regulado, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs."
           },
           {
             "id": "oe8",
@@ -887,7 +887,7 @@
         ],
         "deliverables": [
           "Corpus AgroLinguaBR v1.0 — 25.000 pares Q&A publicados com DOI no Zenodo (URL verificável)",
-          "Agro-BERT v1.0 — benchmark AgroEval documentado (BLEU/F1 contra baseline GPT-4o)",
+          "LLM agrícola fine-tuned v1.0 — benchmark AgroEval documentado (BLEU/F1 contra baseline GPT-4o)",
           "Repositório GitHub [ICT EXECUTORA] — código completo, testes, Docker, README",
           "Servidor de inferência operacional — uptime report meses 10–12, latência P95 <3s",
           "WhatsApp Business API integrada — staging funcional com logs de teste",
@@ -910,7 +910,7 @@
         ],
         "deliverables": [
           "AgroAssistente em produção — dashboard MAU com ≥800 usuários ativos, logs de 3 meses",
-          "Agro-BERT v2.0 — relatório de re-treinamento, benchmark comparativo v1.0 vs. v2.0",
+          "LLM agrícola fine-tuned v2.0 — relatório de re-treinamento, benchmark comparativo v1.0 vs. v2.0",
           "Relatório de integridade LGPD — auditoria do pipeline, assinada por responsável jurídico",
           "Coopera Digital v1.0 — 6 cooperativas ativas com relatório de adoção documentado",
           "Relatório de integração AgroAPI (2 EMATERs) — logs e relatório técnico",
@@ -924,7 +924,7 @@
         "name": "Transferência — O Momento em que os Ativos Passam ao Brasil",
         "period": "Meses 25–36",
         "activities": [
-          "Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores EMATER treinados. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
+          "Expansão: 2.500 agricultores / 18 cooperativas — via 350 multiplicadores EMATER treinados. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
           "AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado. Disponível para qualquer ICT, EMATER ou política pública — sem licença, sem taxa.",
           "AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX. A infraestrutura é aberta porque soberania que precisa de um único guardião não é soberania.",
           "MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP. Não prometemos que alguém vai absorver — apresentamos o acordo assinado.",
@@ -982,7 +982,7 @@
         "id": "sc2",
         "badge": "🌐 Soberania de Dados",
         "title": "AgroLinguaBR: corpus de titularidade pública",
-        "content": "O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença aberta e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras."
+        "content": "O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença CC BY-NC-SA 4.0 e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras."
       },
       {
         "id": "sc3",
@@ -1208,7 +1208,7 @@
         },
         {
           "title": "Justificativa do Contrato por Escopo — THATPIX",
-          "body": "O valor contratado da THATPIX — R$ 82.361 mensais ao longo de 36 meses — é justificado pelo escopo de entrega em regime de preço fixo, conforme autorizado pelo Decreto Federal nº 9.283/2018. Diferente da contratação por alocação de horas individuais, a THATPIX assume obrigação por escopo, absorvendo todos os riscos operacionais de flutuação de pessoal, recrutamento e rotatividade em um segmento de altíssima demanda. Essa escolha é reforçada pelos dados do State of Data 2025-2026: 82,3% dos profissionais sênior em dados e IA afirmam que buscariam ativamente oportunidade remota caso exigido regime presencial — e apenas 15,9% dos engenheiros de ML aceitariam regime 100% presencial, a menor taxa de aceitação de presencialidade entre todas as categorias profissionais mapeadas. O escopo abrange três áreas técnicas de alta especialização: desenvolvimento, fine-tuning e alinhamento de modelos LLM com corpus agrícola; backend, APIs soberanas e integração compliant com LGPD do canal WhatsApp; e infraestrutura de nuvem soberana, MLOps e monitoramento em produção. A alocação interna de recursos — engenheiros, plenos ou agentes de IA supervisionados — é decisão operacional autônoma da THATPIX dentro do contrato por escopo. Pesquisa de mercado independente confirma que o valor representa o piso doméstico: plataformas como Toptal partem de US$ 80 a US$ 120 por hora por engenheiro especializado em LLMs, com taxas adicionais de até US$ 3.500 por profissional selecionado. Adicionalmente, profissionais que dominam custom LLM training e domain-specific fine-tuning — ambas as competências exigidas pelo Agro-BERT — recebem prêmios de especialização de +35% a +45% e +20% a +30% sobre a taxa base de mercado (Index.dev, 2026), posicionando o custo de contratação direta para este perfil nos patamares mais elevados da tabela salarial de especialistas em IA."
+          "body": "O valor contratado da THATPIX — R$ 82.361 mensais ao longo de 36 meses — é justificado pelo escopo de entrega em regime de preço fixo, conforme autorizado pelo Decreto Federal nº 9.283/2018. Diferente da contratação por alocação de horas individuais, a THATPIX assume obrigação por escopo, absorvendo todos os riscos operacionais de flutuação de pessoal, recrutamento e rotatividade em um segmento de altíssima demanda. Essa escolha é reforçada pelos dados do State of Data 2025-2026: 82,3% dos profissionais sênior em dados e IA afirmam que buscariam ativamente oportunidade remota caso exigido regime presencial — e apenas 15,9% dos engenheiros de ML aceitariam regime 100% presencial, a menor taxa de aceitação de presencialidade entre todas as categorias profissionais mapeadas. O escopo abrange três áreas técnicas de alta especialização: desenvolvimento, fine-tuning e alinhamento de modelos LLM com corpus agrícola; backend, APIs soberanas e integração compliant com LGPD do canal WhatsApp; e infraestrutura de nuvem soberana, MLOps e monitoramento em produção. A alocação interna de recursos — engenheiros, plenos ou agentes de IA supervisionados — é decisão operacional autônoma da THATPIX dentro do contrato por escopo. Pesquisa de mercado independente confirma que o valor representa o piso doméstico: plataformas como Toptal partem de US$ 80 a US$ 120 por hora por engenheiro especializado em LLMs, com taxas adicionais de até US$ 3.500 por profissional selecionado. Adicionalmente, profissionais que dominam custom LLM training e domain-specific fine-tuning — ambas as competências exigidas pelo LLM fine-tuned — recebem prêmios de especialização de +35% a +45% e +20% a +30% sobre a taxa base de mercado (Index.dev, 2026), posicionando o custo de contratação direta para este perfil nos patamares mais elevados da tabela salarial de especialistas em IA."
         },
         {
           "title": "Autor Intelectual: Por Que Charles Integra o Projeto",
@@ -1245,7 +1245,7 @@
         {
           "icon": "📋",
           "title": "Evidências de entrega por escopo",
-          "body": "Estruturar a prestação de contas da THATPIX com base em artefatos técnicos verificáveis: marcos de otimização do Agro-BERT, relatórios de integração WhatsApp e logs de MLOps — em aderência às exigências do Manual de Convênios da FINEP."
+          "body": "Estruturar a prestação de contas da THATPIX com base em artefatos técnicos verificáveis: marcos de otimização do LLM fine-tuned, relatórios de integração WhatsApp e logs de MLOps — em aderência às exigências do Manual de Convênios da FINEP."
         },
         {
           "icon": "🔒",
@@ -1380,7 +1380,7 @@
                 "R$ 5.142",
                 "36 (meses 1–36)",
                 "R$ 185.112",
-                "Coordenação científica do corpus AgroLinguaBR, metodologia de avaliação dos modelos (BLEU/BERTScore), publicações técnicas e relatórios de desempenho do Agro-BERT"
+                "Coordenação científica do corpus AgroLinguaBR, metodologia de avaliação dos modelos (BLEU/BERTScore), publicações técnicas e relatórios de desempenho do LLM fine-tuned"
               ],
               "highlight": true
             },
@@ -1404,7 +1404,7 @@
                 "R$ 4.100",
                 "36 (meses 1–36)",
                 "R$ 442.800",
-                "DTI-A.1: fine-tuning e alinhamento do Agro-BERT · DTI-A.2: APIs soberanas e backend (apoio técnico THATPIX) · DTI-A.3: curadoria e validação do corpus NLP agrícola"
+                "DTI-A.1: fine-tuning e alinhamento do LLM fine-tuned · DTI-A.2: APIs soberanas e backend (apoio técnico THATPIX) · DTI-A.3: curadoria e validação do corpus NLP agrícola"
               ]
             },
             {
@@ -1482,7 +1482,7 @@
           },
           {
             "value": "1M+",
-            "label": "Imagens bovinas processadas — base de domínio para adaptação agropecuária do Agro-BERT"
+            "label": "Imagens bovinas processadas — base de domínio para adaptação agropecuária do LLM fine-tuned"
           }
         ],
         "skills": [
@@ -2249,7 +2249,7 @@
         {
           "icon": "🤖",
           "name": "AgroAssistente LLM",
-          "license": "Fine-tuned · [ICT EXECUTORA] · Apache 2.0"
+          "license": "Fine-tuned · [ICT EXECUTORA] · CC BY-NC-SA 4.0"
         },
         {
           "icon": "🔗",
@@ -2405,7 +2405,7 @@
       {
         "id": "ss3",
         "scenario": "Cenário 3 (Probabilidade Média) — Continuidade open-source pela comunidade de pesquisa",
-        "description": "O AgroLinguaBR publicado sob CC BY-NC-SA 4.0 com DOI permite que qualquer universidade brasileira, grupo de pesquisa ou organização pública use, adapte e evolua o corpus e o modelo sem dependência da [ICT EXECUTORA] ou da THATPIX. Isso não é um cenário hipotético: é o modelo de sustentabilidade que manteve o BERTimbau (USP) como referência nacional de NLP em português por anos sem funding dedicado contínuo, e que sustenta dezenas de modelos open-source na comunidade Hugging Face. A distinção crítica em relação ao cenário atual: o que o Roça Conectada produz não é um serviço que precisa de financiamento para continuar existindo — é um ativo de software com custo de operação próximo de zero, disponível para qualquer ator que queira usá-lo. Sustentabilidade não é ausência de risco de abandono: é ausência de dependência de um único financiador. A licença aberta garante exatamente isso.",
+        "description": "O AgroLinguaBR publicado sob CC BY-NC-SA 4.0 com DOI permite que qualquer universidade brasileira, grupo de pesquisa ou organização pública use, adapte e evolua o corpus e o modelo sem dependência da [ICT EXECUTORA] ou da THATPIX. Isso não é um cenário hipotético: é o modelo de sustentabilidade que manteve o BERTimbau (USP) como referência nacional de NLP em português por anos sem funding dedicado contínuo, e que sustenta dezenas de modelos open-source na comunidade Hugging Face. A distinção crítica em relação ao cenário atual: o que o Roça Conectada produz não é um serviço que precisa de financiamento para continuar existindo — é um ativo de software com custo de operação próximo de zero, disponível para qualquer ator que queira usá-lo. Sustentabilidade não é ausência de risco de abandono: é ausência de dependência de um único financiador. A licença CC BY-NC-SA 4.0 garante exatamente isso.",
         "responsible": "Comunidade nacional de pesquisa em NLP e IA agrícola — sem dependência institucional específica",
         "probability": "Média — precedente sólido no ecossistema open-source brasileiro (BERTimbau, PTT5); independe de decisão de nenhuma entidade específica"
       }
@@ -3137,11 +3137,11 @@
     "visionSub": "O plano pós-projeto tem três movimentos: escalar a infraestrutura com novos financiamentos, transferir o servidor original para a universidade como patrimônio de pesquisa, e usar os resultados reais como argumento irrefutável para a rodada seguinte.",
     "thatpixCallout": {
       "title": "O Papel da THATPIX no Longo Prazo",
-      "body": "A THATPIX não é uma fornecedora intercambiável — é a detentora do capital técnico acumulado durante 36 meses de construção. Ao final do projeto, nenhuma outra empresa no Brasil terá o mesmo domínio sobre o AgroLinguaBR, a arquitetura de inferência soberana e os pipelines de fine-tuning do Agro-BERT. Esse conhecimento não se contrata novamente do zero — ele é transferido ou continuado. Há três caminhos naturais para a THATPIX na rodada de escala:",
+      "body": "A THATPIX não é uma fornecedora intercambiável — é a detentora do capital técnico acumulado durante 36 meses de construção. Ao final do projeto, nenhuma outra empresa no Brasil terá o mesmo domínio sobre o AgroLinguaBR, a arquitetura de inferência soberana e os pipelines de fine-tuning do LLM fine-tuned. Esse conhecimento não se contrata novamente do zero — ele é transferido ou continuado. Há três caminhos naturais para a THATPIX na rodada de escala:",
       "points": [
         "Parceira técnica do servidor nacional: quando o financiamento de escala for aprovado (SoberanIA, BNDES Funtec ou IDB), a THATPIX é a candidata natural para o contrato de engenharia da fase seguinte — com vantagem de conhecer a arquitetura de dentro.",
         "Migração e continuidade operacional: a transição do servidor atual para a infraestrutura de escala exige quem conhece o sistema em produção. A THATPIX opera o servidor R$600k desde o mês 1 — é quem faz a migração com zero risco de perda de dados ou interrupção de serviço.",
-        "Co-fundadora de spin-off ou produto: o corpus AgroLinguaBR (licença CC BY-NC-SA 4.0) e a AgroAPI (Apache 2.0) são ativos públicos — mas a expertise de operá-los em escala é proprietária. Uma parceria entre [ICT EXECUTORA] e THATPIX para oferecer o sistema como serviço a EMATERs estaduais é um modelo de negócio legítimo dentro do Marco Legal de CT&I (Art. 14-A, Lei 10.973/2004)."
+        "Co-fundadora de spin-off ou produto: o corpus AgroLinguaBR (licença CC BY-NC-SA 4.0) e a AgroAPI (código-fonte Apache 2.0) são ativos públicos — mas a expertise de operá-los em escala é proprietária. Uma parceria entre [ICT EXECUTORA] e THATPIX para oferecer o sistema como serviço a EMATERs estaduais é um modelo de negócio legítimo dentro do Marco Legal de CT&I (Art. 14-A, Lei 10.973/2004)."
       ]
     },
     "phases": [
@@ -3231,7 +3231,7 @@
         "funder": "Banco Nacional de Desenvolvimento Econômico e Social",
         "type": "public-federal",
         "typeLabel": "Federal · Infraestrutura P&D",
-        "description": "O Fundo Tecnológico do BNDES financia infraestrutura de P&D de uso público não-reembolsável, cobrindo até 90% dos custos do projeto. Um servidor de inferência nacional — operado por ICT pública, AgroAPI aberta, titularidade brasileira — é exatamente o tipo de ativo que o Funtec existe para financiar.",
+        "description": "O Fundo Tecnológico do BNDES financia infraestrutura de P&D de uso público não-reembolsável, cobrindo até 90% dos custos do projeto. Um servidor de inferência nacional — operado por ICT pública, AgroAPI pública regulada, titularidade brasileira — é exatamente o tipo de ativo que o Funtec existe para financiar.",
         "fit": "Infraestrutura pública de IA, não produto comercial. Titularidade ICT = sem risco de captura privada.",
         "fitLevel": "high",
         "amount": "até 90% dos custos · não-reembolsável",
