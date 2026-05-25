@@ -25,30 +25,10 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
         {ctx.title}
       </h3>
 
-      <div className="mb-9 flex flex-col gap-2">
-        {ctx.paragraphs.map((p, i) => {
-          const sentenceEnd = p.search(/[.:]/)
-          const breakAt = sentenceEnd > 20 && sentenceEnd < 180 ? sentenceEnd + 1 : 160
-          const lead = p.slice(0, breakAt).trim()
-          const body = p.slice(breakAt).trim()
-          return (
-            <details key={i} className="group overflow-hidden rounded-xl border"
-              style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-5 py-4 select-none"
-                style={{ color: 'var(--txt)' }}>
-                <span className="text-[13.5px] font-semibold leading-[1.5]">{lead}</span>
-                <span className="mt-0.5 shrink-0 text-[10px] transition-transform group-open:rotate-180"
-                  style={{ color: 'var(--txtll)' }}>▼</span>
-              </summary>
-              {body && (
-                <p className="px-5 pb-5 text-[13px] leading-[1.85]"
-                  style={{ color: 'var(--txtl)', borderTop: '1px solid var(--bdr)' }}>
-                  {body}
-                </p>
-              )}
-            </details>
-          )
-        })}
+      <div className="mb-9 space-y-5">
+        {ctx.paragraphs.map((p, i) => (
+          <p key={i} className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>{p}</p>
+        ))}
       </div>
 
       {ctx.callouts && (
