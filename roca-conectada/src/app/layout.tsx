@@ -11,6 +11,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 export const metadata: Metadata = {
   title: 'Roça Conectada — FINEP AgriFam-ICT 2026',
   description: 'Proposta MCTI/FINEP/FNDCT — Linha Temática 3 — Soluções digitais para a pequena propriedade rural',
+  other: { viewport: 'width=device-width, initial-scale=1' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

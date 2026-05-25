@@ -86,7 +86,7 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
             <p className="mb-4 text-[12px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
               {card.proof.description}
             </p>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {card.proof.stats.map((s, i) => (
                 <div key={i} className="rounded-xl p-3 text-center"
                   style={{ background: tok.statBg, border: `1px solid ${tok.border}` }}>
@@ -139,10 +139,10 @@ export default function ModalidadesSection({
   modalities, architectureBridge,
 }: ModalidadesSectionProps) {
   return (
-    <section id="s13" className="relative overflow-hidden px-16 py-20"
+    <section id="s13" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20"
       style={{ background: 'var(--bg-alt)' }}>
       <span aria-hidden
-        className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+        className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
         AI
       </span>
@@ -154,16 +154,16 @@ export default function ModalidadesSection({
           🔮 {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
           {title}
         </h2>
-        <p className="max-w-[680px] text-[15px] italic leading-relaxed"
+        <p className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
           {subtitle}
         </p>
@@ -194,7 +194,7 @@ export default function ModalidadesSection({
         <p className="mb-6 text-[14px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
           {channelCapabilityNote}
         </p>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {channelCapabilityItems.map((item, i) => (
             <div key={i} className="flex items-start gap-3 rounded-xl border p-4"
               style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -213,7 +213,7 @@ export default function ModalidadesSection({
       </div>
 
       {/* Modality cards */}
-      <div className="mb-12 grid grid-cols-2 gap-6">
+      <div className="mb-12 grid grid-cols-1 sm:grid-cols-2 gap-6">
         {modalities.map((card) => (
           <ModalityCardBlock key={card.id} card={card} />
         ))}

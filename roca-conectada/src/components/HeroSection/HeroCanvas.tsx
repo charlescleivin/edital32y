@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // ~175 dots = 5 regional clusters of agricultural families
 // Norte, Nordeste, Sudeste, Sul, Centro-Oeste
@@ -22,8 +22,17 @@ interface Pulse { x0: number; y0: number; x1: number; y1: number; t: number }
 
 export default function HeroCanvas() {
   const ref = useRef<HTMLCanvasElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  useEffect(() => {
+    if (isMobile) return
     const canvas = ref.current
     if (!canvas) return
     const ctx = canvas.getContext('2d', { alpha: true })!

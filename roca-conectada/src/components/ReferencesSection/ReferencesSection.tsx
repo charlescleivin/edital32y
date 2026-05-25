@@ -37,8 +37,8 @@ export default function ReferencesSection({ number, title, subtitle, headline, h
   const grouped = groupByArea(references)
 
   return (
-    <section id="s11" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none text-[180px] font-bold leading-none opacity-[0.025]"
+    <section id="s11" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg)' }}>
+      <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>11</span>
       {heroImage && <SectionHero image={heroImage} caption={heroCaption} statement={heroStatement} objectPosition={heroObjectPosition} />}
 
@@ -48,12 +48,12 @@ export default function ReferencesSection({ number, title, subtitle, headline, h
           📚 {number}
         </span>
         {headline && (
-          <p className="mb-3 text-[22px] font-bold italic leading-[1.2]"
+          <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
             {headline}
           </p>
         )}
-        <h2 className="mb-3 text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
+        <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
         <p className="text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>

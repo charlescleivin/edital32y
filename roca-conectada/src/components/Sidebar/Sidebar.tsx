@@ -75,8 +75,7 @@ function useActiveSection(ids: string[]) {
   return active
 }
 
-
-function PdfViewer({ label, url, onClose }: { label: string; url: string; onClose: () => void }) {
+function PdfViewer({ label, url, onClose, sidebarWidth }: { label: string; url: string; onClose: () => void; sidebarWidth: number }) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', handler)
@@ -86,57 +85,33 @@ function PdfViewer({ label, url, onClose }: { label: string; url: string; onClos
   return createPortal(
     <div
       style={{
-        position: 'fixed', top: 0, bottom: 0, left: 270, right: 0, zIndex: 200,
+        position: 'fixed', top: 0, bottom: 0, left: sidebarWidth, right: 0, zIndex: 200,
         background: '#0a0c08',
         display: 'flex', flexDirection: 'column',
         borderLeft: '1px solid rgba(237,229,211,0.08)',
       }}
     >
-      {/* header */}
-      <div
-        style={{
-          display: 'flex', alignItems: 'center', gap: 12,
-          padding: '12px 20px',
-          borderBottom: '1px solid rgba(237,229,211,0.08)',
-          background: '#0d100b',
-          flexShrink: 0,
-        }}
-      >
+      <div style={{
+        display: 'flex', alignItems: 'center', gap: 12,
+        padding: '12px 20px',
+        borderBottom: '1px solid rgba(237,229,211,0.08)',
+        background: '#0d100b',
+        flexShrink: 0,
+      }}>
         <span style={{ fontSize: 16, lineHeight: 1 }}>📄</span>
         <span style={{ flex: 1, fontSize: 13, fontWeight: 600, color: 'var(--txt)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
           {label}
         </span>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase',
-            color: 'var(--txtll)', textDecoration: 'none', padding: '4px 10px',
-            border: '1px solid rgba(237,229,211,0.1)', borderRadius: 8,
-            marginRight: 4,
-          }}
-        >
+        <a href={url} target="_blank" rel="noopener noreferrer"
+          style={{ fontSize: 10, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--txtll)', textDecoration: 'none', padding: '4px 10px', border: '1px solid rgba(237,229,211,0.1)', borderRadius: 8, marginRight: 4 }}>
           Abrir ↗
         </a>
-        <button
-          onClick={onClose}
-          style={{
-            background: 'rgba(200,85,48,0.1)', border: '1px solid rgba(200,85,48,0.2)',
-            borderRadius: 8, width: 28, height: 28, cursor: 'pointer',
-            color: 'var(--terra)', fontSize: 14, fontWeight: 700,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}
-        >
+        <button onClick={onClose}
+          style={{ background: 'rgba(200,85,48,0.1)', border: '1px solid rgba(200,85,48,0.2)', borderRadius: 8, width: 28, height: 28, cursor: 'pointer', color: 'var(--terra)', fontSize: 14, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           ✕
         </button>
       </div>
-      {/* iframe */}
-      <iframe
-        src={url}
-        title={label}
-        style={{ flex: 1, border: 'none', display: 'block' }}
-      />
+      <iframe src={url} title={label} style={{ flex: 1, border: 'none', display: 'block' }} />
     </div>,
     document.body
   )
@@ -144,8 +119,6 @@ function PdfViewer({ label, url, onClose }: { label: string; url: string; onClos
 
 export default function Sidebar({ projectName, call, deadline, sections }: SidebarProps) {
   const days = useCountdown(deadline)
-
-  // collect all IDs (parents + children) for scroll tracking
   const allIds = sections.flatMap((s) => [s.id, ...(s.children?.map((c) => c.id) ?? [])])
   const active = useActiveSection(allIds)
 
@@ -153,14 +126,28 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
   const [activePdf, setActivePdf] = useState<{ label: string; url: string } | null>(null)
   const [mounted, setMounted] = useState(false)
   const [openDrawers, setOpenDrawers] = useState<Record<string, boolean>>({})
-  // tracks drawers the user explicitly opened — scroll won't auto-close these
   const [pinnedDrawers, setPinnedDrawers] = useState<Record<string, boolean>>({})
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const closeRef = useRef<() => void>(() => setActivePdf(null))
   closeRef.current = () => setActivePdf(null)
 
-  useEffect(() => { setMounted(true) }, [])
+  useEffect(() => {
+    setMounted(true)
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
-  // auto-open when scrolling into a section; auto-close when scrolling away (unless pinned)
+  // close mobile sidebar on scroll
+  useEffect(() => {
+    if (!mobileOpen) return
+    const handler = () => setMobileOpen(false)
+    window.addEventListener('scroll', handler, { passive: true, once: true })
+    return () => window.removeEventListener('scroll', handler)
+  }, [mobileOpen])
+
   useEffect(() => {
     for (const s of sections) {
       if (!s.children?.length) continue
@@ -176,15 +163,51 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
 
   function openPdf(doc: PdfEntry) {
     setActivePdf({ label: doc.label, url: `/api/edital/${encodeURIComponent(doc.file)}` })
+    if (isMobile) setMobileOpen(false)
   }
+
+  const sidebarWidth = isMobile ? 0 : 270
 
   return (
     <>
+      {/* Mobile hamburger button */}
+      {mounted && isMobile && (
+        <button
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
+          className="fixed left-4 top-4 z-[60] flex h-10 w-10 items-center justify-center rounded-xl border"
+          style={{
+            background: mobileOpen ? 'rgba(200,85,48,0.15)' : 'rgba(9,8,6,0.92)',
+            borderColor: mobileOpen ? 'rgba(200,85,48,0.35)' : 'rgba(237,229,211,0.12)',
+            backdropFilter: 'blur(8px)',
+          }}
+        >
+          <div className="flex flex-col gap-[5px]" style={{ width: 18 }}>
+            <span className="block h-[2px] rounded-full transition-all duration-200"
+              style={{ background: 'var(--txt)', transform: mobileOpen ? 'rotate(45deg) translate(5px,5px)' : 'none' }} />
+            <span className="block h-[2px] rounded-full transition-all duration-200"
+              style={{ background: 'var(--txt)', opacity: mobileOpen ? 0 : 1 }} />
+            <span className="block h-[2px] rounded-full transition-all duration-200"
+              style={{ background: 'var(--txt)', transform: mobileOpen ? 'rotate(-45deg) translate(5px,-5px)' : 'none' }} />
+          </div>
+        </button>
+      )}
+
+      {/* Mobile backdrop */}
+      {mounted && isMobile && mobileOpen && (
+        <div
+          className="fixed inset-0 z-[55]"
+          style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(2px)' }}
+          onClick={() => setMobileOpen(false)}
+        />
+      )}
+
       <aside
-        className="fixed left-0 top-0 z-50 flex h-screen w-[270px] flex-col overflow-y-auto"
+        className="fixed left-0 top-0 z-[56] flex h-screen w-[270px] flex-col overflow-y-auto transition-transform duration-300"
         style={{
           background: 'linear-gradient(180deg, #09080606 0%, #0b0e09 40%, #090c07 100%)',
           borderRight: '1px solid rgba(237,229,211,0.05)',
+          transform: isMobile && !mobileOpen ? 'translateX(-100%)' : 'translateX(0)',
         }}
       >
         {/* project identity */}
@@ -210,7 +233,6 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
 
             return (
               <div key={s.id}>
-                {/* parent row */}
                 <div className={`flex items-center border-l-2 ${isActive ? 'border-[#c85530]' : 'border-transparent'}`}
                   style={{ background: isActive ? 'rgba(200,85,48,0.08)' : 'transparent' }}>
                   <Link
@@ -218,7 +240,6 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                     className="flex flex-1 items-center gap-3 py-2.5 pl-6 text-[12.5px] font-medium transition-all duration-150"
                     style={{ color: isActive ? 'var(--txt)' : 'var(--txtl)' }}
                     onClick={() => {
-                      // close + unpin all others, toggle + pin current
                       setOpenDrawers((prev) => {
                         const next: Record<string, boolean> = {}
                         for (const sec of sections) next[sec.id] = false
@@ -231,6 +252,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                         if (hasChildren) next[s.id] = !prev[s.id]
                         return next
                       })
+                      if (isMobile) setMobileOpen(false)
                     }}
                   >
                     <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-md text-[9px] font-bold"
@@ -243,7 +265,6 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                     <span className="truncate">{s.label}</span>
                   </Link>
 
-                  {/* drawer toggle */}
                   {hasChildren && (
                     <button
                       onClick={() => {
@@ -259,7 +280,6 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                   )}
                 </div>
 
-                {/* children drawer */}
                 {hasChildren && drawerOpen && (
                   <div className="pb-1">
                     {s.children!.map((child) => {
@@ -274,6 +294,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                             background: childActive ? 'rgba(200,85,48,0.06)' : 'transparent',
                             color: childActive ? 'var(--txt)' : 'var(--txtll)',
                           }}
+                          onClick={() => { if (isMobile) setMobileOpen(false) }}
                         >
                           {child.avatar && (
                             <span className="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-md text-[11px]"
@@ -309,15 +330,9 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
               {EDITAL_DOCS.map((doc) => {
                 const isActive = activePdf?.label === doc.label
                 return (
-                  <button
-                    key={doc.file}
-                    onClick={() => openPdf(doc)}
+                  <button key={doc.file} onClick={() => openPdf(doc)}
                     className="flex w-full items-center gap-2.5 px-5 py-2 text-left transition-colors"
-                    style={{
-                      background: isActive ? 'rgba(212,150,14,0.1)' : 'transparent',
-                      border: 'none', cursor: 'pointer',
-                      borderLeft: isActive ? '2px solid var(--gold)' : '2px solid transparent',
-                    }}
+                    style={{ background: isActive ? 'rgba(212,150,14,0.1)' : 'transparent', border: 'none', cursor: 'pointer', borderLeft: isActive ? '2px solid var(--gold)' : '2px solid transparent' }}
                   >
                     <span style={{ fontSize: 13, lineHeight: 1, flexShrink: 0 }}>📄</span>
                     <span className="flex-1 truncate text-[12px]"
@@ -325,12 +340,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
                       {doc.label}
                     </span>
                     {doc.tag && (
-                      <span style={{
-                        fontSize: 8, fontWeight: 700, letterSpacing: '1px',
-                        padding: '1px 5px', borderRadius: 4,
-                        background: 'rgba(237,229,211,0.06)', color: 'var(--txtll)',
-                        flexShrink: 0,
-                      }}>
+                      <span style={{ fontSize: 8, fontWeight: 700, letterSpacing: '1px', padding: '1px 5px', borderRadius: 4, background: 'rgba(237,229,211,0.06)', color: 'var(--txtll)', flexShrink: 0 }}>
                         {doc.tag}
                       </span>
                     )}
@@ -357,7 +367,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
       </aside>
 
       {mounted && activePdf && (
-        <PdfViewer label={activePdf.label} url={activePdf.url} onClose={closeRef.current} />
+        <PdfViewer label={activePdf.label} url={activePdf.url} onClose={closeRef.current} sidebarWidth={sidebarWidth} />
       )}
     </>
   )
