@@ -83,7 +83,7 @@ export default function ReferencesSection({ number, title, subtitle, headline, h
               <div className="overflow-hidden rounded-2xl border" style={{ borderColor: accent.border, background: accent.bg }}>
                 {refs.map((ref, i) => (
                   <div key={ref.id}
-                    className="flex gap-4 px-6 py-4 text-[13px] leading-[1.8]"
+                    className="flex gap-3 px-4 py-3 sm:px-6 sm:py-4 sm:gap-4 text-[13px] leading-[1.8]"
                     style={{
                       borderTop: i === 0 ? undefined : '1px solid var(--bdr)',
                       color: 'var(--txtl)',

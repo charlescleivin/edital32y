@@ -54,6 +54,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
               {theoryOfChange.premise}
             </p>
           </div>
+          <div className="relative">
           <div className="overflow-x-auto">
           <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(5, minmax(160px, 1fr))' }}>
             {theoryOfChange.chain.map((stage, i) => (
@@ -73,6 +74,13 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
             ))}
           </div>
           </div>
+          {/* Scroll hint */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:hidden"
+            style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+          <div className="mt-1 flex justify-end sm:hidden">
+            <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+          </div>
+          </div>{/* end relative wrapper */}
         </div>
       )}
 

@@ -8,7 +8,7 @@ export type EquipeSectionProps = S5Data
 
 function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
   return (
-    <div className="mb-14 rounded-2xl border p-10" style={{ borderColor: 'var(--bdr-strong)', background: 'var(--bg-raised)' }}>
+    <div className="mb-14 rounded-2xl border p-5 sm:p-10" style={{ borderColor: 'var(--bdr-strong)', background: 'var(--bg-raised)' }}>
       {ctx.badge && (
         <div className="mb-7 flex items-center gap-4">
           <div className="h-px flex-1" style={{ background: 'linear-gradient(to right, rgba(200,85,48,0.5), transparent)' }} />
@@ -20,12 +20,12 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
         </div>
       )}
 
-      <h3 className="mb-8 text-[24px] font-bold leading-snug"
+      <h3 className="mb-5 sm:mb-8 text-[20px] sm:text-[24px] font-bold leading-snug"
         style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
         {ctx.title}
       </h3>
 
-      <div className="mb-9 flex flex-col gap-3">
+      <div className="mb-5 sm:mb-9 flex flex-col gap-3">
         {ctx.paragraphs.map((p: MarketContextParagraph, i: number) => (
           <div key={i} className="flex gap-4 rounded-xl border p-5"
             style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
@@ -99,6 +99,7 @@ function AnnexTableBlock({ table }: { table: AnnexTable }) {
         </h4>
       </div>
 
+      <div className="relative">
       <div className="overflow-x-auto overflow-hidden rounded-xl border" style={{ borderColor: 'var(--bdr)' }}>
         <table className="w-full border-collapse text-left">
           <thead>
@@ -137,6 +138,13 @@ function AnnexTableBlock({ table }: { table: AnnexTable }) {
           </tbody>
         </table>
       </div>
+      {/* Scroll hint */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-xl sm:hidden"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+      <div className="mt-1 flex justify-end sm:hidden">
+        <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+      </div>
+      </div>{/* end relative wrapper */}
 
       {(table.note || table.source) && (
         <div className="mt-2.5 space-y-0.5">

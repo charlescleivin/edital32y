@@ -70,6 +70,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
           <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
             📡 Estratégia de Disseminação dos Resultados
           </div>
+          <div className="relative">
           <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
             <div className="overflow-x-auto">
               <table className="w-full text-[13px]">
@@ -93,6 +94,13 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
               </table>
             </div>
           </div>
+          {/* Scroll hint */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-2xl sm:hidden"
+            style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+          <div className="mt-1 flex justify-end sm:hidden">
+            <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+          </div>
+          </div>{/* end relative wrapper */}
         </div>
       )}
 

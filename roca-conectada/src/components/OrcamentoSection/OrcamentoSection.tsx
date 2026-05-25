@@ -203,6 +203,7 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
             🖥️ Detalhamento — Capital / Equipamentos (R$ 1.450.000)
           </div>
+          <div className="relative">
           <div className="overflow-x-auto overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
             <table className="w-full text-[12.5px]">
               <thead style={{ background: 'var(--bg-raised)' }}>
@@ -226,6 +227,13 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
               </tbody>
             </table>
           </div>
+          {/* Scroll hint */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-2xl sm:hidden"
+            style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+          <div className="mt-1 flex justify-end sm:hidden">
+            <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+          </div>
+          </div>{/* end relative wrapper */}
         </div>
       )}
 
@@ -233,6 +241,7 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
       <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
         Conformidade com Limites do Edital
       </div>
+      <div className="relative">
       <div className="overflow-x-auto overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
         <table className="w-full text-[13px]">
           <thead style={{ background: 'var(--bg-raised)' }}>
@@ -263,6 +272,13 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
           </tbody>
         </table>
       </div>
+      {/* Scroll hint */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-2xl sm:hidden"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+      <div className="mt-1 flex justify-end sm:hidden">
+        <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+      </div>
+      </div>{/* end relative wrapper */}
     </section>
   )
 }

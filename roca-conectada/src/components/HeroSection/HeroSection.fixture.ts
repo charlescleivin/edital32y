@@ -1,9 +1,9 @@
 import type { HeroSectionProps } from './HeroSection'
 
 export const fixture: HeroSectionProps = {
-  eyebrow: 'MCTI / FINEP / FNDCT — Linha Temática 3',
+  eyebrow: 'FINEP AgriFam-ICT 2026 — Linha Temática 3',
   title: 'Roça Conectada',
-  subtitle: 'A infraestrutura nacional soberana de IA para a agricultura familiar: corpus aberto, modelo fine-tuned, benchmark público e API de integração.',
+  subtitle: 'A infraestrutura nacional soberana de IA para a agricultura familiar: corpus soberano, modelo fine-tuned, benchmark público e API de integração.',
   statement: 'Eles alimentam 70% do Brasil.',
   statementContrast: 'O Brasil digital ainda não os alcança.',
   stats: [
@@ -12,8 +12,8 @@ export const fixture: HeroSectionProps = {
     { value: 'R$18,8bi', label: 'em renda rural não realizada por ano — estimativa dos autores (Rocha Junior et al., RESR 2020)' },
   ],
   layers: [
-    { id: '0', badge: 'Camada 0', title: 'AgroInfra — Espinha Dorsal Nacional', description: 'AgroLinguaBR (corpus público com DOI), AgroEval (benchmark nacional) e AgroAPI (acesso aberto): infraestrutura soberana que qualifica e conecta o ecossistema brasileiro de IA agroalimentar.' },
-    { id: 'a', badge: 'Camada A', title: 'AgroAssistente IA', description: 'LLM em português, via WhatsApp, arquitetura assíncrona tolerante a conectividade intermitente. Extensão rural digital 24h.' },
-    { id: 'c', badge: 'Camada C', title: 'Coopera Digital', description: 'Plataforma de gestão para cooperativas e associações da agricultura familiar.' },
+    { id: '0', badge: 'Camada 0', title: 'AgroInfra — Espinha Dorsal Nacional', description: 'A espinha dorsal do projeto: AgroLinguaBR (corpus de IA agrícola em pt-BR, CC BY-NC-SA 4.0), AgroEval (benchmark de avaliação, Apache 2.0) e AgroAPI (serviço de consulta regulado). Ativos públicos permanentes — propriedade da ICT executora ao mês 36.' },
+    { id: 'a', badge: 'Camada A', title: 'AgroAssistente IA', description: 'Assistente de IA agrícola via WhatsApp, treinado sobre o corpus AgroLinguaBR. Arquitetura assíncrona — funciona mesmo com sinal intermitente. Extensão rural digital 24h, sem custo para o agricultor.' },
+    { id: 'c', badge: 'Camada C', title: 'Coopera Digital', description: 'Plataforma de gestão para cooperativas e associações da agricultura familiar — conectada à AgroAPI para orientação técnica em fluxos de produção e acesso ao PAA/PNAE.' },
   ],
 }

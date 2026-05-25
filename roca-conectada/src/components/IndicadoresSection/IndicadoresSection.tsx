@@ -207,6 +207,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
         <div className="mb-5 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
           🔗 Cadeia de Impacto — Como o Investimento Vira Renda Rural
         </div>
+        <div className="relative">
         <div className="flex items-center gap-2 overflow-x-auto">
           {[
             { icon: '📚', value: '25.000',  unit: 'pares Q&A',       label: 'Corpus AgroLinguaBR',          color: 'var(--sage)',  bg: 'rgba(111,168,118,0.1)' },
@@ -234,6 +235,13 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
             </div>
           ))}
         </div>
+        {/* Scroll hint */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:hidden"
+          style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+        <div className="mt-1 flex justify-end sm:hidden">
+          <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+        </div>
+        </div>{/* end relative wrapper */}
         <div className="mt-4 flex gap-5 border-t pt-4" style={{ borderColor: 'var(--bdr)' }}>
           <div className="flex-1 rounded-xl border px-4 py-3 text-center"
             style={{ borderColor: 'rgba(200,85,48,0.3)', background: 'rgba(200,85,48,0.05)' }}>
@@ -252,6 +260,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
       </div>
 
       {/* indicators table */}
+      <div className="relative">
       <div className="overflow-x-auto overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
         <table className="w-full text-[13px]">
           <thead style={{ background: 'var(--bg-raised)' }}>
@@ -275,6 +284,13 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
           </tbody>
         </table>
       </div>
+      {/* Scroll hint */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-2xl sm:hidden"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+      <div className="mt-1 flex justify-end sm:hidden">
+        <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+      </div>
+      </div>{/* end relative wrapper */}
     </section>
   )
 }

@@ -38,14 +38,14 @@
     to   { opacity: 1; transform: translateX(0) scaleX(1); }
   }
 
-  /* Horizontal pan inside each mobile strip — background-position drifts L↔R */
-  @keyframes hero-pan-ltr {
-    from { background-position: 35% var(--pan-y, 50%); }
-    to   { background-position: 65% var(--pan-y, 50%); }
-  }
-  @keyframes hero-pan-rtl {
-    from { background-position: 65% var(--pan-y, 50%); }
-    to   { background-position: 35% var(--pan-y, 50%); }
+  /* Mobile hero: pure-CSS 3-image crossfade
+     Each image: hold 30% (3.6s) → fade out 10% (1.2s) → hidden 50% → fade in 10%
+     Delays 0s / -8s / -4s keep one image always visible                          */
+  @keyframes hero-mobile-fade {
+    0%, 30%  { opacity: 1; transform: scale(1);    }
+    40%      { opacity: 0; transform: scale(1.03); }
+    90%      { opacity: 0; transform: scale(1);    }
+    100%     { opacity: 1; transform: scale(1);    }
   }
 }
 

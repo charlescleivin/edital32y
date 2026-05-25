@@ -4,7 +4,7 @@ export const fixture: ObjetivosSectionProps = {
   number: 'Seção 3',
   title: 'Objetivos',
   subtitle: 'Geral e específicos, alinhados à Linha Temática 3',
-  generalObjective: 'Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus aberto, modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema Roça Conectada, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.',
+  generalObjective: 'Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus soberano (CC BY-NC-SA 4.0), modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema Roça Conectada, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.',
   axes: [
     {
       id: 'e1',

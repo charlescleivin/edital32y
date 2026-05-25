@@ -65,11 +65,67 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       </div>
 
       {/* phase timeline / gantt */}
-      <div className="mb-10 rounded-2xl border p-4 sm:p-6 overflow-x-auto" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+      <div className="relative mb-10">
+      <div className="rounded-2xl border p-4 sm:p-6 overflow-x-auto" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
         <div className="mb-4 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
           📅 Cronograma — 36 Meses de Execução
         </div>
-        <div style={{ minWidth: '560px' }}>
+
+        {/* Mobile-only vertical card layout */}
+        <div className="block sm:hidden">
+          <div className="flex flex-col gap-3">
+            {phases.map((phase, i) => {
+              const acc = phaseAccent[i] ?? phaseAccent[0]
+              const barWidths = ['33%', '33%', '34%']
+              const barOffsets = ['0%', '33%', '66%']
+              return (
+                <div key={phase.id} className="rounded-xl border overflow-hidden"
+                  style={{ borderColor: acc.border, borderWidth: '1.5px', background: 'var(--bg-card)' }}>
+                  <div className="px-4 py-3" style={{ background: acc.header }}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-[10px] font-bold uppercase tracking-[2px]" style={{ color: acc.text }}>
+                          {phase.label}
+                        </div>
+                        <div className="text-[13px] font-bold mt-0.5" style={{ color: 'var(--txt)' }}>{phase.name}</div>
+                        <div className="text-[11px] mt-0.5" style={{ color: 'var(--txtl)' }}>{phase.period}</div>
+                      </div>
+                      <div className="text-[22px]">{phase.icon}</div>
+                    </div>
+                  </div>
+                  <div className="px-4 py-3">
+                    <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>
+                      Posição no cronograma
+                    </div>
+                    <div className="relative h-4 w-full rounded-full overflow-hidden" style={{ background: 'var(--pale)' }}>
+                      <div
+                        className="absolute h-full rounded-full"
+                        style={{
+                          width: barWidths[i],
+                          left: barOffsets[i],
+                          background: acc.text,
+                          opacity: 0.75,
+                        }}
+                      />
+                    </div>
+                    <div className="mt-1 flex justify-between text-[9px]" style={{ color: 'var(--txtll)' }}>
+                      <span>Mês 1</span>
+                      <span>Mês 12</span>
+                      <span>Mês 24</span>
+                      <span>Mês 36</span>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+          <p className="mt-4 text-center text-[11px] italic" style={{ color: 'var(--txtll)' }}>
+            Versão completa disponível em telas maiores
+          </p>
+        </div>
+
+        {/* Desktop Gantt — hidden on mobile */}
+        <div className="hidden sm:block" style={{ minWidth: '560px' }}>
         {/* month ruler */}
         <div className="mb-2 flex text-[9px]" style={{ color: 'var(--txtll)' }}>
           {['M1','','','M4','','','M7','','','M10','','M12','M13','','','M16','','','M19','','','M22','','M24','M25','','','M28','','','M31','','','M34','','M36'].map((m, i) => (
@@ -110,8 +166,15 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
             </div>
           ))}
         </div>
-        </div>
+        </div>{/* end hidden sm:block desktop gantt */}
       </div>
+      {/* Scroll hint */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 rounded-r-2xl sm:hidden"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(12,11,9,0.85))' }} />
+      <div className="mt-1 flex justify-end sm:hidden">
+        <span className="text-[9px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--txtll)' }}>deslize →</span>
+      </div>
+      </div>{/* end relative wrapper */}
 
       {/* deliverables per phase */}
       {phases.some(p => p.deliverables?.length) && (

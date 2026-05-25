@@ -119,7 +119,9 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
                 {b.title}
               </div>
               <div className="text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-                {b.description}
+                {b.description.split(/\n\n+/).map((para, idx) => (
+                  <p key={idx} className={idx > 0 ? 'mt-3' : ''}>{para}</p>
+                ))}
               </div>
             </div>
           )
@@ -127,7 +129,9 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           const visualPanel = b.image ? (
             <div className="relative sm:flex-[2] overflow-hidden" style={{ order: textOnLeft ? 3 : 1 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={b.image} alt="" className="h-[200px] sm:h-full w-full object-cover" />
+              <img src={b.image} alt="" className="h-[200px] sm:h-full w-full object-cover"
+                style={{ objectPosition: b.imageObjectPosition ?? 'center' }} />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(8,7,6,0.35) 0%, transparent 40%)' }} />
             </div>
           ) : (
             <div className="flex sm:flex-[2] flex-col items-center justify-center gap-5 px-6 py-8 sm:px-10 sm:py-12"
