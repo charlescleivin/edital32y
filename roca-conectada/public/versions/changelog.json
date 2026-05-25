@@ -110,5 +110,12 @@
     "date": "2026-05-21",
     "label": "chore: replace UFSC/FAPEU/FEESC with [ICT EXECUTOR",
     "description": "chore: replace UFSC/FAPEU/FEESC with [ICT EXECUTORA]/[FUNDAÇÃO DE APOIO] placeholders"
+  },
+  {
+    "id": "v17",
+    "commit": "606f5ba",
+    "date": "2026-05-25",
+    "label": "feat: adiciona Fernanda/Tombô, revisa orçamento e ",
+    "description": "feat: adiciona Fernanda/Tombô, revisa orçamento e corrige inconsistências"
   }
 ]
