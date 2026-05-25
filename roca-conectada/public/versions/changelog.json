@@ -250,5 +250,12 @@
     "date": "2026-05-25",
     "label": "fix(s4,s14): hide base LLM model name from project",
     "description": "fix(s4,s14): hide base LLM model name from project methodology — keep only in Charles personal credentials"
+  },
+  {
+    "id": "v37",
+    "commit": "f386984",
+    "date": "2026-05-25",
+    "label": "feat: full UX + content audit pass — licensing, mo",
+    "description": "feat: full UX + content audit pass — licensing, mobile, barriers, scroll indicators"
   }
 ]
