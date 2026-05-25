@@ -46,7 +46,7 @@ export const fixture: S14Data = {
       { who: 'EMATER-CE', action: 'Integra AgroAPI no sistema de atendimento dos técnicos estaduais', allowed: 'yes' },
       { who: 'Universidade Federal', action: 'Usa AgroLinguaBR em dissertação de mestrado sobre NLP agrícola', allowed: 'yes' },
       { who: 'Cooperativa de agricultores', action: 'Usa o AgroAssistente para orientar seus associados', allowed: 'yes' },
-      { who: 'Startup brasileira de agtech', action: 'Quer incorporar o corpus em assinatura paga de R$ 200/mês', allowed: 'negotiate' },
+      { who: 'Startup brasileira de agtech', action: 'Quer incorporar o corpus em produto SaaS comercial com assinatura paga', allowed: 'negotiate' },
       { who: 'Big Tech estrangeira (Google, OpenAI, Alibaba)', action: 'Incorpora AgroLinguaBR no treinamento de LLM proprietário e comercializa globalmente', allowed: 'no' },
       { who: 'Multinacional do agronegócio', action: 'Usa o modelo fine-tuned em plataforma de venda de insumos com lucro direto', allowed: 'no' },
     ],
