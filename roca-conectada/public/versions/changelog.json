@@ -243,5 +243,12 @@
     "date": "2026-05-25",
     "label": "fix(s14): hide base model name from license table ",
     "description": "fix(s14): hide base model name from license table — keep as generic fine-tuned LLM"
+  },
+  {
+    "id": "v36",
+    "commit": "cc2b944",
+    "date": "2026-05-25",
+    "label": "fix(s4,s14): hide base LLM model name from project",
+    "description": "fix(s4,s14): hide base LLM model name from project methodology — keep only in Charles personal credentials"
   }
 ]
