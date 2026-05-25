@@ -3,7 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLoaderDone } from '@/context/LoaderContext'
 
-const IMAGES = [
+const IMAGES_DESKTOP = [
   { src: '/bg1.jpg', pos: 'center 42%'  },  // Caatinga — mandacaru centered
   { src: '/bg3.jpg', pos: '35% 55%'     },  // Milho seco — stalks left of center
   { src: '/bg2.jpg', pos: '55% 45%'     },  // Caprinocultura — animals right-center
@@ -12,21 +12,40 @@ const IMAGES = [
   { src: '/bg6.jpg', pos: '30% 40%'     },  // Feira livre — stalls left-focus
 ]
 
-// ms between each new strip — linear, equal spacing
-const STEP_MS = 620
+// 3-strip mobile set: land → people → technology — each panel ~33% wide
+const IMAGES_MOBILE = [
+  { src: '/bg1.jpg', pos: 'center 42%'  },  // Caatinga — the land
+  { src: '/bg4.jpg', pos: '60% 30%'     },  // Mulheres agricultoras — the people
+  { src: '/bg5.jpg', pos: 'center 50%'  },  // Smartphone no roçado — the technology
+]
+
+const STEP_MS_DESKTOP = 620
+const STEP_MS_MOBILE  = 780   // slightly slower — each strip occupies more screen
 
 export default function HeroStripes() {
   const [visible, setVisible] = useState(1)
+  const [isMobile, setIsMobile] = useState(false)
   const loaderDone = useLoaderDone()
-  // Track previous count so we can detect genuine additions vs resets
   const prevVisible = useRef(1)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   useLayoutEffect(() => {
     prevVisible.current = visible
   }, [visible])
 
   useEffect(() => {
-    if (!loaderDone) return  // hold until the loader curtain lifts
+    if (!loaderDone) return
+
+    const IMAGES = isMobile ? IMAGES_MOBILE : IMAGES_DESKTOP
+    const STEP_MS = isMobile ? STEP_MS_MOBILE : STEP_MS_DESKTOP
+
+    setVisible(1)
 
     const timers: ReturnType<typeof setTimeout>[] = []
     const add = (fn: () => void, ms: number) => {
@@ -34,11 +53,10 @@ export default function HeroStripes() {
       timers.push(id)
     }
 
-    // idx = how many images are currently shown (mirrors `visible` state)
     let idx = 1
 
     const addNext = () => {
-      if (idx >= IMAGES.length) return  // all strips revealed — stay
+      if (idx >= IMAGES.length) return
 
       add(() => {
         idx++
@@ -47,10 +65,11 @@ export default function HeroStripes() {
       }, STEP_MS)
     }
 
-    // Small initial pause so the first image settles before the sequence begins
     add(addNext, 300)
     return () => timers.forEach(clearTimeout)
-  }, [loaderDone])  // starts when loader signals done, never re-runs after that
+  }, [loaderDone, isMobile])
+
+  const IMAGES = isMobile ? IMAGES_MOBILE : IMAGES_DESKTOP
 
   return (
     <div
