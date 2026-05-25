@@ -180,5 +180,12 @@
     "date": "2026-05-25",
     "label": "fix(s5): heroHeadline — Arquiteto e Construtor de ",
     "description": "fix(s5): heroHeadline — Arquiteto e Construtor de LLMs"
+  },
+  {
+    "id": "v27",
+    "commit": "a7c646e",
+    "date": "2026-05-25",
+    "label": "fix(s5): heroSubtext final — LLM curriculum leads,",
+    "description": "fix(s5): heroSubtext final — LLM curriculum leads, DDPED como virada"
   }
 ]
