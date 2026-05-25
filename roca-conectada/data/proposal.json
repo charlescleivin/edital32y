@@ -88,6 +88,11 @@
         "id": "s11",
         "label": "Referências",
         "num": "11"
+      },
+      {
+        "id": "s12",
+        "label": "Visão de Longo Prazo",
+        "num": "12"
       }
     ]
   },
@@ -3036,5 +3041,164 @@
         "abnt": "ANATEL — AGÊNCIA NACIONAL DE TELECOMUNICAÇÕES. Painel de cobertura de redes móveis 4G/LTE por município e área rural. Brasília: Anatel, 2023. Disponível em: https://www.anatel.gov.br/paineis. Acesso em: jan. 2026."
       }
     ]
+  },
+  "s12": {
+    "number": "Seção 12",
+    "title": "Visão de Longo Prazo",
+    "subtitle": "O servidor de R$600k não é o destino — é a prova. O que vem depois do mês 37 já está planejado.",
+    "headline": "A infraestrutura soberana de IA agrícola brasileira começa aqui. Não termina.",
+    "heroImage": "/hero9.png",
+    "heroObjectPosition": "center 40%",
+    "visionStatement": "Ao final dos 36 meses, o Brasil terá algo que hoje não existe: um servidor de inferência soberano, um corpus agrícola público com DOI, um modelo fine-tuned titulado em ICT pública, e 2.500 agricultores reais usando IA em português no campo. Esses não são produtos — são a prova. A prova de que a infraestrutura funciona. A prova que abre a próxima rodada.",
+    "visionSub": "O plano pós-projeto tem três movimentos: escalar a infraestrutura com novos financiamentos, transferir o servidor original para a universidade como patrimônio de pesquisa, e usar os resultados reais como argumento irrefutável para a rodada seguinte.",
+    "phases": [
+      {
+        "id": "ph0",
+        "period": "Meses 1–36 · FINEP AgriFam-ICT",
+        "icon": "🔬",
+        "title": "A Prova — Infraestrutura em Produção Real",
+        "description": "O servidor de R$600k (2× H100 80GB) opera em produção com 10.000+ MAU reais, latência <3s, uptime ≥99%. Não é protótipo de laboratório — é prova documentada de que o sistema funciona no campo, com agricultores, em português regional. Cada mês de operação acumula o ativo mais valioso para as rodadas seguintes: evidência.",
+        "milestones": [
+          "10.000 MAU ativos ao final da Fase 3 (mês 36)",
+          "Uptime ≥99% em 12 meses de operação contínua documentado",
+          "Modelos 7B e 32B em produção simultânea — latência média <3s",
+          "Corpus AgroLinguaBR publicado com DOI no Zenodo (mês 12)",
+          "5+ artigos científicos submetidos (acumulado 36 meses)"
+        ]
+      },
+      {
+        "id": "ph1",
+        "period": "Meses 24–36 · Preparação Paralela",
+        "icon": "🌱",
+        "title": "A Preparação — Plantar a Próxima Rodada Enquanto Esta Colhe",
+        "description": "Enquanto o piloto com 800 agricultores ainda está ativo, a equipe não espera o mês 37 para agir. A captação da segunda rodada começa na Fase 2, quando os primeiros dados de impacto já existem e o argumento é mais forte do que qualquer proposta sem evidência.",
+        "milestones": [
+          "MoU com ao menos uma EMATER estadual assinado até o mês 32",
+          "Proposta de escala redigida com base nos dados reais do piloto",
+          "Mapeamento de editais e contatos com IDB Lab, BNDES Funtec e SoberanIA",
+          "Documentação técnica da arquitetura publicada — replicável por outras ICTs",
+          "Negociação com parceiro de datacenter soberano para hospedagem de escala"
+        ]
+      },
+      {
+        "id": "ph2",
+        "period": "Mês 37+ · Rodada de Escala",
+        "icon": "🚀",
+        "title": "A Escala — Do Piloto para Infraestrutura Nacional",
+        "description": "Com resultados documentados em mãos, a proposta de escala vai a múltiplas fontes simultaneamente. O objetivo é um servidor nacional de inferência soberana capaz de servir 500k+ MAU — operado por ICT pública, financiado por combinação de fontes federais e internacionais. O servidor atual mantém o serviço ativo durante toda a transição.",
+        "milestones": [
+          "Servidor de escala nacional: múltiplas GPUs H100/H200 em datacenter soberano",
+          "Expansão de 3 municípios-piloto para cobertura regional ou nacional",
+          "AgroAPI integrada aos sistemas EMATER como canal oficial de ATER digital",
+          "AgroLinguaBR usado como base por outros projetos de pesquisa e políticas públicas",
+          "Servidor original R$600k permanece operacional durante toda a transição — zero interrupção de serviço para os agricultores ativos"
+        ]
+      },
+      {
+        "id": "ph3",
+        "period": "Mês 37+ · Legado Permanente",
+        "icon": "🏛️",
+        "title": "O Legado — O Servidor Vira Patrimônio da Universidade",
+        "description": "Quando o servidor de escala assumir a carga de produção, o hardware original — 2× H100 80GB, 64-core CPU, 256GB RAM, 10TB NVMe — é transferido formalmente para a [ICT EXECUTORA] como infraestrutura permanente de pesquisa, via processo patrimonial previsto no Marco Legal de CT&I. Qualquer grupo de pesquisa da universidade passa a ter acesso a GPUs de última geração sem custo adicional ao Estado.",
+        "milestones": [
+          "Transferência patrimonial para [ICT EXECUTORA] via NIT/Agência de Inovação",
+          "Política de uso compartilhado entre grupos de pesquisa definida pelo CPGP",
+          "Disponível para visão computacional, bioinformática, NLP, robótica e outros grupos",
+          "R$600k de investimento público serve N projetos simultâneos pós-Roça Conectada",
+          "Zero custo marginal para o próximo pesquisador que precisar de GPU na universidade"
+        ]
+      }
+    ],
+    "fundingPaths": [
+      {
+        "id": "f1",
+        "name": "MCTI / SoberanIA",
+        "funder": "Ministério da Ciência, Tecnologia e Inovações",
+        "type": "public-federal",
+        "typeLabel": "Federal · Alta prioridade",
+        "description": "O programa SoberanIA — lançado em maio de 2026 com R$40M para construir LLMs nacionais — tem alinhamento direto com o Roça Conectada. O corpus AgroLinguaBR e o modelo fine-tuned são exatamente os ativos que o SoberanIA quer produzir. A proposta de escala pode ser apresentada como a fase agrícola do programa nacional.",
+        "fit": "O Roça Conectada já entrega o que o SoberanIA quer: soberania, português, uso público, ICT pública como titular.",
+        "fitLevel": "high",
+        "color": "#1a5c38"
+      },
+      {
+        "id": "f2",
+        "name": "FINEP — Segunda Fase / Continuidade",
+        "funder": "Financiadora de Estudos e Projetos",
+        "type": "public-federal",
+        "typeLabel": "Federal · Caminho natural",
+        "description": "Resultados documentados de 36 meses — corpus com DOI, modelo titulado, 2.500 MAU reais — são o argumento mais forte possível para uma proposta de segunda fase na mesma agência. A FINEP tem histórico de financiar continuidade de projetos que entregam evidência científica sólida.",
+        "fit": "Mesma agência, mesma linha temática, continuidade documentada. O relatório final do projeto é a proposta da segunda fase.",
+        "fitLevel": "high",
+        "color": "#0891b2"
+      },
+      {
+        "id": "f3",
+        "name": "BNDES Funtec",
+        "funder": "Banco Nacional de Desenvolvimento Econômico e Social",
+        "type": "public-federal",
+        "typeLabel": "Federal · Infraestrutura P&D",
+        "description": "O Fundo Tecnológico do BNDES financia infraestrutura de P&D de uso público, com valores de até R$30M por projeto. Um servidor de inferência nacional — operado por ICT pública, AgroAPI aberta, titularidade brasileira — é exatamente o tipo de ativo que o Funtec existe para financiar.",
+        "fit": "Infraestrutura pública de IA, não produto comercial. Titularidade ICT = sem risco de captura privada.",
+        "fitLevel": "high",
+        "amount": "até R$ 30M por projeto",
+        "color": "#f59e0b"
+      },
+      {
+        "id": "f4",
+        "name": "IDB / BID Lab",
+        "funder": "Banco Interamericano de Desenvolvimento",
+        "type": "international",
+        "typeLabel": "Internacional · América Latina",
+        "description": "O BID Lab financia inovações escaláveis em mercados emergentes com impacto social mensurável. Seus programas de transformação digital agrícola na América Latina estão ativos e buscam projetos com evidência de impacto — exatamente o que o Roça Conectada terá ao mês 36. O modelo é replicável para outros países da região.",
+        "fit": "Impacto social mensurável, modelo replicável em AL, agricultores familiares como público-alvo direto.",
+        "fitLevel": "high",
+        "color": "#7c3aed"
+      },
+      {
+        "id": "f5",
+        "name": "Gates Foundation / CGIAR AIEP",
+        "funder": "Gates Foundation + CGIAR + GIZ",
+        "type": "international",
+        "typeLabel": "Internacional · Agtech Global",
+        "description": "A iniciativa AIEP (mencionada na S2 desta proposta) — Gates Foundation + CGIAR + GIZ — foca exatamente em advisory services de IA para pequenos agricultores em países em desenvolvimento. O Brasil representa o maior mercado latinoamericano para essa agenda e o corpus AgroLinguaBR em português é um ativo único.",
+        "fit": "O Roça Conectada é o caso de uso brasileiro da agenda AIEP — já citado na proposta, alinhamento documentado.",
+        "fitLevel": "high",
+        "color": "#c55530"
+      },
+      {
+        "id": "f6",
+        "name": "EMBRAPII + Parceiros Agtech",
+        "funder": "Empresa Brasileira de Pesquisa e Inovação Industrial",
+        "type": "public-federal",
+        "typeLabel": "Federal + Privado · Co-financiamento",
+        "description": "A EMBRAPII conecta ICTs a empresas para projetos de co-financiamento. Empresas de agtech, cooperativas agroindustriais e associações de produtores podem co-financiar a escala em troca de acesso à AgroAPI e ao corpus. O mercado brasileiro de agtech — R$2,5bi em 2025 — tem players interessados em dados agrícolas soberanos.",
+        "fit": "Exige parceiro privado, mas o mercado de agtech no Brasil é expressivo e o corpus é único.",
+        "fitLevel": "medium",
+        "color": "#64748b"
+      },
+      {
+        "id": "f7",
+        "name": "EMATERs Estaduais — Co-financiamento Operacional",
+        "funder": "Empresas de Assistência Técnica e Extensão Rural Estaduais",
+        "type": "operational",
+        "typeLabel": "Operacional · Sustentabilidade recorrente",
+        "description": "Após a absorção operacional (MoU previsto para o mês 32), as EMATERs estaduais podem co-financiar os custos operacionais do servidor de escala em troca de integração exclusiva com seus sistemas de ATER. 3 EMATERs × R$200k/ano cobre o custo operacional anual de um servidor de escala nacional.",
+        "fit": "Não financia o hardware, mas sustenta o custo operacional recorrente — tornando o sistema autossustentável.",
+        "fitLevel": "medium",
+        "color": "#4caf7a"
+      }
+    ],
+    "serverTransition": {
+      "title": "O Servidor Original — De Prova a Patrimônio",
+      "body": "O hardware adquirido com o financiamento FINEP (2× H100 80GB PCIe, 64-core CPU, 256GB RAM, 10TB NVMe RAID) permanece operacional durante toda a fase de escala — zero interrupção de serviço para os agricultores ativos. Quando o servidor de escala nacional assumir a carga de produção, o hardware é transferido formalmente para a [ICT EXECUTORA] como infraestrutura permanente de pesquisa. A transferência patrimonial está prevista no Marco Legal de CT&I (Lei 10.973/2004, Art. 14-A) e regulamentada pelo Decreto 9.283/2018.",
+      "steps": [
+        "Mês 36: Hardware está 100% pago, operacional e documentado. Titularidade já é da [ICT EXECUTORA] pelo convênio FINEP.",
+        "Mês 37+: Servidor continua atendendo usuários existentes durante a busca por financiamento de escala.",
+        "Mês X (quando escala financiada): Carga de produção migra para servidor nacional. Hardware original liberado para pesquisa.",
+        "Pós-migração: NIT/Agência de Inovação da [ICT EXECUTORA] define política de uso compartilhado entre grupos de pesquisa.",
+        "Legado: 2× H100 80GB disponíveis para qualquer grupo de pesquisa da universidade — visão computacional, bioinformática, NLP, robótica."
+      ]
+    }
   }
 }

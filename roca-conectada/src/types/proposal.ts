@@ -518,6 +518,42 @@ export interface CharlesData {
   isPlaceholder?: boolean
 }
 
+export interface ScalePhase {
+  id: string
+  period: string
+  icon: string
+  title: string
+  description: string
+  milestones: string[]
+}
+
+export interface FundingPath {
+  id: string
+  name: string
+  funder: string
+  type: 'public-federal' | 'public-state' | 'international' | 'operational'
+  typeLabel: string
+  description: string
+  fit: string
+  fitLevel: 'high' | 'medium'
+  amount?: string
+  color: string
+}
+
+export interface ServerTransition {
+  title: string
+  body: string
+  steps: string[]
+}
+
+export interface S12Data extends SectionMeta {
+  visionStatement: string
+  visionSub: string
+  phases: ScalePhase[]
+  fundingPaths: FundingPath[]
+  serverTransition: ServerTransition
+}
+
 export interface ProposalData {
   meta: {
     projectName: string
@@ -550,5 +586,6 @@ export interface ProposalData {
   s9: S9Data
   s10: S10Data
   s11: S11Data
+  s12: S12Data
   charles?: CharlesData
 }
