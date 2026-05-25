@@ -187,5 +187,12 @@
     "date": "2026-05-25",
     "label": "fix(s5): heroSubtext final — LLM curriculum leads,",
     "description": "fix(s5): heroSubtext final — LLM curriculum leads, DDPED como virada"
+  },
+  {
+    "id": "v28",
+    "commit": "9c15ea8",
+    "date": "2026-05-25",
+    "label": "fix(s5): highlights Charles — H100/A100 e 7B+ subs",
+    "description": "fix(s5): highlights Charles — H100/A100 e 7B+ substituem metricas sem contexto"
   }
 ]
