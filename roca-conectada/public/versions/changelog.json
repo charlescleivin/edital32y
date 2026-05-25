@@ -166,5 +166,12 @@
     "date": "2026-05-25",
     "label": "fix(s5): heroHeadline final — Inventor. Cientista.",
     "description": "fix(s5): heroHeadline final — Inventor. Cientista. Engenheiro de LLMs."
+  },
+  {
+    "id": "v25",
+    "commit": "8892dce",
+    "date": "2026-05-25",
+    "label": "fix(s5): heroHeadline — Especialista em LLMs (evit",
+    "description": "fix(s5): heroHeadline — Especialista em LLMs (evita implicacao de titulo regulado)"
   }
 ]
