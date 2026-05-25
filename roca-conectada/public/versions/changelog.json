@@ -236,5 +236,12 @@
     "date": "2026-05-25",
     "label": "fix(s14): remove fabricated R$ 200/mes value from ",
     "description": "fix(s14): remove fabricated R$ 200/mes value from startup scenario"
+  },
+  {
+    "id": "v35",
+    "commit": "6e4ab80",
+    "date": "2026-05-25",
+    "label": "fix(s14): hide base model name from license table ",
+    "description": "fix(s14): hide base model name from license table — keep as generic fine-tuned LLM"
   }
 ]
