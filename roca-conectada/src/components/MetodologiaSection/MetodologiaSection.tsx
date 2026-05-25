@@ -111,6 +111,50 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         </div>
       </div>
 
+      {/* deliverables per phase */}
+      {phases.some(p => p.deliverables?.length) && (
+        <div className="mb-10 overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+          <div className="border-b px-6 py-4" style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.03)' }}>
+            <div className="text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+              📋 Marcos de Entrega — Artefatos Verificáveis por Fase (FINEP)
+            </div>
+            <p className="mt-1 text-[12px]" style={{ color: 'var(--txtll)' }}>
+              Cada parcela exige prestação de contas com evidência técnica verificável independentemente. Estes são os artefatos que documentam a entrega da THATPIX em cada marco anual.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 divide-x" style={{ borderColor: 'var(--bdr)' }}>
+            {phases.map((phase, i) => {
+              const acc = phaseAccent[i] ?? phaseAccent[0]
+              return (
+                <div key={phase.id} className="p-5">
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="text-[15px]">{phase.icon}</span>
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-[1.5px]" style={{ color: acc.text }}>{phase.label}</div>
+                      <div className="text-[11px] font-semibold" style={{ color: 'var(--txt)' }}>{phase.period}</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {phase.deliverables?.map((d, j) => {
+                      const [title, ...rest] = d.split(' — ')
+                      return (
+                        <div key={j} className="flex items-start gap-2">
+                          <span className="mt-[3px] shrink-0 text-[10px]" style={{ color: acc.text }}>✓</span>
+                          <p className="text-[11.5px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>
+                            <span className="font-semibold" style={{ color: 'var(--txt)' }}>{title}</span>
+                            {rest.length > 0 && <span> — {rest.join(' — ')}</span>}
+                          </p>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+
       {/* scope distinction */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
         ⚖️ Distinção de Escopos — Regra Fundamental

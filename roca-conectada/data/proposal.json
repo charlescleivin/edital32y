@@ -863,6 +863,14 @@
           "MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.",
           "1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.",
           "Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto."
+        ],
+        "deliverables": [
+          "Corpus AgroLinguaBR v1.0 — 25.000 pares Q&A publicados com DOI no Zenodo (URL verificável)",
+          "Agro-BERT v1.0 — benchmark AgroEval documentado (BLEU/F1 contra baseline GPT-4o)",
+          "Repositório GitHub [ICT EXECUTORA] — código completo, testes, Docker, README",
+          "Servidor de inferência operacional — uptime report meses 10–12, latência P95 <3s",
+          "WhatsApp Business API integrada — staging funcional com logs de teste",
+          "1 artigo científico submetido — metodologia PAP + arquitetura AgroEval"
         ]
       },
       {
@@ -878,6 +886,14 @@
           "AgroAPI beta: integração com 2 EMATERs estaduais parceiras. Primeiro teste de interoperabilidade institucional — prova que a infraestrutura é reutilizável.",
           "Capacitação de 120 multiplicadores EMATER: eles usam o produto em condições reais antes de ensiná-lo. A sustentabilidade pós-projeto depende deles, não da equipe do projeto.",
           "2 artigos científicos submetidos com dados do grupo controle. Resultados públicos antes do término do projeto — a comunidade científica pode auditar antes de encerrar."
+        ],
+        "deliverables": [
+          "AgroAssistente em produção — dashboard MAU com ≥800 usuários ativos, logs de 3 meses",
+          "Agro-BERT v2.0 — relatório de re-treinamento, benchmark comparativo v1.0 vs. v2.0",
+          "Relatório de integridade LGPD — auditoria do pipeline, assinada por responsável jurídico",
+          "Coopera Digital v1.0 — 6 cooperativas ativas com relatório de adoção documentado",
+          "Relatório de integração AgroAPI (2 EMATERs) — logs e relatório técnico",
+          "2 artigos científicos submetidos com dados do grupo controle randomizado"
         ]
       },
       {
@@ -892,6 +908,14 @@
           "AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX. A infraestrutura é aberta porque soberania que precisa de um único guardião não é soberania.",
           "MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP. Não prometemos que alguém vai absorver — apresentamos o acordo assinado.",
           "Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou — assets, dados, capacidade instalada, resultados de campo."
+        ],
+        "deliverables": [
+          "Transferência de titularidade — ata assinada transferindo todos os ativos digitais para [ICT EXECUTORA]",
+          "Agro-BERT v3.0 + AgroLinguaBR v2.0 — publicados, DOI confirmado, licença MIT/Apache 2.0 verificável",
+          "AgroAPI pública — documentação OpenAPI/Swagger, endpoint em produção verificável",
+          "MoU assinado com EMBRAPA + 3 EMATERs estaduais — cópia em anexo ao Relatório Final",
+          "Relatório Final FINEP — formato conforme Manual de Convênios, com prestação de contas completa",
+          "5+ artigos submetidos (acumulado) — lista com números de submissão e periódicos"
         ]
       }
     ],

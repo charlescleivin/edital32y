@@ -180,6 +180,7 @@ export interface Phase {
   name: string
   period: string
   activities: string[]
+  deliverables?: string[]
 }
 
 export interface ScopeRole {
