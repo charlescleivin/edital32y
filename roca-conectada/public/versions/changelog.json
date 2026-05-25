@@ -131,5 +131,12 @@
     "date": "2026-05-25",
     "label": "fix(s12): reordena para antes das referências, adi",
     "description": "fix(s12): reordena para antes das referências, adiciona papel THATPIX e corrige fact-check"
+  },
+  {
+    "id": "v20",
+    "commit": "fd54fcc",
+    "date": "2026-05-25",
+    "label": "feat(s4): marcos de entrega verificáveis por fase ",
+    "description": "feat(s4): marcos de entrega verificáveis por fase na metodologia"
   }
 ]
