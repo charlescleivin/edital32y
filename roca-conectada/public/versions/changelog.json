@@ -264,5 +264,12 @@
     "date": "2026-05-25",
     "label": "fix: apply audit findings — license consistency an",
     "description": "fix: apply audit findings — license consistency and Agro-BERT naming"
+  },
+  {
+    "id": "v39",
+    "commit": "cdc2fa5",
+    "date": "2026-05-25",
+    "label": "fix(s12): clarify AgroAPI service vs source-code l",
+    "description": "fix(s12): clarify AgroAPI service vs source-code license in thatpixCallout"
   }
 ]
