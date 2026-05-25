@@ -152,5 +152,12 @@
     "date": "2026-05-25",
     "label": "fix(s5): reescreve perfil Charles com foco no Roça",
     "description": "fix(s5): reescreve perfil Charles com foco no Roça Conectada, não CV genérico"
+  },
+  {
+    "id": "v23",
+    "commit": "7de8013",
+    "date": "2026-05-25",
+    "label": "fix(s5): remove Manual do Mundo, em producao; hero",
+    "description": "fix(s5): remove Manual do Mundo, em producao; heroHeadline vende Charles como pessoa-chave"
   }
 ]
