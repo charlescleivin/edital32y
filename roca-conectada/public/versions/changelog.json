@@ -201,5 +201,12 @@
     "date": "2026-05-25",
     "label": "feat(s13): ModalidadesSection — IA de Visão e Áudi",
     "description": "feat(s13): ModalidadesSection — IA de Visão e Áudio como potencial pós-projeto"
+  },
+  {
+    "id": "v30",
+    "commit": "a4d6906",
+    "date": "2026-05-25",
+    "label": "fix(s13): remove useCases fabricados do card Visio",
+    "description": "fix(s13): remove useCases fabricados do card Vision AI"
   }
 ]
