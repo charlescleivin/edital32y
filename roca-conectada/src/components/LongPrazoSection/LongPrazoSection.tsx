@@ -18,7 +18,7 @@ const typeTextColors: Record<string, string> = {
 
 export default function LongPrazoSection({
   number, title, subtitle, headline, heroImage, heroCaption, heroObjectPosition,
-  visionStatement, visionSub, phases, fundingPaths, serverTransition,
+  visionStatement, visionSub, phases, thatpixCallout, fundingPaths, serverTransition,
 }: LongPrazoSectionProps) {
   return (
     <section id="s12" className="relative overflow-hidden px-16 py-20" style={{ background: 'var(--bg)' }}>
@@ -95,6 +95,34 @@ export default function LongPrazoSection({
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* THATPIX callout */}
+      <div className="mb-14 overflow-hidden rounded-3xl border p-8"
+        style={{ borderColor: 'rgba(8,145,178,0.3)', background: 'rgba(8,145,178,0.05)' }}>
+        <div className="mb-2 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
+          🏢 THATPIX — Capital Técnico Insubstituível
+        </div>
+        <div className="mb-3 text-[17px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+          {thatpixCallout.title}
+        </div>
+        <p className="mb-6 text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{thatpixCallout.body}</p>
+        <div className="flex flex-col gap-3">
+          {thatpixCallout.points.map((point, i) => {
+            const [label, ...rest] = point.split(':')
+            return (
+              <div key={i} className="flex items-start gap-3 rounded-xl border p-4"
+                style={{ borderColor: 'rgba(8,145,178,0.2)', background: 'rgba(8,145,178,0.04)' }}>
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+                  style={{ background: 'rgba(8,145,178,0.15)', color: 'var(--p)' }}>{i + 1}</span>
+                <p className="text-[12.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
+                  <span className="font-bold" style={{ color: 'var(--txt)' }}>{label}:</span>
+                  {rest.join(':')}
+                </p>
+              </div>
+            )
+          })}
         </div>
       </div>
 

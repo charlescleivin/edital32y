@@ -80,18 +80,18 @@
         "num": "9"
       },
       {
+        "id": "s12",
+        "label": "Visão de Longo Prazo",
+        "num": "10"
+      },
+      {
         "id": "s10",
         "label": "Checklist",
-        "num": "10"
+        "num": "11"
       },
       {
         "id": "s11",
         "label": "Referências",
-        "num": "11"
-      },
-      {
-        "id": "s12",
-        "label": "Visão de Longo Prazo",
         "num": "12"
       }
     ]
@@ -2328,7 +2328,7 @@
     ]
   },
   "s10": {
-    "number": "Seção 10",
+    "number": "Seção 11",
     "title": "Checklist de Submissão",
     "heroImage": "/hero10.png",
     "subtitle": "Lista completa de documentos · Clique para marcar como concluído",
@@ -2708,7 +2708,7 @@
     ]
   },
   "s11": {
-    "number": "Seção 11",
+    "number": "Seção 12",
     "title": "Referências Bibliográficas",
     "heroImage": "/hero11.png",
     "heroObjectPosition": "center 60%",
@@ -3043,7 +3043,7 @@
     ]
   },
   "s12": {
-    "number": "Seção 12",
+    "number": "Seção 10",
     "title": "Visão de Longo Prazo",
     "subtitle": "O servidor de R$600k não é o destino — é a prova. O que vem depois do mês 37 já está planejado.",
     "headline": "A infraestrutura soberana de IA agrícola brasileira começa aqui. Não termina.",
@@ -3051,6 +3051,15 @@
     "heroObjectPosition": "center 40%",
     "visionStatement": "Ao final dos 36 meses, o Brasil terá algo que hoje não existe: um servidor de inferência soberano, um corpus agrícola público com DOI, um modelo fine-tuned titulado em ICT pública, e 2.500 agricultores reais usando IA em português no campo. Esses não são produtos — são a prova. A prova de que a infraestrutura funciona. A prova que abre a próxima rodada.",
     "visionSub": "O plano pós-projeto tem três movimentos: escalar a infraestrutura com novos financiamentos, transferir o servidor original para a universidade como patrimônio de pesquisa, e usar os resultados reais como argumento irrefutável para a rodada seguinte.",
+    "thatpixCallout": {
+      "title": "O Papel da THATPIX no Longo Prazo",
+      "body": "A THATPIX não é uma fornecedora intercambiável — é a detentora do capital técnico acumulado durante 36 meses de construção. Ao final do projeto, nenhuma outra empresa no Brasil terá o mesmo domínio sobre o AgroLinguaBR, a arquitetura de inferência soberana e os pipelines de fine-tuning do Agro-BERT. Esse conhecimento não se contrata novamente do zero — ele é transferido ou continuado. Há três caminhos naturais para a THATPIX na rodada de escala:",
+      "points": [
+        "Parceira técnica do servidor nacional: quando o financiamento de escala for aprovado (SoberanIA, BNDES Funtec ou IDB), a THATPIX é a candidata natural para o contrato de engenharia da fase seguinte — com vantagem de conhecer a arquitetura de dentro.",
+        "Migração e continuidade operacional: a transição do servidor atual para a infraestrutura de escala exige quem conhece o sistema em produção. A THATPIX opera o servidor R$600k desde o mês 1 — é quem faz a migração com zero risco de perda de dados ou interrupção de serviço.",
+        "Co-fundadora de spin-off ou produto: o corpus AgroLinguaBR (licença MIT) e a AgroAPI (Apache 2.0) são ativos públicos — mas a expertise de operá-los em escala é proprietária. Uma parceria entre [ICT EXECUTORA] e THATPIX para oferecer o sistema como serviço a EMATERs estaduais é um modelo de negócio legítimo dentro do Marco Legal de CT&I (Art. 14-A, Lei 10.973/2004)."
+      ]
+    },
     "phases": [
       {
         "id": "ph0",
@@ -3116,7 +3125,7 @@
         "funder": "Ministério da Ciência, Tecnologia e Inovações",
         "type": "public-federal",
         "typeLabel": "Federal · Alta prioridade",
-        "description": "O programa SoberanIA — lançado em maio de 2026 com R$40M para construir LLMs nacionais — tem alinhamento direto com o Roça Conectada. O corpus AgroLinguaBR e o modelo fine-tuned são exatamente os ativos que o SoberanIA quer produzir. A proposta de escala pode ser apresentada como a fase agrícola do programa nacional.",
+        "description": "O programa SoberanIA — lançado em maio de 2026 pelo MCTI para construir LLMs nacionais em português para o setor público — tem alinhamento direto com o Roça Conectada. O corpus AgroLinguaBR e o modelo fine-tuned são exatamente os ativos que o SoberanIA quer produzir. A proposta de escala pode ser apresentada como a fase agrícola do programa nacional.",
         "fit": "O Roça Conectada já entrega o que o SoberanIA quer: soberania, português, uso público, ICT pública como titular.",
         "fitLevel": "high",
         "color": "#1a5c38"
@@ -3138,10 +3147,10 @@
         "funder": "Banco Nacional de Desenvolvimento Econômico e Social",
         "type": "public-federal",
         "typeLabel": "Federal · Infraestrutura P&D",
-        "description": "O Fundo Tecnológico do BNDES financia infraestrutura de P&D de uso público, com valores de até R$30M por projeto. Um servidor de inferência nacional — operado por ICT pública, AgroAPI aberta, titularidade brasileira — é exatamente o tipo de ativo que o Funtec existe para financiar.",
+        "description": "O Fundo Tecnológico do BNDES financia infraestrutura de P&D de uso público não-reembolsável, cobrindo até 90% dos custos do projeto. Um servidor de inferência nacional — operado por ICT pública, AgroAPI aberta, titularidade brasileira — é exatamente o tipo de ativo que o Funtec existe para financiar.",
         "fit": "Infraestrutura pública de IA, não produto comercial. Titularidade ICT = sem risco de captura privada.",
         "fitLevel": "high",
-        "amount": "até R$ 30M por projeto",
+        "amount": "até 90% dos custos · não-reembolsável",
         "color": "#f59e0b"
       },
       {
@@ -3183,8 +3192,8 @@
         "funder": "Empresas de Assistência Técnica e Extensão Rural Estaduais",
         "type": "operational",
         "typeLabel": "Operacional · Sustentabilidade recorrente",
-        "description": "Após a absorção operacional (MoU previsto para o mês 32), as EMATERs estaduais podem co-financiar os custos operacionais do servidor de escala em troca de integração exclusiva com seus sistemas de ATER. 3 EMATERs × R$200k/ano cobre o custo operacional anual de um servidor de escala nacional.",
-        "fit": "Não financia o hardware, mas sustenta o custo operacional recorrente — tornando o sistema autossustentável.",
+        "description": "Após a absorção operacional (MoU previsto para o mês 32), as EMATERs estaduais podem co-financiar os custos operacionais do servidor de escala em troca de integração com seus sistemas de ATER e acesso prioritário à AgroAPI. O valor por EMATER depende de negociação direta com cada secretaria estadual — os orçamentos de TI das EMATERs variam amplamente e não são públicos. O argumento de venda é direto: o sistema resolve um problema que as EMATERs já têm, a custo marginal zero de desenvolvimento.",
+        "fit": "Não financia o hardware, mas pode sustentar o custo operacional recorrente. O valor exato depende de negociação estadual.",
         "fitLevel": "medium",
         "color": "#4caf7a"
       }

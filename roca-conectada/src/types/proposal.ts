@@ -546,10 +546,17 @@ export interface ServerTransition {
   steps: string[]
 }
 
+export interface ThatpixCallout {
+  title: string
+  body: string
+  points: string[]
+}
+
 export interface S12Data extends SectionMeta {
   visionStatement: string
   visionSub: string
   phases: ScalePhase[]
+  thatpixCallout: ThatpixCallout
   fundingPaths: FundingPath[]
   serverTransition: ServerTransition
 }

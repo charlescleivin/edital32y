@@ -108,6 +108,13 @@ export default function Home() {
             </DiffSection>
           </Reveal>
           <Reveal>
+            <DiffSection sectionKey="s12">
+              <section id="s12" className="scroll-mt-4">
+                <LongPrazoSection {...s12} />
+              </section>
+            </DiffSection>
+          </Reveal>
+          <Reveal>
             <DiffSection sectionKey="s10">
               <section id="s10" className="scroll-mt-4">
                 <ChecklistSection {...s10} />
@@ -118,13 +125,6 @@ export default function Home() {
             <DiffSection sectionKey="s11">
               <section id="s11" className="scroll-mt-4">
                 <ReferencesSection {...s11} />
-              </section>
-            </DiffSection>
-          </Reveal>
-          <Reveal>
-            <DiffSection sectionKey="s12">
-              <section id="s12" className="scroll-mt-4">
-                <LongPrazoSection {...s12} />
               </section>
             </DiffSection>
           </Reveal>
