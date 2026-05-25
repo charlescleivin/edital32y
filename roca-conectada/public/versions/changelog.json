@@ -271,5 +271,12 @@
     "date": "2026-05-25",
     "label": "fix(s12): clarify AgroAPI service vs source-code l",
     "description": "fix(s12): clarify AgroAPI service vs source-code license in thatpixCallout"
+  },
+  {
+    "id": "v40",
+    "commit": "03e4203",
+    "date": "2026-05-25",
+    "label": "feat(s2): replace placeholder images with Unsplash",
+    "description": "feat(s2): replace placeholder images with Unsplash photos for hero and all 5 barriers"
   }
 ]
