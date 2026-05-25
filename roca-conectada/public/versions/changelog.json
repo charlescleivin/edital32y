@@ -117,5 +117,12 @@
     "date": "2026-05-25",
     "label": "feat: adiciona Fernanda/Tombô, revisa orçamento e ",
     "description": "feat: adiciona Fernanda/Tombô, revisa orçamento e corrige inconsistências"
+  },
+  {
+    "id": "v18",
+    "commit": "fc4fd3a",
+    "date": "2026-05-25",
+    "label": "feat(s12): seção de visão de longo prazo — escala ",
+    "description": "feat(s12): seção de visão de longo prazo — escala pós-projeto e legado do servidor"
   }
 ]
