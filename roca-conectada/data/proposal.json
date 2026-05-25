@@ -1448,12 +1448,12 @@
         "bio": "Fundador da THATPIX e co-pesquisador deste projeto. O Roça Conectada é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo — e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica — alta tecnologia funcional sob severas restrições de custo e acessibilidade — é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R00 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. As decisões que determinarão o impacto científico do projeto — arquitetura de soberania, design do AgroLinguaBR, alinhamento ético-cultural, escolha de modelos — exigem o julgamento de quem concebeu o problema. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
         "highlights": [
           {
-            "value": "27%",
-            "label": "Redução de loss em fine-tuning PT-BR — Qwen2.5-7B em corpus especializado em português"
+            "value": "H100 / A100",
+            "label": "Infraestruturas GPU operadas para fine-tuning e inferência — mesmo hardware do servidor soberano"
           },
           {
-            "value": "/ciclo",
-            "label": "Custo de fine-tuning em corpus especializado — viabilidade do AgroLinguaBR demonstrada"
+            "value": "7B+",
+            "label": "Parâmetros em modelos ajustados com LoRA e PEFT em português"
           },
           {
             "value": "95%+",
