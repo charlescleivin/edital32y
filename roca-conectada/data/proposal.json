@@ -228,8 +228,8 @@
   "s2": {
     "number": "Seção 2",
     "title": "Problema e Justificativa",
-    "heroImage": "/bg4.jpg",
-    "heroObjectPosition": "65% 30%",
+    "heroImage": "/s2-hero.jpg",
+    "heroObjectPosition": "50% 40%",
     "subtitle": "Cinco falhas estruturais que o mercado não resolve, que a política ainda não endereçou, e que este projeto foi construído para eliminar",
     "headline": "Não é falta de tecnologia. É falta de soberania.",
     "stats": [
@@ -263,8 +263,8 @@
           "label": "cobertura de ATER no Nordeste — um agricultor do Sertão tem 6× menos chance de receber orientação técnica que um agricultor do Sul (IBGE Censo Agropecuário 2017)"
         },
         "description": "O IBGE Censo Agropecuário 2017 documenta que apenas 18,2% dos estabelecimentos familiares brasileiros tiveram acesso a assistência técnica. No Nordeste, essa taxa cai para 7,4% — contra 48,6% no Sul. O orçamento da ANATER foi reduzido a R$ 10 milhões durante o governo anterior (frente aos R$ 400 milhões+ necessários para operação plena); décadas de destruição institucional não se revertem por contratação marginal.\n\nA consequência econômica foi quantificada por Rocha Junior et al. (RESR 2020, DOI: 10.1590/1806-9479.2020.194371) com Propensity Score Matching sobre dados da PNAD: famílias com ATER auferem R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural não realizada. O PAA colapsou de 184.000 fornecedores em 2012 para 39.000 em 2019 — queda de 79% — em grande parte porque a documentação exigida requer a mesma assistência técnica que escasseia.\n\nO Roça Conectada é a resposta de escala: o AgroAssistente opera via WhatsApp — o canal com maior adoção documentada entre a população-alvo (96,7% de domicílios rurais com celular, IBGE PNAD 2023) e a arquitetura mais compatível com conectividade intermitente —, multiplicando o alcance efetivo da ATER sem depender de contratação de pessoal. Esta não é uma tecnologia procurando um problema. É um problema que esperou cinquenta anos pela tecnologia certa.",
-        "image": "/bg4.jpg",
-        "imageObjectPosition": "60% 30%"
+        "image": "/barrier1-ater.jpg",
+        "imageObjectPosition": "50% 30%"
       },
       {
         "icon": "🏗️",
@@ -274,8 +274,8 @@
           "label": "de aviso da OpenAI para descontinuar o GPT-4o em janeiro de 2026, após prometer 'aviso amplo' — ilustrando o padrão de ruptura unilateral (The Register, 2026)"
         },
         "description": "A solução tecnicamente óbvia para o déficit de ATER seria redirecionar agricultores para LLMs comerciais. O histórico recente documenta por que essa abordagem constitui uma vulnerabilidade estratégica, não uma solução. Em março de 2023, a Itália bloqueou o ChatGPT em menos de 24 horas — 60 milhões de pessoas perderam acesso sem aviso. Em novembro de 2023, a diretoria da OpenAI demitiu o CEO sem aviso; por cinco dias, toda aplicação GPT-4 no mundo rodou sobre uma empresa em colapso de governança. Em julho de 2024, a OpenAI bloqueou países como China, Rússia e Irã por critérios unilaterais e discricionários.\n\nEm dezembro de 2025, a GROQ — provedora de inferência com 2 milhões de desenvolvedores — foi adquirida pela Nvidia sem consulta. Em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer \"aviso amplo\" (The Register). O Brasil é o segundo maior mercado de desenvolvedores ativos na API da OpenAI — o país do Sul Global mais exposto a um ponto único de falha que não controla (Softex, 2025).\n\nA questão não é se isso acontecerá com alguma plataforma que suporta a extensão rural de 3,9 milhões de famílias. É quando — e se o Brasil terá infraestrutura própria quando acontecer. O Roça Conectada elimina esse risco pela raiz: infraestrutura soberana nacional, sem dependência de fornecedor estrangeiro.",
-        "image": "/bg5.jpg",
-        "imageObjectPosition": "center 50%"
+        "image": "/barrier2-platform.jpg",
+        "imageObjectPosition": "50% 50%"
       },
       {
         "icon": "🧠",
@@ -285,8 +285,8 @@
           "label": "acurácia de LLMs genéricos em benchmarks agrícolas especializados (AgriEval 2025) — com degradação adicional em idiomas de baixo recurso como o português regional"
         },
         "description": "Um estudo publicado no arXiv em 2024 avaliou o desempenho do GPT-4 em manejo de pragas agrícolas: 72% de precisão. Na agricultura familiar, 28% de erro significa a diferença entre recomendação correta de período de carência e um lote reprovado pela vigilância sanitária. LLMs genéricos atingem menos de 60% de acurácia em benchmarks agrícolas especializados (AgriEval 2025), com degradação adicional em português regional.\n\nO problema não é apenas estatístico — é linguístico. Um agricultor do Nordeste chama a ferrugem asiática da soja de \"ferrugem\", o gorgulho do milho de \"caruncho\", os pulgões de \"piolho da planta\". Modelos treinados em português formal ou inglês alucinam com terminologia americana ou europeia aplicada ao Cerrado e à Caatinga. Nenhum corpus público existente combina especificidade agronômica técnica, cobertura regional do campo brasileiro e volume suficiente para fine-tuning eficaz — lacuna confirmada por busca sistemática em ArXiv, Zenodo, Hugging Face e SciELO em maio de 2026.\n\nO AgroLinguaBR — 25.000 pares técnicos curados de fontes EMBRAPA, MAPA e extensionistas de campo — preenche exatamente esse vácuo. A validação segue o protocolo AgroEval: precisão factual verificada contra base técnica EMBRAPA, taxa de alucinação detectada por bioma — antes que qualquer recomendação chegue ao campo.",
-        "image": "/bg3.jpg",
-        "imageObjectPosition": "35% 55%"
+        "image": "/barrier3-language.jpg",
+        "imageObjectPosition": "50% 30%"
       },
       {
         "icon": "⚖️",
@@ -296,8 +296,8 @@
           "label": "desde quando a Resolução ANPD 19/2024 tornou ilegais transferências internacionais de dados sem mecanismos de conformidade com a LGPD"
         },
         "description": "A Lei 13.709/2018 (LGPD) é citada na base legal desta chamada (item 17.1). Desde agosto de 2025, a Resolução ANPD 19/2024 exige que transferências internacionais de dados demonstrem mecanismos específicos de conformidade. Quando um agricultor envia uma consulta via WhatsApp processada por API nos EUA, os dados ficam sujeitos ao CLOUD Act norte-americano — autoridades americanas podem solicitar acesso sem notificar o titular ou o governo brasileiro. A OpenAI e a Google Cloud não estão obrigadas a observar a LGPD em suas operações de processamento.\n\nIsso significa que qualquer sistema de ATER digital baseado em API estrangeira está, desde agosto de 2025, em não-conformidade ativa com a legislação que esta própria chamada cita como fundamento legal. Não é risco futuro — é violação presente.\n\nO Roça Conectada resolve isso pela arquitetura: o LLM roda em infraestrutura pública nacional (Nuvem de Governo — Serpro ou Dataprev), os dados não saem do Brasil, e a operação é auditável por autoridades brasileiras. Essa conformidade LGPD não é vantagem competitiva — é requisito legal que o projeto já atende e que qualquer concorrente baseado em API estrangeira não pode atender sem reescrever sua arquitetura inteira.",
-        "image": "/bg1.jpg",
-        "imageObjectPosition": "center 42%"
+        "image": "/barrier4-cloud.jpg",
+        "imageObjectPosition": "50% 50%"
       },
       {
         "icon": "🛡️",
@@ -307,8 +307,8 @@
           "label": "ações do PBIA 2024–2028 endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar — o perímetro de soberania digital nacional não inclui quem produz 70% dos alimentos do Brasil"
         },
         "description": "O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA, lançado em maio de 2026 no mesmo mês desta chamada, destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros focado em cidades, burocracia e serviços governamentais. O Brasil não classifica a agricultura como infraestrutura crítica no PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE. Das 54 ações do PBIA, zero endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar.\n\nEsses 3,9 milhões de estabelecimentos produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro de soberania digital sendo erguido agora. A situação das mulheres é a mais grave: 95% das 1,7 milhão de agricultoras que dirigem propriedades rurais no Nordeste não têm acesso a ATER (IBGE 2017).\n\nO Roça Conectada entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à [ICT EXECUTORA] com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe.",
-        "image": "/bg6.jpg",
-        "imageObjectPosition": "30% 40%"
+        "image": "/barrier5-food.jpg",
+        "imageObjectPosition": "50% 40%"
       }
     ],
     "aiEvidenceSection": {
