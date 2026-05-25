@@ -229,5 +229,12 @@
     "date": "2026-05-25",
     "label": "fix(s14): strengthen sovereignty argument with con",
     "description": "fix(s14): strengthen sovereignty argument with concrete competitors — Sinong, AgriLLM, Gates COP30, MCTI 88%"
+  },
+  {
+    "id": "v34",
+    "commit": "57e4e2b",
+    "date": "2026-05-25",
+    "label": "fix(s14): remove fabricated R$ 200/mes value from ",
+    "description": "fix(s14): remove fabricated R$ 200/mes value from startup scenario"
   }
 ]
