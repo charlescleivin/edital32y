@@ -612,6 +612,23 @@ export interface S13Data extends SectionMeta {
   architectureBridge: ModalidadesArchBridge
 }
 
+export interface LicenseScenario {
+  who: string
+  action: string
+  allowed: 'yes' | 'no' | 'negotiate'
+}
+
+export interface LicenseExplained {
+  mitTitle: string
+  mitSummary: string
+  mitRisk: string
+  ncSaTitle: string
+  ncSaTerms: Array<{ term: string; plain: string }>
+  ncSaSummary: string
+  scenarios: LicenseScenario[]
+  keyInsight: string
+}
+
 export interface SoberaniaLicenseRow {
   asset: string
   license: string
@@ -633,6 +650,7 @@ export interface SoberaniaAccessPhase {
 export interface S14Data extends SectionMeta {
   sovereigntyStatement: string
   sovereigntyRationale: string
+  licenseExplained: LicenseExplained
   licenseTitle: string
   licenseItems: SoberaniaLicenseRow[]
   accessTitle: string

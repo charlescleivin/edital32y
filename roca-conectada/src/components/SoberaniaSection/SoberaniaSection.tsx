@@ -1,4 +1,4 @@
-import type { S14Data, SoberaniaLicenseRow, SoberaniaAccessPhase } from '@/types/proposal'
+import type { S14Data, SoberaniaLicenseRow, SoberaniaAccessPhase, LicenseExplained } from '@/types/proposal'
 
 export const componentMeta = { slug: 'soberania-section', label: 'Soberania Digital' }
 
@@ -16,6 +16,118 @@ const phaseColors = [
   { border: 'rgba(212,150,14,0.3)',  bg: 'rgba(212,150,14,0.06)',  num: 'rgba(212,150,14,0.15)',  text: 'var(--gold)'  },
   { border: 'rgba(200,85,48,0.3)',   bg: 'rgba(200,85,48,0.06)',   num: 'rgba(200,85,48,0.15)',   text: 'var(--terra)' },
 ]
+
+const scenarioIcon: Record<string, string> = { yes: '✅', no: '🚫', negotiate: '🤝' }
+const scenarioColor: Record<string, { text: string; bg: string; border: string }> = {
+  yes:       { text: 'var(--sage)',  bg: 'rgba(111,168,118,0.07)', border: 'rgba(111,168,118,0.25)' },
+  no:        { text: 'var(--terra)', bg: 'rgba(200,85,48,0.07)',   border: 'rgba(200,85,48,0.25)'   },
+  negotiate: { text: 'var(--gold)',  bg: 'rgba(212,150,14,0.07)',  border: 'rgba(212,150,14,0.25)'  },
+}
+
+function LicenseExplainedBlock({ data }: { data: LicenseExplained }) {
+  return (
+    <div className="mb-14 flex flex-col gap-6">
+      {/* MIT vs CC comparison */}
+      <div className="grid grid-cols-2 gap-5">
+        {/* MIT column */}
+        <div className="flex flex-col rounded-2xl border overflow-hidden"
+          style={{ borderColor: 'rgba(200,85,48,0.3)', background: 'var(--bg-card)' }}>
+          <div className="px-6 py-4" style={{ background: 'rgba(200,85,48,0.08)', borderBottom: '1px solid rgba(200,85,48,0.2)' }}>
+            <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--terra)' }}>
+              O que seria com Licença MIT
+            </div>
+            <div className="text-[16px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+              {data.mitTitle}
+            </div>
+          </div>
+          <div className="flex flex-col gap-3 p-6">
+            <p className="text-[12.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
+              {data.mitSummary}
+            </p>
+            <div className="flex items-start gap-3 rounded-xl border p-4"
+              style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.06)' }}>
+              <span className="shrink-0 text-[18px]">⚠️</span>
+              <p className="text-[12px] font-semibold leading-[1.75]" style={{ color: 'var(--terra)' }}>
+                {data.mitRisk}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CC BY-NC-SA column */}
+        <div className="flex flex-col rounded-2xl border overflow-hidden"
+          style={{ borderColor: 'rgba(212,150,14,0.3)', background: 'var(--bg-card)' }}>
+          <div className="px-6 py-4" style={{ background: 'rgba(212,150,14,0.08)', borderBottom: '1px solid rgba(212,150,14,0.2)' }}>
+            <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
+              A opção escolhida — CC BY-NC-SA 4.0
+            </div>
+            <div className="text-[16px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+              {data.ncSaTitle}
+            </div>
+          </div>
+          <div className="flex flex-col gap-3 p-6">
+            {/* Term-by-term translation */}
+            <div className="flex flex-col gap-2">
+              {data.ncSaTerms.map((t, i) => (
+                <div key={i} className="flex items-start gap-3 rounded-lg border px-4 py-2.5"
+                  style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.05)' }}>
+                  <span className="mt-px shrink-0 rounded bg-[rgba(212,150,14,0.2)] px-1.5 py-0.5 text-[9px] font-bold tracking-wider"
+                    style={{ color: 'var(--gold)' }}>
+                    {t.term}
+                  </span>
+                  <span className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>
+                    {t.plain}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="text-[12px] italic leading-[1.75]" style={{ color: 'var(--txtll)' }}>
+              {data.ncSaSummary}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Scenario table */}
+      <div className="rounded-2xl border overflow-hidden" style={{ borderColor: 'var(--bdr-strong)' }}>
+        <div className="px-6 py-3 text-[9px] font-bold uppercase tracking-[2.5px]"
+          style={{ background: 'var(--bg-raised)', color: 'var(--txtll)', borderBottom: '1px solid var(--bdr)' }}>
+          Quem Pode Usar — Cenários Concretos
+        </div>
+        <div className="divide-y" style={{ borderColor: 'var(--bdr)' }}>
+          {data.scenarios.map((s, i) => {
+            const sc = scenarioColor[s.allowed]
+            return (
+              <div key={i} className="grid items-center gap-4 px-6 py-4"
+                style={{ gridTemplateColumns: '1fr 1.5fr auto' }}>
+                <div className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>
+                  {s.who}
+                </div>
+                <div className="text-[11.5px] leading-[1.6]" style={{ color: 'var(--txtl)' }}>
+                  {s.action}
+                </div>
+                <span className="flex items-center gap-1.5 rounded-full border px-3 py-1 text-[10px] font-bold whitespace-nowrap"
+                  style={{ borderColor: sc.border, background: sc.bg, color: sc.text }}>
+                  {scenarioIcon[s.allowed]}
+                  {s.allowed === 'yes' ? 'Livre' : s.allowed === 'no' ? 'Não permitido' : 'Negociação'}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Key insight */}
+      <div className="flex items-start gap-4 rounded-2xl border p-5"
+        style={{ borderColor: 'rgba(111,168,118,0.35)', background: 'rgba(111,168,118,0.07)' }}>
+        <span className="shrink-0 text-[22px]">💡</span>
+        <p className="text-[13px] font-semibold leading-[1.8]" style={{ color: 'var(--txt)' }}>
+          {data.keyInsight}
+        </p>
+      </div>
+    </div>
+  )
+}
 
 function LicenseRow({ row }: { row: SoberaniaLicenseRow }) {
   const col = licenseColor[row.colorVariant]
@@ -88,6 +200,7 @@ function PhaseCard({ phase, index }: { phase: SoberaniaAccessPhase; index: numbe
 export default function SoberaniaSection({
   number, title, subtitle, headline,
   sovereigntyStatement, sovereigntyRationale,
+  licenseExplained,
   licenseTitle, licenseItems,
   accessTitle, accessStatement, serverNote,
   accessPhases, expansionVision,
@@ -140,7 +253,17 @@ export default function SoberaniaSection({
         </p>
       </div>
 
-      {/* License table */}
+      {/* License explained — MIT vs CC BY-NC-SA with scenarios */}
+      <div className="mb-6 flex items-center gap-3">
+        <div className="h-px flex-1" style={{ background: 'var(--bdr)' }} />
+        <span className="text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
+          Comparativo de Licenças — O Que Cada Uma Significa na Prática
+        </span>
+        <div className="h-px flex-1" style={{ background: 'var(--bdr)' }} />
+      </div>
+      <LicenseExplainedBlock data={licenseExplained} />
+
+      {/* License table per asset */}
       <div className="mb-14">
         <div className="mb-6 flex items-center gap-3">
           <div className="h-px flex-1" style={{ background: 'var(--bdr)' }} />
@@ -158,10 +281,6 @@ export default function SoberaniaSection({
           <span className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full" style={{ background: 'var(--gold)' }} />
             Aberto não-comercial (CC BY-NC-SA 4.0)
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full" style={{ background: 'var(--terra)' }} />
-            Licença negociada para uso comercial
           </span>
         </div>
 

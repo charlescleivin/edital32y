@@ -12,6 +12,49 @@ export const fixture: S14Data = {
   sovereigntyRationale:
     'Uma licença MIT/Apache 2.0 irrestrita concederia a qualquer empresa — incluindo conglomerados estrangeiros com infraestrutura de bilhões de dólares — o direito de incorporar esses ativos em produtos comerciais sem contrapartida ao Brasil. O corpus AgroLinguaBR é irreplicável sem anos de trabalho de campo em comunidades rurais brasileiras: dialetos regionais, terminologia técnica de biomas específicos, contexto cultural e econômico da agricultura familiar. A opção CC BY-NC-SA 4.0 garante acesso irrestrito a pesquisadores, ICTs públicas, cooperativas e entidades do terceiro setor, enquanto exige negociação para uso comercial privado. Recursos construídos com financiamento público brasileiro servem prioritariamente ao interesse público brasileiro.',
 
+  licenseExplained: {
+    mitTitle: 'Permissão Total — Sem Restrição de Uso Comercial',
+    mitSummary:
+      'A licença MIT é a mais permissiva existente: qualquer pessoa, empresa ou governo pode baixar o corpus, modificar, incorporar em produto próprio e cobrar por ele — sem pedir autorização, sem pagar royalties, sem nenhuma obrigação além de manter uma linha de atribuição no código. É a licença do Linux, do React, do Node.js. Para código de infraestrutura genérico, faz todo sentido. Para um corpus de dados agrícolas construído com trabalho de campo financiado pelo Estado brasileiro, é uma cessão de ativo público sem contrapartida.',
+    mitRisk:
+      'Uma empresa americana ou europeia poderia baixar o AgroLinguaBR na segunda-feira, incorporar ao treinamento de um modelo proprietário bilionário na quarta, e lançar um serviço de consultoria agrícola no Brasil na sexta — sem dever nada ao Brasil, sem reconhecimento ao FINEP, sem compartilhar os benefícios com as cooperativas cujos agricultores geraram os dados.',
+
+    ncSaTitle: 'Aberto Para a Ciência, Protegido do Mercado Privado',
+    ncSaTerms: [
+      {
+        term: 'CC',
+        plain: 'Creative Commons — família de licenças abertas criada para equilibrar acesso público e proteção de direitos. Usada por Wikipedia, OpenStreetMap, MIT OpenCourseWare e milhões de obras científicas.',
+      },
+      {
+        term: 'BY',
+        plain: 'Attribution (Atribuição) — quem usar o material deve creditar a fonte: "AgroLinguaBR, produzido no projeto Roça Conectada com financiamento FINEP AgriFam-ICT 2026". O Brasil fica visível no ecossistema global de IA agrícola.',
+      },
+      {
+        term: 'NC',
+        plain: 'Non-Commercial (Não-Comercial) — o ativo não pode ser usado para gerar lucro direto por empresas privadas sem negociação. Pesquisadores, universidades, cooperativas, EMATER, ONGs e órgãos públicos: acesso irrestrito e gratuito. Empresa privada que quer incorporar em produto comercial: precisa de acordo.',
+      },
+      {
+        term: 'SA',
+        plain: 'Share-Alike (Compartilha-Igual) — se alguém construir sobre o AgroLinguaBR para fins não-comerciais e publicar um corpus derivado, esse derivado deve ter a mesma licença. As melhorias feitas pela comunidade científica ficam acessíveis à comunidade científica — não se tornam proprietárias.',
+      },
+    ],
+    ncSaSummary:
+      'Em resumo: todo o ecossistema público de extensão rural (EMATER, EMBRAPA, universidades, cooperativas, a própria FINEP) usa livremente. O que é bloqueado é a apropriação comercial privada por atores sem relação com a missão pública do projeto.',
+
+    scenarios: [
+      { who: 'Pesquisador da EMBRAPA', action: 'Baixa o corpus, treina novo modelo, publica artigo científico', allowed: 'yes' },
+      { who: 'EMATER-CE', action: 'Integra AgroAPI no sistema de atendimento dos técnicos estaduais', allowed: 'yes' },
+      { who: 'Universidade Federal', action: 'Usa AgroLinguaBR em dissertação de mestrado sobre NLP agrícola', allowed: 'yes' },
+      { who: 'Cooperativa de agricultores', action: 'Usa o AgroAssistente para orientar seus associados', allowed: 'yes' },
+      { who: 'Startup brasileira de agtech', action: 'Quer incorporar o corpus em assinatura paga de R$ 200/mês', allowed: 'negotiate' },
+      { who: 'Big Tech estrangeira (Google, OpenAI, Alibaba)', action: 'Incorpora AgroLinguaBR no treinamento de LLM proprietário e comercializa globalmente', allowed: 'no' },
+      { who: 'Multinacional do agronegócio', action: 'Usa o modelo fine-tuned em plataforma de venda de insumos com lucro direto', allowed: 'no' },
+    ],
+
+    keyInsight:
+      'A CC BY-NC-SA 4.0 é, paradoxalmente, MAIS generosa para o ecossistema público do que a MIT — porque garante que pesquisadores, cooperativas e o Estado brasileiro sempre terão acesso livre, enquanto impede que esse acesso seja privatizado por quem não participou da construção. É a diferença entre "aberto para todos" e "aberto para ser fechado por quem tiver mais infraestrutura".',
+  },
+
   licenseTitle: 'Arquitetura de Licenciamento por Ativo',
 
   licenseItems: [
