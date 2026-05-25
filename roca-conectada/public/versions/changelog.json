@@ -138,5 +138,12 @@
     "date": "2026-05-25",
     "label": "feat(s4): marcos de entrega verificáveis por fase ",
     "description": "feat(s4): marcos de entrega verificáveis por fase na metodologia"
+  },
+  {
+    "id": "v21",
+    "commit": "fd17231",
+    "date": "2026-05-25",
+    "label": "feat(s5): renderiza parágrafos de marketContext co",
+    "description": "feat(s5): renderiza parágrafos de marketContext como cards numerados com título"
   }
 ]
