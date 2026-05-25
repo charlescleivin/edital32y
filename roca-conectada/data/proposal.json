@@ -1445,23 +1445,23 @@
         "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
         "location": "Brasil",
         "email": "charlescleivin@gmail.com",
-        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica) — desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido no Ensino Médio no Colégio de Aplicação Emmanuel Leontsinis (RJ). 15+ premiações em ciência e tecnologia, incluindo cinco prêmios simultâneos na FEBRACE 2013 e Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países). Mais de 10 anos construindo sistemas de IA em produção: agentes inteligentes offline, pipelines de fine-tuning de LLMs e visão computacional aplicada ao agronegócio (estimativa de peso bovino em tempo real via vídeo, integrada ao WhatsApp). Especialização em arquiteturas de IA para ambientes com conectividade limitada — exatamente o cenário do pequeno produtor rural brasileiro que esta proposta atende.",
+        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. O Roça Conectada é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo — e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica — alta tecnologia funcional sob severas restrições de custo e acessibilidade — é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R00 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. Os componentes centrais do projeto já existem em produção: fine-tuning do Qwen2.5-7B em corpus em português (27% de redução de loss, /ciclo), sistema de estimativa de peso bovino via WhatsApp com 95%+ de precisão, e agentes LLM air-gapped sem dependência de nuvem. As decisões que determinarão o impacto científico do projeto — arquitetura de soberania, design do AgroLinguaBR, alinhamento ético-cultural, escolha de modelos — exigem o julgamento de quem concebeu o problema. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
         "highlights": [
           {
-            "value": "10+",
-            "label": "Anos construindo sistemas de IA em produção"
+            "value": "27%",
+            "label": "Redução de loss em fine-tuning PT-BR — Qwen2.5-7B · Manual do Mundo (20M+ inscritos)"
           },
           {
-            "value": "15+",
-            "label": "Medalhas e prêmios em competições científicas nacionais e internacionais"
+            "value": "/ciclo",
+            "label": "Custo de fine-tuning industrial em produção — viabilidade do AgroLinguaBR demonstrada"
           },
           {
             "value": "95%+",
-            "label": "Precisão em estimativa de peso bovino por visão computacional"
+            "label": "Precisão em estimativa de peso bovino por visão computacional — sistema próprio em uso real"
           },
           {
             "value": "1M+",
-            "label": "Imagens bovinas processadas por sistema de visão computacional próprio"
+            "label": "Imagens bovinas processadas — base de domínio para adaptação agropecuária do Agro-BERT"
           }
         ],
         "skills": [
@@ -1545,10 +1545,10 @@
           }
         ],
         "softSkills": [
-          "Colaboração distribuída de alta performance — experiência em times multidisciplinares e internacionais",
-          "Liderança técnica e planejamento arquitetural",
-          "Aprendizado acelerado — domina novas stacks e domínios com profundidade e rapidez",
-          "Entrega sistemas de IA em produção dentro do prazo e do orçamento"
+          "Autoria intelectual de sistemas de IA soberanos: concepção da arquitetura, do corpus e da abordagem de alinhamento do Roça Conectada",
+          "Padrão recorrente de alta tecnologia funcional sob restrições severas de custo — do DDPED (~R00) ao AgroAssistente (inference offline)",
+          "Comunicação técnica multilíngue: apresentações científicas em inglês para audiências internacionais (China, Abu Dhabi)",
+          "Entrega em produção: bovine weight via WhatsApp, Manual do Mundo LLM, agentes offline — sistemas reais, não protótipos"
         ],
         "videos": [
           {
@@ -1602,7 +1602,9 @@
             "context": "O ESI Mundi (Expo Science International), organizado pela MILSET, é um dos maiores eventos internacionais de ciência e engenharia do mundo, reunindo representantes de mais de 40 países perante banca técnica multilateral. A Medalha de Ouro na premiação geral atesta excelência científica em nível global."
           }
         ],
-        "profilePhoto": "/profile_pic.jpg"
+        "profilePhoto": "/profile_pic.jpg",
+        "heroHeadline": "Co-Pesquisador.\nAutor Intelectual\ndo Roça Conectada.",
+        "heroSubtext": "O projeto existe porque Charles identificou a lacuna — nenhum LLM soberano treinado em português agrícola existia para o campo — e já havia construído, em produção, os componentes que esta proposta pretende escalar: fine-tuning de LLMs em português, inferência agropecuária via WhatsApp, agentes offline para zonas de baixa conectividade."
       },
       {
         "name": "Marco Rogério",
