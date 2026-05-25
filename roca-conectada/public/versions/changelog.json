@@ -194,5 +194,12 @@
     "date": "2026-05-25",
     "label": "fix(s5): highlights Charles — H100/A100 e 7B+ subs",
     "description": "fix(s5): highlights Charles — H100/A100 e 7B+ substituem metricas sem contexto"
+  },
+  {
+    "id": "v29",
+    "commit": "bb1756d",
+    "date": "2026-05-25",
+    "label": "feat(s13): ModalidadesSection — IA de Visão e Áudi",
+    "description": "feat(s13): ModalidadesSection — IA de Visão e Áudio como potencial pós-projeto"
   }
 ]
