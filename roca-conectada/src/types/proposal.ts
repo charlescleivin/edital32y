@@ -256,10 +256,15 @@ export interface MarketContextRecommendation {
   body: string
 }
 
+export interface MarketContextParagraph {
+  title: string
+  body: string
+}
+
 export interface MarketContext {
   badge?: string
   title: string
-  paragraphs: string[]
+  paragraphs: MarketContextParagraph[]
   callouts?: MarketContextCallout[]
   recommendations?: MarketContextRecommendation[]
 }

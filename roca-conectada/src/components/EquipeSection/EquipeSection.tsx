@@ -1,6 +1,6 @@
 import SectionHero from '@/components/ui/SectionHero'
 import CharlesSection from '@/components/CharlesSection/CharlesSection'
-import type { S5Data, MarketContext, MarketContextRecommendation, AnnexTable, S5AnnexSection } from '@/types/proposal'
+import type { S5Data, MarketContext, MarketContextParagraph, MarketContextRecommendation, AnnexTable, S5AnnexSection } from '@/types/proposal'
 
 export const componentMeta = { slug: 'equipe-section', label: 'Equipe do Projeto' }
 
@@ -25,9 +25,23 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
         {ctx.title}
       </h3>
 
-      <div className="mb-9 space-y-5">
-        {ctx.paragraphs.map((p, i) => (
-          <p key={i} className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>{p}</p>
+      <div className="mb-9 flex flex-col gap-3">
+        {ctx.paragraphs.map((p: MarketContextParagraph, i: number) => (
+          <div key={i} className="flex gap-4 rounded-xl border p-5"
+            style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
+              style={{ background: 'rgba(200,85,48,0.12)', color: 'var(--terra)' }}>
+              {i + 1}
+            </span>
+            <div>
+              <div className="mb-1.5 text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}>
+                {p.title}
+              </div>
+              <p className="text-[12.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
+                {p.body}
+              </p>
+            </div>
+          </div>
         ))}
       </div>
 
