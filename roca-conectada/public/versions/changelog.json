@@ -341,5 +341,12 @@
     "date": "2026-05-29",
     "label": "refactor(s4): move s15/s16/s17 into MetodologiaSec",
     "description": "refactor(s4): move s15/s16/s17 into MetodologiaSection as subsections"
+  },
+  {
+    "id": "v50",
+    "commit": "ea6752a",
+    "date": "2026-05-29",
+    "label": "fix(sidebar): add s4 children — Justificativas, Co",
+    "description": "fix(sidebar): add s4 children — Justificativas, Coopera, WhatsApp"
   }
 ]
