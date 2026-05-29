@@ -327,5 +327,12 @@
     "date": "2026-05-29",
     "label": "fix(s2,s7,s9): Saagu Baagu unit, GROQ framing, EMA",
     "description": "fix(s2,s7,s9): Saagu Baagu unit, GROQ framing, EMATER states, timeline dates, R07"
+  },
+  {
+    "id": "v48",
+    "commit": "0244dca",
+    "date": "2026-05-29",
+    "label": "feat(s15,s16,s17): add JustificativasSection, Coop",
+    "description": "feat(s15,s16,s17): add JustificativasSection, CooperaProducaoSection, WhatsappDecisaoSection"
   }
 ]
