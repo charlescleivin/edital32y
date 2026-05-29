@@ -306,5 +306,12 @@
     "date": "2026-05-29",
     "label": "fix(s7,s9,s10,s11,s15): audit corrections — CONEP ",
     "description": "fix(s7,s9,s10,s11,s15): audit corrections — CONEP risk, checklist, bibliography, LIMA framing"
+  },
+  {
+    "id": "v45",
+    "commit": "be7f805",
+    "date": "2026-05-29",
+    "label": "fix(proposal): 16 consistency corrections from 5-a",
+    "description": "fix(proposal): 16 consistency corrections from 5-agent audit"
   }
 ]
