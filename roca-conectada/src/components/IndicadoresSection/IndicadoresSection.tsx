@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S8Data, InvestmentLeverage } from '@/types/proposal'
 
 export const componentMeta = { slug: 'indicadores-section', label: 'Indicadores e Metas' }
@@ -21,9 +22,9 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
           Retorno sobre Investimento Público
         </div>
         <h3 className="mb-1 text-[22px] font-bold leading-snug" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {data.title}
+          <AcronymText text={data.title} />
         </h3>
-        <p className="text-[13px] italic" style={{ color: 'var(--txtl)' }}>{data.subtitle}</p>
+        <p className="text-[13px] italic" style={{ color: 'var(--txtl)' }}><AcronymText text={data.subtitle} /></p>
       </div>
 
       {/* two-panel body */}
@@ -64,8 +65,8 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
                 <div key={i} className="flex items-start gap-2.5">
                   <span className="mt-0.5 text-[16px] leading-none shrink-0">{asset.icon}</span>
                   <div>
-                    <div className="text-[12px] font-semibold leading-snug" style={{ color: 'var(--txt)' }}>{asset.name}</div>
-                    <div className="text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}>{asset.license}</div>
+                    <div className="text-[12px] font-semibold leading-snug" style={{ color: 'var(--txt)' }}><AcronymText text={asset.name} /></div>
+                    <div className="text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}><AcronymText text={asset.license} /></div>
                   </div>
                 </div>
               ))}
@@ -141,8 +142,8 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
 
       {/* footer callout */}
       <div className="border-t px-8 py-4 text-center" style={{ borderColor: 'rgba(212,150,14,0.15)', background: 'rgba(212,150,14,0.03)' }}>
-        <span className="text-[13px] font-bold italic" style={{ color: 'var(--gold)' }}>{data.callout}</span>
-        <span className="ml-4 text-[11px]" style={{ color: 'var(--txtll)' }}>{data.note}</span>
+        <span className="text-[13px] font-bold italic" style={{ color: 'var(--gold)' }}><AcronymText text={data.callout} /></span>
+        <span className="ml-4 text-[11px]" style={{ color: 'var(--txtll)' }}><AcronymText text={data.note} /></span>
       </div>
     </div>
   )
@@ -163,13 +164,13 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* KPI counters — 44px Playfair Display */}
@@ -182,7 +183,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--p)' }}>
               {c.count.toLocaleString('pt-BR')}
             </span>
-            <span className="mt-2 block text-[12px]" style={{ color: 'var(--txtl)' }}>{c.label}</span>
+            <span className="mt-2 block text-[12px]" style={{ color: 'var(--txtl)' }}><AcronymText text={c.label} /></span>
           </div>
         ))}
       </div>
@@ -195,7 +196,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
             O que esses números significam no campo
           </div>
           <p className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-            {impactNarrative}
+            <AcronymText text={impactNarrative} />
           </p>
         </div>
       )}
@@ -274,7 +275,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
           <tbody>
             {indicators.map((row, i) => (
               <tr key={i} style={{ borderTop: '1px solid var(--bdr)' }}>
-                <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}>{row.indicator}</td>
+                <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}><AcronymText text={row.indicator} /></td>
                 {[row.phase1, row.phase2, row.phase3].map((val, j) => (
                   <td key={j} className="px-5 py-3.5 text-center font-semibold"
                     style={{ color: val === '—' ? 'var(--txtll)' : 'var(--p)' }}>{val}</td>

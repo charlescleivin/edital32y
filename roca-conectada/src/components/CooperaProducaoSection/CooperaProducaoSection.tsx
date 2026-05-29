@@ -1,3 +1,4 @@
+import { AcronymText } from '@/components/ui/AcronymText'
 import type {
   S16Data,
   CooperaProducaoStat,
@@ -69,12 +70,12 @@ function StatCard({ stat }: { stat: CooperaProducaoStat }) {
           {stat.value}
         </div>
         <p className="text-[13px] font-semibold leading-[1.5]" style={{ color: 'var(--txt)' }}>
-          {stat.label}
+          <AcronymText text={stat.label} />
         </p>
       </div>
       <div className="px-6 py-3">
         <p className="text-[10.5px] italic leading-[1.6]" style={{ color: 'var(--txtll)' }}>
-          {stat.source}
+          <AcronymText text={stat.source} />
         </p>
       </div>
     </div>
@@ -100,12 +101,12 @@ function EndpointCard({ ep, index }: { ep: CooperaApiEndpoint; index: number }) 
             Endpoint {ep.id}
           </div>
           <div className="text-[13px] font-bold leading-[1.3]" style={{ color: 'var(--txt)' }}>
-            {ep.title}
+            <AcronymText text={ep.title} />
           </div>
         </div>
       </div>
       <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-        {ep.description}
+        <AcronymText text={ep.description} />
       </p>
     </div>
   )
@@ -145,10 +146,10 @@ function TimelineStep({ step, index, total }: { step: CooperaTimelineStep; index
           </span>
         </div>
         <p className="text-[13.5px] font-semibold leading-[1.4]" style={{ color: 'var(--txt)' }}>
-          {step.event}
+          <AcronymText text={step.event} />
         </p>
         <p className="mt-1 text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-          {step.detail}
+          <AcronymText text={step.detail} />
         </p>
       </div>
     </div>
@@ -164,10 +165,10 @@ function CitationCard({ cit }: { cit: CooperaProducaoCitation }) {
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <p className="text-[11px] font-semibold leading-[1.5]" style={{ color: 'var(--txt)' }}>
-            {cit.title}
+            <AcronymText text={cit.title} />
           </p>
           <p className="mt-0.5 text-[10px]" style={{ color: 'var(--txtll)' }}>
-            {cit.authors}
+            <AcronymText text={cit.authors} />
           </p>
         </div>
         <span
@@ -185,12 +186,12 @@ function CitationCard({ cit }: { cit: CooperaProducaoCitation }) {
           Achado-chave
         </span>
         <span className="text-[11px] leading-[1.6] font-semibold" style={{ color: 'var(--txtl)' }}>
-          {cit.keyFinding}
+          <AcronymText text={cit.keyFinding} />
         </span>
       </div>
       <div className="flex items-center gap-2 flex-wrap">
         <span className="text-[9.5px] italic" style={{ color: 'var(--txtll)' }}>
-          {cit.venue}
+          <AcronymText text={cit.venue} />
         </span>
         {cit.doi && (
           <span className="text-[9px] font-mono" style={{ color: 'var(--txtll)' }}>
@@ -258,20 +259,20 @@ export default function CooperaProducaoSection({
             className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}
           >
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2
           className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
         >
-          {title}
+          <AcronymText text={title} />
         </h2>
         <p
           className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}
         >
-          {subtitle}
+          <AcronymText text={subtitle} />
         </p>
       </div>
 
@@ -309,7 +310,7 @@ export default function CooperaProducaoSection({
           className="mb-5 border-l-4 pl-5 text-[15px] sm:text-[18px] lg:text-[20px] font-bold italic leading-[1.4]"
           style={{ borderColor: 'var(--terra)', fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
         >
-          {gapStatement}
+          <AcronymText text={gapStatement} />
         </blockquote>
 
         {/* Gap detail cards */}
@@ -494,10 +495,10 @@ export default function CooperaProducaoSection({
             className="mb-1 text-[18px] sm:text-[22px] font-bold leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
           >
-            {timelineTitle}
+            <AcronymText text={timelineTitle} />
           </h3>
           <p className="text-[13px] italic" style={{ color: 'var(--txtl)' }}>
-            {timelineSubtitle}
+            <AcronymText text={timelineSubtitle} />
           </p>
         </div>
 
@@ -607,7 +608,7 @@ export default function CooperaProducaoSection({
           </div>
         </div>
         <p className="text-[13.5px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
-          {conclusionStatement}
+          <AcronymText text={conclusionStatement} />
         </p>
       </div>
 

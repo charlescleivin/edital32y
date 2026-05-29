@@ -1,5 +1,6 @@
 import SectionHero from '@/components/ui/SectionHero'
 import CharlesSection from '@/components/CharlesSection/CharlesSection'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S5Data, MarketContext, MarketContextParagraph, MarketContextRecommendation, AnnexTable, S5AnnexSection } from '@/types/proposal'
 
 export const componentMeta = { slug: 'equipe-section', label: 'Equipe do Projeto' }
@@ -35,10 +36,10 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
             </span>
             <div>
               <div className="mb-1.5 text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}>
-                {p.title}
+                <AcronymText text={p.title} />
               </div>
               <p className="text-[12.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-                {p.body}
+                <AcronymText text={p.body} />
               </p>
             </div>
           </div>
@@ -52,8 +53,8 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
               style={{ borderColor: 'rgba(200,85,48,0.18)', background: 'rgba(200,85,48,0.05)' }}>
               <div className="mb-1.5 text-[28px] font-bold leading-none"
                 style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>{c.value}</div>
-              <div className="mb-1 text-[12px] leading-snug font-medium" style={{ color: 'var(--txt)' }}>{c.label}</div>
-              {c.note && <div className="text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}>{c.note}</div>}
+              <div className="mb-1 text-[12px] leading-snug font-medium" style={{ color: 'var(--txt)' }}><AcronymText text={c.label} /></div>
+              {c.note && <div className="text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}><AcronymText text={c.note} /></div>}
             </div>
           ))}
         </div>
@@ -71,9 +72,9 @@ function MarketContextBlock({ ctx }: { ctx: MarketContext }) {
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
                 <span className="mb-2 block text-[20px]">{r.icon}</span>
                 <div className="mb-1.5 text-[12px] font-bold leading-snug"
-                  style={{ color: 'var(--txt)' }}>{r.title}</div>
+                  style={{ color: 'var(--txt)' }}><AcronymText text={r.title} /></div>
                 <div className="text-[11px] leading-[1.7]"
-                  style={{ color: 'var(--txtll)' }}>{r.body}</div>
+                  style={{ color: 'var(--txtll)' }}><AcronymText text={r.body} /></div>
               </div>
             ))}
           </div>
@@ -190,13 +191,13 @@ export default function EquipeSection({ number, title, subtitle, headline, heroI
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {marketContext && <MarketContextBlock ctx={marketContext} />}
@@ -226,9 +227,9 @@ export default function EquipeSection({ number, title, subtitle, headline, heroI
                 style={{ background: avatarBg }}>{m.avatar}</div>
 
               {/* name — 15px Inter 700 */}
-              <div className="mb-0.5 text-[15px] font-bold" style={{ color: 'var(--txt)' }}>{m.name}</div>
+              <div className="mb-0.5 text-[15px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={m.name} /></div>
               {/* role — 13px Inter 400 */}
-              <div className="mb-3 text-[13px] leading-snug" style={{ color: 'var(--txtl)' }}>{m.role}</div>
+              <div className="mb-3 text-[13px] leading-snug" style={{ color: 'var(--txtl)' }}><AcronymText text={m.role} /></div>
 
               {/* tags */}
               <div className="mb-3 flex flex-wrap gap-1.5">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S3Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'objetivos-section', label: 'Objetivos' }
@@ -25,20 +26,20 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* general objective */}
       <div className="mb-8 rounded-2xl border-l-[3px] p-7 text-[14.5px] leading-[1.8]"
         style={{ borderColor: 'var(--p)', background: 'var(--bg-card)', color: 'var(--txtl)' }}>
         <span className="font-bold" style={{ color: 'var(--p)' }}>Objetivo Geral — </span>
-        {generalObjective}
+        <AcronymText text={generalObjective} />
       </div>
 
       {/* theory of change */}
@@ -51,7 +52,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
             style={{ borderColor: 'var(--p)', background: 'rgba(111,168,118,0.05)' }}>
             <p className="text-[13.5px] italic leading-[1.8]" style={{ color: 'var(--txtl)' }}>
               <span className="font-bold not-italic" style={{ color: 'var(--p)' }}>Premissa — </span>
-              {theoryOfChange.premise}
+              <AcronymText text={theoryOfChange.premise} />
             </p>
           </div>
           <div className="relative">
@@ -66,7 +67,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
                 <ul className="flex flex-col gap-1.5">
                   {stage.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-1.5 text-[11.5px] leading-[1.6]" style={{ color: 'var(--txtl)' }}>
-                      <span style={{ color: 'var(--p)' }}>›</span>{item}
+                      <span style={{ color: 'var(--p)' }}>›</span><AcronymText text={item} />
                     </li>
                   ))}
                 </ul>
@@ -113,7 +114,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-[11px] font-bold"
                   style={{ background: 'var(--pale)', color: 'var(--p)' }}>{i + 1}</span>
                 <span className="pt-0.5 text-[14px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-                  <strong style={{ color: 'var(--txt)' }}>{obj.code}</strong> {obj.text}
+                  <strong style={{ color: 'var(--txt)' }}>{obj.code}</strong> <AcronymText text={obj.text} />
                 </span>
               </div>
             ))}
@@ -143,7 +144,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
                 <div className="mb-2 text-[10px] font-bold uppercase tracking-[1.5px]" style={{ color: 'var(--gold)' }}>
                   {pol.axes}
                 </div>
-                <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{pol.body}</p>
+                <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={pol.body} /></p>
               </div>
             ))}
           </div>
@@ -172,7 +173,7 @@ export default function ObjetivosSection({ number, title, subtitle, headline, he
               {innovationPolicy.article}
             </div>
             <p className="mb-3 text-[13px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-              {innovationPolicy.alignmentText}
+              <AcronymText text={innovationPolicy.alignmentText} />
             </p>
             {innovationPolicy.annexNote && (
               <p className="rounded-xl border px-4 py-2.5 text-[11.5px] italic"

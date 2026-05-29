@@ -1,3 +1,4 @@
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S13Data, ModalityCard, ModalityProofStat } from '@/types/proposal'
 
 export const componentMeta = { slug: 'modalidades-section', label: 'Modalidades Futuras' }
@@ -55,10 +56,10 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
         </div>
         <h3 className="mb-3 text-[20px] font-bold leading-[1.25]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {card.title}
+          <AcronymText text={card.title} />
         </h3>
         <p className="text-[13px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-          {card.description}
+          <AcronymText text={card.description} />
         </p>
       </div>
 
@@ -67,7 +68,7 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
         style={{ borderBottom: `1px solid var(--bdr)`, background: 'rgba(237,229,211,0.025)' }}>
         <span className="text-[14px]">📡</span>
         <p className="text-[11.5px] italic leading-snug" style={{ color: 'var(--txtl)' }}>
-          {card.channelNote}
+          <AcronymText text={card.channelNote} />
         </p>
       </div>
 
@@ -81,10 +82,10 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
               Prova de Conceito — Campo Real
             </div>
             <div className="mb-2 text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}>
-              {card.proof.label}
+              <AcronymText text={card.proof.label} />
             </div>
             <p className="mb-4 text-[12px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-              {card.proof.description}
+              <AcronymText text={card.proof.description} />
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {card.proof.stats.map((s, i) => (
@@ -95,7 +96,7 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
                     {s.value}
                   </div>
                   <div className="mt-1 text-[10px] leading-snug" style={{ color: 'var(--txtll)' }}>
-                    {s.label}
+                    <AcronymText text={s.label} />
                   </div>
                 </div>
               ))}
@@ -115,7 +116,7 @@ function ModalityCardBlock({ card }: { card: ModalityCard }) {
                 <li key={i} className="flex items-start gap-3 text-[12.5px] leading-[1.75]"
                   style={{ color: 'var(--txtl)' }}>
                   <span className="mt-[4px] shrink-0 text-[9px]" style={{ color: tok.text }}>◆</span>
-                  {uc}
+                  <AcronymText text={uc} />
                 </li>
               ))}
             </ul>
@@ -156,16 +157,16 @@ export default function ModalidadesSection({
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {title}
+          <AcronymText text={title} />
         </h2>
         <p className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
-          {subtitle}
+          <AcronymText text={subtitle} />
         </p>
       </div>
 
@@ -179,7 +180,7 @@ export default function ModalidadesSection({
             Potencial Pós-Projeto — Fora do Escopo Atual
           </div>
           <p className="text-[12.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-            {disclaimer}
+            <AcronymText text={disclaimer} />
           </p>
         </div>
       </div>
@@ -192,7 +193,7 @@ export default function ModalidadesSection({
           📱 O Canal Já Está Pronto
         </div>
         <p className="mb-6 text-[14px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-          {channelCapabilityNote}
+          <AcronymText text={channelCapabilityNote} />
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {channelCapabilityItems.map((item, i) => (
@@ -201,10 +202,10 @@ export default function ModalidadesSection({
               <span className="shrink-0 text-[22px]">{item.icon}</span>
               <div>
                 <div className="mb-1 text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}>
-                  {item.label}
+                  <AcronymText text={item.label} />
                 </div>
                 <div className="text-[11.5px] leading-[1.6]" style={{ color: 'var(--txtll)' }}>
-                  {item.note}
+                  <AcronymText text={item.note} />
                 </div>
               </div>
             </div>
@@ -228,10 +229,10 @@ export default function ModalidadesSection({
         </div>
         <h3 className="mb-4 text-[18px] font-bold leading-[1.35]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {architectureBridge.title}
+          <AcronymText text={architectureBridge.title} />
         </h3>
         <p className="mb-6 text-[13.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-          {architectureBridge.body}
+          <AcronymText text={architectureBridge.body} />
         </p>
         <div className="flex flex-col gap-3">
           {architectureBridge.points.map((pt, i) => {

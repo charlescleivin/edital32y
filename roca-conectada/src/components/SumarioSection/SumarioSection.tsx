@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S1Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'sumario-section', label: 'Sumário Executivo' }
@@ -26,13 +27,13 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
         {headline && (
           <p className="mb-3 text-[16px] font-bold italic leading-[1.2] sm:text-[19px] lg:text-[22px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] font-bold leading-[1.05] tracking-[-0.3px] sm:text-[34px] lg:text-[44px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[14px] italic leading-relaxed sm:text-[15px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {problemStatement && (
@@ -42,7 +43,7 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
             ⚠️ O Problema
           </div>
           <p className="text-[14px] leading-[1.85] sm:text-[15px]" style={{ color: 'var(--txt)' }}>
-            {problemStatement}
+            <AcronymText text={problemStatement} />
           </p>
         </div>
       )}
@@ -55,7 +56,7 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
             <span className="block text-[32px] font-bold leading-tight sm:text-[38px]"
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--p)' }}>{s.value}</span>
             <span className="mt-1.5 block text-[13px] leading-snug"
-              style={{ color: 'var(--txtl)' }}>{s.label}</span>
+              style={{ color: 'var(--txtl)' }}><AcronymText text={s.label} /></span>
           </div>
         ))}
       </div>
@@ -65,7 +66,7 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
         <div className="mb-3 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
           💡 A Solução
         </div>
-        {summary}
+        <AcronymText text={summary} />
       </div>
 
       {whyNow && whyNow.length > 0 && (
@@ -78,8 +79,8 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
               <div key={i} className="rounded-2xl border p-5"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
                 <div className="mb-2 text-[26px] leading-none">{item.icon}</div>
-                <div className="mb-2 text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{item.title}</div>
-                <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{item.body}</p>
+                <div className="mb-2 text-[13px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={item.title} /></div>
+                <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={item.body} /></p>
               </div>
             ))}
           </div>
@@ -96,7 +97,7 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
               <div key={i} className="flex items-start gap-2.5 text-[13.5px] leading-snug"
                 style={{ color: 'var(--txtl)' }}>
                 <span style={{ color: 'var(--terra)' }}>✅</span>
-                <span>{r}</span>
+                <span><AcronymText text={r} /></span>
               </div>
             ))}
           </div>
@@ -113,7 +114,7 @@ export default function SumarioSection({ number, title, subtitle, headline, hero
                 <div key={i} className="flex items-center gap-3">
                   <span className="rounded-full px-3 py-1 text-[11px] font-bold"
                     style={{ background: st.bg, color: st.color }}>{r.badge}</span>
-                  <span className="text-[13.5px]" style={{ color: 'var(--txtl)' }}>{r.label}</span>
+                  <span className="text-[13.5px]" style={{ color: 'var(--txtl)' }}><AcronymText text={r.label} /></span>
                 </div>
               )
             })}

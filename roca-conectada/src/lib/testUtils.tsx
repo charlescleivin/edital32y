@@ -14,8 +14,15 @@ export function createComponentTest<T extends object>(
       })
       checks.forEach(({ label, find }) => {
         it(label, () => {
-          render(<Component {...fixture} />)
-          expect(screen.getByText(find())).toBeInTheDocument()
+          const { container } = render(<Component {...fixture} />)
+          const text = find()
+          // Use textContent matching to handle AcronymText splitting text across spans
+          const found = container.querySelector('*:not(script):not(style)')
+          const allElements = container.querySelectorAll('*')
+          const match = Array.from(allElements).some(
+            el => el.textContent?.includes(text) && el.children.length < 20
+          )
+          expect(match).toBe(true)
         })
       })
     })

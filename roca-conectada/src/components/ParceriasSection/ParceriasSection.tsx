@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S7Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'parcerias-section', label: 'Parcerias Previstas' }
@@ -26,13 +27,13 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* alert */}
@@ -43,7 +44,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
           <div className="mb-1.5 text-[14px] font-bold" style={{ color: 'var(--terra)' }}>
             Ação Urgente — 44 dias para a submissão
           </div>
-          <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{alertMessage}</div>
+          <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={alertMessage} /></div>
         </div>
       </div>
 
@@ -56,8 +57,8 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
               style={{ borderColor: st.border, background: st.bg }}>
               <span className="mb-3 inline-block rounded-full px-3 py-1 text-[10px] font-bold"
                 style={{ background: st.badge, color: st.badgeText }}>{p.priorityLabel}</span>
-              <div className="mb-1.5 text-[15px] font-bold" style={{ color: 'var(--txt)' }}>{p.name}</div>
-              <div className="mb-3 text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{p.role}</div>
+              <div className="mb-1.5 text-[15px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={p.name} /></div>
+              <div className="mb-3 text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={p.role} /></div>
               <div className="text-[12px] font-semibold" style={{ color: st.deadline }}>{p.deadline}</div>
             </div>
           )
@@ -85,8 +86,8 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
                 <tbody>
                   {disseminationRoutes.map((r, i) => (
                     <tr key={i} style={{ borderTop: '1px solid var(--bdr)' }}>
-                      <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}>{r.audience}</td>
-                      <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}>{r.mechanism}</td>
+                      <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}><AcronymText text={r.audience} /></td>
+                      <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}><AcronymText text={r.mechanism} /></td>
                       <td className="px-5 py-3.5 font-semibold" style={{ color: 'var(--p)' }}>{r.when}</td>
                     </tr>
                   ))}
@@ -118,7 +119,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
             <div>
               <div className="mb-1 text-[12px] font-bold"
                 style={{ color: week.isCritical ? 'var(--terra)' : 'var(--p)' }}>{week.label}</div>
-              <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{week.description}</div>
+              <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={week.description} /></div>
             </div>
           </div>
         ))}

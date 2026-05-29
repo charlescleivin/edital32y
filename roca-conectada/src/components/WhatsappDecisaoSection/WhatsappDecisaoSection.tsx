@@ -1,3 +1,4 @@
+import { AcronymText } from '@/components/ui/AcronymText'
 import type {
   S17Data,
   WhatsappDataPoint,
@@ -54,10 +55,10 @@ function DataPointCard({ dp }: { dp: WhatsappDataPoint }) {
         {dp.value}
       </div>
       <div className="mb-2 text-[12.5px] font-semibold leading-[1.55]" style={{ color: 'var(--txt)' }}>
-        {dp.label}
+        <AcronymText text={dp.label} />
       </div>
       <div className="mt-auto text-[10px] italic" style={{ color: 'var(--txtll)' }}>
-        {dp.source}
+        <AcronymText text={dp.source} />
       </div>
     </div>
   )
@@ -71,7 +72,7 @@ function PrecedentCard({ p, index }: { p: WhatsappPrecedent; index: number }) {
         style={{ background: acc.hdr, borderBottom: `1px solid ${acc.hdrBdr}` }}>
         <span className="text-[22px] leading-none">{p.flag}</span>
         <div className="flex-1 min-w-0">
-          <div className="text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}>{p.name}</div>
+          <div className="text-[13px] font-bold leading-snug" style={{ color: 'var(--txt)' }}><AcronymText text={p.name} /></div>
           <div className="text-[10px] mt-0.5" style={{ color: 'var(--txtll)' }}>{p.org} · {p.year}</div>
         </div>
         <span className="shrink-0 rounded-full border px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[2px]"
@@ -86,7 +87,7 @@ function PrecedentCard({ p, index }: { p: WhatsappPrecedent; index: number }) {
         </div>
         <div className="text-[11px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
           <span className="font-semibold" style={{ color: 'var(--txtll)' }}>Fonte: </span>
-          {p.source}
+          <AcronymText text={p.source} />
         </div>
       </div>
     </div>
@@ -111,9 +112,9 @@ function MigrationStep({ step, index, total }: { step: WhatsappMigrationStep; in
             style={{ borderColor: acc.border, color: acc.text, background: acc.bg }}>
             {step.phase}
           </span>
-          <span className="text-[12.5px] font-bold" style={{ color: 'var(--txt)' }}>{step.label}</span>
+          <span className="text-[12.5px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={step.label} /></span>
         </div>
-        <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{step.description}</p>
+        <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={step.description} /></p>
       </div>
     </div>
   )
@@ -124,8 +125,8 @@ function RiskRow({ risk }: { risk: WhatsappRisk }) {
   return (
     <div className="grid items-start gap-4 rounded-2xl border p-5"
       style={{ gridTemplateColumns: '1fr 1.5fr auto', borderColor: col.border, background: col.bg }}>
-      <div className="text-[12.5px] font-semibold leading-[1.55]" style={{ color: 'var(--txt)' }}>{risk.risk}</div>
-      <div className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>{risk.mitigation}</div>
+      <div className="text-[12.5px] font-semibold leading-[1.55]" style={{ color: 'var(--txt)' }}><AcronymText text={risk.risk} /></div>
+      <div className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}><AcronymText text={risk.mitigation} /></div>
       <span className="shrink-0 whitespace-nowrap self-start rounded-full border px-3 py-1 text-[9px] font-bold uppercase tracking-[2.5px]"
         style={{ borderColor: col.border, color: col.text, background: col.badge }}>
         {riskLabel[risk.severity]}
@@ -142,14 +143,14 @@ function CitationEntry({ cit, index }: { cit: WhatsappDecisaoCitation; index: nu
         {index + 1}
       </span>
       <div className="flex flex-col gap-1.5 min-w-0">
-        <p className="text-[12px] font-semibold leading-[1.55]" style={{ color: 'var(--txt)' }}>{cit.title}</p>
+        <p className="text-[12px] font-semibold leading-[1.55]" style={{ color: 'var(--txt)' }}><AcronymText text={cit.title} /></p>
         <p className="text-[11px]" style={{ color: 'var(--txtll)' }}>
           {cit.authors}{cit.venue ? ` · ${cit.venue}` : ''}{cit.year ? ` · ${cit.year}` : ''}{cit.doi ? ` · ${cit.doi}` : ''}
         </p>
         <div className="rounded-lg border px-3 py-2 text-[11px] font-semibold leading-[1.6]"
           style={{ borderColor: 'var(--bdr-strong)', background: 'var(--bg-raised)', color: 'var(--txtl)' }}>
           <span className="mr-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--gold)' }}>Achado-chave</span>
-          {cit.keyFinding}
+          <AcronymText text={cit.keyFinding} />
         </div>
         {cit.url && <p className="text-[9.5px] font-mono break-all" style={{ color: 'var(--txtll)' }}>{cit.url}</p>}
       </div>
@@ -202,16 +203,16 @@ export default function WhatsappDecisaoSection({
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {title}
+          <AcronymText text={title} />
         </h2>
         <p className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
-          {subtitle}
+          <AcronymText text={subtitle} />
         </p>
       </div>
 
@@ -222,7 +223,7 @@ export default function WhatsappDecisaoSection({
           Decisão Técnica de Canal
         </div>
         <p className="text-[14px] sm:text-[15px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
-          {openingRationale}
+          <AcronymText text={openingRationale} />
         </p>
       </div>
 
@@ -279,7 +280,7 @@ export default function WhatsappDecisaoSection({
           ))}
         </div>
         <div className="mt-5 rounded-2xl border p-6" style={{ borderColor: 'rgba(212,150,14,0.3)', background: 'rgba(212,150,14,0.05)' }}>
-          <p className="text-[13px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>{sovereigntyArgument}</p>
+          <p className="text-[13px] leading-[1.9]" style={{ color: 'var(--txtl)' }}><AcronymText text={sovereigntyArgument} /></p>
         </div>
       </div>
 
@@ -287,7 +288,7 @@ export default function WhatsappDecisaoSection({
       <div className="mb-14">
         <Divider label={migrationRoadmap.title} />
         <p className="mb-8 text-[13.5px] italic leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-          {migrationRoadmap.subtitle}
+          <AcronymText text={migrationRoadmap.subtitle} />
         </p>
         <div className="mb-8">
           {migrationRoadmap.steps.map((step, i) => (
@@ -300,7 +301,7 @@ export default function WhatsappDecisaoSection({
             Intenção Declarada
           </div>
           <p className="text-[13.5px] font-semibold leading-[1.85]" style={{ color: 'var(--txt)' }}>
-            {migrationRoadmap.closingStatement}
+            <AcronymText text={migrationRoadmap.closingStatement} />
           </p>
         </div>
       </div>

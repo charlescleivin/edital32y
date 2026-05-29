@@ -1,5 +1,6 @@
 import SectionHero from '@/components/ui/SectionHero'
 import AiEvidenceBlock from './AiEvidenceBlock'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S2Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'problema-section', label: 'Problema e Justificativa' }
@@ -64,13 +65,13 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* opening scenario */}
@@ -81,7 +82,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
             👩‍🌾 Cenário Real — Quem Estamos Servindo
           </div>
           <p className="text-[14px] leading-[1.85] italic" style={{ color: 'var(--txtl)' }}>
-            {openingScenario}
+            <AcronymText text={openingScenario} />
           </p>
         </div>
       )}
@@ -95,7 +96,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
               style={{ fontFamily: 'var(--font-playfair)', color: statAccent[s.colorVariant] ?? statAccent.green }}>
               {s.value}
             </div>
-            <div className="mt-2 text-[12px] leading-snug" style={{ color: 'var(--txtl)' }}>{s.label}</div>
+            <div className="mt-2 text-[12px] leading-snug" style={{ color: 'var(--txtl)' }}><AcronymText text={s.label} /></div>
           </div>
         ))}
       </div>
@@ -116,11 +117,11 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
                 Barreira {i + 1} de {barriers.length}
               </div>
               <div className="mb-5 mt-1 text-[17px] font-bold leading-[1.3]" style={{ color: 'var(--txt)' }}>
-                {b.title}
+                <AcronymText text={b.title} />
               </div>
               <div className="text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
                 {b.description.split(/\n\n+/).map((para, idx) => (
-                  <p key={idx} className={idx > 0 ? 'mt-3' : ''}>{para}</p>
+                  <p key={idx} className={idx > 0 ? 'mt-3' : ''}><AcronymText text={para} /></p>
                 ))}
               </div>
             </div>
@@ -150,7 +151,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
                       {b.keyFact.value}
                     </div>
                     <div className="mt-3 text-[12px] leading-snug" style={{ color: 'var(--txtl)', maxWidth: 200 }}>
-                      {b.keyFact.label}
+                      <AcronymText text={b.keyFact.label} />
                     </div>
                   </div>
                 </>
@@ -234,7 +235,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
                       <span className="text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{entry.country}</span>
                       <span className="text-[13px] font-semibold" style={{ color: st.color }}>{entry.product}</span>
                     </div>
-                    <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtll)' }}>{entry.scale}</div>
+                    <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtll)' }}><AcronymText text={entry.scale} /></div>
                   </div>
                   <div className="shrink-0 text-right">
                     <div className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider"
@@ -272,7 +273,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
           <div className="mb-2 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
             ♀ Equidade de Gênero — Princípio Transversal
           </div>
-          <p className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>{genderEquity}</p>
+          <p className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}><AcronymText text={genderEquity} /></p>
         </div>
       )}
 
@@ -315,7 +316,7 @@ export default function ProblemaSection({ number, title, subtitle, headline, her
               <div key={i} className="flex items-start gap-3 text-[12.5px] leading-[1.7]">
                 <span className="shrink-0 rounded-lg px-2 py-0.5 text-[10px] font-bold"
                   style={{ background: 'var(--pale)', color: 'var(--p)' }}>{b.ref}</span>
-                <span style={{ color: 'var(--txtl)' }}>{b.text}</span>
+                <span style={{ color: 'var(--txtl)' }}><AcronymText text={b.text} /></span>
               </div>
             ))}
           </div>

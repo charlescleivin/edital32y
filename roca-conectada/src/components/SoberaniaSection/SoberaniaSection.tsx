@@ -1,3 +1,4 @@
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S14Data, SoberaniaLicenseRow, SoberaniaAccessPhase, LicenseExplained } from '@/types/proposal'
 
 export const componentMeta = { slug: 'soberania-section', label: 'Soberania Digital' }
@@ -42,13 +43,13 @@ function LicenseExplainedBlock({ data }: { data: LicenseExplained }) {
           </div>
           <div className="flex flex-col gap-3 p-6">
             <p className="text-[12.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-              {data.mitSummary}
+              <AcronymText text={data.mitSummary} />
             </p>
             <div className="flex items-start gap-3 rounded-xl border p-4"
               style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.06)' }}>
               <span className="shrink-0 text-[18px]">⚠️</span>
               <p className="text-[12px] font-semibold leading-[1.75]" style={{ color: 'var(--terra)' }}>
-                {data.mitRisk}
+                <AcronymText text={data.mitRisk} />
               </p>
             </div>
           </div>
@@ -76,13 +77,13 @@ function LicenseExplainedBlock({ data }: { data: LicenseExplained }) {
                     {t.term}
                   </span>
                   <span className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>
-                    {t.plain}
+                    <AcronymText text={t.plain} />
                   </span>
                 </div>
               ))}
             </div>
             <p className="text-[12px] italic leading-[1.75]" style={{ color: 'var(--txtll)' }}>
-              {data.ncSaSummary}
+              <AcronymText text={data.ncSaSummary} />
             </p>
           </div>
         </div>
@@ -101,10 +102,10 @@ function LicenseExplainedBlock({ data }: { data: LicenseExplained }) {
               <div key={i} className="grid items-center gap-4 px-6 py-4"
                 style={{ gridTemplateColumns: '1fr 1.5fr auto' }}>
                 <div className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>
-                  {s.who}
+                  <AcronymText text={s.who} />
                 </div>
                 <div className="text-[11.5px] leading-[1.6]" style={{ color: 'var(--txtl)' }}>
-                  {s.action}
+                  <AcronymText text={s.action} />
                 </div>
                 <span className="flex items-center gap-1.5 rounded-full border px-3 py-1 text-[10px] font-bold whitespace-nowrap"
                   style={{ borderColor: sc.border, background: sc.bg, color: sc.text }}>
@@ -122,7 +123,7 @@ function LicenseExplainedBlock({ data }: { data: LicenseExplained }) {
         style={{ borderColor: 'rgba(111,168,118,0.35)', background: 'rgba(111,168,118,0.07)' }}>
         <span className="shrink-0 text-[22px]">💡</span>
         <p className="text-[13px] font-semibold leading-[1.8]" style={{ color: 'var(--txt)' }}>
-          {data.keyInsight}
+          <AcronymText text={data.keyInsight} />
         </p>
       </div>
     </div>
@@ -139,10 +140,10 @@ function LicenseRow({ row }: { row: SoberaniaLicenseRow }) {
           {row.asset}
         </div>
         <div className="text-[11.5px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>
-          <span className="font-semibold" style={{ color: col.text }}>Acesso: </span>{row.who}
+          <span className="font-semibold" style={{ color: col.text }}>Acesso: </span><AcronymText text={row.who} />
         </div>
         <div className="text-[11px] italic leading-[1.6]" style={{ color: 'var(--txtll)' }}>
-          {row.restriction}
+          <AcronymText text={row.restriction} />
         </div>
       </div>
       <span className="shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[9px] font-bold uppercase tracking-[2.5px]"
@@ -180,7 +181,7 @@ function PhaseCard({ phase, index }: { phase: SoberaniaAccessPhase; index: numbe
             Abrangência
           </div>
           <div className="text-[12px] leading-[1.6]" style={{ color: 'var(--txtl)' }}>
-            {phase.scope}
+            <AcronymText text={phase.scope} />
           </div>
         </div>
         <div className="flex items-center gap-2 rounded-xl border px-4 py-2.5"
@@ -190,7 +191,7 @@ function PhaseCard({ phase, index }: { phase: SoberaniaAccessPhase; index: numbe
           </span>
         </div>
         <div className="text-[11px] leading-[1.65]" style={{ color: 'var(--txtll)' }}>
-          {phase.criteria}
+          <AcronymText text={phase.criteria} />
         </div>
       </div>
     </div>
@@ -223,16 +224,16 @@ export default function SoberaniaSection({
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {title}
+          <AcronymText text={title} />
         </h2>
         <p className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
-          {subtitle}
+          <AcronymText text={subtitle} />
         </p>
       </div>
 
@@ -246,10 +247,10 @@ export default function SoberaniaSection({
           </div>
         </div>
         <p className="mb-3 text-[14.5px] font-bold leading-[1.6]" style={{ color: 'var(--txt)' }}>
-          {sovereigntyStatement}
+          <AcronymText text={sovereigntyStatement} />
         </p>
         <p className="text-[13px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-          {sovereigntyRationale}
+          <AcronymText text={sovereigntyRationale} />
         </p>
       </div>
 
@@ -301,13 +302,13 @@ export default function SoberaniaSection({
           </div>
         </div>
         <p className="mb-4 text-[14px] font-bold leading-[1.6]" style={{ color: 'var(--txt)' }}>
-          {accessStatement}
+          <AcronymText text={accessStatement} />
         </p>
         <div className="flex items-start gap-3 rounded-xl border p-4"
           style={{ borderColor: 'rgba(8,145,178,0.2)', background: 'rgba(8,145,178,0.06)' }}>
           <span className="shrink-0 text-[18px]">⚙️</span>
           <p className="text-[12px] italic leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-            {serverNote}
+            <AcronymText text={serverNote} />
           </p>
         </div>
       </div>
@@ -331,7 +332,7 @@ export default function SoberaniaSection({
           O Ativo Permanente
         </div>
         <p className="text-[14px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
-          {expansionVision}
+          <AcronymText text={expansionVision} />
         </p>
       </div>
     </section>

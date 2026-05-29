@@ -1,6 +1,7 @@
 import type { HeroData } from '@/types/proposal'
 import HeroCanvas from './HeroCanvas'
 import HeroStripes from './HeroStripes'
+import { AcronymText } from '@/components/ui/AcronymText'
 
 export const componentMeta = { slug: 'hero-section', label: 'Hero Section' }
 
@@ -55,7 +56,7 @@ export default function HeroSection({
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)' }}>
           <span className="text-sm leading-none">🌾</span>
           <span className="text-[9px] font-bold uppercase tracking-[3px]"
-            style={{ color: 'var(--txtll)' }}>{eyebrow}</span>
+            style={{ color: 'var(--txtll)' }}><AcronymText text={eyebrow} /></span>
         </div>
       </div>
 
@@ -67,13 +68,13 @@ export default function HeroSection({
             {statement && (
               <p className="text-[30px] font-bold italic leading-[1.1] tracking-[-0.5px] sm:text-[38px] lg:text-[48px]"
                 style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-                {statement}
+                <AcronymText text={statement} />
               </p>
             )}
             {statementContrast && (
               <p className="text-[30px] font-bold italic leading-[1.1] tracking-[-0.5px] sm:text-[38px] lg:text-[48px]"
                 style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-                {statementContrast}
+                <AcronymText text={statementContrast} />
               </p>
             )}
           </div>
@@ -88,11 +89,11 @@ export default function HeroSection({
           </div>
           <h1 className="mb-4 text-[34px] font-bold leading-none tracking-[-1px] sm:text-[42px] lg:text-[48px] lg:tracking-[-1.5px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-            {title}
+            <AcronymText text={title} />
           </h1>
           <p className="text-[14px] italic leading-[1.75] sm:text-[15px] lg:max-w-[500px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
-            {subtitle}
+            <AcronymText text={subtitle} />
           </p>
         </div>
       </div>
@@ -111,7 +112,7 @@ export default function HeroSection({
               </span>
               <span className="mt-2 block text-[11px] leading-[1.5] sm:max-w-[230px]"
                 style={{ color: 'var(--txtll)' }}>
-                {stat.label}
+                <AcronymText text={stat.label} />
               </span>
             </div>
           ))}
@@ -133,8 +134,8 @@ export default function HeroSection({
                   {layer.badge}
                 </span>
                 <div>
-                  <div className="mb-1 text-[13px] font-bold" style={{ color: 'var(--txt)' }}>{layer.title}</div>
-                  <div className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}>{layer.description}</div>
+                  <div className="mb-1 text-[13px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={layer.title} /></div>
+                  <div className="text-[12px] leading-[1.65]" style={{ color: 'var(--txtl)' }}><AcronymText text={layer.description} /></div>
                 </div>
               </div>
             )

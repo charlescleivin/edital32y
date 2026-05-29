@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S10Data, ChecklistItem } from '@/types/proposal'
 
 export const componentMeta = { slug: 'checklist-section', label: 'Checklist de Submissão' }
@@ -43,10 +44,10 @@ function CheckItem({ item }: { item: ChecklistItem }) {
         {/* label — 13.5px Inter 500 */}
         <div className="text-[13.5px] font-medium"
           style={{ color: done ? 'var(--txtll)' : 'var(--txt)', textDecoration: done ? 'line-through' : 'none' }}>
-          {item.label}
+          <AcronymText text={item.label} />
         </div>
         {/* detail — 12px Inter 400 */}
-        <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtll)' }}>{item.detail}</div>
+        <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtll)' }}><AcronymText text={item.detail} /></div>
       </div>
 
       {/* status badge */}
@@ -71,20 +72,20 @@ export default function ChecklistSection({ number, title, subtitle, headline, he
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* alert */}
       <div className="mb-8 flex gap-4 rounded-2xl border p-6"
         style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.06)' }}>
         <span className="mt-0.5 text-[20px] leading-none">⏰</span>
-        <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{alertMessage}</div>
+        <div className="text-[13.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={alertMessage} /></div>
       </div>
 
       {/* groups */}

@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { BudgetDonutSlice, BudgetLine, S6Data } from '@/types/proposal'
 
 const brl = (n: number) =>
@@ -121,7 +122,7 @@ function DonutChart({ slices, lines, centerLabel }: { slices: BudgetDonutSlice[]
                 <span className="inline-block shrink-0 rounded-full"
                   style={{ width: 10, height: 10, background: slice.color }} aria-hidden />
                 <div>
-                  <div className="text-[13px] font-medium" style={{ color: 'var(--txt)' }}>{slice.label}</div>
+                  <div className="text-[13px] font-medium" style={{ color: 'var(--txt)' }}><AcronymText text={slice.label} /></div>
                   <div className="text-[12px]" style={{ color: 'var(--txtl)' }}>
                     {brl(amt)}{' '}
                     <span style={{ color: 'var(--txtll)' }}>({pct.toFixed(1)}%)</span>
@@ -153,13 +154,13 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* donut chart */}
@@ -180,7 +181,7 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
                 {/* line label — 14px Inter 600 */}
                 <span className="flex items-center gap-2.5 text-[14px] font-semibold" style={{ color: 'var(--txt)' }}>
                   <span className="text-[18px] leading-none">{line.icon}</span>
-                  <span>{line.label}</span>
+                  <span><AcronymText text={line.label} /></span>
                 </span>
                 {/* value — 16px Playfair 700 */}
                 <span className="text-[16px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
@@ -217,8 +218,8 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
               <tbody>
                 {equipmentItems.map((e, i) => (
                   <tr key={i} style={{ borderTop: '1px solid var(--bdr)' }}>
-                    <td className="px-4 py-3 font-semibold" style={{ color: 'var(--txt)' }}>{e.item}</td>
-                    <td className="px-4 py-3 text-[11.5px]" style={{ color: 'var(--txtl)' }}>{e.spec}</td>
+                    <td className="px-4 py-3 font-semibold" style={{ color: 'var(--txt)' }}><AcronymText text={e.item} /></td>
+                    <td className="px-4 py-3 text-[11.5px]" style={{ color: 'var(--txtl)' }}><AcronymText text={e.spec} /></td>
                     <td className="px-4 py-3 text-center" style={{ color: 'var(--txtl)' }}>{e.qty}</td>
                     <td className="px-4 py-3" style={{ color: 'var(--txtl)' }}>{e.unitValue}</td>
                     <td className="px-4 py-3 font-semibold" style={{ color: 'var(--p)' }}>{e.total}</td>
@@ -261,8 +262,8 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
               const percent  = computedAmt !== null ? `${pct(computedAmt)}%` : (row.percent ?? '0%')
               return (
                 <tr key={i} style={{ borderTop: '1px solid var(--bdr)' }}>
-                  <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}>{row.rubric}</td>
-                  <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}>{row.limit}</td>
+                  <td className="px-5 py-3.5 font-medium" style={{ color: 'var(--txt)' }}><AcronymText text={row.rubric} /></td>
+                  <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}><AcronymText text={row.limit} /></td>
                   <td className="px-5 py-3.5 font-semibold" style={{ color: 'var(--txt)' }}>{proposed}</td>
                   <td className="px-5 py-3.5" style={{ color: 'var(--txtl)' }}>{percent}</td>
                   <td className="px-5 py-3.5 font-semibold" style={{ color: 'var(--p)' }}>✓ {row.status}</td>

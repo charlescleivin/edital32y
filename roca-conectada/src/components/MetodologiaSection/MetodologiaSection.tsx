@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S4Data } from '@/types/proposal'
 import JustificativasSection from '@/components/JustificativasSection/JustificativasSection'
 import CooperaProducaoSection from '@/components/CooperaProducaoSection/CooperaProducaoSection'
@@ -30,13 +31,13 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       <div className="mb-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -49,7 +50,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
               <div className="px-6 py-5" style={{ background: acc.header }}>
                 <div className="text-[26px] leading-none">{phase.icon}</div>
                 <div className="mt-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: acc.text }}>{phase.label}</div>
-                <div className="mt-1 text-[16px] font-bold" style={{ color: 'var(--txt)' }}>{phase.name}</div>
+                <div className="mt-1 text-[16px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={phase.name} /></div>
                 <div className="mt-0.5 text-[12px]" style={{ color: 'var(--txtl)' }}>{phase.period}</div>
               </div>
               {/* activities */}
@@ -58,7 +59,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
                   <div key={j} className="mb-2.5 flex items-start gap-2.5 text-[13px] leading-[1.6]"
                     style={{ color: 'var(--txtl)' }}>
                     <span className="mt-2 h-1 w-1 shrink-0 rounded-full" style={{ background: acc.dot }} />
-                    {act}
+                    <AcronymText text={act} />
                   </div>
                 ))}
               </div>
@@ -230,27 +231,27 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="rounded-2xl border p-6"
           style={{ borderColor: 'rgba(111,168,118,0.2)', background: 'rgba(111,168,118,0.05)' }}>
-          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--sage)' }}>{researcher.title}</div>
-          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}>{researcher.subtitle}</div>
+          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--sage)' }}><AcronymText text={researcher.title} /></div>
+          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}><AcronymText text={researcher.subtitle} /></div>
           <ul className="flex flex-col gap-2 text-[13.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
             {researcher.responsibilities.map((r, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span style={{ color: 'var(--sage)' }}>•</span>{r}
+                <span style={{ color: 'var(--sage)' }}>•</span><AcronymText text={r} />
               </li>
             ))}
           </ul>
           {researcher.badge && (
-            <div className="mt-4 text-[11px] font-bold" style={{ color: 'var(--sage)' }}>{researcher.badge}</div>
+            <div className="mt-4 text-[11px] font-bold" style={{ color: 'var(--sage)' }}><AcronymText text={researcher.badge} /></div>
           )}
         </div>
         <div className="rounded-2xl border p-6"
           style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.05)' }}>
-          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--gold)' }}>{company.title}</div>
-          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}>{company.subtitle}</div>
+          <div className="mb-1 text-[15px] font-bold" style={{ color: 'var(--gold)' }}><AcronymText text={company.title} /></div>
+          <div className="mb-4 text-[13px] italic" style={{ color: 'var(--txtl)' }}><AcronymText text={company.subtitle} /></div>
           <ul className="flex flex-col gap-2 text-[13.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>
             {company.responsibilities.map((r, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span style={{ color: 'var(--gold)' }}>•</span>{r}
+                <span style={{ color: 'var(--gold)' }}>•</span><AcronymText text={r} />
               </li>
             ))}
           </ul>
@@ -261,7 +262,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
                 {company.note}
               </div>
               {company.noteItems.map((n, i) => (
-                <div key={i} className="text-[12px]" style={{ color: 'var(--terra)' }}>✕ {n}</div>
+                <div key={i} className="text-[12px]" style={{ color: 'var(--terra)' }}>✕ <AcronymText text={n} /></div>
               ))}
             </div>
           )}
@@ -279,10 +280,10 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
               <div key={r.id} className="rounded-2xl border p-5"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
                 <div className="mb-1 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{r.municipality}</div>
-                <div className="mb-3 text-[12px]" style={{ color: 'var(--txtl)' }}>{r.profile}</div>
+                <div className="mb-3 text-[12px]" style={{ color: 'var(--txtl)' }}><AcronymText text={r.profile} /></div>
                 <div className="rounded-xl border-l-[2px] pl-3 text-[12px] leading-[1.65]"
                   style={{ borderColor: 'var(--p)', color: 'var(--txtl)' }}>
-                  {r.rationale}
+                  <AcronymText text={r.rationale} />
                 </div>
               </div>
             ))}
@@ -303,8 +304,8 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
                 <div className="mb-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--gold)' }}>
                   {sc.badge}
                 </div>
-                <div className="mb-3 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{sc.title}</div>
-                <p className="text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{sc.content}</p>
+                <div className="mb-3 text-[14px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={sc.title} /></div>
+                <p className="text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}><AcronymText text={sc.content} /></p>
               </div>
             ))}
           </div>
@@ -318,7 +319,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           <div className="mb-2 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
             {conflictGovernance.title}
           </div>
-          <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{conflictGovernance.body}</p>
+          <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={conflictGovernance.body} /></p>
         </div>
       )}
 
@@ -329,7 +330,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
             Declaração de Relacionamento
           </span>
           <span className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-            {company.disclosure}
+            <AcronymText text={company.disclosure} />
           </span>
         </div>
       )}

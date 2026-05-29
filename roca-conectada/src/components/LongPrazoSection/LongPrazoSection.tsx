@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S12Data } from '@/types/proposal'
 
 export type LongPrazoSectionProps = S12Data
@@ -36,13 +37,13 @@ export default function LongPrazoSection({
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       {/* Vision callout */}
@@ -54,9 +55,9 @@ export default function LongPrazoSection({
         </div>
         <p className="mb-4 text-[18px] font-bold leading-[1.5]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {visionStatement}
+          <AcronymText text={visionStatement} />
         </p>
-        <p className="text-[14px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{visionSub}</p>
+        <p className="text-[14px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={visionSub} /></p>
       </div>
 
       {/* Phase timeline */}
@@ -82,13 +83,13 @@ export default function LongPrazoSection({
                 <div className="mb-1 text-[10px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--txtll)' }}>
                   {phase.period}
                 </div>
-                <div className="mb-2 text-[16px] font-bold" style={{ color: 'var(--txt)' }}>{phase.title}</div>
-                <p className="mb-4 text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{phase.description}</p>
+                <div className="mb-2 text-[16px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={phase.title} /></div>
+                <p className="mb-4 text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={phase.description} /></p>
                 <ul className="flex flex-col gap-1.5">
                   {phase.milestones.map((m, j) => (
                     <li key={j} className="flex items-start gap-2 text-[12.5px]" style={{ color: 'var(--txtl)' }}>
                       <span className="mt-[3px] shrink-0 text-[10px]" style={{ color: 'var(--sage)' }}>✓</span>
-                      {m}
+                      <AcronymText text={m} />
                     </li>
                   ))}
                 </ul>
@@ -105,9 +106,9 @@ export default function LongPrazoSection({
           THATPIX — Capital Técnico Insubstituível
         </div>
         <div className="mb-3 text-[17px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {thatpixCallout.title}
+          <AcronymText text={thatpixCallout.title} />
         </div>
-        <p className="mb-6 text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{thatpixCallout.body}</p>
+        <p className="mb-6 text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={thatpixCallout.body} /></p>
         <div className="flex flex-col gap-3">
           {thatpixCallout.points.map((point, i) => {
             const [label, ...rest] = point.split(':')
@@ -136,19 +137,19 @@ export default function LongPrazoSection({
             <div key={fp.id} className="rounded-2xl border p-5"
               style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)', borderLeftWidth: '3px', borderLeftColor: fp.color }}>
               <div className="mb-1 flex items-start justify-between gap-3">
-                <div className="text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{fp.name}</div>
+                <div className="text-[14px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={fp.name} /></div>
                 <span className="shrink-0 rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[1.5px]"
                   style={{ background: `${fp.color}18`, color: typeTextColors[fp.type] ?? fp.color }}>
                   {fp.typeLabel}
                 </span>
               </div>
-              <div className="mb-2 text-[11px]" style={{ color: 'var(--txtll)' }}>{fp.funder}</div>
-              <p className="mb-3 text-[12.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>{fp.description}</p>
+              <div className="mb-2 text-[11px]" style={{ color: 'var(--txtll)' }}><AcronymText text={fp.funder} /></div>
+              <p className="mb-3 text-[12.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}><AcronymText text={fp.description} /></p>
               <div className="flex items-start gap-1.5 text-[11.5px]">
                 <span style={{ color: fp.fitLevel === 'high' ? 'var(--sage)' : 'var(--gold)' }}>
                   {fp.fitLevel === 'high' ? '●' : '◐'}
                 </span>
-                <span style={{ color: 'var(--txtl)' }}>{fp.fit}</span>
+                <span style={{ color: 'var(--txtl)' }}><AcronymText text={fp.fit} /></span>
               </div>
               {fp.amount && (
                 <div className="mt-2 text-[11px] font-bold" style={{ color: fp.color }}>{fp.amount}</div>
@@ -164,9 +165,9 @@ export default function LongPrazoSection({
           Transição do Servidor
         </div>
         <div className="mb-3 text-[17px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-          {serverTransition.title}
+          <AcronymText text={serverTransition.title} />
         </div>
-        <p className="mb-6 text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{serverTransition.body}</p>
+        <p className="mb-6 text-[13.5px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={serverTransition.body} /></p>
         <div className="flex flex-col gap-2">
           {serverTransition.steps.map((step, i) => (
             <div key={i} className="flex items-start gap-3">
@@ -174,7 +175,7 @@ export default function LongPrazoSection({
                 style={{ background: 'rgba(111,168,118,0.15)', color: 'var(--sage)' }}>
                 {i + 1}
               </span>
-              <p className="text-[12.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>{step}</p>
+              <p className="text-[12.5px] leading-[1.7]" style={{ color: 'var(--txtl)' }}><AcronymText text={step} /></p>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import SectionHero from '@/components/ui/SectionHero'
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S9Data } from '@/types/proposal'
 
 export const componentMeta = { slug: 'riscos-section', label: 'Riscos e Mitigações' }
@@ -26,13 +27,13 @@ export default function RiscosSection({ number, title, subtitle, headline, heroI
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2 className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>{title}</h2>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}><AcronymText text={title} /></h2>
         <p className="text-[15px] italic leading-relaxed"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>{subtitle}</p>
+          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}><AcronymText text={subtitle} /></p>
       </div>
 
       <div className="flex flex-col gap-3">
@@ -49,9 +50,9 @@ export default function RiscosSection({ number, title, subtitle, headline, heroI
 
               <div>
                 {/* title — 14px Inter 700 */}
-                <div className="mb-1.5 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{risk.title}</div>
+                <div className="mb-1.5 text-[14px] font-bold" style={{ color: 'var(--txt)' }}><AcronymText text={risk.title} /></div>
                 {/* mitigation — 13px Inter 400 */}
-                <div className="text-[13px] leading-[1.7]" style={{ color: 'var(--txtl)' }}>{risk.mitigation}</div>
+                <div className="text-[13px] leading-[1.7]" style={{ color: 'var(--txtl)' }}><AcronymText text={risk.mitigation} /></div>
               </div>
 
               {/* probability — 12.5px Inter 400 centered */}
@@ -74,10 +75,10 @@ export default function RiscosSection({ number, title, subtitle, headline, heroI
             {sustainabilityScenarios.map((s) => (
               <div key={s.id} className="rounded-2xl border p-6"
                 style={{ borderColor: 'rgba(111,168,118,0.25)', background: 'rgba(111,168,118,0.05)' }}>
-                <div className="mb-2 text-[14px] font-bold" style={{ color: 'var(--sage)' }}>{s.scenario}</div>
-                <p className="mb-4 text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{s.description}</p>
+                <div className="mb-2 text-[14px] font-bold" style={{ color: 'var(--sage)' }}><AcronymText text={s.scenario} /></div>
+                <p className="mb-4 text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}><AcronymText text={s.description} /></p>
                 <div className="flex items-center justify-between text-[11.5px]">
-                  <span style={{ color: 'var(--txtll)' }}>Responsável: <span style={{ color: 'var(--txtl)' }}>{s.responsible}</span></span>
+                  <span style={{ color: 'var(--txtll)' }}>Responsável: <span style={{ color: 'var(--txtl)' }}><AcronymText text={s.responsible} /></span></span>
                   <span className="rounded-full px-3 py-1 text-[10px] font-bold"
                     style={{ background: 'var(--pale)', color: 'var(--p)' }}>{s.probability}</span>
                 </div>
