@@ -355,5 +355,12 @@
     "date": "2026-05-29",
     "label": "rewrite(s4-whatsapp): tom técnico-declarativo, roa",
     "description": "rewrite(s4-whatsapp): tom técnico-declarativo, roadmap de migração soberana"
+  },
+  {
+    "id": "v52",
+    "commit": "bde8102",
+    "date": "2026-05-29",
+    "label": "feat(acronyms,cleanup): glossário de siglas com to",
+    "description": "feat(acronyms,cleanup): glossário de siglas com tooltip + remoção de travessões e emojis"
   }
 ]
