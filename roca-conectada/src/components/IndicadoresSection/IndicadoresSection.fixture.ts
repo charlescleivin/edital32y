@@ -16,7 +16,7 @@ export const fixture: IndicadoresSectionProps = {
     { indicator: 'Agricultores com AgroAssistente ativo (MAU)', phase1: '—', phase2: '800', phase3: '2.500' },
     { indicator: 'Cooperativas com Coopera Digital ativo', phase1: '—', phase2: '6', phase3: '18' },
     { indicator: 'Multiplicadores capacitados (acumulado)', phase1: '20', phase2: '120', phase3: '350' },
-    { indicator: 'AgroLinguaBR — pares Q&A no corpus (acumulado)', phase1: '10.000', phase2: '20.000', phase3: '25.000' },
+    { indicator: 'AgroLinguaBR — pares Q&A no corpus (acumulado)', phase1: '10.000', phase2: '18.000', phase3: '25.000' },
     { indicator: 'Instituições integrando a AgroAPI', phase1: '—', phase2: '2', phase3: '5' },
     { indicator: 'Downloads / citações do AgroEval (acumulado)', phase1: '—', phase2: '50', phase3: '200' },
     { indicator: 'Redução de custo de insumos por família (grupo AgroAssistente vs. controle)', phase1: '—', phase2: 'baseline', phase3: '−12–18%' },

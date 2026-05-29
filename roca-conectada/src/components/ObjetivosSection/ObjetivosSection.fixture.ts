@@ -20,7 +20,7 @@ export const fixture: ObjetivosSectionProps = {
       label: 'Eixo II — Validação e Implantação',
       objectives: [
         { id: 'oe4', code: 'OE4.', text: 'Realizar fine-tuning e validação científica do AgroAssistente IA em protocolo de grupo controle randomizado (Fase 2, Meses 13–24): n=50 agricultores como grupo controle recebem ATER convencional; os demais 800 integram o grupo de intervenção — totalizando 850 participantes no protocolo. O n=50 para o grupo controle não é arbitrário: o cálculo de poder estatístico (G*Power, d de Cohen = 0,5 — tamanho de efeito médio correspondente a ~10% de melhoria em indicadores mensuráveis de adoção de boas práticas) com poder de 80% exige mínimo de n=51 por grupo, tornando n=50 o patamar padrão arredondado da literatura. Protocolo registrado no CONEP antes do início do piloto.' },
-        { id: 'oe5', code: 'OE5.', text: 'Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24) — distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300 — e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via rede de 30 multiplicadores EMATER treinados — cada multiplicador responsável por ~57 novos agricultores dentro de seus circuitos territoriais existentes.' },
+        { id: 'oe5', code: 'OE5.', text: 'Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24) — distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300 — e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores da rede de 120 capacitados na Fase 2 — cada um responsável por ~57 novos agricultores nos seus circuitos territoriais —.' },
         { id: 'oe6', code: 'OE6.', text: 'Implantar o Coopera Digital em 6 cooperativas âncora (Fase 2, Meses 13–24) e 18 cooperativas (Fase 3, Meses 25–36), com módulo de rastreabilidade de origem do produto (registro de lote, destino PAA/PNAE e certificação de procedência), garantindo conformidade com a Resolução CONAB nº 127/2024. As 6 âncoras são 2 por região-piloto, selecionadas no diagnóstico da Fase 1 por critério objetivo: carta de anuência assinada e cadeia PAA/PNAE ativa. As 18 da Fase 3 resultam de fator de replicação 3× via redes FETRAF/EMATER — conservador em relação ao fator 4–6× documentado na literatura para ferramentas digitais em redes cooperativas. As 18 cooperativas somam entre 900 e 3.600 agricultores associados (50–200 membros cada), multiplicando o alcance efetivo do projeto além dos 2.500 usuários diretos do AgroAssistente.' },
       ],
     },
@@ -28,7 +28,7 @@ export const fixture: ObjetivosSectionProps = {
       id: 'e3',
       label: 'Eixo III — Ecossistema Nacional e Soberania',
       objectives: [
-        { id: 'oe7', code: 'OE7.', text: 'Publicar e operar a AgroAPI como serviço público aberto, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs.' },
+        { id: 'oe7', code: 'OE7.', text: 'Publicar e operar a AgroAPI como serviço público regulado, habilitando integração por EMATERs estaduais, universidades, startups e outras ICTs.' },
         { id: 'oe8', code: 'OE8.', text: 'Capacitar 350 multiplicadores (técnicos ATER e gestores de cooperativas) como agentes de expansão e sustentabilidade do ecossistema.' },
         { id: 'oe9', code: 'OE9.', text: 'Transferir a titularidade do modelo, corpus e benchmarks para a ICT executora ([ICT EXECUTORA]), assegurando soberania e permanência nacional da infraestrutura.' },
       ],
@@ -57,7 +57,7 @@ export const fixture: ObjetivosSectionProps = {
       body: 'A PNPIAF, em seu Eixo IV, estabelece a inclusão digital em áreas rurais como política de Estado. O edital FINEP AgriFam-ICT 2026 é mecanismo direto de execução desse eixo. O SABIA é a resposta técnica completa: corpus linguístico nacional, modelo de linguagem soberano em português e aplicação via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente — solução concebida desde o início para a realidade das pequenas propriedades rurais brasileiras.',
     },
     {
-      sigla: 'ENECI / PBIA',
+      sigla: 'ENCTI / PBIA',
       fullName: 'Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028',
       decree: 'ENCTI / MCTI 2024 · PBIA / MCTI 2024',
       axes: 'Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português',

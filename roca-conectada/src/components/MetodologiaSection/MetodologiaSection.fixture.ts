@@ -17,6 +17,7 @@ export const fixture: MetodologiaSectionProps = {
         'Fine-tuning do LLM base selecionado com LoRA/PEFT: cluster GPU laboratório da [ICT EXECUTORA] (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000.',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
+        'Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
       ],
     },
     {
@@ -85,12 +86,6 @@ export const fixture: MetodologiaSectionProps = {
       badge: '🌐 Soberania de Dados',
       title: 'AgroLinguaBR: corpus de titularidade pública',
       content: 'O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença CC BY-NC-SA 4.0 e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras.',
-    },
-    {
-      id: 'sc3',
-      badge: '🔓 Transferência Tecnológica',
-      title: 'Open-source como ato de soberania',
-      content: 'Todo o pipeline de fine-tuning, os scripts de avaliação e a arquitetura de orquestração de agentes serão liberados como código aberto ao final do projeto. O objetivo é que outros pesquisadores brasileiros — em outras culturas, regiões e línguas minoritárias — possam replicar a metodologia sem recomeçar do zero. Independência tecnológica começa com documentação aberta.',
     },
     {
       id: 'sc-corpus-25k',

@@ -18,6 +18,12 @@ export const fixture: ProblemaSectionProps = {
       keyFact: { value: '≤30%', label: 'cobertura 4G no Semiárido (Anatel 2023)' },
     },
     {
+      icon: '🏗️',
+      title: 'Barreira 2 — A Dependência de Plataformas Estrangeiras Descartáveis: ruptura documentada, repetida, previsível',
+      description: 'A solução tecnicamente óbvia para o déficit de ATER seria redirecionar agricultores para LLMs comerciais. O histórico recente documenta por que essa abordagem constitui uma vulnerabilidade estratégica, não uma solução. Em março de 2023, a Itália bloqueou o ChatGPT em menos de 24 horas — 60 milhões de pessoas perderam acesso sem aviso. Em novembro de 2023, a diretoria da OpenAI demitiu o CEO sem aviso; por cinco dias, toda aplicação GPT-4 no mundo rodou sobre uma empresa em colapso de governança. Em julho de 2024, a OpenAI bloqueou países como China, Rússia e Irã por critérios unilaterais e discricionários.\n\nEm dezembro de 2025, a GROQ — provedora de inferência com 2 milhões de desenvolvedores — foi adquirida pela Nvidia sem consulta. Em janeiro de 2026, a OpenAI descontinuou o GPT-4o com 14 dias de aviso, após prometer "aviso amplo" (The Register). O Brasil é o segundo maior mercado de desenvolvedores ativos na API da OpenAI — o país do Sul Global mais exposto a um ponto único de falha que não controla (Softex, 2025).\n\nA questão não é se isso acontecerá com alguma plataforma que suporta a extensão rural de 3,9 milhões de famílias. É quando — e se o Brasil terá infraestrutura própria quando acontecer. O SABIA elimina esse risco pela raiz: infraestrutura soberana nacional, sem dependência de fornecedor estrangeiro.',
+      keyFact: { value: '14 dias', label: 'de aviso da OpenAI para descontinuar o GPT-4o em janeiro de 2026, após prometer \'aviso amplo\' — ilustrando o padrão de ruptura unilateral (The Register, 2026)' },
+    },
+    {
       icon: '💰',
       title: 'Custo Inacessível das Plataformas Existentes',
       description: 'Plataformas agrícolas digitais comerciais cobram entre R$ 80 e R$ 500/mês por assinatura — valor que representa 3–15% da renda mensal bruta da família rural mediana (R$ 3.200/mês, IBGE 2022). O AgroAssistente elimina esse custo: acesso via WhatsApp sem mensalidade, sem smartphone de alto custo, sem dados móveis ilimitados.',
@@ -34,6 +40,12 @@ export const fixture: ProblemaSectionProps = {
       title: 'Colapso Estrutural da ATER — Escassez de Técnicos',
       description: 'A relação nacional entre agentes ATER e famílias rurais é de 1:500 — e chega a 1:1.000 no Norte e Nordeste (ANATER, 2023). Uma visita técnica presencial custa R$ 300–600 por família, tornando a extensão rural convencional economicamente inescalável. O AgroAssistente não substitui o técnico ATER: multiplica sua capacidade. Um técnico capacitado como multiplicador pode atender indiretamente 83 agricultores via plataforma — reduzindo a relação efetiva para 1:6 com custo marginal próximo de zero.',
       keyFact: { value: '1:500', label: 'relação agente ATER / família (meta ONU: 1:400)' },
+    },
+    {
+      icon: '🛡️',
+      title: 'Barreira 5 — O Vácuo da Soberania Alimentar Digital: 3,9M famílias fora do perímetro que o Brasil está construindo agora',
+      description: 'O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA, lançado em maio de 2026 no mesmo mês desta chamada, destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros focado em cidades, burocracia e serviços governamentais. O Brasil não classifica a agricultura como infraestrutura crítica no PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE. Das 54 ações do PBIA, zero endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar.\n\nEsses 3,9 milhões de estabelecimentos produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro de soberania digital sendo erguido agora. A situação das mulheres é a mais grave: 95% das 1,7 milhão de agricultoras que dirigem propriedades rurais no Nordeste não têm acesso a ATER (IBGE 2017).\n\nO SABIA entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à [ICT EXECUTORA] com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe.',
+      keyFact: { value: '0 de 54', label: 'ações do PBIA 2024–2028 endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar — o perímetro de soberania digital nacional não inclui quem produz 70% dos alimentos do Brasil' },
     },
   ],
   aiEvidenceSection: {
