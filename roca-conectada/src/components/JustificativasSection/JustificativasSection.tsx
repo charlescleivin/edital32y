@@ -1,3 +1,4 @@
+import { AcronymText } from '@/components/ui/AcronymText'
 import type { S15Data, JustificativaBlock, JustificativaCitation } from '@/types/proposal'
 
 export const componentMeta = { slug: 'justificativas-section', label: 'Justificativas de Dimensionamento' }
@@ -25,10 +26,10 @@ function CitationCard({ cit, citBorder, citBg, accentText }: {
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <p className="text-[11px] font-semibold leading-[1.5] line-clamp-2" style={{ color: 'var(--txt)' }}>
-            {cit.title}
+            <AcronymText text={cit.title} />
           </p>
           <p className="mt-0.5 text-[10px] leading-[1.4]" style={{ color: 'var(--txtll)' }}>
-            {cit.authors}
+            <AcronymText text={cit.authors} />
           </p>
         </div>
         <span
@@ -47,13 +48,13 @@ function CitationCard({ cit, citBorder, citBg, accentText }: {
           Achado-chave
         </span>
         <span className="text-[11px] leading-[1.6] font-semibold" style={{ color: 'var(--txtl)' }}>
-          {cit.keyFinding}
+          <AcronymText text={cit.keyFinding} />
         </span>
       </div>
 
       <div className="flex items-center gap-2 flex-wrap">
         <span className="text-[9.5px] italic" style={{ color: 'var(--txtll)' }}>
-          {cit.venue}
+          <AcronymText text={cit.venue} />
         </span>
         {cit.doi && (
           <span className="text-[9px] font-mono" style={{ color: 'var(--txtll)' }}>
@@ -92,14 +93,14 @@ function JustBlock({ block, index }: { block: JustificativaBlock; index: number 
           className="text-[17px] sm:text-[20px] font-bold leading-[1.15]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
         >
-          {block.question}
+          <AcronymText text={block.question} />
         </h3>
       </div>
 
       {/* Argument */}
       <div className="flex flex-col gap-6 p-6">
         <p className="text-[13px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
-          {block.argument}
+          <AcronymText text={block.argument} />
         </p>
 
         {/* Citation cards grid */}
@@ -139,7 +140,7 @@ function JustBlock({ block, index }: { block: JustificativaBlock; index: number 
               Conclusão
             </div>
             <p className="text-[13px] font-semibold leading-[1.8]" style={{ color: 'var(--txt)' }}>
-              {block.conclusion}
+              <AcronymText text={block.conclusion} />
             </p>
           </div>
         </div>
@@ -173,27 +174,27 @@ export default function JustificativasSection({
           className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}
         >
-          📐 {number}
+          {number}
         </span>
         {headline && (
           <p
             className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}
           >
-            {headline}
+            <AcronymText text={headline} />
           </p>
         )}
         <h2
           className="mb-3 text-[26px] sm:text-[34px] lg:text-[44px] font-bold leading-[1.05] tracking-[-0.3px]"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
         >
-          {title}
+          <AcronymText text={title} />
         </h2>
         <p
           className="lg:max-w-[680px] text-[15px] italic leading-relaxed"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}
         >
-          {subtitle}
+          <AcronymText text={subtitle} />
         </p>
       </div>
 
@@ -225,7 +226,7 @@ export default function JustificativasSection({
           </div>
         </div>
         <p className="text-[13.5px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
-          {thatpixNote}
+          <AcronymText text={thatpixNote} />
         </p>
       </div>
     </section>

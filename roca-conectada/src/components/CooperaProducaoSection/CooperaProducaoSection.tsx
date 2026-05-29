@@ -251,7 +251,7 @@ export default function CooperaProducaoSection({
           className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}
         >
-          🌾 {number}
+          {number}
         </span>
         {headline && (
           <p
@@ -277,7 +277,7 @@ export default function CooperaProducaoSection({
 
       {/* ── Block 1: lead stats ────────────────────────────────────────────── */}
       <div className="mb-4 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-        📊 A Oportunidade Econômica — Dados de Base
+        A Oportunidade Econômica — Dados de Base
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
         {leadStats.map((s, i) => (

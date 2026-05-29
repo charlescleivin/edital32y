@@ -218,7 +218,7 @@ export default function SoberaniaSection({
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          🔐 {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -315,7 +315,7 @@ export default function SoberaniaSection({
       {/* Access phases */}
       <div className="mb-12">
         <div className="mb-6 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-          📈 Roadmap de Acesso — Expansão Gradual
+          Roadmap de Acesso — Expansão Gradual
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {accessPhases.map((phase, i) => (
@@ -328,7 +328,7 @@ export default function SoberaniaSection({
       <div className="rounded-3xl border p-8"
         style={{ borderColor: 'rgba(200,85,48,0.25)', background: 'rgba(200,85,48,0.04)' }}>
         <div className="mb-2 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--terra)' }}>
-          🌱 O Ativo Permanente
+          O Ativo Permanente
         </div>
         <p className="text-[14px] leading-[1.9]" style={{ color: 'var(--txtl)' }}>
           {expansionVision}

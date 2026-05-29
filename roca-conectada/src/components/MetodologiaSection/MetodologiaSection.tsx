@@ -25,7 +25,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          🛠️ {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -71,7 +71,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       <div className="relative mb-10">
       <div className="rounded-2xl border p-4 sm:p-6 overflow-x-auto" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
         <div className="mb-4 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-          📅 Cronograma — 36 Meses de Execução
+          Cronograma — 36 Meses de Execução
         </div>
 
         {/* Mobile-only vertical card layout */}
@@ -184,7 +184,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         <div className="mb-10 overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
           <div className="border-b px-6 py-4" style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.03)' }}>
             <div className="text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-              📋 Marcos de Entrega — Artefatos Verificáveis por Fase (FINEP)
+              Marcos de Entrega — Artefatos Verificáveis por Fase (FINEP)
             </div>
             <p className="mt-1 text-[12px]" style={{ color: 'var(--txtll)' }}>
               Cada parcela exige prestação de contas com evidência técnica verificável independentemente. Estes são os artefatos que documentam a entrega da THATPIX em cada marco anual.
@@ -225,7 +225,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
 
       {/* scope distinction */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-        ⚖️ Distinção de Escopos — Regra Fundamental
+        Distinção de Escopos — Regra Fundamental
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="rounded-2xl border p-6"
@@ -272,13 +272,13 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       {pilotRegions && pilotRegions.length > 0 && (
         <div className="mb-8">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-            📍 Regiões-Piloto — Municípios Selecionados
+            Regiões-Piloto — Municípios Selecionados
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pilotRegions.map((r) => (
               <div key={r.id} className="rounded-2xl border p-5"
                 style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
-                <div className="mb-1 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>📍 {r.municipality}</div>
+                <div className="mb-1 text-[14px] font-bold" style={{ color: 'var(--txt)' }}>{r.municipality}</div>
                 <div className="mb-3 text-[12px]" style={{ color: 'var(--txtl)' }}>{r.profile}</div>
                 <div className="rounded-xl border-l-[2px] pl-3 text-[12px] leading-[1.65]"
                   style={{ borderColor: 'var(--p)', color: 'var(--txtl)' }}>
@@ -294,7 +294,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
       {sovereigntyCallouts && sovereigntyCallouts.length > 0 && (
         <div className="mt-8">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-            🇧🇷 Soberania Tecnológica — Escolhas Deliberadas
+            Soberania Tecnológica — Escolhas Deliberadas
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {sovereigntyCallouts.map((sc) => (
@@ -316,7 +316,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         <div className="mt-5 rounded-2xl border p-6"
           style={{ borderColor: 'rgba(212,150,14,0.2)', background: 'rgba(212,150,14,0.04)' }}>
           <div className="mb-2 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--gold)' }}>
-            ⚖️ {conflictGovernance.title}
+            {conflictGovernance.title}
           </div>
           <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>{conflictGovernance.body}</p>
         </div>
@@ -326,7 +326,7 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
         <div className="mt-4 rounded-xl border-l-[3px] px-5 py-4"
           style={{ borderColor: 'rgba(237,229,211,0.15)', background: 'rgba(237,229,211,0.03)' }}>
           <span className="mr-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--txtll)' }}>
-            ⚖️ Declaração de Relacionamento
+            Declaração de Relacionamento
           </span>
           <span className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
             {company.disclosure}

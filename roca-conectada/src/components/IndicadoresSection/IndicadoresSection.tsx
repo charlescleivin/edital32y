@@ -18,7 +18,7 @@ function LeverageBlock({ data }: { data: InvestmentLeverage }) {
       {/* header */}
       <div className="border-b px-8 py-7" style={{ borderColor: 'rgba(212,150,14,0.15)', background: 'rgba(212,150,14,0.04)' }}>
         <div className="mb-1 text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--gold)' }}>
-          💡 Retorno sobre Investimento Público
+          Retorno sobre Investimento Público
         </div>
         <h3 className="mb-1 text-[22px] font-bold leading-snug" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
           {data.title}
@@ -158,7 +158,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          📊 {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -192,7 +192,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
         <div className="mb-8 rounded-2xl border-l-[3px] px-7 py-6"
           style={{ borderColor: 'var(--p)', background: 'rgba(111,168,118,0.05)' }}>
           <div className="mb-2 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
-            🌱 O que esses números significam no campo
+            O que esses números significam no campo
           </div>
           <p className="text-[14px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
             {impactNarrative}
@@ -205,7 +205,7 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
       {/* impact funnel — corpus → model → users → income */}
       <div className="mb-8 rounded-2xl border p-6" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
         <div className="mb-5 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-          🔗 Cadeia de Impacto — Como o Investimento Vira Renda Rural
+          Cadeia de Impacto — Como o Investimento Vira Renda Rural
         </div>
         <div className="relative">
         <div className="flex items-center gap-2 overflow-x-auto">

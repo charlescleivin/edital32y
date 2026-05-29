@@ -31,7 +31,7 @@ export default function LongPrazoSection({
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          🔭 {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -62,7 +62,7 @@ export default function LongPrazoSection({
       {/* Phase timeline */}
       <div className="mb-14">
         <div className="mb-6 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-          🗺️ Plano de Quatro Movimentos
+          Plano de Quatro Movimentos
         </div>
         <div className="relative flex flex-col gap-0">
           {phases.map((phase, i) => (
@@ -102,7 +102,7 @@ export default function LongPrazoSection({
       <div className="mb-14 overflow-hidden rounded-3xl border p-8"
         style={{ borderColor: 'rgba(8,145,178,0.3)', background: 'rgba(8,145,178,0.05)' }}>
         <div className="mb-2 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
-          🏢 THATPIX — Capital Técnico Insubstituível
+          THATPIX — Capital Técnico Insubstituível
         </div>
         <div className="mb-3 text-[17px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
           {thatpixCallout.title}
@@ -129,7 +129,7 @@ export default function LongPrazoSection({
       {/* Funding paths */}
       <div className="mb-14">
         <div className="mb-6 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-          💰 Caminhos de Captação — Rodada de Escala
+          Caminhos de Captação — Rodada de Escala
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {fundingPaths.map((fp) => (
@@ -161,7 +161,7 @@ export default function LongPrazoSection({
       {/* Server transition */}
       <div className="rounded-3xl border p-8" style={{ borderColor: 'rgba(26,92,56,0.3)', background: 'rgba(26,92,56,0.06)' }}>
         <div className="mb-2 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--sage)' }}>
-          🖥️ Transição do Servidor
+          Transição do Servidor
         </div>
         <div className="mb-3 text-[17px] font-bold" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
           {serverTransition.title}

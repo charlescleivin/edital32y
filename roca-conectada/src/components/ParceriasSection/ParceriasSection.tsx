@@ -21,7 +21,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          🤝 {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -58,7 +58,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
                 style={{ background: st.badge, color: st.badgeText }}>{p.priorityLabel}</span>
               <div className="mb-1.5 text-[15px] font-bold" style={{ color: 'var(--txt)' }}>{p.name}</div>
               <div className="mb-3 text-[13px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>{p.role}</div>
-              <div className="text-[12px] font-semibold" style={{ color: st.deadline }}>⚡ {p.deadline}</div>
+              <div className="text-[12px] font-semibold" style={{ color: st.deadline }}>{p.deadline}</div>
             </div>
           )
         })}
@@ -68,7 +68,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
       {disseminationRoutes && disseminationRoutes.length > 0 && (
         <div className="mb-8">
           <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-            📡 Estratégia de Disseminação dos Resultados
+            Estratégia de Disseminação dos Resultados
           </div>
           <div className="relative">
           <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
@@ -106,7 +106,7 @@ export default function ParceriasSection({ number, title, subtitle, headline, he
 
       {/* timeline */}
       <div className="mb-3 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-        📅 Sequência Crítica de Ações
+        Sequência Crítica de Ações
       </div>
       <div className="overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)', background: 'var(--bg-card)' }}>
         {actionTimeline.map((week, i) => (

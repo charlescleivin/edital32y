@@ -21,7 +21,7 @@ export default function RiscosSection({ number, title, subtitle, headline, heroI
       <div className="relative mb-14">
         <span className="mb-5 inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 text-[9px] font-bold uppercase tracking-[3px]"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)', color: 'var(--txtll)' }}>
-          ⚡ {number}
+          {number}
         </span>
         {headline && (
           <p className="mb-3 text-[16px] sm:text-[19px] lg:text-[22px] font-bold italic leading-[1.2]"
@@ -68,7 +68,7 @@ export default function RiscosSection({ number, title, subtitle, headline, heroI
       {sustainabilityScenarios && sustainabilityScenarios.length > 0 && (
         <div className="mt-8">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-            🌱 Sustentabilidade Pós-Projeto — Cenários de Continuidade
+            Sustentabilidade Pós-Projeto — Cenários de Continuidade
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {sustainabilityScenarios.map((s) => (
