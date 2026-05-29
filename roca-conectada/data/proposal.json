@@ -321,7 +321,7 @@
           "value": "0 de 54",
           "label": "ações do PBIA 2024–2028 endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar — o perímetro de soberania digital nacional não inclui quem produz 70% dos alimentos do Brasil"
         },
-        "description": "O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA, lançado em maio de 2026 no mesmo mês desta chamada, destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros focado em cidades, burocracia e serviços governamentais. O Brasil não classifica a agricultura como infraestrutura crítica no PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE. Das 54 ações do PBIA, zero endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar.\n\nEsses 3,9 milhões de estabelecimentos produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro de soberania digital sendo erguido agora. A situação das mulheres é a mais grave: 95% das 1,7 milhão de agricultoras que dirigem propriedades rurais no Nordeste não têm acesso a ATER (IBGE 2017).\n\nO SABIA entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à [ICT EXECUTORA] com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe.",
+        "description": "O PBIA 2024–2028 tem 54 ações e R$ 23 bilhões para soberania tecnológica. O SoberanIA, lançado em maio de 2026 no mesmo mês desta chamada, destinou R$ 40 milhões para um LLM de 30 bilhões de parâmetros focado em cidades, burocracia e serviços governamentais. O Brasil não classifica a agricultura como infraestrutura crítica no PLANSIC (Decreto 11.200/2022) — ao contrário dos EUA, Canadá e UE. Das 54 ações do PBIA, zero endereçam especificamente os 3,9 milhões de estabelecimentos de agricultura familiar.\n\nEsses 3,9 milhões de estabelecimentos produzem 70% dos alimentos consumidos no Brasil e sustentam a segurança alimentar de 215 milhões de pessoas — estão completamente fora do perímetro de soberania digital sendo erguido agora. A situação das mulheres é a mais grave: 95% das 1,7 milhão de agricultoras que dirigem propriedades rurais no Brasil não têm acesso a ATER (IBGE 2017).\n\nO SABIA entrega os três ativos que nenhuma outra iniciativa brasileira em curso fornece: o corpus AgroLinguaBR, o modelo treinado sobre esse corpus e a AgroAPI como camada de integração para políticas públicas. Ao mês 36, esses ativos são transferidos à [ICT EXECUTORA] com titularidade pública permanente — aderência ao PBIA não por alinhamento formal, mas por construção do ativo estratégico nacional que o PBIA identifica como necessário e ainda não existe.",
         "image": "/barrier5-food.jpg",
         "imageObjectPosition": "50% 40%"
       }
@@ -512,7 +512,7 @@
       {
         "id": "b40",
         "ref": "EMBRAPA / MDA / MAPA / AZap.AI — RAImundo (2025)",
-        "text": "Embrapa, MAPA, MDA e startup AZap.AI lançaram em 2025 o RAImundo — assistente virtual gratuito via WhatsApp para pequenos e médios agricultores brasileiros, cobrindo manejo, clima, mercado, pragas, solo e produção sustentável. Base: décadas de pesquisas da Embrapa. Meta: 100.000 usuários no primeiro ano. O RAImundo valida o problema que o SABIA resolve: há demanda documentada por assistência técnica agrícola digital em português. Diferencial do SABIA: foco em agricultores familiares do Nordeste, corpus especializado com validação científica, arquitetura soberana open-source com transferência de titularidade pública. Fonte: Embrapa Agricultura Digital. RAImundo. Brasília: Embrapa, 2025."
+        "text": "Embrapa, MAPA, MDA e startup AZap.AI lançaram em 2025 o RAImundo — assistente virtual gratuito via WhatsApp para pequenos e médios agricultores brasileiros, cobrindo manejo, clima, mercado, pragas, solo e produção sustentável. Base: décadas de pesquisas da Embrapa. Meta: 100.000 usuários no primeiro ano. O RAImundo valida o problema que o SABIA resolve: há demanda documentada por assistência técnica agrícola digital em português. Diferencial do SABIA: foco em agricultores familiares do Nordeste, corpus especializado com validação científica, arquitetura soberana de código aberto sob licença CC BY-NC-SA 4.0 com transferência de titularidade pública. Fonte: Embrapa Agricultura Digital. RAImundo. Brasília: Embrapa, 2025."
       },
       {
         "id": "b41",
@@ -715,7 +715,7 @@
     "title": "Objetivos",
     "heroImage": "/hero3.png",
     "subtitle": "Geral e específicos, alinhados à Linha Temática 3",
-    "headline": "11 objetivos. Da pesquisa à política pública.",
+    "headline": "9 objetivos. Da pesquisa à política pública.",
     "generalObjective": "Construir a infraestrutura nacional soberana de IA para a agricultura familiar — corpus soberano (CC BY-NC-SA 4.0), modelo soberano, benchmark de avaliação e API pública — e sobre ela desenvolver, validar e implantar o ecossistema SABIA, digitalizando as cadeias socioprodutivas da agricultura familiar e habilitando o ecossistema nacional de IA agroalimentar.",
     "axes": [
       {
@@ -751,7 +751,7 @@
           {
             "id": "oe5",
             "code": "OE5.",
-            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24) — distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300 — e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via rede de 30 multiplicadores EMATER treinados — cada multiplicador responsável por ~57 novos agricultores dentro de seus circuitos territoriais existentes —, mantendo-se abaixo do teto documentado de capacidade do servidor."
+            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24) — distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300 — e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores da rede de 120 capacitados na Fase 2 — cada um responsável por ~57 novos agricultores nos seus circuitos territoriais —, mantendo-se abaixo do teto documentado de capacidade do servidor."
           },
           {
             "id": "oe6",
@@ -857,7 +857,7 @@
         "body": "A PNPIAF, em seu Eixo IV, estabelece a inclusão digital em áreas rurais como política de Estado. O edital FINEP AgriFam-ICT 2026 é mecanismo direto de execução desse eixo. O SABIA é a resposta técnica completa: corpus linguístico nacional, modelo de linguagem soberano em português e aplicação via WhatsApp com arquitetura assíncrona tolerante a conectividade intermitente — solução concebida desde o início para a realidade das pequenas propriedades rurais brasileiras."
       },
       {
-        "sigla": "ENECI / PBIA",
+        "sigla": "ENCTI / PBIA",
         "fullName": "Estratégia Nacional de CT&I 2024–2034 · Plano Brasileiro de Inteligência Artificial 2024–2028",
         "decree": "ENCTI / MCTI 2024 · PBIA / MCTI 2024",
         "axes": "Eixo 3 — Soberania Tecnológica Nacional · Eixo 4 — Transformação Digital Inclusiva · PBIA: modelos nacionais de linguagem em português",
@@ -991,7 +991,7 @@
         "id": "sc1",
         "badge": "📱 Justificativa Estratégica",
         "title": "WhatsApp × Soberania: O Tradeoff Que Não É o Que Parece",
-        "content": "A escolha do WhatsApp como canal de entrega do AgroAssistente pode parecer contraditória em um projeto de soberania tecnológica. É uma tensão real — e merece resposta direta, não contorno retórico. A soberania reside na camada de IA, não no canal de mensagens. O corpus AgroLinguaBR, o modelo fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos, hospedados e titularizados no Brasil, transferidos à [ICT EXECUTORA] no mês 36. O WhatsApp é o canal de entrega — equivalente à estrada pela qual o conhecimento trafega. Não possuímos as estradas, mas o veículo — o que pensa, decide e responde — é nacional. Os prós da escolha são mensuráveis: o IBGE PNAD 2023 documenta que 99% dos usuários rurais de smartphone no Brasil utilizam WhatsApp como aplicativo principal de comunicação. Curva de aprendizado: zero. Custo de dispositivo adicional: zero — funciona em Android de R$ 400. Construir um aplicativo próprio equivalente custaria entre R$ 1 e 2 milhões e exigiria 2+ anos de campanhas de adoção — e falharia por fricção, não por falta de qualidade técnica. O Farmer.Chat (implantado no Quênia, Índia e Etiópia) e o Darli AI (Gana, 110.000 agricultores ativos em 8 meses) demonstraram empiricamente que o WhatsApp é o canal padrão de IA agrícola em mercados emergentes. Os contras são igualmente reais e devem ser declarados: a Meta pode alterar os termos da API Business; a Meta pode encerrar o acesso; existe dependência de infraestrutura estrangeira na camada de entrega. A resposta arquitetural do projeto é direta: o backend do AgroAssistente é projetado como canal-agnóstico desde o início — a mesma engine de inferência que alimenta o WhatsApp hoje pode alimentar Telegram, um mensageiro governamental brasileiro ou uma integração direta com sistemas EMATER por reconfiguração, não por reescrita. O investimento técnico relevante reside em infraestrutura brasileira e não está sujeito a decisões da Meta. O precedente é amplo: o Kisan e-Mitra indiano usa WhatsApp; o RAImundo da EMBRAPA (lançado em 2025) usa WhatsApp. A questão pertinente para avaliação não é 'o canal é soberano?' — é 'a IA embaixo do canal é soberana?' Para o SABIA, a resposta é sim, por design e por contrato de transferência de titularidade."
+        "content": "A escolha do WhatsApp como canal de entrega do AgroAssistente pode parecer contraditória em um projeto de soberania tecnológica. É uma tensão real — e merece resposta direta, não contorno retórico. A soberania reside na camada de IA, não no canal de mensagens. O corpus AgroLinguaBR, o modelo fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos, hospedados e titularizados no Brasil, transferidos à [ICT EXECUTORA] no mês 36. O WhatsApp é o canal de entrega — equivalente à estrada pela qual o conhecimento trafega. Não possuímos as estradas, mas o veículo — o que pensa, decide e responde — é nacional. Os prós da escolha são mensuráveis: o IBGE PNAD 2023 documenta que 96% dos agricultores rurais brasileiros com celular se comunicam via WhatsApp (Embrapa, 2023). Curva de aprendizado: zero. Custo de dispositivo adicional: zero — funciona em Android de R$ 400. Construir um aplicativo próprio equivalente custaria entre R$ 1 e 2 milhões e exigiria 2+ anos de campanhas de adoção — e falharia por fricção, não por falta de qualidade técnica. O Farmer.Chat (implantado no Quênia, Índia e Etiópia) e o Darli AI (Gana, 110.000 agricultores ativos em 8 meses) demonstraram empiricamente que o WhatsApp é o canal padrão de IA agrícola em mercados emergentes. Os contras são igualmente reais e devem ser declarados: a Meta pode alterar os termos da API Business; a Meta pode encerrar o acesso; existe dependência de infraestrutura estrangeira na camada de entrega. A resposta arquitetural do projeto é direta: o backend do AgroAssistente é projetado como canal-agnóstico desde o início — a mesma engine de inferência que alimenta o WhatsApp hoje pode alimentar Telegram, um mensageiro governamental brasileiro ou uma integração direta com sistemas EMATER por reconfiguração, não por reescrita. O investimento técnico relevante reside em infraestrutura brasileira e não está sujeito a decisões da Meta. O precedente é amplo: o Kisan e-Mitra indiano usa WhatsApp; o RAImundo da EMBRAPA (lançado em 2025) usa WhatsApp. A questão pertinente para avaliação não é 'o canal é soberano?' — é 'a IA embaixo do canal é soberana?' Para o SABIA, a resposta é sim, por design e por contrato de transferência de titularidade."
       },
       {
         "id": "sc2",
@@ -2157,7 +2157,7 @@
       {
         "audience": "ICTs, startups e organizações do ecossistema",
         "mechanism": "AgroAPI pública com documentação completa (OpenAPI/Swagger), sandbox gratuito para testes e registro aberto de uso",
-        "when": "Fase 3 (mês 30) → permanente"
+        "when": "Fase 3 (mês 36) → permanente"
       },
       {
         "audience": "Políticas públicas e governo federal",
@@ -2430,6 +2430,13 @@
         "mitigation": "Mitigação em três camadas: (1) modelo fine-tuned em servidor da [ICT EXECUTORA] zera custo de API — custo pós-projeto limita-se a energia elétrica e manutenção de hardware amortizado; (2) negociação de acordo de cooperação técnica com EMATER/EMBRAPA iniciada no mês 24 para absorção operacional; (3) código Apache 2.0 garante que qualquer ICT ou EMATER estadual possa hospedar independentemente. Indicador de acompanhamento: MoU com parceiro de absorção assinado até o mês 32.",
         "probability": "Média",
         "level": "medium"
+      },
+      {
+        "id": "r-conep",
+        "title": "Atraso na aprovação do protocolo CONEP",
+        "mitigation": "O protocolo CONEP (pesquisa com seres humanos) será submetido no Mês 1, antes de qualquer atividade de campo. O cronograma da Fase 1 aloca 12 meses para a construção do corpus — janela suficiente para aprovação mesmo no cenário de 8–10 meses de análise. O PD-2 (coordenador de campo da ICT) é o responsável designado pelo protocolo ético. O Comitê Técnico Externo monitora o prazo a cada reunião trimestral.",
+        "probability": "Médio",
+        "level": "medium"
       }
     ],
     "sustainabilityScenarios": [
@@ -2478,8 +2485,8 @@
           {
             "id": "p2",
             "label": "Plano de Trabalho detalhado no formato FINEP",
-            "detail": "Documento digital completo com S1–S10 + seção Charles. Falta: revisão bibliográfica, análise de gênero, preenchimento de placeholders pela equipe [ICT EXECUTORA].",
-            "status": "Em elaboração — ~75%",
+            "detail": "Seções de conteúdo científico concluídas (corpus, metodologia, objetivos, orçamento, indicadores, riscos, referências). Pendentes antes da submissão: (1) nome do coordenador e ICT executora; (2) cartas de anuência das cooperativas âncora; (3) Política de Inovação da ICT (EL-09); (4) URL do repositório institucional na referência r25.",
+            "status": "Em elaboração",
             "statusVariant": "inprogress"
           },
           {
@@ -2967,7 +2974,7 @@
       {
         "id": "r25",
         "area": "politica",
-        "abnt": "[ICT EXECUTORA]. Resolução Normativa n. 164/2022/CUn, de 27 de setembro de 2022. Aprova a Política de Inovação e Empreendedorismo da [ICT EXECUTORA]. Florianópolis: [ICT EXECUTORA], 2022. Disponível em: [URL do repositório institucional da ICT EXECUTORA — a preencher antes da submissão]. Acesso em: 17 maio 2026."
+        "abnt": "[ICT EXECUTORA]. Resolução Normativa n. 164/2022/CUn, de 27 de setembro de 2022. Aprova a Política de Inovação e Empreendedorismo da [ICT EXECUTORA]. Florianópolis: [ICT EXECUTORA], 2022. Disponível em: <repositório institucional da ICT executora — inserir URL antes da submissão>. Acesso em: 17 maio 2026."
       },
       {
         "id": "r26",
@@ -3195,9 +3202,9 @@
         "period": "Meses 1–36 · FINEP AgriFam-ICT",
         "icon": "🔬",
         "title": "A Prova — Infraestrutura em Produção Real",
-        "description": "O servidor de R$600k (2× H100 80GB) opera em produção com 10.000+ MAU reais, latência <3s, uptime ≥99%. Não é protótipo de laboratório — é prova documentada de que o sistema funciona no campo, com agricultores, em português regional. Cada mês de operação acumula o ativo mais valioso para as rodadas seguintes: evidência.",
+        "description": "O servidor de R$600k (2× H100 80GB) opera em produção com 2.500+ MAU reais, latência <3s, uptime ≥99%. Não é protótipo de laboratório — é prova documentada de que o sistema funciona no campo, com agricultores, em português regional. Cada mês de operação acumula o ativo mais valioso para as rodadas seguintes: evidência.",
         "milestones": [
-          "10.000 MAU ativos ao final da Fase 3 (mês 36)",
+          "2.500 MAU ativos ao final da Fase 3 (mês 36)",
           "Uptime ≥99% em 12 meses de operação contínua documentado",
           "Modelos 7B e 32B em produção simultânea — latência média <3s",
           "Corpus AgroLinguaBR publicado com DOI no Zenodo (mês 12)",
@@ -3583,7 +3590,7 @@
       {
         "id": "corpus-25k",
         "question": "Por que 25.000 pares de Q&A?",
-        "argument": "A literatura recente demonstra que qualidade supera quantidade no fine-tuning de LLMs. Zhou et al. (NeurIPS 2023) provaram que 1.000 exemplos cuidadosamente curados superam o GPT-4 em 43% das avaliações — estabelecendo que o limiar mínimo para alinhamento eficaz é muito menor do que se supunha. Li et al. (NAACL 2024) complementam: 10% dos dados do Alpaca, selecionados por critérios de qualidade, superam 100% dos 52.000 exemplos originais. O método LoRA de Hu et al. (ICLR 2022) torna viável o fine-tuning em 25.000 pares em um único GPU: 10.000× menos parâmetros treináveis com qualidade equivalente ao fine-tuning completo. Para calibrar o teto, o AgroGPT (WACV 2025) utilizou 70.000 exemplos para um modelo agrícola multimodal de escopo global, cobrindo todas as culturas do mundo. O SABIA tem escopo deliberadamente mais estreito — agricultura familiar brasileira, 5 domínios de conhecimento, português regional — o que justifica 25.000 como calibração proporcional: 36% do volume global, para um domínio correspondentemente mais restrito.",
+        "argument": "A literatura recente demonstra que qualidade supera quantidade no fine-tuning de LLMs. Zhou et al. (NeurIPS 2023) provaram que 1.000 exemplos cuidadosamente curados foi preferido ou empatado com o GPT-4 em 43% das comparações de avaliação humana — estabelecendo que o limiar mínimo para alinhamento eficaz é muito menor do que se supunha. Li et al. (NAACL 2024) complementam: 10% dos dados do Alpaca, selecionados por critérios de qualidade, superam 100% dos 52.000 exemplos originais. O método LoRA de Hu et al. (ICLR 2022) torna viável o fine-tuning em 25.000 pares em um único GPU: 10.000× menos parâmetros treináveis com qualidade equivalente ao fine-tuning completo. Para calibrar o teto, o AgroGPT (WACV 2025) utilizou 70.000 exemplos para um modelo agrícola multimodal de escopo global, cobrindo todas as culturas do mundo. O SABIA tem escopo deliberadamente mais estreito — agricultura familiar brasileira, 5 domínios de conhecimento, português regional — o que justifica 25.000 como calibração proporcional: 36% do volume global, para um domínio correspondentemente mais restrito.",
         "citations": [
           {
             "authors": "Zhou et al.",
@@ -3591,7 +3598,7 @@
             "venue": "NeurIPS 2023",
             "year": "2023",
             "doi": "arXiv:2305.11206",
-            "keyFinding": "1.000 exemplos curados superam GPT-4 em 43% dos casos. \"Quase todo o conhecimento é aprendido no pré-treinamento.\""
+            "keyFinding": "1.000 exemplos curados: modelo foi preferido ou empatado com o GPT-4 em 43% das comparações de avaliação humana. \"Quase todo o conhecimento é aprendido no pré-treinamento.\""
           },
           {
             "authors": "Hu et al.",
