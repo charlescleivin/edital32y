@@ -704,13 +704,6 @@ export interface CooperaApiEndpoint {
   description: string
 }
 
-export interface CooperaTimelineStep {
-  time: string
-  actor: 'farmer' | 'manager' | 'system'
-  event: string
-  detail: string
-}
-
 export interface CooperaProducaoCitation {
   authors: string
   title: string
@@ -725,9 +718,6 @@ export interface S16Data extends SectionMeta {
   leadStats: CooperaProducaoStat[]
   gapStatement: string
   apiEndpoints: CooperaApiEndpoint[]
-  timelineTitle: string
-  timelineSubtitle: string
-  timeline: CooperaTimelineStep[]
   conclusionStatement: string
   citations: CooperaProducaoCitation[]
 }

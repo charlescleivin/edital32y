@@ -71,35 +71,6 @@ export const fixture: CooperaProducaoSectionProps = {
     },
   ],
 
-  /* ── timeline ───────────────────────────────────────────────────────────── */
-  timelineTitle: 'Maria das Dores — Uma semana com o ecossistema',
-  timelineSubtitle:
-    'Maria das Dores, 47 anos, cultiva feijão-caupi em 6 ha em Crateús-CE. Seu técnico ATER cobre 620 famílias — uma visita a cada 3–4 meses. Esta é a semana que muda a conta bancária dela.',
-
-  timeline: [
-    {
-      time: 'Segunda, manhã',
-      actor: 'farmer',
-      event: 'Diagnóstico veterinário em 40 segundos via WhatsApp',
-      detail:
-        'Sua cabra apresenta secreção nasal e prostração. Maria envia mensagem ao AgroAssistente: "minha cabra tá com catarro, tossindo e sem comer desde ontem". Mesmo com 3G intermitente, recebe diagnóstico diferencial em português nordestino em 40 segundos, com protocolo de triagem e referência à IN 6/2018 MAPA para registro do tratamento. Sem esperar o técnico EMATER.',
-    },
-    {
-      time: 'Mesma semana',
-      actor: 'manager',
-      event: 'DAA gerada automaticamente — sem viagem ao escritório',
-      detail:
-        'O gestor da cooperativa abre o Coopera Digital e visualiza o lote de feijão-caupi de Maria agendado para entrega PNAE no dia 15. O sistema auto-gera a DAA pré-preenchida e o certificado de rastreabilidade. Maria não precisa ir ao escritório da cooperativa — validação digital do registro de plantio ao certificado de entrega.',
-    },
-    {
-      time: 'Fim do mês',
-      actor: 'manager',
-      event: 'Planejamento de dezembro com inteligência da AgroAPI',
-      detail:
-        'O gestor planeja o ciclo de coleta de dezembro. O Coopera Digital consulta a AgroAPI (EP-01) e retorna recomendações de variedades tolerantes à seca para a Caatinga — considerando a janela climática prevista pelo INMET. Maria recebe as recomendações pelo mesmo WhatsApp que usa para o AgroAssistente. Nenhum app novo, nenhum portal governamental.',
-    },
-  ],
-
   /* ── conclusion ─────────────────────────────────────────────────────────── */
   conclusionStatement:
     'O AgroAssistente responde perguntas individuais — mas não vê o padrão coletivo de produção. Não sabe que 47 dos 80 associados de uma cooperativa plantam feijão-caupi na mesma janela de 15 dias, que um surto de fungo avança no bioma vizinho, ou que o contrato PNAE vence em 6 semanas com o volume 30% abaixo do comprometido. O Coopera Digital é a camada de agregação que transforma consultas individuais em inteligência coletiva: quando a AgroAPI detecta risco de mosca-branca no Vale do Piancó, o sistema dispara notificação proativa para todos os associados com culturas suscetíveis — sem esperar que cada um pergunte. Isso transforma a IA de reativa em preventiva. Sem Coopera Digital, o AgroAssistente é apenas um chatbot. Sem AgroAssistente, o Coopera Digital tem gestão mas não tem inteligência. O ecossistema vale a combinação — e é essa combinação que o Brasil ainda não tem.',

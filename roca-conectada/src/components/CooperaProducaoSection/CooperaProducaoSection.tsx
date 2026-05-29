@@ -3,7 +3,6 @@ import type {
   S16Data,
   CooperaProducaoStat,
   CooperaApiEndpoint,
-  CooperaTimelineStep,
   CooperaProducaoCitation,
 } from '@/types/proposal'
 
@@ -38,12 +37,6 @@ const statColors: Record<CooperaProducaoStat['colorVariant'], { border: string; 
     text:   'var(--p)',
     valueBg:'rgba(74,148,86,0.12)',
   },
-}
-
-const actorMeta: Record<CooperaTimelineStep['actor'], { label: string; color: string; bg: string; border: string }> = {
-  farmer:  { label: 'Agricultora',  color: 'var(--terra)', bg: 'rgba(200,85,48,0.08)',   border: 'rgba(200,85,48,0.25)'  },
-  manager: { label: 'Gestor Coop.', color: 'var(--gold)',  bg: 'rgba(212,150,14,0.08)',  border: 'rgba(212,150,14,0.25)' },
-  system:  { label: 'Sistema',      color: 'var(--sage)',  bg: 'rgba(111,168,118,0.08)', border: 'rgba(111,168,118,0.25)'},
 }
 
 const endpointColors = [
@@ -108,50 +101,6 @@ function EndpointCard({ ep, index }: { ep: CooperaApiEndpoint; index: number }) 
       <p className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
         <AcronymText text={ep.description} />
       </p>
-    </div>
-  )
-}
-
-function TimelineStep({ step, index, total }: { step: CooperaTimelineStep; index: number; total: number }) {
-  const a = actorMeta[step.actor]
-  const isLast = index === total - 1
-  return (
-    <div className="flex gap-4">
-      {/* spine */}
-      <div className="flex flex-col items-center" style={{ minWidth: 40 }}>
-        <div
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 text-[11px] font-black"
-          style={{ borderColor: a.color, background: a.bg, color: a.color }}
-        >
-          {index + 1}
-        </div>
-        {!isLast && (
-          <div className="mt-1 w-[2px] flex-1" style={{ background: 'var(--bdr)', minHeight: 24 }} />
-        )}
-      </div>
-      {/* content */}
-      <div className={`flex-1 pb-6${isLast ? '' : ''}`}>
-        <div className="flex flex-wrap items-center gap-2 mb-1">
-          <span
-            className="rounded border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider"
-            style={{ borderColor: a.border, color: a.color, background: a.bg }}
-          >
-            {step.time}
-          </span>
-          <span
-            className="rounded border px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider"
-            style={{ borderColor: a.border, color: a.color, background: 'transparent' }}
-          >
-            {a.label}
-          </span>
-        </div>
-        <p className="text-[13.5px] font-semibold leading-[1.4]" style={{ color: 'var(--txt)' }}>
-          <AcronymText text={step.event} />
-        </p>
-        <p className="mt-1 text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
-          <AcronymText text={step.detail} />
-        </p>
-      </div>
     </div>
   )
 }
@@ -226,9 +175,6 @@ export default function CooperaProducaoSection({
   leadStats,
   gapStatement,
   apiEndpoints,
-  timelineTitle,
-  timelineSubtitle,
-  timeline,
   conclusionStatement,
   citations,
 }: CooperaProducaoSectionProps) {
@@ -467,70 +413,7 @@ export default function CooperaProducaoSection({
         </div>
       </div>
 
-      {/* ── Block 5: Maria das Dores timeline ─────────────────────────────── */}
-      <SectionDivider label="Jornada do Usuário — Maria das Dores, Crateús-CE" />
-
-      <div
-        className="overflow-hidden rounded-3xl border"
-        style={{ borderColor: 'rgba(200,85,48,0.25)', background: 'var(--bg-card)' }}
-      >
-        {/* header */}
-        <div
-          className="border-b px-6 py-5"
-          style={{ borderColor: 'rgba(200,85,48,0.15)', background: 'rgba(200,85,48,0.04)' }}
-        >
-          <div className="text-[9px] font-bold uppercase tracking-[2.5px] mb-1" style={{ color: 'var(--terra)' }}>
-            Cenário Concreto
-          </div>
-          <h3
-            className="mb-1 text-[18px] sm:text-[22px] font-bold leading-[1.2]"
-            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}
-          >
-            <AcronymText text={timelineTitle} />
-          </h3>
-          <p className="text-[13px] italic" style={{ color: 'var(--txtl)' }}>
-            <AcronymText text={timelineSubtitle} />
-          </p>
-        </div>
-
-        {/* timeline steps */}
-        <div className="p-6">
-          {timeline.map((step, i) => (
-            <TimelineStep key={i} step={step} index={i} total={timeline.length} />
-          ))}
-        </div>
-
-        {/* without blocks */}
-        <div
-          className="mx-6 mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-2xl border p-5"
-          style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.02)' }}
-        >
-          <div>
-            <div className="mb-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--terra)' }}>
-              Sem Coopera Digital
-            </div>
-            <ul className="flex flex-col gap-1.5 text-[12.5px]" style={{ color: 'var(--txtl)' }}>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Maria tem orientação técnica — mas sem documentação automatizada</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> DAA preenchida manualmente, sujeita a erro e retrabalho</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Sem planejamento coletivo de safra</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Sem alertas proativos de pragas no bioma</li>
-            </ul>
-          </div>
-          <div>
-            <div className="mb-2 text-[9px] font-bold uppercase tracking-[2px]" style={{ color: 'var(--terra)' }}>
-              Sem AgroAssistente
-            </div>
-            <ul className="flex flex-col gap-1.5 text-[12.5px]" style={{ color: 'var(--txtl)' }}>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Coopera Digital tem gestão — sem inteligência agronômica</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Decisões de plantio sem base de evidência</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Diagnóstico veterinário/fitossanitário aguarda visita presencial do técnico ATER</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> O ecossistema vale a combinação — não as partes isoladas</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Block 6: digital extension ROI ────────────────────────────────── */}
+      {/* ── Block 5: digital extension ROI ────────────────────────────────── */}
       <SectionDivider label="Retorno sobre Extensão Digital — Evidência Internacional" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">

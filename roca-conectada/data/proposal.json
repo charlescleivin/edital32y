@@ -1229,28 +1229,6 @@
             "description": "Checagem automática de DAA, declarações de aptidão ao PRONAF e certidões PNAE antes de submeter um lote. Toda chamada gera trilha de auditoria com timestamp e ID do agricultor."
           }
         ],
-        "timelineTitle": "Maria das Dores, Uma semana com o ecossistema",
-        "timelineSubtitle": "Maria das Dores, 47 anos, cultiva feijão-caupi em 6 ha em Crateús-CE. Seu técnico ATER cobre 620 famílias, uma visita a cada 3–4 meses.",
-        "timeline": [
-          {
-            "time": "Segunda, manhã",
-            "actor": "farmer",
-            "event": "Diagnóstico veterinário em 40 segundos via WhatsApp",
-            "detail": "Sua cabra apresenta secreção nasal e prostração. Maria envia mensagem ao AgroAssistente. Mesmo com 3G intermitente, recebe diagnóstico diferencial em 40 segundos com protocolo de triagem e referência à IN 6/2018 MAPA."
-          },
-          {
-            "time": "Mesma semana",
-            "actor": "manager",
-            "event": "DAA gerada automaticamente, sem viagem ao escritório",
-            "detail": "O gestor abre o Coopera Digital e visualiza o lote de feijão-caupi de Maria agendado para entrega PNAE. O sistema auto-gera a DAA pré-preenchida e o certificado de rastreabilidade de lote. Maria não precisa ir ao escritório, validação digital do registro de plantio ao certificado de entrega."
-          },
-          {
-            "time": "Fim do mês",
-            "actor": "manager",
-            "event": "Planejamento de dezembro com inteligência da AgroAPI",
-            "detail": "O gestor planeja o ciclo de coleta. O Coopera Digital consulta EP-01 e retorna recomendações de variedades tolerantes à seca para a Caatinga. Maria recebe via WhatsApp, nenhum app novo."
-          }
-        ],
         "conclusionStatement": "O AgroAssistente responde perguntas individuais, mas não vê o padrão coletivo de produção. O Coopera Digital é a camada de agregação que transforma consultas individuais em inteligência coletiva. Sem Coopera Digital, o AgroAssistente é apenas um chatbot. A combinação AgroAssistente + Coopera Digital + AgroAPI fecha o ciclo que nenhuma das partes fecha sozinha, e é essa combinação que o Brasil ainda não tem.",
         "citations": [
           {
