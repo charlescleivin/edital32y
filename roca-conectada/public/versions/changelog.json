@@ -285,5 +285,12 @@
     "date": "2026-05-25",
     "label": "copy(s2): soften headline — 'só falta de tecnologi",
     "description": "copy(s2): soften headline — 'só falta de tecnologia' / 'também falta de soberania'"
+  },
+  {
+    "id": "v42",
+    "commit": "04743d8",
+    "date": "2026-05-29",
+    "label": "feat: rename project to SABIA + add corpus/Coopera",
+    "description": "feat: rename project to SABIA + add corpus/Coopera Digital/WhatsApp justifications + acronym tooltip system"
   }
 ]
