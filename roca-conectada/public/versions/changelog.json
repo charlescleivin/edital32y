@@ -334,5 +334,12 @@
     "date": "2026-05-29",
     "label": "feat(s15,s16,s17): add JustificativasSection, Coop",
     "description": "feat(s15,s16,s17): add JustificativasSection, CooperaProducaoSection, WhatsappDecisaoSection"
+  },
+  {
+    "id": "v49",
+    "commit": "13239ca",
+    "date": "2026-05-29",
+    "label": "refactor(s4): move s15/s16/s17 into MetodologiaSec",
+    "description": "refactor(s4): move s15/s16/s17 into MetodologiaSection as subsections"
   }
 ]
