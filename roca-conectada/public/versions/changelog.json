@@ -404,5 +404,12 @@
     "date": "2026-05-29",
     "label": "feat(scientific-merit): specific publication venue",
     "description": "feat(scientific-merit): specific publication venues + AEA RCT Registry pre-registration"
+  },
+  {
+    "id": "v59",
+    "commit": "3659218",
+    "date": "2026-05-29",
+    "label": "feat(s2,s14): inject wrapper taxonomy and public s",
+    "description": "feat(s2,s14): inject wrapper taxonomy and public sector AI dependency evidence"
   }
 ]
