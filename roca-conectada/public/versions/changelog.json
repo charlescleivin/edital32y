@@ -362,5 +362,12 @@
     "date": "2026-05-29",
     "label": "feat(acronyms,cleanup): glossário de siglas com to",
     "description": "feat(acronyms,cleanup): glossário de siglas com tooltip + remoção de travessões e emojis"
+  },
+  {
+    "id": "v53",
+    "commit": "466ab43",
+    "date": "2026-05-29",
+    "label": "fix(coopera): remove all fabricated payment data f",
+    "description": "fix(coopera): remove all fabricated payment data from Maria das Dores timeline"
   }
 ]
