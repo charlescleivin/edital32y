@@ -54,7 +54,7 @@ export default function HeroSection({
       <div className="relative z-10 px-4 pt-6 sm:px-10 sm:pt-10 md:px-16">
         <div className="ml-12 inline-flex items-center gap-2.5 rounded-full border px-4 py-2 md:ml-0"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)' }}>
-          <span className="text-sm leading-none">🌾</span>
+          <img src="/sabia-logo.png" alt="" aria-hidden style={{ width: 20, height: 20, objectFit: 'contain' }} />
           <span className="text-[9px] font-bold uppercase tracking-[3px]"
             style={{ color: 'var(--txtll)' }}><AcronymText text={eyebrow} /></span>
         </div>

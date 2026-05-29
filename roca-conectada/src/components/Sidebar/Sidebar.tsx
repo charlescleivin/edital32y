@@ -212,7 +212,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
       >
         {/* project identity */}
         <div className="px-7 pb-6 pt-8" style={{ borderBottom: '1px solid rgba(237,229,211,0.06)' }}>
-          <span className="mb-3 block text-[28px] leading-none">🌾</span>
+          <img src="/sabia-logo.png" alt="" aria-hidden className="mb-3 block" style={{ width: 44, height: 'auto' }} />
           <div className="text-[21px] font-bold leading-[1.2] tracking-[-0.3px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
             {projectName}
