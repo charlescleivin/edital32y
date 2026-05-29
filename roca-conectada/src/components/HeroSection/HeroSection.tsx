@@ -54,7 +54,6 @@ export default function HeroSection({
       <div className="relative z-10 px-4 pt-6 sm:px-10 sm:pt-10 md:px-16">
         <div className="ml-12 inline-flex items-center gap-2.5 rounded-full border px-4 py-2 md:ml-0"
           style={{ borderColor: 'var(--bdr)', background: 'rgba(237,229,211,0.04)' }}>
-          <img src="/sabia-logo.png" alt="" aria-hidden style={{ width: 20, height: 20, objectFit: 'contain' }} />
           <span className="text-[9px] font-bold uppercase tracking-[3px]"
             style={{ color: 'var(--txtll)' }}><AcronymText text={eyebrow} /></span>
         </div>
@@ -87,10 +86,19 @@ export default function HeroSection({
             style={{ color: 'var(--terra)' }}>
             A resposta
           </div>
-          <h1 className="mb-4 text-[34px] font-bold leading-none tracking-[-1px] sm:text-[42px] lg:text-[48px] lg:tracking-[-1.5px]"
-            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
-            <AcronymText text={title} />
-          </h1>
+          <div className="mb-4 flex items-center gap-4 sm:gap-6">
+            <img
+              src="/sabia-logo.png"
+              alt=""
+              aria-hidden
+              className="shrink-0"
+              style={{ width: 'clamp(52px, 8vw, 88px)', height: 'auto' }}
+            />
+            <h1 className="text-[34px] font-bold leading-none tracking-[-1px] sm:text-[42px] lg:text-[48px] lg:tracking-[-1.5px]"
+              style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
+              <AcronymText text={title} />
+            </h1>
+          </div>
           <p className="text-[14px] italic leading-[1.75] sm:text-[15px] lg:max-w-[500px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txtl)' }}>
             <AcronymText text={subtitle} />

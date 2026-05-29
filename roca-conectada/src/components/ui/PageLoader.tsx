@@ -12,16 +12,23 @@ interface PageLoaderProps {
 
 const GRAIN = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`
 
-export default function PageLoader({ projectName }: PageLoaderProps) {
+function deriveCallBadge(call: string): string {
+  const agencyMatch = call.match(/([A-Z][A-Z0-9/]+(?:\/[A-Z][A-Z0-9]+)+)/)
+  const yearMatch   = call.match(/(\d{4})/)
+  if (agencyMatch && yearMatch) return `${agencyMatch[1].split('/').join(' · ')} · ${yearMatch[1]}`
+  return call
+}
+
+export default function PageLoader({ projectName, call }: PageLoaderProps) {
   const [phase, setPhase] = useState<Phase>('in')
   const markDone = useMarkLoaderDone()
 
-  const name    = projectName ?? 'SABIA'
-  const acronym = name.includes(', ')
-    ? name.split(', ')[0]
-    : name.includes(' — ')
-    ? name.split(' — ')[0]
-    : name
+  const name      = projectName ?? 'SABIA'
+  const sep       = name.includes(', ') ? ', ' : ' — '
+  const parts     = name.split(sep)
+  const acronym   = parts[0]
+  const expansion = parts[1] ?? ''
+  const callBadge = call ? deriveCallBadge(call) : 'MCTI · FINEP · FNDCT · 2026'
 
   useEffect(() => {
     const t0 = setTimeout(() => setPhase('hold'), 80)
@@ -102,6 +109,19 @@ export default function PageLoader({ projectName }: PageLoaderProps) {
           }}
         />
 
+        {/* Call badge */}
+        <div style={{
+          overflow: 'hidden',
+          opacity: visible ? 1 : 0,
+          transform: visible ? 'translateY(0)' : 'translateY(8px)',
+          transition: 'opacity 0.55s ease 0.25s, transform 0.55s ease 0.25s',
+        }}>
+          <span className="text-[9px] font-bold uppercase tracking-[4px]"
+            style={{ color: 'var(--terra)' }}>
+            {callBadge}
+          </span>
+        </div>
+
         {/* Name — slides up through a clip */}
         <div style={{ overflow: 'hidden', lineHeight: 1 }}>
           <h1
@@ -116,6 +136,23 @@ export default function PageLoader({ projectName }: PageLoaderProps) {
             {acronym}
           </h1>
         </div>
+
+        {/* Acronym expansion — small, fades in last */}
+        {expansion && (
+          <p
+            className="text-[11px] sm:text-[12px] tracking-[0.5px] text-center"
+            style={{
+              color: 'var(--txtll)',
+              maxWidth: 320,
+              lineHeight: 1.5,
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'translateY(0)' : 'translateY(6px)',
+              transition: 'opacity 0.6s ease 1s, transform 0.6s ease 1s',
+            }}
+          >
+            {expansion}
+          </p>
+        )}
       </div>
     </div>
   )
