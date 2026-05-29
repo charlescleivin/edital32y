@@ -376,5 +376,12 @@
     "date": "2026-05-29",
     "label": "remove(coopera): Jornada do Usuário — Maria das Do",
     "description": "remove(coopera): Jornada do Usuário — Maria das Dores section"
+  },
+  {
+    "id": "v55",
+    "commit": "b2c5867",
+    "date": "2026-05-29",
+    "label": "remove: all RAImundo references",
+    "description": "remove: all RAImundo references"
   }
 ]
