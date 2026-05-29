@@ -86,13 +86,13 @@ export default function HeroSection({
             style={{ color: 'var(--terra)' }}>
             A resposta
           </div>
-          <div className="mb-4 flex items-center gap-4 sm:gap-6">
+          <div className="mb-4 flex items-center gap-2 sm:gap-3">
             <img
               src="/sabia-logo.png"
               alt=""
               aria-hidden
               className="shrink-0"
-              style={{ width: 'clamp(52px, 8vw, 88px)', height: 'auto' }}
+              style={{ width: 'clamp(52px, 8.5vw, 96px)', height: 'auto' }}
             />
             <h1 className="text-[34px] font-bold leading-none tracking-[-1px] sm:text-[42px] lg:text-[48px] lg:tracking-[-1.5px]"
               style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
