@@ -1242,13 +1242,7 @@
             "time": "Mesma semana",
             "actor": "manager",
             "event": "DAA gerada automaticamente, sem viagem ao escritório",
-            "detail": "O gestor abre o Coopera Digital, vê o lote de Maria agendado para entrega PNAE no dia 15. O sistema auto-gera a DAA pré-preenchida e o certificado de rastreabilidade. Maria não precisa ir ao escritório."
-          },
-          {
-            "time": "Dia 35 após entrega",
-            "actor": "system",
-            "event": "Pagamento recebido, 35 dias após entrega",
-            "detail": "Antes do Coopera Digital: prazo médio de 110+ dias (30–120 dias de contratação CONAB + 30–60 dias de liquidação). Com a documentação automatizada, o pagamento cai em 35 dias."
+            "detail": "O gestor abre o Coopera Digital e visualiza o lote de feijão-caupi de Maria agendado para entrega PNAE. O sistema auto-gera a DAA pré-preenchida e o certificado de rastreabilidade de lote. Maria não precisa ir ao escritório, validação digital do registro de plantio ao certificado de entrega."
           },
           {
             "time": "Fim do mês",

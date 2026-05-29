@@ -92,13 +92,6 @@ export const fixture: CooperaProducaoSectionProps = {
         'O gestor da cooperativa abre o Coopera Digital e visualiza o lote de feijão-caupi de Maria agendado para entrega PNAE no dia 15. O sistema auto-gera a DAA pré-preenchida e o certificado de rastreabilidade. Maria não precisa ir ao escritório da cooperativa — validação digital do registro de plantio ao certificado de entrega.',
     },
     {
-      time: 'Dia 20',
-      actor: 'system',
-      event: 'Pagamento recebido — 35 dias após entrega',
-      detail:
-        'Antes do Coopera Digital: prazo médio de 110+ dias (30–120 dias de contratação CONAB + 30–60 dias de liquidação). Com a documentação automatizada e o fluxo de conformidade digital, o pagamento cai em 35 dias. Para uma cooperativa com R$800k/ano no PAA/PNAE, isso libera R$50–80k/ano em capital de giro.',
-    },
-    {
       time: 'Fim do mês',
       actor: 'manager',
       event: 'Planejamento de dezembro com inteligência da AgroAPI',

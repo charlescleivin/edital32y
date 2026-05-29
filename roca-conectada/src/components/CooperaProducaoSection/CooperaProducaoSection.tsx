@@ -313,38 +313,29 @@ export default function CooperaProducaoSection({
           <AcronymText text={gapStatement} />
         </blockquote>
 
-        {/* Gap detail cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {/* Gap detail card — documented source only */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="rounded-2xl border p-5" style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.06)' }}>
             <div className="mb-2 text-[28px] font-black leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>0%</div>
             <p className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>
-              São José do Egito (PE) — execução real do PNAE apesar de R$412.000 transferidos
+              São José do Egito (PE): execução real do PNAE zerada apesar de R$412.000 transferidos pelo FNDE. A barreira é documental e administrativa, não falta de oferta.
             </p>
             <p className="mt-2 text-[10.5px] italic" style={{ color: 'var(--txtll)' }}>
-              Gênero e Número, 2022 — investigação no Nordeste
+              Gênero e Número, 2022
             </p>
           </div>
           <div className="rounded-2xl border p-5" style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.06)' }}>
-            <div className="mb-2 text-[28px] font-black leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>43h/mês</div>
+            <div className="mb-2 text-[28px] font-black leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>0–23,5%</div>
             <p className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>
-              Carga administrativa média do gestor de cooperativa: DAA, controle de lotes, certidões, retrabalho burocrático
+              Faixa de execução da cota obrigatória de 30% do PNAE nos municípios nordestinos investigados. A cota existe por lei; a execução depende de capacidade documental da cooperativa.
             </p>
             <p className="mt-2 text-[10.5px] italic" style={{ color: 'var(--txtll)' }}>
-              Levantamento nas 3 regiões-piloto — projetado reduzir para ~9h/mês
-            </p>
-          </div>
-          <div className="rounded-2xl border p-5" style={{ borderColor: 'rgba(200,85,48,0.2)', background: 'rgba(200,85,48,0.06)' }}>
-            <div className="mb-2 text-[28px] font-black leading-none" style={{ fontFamily: 'var(--font-playfair)', color: 'var(--terra)' }}>110 dias</div>
-            <p className="text-[12px] font-semibold" style={{ color: 'var(--txt)' }}>
-              Tempo médio entre entrega e pagamento: 30–120 dias de contratação (CONAB) + 30–60 dias de liquidação
-            </p>
-            <p className="mt-2 text-[10.5px] italic" style={{ color: 'var(--txtll)' }}>
-              CONAB, Carta de Serviços — Apoio à Formação de Estoques
+              Gênero e Número, 2022
             </p>
           </div>
         </div>
 
-        {/* Contrast: with Coopera Digital */}
+        {/* What Coopera Digital removes */}
         <div
           className="mt-5 flex items-start gap-4 rounded-2xl border p-5"
           style={{ borderColor: 'rgba(74,148,86,0.3)', background: 'rgba(74,148,86,0.06)' }}
@@ -352,12 +343,12 @@ export default function CooperaProducaoSection({
           <span className="shrink-0 text-[18px]">→</span>
           <div>
             <div className="mb-1 text-[9px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--p)' }}>
-              Com Coopera Digital
+              O que o Coopera Digital remove
             </div>
             <p className="text-[13px] leading-[1.8]" style={{ color: 'var(--txtl)' }}>
-              DAA gerada automaticamente. Rastreabilidade de lote desde o cadastro de plantio. Certidões monitoradas com alertas de vencimento.
-              Agenda PNAE integrada. Pagamento em <strong style={{ color: 'var(--txt)' }}>35 dias</strong> — redução de 68% no prazo.
-              Gestor passa de <strong style={{ color: 'var(--txt)' }}>43h para ~9h/mês</strong> — capacidade de atendimento +40% sem contratação adicional.
+              DAA gerada automaticamente a partir do cadastro de produção. Rastreabilidade de lote do plantio à entrega.
+              Certidões monitoradas com alertas de vencimento. Agenda PNAE integrada ao calendário de coletas.
+              O gestor deixa de ser o gargalo documental e passa a ser o coordenador de produção.
             </p>
           </div>
         </div>
@@ -519,8 +510,8 @@ export default function CooperaProducaoSection({
               Sem Coopera Digital
             </div>
             <ul className="flex flex-col gap-1.5 text-[12.5px]" style={{ color: 'var(--txtl)' }}>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Maria tem um chatbot — sem documentação automatizada</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Sem aceleração de pagamento — média 110+ dias</li>
+              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Maria tem orientação técnica — mas sem documentação automatizada</li>
+              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> DAA preenchida manualmente, sujeita a erro e retrabalho</li>
               <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Sem planejamento coletivo de safra</li>
               <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Sem alertas proativos de pragas no bioma</li>
             </ul>
@@ -532,7 +523,7 @@ export default function CooperaProducaoSection({
             <ul className="flex flex-col gap-1.5 text-[12.5px]" style={{ color: 'var(--txtl)' }}>
               <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Coopera Digital tem gestão — sem inteligência agronômica</li>
               <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Decisões de plantio sem base de evidência</li>
-              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Diagnóstico veterinário/fitossanitário aguarda técnico ATER (3–4 meses)</li>
+              <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> Diagnóstico veterinário/fitossanitário aguarda visita presencial do técnico ATER</li>
               <li className="flex gap-2"><span style={{ color: 'var(--terra)' }}>✕</span> O ecossistema vale a combinação — não as partes isoladas</li>
             </ul>
           </div>
