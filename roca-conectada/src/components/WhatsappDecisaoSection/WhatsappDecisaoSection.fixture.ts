@@ -8,7 +8,7 @@ export const fixture: S17Data = {
   headline: '96% de penetração rural não é preferência — é a infraestrutura que existe. Partimos dela.',
 
   openingRationale:
-    'O AgroAssistente entrega via WhatsApp porque é o canal onde os agricultores brasileiros estão: 96% dos rurais com celular comunicam por ele (Embrapa, 2023), funciona em Android de R$ 400, opera com sinal de 3G intermitente, sem conta adicional, sem download. Partir de onde o usuário existe não é concessão — é o único caminho para adoção real em escala. A EMBRAPA chegou à mesma conclusão ao lançar o RAImundo em 2025. O Farmer.Chat da Microsoft Research, com 300.000 consultas em quatro países, também. A soberania do projeto reside no modelo LLM, no corpus AgroLinguaBR e na AgroAPI — todos sob titularidade da ICT executora, em infraestrutura brasileira. O WhatsApp é o cabo. A usina é nossa.',
+    'O AgroAssistente entrega via WhatsApp porque é o canal onde os agricultores brasileiros estão: 96% dos rurais com celular comunicam por ele (Embrapa, 2023), funciona em Android de R$ 400, opera com sinal de 3G intermitente, sem conta adicional, sem download. Partir de onde o usuário existe não é concessão — é o único caminho para adoção real em escala. O Farmer.Chat da Microsoft Research, com 300.000 consultas em quatro países, também. A soberania do projeto reside no modelo LLM, no corpus AgroLinguaBR e na AgroAPI — todos sob titularidade da ICT executora, em infraestrutura brasileira. O WhatsApp é o cabo. A usina é nossa.',
 
   dataPoints: [
     {
@@ -63,18 +63,6 @@ export const fixture: S17Data = {
       source:
         'Farmerline / TIME. "Darli AI: TIME 200 Best Inventions 2024." Outubro 2024. Reconhecido como uma das 200 melhores invenções do ano pela revista TIME — entregue via WhatsApp.',
       sourceUrl: 'https://farmerline.co/farmerlines-darli-ai-recognized-on-times-list-of-the-best-inventions-of-2024/',
-    },
-    {
-      flag: '🇧🇷',
-      name: 'RAImundo (EMBRAPA + MAPA + MDA)',
-      org: 'EMBRAPA · Ministério da Agricultura · AZap.AI',
-      year: '2025',
-      farmers: 'Meta: 100.000 usuários no 1º ano',
-      channel: 'WhatsApp',
-      source:
-        'AZap.AI + EMBRAPA + MAPA + MDA. Lançamento RAImundo, maio 2025. A própria EMBRAPA — a instituição federal brasileira de pesquisa agropecuária — lançou seu assistente de IA para agricultores familiares via WhatsApp.',
-      sourceUrl:
-        'https://sucessonocampo.com.br/embrapa-mapa-mda-e-azap-ai-lancam-assistente-virtual-para-produtores-rurais/',
     },
   ],
 
@@ -196,15 +184,6 @@ export const fixture: S17Data = {
       url: 'https://farmerline.co/farmerlines-darli-ai-recognized-on-times-list-of-the-best-inventions-of-2024/',
       keyFinding:
         '110.000 agricultores, 27 idiomas, entrega via WhatsApp. Reconhecido como uma das 200 melhores invenções do ano pela TIME.',
-    },
-    {
-      authors: 'AZap.AI / EMBRAPA / MAPA / MDA',
-      title: 'RAImundo — Assistente Virtual para Produtores Rurais',
-      venue: 'Sucesso no Campo / Lançamento oficial',
-      year: '2025',
-      url: 'https://sucessonocampo.com.br/embrapa-mapa-mda-e-azap-ai-lancam-assistente-virtual-para-produtores-rurais/',
-      keyFinding:
-        'A própria EMBRAPA lançou em maio de 2025 um assistente de IA para agricultores familiares via WhatsApp, em parceria com os Ministérios da Agricultura e do Desenvolvimento Agrário. Meta: 100.000 usuários no primeiro ano.',
     },
     {
       authors: 'Yeo, B. & Keske, C.',

@@ -1340,16 +1340,6 @@
             "channel": "WhatsApp",
             "source": "Farmerline / TIME, outubro 2024.",
             "sourceUrl": "https://farmerline.co/farmerlines-darli-ai-recognized-on-times-list-of-the-best-inventions-of-2024/"
-          },
-          {
-            "flag": "🇧🇷",
-            "name": "RAImundo (EMBRAPA + MAPA + MDA)",
-            "org": "EMBRAPA · Ministério da Agricultura · AZap.AI",
-            "year": "2025",
-            "farmers": "Meta: 100.000 usuários no 1º ano",
-            "channel": "WhatsApp",
-            "source": "Lançamento maio 2025. A própria EMBRAPA escolheu WhatsApp para alcançar agricultores familiares.",
-            "sourceUrl": "https://sucessonocampo.com.br/embrapa-mapa-mda-e-azap-ai-lancam-assistente-virtual-para-produtores-rurais/"
           }
         ],
         "sovereigntyArgument": "O corpus AgroLinguaBR, o modelo LLM fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos em solo brasileiro, hospedados em servidores nacionais, transferidos à ICT executora no mês 36 sob licença CC BY-NC-SA 4.0. O Coopera Digital armazena todos os dados das cooperativas no Brasil, em formato aberto exportável. O WhatsApp opera como camada de configuração, o mesmo motor de inferência que responde via WhatsApp hoje pode responder por qualquer outro canal mediante reconfiguração de uma única camada de adaptador, sem tocar a lógica de IA.",
@@ -1425,14 +1415,6 @@
             "keyFinding": "110.000 agricultores, 27 idiomas, WhatsApp. Uma das 200 melhores invenções de 2024."
           },
           {
-            "authors": "AZap.AI / EMBRAPA / MAPA / MDA",
-            "title": "RAImundo, Assistente Virtual para Produtores Rurais",
-            "venue": "Sucesso no Campo",
-            "year": "2025",
-            "url": "https://sucessonocampo.com.br/embrapa-mapa-mda-e-azap-ai-lancam-assistente-virtual-para-produtores-rurais/",
-            "keyFinding": "EMBRAPA lançou assistente de IA via WhatsApp em mai/2025. Meta: 100.000 usuários no 1º ano."
-          },
-          {
             "authors": "Yeo, B. & Keske, C.",
             "title": "From profitability to trust: factors shaping digital agriculture adoption",
             "venue": "Frontiers in Sustainable Food Systems",
@@ -1441,7 +1423,7 @@
             "keyFinding": "Principais barreiras à adoção: exigências de esforço e mudança de fluxo de trabalho. Plataformas familiares eliminam a principal barreira."
           }
         ],
-        "openingRationale": "O AgroAssistente entrega via WhatsApp porque é o canal onde os agricultores brasileiros estão: 96% dos rurais com celular comunicam por ele (Embrapa, 2023), funciona em Android de R$ 400, opera com sinal de 3G intermitente, sem conta adicional, sem download. Partir de onde o usuário existe não é concessão, é o único caminho para adoção real em escala. A EMBRAPA chegou à mesma conclusão ao lançar o RAImundo em 2025. O Farmer.Chat da Microsoft Research, com 300.000 consultas em quatro países, também. A soberania do projeto reside no modelo LLM, no corpus AgroLinguaBR e na AgroAPI, todos sob titularidade da ICT executora, em infraestrutura brasileira. O WhatsApp é o cabo. A usina é nossa.",
+        "openingRationale": "O AgroAssistente entrega via WhatsApp porque é o canal onde os agricultores brasileiros estão: 96% dos rurais com celular comunicam por ele (Embrapa, 2023), funciona em Android de R$ 400, opera com sinal de 3G intermitente, sem conta adicional, sem download. Partir de onde o usuário existe não é concessão, é o único caminho para adoção real em escala. O Farmer.Chat da Microsoft Research, com 300.000 consultas em quatro países, também. A soberania do projeto reside no modelo LLM, no corpus AgroLinguaBR e na AgroAPI, todos sob titularidade da ICT executora, em infraestrutura brasileira. O WhatsApp é o cabo. A usina é nossa.",
         "migrationRoadmap": {
           "title": "Trajetória de Migração para Infraestrutura Soberana",
           "subtitle": "Queremos sair da dependência de plataformas estrangeiras. O projeto foi desenhado para essa transição desde o início, não como plano contingente, mas como direção declarada.",
