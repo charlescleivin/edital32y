@@ -222,6 +222,11 @@ export interface S4Data extends SectionMeta {
   sovereigntyCallouts?: SovereigntyCallout[]
   pilotRegions?: PilotRegion[]
   conflictGovernance?: ConflictGovernance
+  subsections?: {
+    justificativas?: S15Data
+    cooperaProducao?: S16Data
+    whatsappDecisao?: S17Data
+  }
 }
 
 export interface BudgetRef {
@@ -807,8 +812,5 @@ export interface ProposalData {
   s12: S12Data
   s13: S13Data
   s14: S14Data
-  s15: S15Data
-  s16?: S16Data
-  s17?: S17Data
   charles?: CharlesData
 }

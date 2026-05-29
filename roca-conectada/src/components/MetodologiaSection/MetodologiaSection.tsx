@@ -1,5 +1,8 @@
 import SectionHero from '@/components/ui/SectionHero'
 import type { S4Data } from '@/types/proposal'
+import JustificativasSection from '@/components/JustificativasSection/JustificativasSection'
+import CooperaProducaoSection from '@/components/CooperaProducaoSection/CooperaProducaoSection'
+import WhatsappDecisaoSection from '@/components/WhatsappDecisaoSection/WhatsappDecisaoSection'
 
 export const componentMeta = { slug: 'metodologia-section', label: 'Metodologia e Plano de Trabalho' }
 
@@ -11,7 +14,7 @@ const phaseAccent = [
   { border: 'var(--terra)', header: 'rgba(200,85,48,0.12)',  dot: 'var(--terra)',text: 'var(--terra)' },
 ]
 
-export default function MetodologiaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, phases, scopeDistinction, sovereigntyCallouts, pilotRegions, conflictGovernance }: MetodologiaSectionProps) {
+export default function MetodologiaSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, phases, scopeDistinction, sovereigntyCallouts, pilotRegions, conflictGovernance, subsections }: MetodologiaSectionProps) {
   const { researcher, company } = scopeDistinction
   return (
     <section id="s4" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg-alt)' }}>
@@ -328,6 +331,34 @@ export default function MetodologiaSection({ number, title, subtitle, headline, 
           <span className="text-[12.5px] leading-[1.75]" style={{ color: 'var(--txtl)' }}>
             {company.disclosure}
           </span>
+        </div>
+      )}
+
+      {/* ── Methodology subsections ── */}
+      {subsections && (subsections.justificativas || subsections.cooperaProducao || subsections.whatsappDecisao) && (
+        <div className="mt-16 -mx-4 sm:-mx-8 lg:-mx-16">
+          <div className="mx-4 sm:mx-8 lg:mx-16 mb-10 flex items-center gap-5">
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(to right, var(--bdr-strong), transparent)' }} />
+            <span className="text-[9px] font-bold uppercase tracking-[3px]" style={{ color: 'var(--txtll)' }}>
+              Aprofundamentos Metodológicos
+            </span>
+            <div className="h-px flex-1" style={{ background: 'linear-gradient(to left, var(--bdr-strong), transparent)' }} />
+          </div>
+          {subsections.justificativas && (
+            <div id="s4-justificativas" className="border-t scroll-mt-4" style={{ borderColor: 'var(--bdr)' }}>
+              <JustificativasSection {...subsections.justificativas} />
+            </div>
+          )}
+          {subsections.cooperaProducao && (
+            <div id="s4-coopera" className="border-t scroll-mt-4" style={{ borderColor: 'var(--bdr)' }}>
+              <CooperaProducaoSection {...subsections.cooperaProducao} />
+            </div>
+          )}
+          {subsections.whatsappDecisao && (
+            <div id="s4-whatsapp" className="border-t scroll-mt-4" style={{ borderColor: 'var(--bdr)' }}>
+              <WhatsappDecisaoSection {...subsections.whatsappDecisao} />
+            </div>
+          )}
         </div>
       )}
     </section>
