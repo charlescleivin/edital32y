@@ -41,7 +41,7 @@ export const fixture: MetodologiaSectionProps = {
       name: 'Transferência — O Momento em que os Ativos Passam ao Brasil',
       period: 'Meses 25–36',
       activities: [
-        'Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores EMATER treinados. Não via equipe do projeto.',
+        'Expansão: 2.500 agricultores / 18 cooperativas — via 350 multiplicadores EMATER treinados. Não via equipe do projeto.',
         'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
         'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX.',
         'MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
@@ -79,6 +79,18 @@ export const fixture: MetodologiaSectionProps = {
       badge: '📱 Justificativa Estratégica',
       title: 'WhatsApp × Soberania: O Tradeoff Que Não É o Que Parece',
       content: 'A escolha do WhatsApp como canal de entrega do AgroAssistente pode parecer contraditória em um projeto de soberania tecnológica. É uma tensão real — e merece resposta direta, não contorno retórico. A soberania reside na camada de IA, não no canal de mensagens. O corpus AgroLinguaBR, o modelo fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos, hospedados e titularizados no Brasil, transferidos à [ICT EXECUTORA] no mês 36. O WhatsApp é o canal de entrega — equivalente à estrada pela qual o conhecimento trafega. Os prós: o IBGE PNAD 2023 documenta que 99% dos usuários rurais de smartphone no Brasil utilizam WhatsApp como aplicativo principal. Curva de aprendizado: zero. Funciona em Android de R$ 400. Construir um app próprio equivalente custaria R$ 1–2 milhões e 2+ anos de adoção — e falharia por fricção. Os contras são reais: a Meta pode alterar ou encerrar a API Business. A resposta arquitetural: o backend do AgroAssistente é canal-agnóstico desde o início — a mesma engine alimenta WhatsApp hoje e pode alimentar qualquer outro canal por reconfiguração. O precedente: Kisan e-Mitra (Índia), RAImundo EMBRAPA (2025) e Darli AI (Gana, 110k agricultores) todos usam WhatsApp. A questão pertinente não é "o canal é soberano?" — é "a IA embaixo do canal é soberana?" Para o SABIA, a resposta é sim, por design e por contrato de transferência de titularidade.',
+    },
+    {
+      id: 'sc2',
+      badge: '🌐 Soberania de Dados',
+      title: 'AgroLinguaBR: corpus de titularidade pública',
+      content: 'O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença CC BY-NC-SA 4.0 e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras.',
+    },
+    {
+      id: 'sc3',
+      badge: '🔓 Transferência Tecnológica',
+      title: 'Open-source como ato de soberania',
+      content: 'Todo o pipeline de fine-tuning, os scripts de avaliação e a arquitetura de orquestração de agentes serão liberados como código aberto ao final do projeto. O objetivo é que outros pesquisadores brasileiros — em outras culturas, regiões e línguas minoritárias — possam replicar a metodologia sem recomeçar do zero. Independência tecnológica começa com documentação aberta.',
     },
     {
       id: 'sc-corpus-25k',
@@ -140,19 +152,19 @@ export const fixture: MetodologiaSectionProps = {
       id: 'pr-ce',
       municipality: 'Crateús-CE / Sertão Cearense',
       profile: 'Feijão + milho + caprinocultura, ~5.200 agricultores, cobertura 3G intermitente, EMATER-CE parceira',
-      rationale: 'Epicentro da crise de ATER no Nordeste: 1 técnico para cada 600+ famílias no Sertão cearense. Conectividade 3G intermitente valida a arquitetura assíncrona em condições extremas reais. Bioma Caatinga sub-representado em todo corpus NLP existente — garante diversidade linguística regional ao AgroLinguaBR.',
+      rationale: 'Epicentro da crise de ATER no Nordeste: 1 técnico para cada 600+ famílias no Sertão cearense. Conectividade 3G intermitente valida a arquitetura assíncrona em condições extremas reais. Bioma Caatinga sub-representado em todo corpus NLP existente — garante diversidade linguística regional ao AgroLinguaBR. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros.',
     },
     {
       id: 'pr-pb',
       municipality: 'Sousa-PB / Vale do Piancó',
       profile: 'Ovinocaprinocultura + horticultura + PAA/PNAE consolidados, ~3.800 agricultores, EMATER-PB parceira',
-      rationale: 'Referência nacional em comercialização institucional da agricultura familiar — 73% dos agricultores já fornecem ao PAA/PNAE. A experiência cooperativa madura reduz a barreira de adoção do Coopera Digital e garante baseline robusto para medir impacto de renda. Paraíba tem o maior índice per capita de cooperativas de AF do Nordeste.',
+      rationale: 'Referência nacional em comercialização institucional da agricultura familiar — 73% dos agricultores já fornecem ao PAA/PNAE. A experiência cooperativa madura reduz a barreira de adoção do Coopera Digital e garante baseline robusto para medir impacto de renda. Paraíba tem o maior índice per capita de cooperativas de AF do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros.',
     },
     {
       id: 'pr-ba',
       municipality: 'Vitória da Conquista-BA / Planalto Baiano',
       profile: 'Café + bovinocultura + fruticultura, ~7.100 agricultores, conectividade 4G moderada, EMATER-BA parceira',
-      rationale: 'Contraste de perfil tecnológico deliberado: conectividade superior permite isolar o efeito da solução sobre produtividade vs. apenas conectividade. Maior pool de agricultores entre os três pilotos — fortalece a amostra da Fase 2 e valida a escalabilidade do AgroAssistente em contextos com infraestrutura acima da média do Nordeste.',
+      rationale: 'Contraste de perfil tecnológico deliberado: conectividade superior permite isolar o efeito da solução sobre produtividade vs. apenas conectividade. Maior pool de agricultores entre os três pilotos — fortalece a amostra da Fase 2 e valida a escalabilidade do AgroAssistente em contextos com infraestrutura acima da média do Nordeste. Implantação 100% via software — sem obras, instalações físicas ou aquisição de equipamentos nas propriedades rurais ou sedes dos parceiros.',
     },
   ],
 }

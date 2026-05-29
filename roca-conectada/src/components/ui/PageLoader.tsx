@@ -5,6 +5,33 @@ import { useMarkLoaderDone } from '@/context/LoaderContext'
 
 type Phase = 'in' | 'hold' | 'out' | 'done'
 
+interface PageLoaderProps {
+  projectName?: string
+  call?: string
+}
+
+/** Derive a short badge from the full call string.
+ *  "CHAMADA PÚBLICA MCTI/FINEP/FNDCT — AgriFam-ICT 2026"
+ *  →  "MCTI · FINEP · FNDCT · 2026"
+ *  Falls back to the raw `call` value if the pattern doesn't match.
+ */
+function deriveCallBadge(call: string): string {
+  // Extract agency acronyms before the em-dash and the 4-digit year
+  const agencyMatch = call.match(/([A-Z][A-Z0-9/]+(?:\/[A-Z][A-Z0-9]+)+)/)
+  const yearMatch   = call.match(/(\d{4})/)
+  if (agencyMatch && yearMatch) {
+    const agencies = agencyMatch[1].split('/').join(' · ')
+    return `${agencies} · ${yearMatch[1]}`
+  }
+  return call
+}
+
+/** Return the short acronym/name before the first " — " separator, or the full string. */
+function deriveShortName(projectName: string): string {
+  const idx = projectName.indexOf(' — ')
+  return idx !== -1 ? projectName.slice(0, idx) : projectName
+}
+
 const GRAIN = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`
 
 function BrazilFlag({ muted }: { muted?: boolean }) {
@@ -27,9 +54,12 @@ function BrazilFlag({ muted }: { muted?: boolean }) {
   )
 }
 
-export default function PageLoader() {
+export default function PageLoader({ projectName, call }: PageLoaderProps) {
   const [phase, setPhase] = useState<Phase>('in')
   const markDone = useMarkLoaderDone()
+
+  const shortName  = deriveShortName(projectName ?? 'SABIA')
+  const callBadge  = call ? deriveCallBadge(call) : 'MCTI · FINEP · FNDCT · 2026'
 
   useEffect(() => {
     const t0 = setTimeout(() => setPhase('hold'), 80)
@@ -111,7 +141,7 @@ export default function PageLoader() {
             transition: 'opacity 0.55s ease 0.25s, transform 0.55s ease 0.25s',
           }}
         >
-          MCTI · FINEP · FNDCT · 2026
+          {callBadge}
         </span>
 
         <div style={{ overflow: 'hidden', lineHeight: 1 }}>
@@ -124,8 +154,7 @@ export default function PageLoader() {
               transition: 'transform 0.85s cubic-bezier(0.16,1,0.3,1) 0.38s',
             }}
           >
-            Roça{' '}
-            <em style={{ color: 'var(--terra)', fontStyle: 'italic' }}>Conectada</em>
+            {shortName}
           </h1>
         </div>
 

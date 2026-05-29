@@ -1,3 +1,16 @@
+/**
+ * ⚠️  DEPRECATED — DO NOT RUN
+ *
+ * This script was written when fixture files were the source of truth.
+ * The architecture has since been inverted: data/proposal.json is now
+ * the single source of truth, and fixture files mirror it (not the other way around).
+ *
+ * Running this script WILL OVERWRITE live proposal.json content with stale data.
+ *
+ * If you need to sync fixtures FROM proposal.json, write a new script that reads
+ * proposal.json and writes to fixture files — not the reverse.
+ */
+
 // Sync fixture content into proposal.json for the live app
 const fs = require('fs')
 const path = require('path')

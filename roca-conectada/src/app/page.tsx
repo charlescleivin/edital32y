@@ -33,7 +33,7 @@ export default function Home() {
     <LoaderProvider>
     <VersionProvider>
       <div className="flex min-h-screen" style={{ background: 'var(--bg)' }}>
-        <PageLoader />
+        <PageLoader projectName={meta.projectName} call={meta.call} />
         <Sidebar
           projectName={meta.projectName}
           call={meta.call}
@@ -77,7 +77,7 @@ export default function Home() {
           <Reveal>
             <DiffSection sectionKey="s5">
               <section id="s5" className="scroll-mt-4">
-                <EquipeSection {...s5} />
+                <EquipeSection {...s5} projectName={meta.projectName} />
               </section>
             </DiffSection>
           </Reveal>

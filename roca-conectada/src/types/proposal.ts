@@ -295,6 +295,7 @@ export interface S5Data extends SectionMeta {
   marketContext?: MarketContext
   annex?: S5AnnexSection
   expandedProfiles?: CharlesData[]
+  projectName?: string
 }
 
 export interface BudgetLine {
@@ -523,6 +524,7 @@ export interface CharlesData {
   gallery?: CharlesPhoto[]
   profilePhoto?: string
   isPlaceholder?: boolean
+  projectName?: string
 }
 
 export interface ScalePhase {

@@ -175,7 +175,7 @@ function AnnexSection({ annex }: { annex: S5AnnexSection }) {
   )
 }
 
-export default function EquipeSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, members, marketContext, annex, expandedProfiles }: EquipeSectionProps) {
+export default function EquipeSection({ number, title, subtitle, headline, heroImage, heroCaption, heroStatement, heroObjectPosition, members, marketContext, annex, expandedProfiles, projectName }: EquipeSectionProps) {
   return (
     <section id="s5" className="relative overflow-hidden px-4 py-10 sm:px-8 sm:py-14 lg:px-16 lg:py-20" style={{ background: 'var(--bg)' }}>
       <span aria-hidden className="pointer-events-none absolute right-8 top-4 select-none hidden sm:block text-[180px] font-bold leading-none opacity-[0.025]"
@@ -287,7 +287,7 @@ export default function EquipeSection({ number, title, subtitle, headline, heroI
               return (
                 <div key={i} id={`s5-${slug}`} className={`scroll-mt-4${i > 0 ? ' border-t' : ''}`}
                   style={{ borderColor: 'var(--bdr)' }}>
-                  <CharlesSection {...profile} />
+                  <CharlesSection {...profile} projectName={profile.projectName ?? projectName} />
                 </div>
               )
             })}
