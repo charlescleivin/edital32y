@@ -397,5 +397,12 @@
     "date": "2026-05-29",
     "label": "fix(agroeval): independent test set from real farm",
     "description": "fix(agroeval): independent test set from real farmer questions"
+  },
+  {
+    "id": "v58",
+    "commit": "321202e",
+    "date": "2026-05-29",
+    "label": "feat(scientific-merit): specific publication venue",
+    "description": "feat(scientific-merit): specific publication venues + AEA RCT Registry pre-registration"
   }
 ]
