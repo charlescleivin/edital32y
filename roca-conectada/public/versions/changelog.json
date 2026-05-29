@@ -369,5 +369,12 @@
     "date": "2026-05-29",
     "label": "fix(coopera): remove all fabricated payment data f",
     "description": "fix(coopera): remove all fabricated payment data from Maria das Dores timeline"
+  },
+  {
+    "id": "v54",
+    "commit": "f420c5e",
+    "date": "2026-05-29",
+    "label": "remove(coopera): Jornada do Usuário — Maria das Do",
+    "description": "remove(coopera): Jornada do Usuário — Maria das Dores section"
   }
 ]
