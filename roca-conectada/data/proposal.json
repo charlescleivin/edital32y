@@ -35,7 +35,24 @@
       {
         "id": "s4",
         "label": "Metodologia",
-        "num": "4"
+        "num": "4",
+        "children": [
+          {
+            "id": "s4-justificativas",
+            "label": "Justificativas de Dimensionamento",
+            "avatar": "📐"
+          },
+          {
+            "id": "s4-coopera",
+            "label": "Coopera Digital em Produção",
+            "avatar": "🌾"
+          },
+          {
+            "id": "s4-whatsapp",
+            "label": "A Decisão WhatsApp",
+            "avatar": "💬"
+          }
+        ]
       },
       {
         "id": "s5",
