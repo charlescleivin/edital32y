@@ -31,7 +31,7 @@ export const fixture: EquipeSectionProps = {
       name: 'Bolsista DTI-A (a recrutar)',
       role: 'Desenvolvimento Tecnológico e Industrial — Engenharia de ML/LLM',
       tags: ['Pipeline fine-tuning', 'Avaliação AgroEval', 'Infraestrutura GPU', 'Mestrado/Doutorado em andamento'],
-      dedication: '100% dedicação · Bolsa DTI-A — R$ 3.800/mês × 36 meses (incluído no orçamento)',
+      dedication: '100% dedicação · Bolsa DTI-A — R$ 4.100/mês × 36 meses (incluído no orçamento)',
     },
     {
       id: 'dti2',
@@ -39,7 +39,7 @@ export const fixture: EquipeSectionProps = {
       name: 'Bolsista DTI-B (a recrutar)',
       role: 'Desenvolvimento Tecnológico e Industrial — Engenharia de Software',
       tags: ['AgroAssistente backend', 'Coopera Digital frontend', 'AgroAPI REST', 'Superior completo'],
-      dedication: '100% dedicação · Bolsa DTI-B — R$ 2.500/mês × 36 meses (incluído no orçamento)',
+      dedication: '100% dedicação · Bolsa DTI-B — R$ 3.300/mês × 36 meses (incluído no orçamento)',
     },
     {
       id: 'at1',

@@ -22,6 +22,6 @@ export const fixture: SumarioSectionProps = {
     { badge: 'Proponente', badgeVariant: 'primary', label: '[FUNDAÇÃO DE APOIO]' },
     { badge: 'Executora', badgeVariant: 'primary', label: '[ICT EXECUTORA] / [NOME DO LAB]' },
     { badge: 'Co-pesquisador', badgeVariant: 'blue', label: 'Charles Cleivin (sem bolsa)' },
-    { badge: 'Empresa PJ', badgeVariant: 'amber', label: 'THATPIX LTDA — R$ 1,68M' },
+    { badge: 'Empresa PJ', badgeVariant: 'amber', label: 'THATPIX LTDA — R$ 2,96M' },
   ],
 }
