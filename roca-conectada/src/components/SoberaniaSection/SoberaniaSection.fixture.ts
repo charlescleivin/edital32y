@@ -27,7 +27,7 @@ export const fixture: S14Data = {
       },
       {
         term: 'BY',
-        plain: 'Attribution (Atribuição) — quem usar o material deve creditar a fonte: "AgroLinguaBR, produzido no projeto Roça Conectada com financiamento FINEP AgriFam-ICT 2026". O Brasil fica visível no ecossistema global de IA agrícola.',
+        plain: 'Attribution (Atribuição) — quem usar o material deve creditar a fonte: "AgroLinguaBR, produzido no projeto SABIA com financiamento FINEP AgriFam-ICT 2026". O Brasil fica visível no ecossistema global de IA agrícola.',
       },
       {
         term: 'NC',

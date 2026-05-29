@@ -10,7 +10,7 @@ export const fixture: SumarioSectionProps = {
     { icon: '👨‍🌾', value: '1:500', label: 'Relação agente ATER / família rural no Brasil' },
   ],
   problemStatement: 'A agricultura familiar produz 70% dos alimentos consumidos no Brasil — mas o agente ATER atende em média 500 famílias sozinho, sem assistente digital, sem corpus de IA em português regional, sem infraestrutura soberana de dados. Ferramentas estrangeiras generalistas não respondem sobre mandioca do Sertão, defensivos com nome popular ou condições do Cerrado. O Brasil carece de um ativo nacional: um corpus agrícola público, um modelo soberano e uma API aberta para o ecossistema.',
-  summary: 'O projeto Roça Conectada propõe a construção da infraestrutura nacional soberana de IA para a agricultura familiar — produzindo o corpus, o modelo, o benchmark e a API aberta que o Brasil ainda não tem — e, sobre ela, o desenvolvimento e implantação do AgroAssistente IA e do Coopera Digital como primeiras aplicações sobre esta espinha dorsal.',
+  summary: 'O SABIA — Sistema Agronômico Brasileiro de Inteligência Artificial — propõe a construção da infraestrutura nacional soberana de IA para a agricultura familiar — produzindo o corpus, o modelo, o benchmark e a API aberta que o Brasil ainda não tem — e, sobre ela, o desenvolvimento e implantação do AgroAssistente IA e do Coopera Digital como primeiras aplicações sobre esta espinha dorsal.',
   editalResults: [
     'Digitalização das cadeias socioprodutivas da AF (RE-08 — primário)',
     'Novos conhecimentos: AgroLinguaBR e AgroEval como bens científicos públicos (RE-05)',

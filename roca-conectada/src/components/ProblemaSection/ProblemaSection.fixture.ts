@@ -14,7 +14,7 @@ export const fixture: ProblemaSectionProps = {
     {
       icon: '📶',
       title: 'Conectividade Intermitente — e a Resposta Tecnológica',
-      description: 'Soluções digitais existentes requerem conexão estável e contínua — inviabilizando uso em áreas rurais onde a cobertura 4G chega a menos de 30% no Semiárido (Anatel, 2023). O Roça Conectada responde a essa barreira com arquitetura assíncrona tolerante a conectividade intermitente: o AgroAssistente opera via WhatsApp, que enfileira mensagens localmente e as entrega automaticamente ao restaurar o sinal — sem perda de sessão, sem necessidade de conexão estável.',
+      description: 'Soluções digitais existentes requerem conexão estável e contínua — inviabilizando uso em áreas rurais onde a cobertura 4G chega a menos de 30% no Semiárido (Anatel, 2023). O SABIA responde a essa barreira com arquitetura assíncrona tolerante a conectividade intermitente: o AgroAssistente opera via WhatsApp, que enfileira mensagens localmente e as entrega automaticamente ao restaurar o sinal — sem perda de sessão, sem necessidade de conexão estável.',
       keyFact: { value: '≤30%', label: 'cobertura 4G no Semiárido (Anatel 2023)' },
     },
     {
@@ -48,7 +48,7 @@ export const fixture: ProblemaSectionProps = {
       { flag: '🇮🇳', country: 'Índia', product: 'Kisan e-Mitra (2024)', launched: '2024', scale: '9,5M+ consultas • 11 línguas regionais • voz', status: 'deployed' },
       { flag: '🇦🇪', country: 'EAU', product: 'AgriLLM — CGIAR + Gates (Dez 2025)', launched: 'dez/2025', scale: '120.000 pares Q&A • US$ 200M • 39 países', status: 'deployed' },
       { flag: '🇬🇭', country: 'Gana / África Oc.', product: 'Darli AI — Farmerline (Mar 2024)', launched: 'mar/2024', scale: '110.000 agricultores • 27 línguas • WhatsApp', status: 'deployed' },
-      { flag: '🇧🇷', country: 'Brasil', product: 'AgroAssistente — Roça Conectada', launched: 'mês 18 (proposto)', scale: '25.000 pares pt-BR • 3 regiões-piloto • CC BY-NC-SA 4.0', status: 'proposed' },
+      { flag: '🇧🇷', country: 'Brasil', product: 'AgroAssistente — SABIA', launched: 'mês 18 (proposto)', scale: '25.000 pares pt-BR • 3 regiões-piloto • CC BY-NC-SA 4.0', status: 'proposed' },
     ],
     brazilNote: 'O corpus AgroLinguaBR construído neste projeto será o primeiro dataset público de IA agroalimentar em português regional brasileiro com DOI verificável.',
   },

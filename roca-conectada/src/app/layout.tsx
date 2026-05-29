@@ -9,7 +9,7 @@ const playfair = Playfair_Display({ variable: '--font-playfair', subsets: ['lati
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Roça Conectada — FINEP AgriFam-ICT 2026',
+  title: 'SABIA — Sistema Agronômico Brasileiro de Inteligência Artificial | FINEP AgriFam-ICT 2026',
   description: 'Proposta MCTI/FINEP/FNDCT — Linha Temática 3 — Soluções digitais para a pequena propriedade rural',
   other: { viewport: 'width=device-width, initial-scale=1' },
 }

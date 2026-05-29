@@ -2,7 +2,7 @@ import type { HeroSectionProps } from './HeroSection'
 
 export const fixture: HeroSectionProps = {
   eyebrow: 'FINEP AgriFam-ICT 2026 — Linha Temática 3',
-  title: 'Roça Conectada',
+  title: 'SABIA',
   subtitle: 'A infraestrutura nacional soberana de IA para a agricultura familiar: corpus soberano, modelo fine-tuned, benchmark público e API de integração.',
   statement: 'Eles alimentam 70% do Brasil.',
   statementContrast: 'O Brasil digital ainda não os alcança.',

@@ -2,7 +2,7 @@
 import type { SidebarProps } from './Sidebar'
 
 export const fixture: SidebarProps = {
-  projectName: 'Roça Conectada',
+  projectName: 'SABIA — Sistema Agronômico Brasileiro de Inteligência Artificial',
   call: 'FINEP AgriFam-ICT 2026',
   deadline: '2026-06-26T17:00:00-03:00',
   sections: [

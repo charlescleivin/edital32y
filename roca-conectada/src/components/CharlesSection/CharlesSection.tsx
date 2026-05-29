@@ -99,7 +99,7 @@ export default function CharlesSection({
                   Tecnologia inventada por Charles apresentada em evento internacional na China
                 </h3>
                 <p className="mb-6 text-[13.5px] leading-[1.85]" style={{ color: 'var(--txtl)' }}>
-                  Charles foi convidado para apresentar, em inglês, uma tecnologia de sua própria autoria em um evento internacional realizado na China. A entrevista demonstra reconhecimento técnico global, domínio do inglês em contexto científico e a capacidade de comunicar inovação complexa para audiências internacionais — habilidades diretamente transferíveis para a execução e disseminação do Roça Conectada.
+                  Charles foi convidado para apresentar, em inglês, uma tecnologia de sua própria autoria em um evento internacional realizado na China. A entrevista demonstra reconhecimento técnico global, domínio do inglês em contexto científico e a capacidade de comunicar inovação complexa para audiências internacionais — habilidades diretamente transferíveis para a execução e disseminação do SABIA.
                 </p>
               </div>
 
@@ -392,7 +392,7 @@ export default function CharlesSection({
 
       {/* ── projects ── */}
       {projects && projects.length > 0 && <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]"
-        style={{ color: 'var(--txtll)' }}>Projetos Notáveis — Relevância Direta para Roça Conectada</div>}
+        style={{ color: 'var(--txtll)' }}>Projetos Notáveis — Relevância Direta para o SABIA</div>}
       {projects && projects.length > 0 && <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((p, i) => (
           <div key={i} className="flex flex-col overflow-hidden rounded-2xl border"
