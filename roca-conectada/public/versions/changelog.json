@@ -313,5 +313,12 @@
     "date": "2026-05-29",
     "label": "fix(proposal): 16 consistency corrections from 5-a",
     "description": "fix(proposal): 16 consistency corrections from 5-agent audit"
+  },
+  {
+    "id": "v46",
+    "commit": "112ac2b",
+    "date": "2026-05-29",
+    "label": "fix(s2): align bibliography citation IDs in body t",
+    "description": "fix(s2): align bibliography citation IDs in body text with array IDs"
   }
 ]
