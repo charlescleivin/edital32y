@@ -320,5 +320,12 @@
     "date": "2026-05-29",
     "label": "fix(s2): align bibliography citation IDs in body t",
     "description": "fix(s2): align bibliography citation IDs in body text with array IDs"
+  },
+  {
+    "id": "v47",
+    "commit": "a0675c5",
+    "date": "2026-05-29",
+    "label": "fix(s2,s7,s9): Saagu Baagu unit, GROQ framing, EMA",
+    "description": "fix(s2,s7,s9): Saagu Baagu unit, GROQ framing, EMATER states, timeline dates, R07"
   }
 ]
