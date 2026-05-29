@@ -292,5 +292,12 @@
     "date": "2026-05-29",
     "label": "feat: rename project to SABIA + add corpus/Coopera",
     "description": "feat: rename project to SABIA + add corpus/Coopera Digital/WhatsApp justifications + acronym tooltip system"
+  },
+  {
+    "id": "v43",
+    "commit": "3ec62f1",
+    "date": "2026-05-29",
+    "label": "feat(s15-s17): wire three new evidence-backed sect",
+    "description": "feat(s15-s17): wire three new evidence-backed sections into app"
   }
 ]
