@@ -390,5 +390,12 @@
     "date": "2026-05-29",
     "label": "fix(gpu): replace 'convênio de pesquisa' with THAT",
     "description": "fix(gpu): replace 'convênio de pesquisa' with THATPIX contract model"
+  },
+  {
+    "id": "v57",
+    "commit": "12e988c",
+    "date": "2026-05-29",
+    "label": "fix(agroeval): independent test set from real farm",
+    "description": "fix(agroeval): independent test set from real farmer questions"
   }
 ]
