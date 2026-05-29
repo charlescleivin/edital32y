@@ -10,83 +10,123 @@ interface PageLoaderProps {
   call?: string
 }
 
-function deriveCallBadge(call: string): string {
-  const agencyMatch = call.match(/([A-Z][A-Z0-9/]+(?:\/[A-Z][A-Z0-9]+)+)/)
-  const yearMatch   = call.match(/(\d{4})/)
-  if (agencyMatch && yearMatch) {
-    return `${agencyMatch[1].split('/').join(' · ')} · ${yearMatch[1]}`
-  }
-  return call
-}
-
-interface WordEntry {
-  letter: string
-  rest: string
-  isAcronym: boolean
-}
-
-function parseProjectName(projectName: string): { acronym: string; words: WordEntry[] } {
-  // handle both ', ' (post-cleanup) and ' — ' separators
-  const sep = projectName.includes(', ') ? ', ' : ' — '
-  const idx = projectName.indexOf(sep)
-  if (idx === -1) return { acronym: projectName, words: [] }
-
-  const acronym   = projectName.slice(0, idx).trim()
-  const expansion = projectName.slice(idx + sep.length).trim()
-  const rawWords  = expansion.split(' ')
-
-  let ai = 0
-  const words: WordEntry[] = rawWords.map(word => {
-    const targetLetter = acronym[ai]?.toUpperCase()
-    if (targetLetter && word[0]?.toUpperCase() === targetLetter) {
-      ai++
-      return { letter: word[0], rest: word.slice(1), isAcronym: true }
-    }
-    return { letter: '', rest: word, isAcronym: false }
-  })
-
-  return { acronym, words }
-}
-
 const GRAIN = `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`
 
-function BrazilFlag({ muted }: { muted?: boolean }) {
+/* ─── Sabiá-laranjeira (Turdus rufiventris) ──────────────────────────────── */
+function SabiaIllustration({ visible }: { visible: boolean }) {
   return (
-    <svg viewBox="0 0 60 42" width="72" height="50"
-      style={{ display: 'block', opacity: muted ? 0.15 : 1 }}>
-      <rect width="60" height="42" fill="#009C3B" rx="2" />
-      <polygon points="30,3.5 50,21 30,38.5 10,21" fill="#FFDF00" />
-      <circle cx="30" cy="21" r="10.5" fill="#002776" />
-      <rect x="19.5" y="19" width="21" height="4" fill="white" rx="2" />
-      <circle cx="26"   cy="22.5" r="1"   fill="white" />
-      <circle cx="26.5" cy="17.5" r="0.7" fill="white" />
-      <circle cx="23.5" cy="20.5" r="0.8" fill="white" />
-      <circle cx="29"   cy="20.5" r="0.8" fill="white" />
-      <circle cx="27.5" cy="24.5" r="0.5" fill="white" />
-      <circle cx="35"   cy="19"   r="0.5" fill="white" opacity="0.7" />
-      <circle cx="33.5" cy="23"   r="0.4" fill="white" opacity="0.6" />
+    <svg
+      viewBox="0 0 240 200"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden
+      style={{
+        width: 220,
+        height: 183,
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0) scale(1)' : 'translateY(18px) scale(0.94)',
+        transition: 'opacity 0.85s cubic-bezier(0.16,1,0.3,1) 0.45s, transform 0.85s cubic-bezier(0.16,1,0.3,1) 0.45s',
+      }}
+    >
+      {/* Branch */}
+      <path
+        d="M18 168 Q120 152 222 163"
+        stroke="rgba(92,78,62,0.5)"
+        strokeWidth="3.5"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Tail feathers — long, dark, sweeping left */}
+      <path
+        d="M74 120 C62 128 46 136 24 150 C36 140 54 133 68 128 C71 126 73 123 74 120 Z"
+        fill="#1c1810"
+      />
+      <path
+        d="M74 120 C66 131 52 140 30 152 C44 142 60 136 70 130 L74 120 Z"
+        fill="#161410"
+        opacity="0.6"
+      />
+
+      {/* Body — main dark mass */}
+      <path
+        d="M74 120 C60 100 64 70 94 58 C116 48 152 56 164 80 C174 102 162 126 142 133 C118 138 88 130 74 120 Z"
+        fill="#262014"
+      />
+
+      {/* Wing fold — slightly darker, gives 3D depth */}
+      <path
+        d="M78 106 C78 80 92 62 118 57 C142 53 160 68 158 86 C142 80 112 80 78 106 Z"
+        fill="#1a1610"
+      />
+
+      {/* Wing feather detail lines */}
+      <path d="M88 98 C102 82 125 72 148 76" stroke="rgba(55,45,28,0.5)" strokeWidth="1" fill="none"/>
+      <path d="M90 104 C106 88 130 78 152 82" stroke="rgba(55,45,28,0.4)" strokeWidth="1" fill="none"/>
+
+      {/* Belly — terracota, the defining color of the sabiá */}
+      <path
+        d="M118 130 C100 124 84 132 86 152 C88 166 120 170 140 162 C158 155 158 136 144 128 C136 122 126 128 118 130 Z"
+        fill="#c85530"
+      />
+
+      {/* Breast/chest gradient into belly */}
+      <path
+        d="M132 105 C122 100 112 108 114 120 C116 128 130 132 140 126 C148 120 148 106 140 102 C137 100 134 103 132 105 Z"
+        fill="#c85530"
+        opacity="0.55"
+      />
+
+      {/* Head */}
+      <circle cx="158" cy="76" r="30" fill="#1e1912" />
+
+      {/* Beak — two tones like a real thrush beak */}
+      <path d="M183 72 L206 76 L183 81 Z" fill="#d4960e" />
+      <path d="M183 76 L206 76 L183 81 Z" fill="#b37c08" opacity="0.5" />
+
+      {/* Eye orbital ring — pale ring around the eye typical of thrushes */}
+      <circle cx="167" cy="70" r="8" fill="#2e2518" />
+      <circle cx="167" cy="70" r="6.5" fill="rgba(180,145,90,0.18)" />
+
+      {/* Eye */}
+      <circle cx="168" cy="70" r="5" fill="#0a0907" />
+
+      {/* Eye highlight — the life of the bird */}
+      <circle cx="170" cy="67.5" r="2" fill="rgba(237,229,211,0.92)" />
+
+      {/* Toes on branch */}
+      <path d="M108 162 L100 168" stroke="#5c4a30" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+      <path d="M108 162 L112 169" stroke="#5c4a30" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+      <path d="M108 162 L103 170" stroke="#5c4a30" strokeWidth="1.6" strokeLinecap="round" fill="none"/>
+      <path d="M128 162 L124 169" stroke="#5c4a30" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+      <path d="M128 162 L132 169" stroke="#5c4a30" strokeWidth="1.8" strokeLinecap="round" fill="none"/>
+      <path d="M128 162 L136 167" stroke="#5c4a30" strokeWidth="1.6" strokeLinecap="round" fill="none"/>
     </svg>
   )
 }
 
-export default function PageLoader({ projectName, call }: PageLoaderProps) {
+export default function PageLoader({ projectName }: PageLoaderProps) {
   const [phase, setPhase] = useState<Phase>('in')
   const markDone = useMarkLoaderDone()
 
-  const { acronym, words } = parseProjectName(projectName ?? 'SABIA')
-  const callBadge = call ? deriveCallBadge(call) : 'MCTI · FINEP · FNDCT · 2026'
+  // extract the acronym — handle ', ' or ' — ' as separator
+  const name = projectName ?? 'SABIA'
+  const acronym = name.includes(', ')
+    ? name.split(', ')[0]
+    : name.includes(' — ')
+    ? name.split(' — ')[0]
+    : name
 
   useEffect(() => {
     const t0 = setTimeout(() => setPhase('hold'), 80)
-    const t1 = setTimeout(() => setPhase('out'),  3400)
-    const t2 = setTimeout(() => { setPhase('done'); markDone() }, 4600)
+    const t1 = setTimeout(() => setPhase('out'),  3200)
+    const t2 = setTimeout(() => { setPhase('done'); markDone() }, 4400)
     return () => { clearTimeout(t0); clearTimeout(t1); clearTimeout(t2) }
   }, [])
 
   if (phase === 'done') return null
 
-  const leaving = phase === 'out'
-  const visible = phase !== 'in'
+  const leaving  = phase === 'out'
+  const visible  = phase !== 'in'
 
   return (
     <div className="fixed inset-0 z-[9999]" style={{ pointerEvents: leaving ? 'none' : 'all' }}>
@@ -97,10 +137,10 @@ export default function PageLoader({ projectName, call }: PageLoaderProps) {
         background: '#0c0b09',
         zIndex: 2,
         transform: leaving ? 'translateY(-100%)' : 'translateY(0)',
-        transition: leaving ? 'transform 0.9s cubic-bezier(0.76,0,0.24,1) 0.4s' : 'none',
+        transition: leaving ? 'transform 0.9s cubic-bezier(0.76,0,0.24,1) 0.35s' : 'none',
       }}>
         <div className="pointer-events-none absolute inset-0" style={{
-          background: 'radial-gradient(ellipse 70% 130% at 50% 100%, rgba(200,85,48,0.065) 0%, transparent 68%)',
+          background: 'radial-gradient(ellipse 80% 140% at 50% 100%, rgba(200,85,48,0.055) 0%, transparent 65%)',
         }} />
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: GRAIN, backgroundSize: '160px 160px',
@@ -113,10 +153,10 @@ export default function PageLoader({ projectName, call }: PageLoaderProps) {
         background: '#0c0b09',
         zIndex: 2,
         transform: leaving ? 'translateY(100%)' : 'translateY(0)',
-        transition: leaving ? 'transform 0.9s cubic-bezier(0.76,0,0.24,1) 0.4s' : 'none',
+        transition: leaving ? 'transform 0.9s cubic-bezier(0.76,0,0.24,1) 0.35s' : 'none',
       }}>
         <div className="pointer-events-none absolute inset-0" style={{
-          background: 'radial-gradient(ellipse 70% 130% at 50% 0%, rgba(200,85,48,0.065) 0%, transparent 68%)',
+          background: 'radial-gradient(ellipse 80% 140% at 50% 0%, rgba(200,85,48,0.055) 0%, transparent 65%)',
         }} />
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: GRAIN, backgroundSize: '160px 160px',
@@ -125,127 +165,41 @@ export default function PageLoader({ projectName, call }: PageLoaderProps) {
 
       {/* ── SEAM ── */}
       <div style={{
-        position: 'absolute', top: '50%', left: 0, right: 0, height: '1px', zIndex: 5,
+        position: 'absolute', top: '50%', left: 0, right: 0,
+        height: '1px', zIndex: 5,
         transform: 'translateY(-50%)',
-        background: 'linear-gradient(to right, transparent 0%, rgba(200,85,48,0.7) 20%, rgba(212,150,14,0.9) 50%, rgba(200,85,48,0.7) 80%, transparent 100%)',
-        boxShadow: '0 0 16px rgba(200,85,48,0.55), 0 0 48px rgba(200,85,48,0.18)',
+        background: 'linear-gradient(to right, transparent 0%, rgba(200,85,48,0.65) 20%, rgba(212,150,14,0.85) 50%, rgba(200,85,48,0.65) 80%, transparent 100%)',
+        boxShadow: '0 0 14px rgba(200,85,48,0.5), 0 0 40px rgba(200,85,48,0.15)',
         opacity: 0,
         animation: leaving ? 'seam-flash 0.4s ease 0s forwards' : 'none',
       }} />
 
       {/* ── CONTENT ── */}
       <div
-        className="absolute inset-0 flex flex-col items-center justify-center px-6"
+        className="absolute inset-0 flex flex-col items-center justify-center gap-5"
         style={{
           zIndex: 3,
           opacity: leaving ? 0 : 1,
-          transform: leaving ? 'scale(0.96)' : 'scale(1)',
-          transition: leaving ? 'opacity 0.2s ease, transform 0.2s ease' : 'none',
+          transform: leaving ? 'scale(0.97)' : 'scale(1)',
+          transition: leaving ? 'opacity 0.18s ease, transform 0.18s ease' : 'none',
         }}
       >
-        {/* Call badge */}
-        <span
-          className="mb-8 text-[9px] font-bold uppercase tracking-[4px]"
-          style={{
-            color: 'var(--terra)',
-            opacity: visible ? 1 : 0,
-            transform: visible ? 'translateY(0)' : 'translateY(10px)',
-            transition: 'opacity 0.55s ease 0.25s, transform 0.55s ease 0.25s',
-          }}
-        >
-          {callBadge}
-        </span>
+        {/* Bird */}
+        <SabiaIllustration visible={visible} />
 
-        {/* Acronym — slides up from below */}
+        {/* Name */}
         <div style={{ overflow: 'hidden', lineHeight: 1 }}>
           <h1
-            className="text-[60px] sm:text-[76px] font-bold tracking-[-1.5px] select-none"
+            className="text-[58px] sm:text-[72px] font-bold tracking-[-1px] select-none"
             style={{
               fontFamily: 'var(--font-playfair)',
               color: 'var(--txt)',
-              transform: visible ? 'translateY(0)' : 'translateY(108%)',
-              transition: 'transform 0.85s cubic-bezier(0.16,1,0.3,1) 0.38s',
+              transform: visible ? 'translateY(0)' : 'translateY(110%)',
+              transition: 'transform 0.8s cubic-bezier(0.16,1,0.3,1) 0.55s',
             }}
           >
             {acronym}
           </h1>
-        </div>
-
-        {/* Thin separator */}
-        <div className="my-5" style={{ height: '1px', width: '220px', overflow: 'hidden' }}>
-          <div style={{
-            height: '1px',
-            background: 'linear-gradient(to right, transparent, var(--terra) 40%, var(--gold) 60%, transparent)',
-            width: visible ? '100%' : '0%',
-            transition: 'width 0.9s cubic-bezier(0.16,1,0.3,1) 0.85s',
-          }} />
-        </div>
-
-        {/* Acronym expansion — stacked words */}
-        {words.length > 0 && (
-          <div
-            className="flex flex-col gap-[3px]"
-            style={{
-              opacity: visible ? 1 : 0,
-              transform: visible ? 'translateY(0)' : 'translateY(8px)',
-              transition: 'opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s',
-            }}
-          >
-            {words.map((w, i) => (
-              <div key={i} className="flex items-baseline gap-[6px]" style={{ lineHeight: 1.4 }}>
-                {/* Fixed-width letter column */}
-                <span
-                  className="text-[15px] sm:text-[17px] font-bold"
-                  style={{
-                    width: '14px',
-                    textAlign: 'right',
-                    fontFamily: 'var(--font-playfair)',
-                    color: w.isAcronym ? 'var(--gold)' : 'transparent',
-                    flexShrink: 0,
-                  }}
-                >
-                  {w.isAcronym ? w.letter : '·'}
-                </span>
-                {/* Word body */}
-                <span
-                  className="text-[12px] sm:text-[13px]"
-                  style={{
-                    color: w.isAcronym ? 'var(--txtl)' : 'var(--txtll)',
-                    fontStyle: w.isAcronym ? 'normal' : 'italic',
-                    letterSpacing: '0.01em',
-                  }}
-                >
-                  {w.isAcronym ? (
-                    <>
-                      <span style={{ color: 'var(--gold)', fontWeight: 600 }}>{w.letter}</span>
-                      <span>{w.rest}</span>
-                    </>
-                  ) : w.rest}
-                </span>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Brazil flag */}
-        <div
-          className="mt-8"
-          style={{
-            position: 'relative',
-            width: 72,
-            height: 50,
-            opacity: visible ? 1 : 0,
-            transition: 'opacity 0.5s ease 0.4s',
-          }}
-        >
-          <BrazilFlag muted />
-          <div style={{
-            position: 'absolute', inset: 0,
-            clipPath: visible ? 'inset(0% 0% 0% 0%)' : 'inset(100% 0% 0% 0%)',
-            transition: 'clip-path 2.9s cubic-bezier(0.4,0,0.2,1) 0.3s',
-          }}>
-            <BrazilFlag />
-          </div>
         </div>
       </div>
     </div>
