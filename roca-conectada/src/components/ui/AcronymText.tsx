@@ -34,5 +34,5 @@ export function AcronymText({ text }: AcronymTextProps) {
     parts.push(text.slice(lastIndex))
   }
 
-  return <>{parts}</>
+  return <span>{parts}</span>
 }
