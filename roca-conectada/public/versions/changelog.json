@@ -383,5 +383,12 @@
     "date": "2026-05-29",
     "label": "remove: all RAImundo references",
     "description": "remove: all RAImundo references"
+  },
+  {
+    "id": "v56",
+    "commit": "9d60d65",
+    "date": "2026-05-29",
+    "label": "fix(gpu): replace 'convênio de pesquisa' with THAT",
+    "description": "fix(gpu): replace 'convênio de pesquisa' with THATPIX contract model"
   }
 ]
