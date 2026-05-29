@@ -1,3 +1,9 @@
+import JustificativasSection, { componentMeta as justificativasSectionMeta } from '@/components/JustificativasSection/JustificativasSection'
+import { fixture as justificativasSectionFixture } from '@/components/JustificativasSection/JustificativasSection.fixture'
+import CooperaProducaoSection, { componentMeta as cooperaProducaoSectionMeta } from '@/components/CooperaProducaoSection/CooperaProducaoSection'
+import { fixture as cooperaProducaoSectionFixture } from '@/components/CooperaProducaoSection/CooperaProducaoSection.fixture'
+import WhatsappDecisaoSection, { componentMeta as whatsappDecisaoSectionMeta } from '@/components/WhatsappDecisaoSection/WhatsappDecisaoSection'
+import { fixture as whatsappDecisaoSectionFixture } from '@/components/WhatsappDecisaoSection/WhatsappDecisaoSection.fixture'
 import ModalidadesSection, { componentMeta as modalidadesSectionMeta } from '@/components/ModalidadesSection/ModalidadesSection'
 import { fixture as modalidadesSectionFixture } from '@/components/ModalidadesSection/ModalidadesSection.fixture'
 import SoberaniaSection, { componentMeta as soberaniaSectionMeta } from '@/components/SoberaniaSection/SoberaniaSection'
@@ -54,5 +60,8 @@ export const registry: Record<string, {
   [parceriasSectionMeta.slug]: { Component: ParceriasSection, fixture: parceriasSectionFixture, label: parceriasSectionMeta.label },
   [modalidadesSectionMeta.slug]: { Component: ModalidadesSection, fixture: modalidadesSectionFixture, label: modalidadesSectionMeta.label },
   [soberaniaSectionMeta.slug]: { Component: SoberaniaSection, fixture: soberaniaSectionFixture, label: soberaniaSectionMeta.label },
+  [justificativasSectionMeta.slug]: { Component: JustificativasSection, fixture: justificativasSectionFixture, label: justificativasSectionMeta.label },
+  [cooperaProducaoSectionMeta.slug]: { Component: CooperaProducaoSection, fixture: cooperaProducaoSectionFixture, label: cooperaProducaoSectionMeta.label },
+  [whatsappDecisaoSectionMeta.slug]: { Component: WhatsappDecisaoSection, fixture: whatsappDecisaoSectionFixture, label: whatsappDecisaoSectionMeta.label },
   // entries added here by generator
 }

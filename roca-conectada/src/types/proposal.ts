@@ -663,6 +663,115 @@ export interface S14Data extends SectionMeta {
   expansionVision: string
 }
 
+export interface JustificativaCitation {
+  authors: string
+  title: string
+  venue: string
+  year: string
+  doi?: string
+  keyFinding: string
+}
+
+export interface JustificativaBlock {
+  id: string
+  question: string
+  argument: string
+  citations: JustificativaCitation[]
+  conclusion: string
+}
+
+export interface S15Data extends SectionMeta {
+  blocks: JustificativaBlock[]
+  thatpixNote: string
+}
+
+export interface CooperaProducaoStat {
+  value: string
+  label: string
+  source: string
+  colorVariant: 'terra' | 'gold' | 'sage' | 'green'
+}
+
+export interface CooperaApiEndpoint {
+  id: string
+  icon: string
+  title: string
+  description: string
+}
+
+export interface CooperaTimelineStep {
+  time: string
+  actor: 'farmer' | 'manager' | 'system'
+  event: string
+  detail: string
+}
+
+export interface CooperaProducaoCitation {
+  authors: string
+  title: string
+  venue: string
+  year: string
+  doi: string
+  keyFinding: string
+}
+
+export interface S16Data extends SectionMeta {
+  headline: string
+  leadStats: CooperaProducaoStat[]
+  gapStatement: string
+  apiEndpoints: CooperaApiEndpoint[]
+  timelineTitle: string
+  timelineSubtitle: string
+  timeline: CooperaTimelineStep[]
+  conclusionStatement: string
+  citations: CooperaProducaoCitation[]
+}
+
+export interface WhatsappPrecedent {
+  flag: string
+  name: string
+  org: string
+  year: string
+  farmers: string
+  channel: string
+  source: string
+  sourceUrl: string
+}
+
+export interface WhatsappRisk {
+  risk: string
+  mitigation: string
+  severity: 'high' | 'medium' | 'low'
+}
+
+export interface WhatsappDataPoint {
+  value: string
+  label: string
+  source: string
+  color: 'terra' | 'gold' | 'sage' | 'green'
+}
+
+export interface WhatsappDecisaoCitation {
+  authors: string
+  title: string
+  venue: string
+  year: string
+  doi?: string
+  url?: string
+  keyFinding: string
+}
+
+export interface S17Data extends SectionMeta {
+  headline: string
+  confrontationStatement: string
+  dataPoints: WhatsappDataPoint[]
+  buildCostNote: string
+  precedents: WhatsappPrecedent[]
+  sovereigntyArgument: string
+  risks: WhatsappRisk[]
+  citations: WhatsappDecisaoCitation[]
+}
+
 export interface ProposalData {
   meta: {
     projectName: string
@@ -698,5 +807,8 @@ export interface ProposalData {
   s12: S12Data
   s13: S13Data
   s14: S14Data
+  s15: S15Data
+  s16?: S16Data
+  s17?: S17Data
   charles?: CharlesData
 }

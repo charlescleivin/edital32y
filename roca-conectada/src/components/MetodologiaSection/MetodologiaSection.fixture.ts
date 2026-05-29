@@ -87,52 +87,10 @@ export const fixture: MetodologiaSectionProps = {
   },
   sovereigntyCallouts: [
     {
-      id: 'sc1',
-      badge: '📱 Justificativa Estratégica',
-      title: 'WhatsApp × Soberania: O Tradeoff Que Não É o Que Parece',
-      content: 'A escolha do WhatsApp como canal de entrega do AgroAssistente pode parecer contraditória em um projeto de soberania tecnológica. É uma tensão real — e merece resposta direta, não contorno retórico. A soberania reside na camada de IA, não no canal de mensagens. O corpus AgroLinguaBR, o modelo fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos, hospedados e titularizados no Brasil, transferidos à [ICT EXECUTORA] no mês 36. O WhatsApp é o canal de entrega — equivalente à estrada pela qual o conhecimento trafega. Os prós: o IBGE PNAD 2023 documenta que 99% dos usuários rurais de smartphone no Brasil utilizam WhatsApp como aplicativo principal. Curva de aprendizado: zero. Funciona em Android de R$ 400. Construir um app próprio equivalente custaria R$ 1–2 milhões e 2+ anos de adoção — e falharia por fricção. Os contras são reais: a Meta pode alterar ou encerrar a API Business. A resposta arquitetural: o backend do AgroAssistente é canal-agnóstico desde o início — a mesma engine alimenta WhatsApp hoje e pode alimentar qualquer outro canal por reconfiguração. O precedente: Kisan e-Mitra (Índia), RAImundo EMBRAPA (2025) e Darli AI (Gana, 110k agricultores) todos usam WhatsApp. A questão pertinente não é "o canal é soberano?" — é "a IA embaixo do canal é soberana?" Para o SABIA, a resposta é sim, por design e por contrato de transferência de titularidade.',
-    },
-    {
       id: 'sc2',
       badge: '🌐 Soberania de Dados',
       title: 'AgroLinguaBR: corpus de titularidade pública',
       content: 'O corpus linguístico gerado pelo projeto — 25.000+ pares de pergunta-resposta em português agrícola regional — será publicado sob licença CC BY-NC-SA 4.0 e depositado em repositório institucional com DOI. É um ativo científico nacional: qualquer universidade brasileira poderá replicar, estender ou adaptar os modelos sem depender de APIs proprietárias estrangeiras.',
-    },
-    {
-      id: 'sc-corpus-25k',
-      badge: '📊 Justificativa Científica do Corpus',
-      title: 'Por Que 25.000 Pares É Mais Que Suficiente — e Por Que a THATPIX Está Apta a Executar',
-      content: 'Para ajuste de domínio com LoRA/PEFT, 25.000 pares é mais do que suficiente — e frequentemente mais do que necessário. O Stanford Alpaca (2023) obteve instrução geral competitiva com apenas 52.000 exemplos para LLaMA-7B. Modelos médicos especializados (MedAlpaca, PMC-LLaMA) atingiram desempenho de nível especialista com apenas 5.000–15.000 pares Q&A clínicos. O AgroChat (China, 2023) fine-tunou um LLM agrícola multiespécie com 57.000 amostras. O AgroLinguaBR com 25.000 pares curados está bem dentro da faixa de suficiência científica. O princípio consolidado: especificidade de domínio supera volume bruto de dados. A THATPIX diferencia-se em três dimensões: (1) Multi-modelo — antes de treinar, o AgroEval será aplicado a LLaMA-3, Mistral e Sabiá-3 (Maritaca AI) para selecionar o melhor base para o domínio agrícola em português. (2) Multi-estágio com feedback real — Fase 1 (LoRA em 10k pares para MVP), Fase 2 (20k com alinhamento por preferência a partir de feedback de campo dos 800 agricultores piloto), Fase 3 (25k com correções validadas por agrônomos). (3) Otimizado para inferência soberana desde o início — quantização 4-bit NF4 + GGUF + latência P95 < 5s em RTX 4090 (R$ 8.000), permitindo auto-hospedagem por qualquer EMATER estadual após o projeto.',
-    },
-    {
-      id: 'sc-coopera-tech',
-      badge: '🔗 Integração Técnica',
-      title: 'Coopera Digital + AgroAPI: Como a IA Chega à Gestão da Cooperativa',
-      content: 'A integração entre Coopera Digital e AgroAPI é baseada em chamadas REST autenticadas (OAuth 2.0 + API key por cooperativa), com camada de cache local offline que garante funcionamento durante quedas de conectividade. A Coopera Digital consome quatro grupos de endpoints: (1) recomendação de cultivo — recomendações sazonais personalizadas por bioma (Caatinga, Cerrado, Mata Atlântica) para o plano de plantio do próximo ciclo; (2) inteligência de preços — tabela de referência PAA/PNAE do CONAB cruzada com o calendário de entregas; (3) diagnóstico fitossanitário — o gestor descreve sintomas em linguagem natural e recebe diagnóstico diferencial com protocolo de intervenção; (4) verificação de conformidade regulatória — checagem de DAA, declarações de aptidão ao PRONAF e certidões exigidas pelo PNAE antes de submeter um lote. Toda chamada gera trilha de auditoria apresentável a auditores do MAPA ou CONAB. A arquitetura segue padrão de interoperabilidade que permite qualquer EMATER estadual ou ICT parceira integrar a mesma AgroAPI com contrato de serviço padronizado.',
-    },
-    {
-      id: 'sc-coopera-paa-pnae',
-      badge: '🏛️ Acesso a Mercados Institucionais',
-      title: 'Da Roça ao Cardápio Escolar: Coopera Digital no PAA e PNAE',
-      content: 'O acesso ao PAA e ao PNAE é a principal rota de formalização de renda da agricultura familiar no Nordeste — mas a burocracia documental exclui cooperativas menores. Um levantamento com gestores nas três regiões piloto identificou uma média de 43 horas/mês gastas em atividades manuais: preenchimento de DAA, controle de lotes em planilhas Excel, contato telefônico com o CONAB, retrabalho por erros de CPF ou peso. A Coopera Digital substitui esse fluxo: cada produto entregue é registrado com rastreabilidade desde o cadastro de plantio do associado até a nota fiscal de entrega, gerando automaticamente o DAA pré-preenchido e o laudo de origem orgânica/agroecológica. Resultado projetado (benchmark de digitalização análogo: Sebrae 2022, SAGI/MDS 2021): redução de 43 para ~9 horas/mês por gestor. Do lado financeiro, a documentação digital elimina o principal gargalo de pagamento: prazo médio de liquidação cai de 90–120 para 30–45 dias — para uma cooperativa com R$ 800k/ano no PAA/PNAE, isso representa ~R$ 50–80k/ano em capital de giro liberado.',
-    },
-    {
-      id: 'sc-coopera-maria',
-      badge: '👨‍🌾 O Dia a Dia do Agricultor',
-      title: 'Maria das Dores, Sertão Cearense: A IA que Cabe no Sinal de 3G',
-      content: 'Maria das Dores, 47 anos, cultiva feijão-caupi e cria 14 cabras em 6 hectares em Crateús-CE. O técnico EMATER-CE cobre 620 famílias — uma visita a cada 3–4 meses. Segunda-feira de manhã: sua cabra apresenta secreção nasal e prostração. Maria manda WhatsApp para o AgroAssistente: "minha cabra tá com catarro, tossindo e sem comer desde ontem". Em 40 segundos, mesmo com 3G intermitente, recebe diagnóstico diferencial em português nordestino com protocolo de triagem e referência à IN 6/2018 do MAPA. Mesma semana: o gestor da cooperativa acessa o Coopera Digital, verifica que o lote de feijão de Maria vai para o PNAE no dia 15, e aciona a geração automática do DAA e do certificado de rastreabilidade. Maria não precisa ir ao escritório — validação digital. No dia 20 o pagamento cai: 35 dias após a entrega, contra os 110 que ela esperava antes. Ao final do mês, o Coopera Digital consulta a AgroAPI e retorna recomendações de variedades tolerantes à seca para o Caatinga para o ciclo de dezembro — recebidas por Maria via WhatsApp, no mesmo canal que ela já usa. Nenhum app novo, nenhum portal governamental.',
-    },
-    {
-      id: 'sc-coopera-gestor',
-      badge: '🏢 Gestão da Cooperativa',
-      title: 'Menos Burocracia, Mais Campo: O Impacto no Gestor da Cooperativa',
-      content: 'O gestor de cooperativa de AF no Nordeste acumula funções que organizações maiores distribuiriam em cinco cargos. Antes do Coopera Digital: planilha Excel, cadernos de campo, telefone para o CONAB e pastas de DAA físicas. Erros de CPF, peso divergente e certidões vencidas respondem por 68% das glosas de pagamento em cooperativas de pequeno porte (CONAB, Relatório de Gestão 2023). Com o Coopera Digital: painel unificado com cadastro de associados e histórico por safra, agenda de coletas/entregas integrada ao calendário PAA/PNAE, geração automática de documentação de conformidade, acompanhamento de pagamentos em tempo real e notificações diretas para associados via WhatsApp. A integração com a AgroAPI adiciona inteligência ao planejamento: ao montar o cronograma do próximo ciclo, o sistema sugere recomendações sazonais para cada cultura dos associados — sem que o gestor precise ser especialista agronômico. Impacto projetado: de 60–80 famílias apoiadas para 90–110 famílias na mesma jornada — aumento de 40% na capacidade de atendimento sem contratação adicional.',
-    },
-    {
-      id: 'sc-coopera-soberania',
-      badge: '🌍 Por Que a Camada C É Insubstituível',
-      title: 'Sem Coopera Digital, o AgroAssistente É Apenas um Chatbot',
-      content: 'O AgroAssistente responde perguntas individuais — mas não vê o padrão coletivo de produção. Não sabe que 47 dos 80 associados de uma cooperativa plantam feijão-caupi na mesma janela de 15 dias, que um surto de fungo se alastra pelo bioma vizinho, ou que o contrato PNAE vence em 6 semanas com a cooperativa 30% abaixo do volume comprometido. O Coopera Digital é a camada de agregação que transforma consultas individuais em inteligência coletiva: quando a AgroAPI detecta risco de surto de mosca-branca no Vale do Piancó, o Coopera Digital dispara notificação proativa para todos os associados com culturas suscetíveis — sem esperar que cada um pergunte. Isso transforma a IA de reativa em preventiva. A dimensão de soberania é igualmente crítica: o Coopera Digital armazena todos os dados das cooperativas em infraestrutura brasileira, sob controle da ICT executora, exportável em formato aberto (JSON/CSV) a qualquer momento. Sem dependência de SaaS estrangeiro sujeito a interrupção ou precificação arbitrária. Qualquer EMATER estadual ou programa federal pode assumir a operação porque dados e código-fonte são patrimônio nacional. A combinação AgroAssistente (individual, reativo) + Coopera Digital (coletivo, preventivo) + AgroAPI (infraestrutura soberana) fecha o ciclo que nenhuma das partes fecha sozinha.',
     },
     {
       id: 'sc-gpu',
