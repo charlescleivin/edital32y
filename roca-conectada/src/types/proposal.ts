@@ -766,13 +766,24 @@ export interface WhatsappDecisaoCitation {
   keyFinding: string
 }
 
+export interface WhatsappMigrationStep {
+  phase: string
+  label: string
+  description: string
+}
+
 export interface S17Data extends SectionMeta {
   headline: string
-  confrontationStatement: string
+  openingRationale: string
   dataPoints: WhatsappDataPoint[]
-  buildCostNote: string
   precedents: WhatsappPrecedent[]
   sovereigntyArgument: string
+  migrationRoadmap: {
+    title: string
+    subtitle: string
+    steps: WhatsappMigrationStep[]
+    closingStatement: string
+  }
   risks: WhatsappRisk[]
   citations: WhatsappDecisaoCitation[]
 }

@@ -2,13 +2,13 @@ import type { S17Data } from '@/types/proposal'
 
 export const fixture: S17Data = {
   number: 'A Decisão WhatsApp',
-  title: 'Por Que o SABIA Usa o WhatsApp — Uma Resposta Honesta',
+  title: 'Canal de Entrega: WhatsApp Hoje, Infraestrutura Soberana Como Destino',
   subtitle:
-    'Um projeto de soberania digital que usa uma plataforma americana. A contradição aparente exige uma resposta fundamentada em dados, não uma deflexão.',
-  headline: 'A Soberania Está na Camada de IA — Não no Canal de Mensagens.',
+    'A escolha de canal é técnica, não ideológica. O backend é canal-agnóstico desde o primeiro dia. A trajetória aponta para fora da dependência estrangeira.',
+  headline: '96% de penetração rural não é preferência — é a infraestrutura que existe. Partimos dela.',
 
-  confrontationStatement:
-    'O SABIA é um projeto de soberania digital. Por que usa o WhatsApp — uma plataforma de uma empresa americana?',
+  openingRationale:
+    'O AgroAssistente entrega via WhatsApp porque é o canal onde os agricultores brasileiros estão: 96% dos rurais com celular comunicam por ele (Embrapa, 2023), funciona em Android de R$ 400, opera com sinal de 3G intermitente, sem conta adicional, sem download. Partir de onde o usuário existe não é concessão — é o único caminho para adoção real em escala. A EMBRAPA chegou à mesma conclusão ao lançar o RAImundo em 2025. O Farmer.Chat da Microsoft Research, com 300.000 consultas em quatro países, também. A soberania do projeto reside no modelo LLM, no corpus AgroLinguaBR e na AgroAPI — todos sob titularidade da ICT executora, em infraestrutura brasileira. O WhatsApp é o cabo. A usina é nossa.',
 
   dataPoints: [
     {
@@ -40,9 +40,6 @@ export const fixture: S17Data = {
       color: 'green',
     },
   ],
-
-  buildCostNote:
-    'Esses valores cobrem apenas a engenharia. Compram zero usuários. O valor do WhatsApp no Brasil rural é função de 147 milhões de brasileiros já na mesma plataforma. Efeitos de rede não se compram em nenhum orçamento — e os agricultores que o SABIA quer alcançar já estão lá.',
 
   precedents: [
     {
@@ -82,7 +79,36 @@ export const fixture: S17Data = {
   ],
 
   sovereigntyArgument:
-    'A soberania do projeto SABIA reside na camada de IA — não no canal de distribuição. O AgroLinguaBR (corpus) está sob CC BY-NC-SA 4.0, depositado com DOI em repositório institucional brasileiro, propriedade da ICT executora. O modelo LLM fine-tuned está sob CC BY-NC-SA 4.0, com pesos armazenados em infraestrutura brasileira. O AgroEval (benchmark) é Apache 2.0, público. A AgroAPI é hospedada em servidores brasileiros, propriedade da ICT executora. O Coopera Digital armazena todos os dados no Brasil em formato exportável aberto (JSON/CSV). A integração WhatsApp é uma configuração, não uma arquitetura. O backend é projetado como agnóstico de canal desde o primeiro dia: o mesmo motor de inferência que alimenta o WhatsApp hoje pode alimentar qualquer outro canal — Telegram, plataforma governamental de mensagens, interface de voz — por reconfiguração, não reescrita.',
+    'O corpus AgroLinguaBR, o modelo LLM fine-tuned, o AgroEval e a AgroAPI são os ativos soberanos: construídos em solo brasileiro, hospedados em servidores nacionais, transferidos à ICT executora no mês 36 sob licença CC BY-NC-SA 4.0. O Coopera Digital armazena todos os dados das cooperativas no Brasil, em formato aberto exportável. O WhatsApp opera como camada de configuração — o mesmo motor de inferência que responde via WhatsApp hoje pode responder por qualquer outro canal mediante reconfiguração de uma única camada de adaptador, sem tocar a lógica de IA.',
+
+  migrationRoadmap: {
+    title: 'Trajetória de Migração para Infraestrutura Soberana',
+    subtitle: 'Queremos sair da dependência de plataformas estrangeiras. O projeto foi desenhado para essa transição desde o início — não como plano contingente, mas como direção declarada.',
+    steps: [
+      {
+        phase: 'Meses 1–12',
+        label: 'Backend canal-agnóstico desde a fundação',
+        description: 'A camada de entrega é um adaptador isolado no código. WhatsApp é o canal único de produção na Fase 1, mas a arquitetura não o privilegia estruturalmente. Trocar o canal não exige reescrever a lógica de IA — apenas reconfigurar o adaptador.',
+      },
+      {
+        phase: 'Meses 13–24',
+        label: 'Avaliação de canais alternativos com cooperativas-piloto',
+        description: 'Com 800 agricultores ativos, avalia-se a viabilidade de canais alternativos nos contextos de maior conectividade (Vitória da Conquista-BA). Interface leve para cooperativas com Internet estável é prototipada e testada em paralelo ao WhatsApp.',
+      },
+      {
+        phase: 'Meses 25–36',
+        label: 'Transferência e neutralidade de canal garantida',
+        description: 'Modelo e AgroAPI transferidos à ICT executora. O canal WhatsApp permanece disponível e funcional — mas qualquer alternativa que o Brasil disponibilize (app nativo, integração gov.br, plataforma pública) pode ser ativada por reconfiguração do adaptador, sem alterar uma linha de lógica de IA.',
+      },
+      {
+        phase: 'Pós-projeto',
+        label: 'Migração conforme infraestrutura soberana amadurece',
+        description: 'À medida que o Brasil desenvolve infraestrutura soberana de comunicação — integrações gov.br, plataformas públicas open-source, ou alternativas nacionais — o ecossistema SABIA está arquiteturalmente preparado para migrar. Sem reescrita, sem lock-in tecnológico, sem dependência de decisões da Meta.',
+      },
+    ],
+    closingStatement:
+      'Queremos sair da dependência de infraestrutura estrangeira. Não porque o WhatsApp seja um inimigo — mas porque soberania plena exige não depender de decisões de empresas que não respondem ao interesse nacional. Esse projeto foi desenhado para essa transição desde o primeiro commit.',
+  },
 
   risks: [
     {
