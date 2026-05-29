@@ -348,5 +348,12 @@
     "date": "2026-05-29",
     "label": "fix(sidebar): add s4 children — Justificativas, Co",
     "description": "fix(sidebar): add s4 children — Justificativas, Coopera, WhatsApp"
+  },
+  {
+    "id": "v51",
+    "commit": "3272e76",
+    "date": "2026-05-29",
+    "label": "rewrite(s4-whatsapp): tom técnico-declarativo, roa",
+    "description": "rewrite(s4-whatsapp): tom técnico-declarativo, roadmap de migração soberana"
   }
 ]
