@@ -299,5 +299,12 @@
     "date": "2026-05-29",
     "label": "feat(s15-s17): wire three new evidence-backed sect",
     "description": "feat(s15-s17): wire three new evidence-backed sections into app"
+  },
+  {
+    "id": "v44",
+    "commit": "1d4c663",
+    "date": "2026-05-29",
+    "label": "fix(s7,s9,s10,s11,s15): audit corrections — CONEP ",
+    "description": "fix(s7,s9,s10,s11,s15): audit corrections — CONEP risk, checklist, bibliography, LIMA framing"
   }
 ]
