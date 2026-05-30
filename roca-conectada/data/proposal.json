@@ -190,11 +190,11 @@
     ],
     "summary": "Em maio de 2026, o mesmo mês desta chamada pública, o MCTI declarou oficialmente que o Brasil vive uma condição de \"colônia digital\": 88% da infraestrutura de nuvem do país sob controle estrangeiro. O governo lançou o SoberanIA com R$ 40 milhões para construir um LLM nacional de 30 bilhões de parâmetros para o setor público. O PBIA 2024–2028 comprometeu R$ 23 bilhões e 54 ações para soberania tecnológica nacional. A arquitetura está sendo construída. Mas há um vácuo que nenhum desses instrumentos preenche: os 3,9 milhões de estabelecimentos de agricultura familiar, responsáveis por 70% dos alimentos que o Brasil come, estão completamente fora do perímetro de soberania que está sendo erguido agora. O SABIA, Sistema Agronômico Brasileiro de Inteligência Artificial, é o componente que preenche esse vácuo. Não é um aplicativo. É a infraestrutura soberana de IA agrícola que o Brasil ainda não tem: o AgroLinguaBR, 25.000 pares técnicos em português agrícola regional, o corpus especializado mais abrangente já produzido para esse domínio no Brasil —, um LLM fine-tuned sobre esse corpus, e a AgroAPI como camada de integração para políticas públicas. Os três ativos são titulados na [ICT EXECUTORA] ao mês 36: corpus e modelo CC BY-NC-SA 4.0, código e benchmark Apache 2.0, publicados com DOI. Infraestrutura nacional permanente, sem dependência de fornecedor estrangeiro. A pesquisa científica é conduzida pela [ICT EXECUTORA]; a engenharia é entregue pela THATPIX LTDA (CNPJ 49.827.360/0001-50). Ao final de 36 meses, existirá o que hoje não existe: uma fundação soberana de IA para a agricultura familiar brasileira, o ativo que qualquer EMATER estadual, pesquisador ou política pública pode usar como ponto de partida, sem recomeçar do zero e sem pedir permissão a nenhuma plataforma estrangeira.",
     "editalResults": [
-      "Digitalização das cadeias socioprodutivas",
-      "Aumento da independência e qualidade de vida",
-      "Eficiência em sistemas orgânicos/agroecológicos",
-      "Fortalecimento de cooperativas e associações",
-      "Aproveitamento das vocações territoriais"
+      "Digitalização das cadeias socioprodutivas da AF (RE-08 — primário)",
+      "Novos conhecimentos: AgroLinguaBR e AgroEval como bens científicos públicos (RE-05)",
+      "Novo serviço nacional: AgroAPI para o ecossistema de IA agrícola (RE-06)",
+      "Aumento da independência e qualidade de vida das famílias rurais (RE-01)",
+      "Fortalecimento de cooperativas via Coopera Digital (RE-02)"
     ],
     "institutionalStructure": [
       {
@@ -748,7 +748,7 @@
           {
             "id": "oe4",
             "code": "OE4.",
-            "text": "Realizar fine-tuning e validação científica do AgroAssistente IA em protocolo de grupo controle randomizado (Fase 2, Meses 13–24): n=50 agricultores como grupo controle recebem ATER convencional; os demais 800 integram o grupo de intervenção, totalizando 850 participantes no protocolo. O n=50 para o grupo controle não é arbitrário: o cálculo de poder estatístico (G*Power, d de Cohen = 0,5, tamanho de efeito médio correspondente a ~10% de melhoria em indicadores mensuráveis de adoção de boas práticas) com poder de 80% exige mínimo de n=51 por grupo, tornando n=50 o patamar padrão arredondado da literatura. Protocolo registrado no CONEP antes do início do piloto."
+            "text": "Realizar fine-tuning e validação científica do AgroAssistente IA em protocolo de grupo controle randomizado (Fase 2, Meses 13–24): n=50 agricultores como grupo controle recebem ATER convencional; os demais 800 integram o grupo de intervenção, totalizando 850 participantes no protocolo. O n=50 para o grupo controle não é arbitrário: o cálculo de poder estatístico (G*Power, d de Cohen = 0,5, tamanho de efeito médio correspondente a ~10% de melhoria em indicadores mensuráveis de adoção de boas práticas) com poder de 80% exige mínimo de n=64 por grupo — resultado canônico de Cohen (1988); n=50 é aceito para estudos piloto de viabilidade (ver Seção 4, Justificativas). Protocolo pré-registrado no AEA RCT Registry (Mês 10) com registro simultâneo no CONEP."
           },
           {
             "id": "oe5",
@@ -941,7 +941,7 @@
         "name": "Transferência, O Momento em que os Ativos Passam ao Brasil",
         "period": "Meses 25–36",
         "activities": [
-          "Expansão: 2.500 agricultores / 18 cooperativas, via 350 multiplicadores EMATER treinados. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
+          "Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores. Não via equipe do projeto. A escala prova que o modelo de disseminação funciona sem a presença centralizada do time de desenvolvimento.",
           "AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado. Disponível para qualquer ICT, EMATER ou política pública, sob licença aberta CC BY-NC-SA 4.0 para pesquisa e uso público.",
           "AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX. A infraestrutura é aberta porque soberania que precisa de um único guardião não é soberania.",
           "MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP. Não prometemos que alguém vai absorver, apresentamos o acordo assinado.",

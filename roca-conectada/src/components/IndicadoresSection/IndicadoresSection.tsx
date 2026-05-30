@@ -213,9 +213,9 @@ export default function IndicadoresSection({ number, title, subtitle, headline, 
           {[
             { icon: '📚', value: '25.000',  unit: 'pares Q&A',       label: 'Corpus AgroLinguaBR',          color: 'var(--sage)',  bg: 'rgba(111,168,118,0.1)' },
             { icon: '🤖', value: '1',        unit: 'modelo soberano', label: 'AgroAssistente fine-tuned',    color: 'var(--gold)',  bg: 'rgba(212,150,14,0.1)'  },
-            { icon: '📱', value: '25.000',  unit: 'famílias rurais', label: 'Acesso via WhatsApp',           color: 'var(--p)',     bg: 'rgba(74,148,86,0.1)'   },
-            { icon: '👨‍👩‍👧', value: '62.500', unit: 'pessoas',         label: 'Impacto indireto (x2,5)',      color: 'var(--terra)', bg: 'rgba(200,85,48,0.1)'   },
-            { icon: '💰', value: '+R$108M', unit: 'renda/ano',       label: 'Impacto econômico estimado',   color: 'var(--terra)', bg: 'rgba(200,85,48,0.07)'  },
+            { icon: '📱', value: '2.500',   unit: 'usuários ativos (MAU)', label: 'Acesso via WhatsApp (Fase 3)',    color: 'var(--p)',     bg: 'rgba(74,148,86,0.1)'   },
+            { icon: '👨‍👩‍👧', value: '6.250',  unit: 'pessoas',              label: 'Impacto indireto (×2,5)',         color: 'var(--terra)', bg: 'rgba(200,85,48,0.1)'   },
+            { icon: '💰', value: '+R$12M',  unit: 'renda/ano',            label: 'Impacto econômico (Fase 3)',      color: 'var(--terra)', bg: 'rgba(200,85,48,0.07)'  },
           ].map((stage, i, arr) => (
             <div key={i} className="flex items-center gap-2 shrink-0">
               <div className="flex flex-col items-center rounded-2xl border px-5 py-5 text-center"

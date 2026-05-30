@@ -14,13 +14,13 @@ export const fixture: MetodologiaSectionProps = {
       activities: [
         'Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica.',
         'Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença CC BY-NC-SA 4.0 — acesso irrestrito a pesquisadores e ICTs públicas, uso comercial por empresas privadas requer acordo negociado. Ativo público permanente antes do projeto terminar.',
-        'Fine-tuning do LLM base selecionado com LoRA/PEFT: cluster GPU laboratório da [ICT EXECUTORA] (A100 80GB × 4) + burst cloud. O modelo resultante não depende de API estrangeira para inferência — roda em RTX 4090 de R$ 8.000.',
+        'Fine-tuning do LLM base selecionado com LoRA/PEFT: cluster GPU laboratório da [ICT EXECUTORA] (A100 80GB × 4) + burst cloud. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado H100 80GB (Seção 6, R$ 600.000).',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
         'Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
       ],
       deliverables: [
-        'Corpus AgroLinguaBR v1.0 — 25.000 pares Q&A publicados com DOI no Zenodo (URL verificável)',
+        'Corpus AgroLinguaBR v1.0 — 10.000 pares Q&A publicados com DOI no Zenodo (versão Fase 1; atualizado para 18.000 na Fase 2 e 25.000 na Fase 3)',
         'LLM agrícola fine-tuned v1.0 — benchmark AgroEval documentado (BLEU/F1 contra baseline GPT-4o)',
         'Repositório GitHub [ICT EXECUTORA] — código completo, testes, Docker, README',
         'Servidor de inferência operacional — uptime report meses 10–12, latência P95 <5s',
@@ -51,7 +51,7 @@ export const fixture: MetodologiaSectionProps = {
       name: 'Transferência — O Momento em que os Ativos Passam ao Brasil',
       period: 'Meses 25–36',
       activities: [
-        'Expansão: 2.500 agricultores / 18 cooperativas — via rede de 350 multiplicadores EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), com 30 multiplicadores por circuito territorial responsáveis pela integração de ~57 novos agricultores cada. Não via equipe do projeto.',
+        'Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais. Não via equipe do projeto.',
         'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
         'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX.',
         'MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',

@@ -202,7 +202,7 @@ export default function OrcamentoSection({ number, title, subtitle, headline, he
       {equipmentItems && equipmentItems.length > 0 && (
         <div className="mb-8">
           <div className="mb-4 text-[10px] font-bold uppercase tracking-[2.5px]" style={{ color: 'var(--txtll)' }}>
-            Detalhamento — Capital / Equipamentos (R$ 1.450.000)
+            Detalhamento — Capital / Equipamentos (R$ 600.000)
           </div>
           <div className="relative">
           <div className="overflow-x-auto overflow-hidden rounded-2xl border" style={{ borderColor: 'var(--bdr)' }}>
