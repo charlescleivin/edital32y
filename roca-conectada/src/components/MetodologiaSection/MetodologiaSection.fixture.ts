@@ -14,7 +14,7 @@ export const fixture: MetodologiaSectionProps = {
       activities: [
         'Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica.',
         'Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença CC BY-NC-SA 4.0 — acesso irrestrito a pesquisadores e ICTs públicas, uso comercial por empresas privadas requer acordo negociado. Ativo público permanente antes do projeto terminar.',
-        'Fine-tuning do LLM base selecionado com LoRA/PEFT: cluster GPU laboratório da [ICT EXECUTORA] (A100 80GB × 4) + burst cloud. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado H100 80GB (Seção 6, R$ 600.000).',
+        'Fine-tuning do LLM base selecionado com LoRA/PEFT: executado pela THATPIX em cloud GPU (H100/A100/RTX 4090) conforme contrato de resultado — custo coberto no serviço PJ, sem rubrica adicional na ICT. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado H100 80GB da proposta (Seção 6, R$ 600.000).',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
         'Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
@@ -95,8 +95,8 @@ export const fixture: MetodologiaSectionProps = {
     {
       id: 'sc-gpu',
       badge: 'Infraestrutura Computacional',
-      title: 'GPU [ICT EXECUTORA] + Cloud — Fine-tuning Soberano',
-      content: 'O fine-tuning do LLM base selecionado será executado em cluster GPU do laboratório da [ICT EXECUTORA] (A100 80GB × 4, disponível via convênio de pesquisa) com capacidade de burst em cloud (AWS ou GCP via créditos de pesquisa). A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos de iteração dentro do orçamento. O modelo resultante roda em inferência em hardware de R$ 8.000 (RTX 4090), removendo dependência de APIs proprietárias na operação.',
+      title: 'THATPIX Cloud GPU — Fine-tuning Soberano',
+      content: 'O fine-tuning do LLM base é executado pela THATPIX em sua própria infraestrutura de processamento (H100 80GB, A100 80GB e RTX 4090), complementada por aluguel de GPU-hora em nuvem comercial — ambos os custos cobertos dentro do contrato de serviços especializados, sem rubrica adicional no orçamento da ICT. A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos dentro do orçamento. O modelo exportado roda em inferência no servidor dedicado H100 80GB (Seção 6, R$ 600.000) e pode ser auto-hospedado por EMATERs em RTX 4090 de R$ 8.000 ao final do projeto.',
     },
     {
       id: 'sc-agroeval',
