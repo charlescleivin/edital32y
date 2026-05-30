@@ -732,7 +732,7 @@
           {
             "id": "oe2",
             "code": "OE2.",
-            "text": "Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença CC BY-NC-SA 4.0, acesso gratuito para pesquisa, ICTs públicas e cooperativas; uso comercial negociado, com DOI público via Zenodo. Nota: DOI é apenas um identificador persistente (como ISBN), não implica licença aberta; a licença CC BY-NC-SA 4.0 é que define os termos de uso, e é mais generosa para o ecossistema público brasileiro do que uma licença MIT seria (ver Seção 12)."
+            "text": "Construir e publicar o corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, licença CC BY-NC-SA 4.0, acesso gratuito para pesquisa, ICTs públicas e cooperativas; uso comercial negociado, com DOI público via Zenodo. Nota: DOI é apenas um identificador persistente (como ISBN), não implica licença aberta; a licença CC BY-NC-SA 4.0 é que define os termos de uso, e é mais generosa para o ecossistema público brasileiro do que uma licença MIT seria (ver Seção 14)."
           },
           {
             "id": "oe3",
@@ -753,7 +753,7 @@
           {
             "id": "oe5",
             "code": "OE5.",
-            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24), distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300, e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais, mantendo-se abaixo do teto documentado de capacidade do servidor."
+            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24), distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300, e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 6), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais, mantendo-se abaixo do teto documentado de capacidade do servidor."
           },
           {
             "id": "oe6",
@@ -919,7 +919,7 @@
         "period": "Meses 13–24",
         "activities": [
           "Seleção dos 800 agricultores (critério documentado no diagnóstico Fase 1): smartphone + WhatsApp + sinal 3G verificado em ponto de referência. Zero aquisição de dispositivo, a solução funciona com o que os agricultores já têm. Esta não é uma suposição: é um critério de seleção.",
-          "Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo registrado no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo. Os resultados, adoção de boas práticas, custo de insumos, tempo de resolução, são medidos, não assumidos.",
+          "Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo pré-registrado no AEA RCT Registry e no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo. Os resultados, adoção de boas práticas, custo de insumos, tempo de resolução, são medidos, não assumidos.",
           "Piloto Coopera Digital: 6 cooperativas âncora. Medição de tempo administrativo, acesso ao PAA/PNAE e receita dos associados antes e depois. Baseline documentado na Fase 1.",
           "AgroAPI beta: integração com 2 EMATERs estaduais parceiras. Primeiro teste de interoperabilidade institucional, prova que a infraestrutura é reutilizável.",
           "Capacitação de 120 multiplicadores EMATER: eles usam o produto em condições reais antes de ensiná-lo. A sustentabilidade pós-projeto depende deles, não da equipe do projeto.",
@@ -999,13 +999,13 @@
         "id": "sc-gpu",
         "badge": "Infraestrutura Computacional",
         "title": "GPU [ICT EXECUTORA] + Cloud, Fine-tuning Soberano",
-        "content": "O fine-tuning do LLM base é executado pela THATPIX em sua própria infraestrutura de processamento, H100 80GB, A100 80GB e RTX 4090, complementada por aluguel de GPU-hora em nuvem comercial. Ambos os custos estão cobertos dentro do contrato de serviços especializados, sem rubrica adicional no orçamento da ICT. A THATPIX é contratada por resultado: o deliverable é o modelo fine-tuned validado pelo AgroEval, não o acesso a um equipamento específico. A auditoria é pelo artefato entregue — checkpoints rastreáveis com timestamps e métricas de avaliação documentadas — não pela infraestrutura que o gerou. A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em aproximadamente 80% sem perda mensurável de qualidade, viabilizando múltiplos ciclos de iteração dentro do orçamento do contrato. O modelo resultante roda em inferência no servidor H100 da ICT executora, adquirido como equipamento de capital, removendo dependência de APIs proprietárias na operação em produção."
+        "content": "O fine-tuning do LLM base é executado pela THATPIX em sua própria infraestrutura de processamento, H100 80GB, A100 80GB e RTX 4090, complementada por aluguel de GPU-hora em nuvem comercial. Ambos os custos estão cobertos dentro do contrato de serviços especializados, sem rubrica adicional no orçamento da ICT. A THATPIX é contratada por resultado: o deliverable é o modelo fine-tuned validado pelo AgroEval, não o acesso a um equipamento específico. A auditoria é pelo artefato entregue — checkpoints rastreáveis com timestamps e métricas de avaliação documentadas — não pela infraestrutura que o gerou. A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em aproximadamente 80% sem perda mensurável de qualidade, viabilizando múltiplos ciclos de iteração dentro do orçamento do contrato. O modelo resultante roda em inferência no servidor dedicado 2× H100 80GB adquirido como equipamento de capital (Seção 6, R\\$ 600.000), removendo dependência de APIs proprietárias na operação em produção."
       },
       {
         "id": "sc-agroeval",
         "badge": "Protocolo de Validação Científica",
         "title": "AgroEval, Benchmark de Avaliação com Grupo Controle",
-        "content": "O AgroEval é o benchmark científico do AgroAssistente. Sua construção segue protocolo de independência metodológica que elimina o conflito entre quem desenvolve o modelo e quem avalia o modelo. As perguntas do test set são coletadas de agricultores reais durante o diagnóstico participativo da Fase 1 — não escritas pela THATPIX, não escritas pelos pesquisadores. Um painel de técnicos extensionistas e agrônomos credenciados anota as respostas corretas para cada pergunta coletada. O test set é congelado e registrado no PAP pré-cadastrado no AEA RCT Registry (American Economic Association Registry for Randomized Controlled Trials) — repositório externo com timestamp público — antes do início do treinamento. A THATPIX não tem acesso às questões durante o desenvolvimento do modelo. O registro externo garante que hipóteses, outcomes e critérios de avaliação foram definidos antes da coleta de dados, tornando o RCT auditável por qualquer pesquisador independente. O AgroEval avalia 3 dimensões: (1) precisão factual, respostas verificadas contra o test set anotado por especialistas; (2) taxa de alucinação, detecção de informações agrícolas fabricadas com consequência potencial de dano, como dosagem incorreta de defensivo ou suplemento animal; (3) relevância contextual, adequação ao bioma, cultura e vocabulário regional do agricultor que fez a pergunta original. A validação de campo (Fase 2) é o RCT com grupo controle randomizado: n=50 agricultores recebem ATER convencional, n=800 recebem AgroAssistente. Resultados medidos em adoção de boas práticas, redução de custo de insumos e tempo de resolução de dúvidas. Protocolo registrado no CONEP antes do piloto."
+        "content": "O AgroEval é o benchmark científico do AgroAssistente. Sua construção segue protocolo de independência metodológica que elimina o conflito entre quem desenvolve o modelo e quem avalia o modelo. As perguntas do test set são coletadas de agricultores reais durante o diagnóstico participativo da Fase 1 — não escritas pela THATPIX, não escritas pelos pesquisadores. Um painel de técnicos extensionistas e agrônomos credenciados anota as respostas corretas para cada pergunta coletada. O test set é congelado e registrado no PAP pré-cadastrado no AEA RCT Registry (American Economic Association Registry for Randomized Controlled Trials) — repositório externo com timestamp público — antes do início do treinamento. A THATPIX não tem acesso às questões durante o desenvolvimento do modelo. O registro externo garante que hipóteses, outcomes e critérios de avaliação foram definidos antes da coleta de dados, tornando o RCT auditável por qualquer pesquisador independente. O AgroEval avalia 3 dimensões: (1) precisão factual, respostas verificadas contra o test set anotado por especialistas; (2) taxa de alucinação, detecção de informações agrícolas fabricadas com consequência potencial de dano, como dosagem incorreta de defensivo ou suplemento animal; (3) relevância contextual, adequação ao bioma, cultura e vocabulário regional do agricultor que fez a pergunta original. A validação de campo (Fase 2) é o RCT com grupo controle randomizado: n=50 agricultores recebem ATER convencional, n=800 recebem AgroAssistente. Resultados medidos em adoção de boas práticas, redução de custo de insumos e tempo de resolução de dúvidas. Protocolo pré-registrado no AEA RCT Registry (Mês 10) e no CONEP."
       },
       {
         "id": "sc-env",
@@ -2469,7 +2469,7 @@
         "priority": "medium",
         "priorityLabel": "Desejável",
         "name": "EMBRAPA (unidade regional)",
-        "role": "EMBRAPA Informática Agropecuária (Campinas) ou EMBRAPA Agricultura Familiar (Petrolina). Validação científica do conteúdo do AgroAssistente, acesso ao acervo técnico.",
+        "role": "EMBRAPA Agricultura Digital (Campinas). Validação científica do conteúdo do AgroAssistente, acesso ao acervo técnico.",
         "deadline": "Contatar até 01/06 · Acordo até 20/06"
       },
       {
@@ -3654,6 +3654,11 @@
         "id": "r79",
         "area": "ia_agricola",
         "abnt": "SILVA, Hugo et al. Avaliacao de modelos de linguagem em conhecimento agronomico brasileiro: GPT-4, LLaMA e base de dados EMBRAPA. arXiv preprint, 2023."
+      },
+      {
+        "id": "r80",
+        "area": "politica",
+        "abnt": "CONAB, COMPANHIA NACIONAL DE ABASTECIMENTO. Resolução nº 127/2024 — Registro Digital de Lotes para Entregas PAA/PNAE. Brasília: CONAB, 2024. Diário Oficial da União."
       }
     ]
   },
@@ -3973,7 +3978,7 @@
         "label": "Expansão Piloto",
         "scope": "Mesmas 3 regiões + municípios adjacentes via rede EMATER multiplicadora",
         "count": "2.500 agricultores / 18 cooperativas",
-        "criteria": "Expansão conduzida pelos 120 multiplicadores EMATER treinados na Fase 2, não via cadastro aberto. Prioridade a agricultores das cooperativas parceiras com carta de anuência assinada."
+        "criteria": "Expansão conduzida pelos 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3) — não via cadastro aberto. Prioridade a agricultores das cooperativas parceiras com carta de anuência assinada."
       },
       {
         "id": "phase-regional",

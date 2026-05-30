@@ -13,11 +13,11 @@ export const fixture: MetodologiaSectionProps = {
       period: 'Meses 1–12',
       activities: [
         'Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica.',
-        'Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença CC BY-NC-SA 4.0 — acesso irrestrito a pesquisadores e ICTs públicas, uso comercial por empresas privadas requer acordo negociado. Ativo público permanente antes do projeto terminar.',
+        'Corpus AgroLinguaBR: 25.000 pares Q&A no total (10.000 na Fase 1, 18.000 na Fase 2, 25.000 na Fase 3), em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. A versão inicial de 10.000 pares é publicada com DOI via Zenodo na Fase 1; atualizada incrementalmente nas fases seguintes. Licença CC BY-NC-SA 4.0 — acesso irrestrito a pesquisadores e ICTs públicas, uso comercial por empresas privadas requer acordo negociado.',
         'Fine-tuning do LLM base selecionado com LoRA/PEFT: executado pela THATPIX em cloud GPU (H100/A100/RTX 4090) conforme contrato de resultado — custo coberto no serviço PJ, sem rubrica adicional na ICT. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado 2× H100 80GB da proposta (Seção 6, R$ 600.000).',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
-        'Protocolo de certificação técnica do corpus: EMBRAPA Informática Agropecuária atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital pré-registrado no AEA RCT Registry (Mês 10) com registro simultâneo no CONEP, antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
+        'Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital pré-registrado no AEA RCT Registry (Mês 10) com registro simultâneo no CONEP, antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
       ],
       deliverables: [
         'Corpus AgroLinguaBR v1.0 — 10.000 pares Q&A publicados com DOI no Zenodo (versão Fase 1; atualizado para 18.000 na Fase 2 e 25.000 na Fase 3)',
@@ -54,7 +54,7 @@ export const fixture: MetodologiaSectionProps = {
         'Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais. Não via equipe do projeto.',
         'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
         'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX.',
-        'MoU com EMBRAPA Informática Agropecuária + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
+        'MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
         'Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou.',
       ],
     },

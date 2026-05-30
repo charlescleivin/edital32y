@@ -34,7 +34,7 @@ export const fixture: ParceriasSectionProps = {
       id: 'embrapa',
       priority: 'high',
       priorityLabel: 'Alta Prioridade',
-      name: 'EMBRAPA Informática Agropecuária',
+      name: 'EMBRAPA Agricultura Digital',
       role: 'Parceria técnica e científica para sustentabilidade pós-projeto. Papel: revisão técnica do corpus AgroLinguaBR, co-curadoria da base de conhecimento agrícola, eventual incorporação do AgroEval à grade de avaliação de soluções de IA da EMBRAPA. MoU formalizado na Fase 3 para garantir continuidade após o encerramento do financiamento FINEP.',
       deadline: 'Contato técnico até 15/06 · MoU na Fase 3',
     },

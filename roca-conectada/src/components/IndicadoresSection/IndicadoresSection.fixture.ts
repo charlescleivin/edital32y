@@ -25,7 +25,7 @@ export const fixture: IndicadoresSectionProps = {
     { indicator: 'Uptime do sistema em produção',                                       phase1: '—',       phase2: '≥ 99,0%',  phase3: '≥ 99,5%'     },
     { indicator: 'Artigos científicos submetidos (acumulado)',                          phase1: '1',       phase2: '3',        phase3: '5'           },
     { indicator: 'Repositório open-source publicado',                                   phase1: '—',       phase2: 'Beta',     phase3: 'Estável + DOI'},
-    { indicator: 'Consultas sobre manejo orgânico/agroecológico (% interações, RE-04)', phase1: '—',       phase2: 'baseline', phase3: '≥ 20%'       },
+    { indicator: 'Consultas sobre manejo orgânico/agroecológico (% das interações, RE-04)', phase1: '—',       phase2: 'baseline', phase3: '≥ 20%'       },
     { indicator: 'Instituições integrando a AgroAPI',                                   phase1: '—',       phase2: '2',        phase3: '5'           },
     { indicator: 'Downloads / citações do AgroEval (acumulado)',                        phase1: '—',       phase2: '50',       phase3: '200'         },
     { indicator: 'Redução de custo de insumos por família (vs. grupo controle)',        phase1: '—',       phase2: 'baseline', phase3: '−12–18%'     },
