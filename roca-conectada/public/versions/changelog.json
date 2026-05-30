@@ -411,5 +411,12 @@
     "date": "2026-05-29",
     "label": "feat(s2,s14): inject wrapper taxonomy and public s",
     "description": "feat(s2,s14): inject wrapper taxonomy and public sector AI dependency evidence"
+  },
+  {
+    "id": "v60",
+    "commit": "0cbd6b9",
+    "date": "2026-05-30",
+    "label": "fix(consistency): resolve 21 cross-section inconsi",
+    "description": "fix(consistency): resolve 21 cross-section inconsistencies found in 4-agent audit"
   }
 ]
