@@ -418,5 +418,12 @@
     "date": "2026-05-30",
     "label": "fix(consistency): resolve 21 cross-section inconsi",
     "description": "fix(consistency): resolve 21 cross-section inconsistencies found in 4-agent audit"
+  },
+  {
+    "id": "v61",
+    "commit": "a87191e",
+    "date": "2026-05-30",
+    "label": "fix(consistency-r2): resolve 18 inconsistencies fr",
+    "description": "fix(consistency-r2): resolve 18 inconsistencies from 2nd audit round"
   }
 ]
