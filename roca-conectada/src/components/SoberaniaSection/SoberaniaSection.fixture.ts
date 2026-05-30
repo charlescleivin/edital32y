@@ -120,7 +120,7 @@ export const fixture: S14Data = {
       scope: 'Mesmas 3 regiões + municípios adjacentes via rede EMATER multiplicadora',
       count: '2.500 agricultores / 18 cooperativas',
       criteria:
-        'Expansão conduzida pelos 120 multiplicadores EMATER treinados na Fase 2 — não via cadastro aberto. Prioridade a agricultores das cooperativas parceiras com carta de anuência assinada.',
+        'Expansão conduzida pelos 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3) — não via cadastro aberto. Prioridade a agricultores das cooperativas parceiras com carta de anuência assinada.',
     },
     {
       id: 'phase-regional',

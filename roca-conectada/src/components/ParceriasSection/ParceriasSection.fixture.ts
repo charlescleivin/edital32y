@@ -19,7 +19,7 @@ export const fixture: ParceriasSectionProps = {
       priority: 'critical',
       priorityLabel: 'Prioridade Crítica',
       name: 'EMATER-CE, EMATER-BA, EMATER-PB',
-      role: 'Canal primário de distribuição do AgroAssistente e rede de multiplicadores. Papel: identificação e treinamento de 30 técnicos multiplicadores por estado, divulgação do AgroAssistente à base de agricultores atendidos. Recebem: acesso à AgroAPI sem custo, corpus AgroLinguaBR e modelo base para uso em seus próprios projetos de extensão digital.',
+      role: 'Canal primário de distribuição do AgroAssistente e rede de multiplicadores. Papel: identificação e treinamento de multiplicadores EMATER (120 no total na Fase 2, distribuídos pelas 3 regiões-piloto), divulgação do AgroAssistente à base de agricultores atendidos. Recebem: acesso à AgroAPI sem custo, corpus AgroLinguaBR e modelo base para uso em seus próprios projetos de extensão digital.',
       deadline: 'Contatar esta semana · Carta até 05/06',
     },
     {
@@ -34,7 +34,7 @@ export const fixture: ParceriasSectionProps = {
       id: 'embrapa',
       priority: 'high',
       priorityLabel: 'Alta Prioridade',
-      name: 'EMBRAPA Agricultura Digital',
+      name: 'EMBRAPA Informática Agropecuária',
       role: 'Parceria técnica e científica para sustentabilidade pós-projeto. Papel: revisão técnica do corpus AgroLinguaBR, co-curadoria da base de conhecimento agrícola, eventual incorporação do AgroEval à grade de avaliação de soluções de IA da EMBRAPA. MoU formalizado na Fase 3 para garantir continuidade após o encerramento do financiamento FINEP.',
       deadline: 'Contato técnico até 15/06 · MoU na Fase 3',
     },

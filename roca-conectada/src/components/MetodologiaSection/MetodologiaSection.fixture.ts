@@ -14,10 +14,10 @@ export const fixture: MetodologiaSectionProps = {
       activities: [
         'Diagnóstico participativo (PAP): 3 regiões documentam necessidades reais — feijão e seca no Ceará, ovinos e PAA na Paraíba, café e conectividade na Bahia. O corpus é construído sobre problemas reais documentados, não sobre suposições da equipe técnica.',
         'Corpus AgroLinguaBR: 25.000 pares Q&A em português agrícola regional, construídos sobre os problemas documentados no diagnóstico + acervo técnico EMBRAPA/MAPA. Publicado com DOI via Zenodo, licença CC BY-NC-SA 4.0 — acesso irrestrito a pesquisadores e ICTs públicas, uso comercial por empresas privadas requer acordo negociado. Ativo público permanente antes do projeto terminar.',
-        'Fine-tuning do LLM base selecionado com LoRA/PEFT: executado pela THATPIX em cloud GPU (H100/A100/RTX 4090) conforme contrato de resultado — custo coberto no serviço PJ, sem rubrica adicional na ICT. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado H100 80GB da proposta (Seção 6, R$ 600.000).',
+        'Fine-tuning do LLM base selecionado com LoRA/PEFT: executado pela THATPIX em cloud GPU (H100/A100/RTX 4090) conforme contrato de resultado — custo coberto no serviço PJ, sem rubrica adicional na ICT. O modelo exportado roda em RTX 4090 de R$ 8.000 para auto-hospedagem pelas EMATERs; produção em servidor dedicado 2× H100 80GB da proposta (Seção 6, R$ 600.000).',
         'MVP completo do ecossistema (AgroAssistente + Coopera Digital + AgroAPI beta) pronto e testado antes de qualquer piloto com agricultores reais.',
         '1 artigo científico submetido: metodologia PAP + arquitetura AgroEval. Contribuição pública antes da Fase 2.',
-        'Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital registrado no CONEP antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
+        'Protocolo de certificação técnica do corpus: EMBRAPA Informática Agropecuária atua como revisor técnico independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Protocolo de ensaio clínico digital pré-registrado no AEA RCT Registry (Mês 10) com registro simultâneo no CONEP, antes do início do piloto da Fase 2 — certificação científica externa ao projeto.',
       ],
       deliverables: [
         'Corpus AgroLinguaBR v1.0 — 10.000 pares Q&A publicados com DOI no Zenodo (versão Fase 1; atualizado para 18.000 na Fase 2 e 25.000 na Fase 3)',
@@ -37,7 +37,7 @@ export const fixture: MetodologiaSectionProps = {
       period: 'Meses 13–24',
       activities: [
         'Seleção dos 800 agricultores (critério documentado no diagnóstico Fase 1): smartphone + WhatsApp + sinal 3G verificado em ponto de referência. Zero aquisição de dispositivo — a solução funciona com o que os agricultores já têm.',
-        'Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo registrado no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo.',
+        'Piloto AgroAssistente (800 agricultores) com grupo controle randomizado (n=50 recebem ATER convencional): protocolo pré-registrado no AEA RCT Registry e no CONEP antes do início. Esta é a diferença entre evidência científica e otimismo.',
         'Piloto Coopera Digital: 6 cooperativas âncora — medição de tempo administrativo, acesso ao PAA/PNAE e receita dos associados antes e depois.',
         'AgroAPI beta: integração com 2 EMATERs estaduais parceiras. Primeiro teste de interoperabilidade institucional.',
         'Capacitação de 120 multiplicadores EMATER: eles usam o produto em condições reais antes de ensiná-lo.',
@@ -54,7 +54,7 @@ export const fixture: MetodologiaSectionProps = {
         'Expansão: 2.500 agricultores / 18 cooperativas — via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais. Não via equipe do projeto.',
         'AgroLinguaBR v2.0 + LLM fine-tuned v2.0 + AgroEval v2.0 → transferência formal de titularidade à [ICT EXECUTORA] (OE9). O que existia como código de projeto vira patrimônio científico nacional registrado.',
         'AgroAPI pública: qualquer ICT, EMATER estadual, universidade ou startup integra sem dependência da [ICT EXECUTORA] ou da THATPIX.',
-        'MoU com EMBRAPA Agricultura Digital + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
+        'MoU com EMBRAPA Informática Agropecuária + 3 EMATERs estaduais: compromisso institucional de continuidade assinado antes do término do financiamento FINEP.',
         'Artigo de síntese (impact study) + Relatório Final FINEP: documentação completa do que o Brasil ganhou.',
       ],
     },
@@ -96,13 +96,13 @@ export const fixture: MetodologiaSectionProps = {
       id: 'sc-gpu',
       badge: 'Infraestrutura Computacional',
       title: 'THATPIX Cloud GPU — Fine-tuning Soberano',
-      content: 'O fine-tuning do LLM base é executado pela THATPIX em sua própria infraestrutura de processamento (H100 80GB, A100 80GB e RTX 4090), complementada por aluguel de GPU-hora em nuvem comercial — ambos os custos cobertos dentro do contrato de serviços especializados, sem rubrica adicional no orçamento da ICT. A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos dentro do orçamento. O modelo exportado roda em inferência no servidor dedicado H100 80GB (Seção 6, R$ 600.000) e pode ser auto-hospedado por EMATERs em RTX 4090 de R$ 8.000 ao final do projeto.',
+      content: 'O fine-tuning do LLM base é executado pela THATPIX em sua própria infraestrutura de processamento (H100 80GB, A100 80GB e RTX 4090), complementada por aluguel de GPU-hora em nuvem comercial — ambos os custos cobertos dentro do contrato de serviços especializados, sem rubrica adicional no orçamento da ICT. A técnica LoRA/PEFT com quantização 4-bit NF4 reduz o custo computacional em ~80% sem perda mensurável de qualidade: um ciclo completo de fine-tuning custa aproximadamente R$ 800 em GPU-hora de cloud — viabilizando múltiplos ciclos dentro do orçamento. O modelo exportado roda em inferência no servidor dedicado 2× H100 80GB (Seção 6, R$ 600.000) e pode ser auto-hospedado por EMATERs em RTX 4090 de R$ 8.000 ao final do projeto.',
     },
     {
       id: 'sc-agroeval',
       badge: 'Protocolo de Validação Científica',
       title: 'AgroEval — Benchmark de Avaliação com Grupo Controle',
-      content: 'O AgroEval avalia 3 dimensões: (1) precisão factual — respostas verificadas contra base técnica da EMBRAPA; (2) taxa de alucinação — detecção de informações agrícolas fabricadas, com consequência potencial de dano (ex: dosagem incorreta de defensivo); (3) relevância contextual — adequação ao bioma e cultura da região do agricultor. A validação científica (Fase 2) utilizará grupo controle randomizado: n=50 agricultores recebem ATER convencional, n=800 recebem AgroAssistente — resultados medidos em adoção de boas práticas, redução de custo de insumos e tempo de resolução de dúvidas técnicas. Protocolo registrado no CONEP antes do piloto.',
+      content: 'O AgroEval avalia 3 dimensões: (1) precisão factual — respostas verificadas contra base técnica da EMBRAPA; (2) taxa de alucinação — detecção de informações agrícolas fabricadas, com consequência potencial de dano (ex: dosagem incorreta de defensivo); (3) relevância contextual — adequação ao bioma e cultura da região do agricultor. A validação científica (Fase 2) utilizará grupo controle randomizado: n=50 agricultores recebem ATER convencional, n=800 recebem AgroAssistente — resultados medidos em adoção de boas práticas, redução de custo de insumos e tempo de resolução de dúvidas técnicas. Protocolo pré-registrado no AEA RCT Registry (Mês 10) e no CONEP.',
     },
     {
       id: 'sc-env',

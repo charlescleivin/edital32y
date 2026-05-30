@@ -753,7 +753,7 @@
           {
             "id": "oe5",
             "code": "OE5.",
-            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24), distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300, e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores da rede de 120 capacitados na Fase 2, cada um responsável por ~57 novos agricultores nos seus circuitos territoriais —, mantendo-se abaixo do teto documentado de capacidade do servidor."
+            "text": "Implantar o AgroAssistente IA com 800 agricultores nas 3 regiões-piloto (Fase 2, Meses 13–24), distribuídos como Crateús-CE ~300, Sousa-PB ~200 e Vitória da Conquista-BA ~300, e expandir para 2.500 (Fase 3, Meses 25–36) via rede de multiplicadores EMATER. O teto de 800 na Fase 2 é calibrado à infraestrutura de servidores (R$ 600.000 previsto em Seção 12), dimensionada para suportar entre 800 e 2.500 MAU (Usuários Ativos Mensais) com latência P95 < 5 segundos; também fornece a amostra necessária para o ensaio controlado randomizado (800 intervenção × 50 controle). A expansão para 2.500 soma os 800 agricultores piloto aos 1.700 incorporados via 30 multiplicadores ativos da rede de 350 EMATER capacitados (120 da Fase 2 + 230 treinados na Fase 3), cada um responsável por ~57 novos agricultores nos seus circuitos territoriais, mantendo-se abaixo do teto documentado de capacidade do servidor."
           },
           {
             "id": "oe6",
@@ -903,7 +903,7 @@
           "Protocolo de certificação técnica do corpus: EMBRAPA Agricultura Digital atua como revisora técnica independente do AgroLinguaBR v1.0, validando precisão factual antes da publicação. Pré-registro do RCT no AEA RCT Registry (mês 10) — repositório externo com timestamp público que congela hipóteses, outcomes primários e secundários, método de análise estatística e critérios de randomização antes do início do piloto. Registro simultâneo no CONEP. Após o registro, qualquer desvio do protocolo deve ser declarado publicamente no repositório. Isso torna o ensaio auditável por qualquer pesquisador independente e é o padrão-ouro para RCTs em economia do desenvolvimento."
         ],
         "deliverables": [
-          "Corpus AgroLinguaBR v1.0, 25.000 pares Q&A publicados com DOI no Zenodo (URL verificável)",
+          "Corpus AgroLinguaBR v1.0, 10.000 pares Q&A publicados com DOI no Zenodo (versão Fase 1; 18.000 na Fase 2; 25.000 na Fase 3)",
           "LLM agrícola fine-tuned v1.0, benchmark AgroEval documentado (BLEU/F1 contra baseline GPT-4o)",
           "Repositório GitHub [ICT EXECUTORA], código completo, testes, Docker, README",
           "Servidor de inferência operacional, uptime report meses 10–12, latência P95 <5s",
@@ -1036,7 +1036,7 @@
     ],
     "conflictGovernance": {
       "title": "Mecanismos de Governanca, Conflito de Interesse Declarado",
-      "body": "A dupla posicao de Charles Cleivin (co-pesquisador e socio-fundador da THATPIX) encontra amparo no Art. 14-A da Lei 10.973/2004 e no Decreto 9.283/2018, e e gerenciada por tres mecanismos formais: (1) Comite Tecnico Externo, dois especialistas sem vinculo com a THATPIX (professor de NLP/IA de outra ICT + pesquisador da EMBRAPA Agricultura Digital), reuniao trimestral com ata registrada para validar escolhas metodologicas e arquiteturais; (2) Separacao formal de escopos, Charles nao assina contratos pela THATPIX neste projeto; decisoes comerciais da empresa sao tomadas por segundo socio ou procurador designado; (3) Precificacao referenciada, R$ 74.444/mes por escopo técnico em três áreas (treinamento e alinhamento LLM R$ 32k + backend, APIs e integração WhatsApp R$ 22k + infraestrutura soberana e MLOps R$ 15k + overhead PJ 8%) esta dentro da faixa de mercado documentada por pesquisa formal em Glassdoor, Revelo e Programathor (2025-2026)."
+      "body": "A dupla posicao de Charles Cleivin (co-pesquisador e socio-fundador da THATPIX) encontra amparo no Art. 14-A da Lei 10.973/2004 e no Decreto 9.283/2018, e e gerenciada por tres mecanismos formais: (1) Comite Tecnico Externo, dois especialistas sem vinculo com a THATPIX (professor de NLP/IA de outra ICT + pesquisador da EMBRAPA Agricultura Digital), reuniao trimestral com ata registrada para validar escolhas metodologicas e arquiteturais; (2) Separacao formal de escopos, Charles nao assina contratos pela THATPIX neste projeto; decisoes comerciais da empresa sao tomadas por segundo socio ou procurador designado; (3) Precificacao referenciada, R$ 82.361/mês por escopo técnico em quatro áreas (treinamento e alinhamento LLM R$ 32.861 + backend, APIs e integração WhatsApp R$ 25.000 + infraestrutura soberana e MLOps R$ 18.000 + equipamentos de campo R$ 6.500) esta dentro da faixa de mercado documentada por pesquisa formal em Glassdoor, Revelo e Programathor (2025-2026)."
     },
     "subsections": {
       "justificativas": {
@@ -1044,7 +1044,7 @@
         "title": "Por Que Esses Números?",
         "subtitle": "Cada escolha quantitativa do SABIA, corpus, grupo de controle, agricultores, cooperativas, é ancorada em literatura científica revisada por pares.",
         "headline": "Dimensionamento Calibrado, Não Arbitrário.",
-        "thatpixNote": "A ThatPix adota três diferenciais metodológicos que vão além do estado da arte descrito na literatura: (1) Avaliação multi-modelo, o benchmark AgroEval é aplicado a LLaMA-3, Mistral e Sabiá-3 antes de selecionar a arquitetura base, em vez de presumir o melhor modelo a priori. (2) Treinamento em três fases progressivas, Fase 1 estabelece um MVP com 10.000 pares via LoRA; Fase 2 incorpora os 20.000 primeiros pares com correções de campo e alinhamento de preferências; Fase 3 completa os 25.000 pares com revisão agronômica profissional. Cada fase produz um checkpoint avaliado antes da fase seguinte. (3) Otimização para inferência auto-hospedada, quantização NF4 de 4 bits + exportação GGUF garante P95 < 5 s em hardware RTX 4090 (R$ 8.000), permitindo que a EMATER auto-hospede o modelo ao final do projeto sem dependência de infraestrutura em nuvem contratada.",
+        "thatpixNote": "A ThatPix adota três diferenciais metodológicos que vão além do estado da arte descrito na literatura: (1) Avaliação multi-modelo, o benchmark AgroEval é aplicado a LLaMA-3, Mistral e Sabiá-3 antes de selecionar a arquitetura base, em vez de presumir o melhor modelo a priori. (2) Treinamento em três fases progressivas, Fase 1 estabelece um MVP com 10.000 pares via LoRA; Fase 2 incorpora 18.000 pares com correções de campo e alinhamento de preferências; Fase 3 completa os 25.000 pares com revisão agronômica profissional. Cada fase produz um checkpoint avaliado antes da fase seguinte. (3) Otimização para inferência auto-hospedada, quantização NF4 de 4 bits + exportação GGUF garante P95 < 5 s em hardware RTX 4090 (R$ 8.000), permitindo que a EMATER auto-hospede o modelo ao final do projeto sem dependência de infraestrutura em nuvem contratada.",
         "blocks": [
           {
             "id": "corpus-25k",
@@ -2400,7 +2400,7 @@
     "equipmentItems": [
       {
         "item": "Servidor de inferência em produção",
-        "spec": "GPU server dedicado, 2x NVIDIA H100 80GB PCIe (ou A100 80GB NVLink), 64-core CPU, 256GB RAM, 10TB NVMe RAID, UPS, rack 42U, garantia 3 anos · modelos 7B e 32B simultâneos, latência <3s, 10.000+ MAU",
+        "spec": "GPU server dedicado, 2x NVIDIA H100 80GB PCIe (ou A100 80GB NVLink), 64-core CPU, 256GB RAM, 10TB NVMe RAID, UPS, rack 42U, garantia 3 anos · modelos 7B e 32B simultâneos, latência P95 <5s, 800–2.500 MAU",
         "qty": 1,
         "unitValue": "R$ 600.000",
         "total": "R$ 600.000",
@@ -2567,6 +2567,16 @@
         "icon": "📝",
         "count": 5,
         "label": "Artigos científicos"
+      },
+      {
+        "icon": "🔗",
+        "count": 5,
+        "label": "Instituições integrando a AgroAPI"
+      },
+      {
+        "icon": "📚",
+        "count": 25000,
+        "label": "Pares Q&A — corpus AgroLinguaBR"
       }
     ],
     "indicators": [
@@ -2647,19 +2657,43 @@
         "phase1": "—",
         "phase2": "baseline",
         "phase3": "≥ 20%"
+      },
+      {
+        "indicator": "Instituições integrando a AgroAPI",
+        "phase1": "—",
+        "phase2": "2",
+        "phase3": "5"
+      },
+      {
+        "indicator": "Downloads / citações do AgroEval (acumulado)",
+        "phase1": "—",
+        "phase2": "50",
+        "phase3": "200"
+      },
+      {
+        "indicator": "Redução de custo de insumos por família (vs. grupo controle)",
+        "phase1": "—",
+        "phase2": "baseline",
+        "phase3": "−12–18%"
+      },
+      {
+        "indicator": "Tempo médio de resolução de dúvida técnica (horas)",
+        "phase1": "—",
+        "phase2": "baseline",
+        "phase3": "−65%"
       }
     ],
     "impactNarrative": "A soberania tecnológica não é um certificado, é o estado em que uma família agricultora toma decisões melhores porque teve acesso a conhecimento técnico preciso no momento que precisou, sem depender de um técnico que não existe ou de uma plataforma estrangeira que pode desaparecer. Cada um dos 2.500 agricultores ativos ao final da Fase 3 representa uma família que passa a receber orientação técnica agrícola personalizada 24h por dia, em português regional, via WhatsApp, canal que já usa —, sem custo de deslocamento e sem dependência de API estrangeira. A literatura de extensão rural digital (FAO 2022; Embrapa 2023) documenta redução média de 12–18% no custo de insumos quando o agricultor acessa orientação técnica em tempo real. Para uma família com renda agrícola bruta de R$ 36.000/ano (mediana IBGE 2022), isso representa R$ 4.300–6.500/ano de economia. Somando as 18 cooperativas digitalizadas pelo Coopera Digital, o impacto econômico agregado estimado no ecossistema atendido ultrapassa R$ 12 milhões/ano ao final do projeto. O AgroEval, o AgroLinguaBR e a AgroAPI permanecem disponíveis como patrimônio público: os próximos 3,9 milhões de agricultores que vierem depois desta fase não precisam pagar para construir de novo o que este projeto já construiu.",
     "leverage": {
       "title": "A Alavanca, Como um Investimento Público Vira Renda Rural",
-      "subtitle": "R$ 7M aplicados uma única vez → renda recorrente permanente para 25.000 famílias",
+      "subtitle": "R\\$ 7M aplicados uma única vez → infraestrutura que chega a 25.000 famílias ao longo dos anos (2.500 usuários diretos na Fase 3, com escala permanente pós-projeto)",
       "investment": "R$ 7M",
       "investmentLabel": "investimento único · meses 1–36",
       "annualReturn": "R$ 108M/ano",
       "familyCount": "25.000 famílias",
       "costPerFamily": "R$ 280",
       "callout": "Custo: uma vez. Benefício: para sempre.",
-      "note": "Projeção conservadora: 25.000 famílias × R$ 4.320 de aumento médio de renda anual (Rocha Junior et al. (RESR 2020, método PSM)). Ativos digitais permanecem públicos indefinidamente.",
+      "note": "Projeção conservadora: 25.000 famílias × R\\$ 4.320 de aumento médio de renda anual — horizonte de 5 anos pós-projeto, à medida que a infraestrutura permanente atinge 10× os 2.500 usuários diretos da Fase 3 (Rocha Junior et al., RESR 2020, método PSM). Ativos digitais permanecem públicos indefinidamente.",
       "permanentAssets": [
         {
           "icon": "📚",
@@ -2839,7 +2873,7 @@
     ]
   },
   "s10": {
-    "number": "Seção 11",
+    "number": "Seção 10",
     "title": "Checklist de Submissão",
     "heroImage": "/hero10.png",
     "subtitle": "Lista completa de documentos · Clique para marcar como concluído",
@@ -3219,7 +3253,7 @@
     ]
   },
   "s11": {
-    "number": "Seção 12",
+    "number": "Seção 11",
     "title": "Referências Bibliográficas",
     "heroImage": "/hero11.png",
     "heroObjectPosition": "center 60%",
@@ -3550,11 +3584,81 @@
         "id": "r65",
         "area": "politica",
         "abnt": "ANATEL, AGÊNCIA NACIONAL DE TELECOMUNICAÇÕES. Painel de cobertura de redes móveis 4G/LTE por município e área rural. Brasília: Anatel, 2023. Disponível em: https://www.anatel.gov.br/paineis. Acesso em: jan. 2026."
+      },
+      {
+        "id": "r66",
+        "area": "nlp",
+        "abnt": "ZHOU, Chunting et al. LIMA: Less Is More for Alignment. In: ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS, 36., 2023. arXiv:2305.11206."
+      },
+      {
+        "id": "r67",
+        "area": "nlp",
+        "abnt": "LI, Ming et al. From Quantity to Quality: Boosting LLM Performance with Self-Guided Data Selection for Instruction Tuning. In: ANNUAL CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, 2024. arXiv:2308.11132."
+      },
+      {
+        "id": "r68",
+        "area": "ia_agricola",
+        "abnt": "AWAIS, Muhammad et al. AgroGPT: Efficient Agricultural Vision-Language Model with Expert Tuning. In: IEEE WINTER CONFERENCE ON APPLICATIONS OF COMPUTER VISION (WACV), 2025. arXiv:2410.08405."
+      },
+      {
+        "id": "r69",
+        "area": "metodologia",
+        "abnt": "COHEN, Jacob. Statistical Power Analysis for the Behavioral Sciences. 2. ed. Hillsdale: Lawrence Erlbaum Associates, 1988."
+      },
+      {
+        "id": "r70",
+        "area": "metodologia",
+        "abnt": "COCKS, Wendy; TORGERSON, David J. Sample sizes in pilot randomised controlled trials: a systematic review. Pilot and Feasibility Studies, v. 9, n. 1, 2023. PMC10662929."
+      },
+      {
+        "id": "r71",
+        "area": "metodologia",
+        "abnt": "BROWN, Rury et al. Minimum sample size guidance for pilot and feasibility randomised controlled trials. Pilot and Feasibility Studies, 2023. PMC12186404."
+      },
+      {
+        "id": "r72",
+        "area": "infraestrutura",
+        "abnt": "DATABASEMART. RTX 4090 vLLM Benchmark: Single GPU Inference Performance. DatabaseMart Technical Blog, 2025. Disponivel em: https://www.databasemart.com/blog/vllm-gpu-benchmark-rtx4090."
+      },
+      {
+        "id": "r73",
+        "area": "extensao_rural",
+        "abnt": "FABREGAS, Raissa et al. How have smallholder farmers used digital extension tools? A systematic review. Global Food Security, v. 29, p. 100533, 2021."
+      },
+      {
+        "id": "r74",
+        "area": "extensao_rural",
+        "abnt": "COLE, Shawn; FERNANDO, A. Nilesh. Mobilizing Agricultural Advice: Technology Adoption, Diffusion and Sustainability. Economic Journal, v. 131, n. 633, p. 192-219, 2021. PMC8553076."
+      },
+      {
+        "id": "r75",
+        "area": "extensao_rural",
+        "abnt": "LASDUN, Rosa et al. Peer learning and technology adoption in digital farmer-to-farmer networks. Journal of Development Economics, v. 176, p. 103424, 2025. DOI: 10.1016/j.jdeveco.2025.103424."
+      },
+      {
+        "id": "r76",
+        "area": "extensao_rural",
+        "abnt": "MANDA, Julius et al. Does cooperative membership increase technology adoption? Evidence from smallholder farmers in Zambia. Technological Forecasting and Social Change, v. 158, p. 120160, 2020."
+      },
+      {
+        "id": "r77",
+        "area": "extensao_rural",
+        "abnt": "FAO, FOOD AND AGRICULTURE ORGANIZATION. Digital Agriculture: Pathways to Food Security and Sustainable Development. Rome: FAO, 2022."
+      },
+      {
+        "id": "r78",
+        "area": "extensao_rural",
+        "abnt": "EMBRAPA. Transformacao digital na extensao rural: impactos na assistencia tecnica e acesso ao conhecimento agronomico. Brasilia: Embrapa, 2023."
+      },
+      {
+        "id": "r79",
+        "area": "ia_agricola",
+        "abnt": "SILVA, Hugo et al. Avaliacao de modelos de linguagem em conhecimento agronomico brasileiro: GPT-4, LLaMA e base de dados EMBRAPA. arXiv preprint, 2023."
       }
     ]
   },
   "s12": {
-    "number": "Seção 10",
+    "number": "Seção 12",
     "title": "Visão de Longo Prazo",
     "subtitle": "O servidor de R$600k não é o destino, é a prova. O que vem depois do mês 37 já está planejado.",
     "headline": "A infraestrutura soberana de IA agrícola brasileira começa aqui. Não termina.",
@@ -3577,11 +3681,11 @@
         "period": "Meses 1–36 · FINEP AgriFam-ICT",
         "icon": "🔬",
         "title": "A Prova, Infraestrutura em Produção Real",
-        "description": "O servidor de R$600k (2× H100 80GB) opera em produção com 2.500+ MAU reais, latência <3s, uptime ≥99%. Não é protótipo de laboratório, é prova documentada de que o sistema funciona no campo, com agricultores, em português regional. Cada mês de operação acumula o ativo mais valioso para as rodadas seguintes: evidência.",
+        "description": "O servidor de R$600k (2× H100 80GB) opera em produção com 2.500+ MAU reais, latência P95 <5s, uptime ≥99%. Não é protótipo de laboratório, é prova documentada de que o sistema funciona no campo, com agricultores, em português regional. Cada mês de operação acumula o ativo mais valioso para as rodadas seguintes: evidência.",
         "milestones": [
           "2.500 MAU ativos ao final da Fase 3 (mês 36)",
           "Uptime ≥99% em 12 meses de operação contínua documentado",
-          "Modelos 7B e 32B em produção simultânea, latência média <3s",
+          "Modelos 7B e 32B em produção simultânea, latência P95 <5s",
           "Corpus AgroLinguaBR publicado com DOI no Zenodo (mês 12)",
           "5+ artigos científicos submetidos (acumulado 36 meses)"
         ]

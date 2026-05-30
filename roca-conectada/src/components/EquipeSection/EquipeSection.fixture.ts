@@ -50,6 +50,17 @@ export const fixture: EquipeSectionProps = {
       dedication: '50% dedicação · Bolsa AT — R$ 1.500/mês × 24 meses (incluído no orçamento)',
     },
     {
+      id: 'tombo',
+      avatar: '📽',
+      name: 'TOMBÔ PRODUÇÕES MUSEOLÓGICAS',
+      role: 'Prestadora de Serviços — Documentação Audiovisual de Campo e Registro de Impacto',
+      tags: ['Audiovisual', 'Editorial', 'Museologia aplicada', 'Ponto de Memória IBRAM'],
+      dedication: 'R$ 16.667/mês × 36 meses — contrato de serviço PJ (documentação e impacto)',
+      isPJ: true,
+      badge: 'Contrato PJ · R$ 600.000',
+      badgeVariant: 'amber',
+    },
+    {
       id: 'thatpix',
       avatar: '🏢',
       name: 'THATPIX LTDA',
