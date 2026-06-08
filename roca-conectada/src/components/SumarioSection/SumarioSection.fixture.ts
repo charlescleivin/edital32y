@@ -21,7 +21,6 @@ export const fixture: SumarioSectionProps = {
   institutionalStructure: [
     { badge: 'Proponente', badgeVariant: 'primary', label: '[FUNDAÇÃO DE APOIO]' },
     { badge: 'Executora', badgeVariant: 'primary', label: '[ICT EXECUTORA] / [NOME DO LAB]' },
-    { badge: 'Co-pesquisador', badgeVariant: 'blue', label: 'Charles Cleivin (sem bolsa)' },
-    { badge: 'Empresa PJ', badgeVariant: 'amber', label: 'THATPIX LTDA, Serviços de Engenharia de Software (item 6.2.2.1)' },
+    { badge: 'Empresa PJ', badgeVariant: 'amber', label: 'THATPIX LTDA — Engenharia e Implementação Tecnológica (item 6.2.2.1) · Responsável Técnico: Charles Cleivin, Sócio-fundador' },
   ],
 }

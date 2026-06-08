@@ -208,14 +208,9 @@
         "label": "[ICT EXECUTORA] / [NOME DO LAB]"
       },
       {
-        "badge": "Co-pesquisador",
-        "badgeVariant": "blue",
-        "label": "Charles Cleivin (sem bolsa)"
-      },
-      {
         "badge": "Empresa PJ",
         "badgeVariant": "amber",
-        "label": "THATPIX LTDA, Serviços de Engenharia de Software (item 6.2.2.1)"
+        "label": "THATPIX LTDA — Engenharia e Implementação Tecnológica (item 6.2.2.1) · Responsável Técnico: Charles Cleivin, Sócio-fundador"
       }
     ],
     "problemStatement": "Em fevereiro de 2026, o presidente Lula declarou na Cúpula de IA em Nova Délhi: \"Quando poucos controlam os algoritmos e as infraestruturas digitais, não estamos falando de inovação, mas de dominação.\" O MCTI confirmou o diagnóstico em maio de 2026: 88% da infraestrutura de nuvem do Brasil está sob controle estrangeiro, e o governo chamou essa condição, explicitamente, de \"colônia digital\". O PBIA 2024–2028 destinou R$ 23 bilhões para construir soberania tecnológica. O SoberanIA lançou R$ 40 milhões para um LLM nacional voltado ao setor público. O perímetro de soberania está sendo traçado, e os 3,9 milhões de estabelecimentos de agricultura familiar não estão dentro dele. Esta não é uma lacuna menor. A agricultura familiar produz 70% dos alimentos consumidos no Brasil, mas 81,8% dessas famílias não têm acesso a qualquer assistência técnica (IBGE 2017). No Nordeste, 92,6% estão descobertos. Um estudo econométrico publicado na RESR (Rocha Junior et al., 2020) com metodologia PSM quantificou a consequência: famílias com ATER ganham R$ 490 a mais por mês do que famílias idênticas sem ela. Multiplicado por 3,2 milhões de famílias sem cobertura, isso é R$ 18,8 bilhões por ano em renda rural que não existe porque a orientação técnica não chega (estimativa dos autores com base em Rocha Junior et al., RESR 2020, e IBGE, Censo Agropecuário 2017). O SABIA existe para fechar essa lacuna, com infraestrutura soberana, em conformidade com a LGPD, com aderência ao PBIA, e com titularidade permanentemente brasileira.",
@@ -959,33 +954,33 @@
     ],
     "scopeDistinction": {
       "researcher": {
-        "title": "Charles Cleivin, Co-pesquisador",
-        "subtitle": "Participação Intelectual e Científica",
+        "title": "Coordenação Científica — [ICT EXECUTORA]",
+        "subtitle": "Direção Técnico-Científica e Fiscalização das Entregas",
         "responsibilities": [
-          "Define arquitetura científica dos sistemas de IA",
-          "Escolhe e justifica abordagens metodológicas de ML",
-          "Define protocolos de avaliação e benchmarks",
-          "Analisa resultados e co-assina publicações",
-          "Participa de reuniões e relatórios técnicos"
+          "Define objetivos científicos e aprova especificações técnicas do projeto",
+          "Fiscaliza e aceita as entregas da THATPIX contra critérios verificáveis (AgroEval, benchmarks, marcos contratuais)",
+          "Lidera publicações científicas e assina como autor responsável pela ICT",
+          "Assina relatórios técnicos e presta contas à FINEP",
+          "Titularidade dos ativos (corpus AgroLinguaBR, modelo fine-tuned, código-fonte) permanece na ICT"
         ],
-        "badge": "SEM bolsa · SEM remuneração pessoal"
+        "badge": "Proponente Científica e Fiscal dos Recursos FNDCT"
       },
       "company": {
-        "title": "THATPIX LTDA, Empresa PJ Contratada",
-        "subtitle": "Engenharia e Implementação Tecnológica",
+        "title": "THATPIX LTDA · Charles Cleivin, Responsável Técnico",
+        "subtitle": "Entregáveis Técnicos do Fornecedor Contratado",
         "responsibilities": [
-          "Executa o pipeline de fine-tuning e operação do LLM",
-          "Desenvolve backend, frontend e infraestrutura",
-          "Implementa integração WhatsApp Business API",
-          "Entrega sistema com arquitetura assíncrona tolerante a conectividade intermitente",
-          "Suporte técnico durante os 36 meses"
+          "Propõe e entrega arquitetura dos sistemas de IA conforme requisitos aprovados pela ICT",
+          "Executa pipeline de fine-tuning (LoRA/PEFT, 4-bit NF4) e entrega modelo validado pelo AgroEval",
+          "Desenvolve AgroAssistente (backend WhatsApp + integrações) e Coopera Digital (frontend + backend)",
+          "Propõe e documenta protocolos de avaliação e benchmarks (AgroEval) para aprovação da ICT",
+          "Engenharia da AgroAPI (REST, autenticação, rate-limiting, documentação) e suporte técnico 36 meses"
         ],
-        "note": "Restrições",
+        "note": "Regras de Coautoria e Restrições",
         "noteItems": [
-          "NÃO co-autora publicações",
-          "NÃO toma decisões científicas"
+          "Decisão científica e fiscal é exclusiva da ICT — THATPIX entrega, ICT avalia e aprova",
+          "Coautoria de Charles Cleivin em publicações: admitida quando houver contribuição intelectual real (critérios ICMJE/Vancouver) — obrigatória declaração de vínculo comercial THATPIX na seção de conflito de interesse de cada artigo; não decorre de cargo na equipe executora"
         ],
-        "disclosure": "Charles Cleivin é sócio-fundador da THATPIX LTDA. A dupla posição, co-pesquisador e responsável técnico da empresa contratada, é formalmente declarada. A separação de responsabilidades acima documenta a gestão desse relacionamento conforme as diretrizes FINEP."
+        "disclosure": "Charles Cleivin é sócio-fundador da THATPIX LTDA e contribuiu para a formulação técnica desta proposta como consultor técnico independente. A contratação da THATPIX se dá por regime de prestação de serviços especializados (Lei 8.958/1994 e Decreto 8.241/2014), com conflito de interesse formalmente declarado e gerido pela Fundação de Apoio. Charles atua exclusivamente como Responsável Técnico da empresa contratada — não integra a equipe executora da ICT e não assina contratos em nome da THATPIX neste projeto."
       }
     },
     "sovereigntyCallouts": [
@@ -1035,8 +1030,8 @@
       }
     ],
     "conflictGovernance": {
-      "title": "Mecanismos de Governanca, Conflito de Interesse Declarado",
-      "body": "A dupla posicao de Charles Cleivin (co-pesquisador e socio-fundador da THATPIX) encontra amparo no Art. 14-A da Lei 10.973/2004 e no Decreto 9.283/2018, e e gerenciada por tres mecanismos formais: (1) Comite Tecnico Externo, dois especialistas sem vinculo com a THATPIX (professor de NLP/IA de outra ICT + pesquisador da EMBRAPA Agricultura Digital), reuniao trimestral com ata registrada para validar escolhas metodologicas e arquiteturais; (2) Separacao formal de escopos, Charles nao assina contratos pela THATPIX neste projeto; decisoes comerciais da empresa sao tomadas por segundo socio ou procurador designado; (3) Precificacao referenciada, R$ 82.361/mês por escopo técnico em quatro áreas (treinamento e alinhamento LLM R$ 32.861 + backend, APIs e integração WhatsApp R$ 25.000 + infraestrutura soberana e MLOps R$ 18.000 + equipamentos de campo R$ 6.500) esta dentro da faixa de mercado documentada por pesquisa formal em Glassdoor, Revelo e Programathor (2025-2026)."
+      "title": "Mecanismos de Governança — Conflito de Interesse Declarado",
+      "body": "Conflito de interesse declarado: Charles Cleivin, sócio-fundador da THATPIX LTDA (CNPJ 49.827.360/0001-50), atuou como consultor técnico independente na formulação desta proposta e integra a empresa contratada para execução dos serviços de engenharia de software. Charles não é servidor, docente nem pesquisador da ICT executora — razão pela qual o Art. 14-A da Lei 10.973/2004 não se aplica ao seu caso (esse artigo regula exclusivamente o pesquisador público em regime de dedicação exclusiva). A situação não configura a vedação do Art. 3º, § 2º, inciso II da Lei 8.958/1994 (que proíbe contratação sem processo seletivo de empresa cujo sócio seja dirigente da Fundação ou servidor da ICT apoiada). A contratação da THATPIX pela Fundação de Apoio dar-se-á nos termos do Art. 3º da Lei 8.958/1994 e do Decreto 8.241/2014; em caso de inexigibilidade, a Fundação registrará em processo as razões técnicas e a justificativa de preço aprovadas por sua autoridade máxima. O conflito é gerido por seis salvaguardas operacionais: (a) titularidade técnica e decisória exclusiva da ICT — todas as decisões científicas e de aceite de entregáveis são do Coordenador da ICT; (b) escopo do serviço especificado pela ICT, não pela THATPIX; (c) processo seletivo formal documentado pela Fundação de Apoio, com justificativa técnica e de preço arquivada para fiscalização; (d) Comitê Técnico Externo — dois especialistas sem vínculo com a THATPIX (professor de NLP/IA de ICT distinta + pesquisador da EMBRAPA Agricultura Digital), reunião trimestral, atas registradas, membros com declaração de ausência de conflito de interesse (Art. 27, § 5º, inciso I, Decreto 9.283/2018); (e) separação formal de representação — Charles não assina contratos em nome da THATPIX neste projeto; atos comerciais são praticados por sócio ou procurador designado; (f) precificação referenciada a mercado — R$ 82.361/mês em quatro escopos técnicos (treinamento e alinhamento LLM R$ 32.861 + backend, APIs e integração WhatsApp R$ 25.000 + infraestrutura soberana e MLOps R$ 18.000 + equipamentos de campo R$ 6.500), dentro da faixa documentada por pesquisa formal em Glassdoor, Revelo e Programathor (2025-2026). Ponto a confirmar com procuradoria da Fundação antes da assinatura do contrato: enquadramento específico da modalidade de contratação direta (inexigibilidade ou processo seletivo simplificado) e fundamentação no Decreto 8.241/2014."
     },
     "subsections": {
       "justificativas": {
@@ -1499,26 +1494,10 @@
         "dedication": "[X]% dedicação · Sem remuneração via projeto"
       },
       {
-        "id": "charles",
-        "avatar": "🤖",
-        "name": "Charles Cleivin",
-        "role": "Co-pesquisador Externo · Responsável pela linha de soluções digitais e IA",
-        "tags": [
-          "LLM fine-tuning",
-          "Visão computacional",
-          "WhatsApp API",
-          "Sistemas offline"
-        ],
-        "dedication": "Stack: Python · PyTorch · React Native · Next.js · Docker",
-        "highlight": true,
-        "badge": "Sem bolsa · Sem remuneração pessoal",
-        "badgeVariant": "blue"
-      },
-      {
         "id": "thatpix",
         "avatar": "🏢",
         "name": "THATPIX LTDA",
-        "role": "Prestadora de Serviços Especializados (item 6.2.2.1) · CNPJ 49.827.360/0001-50",
+        "role": "Prestadora de Serviços Especializados (item 6.2.2.1) · CNPJ 49.827.360/0001-50 · Equipe técnica: Charles Cleivin (Responsável Técnico, Sócio-fundador) · Marco Rogério (Engenheiro Sênior)",
         "tags": [
           "Engenharia de software",
           "Implementação",
@@ -1631,12 +1610,12 @@
           "body": "O valor contratado da THATPIX, R$ 82.361 mensais ao longo de 36 meses, é justificado pelo escopo de entrega em regime de preço fixo, conforme autorizado pelo Decreto Federal nº 9.283/2018. Diferente da contratação por alocação de horas individuais, a THATPIX assume obrigação por escopo, absorvendo todos os riscos operacionais de flutuação de pessoal, recrutamento e rotatividade em um segmento de altíssima demanda. Essa escolha é reforçada pelos dados do State of Data 2025-2026: 82,3% dos profissionais sênior em dados e IA afirmam que buscariam ativamente oportunidade remota caso exigido regime presencial, e apenas 15,9% dos engenheiros de ML aceitariam regime 100% presencial, a menor taxa de aceitação de presencialidade entre todas as categorias profissionais mapeadas. O escopo abrange três áreas técnicas de alta especialização: desenvolvimento, fine-tuning e alinhamento de modelos LLM com corpus agrícola; backend, APIs soberanas e integração compliant com LGPD do canal WhatsApp; e infraestrutura de nuvem soberana, MLOps e monitoramento em produção. A alocação interna de recursos, engenheiros, plenos ou agentes de IA supervisionados, é decisão operacional autônoma da THATPIX dentro do contrato por escopo. Pesquisa de mercado independente confirma que o valor representa o piso doméstico: plataformas como Toptal partem de US$ 80 a US$ 120 por hora por engenheiro especializado em LLMs, com taxas adicionais de até US$ 3.500 por profissional selecionado. Adicionalmente, profissionais que dominam custom LLM training e domain-specific fine-tuning, ambas as competências exigidas pelo LLM fine-tuned, recebem prêmios de especialização de +35% a +45% e +20% a +30% sobre a taxa base de mercado (Index.dev, 2026), posicionando o custo de contratação direta para este perfil nos patamares mais elevados da tabela salarial de especialistas em IA."
         },
         {
-          "title": "Autor Intelectual: Por Que Charles Integra o Projeto",
-          "body": "Charles Cleivin José da Costa Curty de Almeida integra este projeto como co-pesquisador pela razão mais direta: ele é o autor intelectual do modelo que esta proposta pretende construir. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica), desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido durante o Ensino Médio, responsável pelos cinco prêmios simultâneos que o projeto obteve na FEBRACE 2013, sua trajetória demonstra capacidade de conceber e executar sistemas tecnológicos complexos sob restrições severas de custo e acessibilidade. Essa mesma lógica, IA soberana e de baixo custo operável no campo, estrutura o SABIA. As decisões que determinarão o impacto científico do projeto exigem julgamento criativo e científico que não se contrata nem se terceiriza: a arquitetura de soberania, o design do corpus AgroLinguaBR, a abordagem de alinhamento ético-cultural, a hipótese de que modelos menores e especializados superam modelos generalistas no domínio agrícola. Seu perfil é internacionalmente verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países) e reconhecimento direto de Google, Samsung e FAPESP. Para perfis com histórico equivalente, o mercado norte-americano remunera entre US$ 150.000 e US$ 300.000 anuais. Sua co-pesquisa voluntária, sem remuneração financiada pelo projeto, representa tanto uma escolha intelectual quanto um subsídio contrafactual de R$ 85.000 a R$ 170.000 mensais que não onera o orçamento."
+          "title": "Autor Intelectual: O Capital Técnico da THATPIX",
+          "body": "Charles Cleivin José da Costa Curty de Almeida é o autor intelectual do modelo que esta proposta pretende construir e atua como Responsável Técnico da THATPIX LTDA neste projeto. Inventor do DDPED (Dispositivo para Desfibrilação Pós-Epidérmica), desfibrilador de baixo custo (~R$ 800) com interface operável por leigos, desenvolvido durante o Ensino Médio, responsável pelos cinco prêmios simultâneos que o projeto obteve na FEBRACE 2013, sua trajetória demonstra capacidade de conceber e executar sistemas tecnológicos complexos sob restrições severas de custo e acessibilidade. Essa mesma lógica, IA soberana e de baixo custo operável no campo, estrutura o SABIA. A arquitetura de soberania, o design do corpus AgroLinguaBR, a abordagem de alinhamento ético-cultural e a hipótese de que modelos menores e especializados superam modelos generalistas no domínio agrícola são entregáveis técnicos do escopo contratado da THATPIX — sujeitos à aprovação e fiscalização da coordenação científica da ICT. Seu perfil é internacionalmente verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países) e reconhecimento direto de Google, Samsung e FAPESP. Para perfis com histórico equivalente, o mercado norte-americano remunera entre US$ 150.000 e US$ 300.000 anuais. A THATPIX é contratada a piso doméstico (R$ 82.361/mês), o que representa um subsídio contrafactual de R$ 85.000 a R$ 170.000 mensais em relação ao mercado internacional."
         },
         {
-          "title": "Conformidade Jurídica da Dupla Atuação",
-          "body": "A dupla função de Charles, co-pesquisador institucional e fundador da empresa executora, encontra amparo legal explícito no Art. 14-A da Lei nº 10.973/2004 (Marco Legal de CT&I), que autoriza o pesquisador de ICT a exercer atividades de P&D em empresas privadas, e no Decreto Federal nº 9.283/2018, que regula a cooperação universidade-empresa. No âmbito institucional, a Resolução Normativa nº 164/2022/CUn da [ICT EXECUTORA] define a política de inovação e empreendedorismo da universidade, estabelecendo critérios formais para exatamente esse tipo de arranjo. A separação de escopos é estrutural e auditável: a direção científica (arquitetura de soberania, design do corpus, alinhamento de modelos, governança ética) é regida pelo convênio com a [ICT EXECUTORA] e permanece sob responsabilidade do co-pesquisador; o escopo contratado da THATPIX é delimitado exclusivamente à execução de engenharia, infraestrutura, implantação, integração e MLOps. São cadeias de accountability distintas, conformes às diretrizes de integridade da FINEP e ao Manual de Convênios e Termos de Cooperação. O resultado: o principal capital intelectual estratégico do projeto contribui gratuitamente via [ICT EXECUTORA], enquanto a execução técnica é suprida por contrato de escopo a taxas domésticas de mercado verificáveis."
+          "title": "Conformidade Jurídica — Vínculo Comercial Declarado",
+          "body": "Charles Cleivin é sócio-fundador e Responsável Técnico da THATPIX LTDA, empresa de direito privado contratada para a execução do componente de engenharia de software e infraestrutura de IA deste projeto. Seu envolvimento na elaboração técnica da proposta ocorreu na condição de consultor externo independente, sem qualquer vínculo empregatício, estatutário ou funcional com a ICT. O Art. 14-A da Lei nº 10.973/2004 (incluído pela Lei nº 13.243/2016) não se aplica a esta situação: o caput delimita o sujeito ativo com precisão — 'O pesquisador público em regime de dedicação exclusiva' — exigindo cumulativamente ser titular de cargo ou emprego junto à Administração Pública E estar submetido ao regime de dedicação exclusiva. Charles não satisfaz nenhum dos dois requisitos: não é servidor público, não ocupa cargo em nenhuma ICT pública e não está sujeito a qualquer regime de dedicação exclusiva. O arranjo encontra respaldo no Art. 20 da Lei nº 10.973/2004, que autoriza órgãos e entidades da administração pública a contratar empresas de reconhecida capacitação tecnológica para atividades de pesquisa, desenvolvimento e inovação; e nos Arts. 3º e 27 do Decreto nº 9.283/2018, que regulamentam o modelo de parceria ICT-empresa para execução de PD&I. A separação de escopos é estrutural e auditável: a ICT dirige a ciência (define hipóteses, metodologia, protocolos de validação, autoria das publicações); a THATPIX entrega engenharia (infraestrutura de software, modelos de IA, plataformas — entregáveis verificáveis com marcos, métricas e aceite formal pela ICT). Nenhum recurso do projeto remunera Charles diretamente como pessoa física; todos os pagamentos à THATPIX seguem os procedimentos de cotação de mercado, nota fiscal e conformidade com o Art. 22 do Decreto nº 9.283/2018. Dois pontos a confirmar com assessoria jurídica da ICT antes da submissão: (a) verificar que os regulamentos internos da ICT não impõem vedação adicional à contratação de empresa cujo sócio participou da elaboração da proposta; (b) verificar se o edital AgriFam-ICT 2026 contém cláusula específica sobre participação de consultores técnicos em projetos subsequentemente contratados."
         }
       ],
       "callouts": [
@@ -1886,7 +1865,7 @@
         "subtitle": "Inteligência Artificial Aplicada · Fine-tuning de LLMs · Sistemas Agentes · Full-Stack",
         "location": "Brasil",
         "email": "charlescleivin@gmail.com",
-        "bio": "Fundador da THATPIX e co-pesquisador deste projeto. O SABIA é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo, e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica, alta tecnologia funcional sob severas restrições de custo e acessibilidade, é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R$ 800 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. As decisões que determinarão o impacto científico do projeto, arquitetura de soberania, design do AgroLinguaBR, alinhamento ético-cultural, escolha de modelos, exigem o julgamento de quem concebeu o problema. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
+        "bio": "Fundador da THATPIX e Responsável Técnico da empresa contratada neste projeto. O SABIA é, antes de tudo, uma ideia de Charles: a hipótese de que modelos menores e especializados, treinados em corpus agrícola brasileiro, superam modelos generalistas no domínio do campo, e que essa inteligência pode funcionar offline, via WhatsApp, ao custo operacional que o pequeno produtor pode pagar. Essa lógica, alta tecnologia funcional sob severas restrições de custo e acessibilidade, é uma constante em sua trajetória. O DDPED (desfibrilador de baixo custo ~R$ 800 operável por leigos, desenvolvido no Ensino Médio) expressa o mesmo padrão: resolver problemas de vida ou morte com os recursos disponíveis. A arquitetura de soberania, o design do AgroLinguaBR, o alinhamento ético-cultural e a escolha de modelos são entregáveis técnicos do escopo contratado da THATPIX — propostos por Charles e aprovados pela coordenação científica da ICT. Credencial verificável: Medalha de Ouro Geral no ESI Mundi 2014 (Abu Dhabi, 40+ países).",
         "highlights": [
           {
             "value": "H100 / A100",
@@ -2036,8 +2015,8 @@
       },
       {
         "name": "Marco Rogério",
-        "title": "[Título a confirmar]",
-        "subtitle": "[Área · Especialização · Papel no projeto]",
+        "title": "Engenheiro Sênior — THATPIX LTDA (empresa contratada)",
+        "subtitle": "[Área · Especialização · a preencher] · Equipe Técnica THATPIX — não integra a equipe executora da ICT",
         "location": "[Localização]",
         "bio": "[Bio a preencher. Deposite as informações em data/team/marco_rogerio.md para que este perfil seja atualizado.]",
         "isPlaceholder": true
@@ -2270,7 +2249,7 @@
         "icon": "🏢",
         "label": "THATPIX, Serviços PJ",
         "amount": 2965000,
-        "limit": "42,4% · sem limite ✅",
+        "limit": "42,4% · sem limite ✅ · ⚠️ concentração elevada: avaliar redução/diluição do escopo antes de submeter",
         "color": "#0891b2",
         "id": "thatpix"
       },
@@ -3016,8 +2995,8 @@
           },
           {
             "id": "r4",
-            "label": "Termo de participação de Charles Cleivin como co-pesquisador externo sem bolsa",
-            "detail": "Declarar: ausência de vínculo empregatício com [ICT EXECUTORA] + distinção explícita do contrato PJ da THATPIX",
+            "label": "Declaração de Conflito de Interesse — Charles Cleivin (sócio-fundador da THATPIX LTDA, empresa contratada R$ 2,96M, item 6.2.2.1)",
+            "detail": "Documento a inserir no processo administrativo da Fundação de Apoio antes da assinatura do contrato (Guia MLCTI CGU/AGU/MCTI, jun/2024). Deve conter: (a) identificação do conflito — Charles é sócio-fundador da empresa contratada E atuou como consultor técnico na formulação da proposta, configurando vínculo técnico e comercial com o objeto da contratação; (b) declaração de que Charles NÃO é pesquisador/servidor da ICT (Art. 14-A Lei 10.973/2004 não se aplica — aplica-se exclusivamente ao pesquisador público em D.E.); (c) compromisso de abster-se de participar de decisões administrativas da ICT ou Fundação que favoreçam a THATPIX além do escopo contratado; (d) compromisso de não usar informações privilegiadas obtidas na formulação da proposta em benefício próprio ou da empresa; (e) confirmação de que a remuneração da THATPIX está limitada ao escopo do Plano de Trabalho aprovado pela FINEP; (f) assinaturas: Charles Cleivin + Coordenador da ICT + Diretor Executivo da Fundação de Apoio. Confirmar modalidade de contratação com procuradoria da Fundação (inexigibilidade vs. processo seletivo simplificado, conforme Decreto 8.241/2014).",
             "status": "Crítico, redigir",
             "statusVariant": "critical"
           },
@@ -3677,7 +3656,7 @@
       "points": [
         "Parceira técnica do servidor nacional: quando o financiamento de escala for aprovado (SoberanIA, BNDES Funtec ou IDB), a THATPIX é a candidata natural para o contrato de engenharia da fase seguinte, com vantagem de conhecer a arquitetura de dentro.",
         "Migração e continuidade operacional: a transição do servidor atual para a infraestrutura de escala exige quem conhece o sistema em produção. A THATPIX opera o servidor R$600k desde o mês 1, é quem faz a migração com zero risco de perda de dados ou interrupção de serviço.",
-        "Co-fundadora de spin-off ou produto: o corpus AgroLinguaBR (licença CC BY-NC-SA 4.0) e a AgroAPI (serviço Acesso Gratuito Regulado; código-fonte Apache 2.0) são ativos públicos, mas a expertise de operá-los em escala é proprietária. Uma parceria entre [ICT EXECUTORA] e THATPIX para oferecer o sistema como serviço a EMATERs estaduais é um modelo de negócio legítimo dentro do Marco Legal de CT&I (Art. 14-A, Lei 10.973/2004)."
+        "Parceria de longo prazo com a ICT executora: o corpus AgroLinguaBR e a AgroAPI são ativos públicos com licenças abertas, mas a expertise de operar o sistema em escala — integração com plataformas estaduais, SLA de disponibilidade, ciclos de atualização do corpus — é capacidade proprietária que a THATPIX consolida ao longo dos 36 meses. O Marco Legal de CT&I (Lei 10.973/2004 e Decreto 9.283/2018) abre três caminhos para formalizar a continuidade: (1) contrato de prestação de serviços tecnológicos (Art. 8º, Lei 10.973) — caminho mais imediato e de menor complexidade jurídica, permitindo que a ICT ou EMATERs contratem a THATPIX diretamente para operar o sistema; (2) licenciamento de propriedade intelectual (Art. 6º, Lei 10.973) — a ICT licencia o direito de uso ou exploração dos ativos desenvolvidos, habilitando a THATPIX a ofertar o sistema como serviço gerenciado; (3) acordo de parceria para PD&I continuado (Art. 9º, Lei 10.973; Arts. 6º e 7º, Decreto 9.283/2018) — para novos ciclos de evolução do modelo (novas culturas, novos idiomas regionais), com titularidade e participação nos resultados definidas proporcionalmente à contribuição de cada parte. Pesquisadores da ICT executora poderão ainda, após o término do projeto, exercer atividade remunerada de PD&I junto à THATPIX com base no Art. 14-A da Lei 10.973 — aplicável a eles na condição de pesquisadores públicos em dedicação exclusiva. A modalidade específica de formalização dependerá da natureza jurídica da ICT executora e de sua política de inovação, e deve ser estruturada com o NIT e a procuradoria da instituição."
       ]
     },
     "phases": [
