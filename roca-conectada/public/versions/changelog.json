@@ -432,5 +432,12 @@
     "date": "2026-05-30",
     "label": "fix(consistency-r3): resolve 14 issues from 3rd au",
     "description": "fix(consistency-r3): resolve 14 issues from 3rd audit round"
+  },
+  {
+    "id": "v63",
+    "commit": "fc6fe12",
+    "date": "2026-06-08",
+    "label": "fix(governance): remove conflict of interest from ",
+    "description": "fix(governance): remove conflict of interest from Charles/THATPIX dual position"
   }
 ]
