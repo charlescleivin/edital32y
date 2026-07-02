@@ -19,20 +19,22 @@ export interface SidebarSection {
   children?: SidebarChild[]
 }
 
-export interface SidebarProps {
-  projectName: string
-  call: string
-  deadline: string
-  sections: SidebarSection[]
-}
-
 interface PdfEntry {
   label: string
   file: string
   tag?: string
 }
 
-const EDITAL_DOCS: PdfEntry[] = [
+export interface SidebarProps {
+  projectName: string
+  call: string
+  deadline: string
+  sections: SidebarSection[]
+  backHref?: string
+  docs?: PdfEntry[]
+}
+
+const AGRIFAM_DOCS: PdfEntry[] = [
   { label: 'Edital Principal',     file: '25_03_2026_AgriFam-ICT_2026_Edital (2).pdf',       tag: 'Edital' },
   { label: 'Anexo 1',              file: '25_03_2026_AgriFam-ICT_2026_Anexo_1.pdf',           tag: 'Anx' },
   { label: 'Anexo 2',              file: '25_03_2026_AgriFam-ICT_2026_Anexo_2.pdf',           tag: 'Anx' },
@@ -43,6 +45,12 @@ const EDITAL_DOCS: PdfEntry[] = [
   { label: 'Anexo 6',              file: '25_03_2026_AgriFam-ICT_2026_Anexo_6.pdf',           tag: 'Anx' },
   { label: 'Telas FAP',            file: '09_04_2026_Telas_FAP_e_Numero_de_Caracteres.pdf',   tag: 'FAP' },
 ]
+
+function formatDeadline(deadline: string): string {
+  const datePart = deadline.split('T')[0]
+  const [y, m, d] = datePart.split('-')
+  return y && m && d ? `${d}/${m}/${y}` : deadline
+}
 
 function useCountdown(deadline: string) {
   const [days, setDays] = useState<number | null>(null)
@@ -117,7 +125,7 @@ function PdfViewer({ label, url, onClose, sidebarWidth }: { label: string; url: 
   )
 }
 
-export default function Sidebar({ projectName, call, deadline, sections }: SidebarProps) {
+export default function Sidebar({ projectName, call, deadline, sections, backHref, docs = AGRIFAM_DOCS }: SidebarProps) {
   const days = useCountdown(deadline)
   const allIds = sections.flatMap((s) => [s.id, ...(s.children?.map((c) => c.id) ?? [])])
   const active = useActiveSection(allIds)
@@ -212,6 +220,13 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
       >
         {/* project identity */}
         <div className="px-7 pb-6 pt-8" style={{ borderBottom: '1px solid rgba(237,229,211,0.06)' }}>
+          {backHref && (
+            <Link href={backHref}
+              className="mb-4 inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[2px] transition-opacity hover:opacity-70"
+              style={{ color: 'var(--txtll)' }}>
+              ← Início
+            </Link>
+          )}
           <img src="/sabia-logo.png" alt="" aria-hidden className="mb-3 block" style={{ width: 44, height: 'auto' }} />
           <div className="text-[21px] font-bold leading-[1.2] tracking-[-0.3px]"
             style={{ fontFamily: 'var(--font-playfair)', color: 'var(--txt)' }}>
@@ -314,6 +329,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
         </nav>
 
         {/* edital documents */}
+        {docs.length > 0 && (
         <div style={{ borderTop: '1px solid rgba(237,229,211,0.06)', padding: '10px 0' }}>
           <button
             onClick={() => setDocsOpen((v) => !v)}
@@ -327,7 +343,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
 
           {docsOpen && (
             <div style={{ paddingBottom: 4 }}>
-              {EDITAL_DOCS.map((doc) => {
+              {docs.map((doc) => {
                 const isActive = activePdf?.label === doc.label
                 return (
                   <button key={doc.file} onClick={() => openPdf(doc)}
@@ -350,6 +366,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
             </div>
           )}
         </div>
+        )}
 
         {/* deadline */}
         <div className="mx-5 mb-6 mt-2 rounded-2xl p-4 text-center"
@@ -357,7 +374,7 @@ export default function Sidebar({ projectName, call, deadline, sections }: Sideb
           <div className="mb-1 text-[8px] font-bold uppercase tracking-[2.5px]"
             style={{ color: 'var(--txtll)' }}>Prazo de submissão</div>
           <span className="my-1.5 block text-[19px] font-bold"
-            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}>26/06/2026</span>
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--gold)' }}>{formatDeadline(deadline)}</span>
           <div className="text-[11px]" style={{ color: 'var(--txtl)' }}>
             {days !== null
               ? <><span className="font-bold" style={{ color: 'var(--gold)' }}>{days}</span> dias restantes</>

@@ -1,0 +1,20 @@
+{
+  "descriptor": {
+    "slug": "agrifam-ict",
+    "status": "closed",
+    "label": "FINEP AgriFam-ICT 2026 — Linha Temática 3",
+    "shortLabel": "AgriFam-ICT 2026",
+    "agency": "MCTI/FINEP/FNDCT",
+    "deadline": "2026-06-26T17:00:00-03:00",
+    "value": "R$ 7.000.000",
+    "duration": "36 meses",
+    "proponent": "ICT executora + Fundação de apoio",
+    "modality": "Convênio ICT (empresa como serviço especializado)",
+    "tokens": {
+      "[ICT EXECUTORA]": "a ICT executora",
+      "ICT EXECUTORA": "ICT executora"
+    },
+    "token": "e8113115f99bc17ccb1995edad0786bc"
+  },
+  "overrides": {}
+}
